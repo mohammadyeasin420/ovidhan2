@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অভিধান - English to Bangla Dictionary</title>
+    <meta name="description" content="100% Offline English to Bangla Dictionary with BCS, Bank Job & IELTS vocabulary.">
+    <meta property="og:title" content="অভিধান - English to Bangla Dictionary">
+    <meta property="og:description" content="Offline dictionary for BCS, Bank Job and everyday English.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0F1A1A;
+            color: #E0F2F1;
+            line-height: 1.6;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #B2DFDB;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: #FFD700; }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 1px;
+        }
+
+        header {
+            background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
+            padding-bottom: 60px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 24px 40px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 800;
+            color: #FFD700;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+            text-shadow: 0 0 40px rgba(255,215,0,0.25);
+        }
+
+        .tagline {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #B2DFDB;
+            margin-bottom: 14px;
+            font-weight: 300;
+        }
+
+        .sub {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #80CBC4;
+            margin-bottom: 44px;
+        }
+
+        .play-button {
+            display: inline-block;
+            transition: transform 0.3s, filter 0.3s;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+        }
+
+        .play-button:hover {
+            transform: scale(1.06);
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+        }
+
+        .play-button img { height: 68px; }
+
+        .features {
+            padding: 90px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 56px;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            color: #FFD700;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #1E2A2A, #162020);
+            padding: 34px 26px;
+            border-radius: 18px;
+            text-align: center;
+            border: 1px solid rgba(255,215,0,0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: rgba(255,215,0,0.25);
+        }
+
+        .card-icon { font-size: 2.4rem; margin-bottom: 14px; }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .card p { font-size: 0.95rem; color: #80CBC4; line-height: 1.6; }
+
+        .cta {
+            background: linear-gradient(135deg, #0F3D3E, #1A5C5A);
+            text-align: center;
+            padding: 80px 24px;
+        }
+
+        .cta h2 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            color: #FFD700;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .cta p { color: #B2DFDB; margin-bottom: 32px; font-size: 1.1rem; }
+
+        /* ── Privacy Page ── */
+        .privacy-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 24px 60px;
+            line-height: 1.9;
+        }
+
+        .privacy-container h1 { color: #FFD700; font-size: 2.2rem; margin-bottom: 6px; }
+
+        .privacy-container h2 {
+            color: #FFD700;
+            font-size: 1.3rem;
+            margin-top: 36px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #1E3A3A;
+            padding-bottom: 6px;
+        }
+
+        .privacy-container p,
+        .privacy-container li { color: #B2DFDB; }
+
+        .privacy-container ul { padding-left: 22px; margin-top: 6px; }
+        .privacy-container ul li { margin-bottom: 4px; }
+
+        .last-updated { color: #80CBC4; font-size: 0.92rem; margin-bottom: 30px; }
+
+        .highlight-box {
+            background: #1E2A2A;
+            border-left: 4px solid #FFD700;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            background: #080F0F;
+            color: #80CBC4;
+            font-size: 0.92rem;
+            line-height: 2;
+        }
+
+        footer a { color: #80CBC4; text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: #FFD700; }
+
+        /* Hidden sections */
+        .page { display: none; }
+        .page.active { display: block; }
+
+        @media (max-width: 600px) {
+            .hero { padding: 60px 20px 30px; }
+            .grid { grid-template-columns: 1fr; }
+            .play-button img { height: 56px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════ HOME PAGE ══════════════ -->
+<div id="home" class="page active">
+    <header>
+        <nav>
+            <div class="logo">অভিধান</div>
+            <a href="#" onclick="showPage('privacy')">Privacy Policy</a>
+        </nav>
+        <div class="hero">
+            <h1>অভিধান</h1>
+            <p class="tagline">English to Bangla Dictionary</p>
+            <p class="sub">6800+ Words &nbsp;•&nbsp; 100% Offline &nbsp;•&nbsp; BCS, Bank Job &amp; IELTS</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="play-button" target="_blank">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+            </a>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Powerful Features</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">📴</div>
+                <div class="card-title">100% Offline</div>
+                <p>Works without internet. All 6800+ words stored on your device.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <div class="card-title">BCS &amp; Bank Vocabulary</div>
+                <p>Curated word lists specifically for BCS, Bank Job &amp; IELTS exams.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧪</div>
+                <div class="card-title">Daily Mock Test</div>
+                <p>Practice with daily quizzes to sharpen your vocabulary skills.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🃏</div>
+                <div class="card-title">Flashcards</div>
+                <p>Smart flashcard system for efficient vocabulary memorization.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔊</div>
+                <div class="card-title">Text to Speech</div>
+                <p>Hear correct English pronunciation for every word.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <div class="card-title">Daily Streak</div>
+                <p>Build a learning habit with streak tracking and reminders.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>শুরু করুন আজই</h2>
+        <p>Free download — no sign-up required.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="play-button" target="_blank">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 অভিধান &nbsp;•&nbsp; Made with ❤️ for Bangladesh</p>
+        <p><a href="#" onclick="showPage('privacy')">Privacy Policy</a> &nbsp;•&nbsp; <a href="mailto:ovidhan.app@gmail.com">Contact</a></p>
+    </footer>
+</div>
+
+<!-- ══════════════ PRIVACY PAGE ══════════════ -->
+<div id="privacy" class="page">
+    <header style="padding-bottom:0;">
+        <nav>
+            <div class="logo">অভিধান</div>
+            <a href="#" onclick="showPage('home')">← Home</a>
+        </nav>
+    </header>
+
+    <div class="privacy-container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: June 28, 2026</p>
+
+        <div class="highlight-box">
+            <strong style="color:#FFD700;">Summary:</strong> অভিধান is a 100% offline app. We do not collect, store, or share your personal data. All your data stays on your device.
+        </div>
+
+        <h2>1. Introduction</h2>
+        <p>অভিধান ("Ovidhan", "we", "our") is a 100% offline English to Bangla dictionary app developed by Mohammad Yeasin. This Privacy Policy explains how we handle information when you use our app.</p>
+
+        <h2>2. Information We Do Not Collect</h2>
+        <ul>
+            <li>No personal information (name, email, phone number, or address)</li>
+            <li>No account creation required</li>
+            <li>No cloud sync or server-side storage</li>
+            <li>No location data</li>
+            <li>All your favorites, progress, and scores stay on your device only</li>
+        </ul>
+
+        <h2>3. AdMob Advertising</h2>
+        <p>We use Google AdMob to display non-intrusive advertisements. AdMob may collect anonymous data for ad personalization per Google's own privacy policy.</p>
+        <ul>
+            <li>Publisher ID: <strong>pub-8638443498834829</strong></li>
+            <li>You can opt out of personalized ads in your device settings: Google → Ads → Opt out of Ads Personalization</li>
+            <li>AdMob privacy policy: <a href="https://policies.google.com/privacy" style="color:#FFD700;" target="_blank">policies.google.com/privacy</a></li>
+        </ul>
+
+        <h2>4. App Permissions</h2>
+        <ul>
+            <li><strong>Storage:</strong> To save favorites, bookmarks, and progress locally on your device</li>
+            <li><strong>Notifications:</strong> Optional daily challenge and streak reminders (can be disabled)</li>
+            <li><strong>Internet:</strong> Used only by AdMob for ads. The dictionary works fully offline.</li>
+        </ul>
+
+        <h2>5. Children's Privacy</h2>
+        <p>অভিধান is suitable for all ages. We do not knowingly collect any personal information from children under 13.</p>
+
+        <h2>6. Your Rights &amp; Data Deletion</h2>
+        <ul>
+            <li>Go to <strong>Settings → Apps → অভিধান → Clear Data</strong> to delete everything</li>
+            <li>Uninstalling the app removes all associated data</li>
+            <li>No data is retained by us after uninstall</li>
+        </ul>
+
+        <h2>7. Third-Party Services</h2>
+        <p>The only third-party service integrated is Google AdMob. No other analytics, crash reporting, or tracking services are used.</p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the date above. Continued use of the app means you accept the updated policy.</p>
+
+        <h2>9. Contact Us</h2>
+        <ul>
+            <li>Email: <a href="mailto:ovidhan.app@gmail.com" style="color:#FFD700;">ovidhan.app@gmail.com</a></li>
+            <li>Developer: Mohammad Yeasin</li>
+            <li>Country: Bangladesh</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2026 অভিধান &nbsp;•&nbsp; All Rights Reserved</p>
+        <p><a href="#" onclick="showPage('home')">Home</a></p>
+    </footer>
+</div>
+
+<script>
+    function showPage(id) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Card scroll animations
+    window.addEventListener('load', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(40px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    });
+</script>
+
+</body>
+</html>
