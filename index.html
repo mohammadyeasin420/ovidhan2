@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>অভিধান – English to Bangla Dictionary | 12,000+ Words, Offline, BCS & IELTS</title>
-    <meta name="description" content="100% offline English to Bangla dictionary with 12,658+ words. Perfect for BCS, Bank Job, IELTS, University Admission, and everyday English learning. Download now!" />
-    <meta property="og:title" content="অভিধান – English to Bangla Dictionary | 12,000+ Words, Offline" />
-    <meta property="og:description" content="Offline dictionary with BCS, Bank Job, IELTS, and University Admission vocabulary. Free download – no sign-up required." />
-    <meta property="og:url" content="https://ovidhan.net" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <title>Ovidhan – Learn English for BCS, Bank, IELTS & Jobs</title>
+    <meta name="description" content="Ovidhan is the complete English learning platform for Bangladeshi students. Prepare for BCS, Bank Jobs, IELTS, and University Admission – 100% offline." />
     <link rel="canonical" href="https://ovidhan.net" />
-
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
     <script>
@@ -20,861 +14,192 @@
         gtag('js', new Date());
         gtag('config', 'G-7PS8PRT4KW');
     </script>
-
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: #0F1A1A;
-            color: #E0F2F1;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 18px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        nav a {
-            color: #B2DFDB;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0F1A1A; color: #E0F2F1; line-height: 1.6; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        nav a { color: #B2DFDB; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; padding: 4px 8px; }
         nav a:hover { color: #FFD700; }
-        .logo {
-            font-size: 26px;
-            font-weight: 700;
-            color: #FFD700;
-            letter-spacing: 1px;
-        }
-        header {
-            background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
-            padding-bottom: 60px;
-        }
-        .hero {
-            text-align: center;
-            padding: 80px 24px 40px;
-            max-width: 860px;
-            margin: 0 auto;
-        }
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 800;
-            color: #FFD700;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-shadow: 0 0 40px rgba(255,215,0,0.25);
-        }
-        .tagline {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            color: #B2DFDB;
-            margin-bottom: 8px;
-            font-weight: 300;
-        }
-        .sub {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            color: #80CBC4;
-            margin-bottom: 12px;
-        }
-        .badge-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 14px;
-            margin-bottom: 32px;
-        }
-        .badge {
-            background: rgba(255,215,0,0.10);
-            border: 1px solid rgba(255,215,0,0.25);
-            padding: 6px 20px;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            color: #FFD700;
-            font-weight: 500;
-        }
-        .play-button {
-            display: inline-block;
-            transition: transform 0.3s, filter 0.3s;
-            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
-        }
-        .play-button:hover {
-            transform: scale(1.06);
-            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
-        }
+        .logo { font-size: 26px; font-weight: 700; color: #FFD700; letter-spacing: 1px; }
+        .nav-cta { background: #FFD700; color: #0F1A1A; padding: 6px 18px; border-radius: 30px; font-weight: 600; }
+        .nav-cta:hover { background: #FFC107; color: #0F1A1A; }
+
+        header { background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%); padding: 40px 0; }
+        .hero { max-width: 900px; margin: 0 auto; text-align: center; padding: 40px 24px; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: #FFD700; margin-bottom: 12px; }
+        .hero p { color: #B2DFDB; font-size: 1.2rem; max-width: 700px; margin: 0 auto 24px; }
+        .hero .badge-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 28px; }
+        .hero .badge { background: rgba(255,215,0,0.12); border: 1px solid rgba(255,215,0,0.25); padding: 6px 18px; border-radius: 30px; color: #FFD700; font-weight: 500; }
+        .play-button { display: inline-block; transition: transform 0.3s; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4)); }
+        .play-button:hover { transform: scale(1.06); }
         .play-button img { height: 68px; }
 
-        .section {
-            padding: 80px 24px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section h2 {
-            text-align: center;
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
-            color: #FFD700;
-            font-weight: 700;
-            margin-bottom: 48px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 24px;
-        }
-        .card {
-            background: linear-gradient(145deg, #1E2A2A, #162020);
-            padding: 30px 24px;
-            border-radius: 18px;
-            text-align: center;
-            border: 1px solid rgba(255,215,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        .card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            border-color: rgba(255,215,0,0.25);
-        }
-        .card-icon { font-size: 2.6rem; margin-bottom: 12px; }
-        .card-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #FFD700;
-            margin-bottom: 8px;
-        }
-        .card p { font-size: 0.95rem; color: #80CBC4; line-height: 1.5; }
+        .section { padding: 60px 24px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { text-align: center; font-size: clamp(1.8rem, 4vw, 2.4rem); color: #FFD700; margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+        .card { background: linear-gradient(145deg, #1E2A2A, #162020); padding: 28px 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(255,215,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.4); border-color: rgba(255,215,0,0.2); }
+        .card .icon { font-size: 2.8rem; margin-bottom: 12px; }
+        .card h3 { color: #FFD700; font-size: 1.1rem; margin-bottom: 6px; }
+        .card p { color: #80CBC4; font-size: 0.9rem; }
 
-        .cta {
-            background: linear-gradient(135deg, #0F3D3E, #1A5C5A);
-            text-align: center;
-            padding: 80px 24px;
-        }
-        .cta h2 {
-            font-size: clamp(1.6rem, 4vw, 2.2rem);
-            color: #FFD700;
-            margin-bottom: 12px;
-        }
-        .cta p { color: #B2DFDB; margin-bottom: 28px; font-size: 1.1rem; }
+        .premium-card { background: linear-gradient(135deg, #1E2A2A, #0F3D3E); border: 2px solid rgba(255,215,0,0.2); border-radius: 20px; padding: 40px 30px; text-align: center; max-width: 800px; margin: 0 auto; }
+        .premium-card h2 { color: #FFD700; font-size: 2rem; margin-bottom: 12px; }
+        .premium-card p { color: #B2DFDB; max-width: 600px; margin: 0 auto 24px; }
 
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .faq-item {
-            background: #1E2A2A;
-            border-radius: 12px;
-            padding: 16px 24px;
-            border: 1px solid rgba(255,215,0,0.08);
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .faq-item:hover { background: #263636; }
-        .faq-question {
-            font-weight: 600;
-            color: #FFD700;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-answer {
-            color: #B2DFDB;
-            margin-top: 8px;
-            display: none;
-            line-height: 1.7;
-        }
-        .faq-item.open .faq-answer { display: block; }
-        .faq-item .arrow { transition: transform 0.3s; }
-        .faq-item.open .arrow { transform: rotate(180deg); }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .testimonial {
-            background: #1E2A2A;
-            border-radius: 16px;
-            padding: 24px 20px;
-            border-left: 4px solid #FFD700;
-            font-style: italic;
-            color: #B2DFDB;
-        }
-        .testimonial .author {
-            margin-top: 12px;
-            font-style: normal;
-            font-weight: 600;
-            color: #FFD700;
-        }
-
-        /* --- Blog --- */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        .blog-card {
-            background: #1E2A2A;
-            border-radius: 16px;
-            padding: 24px;
-            border: 1px solid rgba(255,215,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .blog-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-            border-color: rgba(255,215,0,0.2);
-        }
-        .blog-card .date {
-            font-size: 0.8rem;
-            color: #80CBC4;
-        }
-        .blog-card h3 {
-            color: #FFD700;
-            margin: 8px 0;
-            font-size: 1.2rem;
-        }
-        .blog-card p {
-            color: #B2DFDB;
-            font-size: 0.95rem;
-        }
-        .blog-card .read-more {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-top: 12px;
-            transition: color 0.2s;
-        }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .blog-card { background: #1E2A2A; border-radius: 16px; padding: 24px; border: 1px solid rgba(255,215,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .blog-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+        .blog-card .date { color: #80CBC4; font-size: 0.8rem; }
+        .blog-card h3 { color: #FFD700; margin: 8px 0; font-size: 1.15rem; }
+        .blog-card p { color: #B2DFDB; font-size: 0.9rem; }
+        .blog-card .read-more { color: #FFD700; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; margin-top: 12px; transition: color 0.2s; }
         .blog-card .read-more:hover { color: #FFF; }
-        
-<div class="blog-grid">
-        <div class="blog-card">
-    <div class="date">July 1, 2026</div>
-    <h3>BCS Vocabulary – 100 Most Important Words for BCS Preliminary Exam</h3>
-    <p>Master BCS vocabulary with our list of 100 most repeated English words. Includes Bangla meanings, synonyms, antonyms, and example sentences.</p>
-    <a href="bcs-vocabulary-guide.html" class="read-more">Read More →</a>
-</div>
-<div class="blog-card">
-    <div class="date">June 30, 2026</div>
-    <h3>How to Get 7+ in IELTS – Complete Guide for Bangladeshi Students</h3>
-    <p>A step-by-step IELTS preparation strategy for Bangladeshi students. Learn vocabulary, grammar, and exam techniques with English to Bangla examples.</p>
-    <a href="ielts-guide.html" class="read-more">Read More →</a>
-</div>
 
-        
-        /* --- Email Signup --- */
-        .email-section {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .email-section input {
-            padding: 14px 20px;
-            border-radius: 40px;
-            border: 1px solid #244545;
-            background: #0F1A1A;
-            color: #E0F2F1;
-            width: 70%;
-            max-width: 350px;
-            margin-right: 10px;
-            font-size: 1rem;
-        }
-        .email-section input:focus {
-            outline: none;
-            border-color: #FFD700;
-        }
-        .email-section button {
-            padding: 14px 28px;
-            border-radius: 40px;
-            border: none;
-            background: #FFD700;
-            color: #0F1A1A;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-        }
-        .email-section button:hover {
-            background: #FFC107;
-            transform: scale(1.02);
-        }
-        .email-section .success-msg {
-            color: #80CBC4;
-            margin-top: 12px;
-            display: none;
-        }
-        .email-section .success-msg.show { display: block; }
+        .cta-box { background: linear-gradient(135deg, #0F3D3E, #1A5C5A); padding: 40px 24px; border-radius: 16px; text-align: center; margin: 40px 0; border: 1px solid rgba(255,215,0,0.15); }
+        .cta-box h2 { color: #FFD700; font-size: 1.8rem; margin-bottom: 12px; }
+        .cta-box p { color: #B2DFDB; margin-bottom: 24px; }
 
-        /* --- Premium Coming Soon --- */
-        .premium-card {
-            background: linear-gradient(145deg, #1E2A2A, #162020);
-            border-radius: 24px;
-            padding: 50px 30px;
-            text-align: center;
-            border: 2px solid rgba(255,215,0,0.2);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .premium-card .icon {
-            font-size: 4rem;
-        }
-        .premium-card h2 {
-            color: #FFD700;
-            font-size: 2.2rem;
-            margin: 10px 0;
-        }
-        .premium-card p {
-            color: #B2DFDB;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 20px;
-        }
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 20px 0 30px;
-        }
-        .countdown-item {
-            background: #0F1A1A;
-            padding: 16px 24px;
-            border-radius: 12px;
-            min-width: 80px;
-            border: 1px solid #244545;
-        }
-        .countdown-item .number {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #FFD700;
-            display: block;
-            line-height: 1.2;
-        }
-        .countdown-item .label {
-            font-size: 0.8rem;
-            color: #80CBC4;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .privacy-container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 24px 60px;
-            line-height: 1.9;
-        }
-        .privacy-container h1 { color: #FFD700; font-size: 2.2rem; }
-        .privacy-container h2 { color: #FFD700; font-size: 1.3rem; margin-top: 36px; border-bottom: 1px solid #1E3A3A; padding-bottom: 6px; }
-        .privacy-container p, .privacy-container li { color: #B2DFDB; }
-        .privacy-container ul { padding-left: 22px; }
-        .highlight-box {
-            background: #1E2A2A;
-            border-left: 4px solid #FFD700;
-            padding: 16px 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 20px 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 24px;
-            background: #080F0F;
-            color: #80CBC4;
-            font-size: 0.92rem;
-            line-height: 2;
-        }
+        footer { text-align: center; padding: 40px 24px; background: #080F0F; color: #80CBC4; font-size: 0.9rem; line-height: 2; }
         footer a { color: #80CBC4; text-decoration: none; transition: color 0.2s; }
         footer a:hover { color: #FFD700; }
-        .page { display: none; }
-        .page.active { display: block; }
 
         @media (max-width: 600px) {
-            .hero { padding: 60px 20px 30px; }
-            .grid { grid-template-columns: 1fr; }
+            nav { flex-direction: column; gap: 8px; }
+            .hero { padding: 20px 16px; }
             .play-button img { height: 56px; }
-            .badge-group { gap: 8px; }
-            .badge { font-size: 0.75rem; padding: 4px 14px; }
-            .testimonial-grid { grid-template-columns: 1fr; }
-            .email-section input { width: 100%; margin-bottom: 10px; }
-            .email-section button { width: 100%; }
-            .countdown-item { min-width: 60px; padding: 12px 16px; }
-            .countdown-item .number { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+            .blog-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-<!-- ═══ HOME PAGE ═══ -->
-<div id="home" class="page active">
-    <header>
-        <nav>
-            <div class="logo">অভিধান</div>
-            <div style="display:flex; gap:20px; flex-wrap:wrap;">
-                <a href="#" onclick="showPage('home')">Home</a>
-                <a href="#" onclick="showPage('blog')">Blog</a>
-                <a href="#features">Features</a>
-                <a href="#faq">FAQ</a>
-                <a href="#testimonials">Reviews</a>
-                <a href="#" onclick="showPage('premium')">Premium</a>
-                <a href="#" onclick="showPage('privacy')">Privacy</a>
-            </div>
-        </nav>
-        <div class="hero">
-            <h1>অভিধান</h1>
-            <p class="tagline">English to Bangla Dictionary</p>
-            <p class="sub"><strong>12,658 Words</strong> &nbsp;•&nbsp; 100% Offline &nbsp;•&nbsp; BCS, Bank Job, IELTS &amp; University Admission</p>
-            <div class="badge-group">
-                <span class="badge">📚 BCS Preparation</span>
-                <span class="badge">🏦 Bank Job English</span>
-                <span class="badge">🎓 DU / CU / NU Admission</span>
-                <span class="badge">🌍 IELTS &amp; Migration</span>
-            </div>
-            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="play-button" target="_blank">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
-            </a>
-        </div>
-    </header>
+<!-- ═══ NAVIGATION ═══ -->
+<nav>
+    <div class="logo">অভিধান</div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+        <a href="https://ovidhan.net">Home</a>
+        <a href="#bcs">BCS</a>
+        <a href="#bank">Bank</a>
+        <a href="#ielts">IELTS</a>
+        <a href="#blog">Blog</a>
+        <a href="#premium">Premium</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank">Download App</a>
+    </div>
+</nav>
 
-    <!-- Features -->
-    <section class="section" id="features">
-        <h2>Powerful Features</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon">📴</div>
-                <div class="card-title">100% Offline</div>
-                <p>All 12,658 words, definitions, and examples stored on your device. No internet needed.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">📚</div>
-                <div class="card-title">Exam Preparation</div>
-                <p>Dedicated sections for BCS, Bank Job, IELTS, DU Admission, CU/NU Admission, and Government Job vocabulary.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🧪</div>
-                <div class="card-title">Daily Mock Test</div>
-                <p>10-question daily mock tests with instant feedback and progress tracking.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🃏</div>
-                <div class="card-title">Smart Flashcards</div>
-                <p>Spaced repetition (SM-2) flashcards for long-term vocabulary retention.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">📊</div>
-                <div class="card-title">Performance Dashboard</div>
-                <p>Track your XP, levels, streaks, accuracy, and weak areas – all in one place.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🎯</div>
-                <div class="card-title">Weakness Analysis</div>
-                <p>Automatically identifies your weak vocabulary areas and suggests targeted practice.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🔊</div>
-                <div class="card-title">Text to Speech</div>
-                <p>Hear correct English pronunciation for every word – works offline.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🔥</div>
-                <div class="card-title">Daily Streak</div>
-                <p>Build a learning habit with streak tracking and daily reminders.</p>
-            </div>
+<!-- ═══ HERO ═══ -->
+<header>
+    <div class="hero">
+        <h1>Learn English. Prepare for BCS, Bank & IELTS.</h1>
+        <p>The complete offline English learning platform for Bangladeshi students and job seekers.</p>
+        <div class="badge-group">
+            <span class="badge">📚 12,658 Words</span>
+            <span class="badge">📖 BCS Preparation</span>
+            <span class="badge">🏦 Bank Job English</span>
+            <span class="badge">🌍 IELTS Preparation</span>
+            <span class="badge">🎓 DU / CU / NU Admission</span>
+            <span class="badge">💼 Professional English</span>
         </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section" id="testimonials" style="background:#0F1A1A; padding-top:40px;">
-        <h2>What Our Users Say</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial">
-                "This app helped me pass BCS Preliminary! The vocabulary lists are exactly what I needed."
-                <div class="author">– Rashed, BCS Aspirant</div>
-            </div>
-            <div class="testimonial">
-                "I prepared for IELTS with Ovidhan and scored 7.5. The flashcards and mock tests are brilliant."
-                <div class="author">– Nusrat, IELTS Candidate</div>
-            </div>
-            <div class="testimonial">
-                "The offline feature is a lifesaver. I study on the bus without internet. Highly recommended!"
-                <div class="author">– Tanvir, University Student</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq" style="background:#0F1A1A;">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-grid">
-            <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question">Is Ovidhan completely free? <span class="arrow">▼</span></div>
-                <div class="faq-answer">Yes! Ovidhan is 100% free to download and use. No sign-up, no hidden charges.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question">Does it work without internet? <span class="arrow">▼</span></div>
-                <div class="faq-answer">Yes, Ovidhan is fully offline. All words, meanings, and examples are stored on your device.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question">Which exams is Ovidhan best for? <span class="arrow">▼</span></div>
-                <div class="faq-answer">Ovidhan is tailored for BCS, Bank Jobs, IELTS, DU/CU/NU Admission, and Government Job exams.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question">How many words does Ovidhan have? <span class="arrow">▼</span></div>
-                <div class="faq-answer">Currently 12,658 high-quality English words with Bangla meanings, pronunciation, examples, and categories.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question">Does Ovidhan have pronunciation? <span class="arrow">▼</span></div>
-                <div class="faq-answer">Yes, every word includes Text-to-Speech pronunciation (offline) and phonetic guides.</div>
-            </div>
-            <div class="faq-item" onclick="toggleFAQ(this)">
-                <div class="faq-question">How is Ovidhan different from other dictionaries? <span class="arrow">▼</span></div>
-                <div class="faq-answer">Ovidhan combines a dictionary with a full learning platform – flashcards, mock tests, progress tracking, and exam-specific vocabulary – all offline.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Email Signup -->
-    <section class="section" style="background:#0F1A1A; padding: 60px 24px;">
-        <div class="email-section">
-            <h2>📬 Stay Updated</h2>
-            <p style="color:#B2DFDB; margin-bottom: 20px;">Get learning tips, exam strategies, and exclusive offers straight to your inbox.</p>
-            <form id="emailForm" onsubmit="handleEmailSignup(event)">
-                <input type="email" id="emailInput" placeholder="Your email address" required />
-                <button type="submit">Subscribe</button>
-            </form>
-            <div class="success-msg" id="emailSuccess">✅ Thanks for subscribing! We'll keep you in the loop.</div>
-        </div>
-    </section>
-
-    <!-- Premium Coming Soon -->
-    <section class="section" id="premium-section" style="background:#0F1A1A; padding: 60px 24px;">
-        <div class="premium-card">
-            <div class="icon">🌟</div>
-            <h2>Ovidhan Premium – Coming Soon</h2>
-            <p>Unlock unlimited mock tests, full exam question banks, advanced analytics, PDF revision notes, and an ad-free learning experience. Built for serious achievers.</p>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span class="number" id="days">00</span>
-                    <span class="label">Days</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="hours">00</span>
-                    <span class="label">Hours</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="minutes">00</span>
-                    <span class="label">Minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="seconds">00</span>
-                    <span class="label">Seconds</span>
-                </div>
-            </div>
-            <p style="font-size:0.9rem; color:#80CBC4;">Stay tuned – we're putting the final touches on something great.</p>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="cta">
-        <h2>Start Learning Today</h2>
-        <p>Join thousands of students and professionals preparing for BCS, Bank Jobs, IELTS, and university admissions.</p>
         <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="play-button" target="_blank">
             <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
         </a>
-    </section>
-
-    <footer>
-        <p>© 2026 অভিধান &nbsp;•&nbsp; Made with ❤️ for Bangladesh</p>
-        <p>
-            <a href="#" onclick="showPage('home')">Home</a> &nbsp;•&nbsp;
-            <a href="#" onclick="showPage('blog')">Blog</a> &nbsp;•&nbsp;
-            <a href="#" onclick="showPage('premium')">Premium</a> &nbsp;•&nbsp;
-            <a href="#" onclick="showPage('privacy')">Privacy Policy</a> &nbsp;•&nbsp;
-            <a href="mailto:ovidhan.app@gmail.com">Contact</a>
-        </p>
-    </footer>
-</div>
-
-<!-- ═══ BLOG PAGE ═══ -->
-<div id="blog" class="page">
-    <header style="padding-bottom:0;">
-        <nav>
-            <div class="logo">অভিধান</div>
-            <div style="display:flex; gap:20px; flex-wrap:wrap;">
-                <a href="#" onclick="showPage('home')">← Home</a>
-                <a href="#" onclick="showPage('blog')">Blog</a>
-                <a href="#" onclick="showPage('premium')">Premium</a>
-                <a href="#" onclick="showPage('privacy')">Privacy</a>
-            </div>
-        </nav>
-    </header>
-    <section class="section" style="padding-top:40px;">
-        <h2>📖 Learning Blog</h2>
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div class="date">July 1, 2026</div>
-                <h3>BCS Vocabulary: 50 Most Repeated Words</h3>
-                <p>A curated list of the most frequently appearing English words in BCS Preliminary exams over the last 10 years.</p>
-                <a href="#" class="read-more">Read More →</a>
-            </div>
-            <div class="blog-card">
-                <div class="date">June 28, 2026</div>
-                <h3>How to Score 7+ in IELTS Writing</h3>
-                <p>Practical strategies for improving your lexical resource and grammatical range in the IELTS Writing Task 2.</p>
-                <a href="#" class="read-more">Read More →</a>
-            </div>
-            <div class="blog-card">
-                <div class="date">June 25, 2026</div>
-                <h3>Top 10 Phrasal Verbs for Bank Job Exams</h3>
-                <p>Master these commonly tested phrasal verbs to boost your English score in bank job written tests.</p>
-                <a href="#" class="read-more">Read More →</a>
-            </div>
-            <div class="blog-card">
-                <div class="date">June 22, 2026</div>
-                <h3>DU Admission: English Section Strategy</h3>
-                <p>How to tackle the synonym/antonym and sentence correction questions in Dhaka University admission tests.</p>
-                <a href="#" class="read-more">Read More →</a>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>© 2026 অভিধান &nbsp;•&nbsp; Made with ❤️ for Bangladesh</p>
-        <p><a href="#" onclick="showPage('home')">Home</a></p>
-    </footer>
-</div>
-
-<!-- ═══ PREMIUM PAGE ═══ -->
-<div id="premium" class="page">
-    <header style="padding-bottom:0;">
-        <nav>
-            <div class="logo">অভিধান</div>
-            <div style="display:flex; gap:20px; flex-wrap:wrap;">
-                <a href="#" onclick="showPage('home')">← Home</a>
-                <a href="#" onclick="showPage('blog')">Blog</a>
-                <a href="#" onclick="showPage('premium')">Premium</a>
-                <a href="#" onclick="showPage('privacy')">Privacy</a>
-            </div>
-        </nav>
-    </header>
-    <section class="section" style="padding-top:40px;">
-        <div class="premium-card">
-            <div class="icon">🌟</div>
-            <h2>Ovidhan Premium – Coming Soon</h2>
-            <p>Unlock unlimited mock tests, full exam question banks, advanced analytics, PDF revision notes, and an ad-free learning experience. Built for serious achievers.</p>
-            <div class="countdown" id="countdown2">
-                <div class="countdown-item">
-                    <span class="number" id="days2">00</span>
-                    <span class="label">Days</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="hours2">00</span>
-                    <span class="label">Hours</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="minutes2">00</span>
-                    <span class="label">Minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="number" id="seconds2">00</span>
-                    <span class="label">Seconds</span>
-                </div>
-            </div>
-            <p style="font-size:0.9rem; color:#80CBC4;">Be the first to know when we launch – <a href="#" onclick="showPage('home')" style="color:#FFD700;">subscribe to our updates</a>.</p>
-        </div>
-    </section>
-    <footer>
-        <p>© 2026 অভিধান &nbsp;•&nbsp; All Rights Reserved</p>
-        <p><a href="#" onclick="showPage('home')">Home</a></p>
-    </footer>
-</div>
-
-<!-- ═══ PRIVACY PAGE ═══ -->
-<div id="privacy" class="page">
-    <header style="padding-bottom:0;">
-        <nav>
-            <div class="logo">অভিধান</div>
-            <a href="#" onclick="showPage('home')">← Home</a>
-        </nav>
-    </header>
-    <div class="privacy-container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: June 30, 2026</p>
-        <div class="highlight-box">
-            <strong style="color:#FFD700;">Summary:</strong> অভিধান is a 100% offline app. We do not collect, store, or share your personal data. All your data stays on your device.
-        </div>
-        <h2>1. Introduction</h2>
-        <p>অভিধান ("Ovidhan", "we", "our") is a 100% offline English to Bangla dictionary app developed by Mohammad Yeasin. This Privacy Policy explains how we handle information when you use our app.</p>
-        <h2>2. Information We Do Not Collect</h2>
-        <ul>
-            <li>No personal information (name, email, phone number, or address)</li>
-            <li>No account creation required</li>
-            <li>No cloud sync or server-side storage</li>
-            <li>No location data</li>
-            <li>All your favorites, progress, and scores stay on your device only</li>
-        </ul>
-        <h2>3. AdMob Advertising</h2>
-        <p>We use Google AdMob to display non-intrusive advertisements. AdMob may collect anonymous data for ad personalization per Google's own privacy policy.</p>
-        <ul>
-            <li>Publisher ID: <strong>pub-8638443498834829</strong></li>
-            <li>You can opt out of personalized ads in your device settings: Google → Ads → Opt out of Ads Personalization</li>
-            <li>AdMob privacy policy: <a href="https://policies.google.com/privacy" style="color:#FFD700;" target="_blank">policies.google.com/privacy</a></li>
-        </ul>
-        <h2>4. App Permissions</h2>
-        <ul>
-            <li><strong>Storage:</strong> To save favorites, bookmarks, and progress locally on your device</li>
-            <li><strong>Notifications:</strong> Optional daily challenge and streak reminders (can be disabled)</li>
-            <li><strong>Internet:</strong> Used only by AdMob for ads. The dictionary works fully offline.</li>
-        </ul>
-        <h2>5. Children's Privacy</h2>
-        <p>অভিধান is suitable for all ages. We do not knowingly collect any personal information from children under 13.</p>
-        <h2>6. Your Rights &amp; Data Deletion</h2>
-        <ul>
-            <li>Go to <strong>Settings → Apps → অভিধান → Clear Data</strong> to delete everything</li>
-            <li>Uninstalling the app removes all associated data</li>
-            <li>No data is retained by us after uninstall</li>
-        </ul>
-        <h2>7. Third-Party Services</h2>
-        <p>The only third-party service integrated is Google AdMob. No other analytics, crash reporting, or tracking services are used.</p>
-        <h2>8. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the date above. Continued use of the app means you accept the updated policy.</p>
-        <h2>9. Contact Us</h2>
-        <ul>
-            <li>Email: <a href="mailto:ovidhan.app@gmail.com" style="color:#FFD700;">ovidhan.app@gmail.com</a></li>
-            <li>Developer: Mohammad Yeasin</li>
-            <li>Country: Bangladesh</li>
-        </ul>
     </div>
-    <footer>
-        <p>© 2026 অভিধান &nbsp;•&nbsp; All Rights Reserved</p>
-        <p><a href="#" onclick="showPage('home')">Home</a></p>
-    </footer>
-</div>
+</header>
 
-<script>
-    // Page navigation
-    function showPage(id) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        // If showing premium page, ensure countdown is running
-        if (id === 'premium' || id === 'home') {
-            startCountdown();
-        }
-    }
+<!-- ═══ BCS SECTION ═══ -->
+<section class="section" id="bcs">
+    <h2>📚 BCS Preparation</h2>
+    <div class="grid">
+        <div class="card"><div class="icon">📖</div><h3>BCS Vocabulary</h3><p>100+ most repeated English words with Bangla meanings and examples.</p></div>
+        <div class="card"><div class="icon">📝</div><h3>Previous Questions</h3><p>Practice with 10+ years of BCS English questions.</p></div>
+        <div class="card"><div class="icon">🧪</div><h3>Daily Mock Test</h3><p>10 questions daily with instant feedback and explanations.</p></div>
+        <div class="card"><div class="icon">📊</div><h3>Progress Tracking</h3><p>Track your XP, levels, streaks, and weak areas.</p></div>
+    </div>
+</section>
 
-    // FAQ toggle
-    function toggleFAQ(el) {
-        el.classList.toggle('open');
-    }
+<!-- ═══ BANK SECTION ═══ -->
+<section class="section" id="bank" style="background:#0F1A1A;">
+    <h2>🏦 Bank Job Preparation</h2>
+    <div class="grid">
+        <div class="card"><div class="icon">📘</div><h3>Bank Vocabulary</h3><p>Essential vocabulary for bank job written exams.</p></div>
+        <div class="card"><div class="icon">📝</div><h3>Previous Exams</h3><p>Practice with real bank job English questions.</p></div>
+        <div class="card"><div class="icon">🧠</div><h3>IQ & English</h3><p>Improve your IQ, English, and computer skills.</p></div>
+        <div class="card"><div class="icon">⏱️</div><h3>Timed Mock Exams</h3><p>Simulate real exam conditions with timed tests.</p></div>
+    </div>
+</section>
 
-    // Email signup handler
-    function handleEmailSignup(e) {
-        e.preventDefault();
-        const input = document.getElementById('emailInput');
-        const successMsg = document.getElementById('emailSuccess');
-        if (input.value) {
-            successMsg.classList.add('show');
-            input.value = '';
-            // Optionally store in localStorage
-            localStorage.setItem('ovidhan_email', input.value);
-        }
-        setTimeout(() => { successMsg.classList.remove('show'); }, 4000);
-    }
+<!-- ═══ IELTS SECTION ═══ -->
+<section class="section" id="ielts">
+    <h2>🌍 IELTS Preparation</h2>
+    <div class="grid">
+        <div class="card"><div class="icon">✍️</div><h3>Writing Task 1 & 2</h3><p>Practice and improve your essay and report writing.</p></div>
+        <div class="card"><div class="icon">🗣️</div><h3>Speaking Practice</h3><p>Prepare for IELTS speaking with common questions.</p></div>
+        <div class="card"><div class="icon">🎧</div><h3>Listening Practice</h3><p>Improve your listening skills with practice tests.</p></div>
+        <div class="card"><div class="icon">📖</div><h3>Vocabulary by Band</h3><p>Learn words for Band 6, 7, 8, and 9.</p></div>
+    </div>
+</section>
 
-    // Countdown timer
-    function startCountdown() {
-        const targetDate = new Date('2026-08-01T00:00:00').getTime(); // Set your launch date here
-        const now = new Date().getTime();
-        let difference = targetDate - now;
+<!-- ═══ BLOG SECTION ═══ -->
+<section class="section" id="blog" style="background:#0F1A1A;">
+    <h2>📝 Learning Blog</h2>
+    <div class="blog-grid">
+        <div class="blog-card">
+            <div class="date">July 1, 2026</div>
+            <h3>BCS Vocabulary – 100 Most Important Words</h3>
+            <p>Master BCS vocabulary with our list of 100 most repeated English words.</p>
+            <a href="bcs-vocabulary-guide.html" class="read-more">Read More →</a>
+        </div>
+        <div class="blog-card">
+            <div class="date">June 30, 2026</div>
+            <h3>How to Get 7+ in IELTS – Complete Guide</h3>
+            <p>A step-by-step IELTS preparation strategy for Bangladeshi students.</p>
+            <a href="ielts-guide.html" class="read-more">Read More →</a>
+        </div>
+        <div class="blog-card">
+            <div class="date">June 28, 2026</div>
+            <h3>English to Bangla Dictionary – Ultimate Guide</h3>
+            <p>Discover the best offline English to Bangla dictionary for Bangladesh.</p>
+            <a href="english-to-bangla-dictionary.html" class="read-more">Read More →</a>
+        </div>
+    </div>
+</section>
 
-        if (difference < 0) {
-            // If passed, reset to 30 days from now
-            const newTarget = new Date();
-            newTarget.setDate(newTarget.getDate() + 30);
-            targetDate = newTarget.getTime();
-            difference = targetDate - now;
-        }
+<!-- ═══ PREMIUM SECTION ═══ -->
+<section class="section" id="premium">
+    <div class="premium-card">
+        <h2>🌟 Ovidhan Premium – Coming Soon</h2>
+        <p>Unlock unlimited mock tests, full exam question banks, advanced analytics, PDF revision notes, and an ad-free learning experience.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="play-button" target="_blank">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+        </a>
+    </div>
+</section>
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+<!-- ═══ CTA ═══ -->
+<section class="cta-box">
+    <h2>📱 Start Learning Today</h2>
+    <p>Join thousands of Bangladeshi students and professionals preparing for BCS, Bank Jobs, IELTS, and university admissions.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="play-button" target="_blank">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+    </a>
+</section>
 
-        const elements = [
-            { id: 'days', val: days },
-            { id: 'hours', val: hours },
-            { id: 'minutes', val: minutes },
-            { id: 'seconds', val: seconds },
-            { id: 'days2', val: days },
-            { id: 'hours2', val: hours },
-            { id: 'minutes2', val: minutes },
-            { id: 'seconds2', val: seconds }
-        ];
-
-        elements.forEach(el => {
-            const elem = document.getElementById(el.id);
-            if (elem) elem.textContent = String(el.val).padStart(2, '0');
-        });
-    }
-
-    // Run countdown on page load and update every second
-    let countdownInterval;
-    function initCountdown() {
-        startCountdown();
-        if (countdownInterval) clearInterval(countdownInterval);
-        countdownInterval = setInterval(startCountdown, 1000);
-    }
-
-    // Card reveal on scroll (home page)
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.card').forEach(card => {
-            observer.observe(card);
-        });
-        initCountdown();
-    });
-
-    // If the user navigates to home/premium, restart countdown
-    const originalShow = showPage;
-    showPage = function(id) {
-        originalShow(id);
-        if (id === 'home' || id === 'premium') {
-            initCountdown();
-        }
-    };
-
-    // Restore email from localStorage if available (optional)
-    window.addEventListener('load', function() {
-        const storedEmail = localStorage.getItem('ovidhan_email');
-        if (storedEmail) {
-            const input = document.getElementById('emailInput');
-            if (input) input.value = storedEmail;
-        }
-    });
-</script>
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <p>© 2026 অভিধান &nbsp;•&nbsp; Made with ❤️ for Bangladesh</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="#bcs">BCS</a> &nbsp;•&nbsp;
+        <a href="#bank">Bank</a> &nbsp;•&nbsp;
+        <a href="#ielts">IELTS</a> &nbsp;•&nbsp;
+        <a href="#blog">Blog</a> &nbsp;•&nbsp;
+        <a href="#premium">Premium</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" target="_blank">Download App</a> &nbsp;•&nbsp;
+        <a href="#privacy">Privacy Policy</a>
+    </p>
+</footer>
 
 </body>
 </html>
