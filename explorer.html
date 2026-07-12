@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- ═══ SEO: NO-INDEX FOR DYNAMIC PAGE (Prevents duplicate content) ═══ -->
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://ovidhan.net/explorer.html">
+    
+    <title>Smart Dictionary Explorer – Ovidhan</title>
+    <meta name="description" content="Search 5,000+ English words with Bangla meanings, synonyms, and antonyms. Fast fuzzy search tool for Bangladeshi students." />
+    
+    <!-- Google Fonts & Theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+    
+    <!-- Fuse.js for Fuzzy Search (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+
+    <style>
+        /* ── Explorer Specific Styles ── */
+        .explorer-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .search-wrapper { position: relative; margin: 1.5rem 0 2rem; }
+        .search-wrapper input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text);
+            outline: none;
+            transition: 0.3s;
+            font-family: var(--font-en);
+        }
+        .search-wrapper input:focus { border-color: var(--gold); box-shadow: 0 0 0 4px var(--gold-dim); }
+        .search-wrapper input::placeholder { color: var(--text-soft); }
+
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 var(--radius) var(--radius);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        .suggestions.active { display: block; }
+        .suggestion-item {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
+        }
+        .suggestion-item:hover { background: var(--surface2); color: var(--gold); }
+        .suggestion-item .bn-mean { color: var(--text-mid); font-family: var(--font-bn); font-size: 0.9rem; }
+
+        .word-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            margin-top: 1.5rem;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .word-card.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .word-header { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+        .word-header .title { font-size: 2.8rem; font-weight: 700; color: var(--text); line-height: 1.2; }
+        .word-header .title .bn-title { color: var(--gold); font-family: var(--font-bn); font-size: 1.8rem; font-weight: 600; margin-left: 0.75rem; }
+        .word-header .meta { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; color: var(--text-mid); font-size: 0.95rem; margin-top: 0.5rem; }
+        .word-header .meta span { background: var(--surface2); padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid var(--border); }
+
+        .tabs { display: flex; gap: 0.25rem; margin: 1.5rem 0 1rem; border-bottom: 2px solid var(--border); flex-wrap: wrap; }
+        .tab-btn { padding: 0.6rem 1.5rem; background: transparent; border: none; color: var(--text-mid); font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent; transition: 0.2s; font-size: 0.95rem; }
+        .tab-btn:hover { color: var(--text); }
+        .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+        .tab-content { display: none; padding: 1rem 0; color: var(--text-mid); line-height: 1.8; }
+        .tab-content.active { display: block; }
+        .tag-group { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+        .tag { background: var(--gold-dim); color: var(--gold); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(230,184,74,0.15); text-decoration: none; transition: 0.2s; }
+        .tag:hover { background: var(--gold); color: var(--bg); }
+
+        .recent-section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+        .recent-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .recent-tag { background: var(--surface2); color: var(--text-mid); padding: 0.2rem 1rem; border-radius: 16px; font-size: 0.85rem; border: 1px solid var(--border); text-decoration: none; transition: 0.2s; cursor: pointer; }
+        .recent-tag:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* Mission Bar */
+        .mission-bar { margin-top: 1.5rem; padding: 1rem; background: var(--surface2); border-radius: var(--radius); border-left: 4px solid var(--gold); }
+        .mission-bar .steps { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0.5rem 0; }
+        .mission-bar .step { display: flex; align-items: center; gap: 0.5rem; color: var(--text-mid); font-size: 0.9rem; cursor: pointer; }
+        .mission-bar .step.done { color: var(--green); text-decoration: line-through; }
+        .mission-bar .xp { color: var(--gold); font-weight: 700; }
+
+        .action-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0; }
+        .action-btn { padding: 0.5rem 1.2rem; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-mid); cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
+        .action-btn:hover { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+        .save-btn { background: var(--teal); color: var(--bg); border: none; padding: 0.6rem 1.5rem; border-radius: var(--radius); font-weight: 600; cursor: pointer; transition: 0.2s; }
+        .save-btn:hover { opacity: 0.8; transform: scale(0.97); }
+
+        .loading { text-align: center; padding: 3rem 0; color: var(--text-mid); }
+        .loading .spinner { display: inline-block; width: 40px; height: 40px; border: 4px solid var(--border); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 1rem; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .empty-state { text-align: center; padding: 4rem 0; color: var(--text-soft); }
+        .empty-state h2 { color: var(--text-mid); margin-bottom: 0.5rem; }
+
+        @media (max-width: 600px) {
+            .word-header .title { font-size: 2rem; }
+            .word-header .title .bn-title { font-size: 1.3rem; display: block; margin-left: 0; }
+            .word-card { padding: 1rem; }
+            .tab-btn { padding: 0.4rem 0.8rem; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="explorer-container">
+    <!-- Navigation -->
+    <nav style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+        <a href="/" style="color: var(--gold); text-decoration: none; font-weight: 600;">🏠 Home</a>
+        <a href="/dictionary.html" style="color: var(--text-mid); text-decoration: none;">📖 Dictionary</a>
+        <a href="/tools.html" style="color: var(--text-mid); text-decoration: none;">🛠️ Tools</a>
+    </nav>
+
+    <h1 style="font-size: 2rem; color: var(--text); margin-bottom: 0.25rem;">🔍 Smart Word Explorer</h1>
+    <p style="color: var(--text-mid); margin-bottom: 1rem;">Fuzzy search 5,000+ words with meanings, synonyms, and definitions.</p>
+
+    <!-- Search -->
+    <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="Type a word... e.g. beautiful, education, run" autocomplete="off" />
+        <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" class="loading"><div class="spinner"></div><p>Loading dictionary...</p></div>
+
+    <!-- Result -->
+    <div id="wordCard" class="word-card">
+        <div class="word-header">
+            <div class="title"><span id="enWord"></span><span class="bn-title" id="bnWord"></span></div>
+            <div class="meta"><span>🔊 <span id="pronunciation">/ˈɛgzæmpəl/</span></span><span>📌 <span id="pos">Adjective</span></span></div>
+        </div>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="definition">📖 Definition</button>
+            <button class="tab-btn" data-tab="synonyms">🔗 Synonyms</button>
+            <button class="tab-btn" data-tab="antonyms">🚫 Antonyms</button>
+            <button class="tab-btn" data-tab="family">👪 Word Family</button>
+        </div>
+        <div id="definition" class="tab-content active"><p id="defText">Loading...</p><div style="margin-top: 1rem; padding: 1rem; background: var(--surface2); border-radius: var(--radius); border-left: 3px solid var(--gold);"><strong>Example:</strong> "<span id="exampleText">No example available.</span>"</div></div>
+        <div id="synonyms" class="tab-content"><div class="tag-group" id="synonymsList"></div></div>
+        <div id="antonyms" class="tab-content"><div class="tag-group" id="antonymsList"></div></div>
+        <div id="family" class="tab-content"><div class="tag-group" id="familyList"></div></div>
+
+        <div class="action-buttons">
+            <button class="action-btn" onclick="copyWord()">📋 Copy</button>
+            <button class="action-btn" onclick="shareWord()">📤 Share</button>
+            <button class="save-btn" onclick="saveCurrentWord()">❤️ Save this word</button>
+            <button class="action-btn" onclick="getRandomWord()">🎲 Random</button>
+        </div>
+
+        <!-- Mission Bar -->
+        <div class="mission-bar" id="missionBar">
+            <strong style="color: var(--text);">🎯 Today's Mission: Learn "$word"</strong>
+            <div class="steps" id="missionSteps">
+                <label class="step" data-step="read"><input type="checkbox" /> 📖 Read meaning</label>
+                <label class="step" data-step="quiz"><input type="checkbox" /> ✅ Complete quiz</label>
+                <label class="step" data-step="write"><input type="checkbox" /> ✍️ Write a sentence</label>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 0.5rem;">
+                <span>⭐ XP: <span id="xpDisplay">0</span></span>
+                <span style="color: var(--text-soft); font-size: 0.8rem;">+20 XP when complete!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state"><h2>🔍 Find a word</h2><p style="color: var(--text-soft);">Type a word in the search bar above to see its definition, synonyms, and more.</p></div>
+
+    <!-- Recently Viewed -->
+    <div class="recent-section" id="recentSection">
+        <h3 style="color: var(--text-mid); font-size: 1rem; margin-bottom: 0.5rem;">🕒 Recently Viewed</h3>
+        <div class="recent-tags" id="recentList"><span style="color: var(--text-soft); font-size: 0.9rem;">No words viewed yet.</span></div>
+    </div>
+
+    <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-soft); font-size: 0.85rem;">
+        <p>Ovidhan - Smart English to Bangla Dictionary</p>
+    </footer>
+</div>
+
+<script>
+    // ─── GLOBALS ──────────────────────────────────────────────
+    let dictionary = [];
+    let currentWord = null;
+    let currentEntry = null;
+    let fuse = null;
+
+    // ─── LOAD DICTIONARY ──────────────────────────────────────
+    async function loadDictionary() {
+        try {
+            const res = await fetch('/enriched-dictionary.json');
+            if (!res.ok) throw new Error('File not found');
+            dictionary = await res.json();
+            
+            // Init Fuse.js for fuzzy search (keys: english, bangla)
+            fuse = new Fuse(dictionary, {
+                keys: ['english', 'bangla'],
+                threshold: 0.35,
+                includeScore: true
+            });
+
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('emptyState').style.display = 'block';
+            loadRecent();
+        } catch (e) {
+            document.getElementById('loading').innerHTML = `<p style="color: var(--red);">⚠️ Failed to load dictionary. Please refresh.</p>`;
+            console.error(e);
+        }
+    }
+
+    // ─── SEARCH / AUTOCOMPLETE ──────────────────────────────
+    const searchInput = document.getElementById('searchInput');
+    const suggestions = document.getElementById('suggestions');
+
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim();
+        if (query.length === 0) { suggestions.classList.remove('active'); return; }
+
+        // Use Fuse.js for fuzzy matching
+        const results = fuse.search(query).slice(0, 10);
+        if (results.length === 0) { suggestions.classList.remove('active'); return; }
+
+        suggestions.innerHTML = results.map(({ item }) => `
+            <div class="suggestion-item" data-word="${item.english}">
+                <span>${item.english}</span>
+                <span class="bn-mean">${item.bangla || ''}</span>
+            </div>
+        `).join('');
+
+        suggestions.classList.add('active');
+        suggestions.querySelectorAll('.suggestion-item').forEach(el => {
+            el.addEventListener('click', function() {
+                searchInput.value = this.dataset.word;
+                suggestions.classList.remove('active');
+                showWord(this.dataset.word);
+            });
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-wrapper')) suggestions.classList.remove('active');
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const first = suggestions.querySelector('.suggestion-item');
+            if (first) first.click();
+            else if (this.value.trim().length > 0) showWord(this.value.trim());
+        }
+    });
+
+    // ─── DISPLAY WORD ─────────────────────────────────────────
+    function showWord(word) {
+        const entry = dictionary.find(e => e.english.toLowerCase() === word.toLowerCase());
+        if (!entry) { alert('Word not found in dictionary.'); return; }
+
+        currentWord = word;
+        currentEntry = entry;
+
+        document.getElementById('emptyState').style.display = 'none';
+        const card = document.getElementById('wordCard');
+        card.classList.add('active');
+
+        // Header
+        document.getElementById('enWord').textContent = entry.english;
+        document.getElementById('bnWord').textContent = entry.bangla || '';
+        document.getElementById('pronunciation').textContent = entry.pronunciation || 'No pronunciation data';
+        document.getElementById('pos').textContent = entry.part_of_speech || 'Unknown';
+
+        // Definition / Example
+        document.getElementById('defText').textContent = entry.definition || 'No definition available.';
+        document.getElementById('exampleText').textContent = entry.example || 'No example available.';
+
+        // Tags
+        renderTags('synonymsList', entry.synonyms);
+        renderTags('antonymsList', entry.antonyms);
+        renderTags('familyList', entry.word_family);
+
+        // Update Mission Bar
+        document.getElementById('missionBar').querySelector('strong').textContent = `🎯 Today's Mission: Learn "${entry.english}"`;
+        resetMission(entry.english);
+
+        // Update URL
+        history.pushState(null, '', `?word=${encodeURIComponent(entry.english)}`);
+
+        // Add to Recent
+        addRecent(entry.english);
+    }
+
+    function renderTags(containerId, items) {
+        const container = document.getElementById(containerId);
+        if (!items || items.length === 0) {
+            container.innerHTML = '<span style="color: var(--text-soft);">None found</span>';
+            return;
+        }
+        container.innerHTML = items.map(item =>
+            `<a href="#" class="tag" onclick="event.preventDefault(); searchInput.value='${item}'; showWord('${item}');">${item}</a>`
+        ).join('');
+    }
+
+    // ─── TABS ──────────────────────────────────────────────────
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            document.getElementById(this.dataset.tab).classList.add('active');
+        });
+    });
+
+    // ─── SAVE / COPY / SHARE ──────────────────────────────────
+    function saveCurrentWord() {
+        if (!currentWord) return alert('No word selected.');
+        let saved = JSON.parse(localStorage.getItem('savedWords') || '[]');
+        if (!saved.includes(currentWord)) {
+            saved.push(currentWord);
+            localStorage.setItem('savedWords', JSON.stringify(saved));
+            alert('✅ "' + currentWord + '" saved!');
+        } else {
+            alert('⚠️ Already saved.');
+        }
+    }
+
+    function copyWord() {
+        if (!currentEntry) return;
+        const text = `${currentEntry.english} = ${currentEntry.bangla}`;
+        navigator.clipboard.writeText(text).then(() => alert('📋 Copied!'));
+    }
+
+    function shareWord() {
+        if (!currentEntry) return;
+        const url = `https://ovidhan.net/explorer.html?word=${encodeURIComponent(currentEntry.english)}`;
+        if (navigator.share) {
+            navigator.share({ title: `Ovidhan - ${currentEntry.english}`, text: `${currentEntry.english} meaning in Bangla: ${currentEntry.bangla}`, url: url });
+        } else {
+            window.open(`https://wa.me/?text=${encodeURIComponent(`Check out "${currentEntry.english}" on Ovidhan: ${url}`)}`, '_blank');
+        }
+    }
+
+    function getRandomWord() {
+        if (!dictionary.length) return;
+        const random = dictionary[Math.floor(Math.random() * dictionary.length)];
+        searchInput.value = random.english;
+        showWord(random.english);
+    }
+
+    // ─── RECENTLY VIEWED ──────────────────────────────────────
+    function addRecent(word) {
+        let recent = JSON.parse(localStorage.getItem('recentWords') || '[]');
+        recent = recent.filter(w => w !== word);
+        recent.unshift(word);
+        if (recent.length > 10) recent = recent.slice(0, 10);
+        localStorage.setItem('recentWords', JSON.stringify(recent));
+        loadRecent();
+    }
+
+    function loadRecent() {
+        const recent = JSON.parse(localStorage.getItem('recentWords') || '[]');
+        const container = document.getElementById('recentList');
+        if (recent.length === 0) {
+            container.innerHTML = '<span style="color: var(--text-soft); font-size: 0.9rem;">No words viewed yet.</span>';
+            return;
+        }
+        container.innerHTML = recent.map(w =>
+            `<span class="recent-tag" onclick="searchInput.value='${w}'; showWord('${w}');">${w}</span>`
+        ).join('');
+    }
+
+    // ─── MISSION / XP SYSTEM ──────────────────────────────────
+    function resetMission(word) {
+        const key = `mission_${word}`;
+        const state = JSON.parse(localStorage.getItem(key) || '{"read":false,"quiz":false,"write":false}');
+        const steps = document.querySelectorAll('#missionSteps .step');
+        steps.forEach(step => {
+            const stepName = step.dataset.step;
+            const checkbox = step.querySelector('input[type="checkbox"]');
+            checkbox.checked = state[stepName] || false;
+            if (state[stepName]) step.classList.add('done');
+            else step.classList.remove('done');
+            checkbox.onchange = function() {
+                state[stepName] = this.checked;
+                if (this.checked) step.classList.add('done');
+                else step.classList.remove('done');
+                localStorage.setItem(key, JSON.stringify(state));
+                updateXP(word);
+            };
+        });
+        updateXP(word);
+    }
+
+    function updateXP(word) {
+        const key = `mission_${word}`;
+        const state = JSON.parse(localStorage.getItem(key) || '{"read":false,"quiz":false,"write":false}');
+        const done = Object.values(state).filter(Boolean).length;
+        let totalXP = parseInt(localStorage.getItem('totalXP') || '0');
+        
+        // If all 3 done and we haven't awarded yet
+        if (done === 3) {
+            const awardedKey = `awarded_${word}`;
+            if (!localStorage.getItem(awardedKey)) {
+                totalXP += 20;
+                localStorage.setItem('totalXP', totalXP);
+                localStorage.setItem(awardedKey, 'true');
+                alert('🎉 +20 XP for completing the mission!');
+            }
+        }
+        document.getElementById('xpDisplay').textContent = totalXP;
+    }
+
+    // ─── CHECK URL ON LOAD ──────────────────────────────────
+    function checkURL() {
+        const params = new URLSearchParams(window.location.search);
+        const word = params.get('word');
+        if (word) {
+            searchInput.value = word;
+            setTimeout(() => showWord(word), 500);
+        }
+    }
+
+    // ─── INIT ──────────────────────────────────────────────────
+    loadDictionary().then(() => checkURL());
+</script>
+
+<!-- Global Analytics -->
+<script src="/global.js"></script>
+<script src="/recommendations.js"></script>
+</body>
+</html>
