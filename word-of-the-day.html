@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>Word of the Day – Learn a New English Word Daily with Bangla Meaning | Ovidhan</title>
+    <meta name="description" content="Learn a new English word every day with Bangla meaning, pronunciation, example, synonyms, antonyms, and a quick quiz. Free daily vocabulary for BCS, IELTS, Bank Jobs." />
+    <meta name="keywords" content="Word of the Day, daily vocabulary, English word with Bangla meaning, BCS vocabulary, IELTS vocabulary, learn English daily" />
+    <link rel="canonical" href="https://ovidhan.net/word-of-the-day.html" />
+
+    <!-- ═══ OPEN GRAPH ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Word of the Day – Learn a New English Word Daily" />
+    <meta property="og:description" content="Learn a new English word every day with Bangla meaning, pronunciation, example, synonyms, antonyms, and a quick quiz." />
+    <meta property="og:url" content="https://ovidhan.net/word-of-the-day.html" />
+    <meta property="og:site_name" content="Ovidhan – English to Bangla Dictionary" />
+    <meta property="og:image" content="https://ovidhan.net/images/og-word-of-the-day.jpg" />
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Word of the Day – Learn a New English Word Daily" />
+    <meta name="twitter:description" content="Learn a new English word every day with Bangla meaning, pronunciation, example, synonyms, antonyms, and a quick quiz." />
+
+    <!-- ═══ SCHEMA.ORG – WEBPAGE ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Word of the Day",
+        "description": "Learn a new English word every day with Bangla meaning, pronunciation, example, synonyms, antonyms, and a quick quiz.",
+        "url": "https://ovidhan.net/word-of-the-day.html",
+        "about": {
+            "@type": "Thing",
+            "name": "Daily English Vocabulary"
+        }
+    }
+    </script>
+
+    <!-- ═══ GOOGLE FONTS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ═══ GOOGLE ANALYTICS ═══ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7PS8PRT4KW');
+    </script>
+
+    <!-- ═══ RECOMMENDATION ENGINE ═══ -->
+    <script src="/global.js"></script>
+    <script src="/recommendations.js"></script>
+
+    <style>
+        /* ── Ovidhan Dark Premium Theme ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --red: #f87171;
+            --red-dim: rgba(248,113,113,0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192,132,252,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Nav ── */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo { font-size: 22px; font-weight: 700; color: var(--gold); text-decoration: none; }
+        .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-mid); text-decoration: none; font-size: 14px; font-family: var(--font-en); transition: color .2s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta { background: var(--gold); color: #0B1F1A !important; font-weight: 600 !important; padding: 7px 16px; border-radius: 8px; }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        .container { max-width: 780px; margin: 0 auto; padding: 40px 24px 60px; }
+
+        .breadcrumb {
+            font-family: var(--font-en);
+            font-size: 13px;
+            color: var(--text-soft);
+            margin-bottom: 16px;
+        }
+        .breadcrumb a { color: var(--teal); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--gold); }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .page-header .badge {
+            display: inline-block;
+            background: var(--gold-dim);
+            color: var(--gold);
+            font-family: var(--font-en);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 16px;
+            border-radius: 30px;
+            margin-bottom: 8px;
+        }
+        .page-header h1 {
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        .page-header .subtitle {
+            color: var(--text-mid);
+            font-size: 1.05rem;
+        }
+        .page-header .date-label {
+            font-family: var(--font-en);
+            font-size: 0.9rem;
+            color: var(--text-soft);
+            margin-top: 4px;
+        }
+
+        .word-card-detail {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-bottom: 24px;
+        }
+        .word-card-detail .word-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+        .word-card-detail .word-header .word {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .word-card-detail .word-header .pronounce-btn {
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--teal);
+            transition: transform .2s, color .2s;
+            padding: 0 4px;
+            line-height: 1;
+        }
+        .word-card-detail .word-header .pronounce-btn:hover {
+            transform: scale(1.2);
+            color: var(--gold);
+        }
+        .word-card-detail .word-header .save-btn {
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--text-soft);
+            transition: transform .2s, color .2s;
+            margin-left: auto;
+            padding: 0 4px;
+            line-height: 1;
+        }
+        .word-card-detail .word-header .save-btn.saved { color: var(--gold); }
+        .word-card-detail .word-header .save-btn:hover { transform: scale(1.2); color: var(--gold); }
+
+        .word-card-detail .bangla-meaning {
+            font-size: 1.4rem;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .word-card-detail .pos {
+            font-size: 0.8rem;
+            color: var(--text-soft);
+            font-family: var(--font-en);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .word-card-detail .example {
+            font-size: 1rem;
+            color: var(--text-mid);
+            font-style: italic;
+            border-left: 3px solid var(--gold-dim);
+            padding-left: 16px;
+            margin-top: 10px;
+        }
+        .word-card-detail .example::before { content: "📝 "; font-style: normal; }
+
+        .word-card-detail .related-words {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .word-card-detail .related-words .label {
+            font-size: 0.8rem;
+            color: var(--text-soft);
+            font-weight: 600;
+            font-family: var(--font-en);
+            margin-right: 4px;
+        }
+        .word-card-detail .related-words .tag {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2px 14px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            text-decoration: none;
+            transition: border-color .2s, color .2s;
+        }
+        .word-card-detail .related-words .tag:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .word-card-detail .quick-links {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+        }
+        .word-card-detail .quick-links a {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 4px 16px;
+            font-size: 0.8rem;
+            color: var(--teal);
+            text-decoration: none;
+            transition: border-color .2s, color .2s;
+        }
+        .word-card-detail .quick-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .share-section {
+            margin: 16px 0 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface2);
+            padding: 12px 16px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .share-section .share-label { font-size: 0.9rem; color: var(--text-mid); margin-right: 8px; }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.1); opacity: 0.85; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #000; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.linkedin { background: #0a66c2; }
+        .share-btn.telegram { background: #0088cc; }
+
+        .quiz-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+        .quiz-section h3 {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .quiz-section .question {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .quiz-section .options {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .quiz-section .options button {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 16px;
+            text-align: left;
+            color: var(--text);
+            cursor: pointer;
+            transition: border-color .2s, background .2s;
+            font-family: var(--font-bn);
+            font-size: 0.95rem;
+        }
+        .quiz-section .options button:hover {
+            border-color: var(--gold);
+            background: var(--gold-dim);
+        }
+        .quiz-section .options button.correct {
+            border-color: var(--green);
+            background: var(--green-dim);
+            color: var(--green);
+        }
+        .quiz-section .options button.wrong {
+            border-color: var(--red);
+            background: var(--red-dim);
+            color: var(--red);
+        }
+        .quiz-section .options button:disabled {
+            cursor: default;
+            opacity: 0.7;
+        }
+        .quiz-section .feedback {
+            margin-top: 10px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            display: none;
+        }
+        .quiz-section .feedback.show { display: block; }
+        .quiz-section .feedback.correct { background: var(--green-dim); color: var(--green); }
+        .quiz-section .feedback.wrong { background: var(--red-dim); color: var(--red); }
+
+        .archive-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: var(--font-en);
+        }
+        .archive-link:hover { color: var(--gold); }
+
+        .cta-banner {
+            background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
+            border: 1px solid rgba(230,184,74,0.3);
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-banner h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 8px; }
+        .cta-banner p { color: var(--text-mid); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            font-family: var(--font-en);
+            padding: 13px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background .2s, transform .2s;
+        }
+        .cta-btn:hover { background: #f0c85a; transform: translateY(-2px); }
+
+        .site-footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+        }
+        .site-footer a { color: var(--teal); text-decoration: none; }
+        .site-footer a:hover { color: var(--gold); }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px 12px 40px; }
+            .word-card-detail { padding: 18px 16px; }
+            .word-card-detail .word-header .word { font-size: 1.8rem; }
+            .word-card-detail .bangla-meaning { font-size: 1.2rem; }
+            .quiz-section { padding: 16px; }
+            .nav-links .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/dictionary.html" style="color:var(--gold);font-weight:600;">📕 Dictionary</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://ovidhan.net/blog.html" class="hide-mobile">Blog</a>
+        <a href="https://ovidhan.net/exam-prep.html" class="hide-mobile">Exam Prep</a>
+        <a href="https://ovidhan.net/assessment.html" style="color:var(--teal);">🎯 Assessment</a>
+        <a href="https://ovidhan.net/journey.html">📊 Journey</a>
+        <a href="https://ovidhan.net/search.html" style="color:var(--teal);font-weight:600;">🔍 Search</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ MAIN ══ -->
+<main class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="https://ovidhan.net">Home</a> ›
+        Word of the Day
+    </nav>
+
+    <!-- Header -->
+    <div class="page-header">
+        <span class="badge">📅 Daily Vocabulary</span>
+        <h1>🌟 Word of the Day</h1>
+        <p class="subtitle">Learn a new English word with Bangla meaning every day</p>
+        <div class="date-label" id="todayDate">Loading...</div>
+    </div>
+
+    <!-- Share Section -->
+    <div class="share-section" id="shareSection">
+        <span class="share-label">📤 Share today's word:</span>
+        <a href="#" id="shareFacebook" target="_blank" rel="noopener" class="share-btn facebook" aria-label="Share on Facebook">📘</a>
+        <a href="#" id="shareTwitter" target="_blank" rel="noopener" class="share-btn twitter" aria-label="Share on Twitter">🐦</a>
+        <a href="#" id="shareWhatsapp" target="_blank" rel="noopener" class="share-btn whatsapp" aria-label="Share on WhatsApp">💬</a>
+        <a href="#" id="shareLinkedin" target="_blank" rel="noopener" class="share-btn linkedin" aria-label="Share on LinkedIn">🔗</a>
+        <a href="#" id="shareTelegram" target="_blank" rel="noopener" class="share-btn telegram" aria-label="Share on Telegram">✈️</a>
+    </div>
+
+    <!-- Word Card -->
+    <div id="wordContainer">
+        <div class="word-card-detail" id="wordCard">
+            <div class="word-header">
+                <span class="word" id="wordDisplay">Loading...</span>
+                <button class="pronounce-btn" id="pronounceBtn" onclick="speakWord()" aria-label="Pronounce word">🎧</button>
+                <button class="save-btn" id="saveBtn" onclick="toggleSave()" aria-label="Save word">☆</button>
+            </div>
+            <div class="pos" id="posDisplay"></div>
+            <div class="bangla-meaning" id="banglaDisplay">Loading...</div>
+            <div class="example" id="exampleDisplay"></div>
+            <div class="related-words" id="relatedDisplay"></div>
+            <div class="quick-links" id="quickLinks">
+                <a href="#" id="dictLink">📕 Search in Dictionary</a>
+                <a href="#" id="verbLink">🔤 Verb Forms</a>
+                <a href="#" id="pluralLink">🔢 Plural</a>
+                <a href="#" id="synonymLink" style="display:none;">📚 Synonyms</a>
+                <a href="#" id="antonymLink" style="display:none;">🔄 Antonyms</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Quiz -->
+    <div class="quiz-section" id="quizSection">
+        <h3>🧠 Quick Quiz</h3>
+        <div id="quizContainer">
+            <div class="question" id="quizQuestion">Loading quiz...</div>
+            <div class="options" id="quizOptions"></div>
+            <div class="feedback" id="quizFeedback"></div>
+        </div>
+    </div>
+
+    <!-- Archive Link -->
+    <a href="/word-of-the-day-archive.html" class="archive-link">📅 View all past Words of the Day →</a>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+        <h3>📱 Never Miss a Word – Download Ovidhan App</h3>
+        <p>Get daily vocabulary, pronunciation, examples, and quizzes – all offline.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank" rel="noopener">📥 Download Ovidhan — Free</a>
+    </div>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/assessment.html">Assessment</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/journey.html">Journey</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<script>
+    // ─────────────────────────────────────────────────────────────
+    //  WORD OF THE DAY ENGINE
+    // ─────────────────────────────────────────────────────────────
+
+    let dictionaryData = [];
+    let todayWord = null;
+    let savedWords = JSON.parse(localStorage.getItem('savedWords') || '[]');
+
+    // ─── Load dictionary ────────────────────────────────────────
+    async function loadDictionary() {
+        try {
+            const res = await fetch('/dictionary.json');
+            if (!res.ok) throw new Error('Failed to load dictionary');
+            dictionaryData = await res.json();
+            initWordOfTheDay();
+        } catch (e) {
+            console.warn('Could not load dictionary. Using fallback sample.');
+            dictionaryData = [
+                { english: "hello", bangla: "হ্যালো", example: "Hello, how are you?", pos: "interjection" },
+                { english: "world", bangla: "বিশ্ব", example: "The world is beautiful.", pos: "noun" },
+                { english: "love", bangla: "ভালোবাসা", example: "I love you.", pos: "verb" },
+                { english: "peace", bangla: "শান্তি", example: "We all want peace.", pos: "noun" },
+                { english: "book", bangla: "বই", example: "I am reading a book.", pos: "noun" }
+            ];
+            initWordOfTheDay();
+        }
+    }
+
+    // ─── Seed-based selection (deterministic) ──────────────────
+    function getWordForDate(date) {
+        if (!dictionaryData || dictionaryData.length === 0) return null;
+        // Use date string to seed
+        const dateStr = date.toISOString().split('T')[0]; // YYYY-MM-DD
+        let hash = 0;
+        for (let i = 0; i < dateStr.length; i++) {
+            hash = (hash * 31 + dateStr.charCodeAt(i)) & 0xFFFFFFFF;
+        }
+        const index = Math.abs(hash) % dictionaryData.length;
+        return dictionaryData[index];
+    }
+
+    // ─── Init ──────────────────────────────────────────────────
+    function initWordOfTheDay() {
+        const today = new Date();
+        todayWord = getWordForDate(today);
+        if (!todayWord) {
+            document.getElementById('wordDisplay').textContent = 'No words available';
+            return;
+        }
+        displayWord(todayWord);
+        updateDateLabel(today);
+        updateShareLinks(todayWord);
+        generateQuiz(todayWord);
+        updateSaveButton();
+    }
+
+    function displayWord(word) {
+        const wordObj = word;
+        const wordText = wordObj.english || wordObj.word || '';
+        const bangla = wordObj.bangla || '';
+        const pos = wordObj.pos || '';
+        const example = wordObj.example || '';
+
+        document.getElementById('wordDisplay').textContent = wordText;
+        document.getElementById('banglaDisplay').textContent = bangla;
+        document.getElementById('posDisplay').textContent = pos ? pos.toUpperCase() : '';
+        document.getElementById('exampleDisplay').textContent = example ? `"${example}"` : '';
+
+        // Related words: we can include synonyms/antonyms if available
+        const synonyms = wordObj.synonyms || [];
+        const antonyms = wordObj.antonyms || [];
+        let relatedHtml = '';
+        if (synonyms.length) {
+            relatedHtml += `<span class="label">📚 Synonyms:</span>`;
+            synonyms.forEach(s => {
+                relatedHtml += `<a href="/word/${makeFilename(s)}.html" class="tag">${s}</a>`;
+            });
+        }
+        if (antonyms.length) {
+            relatedHtml += `<span class="label">🔄 Antonyms:</span>`;
+            antonyms.forEach(a => {
+                relatedHtml += `<a href="/word/${makeFilename(a)}.html" class="tag">${a}</a>`;
+            });
+        }
+        document.getElementById('relatedDisplay').innerHTML = relatedHtml;
+
+        // Quick links
+        document.getElementById('dictLink').href = `/dictionary.html?q=${encodeURIComponent(wordText)}`;
+        document.getElementById('verbLink').href = `/verb-forms.html?q=${encodeURIComponent(wordText)}`;
+        document.getElementById('pluralLink').href = `/plural-maker.html?q=${encodeURIComponent(wordText)}`;
+
+        if (synonyms.length) {
+            document.getElementById('synonymLink').style.display = 'inline-block';
+            document.getElementById('synonymLink').href = `/english-synonyms-bangla.html?q=${encodeURIComponent(wordText)}`;
+        } else {
+            document.getElementById('synonymLink').style.display = 'none';
+        }
+        if (antonyms.length) {
+            document.getElementById('antonymLink').style.display = 'inline-block';
+            document.getElementById('antonymLink').href = `/english-antonyms-bangla.html?q=${encodeURIComponent(wordText)}`;
+        } else {
+            document.getElementById('antonymLink').style.display = 'none';
+        }
+
+        // Store word for saving
+        window.currentWord = wordText;
+    }
+
+    function makeFilename(word) {
+        return word.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
+
+    function updateDateLabel(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+        document.getElementById('todayDate').textContent = date.toLocaleDateString('en-US', options);
+    }
+
+    // ─── Share Links ────────────────────────────────────────────
+    function updateShareLinks(word) {
+        const wordText = word.english || word.word || '';
+        const url = encodeURIComponent('https://ovidhan.net/word-of-the-day.html');
+        const text = encodeURIComponent(`Today's Word: "${wordText}" – Meaning in Bangla: ${word.bangla || ''}. Learn daily English with Ovidhan!`);
+        document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+        document.getElementById('shareWhatsapp').href = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+        document.getElementById('shareLinkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+        document.getElementById('shareTelegram').href = `https://t.me/share/url?url=${url}&text=${text}`;
+    }
+
+    // ─── Pronunciation ──────────────────────────────────────────
+    function speakWord() {
+        const word = document.getElementById('wordDisplay').textContent;
+        if (!word || word === 'Loading...') return;
+        if (!window.speechSynthesis) {
+            alert('Speech synthesis not supported.');
+            return;
+        }
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+        window.speechSynthesis.speak(utterance);
+    }
+    window.speakWord = speakWord;
+
+    // ─── Save ────────────────────────────────────────────────────
+    function toggleSave() {
+        const word = window.currentWord;
+        if (!word) return;
+        const index = savedWords.indexOf(word);
+        if (index === -1) {
+            savedWords.push(word);
+            if (window.Recommendations) {
+                Recommendations.trackSaveWord(word);
+            }
+        } else {
+            savedWords.splice(index, 1);
+        }
+        localStorage.setItem('savedWords', JSON.stringify(savedWords));
+        updateSaveButton();
+    }
+    window.toggleSave = toggleSave;
+
+    function updateSaveButton() {
+        const word = window.currentWord;
+        const btn = document.getElementById('saveBtn');
+        if (!word || !btn) return;
+        if (savedWords.includes(word)) {
+            btn.textContent = '⭐';
+            btn.classList.add('saved');
+        } else {
+            btn.textContent = '☆';
+            btn.classList.remove('saved');
+        }
+    }
+
+    // ─── Quiz ────────────────────────────────────────────────────
+    function generateQuiz(word) {
+        const container = document.getElementById('quizContainer');
+        const questionEl = document.getElementById('quizQuestion');
+        const optionsEl = document.getElementById('quizOptions');
+        const feedbackEl = document.getElementById('quizFeedback');
+
+        // Simple quiz: ask for the Bangla meaning of the word
+        const wordText = word.english || word.word || '';
+        const correctMeaning = word.bangla || '';
+
+        // Get 3 wrong options from other words
+        let wrongOptions = [];
+        const allWords = dictionaryData.filter(w => (w.english || w.word) !== wordText);
+        const shuffled = allWords.sort(() => Math.random() - 0.5);
+        for (let i = 0; i < Math.min(3, shuffled.length); i++) {
+            if (shuffled[i].bangla && !wrongOptions.includes(shuffled[i].bangla)) {
+                wrongOptions.push(shuffled[i].bangla);
+            }
+        }
+        // If not enough, add placeholders
+        while (wrongOptions.length < 3) {
+            wrongOptions.push('অজানা');
+        }
+
+        // Build options (shuffle)
+        const options = [correctMeaning, ...wrongOptions.slice(0, 3)];
+        options.sort(() => Math.random() - 0.5);
+
+        questionEl.textContent = `What is the Bangla meaning of "${wordText}"?`;
+
+        optionsEl.innerHTML = '';
+        options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.textContent = opt;
+            btn.dataset.correct = opt === correctMeaning ? 'true' : 'false';
+            btn.addEventListener('click', function() {
+                // Disable all buttons
+                document.querySelectorAll('#quizOptions button').forEach(b => b.disabled = true);
+                if (this.dataset.correct === 'true') {
+                    this.classList.add('correct');
+                    feedbackEl.className = 'feedback show correct';
+                    feedbackEl.textContent = '✅ Correct! Well done!';
+                } else {
+                    this.classList.add('wrong');
+                    feedbackEl.className = 'feedback show wrong';
+                    feedbackEl.textContent = `❌ Oops! The correct meaning is "${correctMeaning}".`;
+                }
+                // Show the correct answer
+                document.querySelectorAll('#quizOptions button').forEach(b => {
+                    if (b.dataset.correct === 'true') {
+                        b.classList.add('correct');
+                    }
+                });
+            });
+            optionsEl.appendChild(btn);
+        });
+        feedbackEl.className = 'feedback';
+        feedbackEl.textContent = '';
+    }
+
+    // ─── Init ────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', loadDictionary);
+</script>
+
+</body>
+</html>

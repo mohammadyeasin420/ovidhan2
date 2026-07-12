@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parts of Speech Identifier – Free English Grammar Tool | Ovidhan</title>
+    <meta name="description" content="Identify parts of speech for any English sentence. Get word-by-word POS tags, summaries, and links to detailed grammar lessons. Free tool for BCS, IELTS, and students." />
+    <link rel="canonical" href="https://ovidhan.net/parts-of-speech-identifier.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ── Ovidhan Dark Theme ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --red: #f87171;
+            --red-dim: rgba(248,113,113,0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192,132,252,0.10);
+            --pink: #f472b6;
+            --pink-dim: rgba(244,114,182,0.10);
+            --orange: #fb923c;
+            --orange-dim: rgba(251,146,60,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 14px;
+            font-family: var(--font-en);
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold);
+            color: #0B1F1A !important;
+            font-weight: 600 !important;
+            padding: 7px 16px;
+            border-radius: 8px;
+        }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .page-header h1 {
+            font-size: 2.4rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .page-header p {
+            color: var(--text-mid);
+            font-size: 1.1rem;
+        }
+        .page-header .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .page-header .badge {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--text-mid);
+        }
+
+        .tool-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-bottom: 30px;
+        }
+        .tool-box textarea {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            resize: vertical;
+            min-height: 100px;
+            outline: none;
+            transition: border-color .3s;
+        }
+        .tool-box textarea:focus {
+            border-color: var(--gold);
+        }
+        .tool-box .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .tool-box .btn {
+            padding: 10px 28px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background .2s, transform .2s;
+            font-family: var(--font-en);
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: #0B1F1A;
+        }
+        .btn-primary:hover { background: #f0c85a; transform: translateY(-2px); }
+        .btn-secondary {
+            background: var(--surface2);
+            color: var(--text-mid);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+        .example-sentences {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .example-sentences .ex {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 16px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            cursor: pointer;
+            transition: background .2s, border-color .2s;
+        }
+        .example-sentences .ex:hover {
+            background: var(--gold-dim);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .results {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .results.visible { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pos-tag {
+            display: inline-block;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 6px 12px;
+            margin: 4px 6px 4px 0;
+            font-size: 0.95rem;
+        }
+        .pos-tag .word {
+            color: #fff;
+            font-weight: 500;
+        }
+        .pos-tag .tag {
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 6px;
+            display: inline-block;
+        }
+
+        /* POS tag colors */
+        .tag-noun { background: var(--teal-dim); color: var(--teal); }
+        .tag-verb { background: var(--gold-dim); color: var(--gold); }
+        .tag-pronoun { background: var(--green-dim); color: var(--green); }
+        .tag-adjective { background: var(--purple-dim); color: var(--purple); }
+        .tag-adverb { background: var(--pink-dim); color: var(--pink); }
+        .tag-preposition { background: var(--orange-dim); color: var(--orange); }
+        .tag-conjunction { background: var(--teal-dim); color: var(--teal); }
+        .tag-interjection { background: var(--red-dim); color: var(--red); }
+        .tag-article { background: var(--surface2); color: var(--text-soft); }
+        .tag-unknown { background: var(--surface2); color: var(--text-soft); }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 8px;
+            margin: 12px 0;
+        }
+        .summary-item {
+            background: var(--surface2);
+            padding: 8px 12px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .summary-item .count {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .summary-item .label {
+            font-size: 0.75rem;
+            color: var(--text-soft);
+            font-family: var(--font-en);
+            text-transform: uppercase;
+        }
+
+        .result-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        .result-section .section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gold);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .related-links a {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 16px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            text-decoration: none;
+            transition: border-color .2s, color .2s;
+        }
+        .related-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 30px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+            margin-top: 48px;
+        }
+        .footer a { color: var(--teal); text-decoration: none; }
+        .footer a:hover { color: var(--gold); }
+
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 1.8rem; }
+            .tool-box { padding: 20px; }
+            .nav-links .hide-mobile { display: none; }
+            .pos-tag { font-size: 0.85rem; padding: 4px 10px; }
+            .summary-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/search.html" style="color:var(--gold);font-weight:600;">🔍 Search</a>
+        <a href="https://ovidhan.net/dashboard.html" class="hide-mobile">📊 Dashboard</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ MAIN ══ -->
+<div class="container">
+
+    <div class="page-header">
+        <h1>📝 Parts of Speech Identifier</h1>
+        <p>Enter any English sentence and see each word tagged with its part of speech — noun, verb, adjective, and more.</p>
+        <div class="badge-group">
+            <span class="badge">📖 Free</span>
+            <span class="badge">⚡ Instant</span>
+            <span class="badge">🎓 8 Parts of Speech</span>
+        </div>
+    </div>
+
+    <!-- Input -->
+    <div class="tool-box">
+        <textarea id="sentenceInput" placeholder="Type or paste an English sentence here...">The beautiful girl sings sweetly.</textarea>
+        <div class="actions">
+            <button class="btn btn-primary" onclick="analyzePOS()">🔍 Identify Parts of Speech</button>
+            <button class="btn btn-secondary" onclick="clearAll()">✕ Clear</button>
+        </div>
+        <div class="example-sentences">
+            <span style="color:var(--text-soft);font-size:0.85rem;">Try:</span>
+            <span class="ex" onclick="loadExample('The beautiful girl sings sweetly.')">The beautiful girl sings sweetly.</span>
+            <span class="ex" onclick="loadExample('She quickly ate the delicious cake.')">She quickly ate the delicious cake.</span>
+            <span class="ex" onclick="loadExample('Wow! That is a very big dog.')">Wow! That is a very big dog.</span>
+            <span class="ex" onclick="loadExample('He and I went to the market.')">He and I went to the market.</span>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results" id="resultsContainer">
+        <!-- Rendered by JS -->
+    </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>
+    </p>
+</footer>
+
+<!-- ══ POS LOGIC ══ -->
+<script>
+    // ─────────────────────────────────────────────────────────────
+    //  PARTS OF SPEECH IDENTIFIER – Ovidhan
+    //  Rule-based, no AI, 100% client-side
+    // ─────────────────────────────────────────────────────────────
+
+    // ─── Word Lists ───
+    const POS_LISTS = {
+        noun: [
+            'boy', 'girl', 'man', 'woman', 'child', 'person', 'people',
+            'book', 'table', 'chair', 'door', 'window', 'house', 'school', 'college', 'university',
+            'city', 'country', 'river', 'mountain', 'ocean', 'tree', 'flower', 'animal', 'bird', 'fish',
+            'cat', 'dog', 'horse', 'lion', 'tiger', 'elephant', 'monkey', 'snake',
+            'time', 'year', 'day', 'week', 'month', 'hour', 'minute', 'second',
+            'friend', 'family', 'mother', 'father', 'brother', 'sister', 'uncle', 'aunt',
+            'teacher', 'student', 'doctor', 'engineer', 'lawyer', 'farmer', 'driver', 'pilot',
+            'love', 'happiness', 'sadness', 'anger', 'fear', 'courage', 'strength', 'beauty',
+            'knowledge', 'truth', 'honesty', 'wisdom', 'justice', 'freedom', 'peace',
+            'work', 'job', 'career', 'business', 'company', 'office', 'factory',
+            'money', 'gold', 'silver', 'iron', 'wood', 'water', 'air', 'fire',
+            'song', 'music', 'dance', 'painting', 'poem', 'story', 'novel',
+            'apple', 'banana', 'orange', 'mango', 'rice', 'bread', 'milk', 'egg',
+            'football', 'cricket', 'tennis', 'game', 'sport',
+            'chairman', 'president', 'minister', 'prime minister', 'king', 'queen', 'prince', 'princess',
+            'cloud', 'rain', 'snow', 'storm', 'wind', 'sun', 'moon', 'star',
+            'earth', 'world', 'nature', 'planet', 'universe',
+            'love', 'peace', 'joy', 'hope', 'faith', 'trust'
+        ],
+        pronoun: [
+            'i', 'you', 'he', 'she', 'it', 'we', 'they',
+            'me', 'him', 'her', 'us', 'them',
+            'my', 'your', 'his', 'her', 'our', 'their',
+            'mine', 'yours', 'hers', 'ours', 'theirs',
+            'myself', 'yourself', 'himself', 'herself', 'itself', 'ourselves', 'themselves',
+            'who', 'whom', 'whose', 'which', 'what',
+            'everyone', 'everybody', 'someone', 'somebody', 'anyone', 'anybody', 'no one', 'nobody',
+            'each', 'either', 'neither', 'all', 'some', 'any', 'none', 'both', 'several', 'many', 'few'
+        ],
+        verb: [
+            'am', 'is', 'are', 'was', 'were', 'be', 'being', 'been',
+            'have', 'has', 'had',
+            'do', 'does', 'did',
+            'go', 'goes', 'went', 'gone',
+            'eat', 'eats', 'ate', 'eaten',
+            'drink', 'drinks', 'drank', 'drunk',
+            'write', 'writes', 'wrote', 'written',
+            'read', 'reads', 'read', 'read',
+            'study', 'studies', 'studied', 'studying',
+            'play', 'plays', 'played', 'playing',
+            'work', 'works', 'worked', 'working',
+            'sing', 'sings', 'sang', 'sung',
+            'dance', 'dances', 'danced', 'dancing',
+            'speak', 'speaks', 'spoke', 'spoken',
+            'talk', 'talks', 'talked', 'talking',
+            'say', 'says', 'said', 'saying',
+            'tell', 'tells', 'told', 'telling',
+            'ask', 'asks', 'asked', 'asking',
+            'know', 'knows', 'knew', 'known',
+            'think', 'thinks', 'thought', 'thinking',
+            'believe', 'believes', 'believed', 'believing',
+            'love', 'loves', 'loved', 'loving',
+            'hate', 'hates', 'hated', 'hateing',
+            'like', 'likes', 'liked', 'liking',
+            'want', 'wants', 'wanted', 'wanting',
+            'need', 'needs', 'needed', 'needing',
+            'try', 'tries', 'tried', 'trying',
+            'make', 'makes', 'made', 'making',
+            'see', 'sees', 'saw', 'seen',
+            'watch', 'watches', 'watched', 'watching',
+            'hear', 'hears', 'heard', 'hearing',
+            'feel', 'feels', 'felt', 'feeling',
+            'become', 'becomes', 'became', 'becoming',
+            'seem', 'seems', 'seemed', 'seeming',
+            'appear', 'appears', 'appeared', 'appearing'
+        ],
+        adjective: [
+            'beautiful', 'handsome', 'ugly', 'pretty', 'cute', 'gorgeous',
+            'tall', 'short', 'fat', 'thin', 'big', 'small', 'large', 'tiny',
+            'fast', 'slow', 'quick', 'rapid', 'gentle', 'harsh',
+            'bright', 'dark', 'light', 'heavy',
+            'hot', 'cold', 'warm', 'cool',
+            'good', 'bad', 'nice', 'terrible', 'wonderful', 'amazing', 'great',
+            'happy', 'sad', 'angry', 'excited', 'bored', 'tired',
+            'smart', 'intelligent', 'clever', 'stupid', 'wise',
+            'brave', 'courageous', 'scared', 'fearful',
+            'rich', 'poor', 'wealthy',
+            'young', 'old', 'new', 'ancient',
+            'red', 'blue', 'green', 'yellow', 'black', 'white',
+            'delicious', 'tasty', 'sour', 'sweet', 'bitter',
+            'easy', 'difficult', 'hard', 'simple', 'complex',
+            'happy', 'sad', 'glad', 'sorry',
+            'strong', 'weak', 'powerful',
+            'safe', 'dangerous',
+            'clear', 'vague', 'obvious',
+            'valuable', 'worthless',
+            'silent', 'noisy',
+            'friendly', 'kind', 'cruel',
+            'famous', 'unknown',
+            'final', 'first', 'last', 'next', 'previous'
+        ],
+        adverb: [
+            'quickly', 'slowly', 'fast', 'well', 'badly', 'happily', 'sadly',
+            'angrily', 'gently', 'carefully', 'carelessly', 'easily', 'hard',
+            'loudly', 'quietly', 'beautifully', 'gracefully',
+            'very', 'too', 'so', 'quite', 'rather', 'almost', 'really', 'extremely',
+            'often', 'always', 'never', 'usually', 'sometimes', 'rarely', 'already',
+            'soon', 'later', 'now', 'today', 'yesterday', 'tomorrow', 'early', 'late',
+            'there', 'here', 'inside', 'outside', 'upstairs', 'downstairs',
+            'enough', 'almost', 'hardly', 'barely', 'scarcely'
+        ],
+        preposition: [
+            'in', 'on', 'at', 'of', 'to', 'for', 'with', 'by', 'from', 'up', 'down',
+            'above', 'below', 'over', 'under', 'beside', 'behind', 'in front of',
+            'between', 'among', 'through', 'during', 'without', 'within',
+            'onto', 'upon', 'off', 'across', 'along', 'around', 'towards'
+        ],
+        conjunction: [
+            'and', 'but', 'or', 'nor', 'for', 'yet', 'so',
+            'although', 'though', 'because', 'since', 'unless', 'while',
+            'whereas', 'where', 'when', 'if', 'then', 'else',
+            'both', 'either', 'neither', 'whether', 'as', 'than'
+        ],
+        interjection: [
+            'wow', 'oh', 'ah', 'ouch', 'alas', 'bravo', 'hurrah', 'hello', 'hey',
+            'yes', 'no', 'well', 'damn', 'goodbye', 'bye'
+        ],
+        article: ['a', 'an', 'the']
+    };
+
+    // ─── Helper: get POS for a word ───
+    function getPOS(word) {
+        const lower = word.toLowerCase().replace(/[^a-z']/g, '');
+        if (!lower) return 'unknown';
+
+        // Check lists
+        for (const [pos, list] of Object.entries(POS_LISTS)) {
+            if (list.includes(lower)) return pos;
+        }
+
+        // Suffix heuristics
+        if (lower.endsWith('ing') && lower.length > 4) return 'verb';
+        if (lower.endsWith('ed') && lower.length > 3) return 'verb';
+        if (lower.endsWith('en') && lower.length > 3) return 'verb';
+        if (lower.endsWith('s') && lower.length > 4 && !lower.endsWith('ss') && !lower.endsWith('us')) {
+            // Could be plural noun or 3rd person verb
+            // Simple check: if base form without 's' is in noun list
+            const base = lower.slice(0, -1);
+            if (POS_LISTS.noun.includes(base)) return 'noun';
+            if (POS_LISTS.verb.includes(base)) return 'verb';
+        }
+        if (lower.endsWith('ly') && lower.length > 4) return 'adverb';
+        if (lower.endsWith('ful') || lower.endsWith('less') || lower.endsWith('ous') || lower.endsWith('able') || lower.endsWith('ible')) return 'adjective';
+        if (lower.endsWith('tion') || lower.endsWith('sion') || lower.endsWith('ment') || lower.endsWith('ness') || lower.endsWith('ity')) return 'noun';
+        if (lower.endsWith('ive') || lower.endsWith('ic') || lower.endsWith('al')) return 'adjective';
+
+        // Default: if starts with capital letter and not at start of sentence → proper noun
+        // But we handle that in main logic
+        return 'noun'; // fallback
+    }
+
+    // ─── Tag a sentence ───
+    function tagSentence(sentence) {
+        // Preserve punctuation, but we'll split on spaces and keep punctuation attached?
+        // We'll split by spaces, but keep punctuation as separate tokens? Easier: split on spaces and then clean.
+        const tokens = sentence.trim().split(/\s+/);
+        const tagged = tokens.map(token => {
+            // Extract punctuation
+            const match = token.match(/^([^.,!?'";:]*)([.,!?'";:]*)$/);
+            let word = match ? match[1] : token;
+            let punct = match ? match[2] : '';
+            const original = token;
+            if (!word) {
+                return { original, word: '', pos: 'punctuation', clean: '' };
+            }
+            const pos = getPOS(word);
+            return { original, word, pos, punct };
+        });
+
+        // Fix first letter: if first word and capital, keep as is.
+        // We can also improve: if word is capitalized but not at start, treat as proper noun
+        // We'll override: if token[0] is uppercase and index>0, set pos = 'noun' (proper noun)
+        for (let i = 0; i < tagged.length; i++) {
+            const t = tagged[i];
+            if (t.word && t.word[0] === t.word[0].toUpperCase() && i > 0) {
+                // If it's not already a pronoun, set to noun (proper noun)
+                if (t.pos !== 'pronoun') {
+                    t.pos = 'noun';
+                }
+            }
+        }
+
+        // Count POS
+        const count = {};
+        for (const t of tagged) {
+            const p = t.pos;
+            count[p] = (count[p] || 0) + 1;
+        }
+
+        return { tagged, count };
+    }
+
+    // ─── Render Results ───
+    function renderResults(tagged, count, original) {
+        const container = document.getElementById('resultsContainer');
+
+        // Build POS tags display
+        let posHtml = '';
+        for (const t of tagged) {
+            const posClass = `tag-${t.pos}`;
+            const displayTag = t.pos.charAt(0).toUpperCase() + t.pos.slice(1);
+            // If punctuation, show without tag
+            if (t.pos === 'punctuation') {
+                posHtml += `<span class="pos-tag"><span class="word">${t.original}</span></span>`;
+            } else {
+                posHtml += `<span class="pos-tag"><span class="word">${t.original}</span> <span class="tag ${posClass}">${displayTag}</span></span>`;
+            }
+        }
+
+        // Summary
+        const summaryItems = Object.entries(count).filter(([k]) => k !== 'punctuation').sort((a,b) => b[1] - a[1]);
+        let summaryHtml = '';
+        if (summaryItems.length > 0) {
+            summaryHtml = `<div class="summary-grid">`;
+            for (const [pos, cnt] of summaryItems) {
+                const label = pos.charAt(0).toUpperCase() + pos.slice(1);
+                summaryHtml += `
+                    <div class="summary-item">
+                        <div class="count">${cnt}</div>
+                        <div class="label">${label}</div>
+                    </div>
+                `;
+            }
+            summaryHtml += `</div>`;
+        }
+
+        // Related articles
+        const related = [
+            { title: 'Parts of Speech – Complete Guide', url: 'parts-of-speech-bangla.html' },
+            { title: 'Noun Rules in Bangla', url: 'noun-rules-bangla.html' },
+            { title: 'Pronoun Rules in Bangla', url: 'pronoun-rules-bangla.html' },
+            { title: 'Verb Rules in Bangla', url: 'verb-rules-bangla.html' },
+            { title: 'Adjective Rules in Bangla', url: 'adjective-rules-bangla.html' },
+            { title: 'Adverb Rules in Bangla', url: 'adverb-rules-bangla.html' },
+            { title: 'Preposition Rules in Bangla', url: 'preposition-rules-bangla.html' },
+            { title: 'Conjunction Rules in Bangla', url: 'conjunction-rules-bangla.html' },
+            { title: 'Interjection Rules in Bangla', url: 'interjection-rules-bangla.html' }
+        ];
+        let relatedHtml = related.map(a => `<a href="${a.url}">${a.title}</a>`).join('');
+
+        const html = `
+            <div class="result-section">
+                <div class="section-title">📝 Word-by-Word Tags</div>
+                <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;">
+                    ${posHtml}
+                </div>
+            </div>
+
+            ${summaryItems.length > 0 ? `
+            <div class="result-section">
+                <div class="section-title">📊 Summary</div>
+                ${summaryHtml}
+            </div>
+            ` : ''}
+
+            <div class="result-section">
+                <div class="section-title">📚 Learn More</div>
+                <p style="color:var(--text-mid);font-size:0.95rem;margin-bottom:8px;">Deepen your understanding of each part of speech:</p>
+                <div class="related-links">
+                    ${relatedHtml}
+                </div>
+            </div>
+
+            <div class="result-section" style="text-align:center;border:1px dashed var(--border);">
+                <p style="color:var(--text-soft);font-size:0.9rem;">🔖 Bookmark this tool — identify parts of speech instantly!</p>
+                <div style="margin-top:8px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+                    <button class="btn btn-secondary" onclick="window.location.href='search.html?q=Parts%20of%20Speech%20Identifier'">🔍 Search Tools</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='grammar.html'">📚 Grammar Hub</button>
+                </div>
+            </div>
+        `;
+
+        container.innerHTML = html;
+        container.classList.add('visible');
+    }
+
+    // ─── Main Function ───
+    function analyzePOS() {
+        const input = document.getElementById('sentenceInput');
+        const sentence = input.value.trim();
+        if (!sentence) {
+            alert('Please enter a sentence.');
+            return;
+        }
+
+        const { tagged, count } = tagSentence(sentence);
+        renderResults(tagged, count, sentence);
+
+        // Track in GA
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'identify_pos', { word_count: tagged.length });
+        }
+    }
+
+    function loadExample(text) {
+        document.getElementById('sentenceInput').value = text;
+        analyzePOS();
+    }
+
+    function clearAll() {
+        document.getElementById('sentenceInput').value = '';
+        document.getElementById('resultsContainer').classList.remove('visible');
+        document.getElementById('resultsContainer').innerHTML = '';
+    }
+
+    // ─── Keyboard shortcut: Ctrl+Enter ───
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+            const active = document.activeElement;
+            if (active && active.id === 'sentenceInput') {
+                e.preventDefault();
+                analyzePOS();
+            }
+        }
+    });
+
+    // Auto-analyze on load with example
+    window.addEventListener('DOMContentLoaded', function() {
+        analyzePOS();
+    });
+</script>
+
+</body>
+</html>

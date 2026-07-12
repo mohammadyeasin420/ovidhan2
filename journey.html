@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>My English Journey – Personalized Learning Dashboard | Ovidhan</title>
+    <meta name="description" content="Track your English learning progress with Ovidhan's personalized dashboard. View your XP, streak, skill levels, learning path, and daily recommendations." />
+    <meta name="keywords" content="English learning dashboard, progress tracker, XP, streak, learning path, personalized learning, Bangladesh" />
+    <link rel="canonical" href="https://ovidhan.net/journey.html" />
+
+    <!-- ═══ OPEN GRAPH ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="My English Journey – Personalized Learning Dashboard" />
+    <meta property="og:description" content="Track your English learning progress with Ovidhan's personalized dashboard." />
+    <meta property="og:url" content="https://ovidhan.net/journey.html" />
+    <meta property="og:site_name" content="Ovidhan – English to Bangla Dictionary" />
+    <meta property="og:image" content="https://ovidhan.net/images/og-journey.jpg" />
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="My English Journey – Personalized Learning Dashboard" />
+    <meta name="twitter:description" content="Track your English learning progress with Ovidhan's personalized dashboard." />
+
+    <!-- ═══ SCHEMA.ORG – WEBPAGE ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "My English Journey – Personalized Learning Dashboard",
+        "url": "https://ovidhan.net/journey.html",
+        "description": "Track your English learning progress with Ovidhan's personalized dashboard.",
+        "about": {
+            "@type": "Thing",
+            "name": "English Learning Progress Dashboard"
+        }
+    }
+    </script>
+
+    <!-- ═══ GOOGLE FONTS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ═══ GOOGLE ANALYTICS ═══ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7PS8PRT4KW');
+    </script>
+
+    <style>
+        /* ── Ovidhan Dark Premium Theme ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --red: #f87171;
+            --red-dim: rgba(248,113,113,0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192,132,252,0.10);
+            --orange: #fb923c;
+            --orange-dim: rgba(251,146,60,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Nav ── */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 14px;
+            font-family: var(--font-en);
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links .active { color: var(--gold); font-weight: 600; }
+        .nav-cta {
+            background: var(--gold);
+            color: #0B1F1A !important;
+            font-weight: 600 !important;
+            padding: 7px 16px;
+            border-radius: 8px;
+        }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
+            padding: 40px 24px 50px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+        .hero .subtitle {
+            max-width: 700px;
+            margin: 0 auto 8px;
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+        .hero .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .hero .badge {
+            background: rgba(255,215,0,0.10);
+            border: 1px solid rgba(255,215,0,0.25);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* ── Main Container ── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 24px 60px;
+        }
+
+        /* ── Welcome Section ── */
+        .welcome-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-bottom: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .welcome-section .greeting h2 {
+            color: var(--gold);
+            font-size: 1.6rem;
+            margin-bottom: 2px;
+        }
+        .welcome-section .greeting p {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+        }
+        .welcome-section .stats-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .welcome-section .stat-item {
+            text-align: center;
+            background: var(--surface2);
+            padding: 8px 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            min-width: 80px;
+        }
+        .welcome-section .stat-item .number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: var(--font-en);
+        }
+        .welcome-section .stat-item .label {
+            font-size: 0.7rem;
+            color: var(--text-soft);
+            font-family: var(--font-en);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .welcome-section .stat-item .number.fire { color: var(--orange); }
+        .welcome-section .stat-item .number.xp { color: var(--purple); }
+        .welcome-section .stat-item .number.level { color: var(--teal); }
+
+        /* ── Skill Grid ── */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+        .skill-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 22px;
+            transition: border-color .2s;
+        }
+        .skill-card:hover {
+            border-color: var(--gold);
+        }
+        .skill-card .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .skill-card .skill-header .name {
+            font-weight: 600;
+            color: #fff;
+            font-size: 1rem;
+        }
+        .skill-card .skill-header .pct {
+            font-weight: 700;
+            font-family: var(--font-en);
+            font-size: 1.1rem;
+        }
+        .skill-card .skill-header .pct.high { color: var(--green); }
+        .skill-card .skill-header .pct.medium { color: var(--gold); }
+        .skill-card .skill-header .pct.low { color: var(--orange); }
+        .skill-card .skill-header .pct.very-low { color: var(--red); }
+
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--surface2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-bar .fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.8s ease;
+        }
+        .skill-bar .fill.high { background: var(--green); }
+        .skill-bar .fill.medium { background: var(--gold); }
+        .skill-bar .fill.low { background: var(--orange); }
+        .skill-bar .fill.very-low { background: var(--red); }
+
+        .skill-card .skill-desc {
+            font-size: 0.75rem;
+            color: var(--text-soft);
+            margin-top: 6px;
+        }
+
+        /* ── Today's Recommendations ── */
+        .recommendations-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .recommendations-section .section-title {
+            color: var(--gold);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .rec-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .rec-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--text);
+            transition: border-color .2s, transform .2s;
+        }
+        .rec-item:hover {
+            border-color: var(--gold);
+            transform: translateX(4px);
+        }
+        .rec-item .icon { font-size: 1.2rem; flex-shrink: 0; }
+        .rec-item .info { flex: 1; }
+        .rec-item .info .title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #fff;
+        }
+        .rec-item .info .desc {
+            font-size: 0.8rem;
+            color: var(--text-mid);
+        }
+        .rec-item .status {
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-family: var(--font-en);
+            flex-shrink: 0;
+        }
+        .rec-item .status.pending {
+            background: var(--gold-dim);
+            color: var(--gold);
+        }
+        .rec-item .status.done {
+            background: var(--green-dim);
+            color: var(--green);
+        }
+        .rec-item .status.locked {
+            background: var(--surface);
+            color: var(--text-soft);
+        }
+
+        /* ── Learning Path ── */
+        .path-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .path-section .section-title {
+            color: var(--gold);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .path-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .path-step {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 6px 14px 6px 10px;
+            font-size: 0.8rem;
+            color: var(--text-mid);
+            transition: border-color .2s;
+        }
+        .path-step .step-icon { font-size: 0.9rem; }
+        .path-step.completed {
+            border-color: var(--green);
+            color: var(--green);
+        }
+        .path-step.active {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .path-step.locked {
+            opacity: 0.5;
+        }
+
+        /* ── Quick Actions ── */
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+        .quick-action {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            text-decoration: none;
+            color: var(--text);
+            text-align: center;
+            transition: border-color .2s, transform .2s;
+        }
+        .quick-action:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+        .quick-action .icon { font-size: 1.8rem; display: block; margin-bottom: 4px; }
+        .quick-action .name { font-weight: 600; color: #fff; font-size: 0.9rem; }
+        .quick-action .desc { font-size: 0.7rem; color: var(--text-mid); }
+
+        /* ── Progress Summary ── */
+        .progress-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .progress-item {
+            text-align: center;
+        }
+        .progress-item .number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: var(--font-en);
+        }
+        .progress-item .label {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+        }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
+            border: 1px solid rgba(230,184,74,0.3);
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            margin: 28px 0;
+        }
+        .cta-banner h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 8px; }
+        .cta-banner p { color: var(--text-mid); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            font-family: var(--font-en);
+            padding: 13px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background .2s, transform .2s;
+        }
+        .cta-btn:hover { background: #f0c85a; transform: translateY(-2px); }
+        .cta-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 18px;
+        }
+        .cta-feat { font-size: 13px; color: var(--teal); display: flex; align-items: center; gap: 5px; }
+
+        /* ── Footer ── */
+        .site-footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+        }
+        .site-footer a { color: var(--teal); text-decoration: none; }
+        .site-footer a:hover { color: var(--gold); }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .hero { padding: 28px 16px 36px; }
+            .hero h1 { font-size: 1.5rem; }
+            .container { padding: 20px 12px 40px; }
+            .welcome-section { flex-direction: column; align-items: stretch; text-align: center; }
+            .welcome-section .stats-row { justify-content: center; }
+            .skill-grid { grid-template-columns: 1fr; }
+            .quick-actions { grid-template-columns: 1fr 1fr; }
+            .path-steps { flex-direction: column; gap: 4px; }
+            .path-step { border-radius: var(--radius); }
+            .nav-links .hide-mobile { display: none; }
+        }
+</style>
+<script src="/global.js"></script>
+    <script src="/global.js"></script>
+<script src="/recommendations.js"></script>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/dictionary.html" class="hide-mobile">Dictionary</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://ovidhan.net/blog.html" class="hide-mobile">Blog</a>
+        <a href="https://ovidhan.net/exam-prep.html" class="hide-mobile">Exam Prep</a>
+        <a href="https://ovidhan.net/assessment.html" style="color:var(--gold);font-weight:600;">🎯 Assessment</a>
+        <a href="https://ovidhan.net/journey.html" class="active">📊 Journey</a>
+        <a href="https://ovidhan.net/search.html" style="color:var(--teal);font-weight:600;">🔍 Search</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+    <h1>📊 My English Journey</h1>
+    <p class="subtitle">Track your progress, build your skills, and unlock your English potential — one day at a time.</p>
+    <div class="badge-group">
+        <span class="badge">🔥 XP Points</span>
+        <span class="badge">📅 Daily Streak</span>
+        <span class="badge">📊 Progress Tracking</span>
+        <span class="badge">🎯 Personalized</span>
+    </div>
+</section>
+
+<!-- ══ MAIN ══ -->
+<div class="container">
+
+    <!-- ═══ WELCOME SECTION ═══ -->
+    <div class="welcome-section" id="welcomeSection">
+        <div class="greeting">
+            <h2>👋 Welcome, <span id="userName">Learner</span></h2>
+            <p id="userLevel">Current Level: <strong>Intermediate</strong></p>
+        </div>
+        <div class="stats-row" id="statsRow">
+            <div class="stat-item">
+                <div class="number xp" id="xpDisplay">0</div>
+                <div class="label">XP</div>
+            </div>
+            <div class="stat-item">
+                <div class="number fire" id="streakDisplay">0</div>
+                <div class="label">🔥 Streak</div>
+            </div>
+            <div class="stat-item">
+                <div class="number level" id="levelDisplay">1</div>
+                <div class="label">Level</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ SKILL GRID ═══ -->
+    <div class="skill-grid" id="skillGrid">
+        <div class="skill-card">
+            <div class="skill-header">
+                <span class="name">📚 Grammar</span>
+                <span class="pct medium" id="grammarPct">0%</span>
+            </div>
+            <div class="skill-bar"><div class="fill medium" id="grammarBar" style="width:0%;"></div></div>
+            <div class="skill-desc">Complete grammar lessons to improve</div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-header">
+                <span class="name">📖 Vocabulary</span>
+                <span class="pct low" id="vocabPct">0%</span>
+            </div>
+            <div class="skill-bar"><div class="fill low" id="vocabBar" style="width:0%;"></div></div>
+            <div class="skill-desc">Build your word power every day</div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-header">
+                <span class="name">🗣️ Speaking</span>
+                <span class="pct very-low" id="speakingPct">0%</span>
+            </div>
+            <div class="skill-bar"><div class="fill very-low" id="speakingBar" style="width:0%;"></div></div>
+            <div class="skill-desc">Practice speaking with daily exercises</div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-header">
+                <span class="name">📝 Reading</span>
+                <span class="pct medium" id="readingPct">0%</span>
+            </div>
+            <div class="skill-bar"><div class="fill medium" id="readingBar" style="width:0%;"></div></div>
+            <div class="skill-desc">Read and understand English better</div>
+        </div>
+    </div>
+
+    <!-- ═══ TODAY'S RECOMMENDATIONS ═══ -->
+    <div class="recommendations-section">
+        <div class="section-title">📅 Recommended Today</div>
+        <div class="rec-list" id="recommendationList">
+            <!-- Rendered by JavaScript -->
+        </div>
+    </div>
+
+    <!-- ═══ LEARNING PATH ═══ -->
+    <div class="path-section">
+        <div class="section-title">🗺️ Your Learning Path</div>
+        <div class="path-steps" id="pathSteps">
+            <!-- Rendered by JavaScript -->
+        </div>
+    </div>
+<!-- ── Recommended Content ── -->
+<section id="recommendations-section" style="margin-top: 28px; display: none;">
+    <div class="recommendations-section">
+        <div class="section-title">
+            🌟 Recommended for You
+            <span style="font-size:0.8rem; color:var(--text-soft); font-weight:400; margin-left:8px;">Based on your activity</span>
+        </div>
+        <div id="recommendation-list" style="display: flex; flex-direction: column; gap: 8px;">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+</section>
+    <!-- ═══ QUICK ACTIONS ═══ -->
+    <div class="quick-actions">
+        <a href="assessment.html" class="quick-action">
+            <span class="icon">🎯</span>
+            <span class="name">Take a Test</span>
+            <span class="desc">Find your level</span>
+        </a>
+        <a href="grammar.html" class="quick-action">
+            <span class="icon">📚</span>
+            <span class="name">Learn Grammar</span>
+            <span class="desc">Study the rules</span>
+        </a>
+        <a href="bcs-vocabulary-guide.html" class="quick-action">
+            <span class="icon">📖</span>
+            <span class="name">Build Vocabulary</span>
+            <span class="desc">Learn new words</span>
+        </a>
+        <a href="grammar-quiz.html" class="quick-action">
+            <span class="icon">🧠</span>
+            <span class="name">Practice Quiz</span>
+            <span class="desc">Test yourself</span>
+        </a>
+        <a href="daily-english.html" class="quick-action">
+            <span class="icon">🗣️</span>
+            <span class="name">Speak English</span>
+            <span class="desc">Daily practice</span>
+        </a>
+        <a href="dictionary.html" class="quick-action">
+            <span class="icon">📕</span>
+            <span class="name">Dictionary</span>
+            <span class="desc">12,658+ words</span>
+        </a>
+    </div>
+
+    <!-- ═══ PROGRESS SUMMARY ═══ -->
+    <div class="progress-summary" id="progressSummary">
+        <div class="progress-item">
+            <div class="number" id="totalLessons">0</div>
+            <div class="label">📚 Lessons Completed</div>
+        </div>
+        <div class="progress-item">
+            <div class="number" id="totalQuizzes">0</div>
+            <div class="label">🧠 Quizzes Taken</div>
+        </div>
+        <div class="progress-item">
+            <div class="number" id="totalTests">0</div>
+            <div class="label">🎯 Tests Completed</div>
+        </div>
+        <div class="progress-item">
+            <div class="number" id="totalWords">0</div>
+            <div class="label">📖 Words Learned</div>
+        </div>
+    </div>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <div class="cta-banner">
+        <h3>📱 Take Your Journey Anywhere</h3>
+        <p>Track your progress, practice daily, and master English – all in the Ovidhan app.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank" rel="noopener">
+            📥 Download Ovidhan Now
+        </a>
+        <div class="cta-features">
+            <span class="cta-feat">✅ 100% Offline</span>
+            <span class="cta-feat">✅ 12,658+ Words</span>
+            <span class="cta-feat">✅ BCS / IELTS / Bank</span>
+            <span class="cta-feat">✅ Free</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/blog.html">Blog</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/assessment.html">Assessment</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/journey.html">Journey</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<!-- ══ JOURNEY DASHBOARD LOGIC ══ -->
+<script>
+    // ─────────────────────────────────────────────────────────────
+    //  MY ENGLISH JOURNEY – Personalized Learning Dashboard
+    //  Uses localStorage to track user progress
+    // ─────────────────────────────────────────────────────────────
+
+    // ─── Get or Initialize User Data ───
+    function getUserData() {
+        let data = localStorage.getItem('ovidhan_journey_data');
+        if (data) {
+            try {
+                return JSON.parse(data);
+            } catch (e) {
+                // Fallback if corrupted
+                return getDefaultData();
+            }
+        }
+        return getDefaultData();
+    }
+
+    function getDefaultData() {
+        return {
+            // Profile
+            name: 'Learner',
+            level: 1,
+            xp: 0,
+            streak: 0,
+            lastVisit: null,
+
+            // Skills
+            grammar: 0,
+            vocabulary: 0,
+            speaking: 0,
+            reading: 0,
+
+            // Progress
+            lessonsCompleted: 0,
+            quizzesTaken: 0,
+            testsCompleted: 0,
+            wordsLearned: 0,
+
+            // Learning Path
+            pathCompleted: ['level-test'],
+            pathActive: 'vocabulary-building',
+
+            // Recommendations tracking
+            dailyChecked: false,
+            lastDailyDate: null,
+            dailyRecommendations: []
+        };
+    }
+
+    function saveUserData(data) {
+        localStorage.setItem('ovidhan_journey_data', JSON.stringify(data));
+    }
+
+    // ─── Update Streak ───
+    function updateStreak(data) {
+        const today = new Date().toDateString();
+        if (data.lastVisit !== today) {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            const yesterdayStr = yesterday.toDateString();
+
+            if (data.lastVisit === yesterdayStr) {
+                data.streak++;
+            } else if (data.lastVisit !== today) {
+                data.streak = 1;
+            }
+            data.lastVisit = today;
+            saveUserData(data);
+        }
+        return data;
+    }
+
+    // ─── Update XP ───
+    function addXP(data, amount) {
+        data.xp += amount;
+        // Level up: every 500 XP
+        const newLevel = Math.floor(data.xp / 500) + 1;
+        if (newLevel > data.level) {
+            data.level = newLevel;
+        }
+        saveUserData(data);
+        return data;
+    }
+
+    // ─── Generate Daily Recommendations ───
+    function getDailyRecommendations(data) {
+        const today = new Date().toDateString();
+
+        // If recommendations already exist for today, use them
+        if (data.dailyRecommendations && data.lastDailyDate === today) {
+            return data.dailyRecommendations;
+        }
+
+        const recs = [];
+
+        // Grammar recommendation
+        if (data.grammar < 70) {
+            recs.push({
+                icon: '📚',
+                title: 'Complete Grammar Lesson',
+                desc: 'Improve your grammar skills',
+                url: 'grammar.html',
+                status: 'pending',
+                skill: 'grammar'
+            });
+        } else if (data.grammar < 90) {
+            recs.push({
+                icon: '🧠',
+                title: 'Take Grammar Quiz',
+                desc: 'Test your grammar knowledge',
+                url: 'grammar-quiz.html',
+                status: 'pending',
+                skill: 'grammar'
+            });
+        }
+
+        // Vocabulary recommendation
+        if (data.vocabulary < 60) {
+            recs.push({
+                icon: '📖',
+                title: 'Build Your Vocabulary',
+                desc: 'Learn 10 new words today',
+                url: 'bcs-vocabulary-guide.html',
+                status: 'pending',
+                skill: 'vocabulary'
+            });
+        } else if (data.vocabulary < 80) {
+            recs.push({
+                icon: '📝',
+                title: 'Take Vocabulary Quiz',
+                desc: 'Test your vocabulary knowledge',
+                url: 'vocabulary-quiz.html',
+                status: 'pending',
+                skill: 'vocabulary'
+            });
+        }
+
+        // Speaking recommendation
+        if (data.speaking < 50) {
+            recs.push({
+                icon: '🗣️',
+                title: 'Practice Speaking',
+                desc: 'Daily English conversation practice',
+                url: 'daily-english.html',
+                status: 'pending',
+                skill: 'speaking'
+            });
+        }
+
+        // Reading recommendation
+        if (data.reading < 60) {
+            recs.push({
+                icon: '📖',
+                title: 'Reading Practice',
+                desc: 'Improve your reading comprehension',
+                url: 'daily-english.html',
+                status: 'pending',
+                skill: 'reading'
+            });
+        }
+
+        // Always include a test recommendation
+        if (recs.length < 3) {
+            recs.push({
+                icon: '🎯',
+                title: 'Take an Assessment',
+                desc: 'Find your English level',
+                url: 'assessment.html',
+                status: 'pending',
+                skill: 'assessment'
+            });
+        }
+
+        // Add a daily challenge if available
+        recs.push({
+            icon: '🏆',
+            title: 'Daily Challenge',
+            desc: 'Complete today\'s challenge',
+            url: 'grammar-quiz.html',
+            status: 'pending',
+            skill: 'challenge'
+        });
+
+        // Limit to 5 recommendations
+        const limited = recs.slice(0, 5);
+
+        // Save for today
+        data.dailyRecommendations = limited;
+        data.lastDailyDate = today;
+        saveUserData(data);
+
+        return limited;
+    }
+
+    // ─── Render Dashboard ───
+    function renderDashboard() {
+        let data = getUserData();
+        data = updateStreak(data);
+
+        // ── Welcome Section ──
+        document.getElementById('userName').textContent = data.name || 'Learner';
+        const levels = ['Beginner', 'Elementary', 'Intermediate', 'Upper Intermediate', 'Advanced'];
+        const levelIndex = Math.min(Math.floor(data.level / 2), 4);
+        document.getElementById('userLevel').innerHTML = `Current Level: <strong>${levels[levelIndex] || 'Beginner'}</strong>`;
+
+        document.getElementById('xpDisplay').textContent = data.xp.toLocaleString();
+        document.getElementById('streakDisplay').textContent = data.streak;
+        document.getElementById('levelDisplay').textContent = data.level;
+
+        // ── Skills ──
+        const skills = [
+            { id: 'grammar', value: data.grammar, name: 'Grammar' },
+            { id: 'vocab', value: data.vocabulary, name: 'Vocabulary' },
+            { id: 'speaking', value: data.speaking, name: 'Speaking' },
+            { id: 'reading', value: data.reading, name: 'Reading' }
+        ];
+
+        skills.forEach(skill => {
+            const pct = Math.min(skill.value, 100);
+            const pctEl = document.getElementById(skill.id + 'Pct');
+            const barEl = document.getElementById(skill.id + 'Bar');
+
+            if (pctEl) {
+                pctEl.textContent = pct + '%';
+                if (pct >= 70) pctEl.className = 'pct high';
+                else if (pct >= 50) pctEl.className = 'pct medium';
+                else if (pct >= 30) pctEl.className = 'pct low';
+                else pctEl.className = 'pct very-low';
+            }
+            if (barEl) {
+                barEl.style.width = pct + '%';
+                if (pct >= 70) barEl.className = 'fill high';
+                else if (pct >= 50) barEl.className = 'fill medium';
+                else if (pct >= 30) barEl.className = 'fill low';
+                else barEl.className = 'fill very-low';
+            }
+        });
+
+        // ── Recommendations ──
+        const recs = getDailyRecommendations(data);
+        const recList = document.getElementById('recommendationList');
+
+        if (recs.length === 0) {
+            recList.innerHTML = `
+                <div style="text-align:center;color:var(--text-mid);padding:20px;">
+                    🎉 You've completed all recommendations for today! Check back tomorrow.
+                </div>
+            `;
+        } else {
+            recList.innerHTML = recs.map(rec => `
+                <a href="${rec.url}" class="rec-item">
+                    <span class="icon">${rec.icon}</span>
+                    <div class="info">
+                        <div class="title">${rec.title}</div>
+                        <div class="desc">${rec.desc}</div>
+                    </div>
+                    <span class="status ${rec.status}">${rec.status === 'pending' ? 'Start →' : rec.status === 'done' ? '✅ Done' : '🔒 Locked'}</span>
+                </a>
+            `).join('');
+        }
+
+        // ── Learning Path ──
+        const pathSteps = [
+            { id: 'level-test', icon: '🎯', label: 'Level Test', completed: data.pathCompleted.includes('level-test') },
+            { id: 'grammar-basics', icon: '📚', label: 'Grammar Basics', completed: data.pathCompleted.includes('grammar-basics') },
+            { id: 'vocabulary-building', icon: '📖', label: 'Vocabulary Building', completed: data.pathCompleted.includes('vocabulary-building') },
+            { id: 'intermediate-grammar', icon: '📚', label: 'Intermediate Grammar', completed: data.pathCompleted.includes('intermediate-grammar') },
+            { id: 'advanced-skills', icon: '🚀', label: 'Advanced Skills', completed: data.pathCompleted.includes('advanced-skills') }
+        ];
+
+        const pathContainer = document.getElementById('pathSteps');
+        pathContainer.innerHTML = pathSteps.map(step => {
+            let statusClass = 'locked';
+            let icon = '🔒';
+            if (step.completed) {
+                statusClass = 'completed';
+                icon = '✅';
+            } else if (step.id === data.pathActive) {
+                statusClass = 'active';
+                icon = '🔄';
+            }
+            return `
+                <div class="path-step ${statusClass}">
+                    <span class="step-icon">${icon}</span>
+                    ${step.label}
+                </div>
+            `;
+        }).join('');
+
+        // ── Progress Summary ──
+        document.getElementById('totalLessons').textContent = data.lessonsCompleted || 0;
+        document.getElementById('totalQuizzes').textContent = data.quizzesTaken || 0;
+        document.getElementById('totalTests').textContent = data.testsCompleted || 0;
+        document.getElementById('totalWords').textContent = data.wordsLearned || 0;
+
+        // Save data
+        saveUserData(data);
+    }
+
+    // ─── Reset Progress (Hidden Feature for Testing) ───
+    function resetProgress() {
+        if (confirm('Are you sure you want to reset all progress?')) {
+            localStorage.removeItem('ovidhan_journey_data');
+            location.reload();
+        }
+    }
+
+    // ─── Add XP (For testing/development) ───
+    function addTestXP(amount) {
+        let data = getUserData();
+        data = addXP(data, amount);
+        renderDashboard();
+    }
+
+    // ─── Initialize ───
+    document.addEventListener('DOMContentLoaded', renderDashboard);
+
+    // ─── Auto-render when returning to page ───
+    window.addEventListener('focus', renderDashboard);
+</script>
+<!-- ═══ LOAD RECOMMENDATIONS ═══ -->
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+    // Wait for the recommendations engine to load
+    if (typeof Recommendations === 'undefined') {
+        console.warn('Recommendations engine not loaded.');
+        return;
+    }
+
+    try {
+        const recs = await Recommendations.getRecommendations(5);
+        const container = document.getElementById('recommendation-list');
+        const section = document.getElementById('recommendations-section');
+
+        if (!container || !recs || recs.length === 0) {
+            if (section) section.style.display = 'none';
+            return;
+        }
+
+        section.style.display = 'block';
+
+        container.innerHTML = recs.map(item => `
+            <a href="${item.url}" class="rec-item">
+                <span class="icon">${item.emoji || '📄'}</span>
+                <div class="info">
+                    <div class="title">${item.title}</div>
+                    <div class="desc">${item.category || 'General'} • ${item.description || ''}</div>
+                </div>
+                <span class="status" style="background:var(--gold-dim);color:var(--gold);">Recommended</span>
+            </a>
+        `).join('');
+
+    } catch (e) {
+        console.warn('Could not load recommendations:', e);
+        document.getElementById('recommendations-section').style.display = 'none';
+    }
+});
+</script>
+</body>
+</body>
+</html>

@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>Root Word Finder – Discover English Root Words, Prefixes & Suffixes | Ovidhan</title>
+    <meta name="description" content="Find the root word, origin, prefixes, suffixes, and related word families for any English word. Build vocabulary for BCS, IELTS, and Bank Jobs." />
+    <meta name="keywords" content="root word finder, English root words, prefixes, suffixes, word families, vocabulary builder, BCS vocabulary, IELTS vocabulary, Bangladesh" />
+    <link rel="canonical" href="https://ovidhan.net/root-word-finder.html" />
+
+    <!-- ═══ OPEN GRAPH ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Root Word Finder – Discover English Root Words, Prefixes & Suffixes" />
+    <meta property="og:description" content="Find the root word, origin, prefixes, suffixes, and related word families for any English word." />
+    <meta property="og:url" content="https://ovidhan.net/root-word-finder.html" />
+    <meta property="og:site_name" content="Ovidhan – English to Bangla Dictionary" />
+    <meta property="og:image" content="https://ovidhan.net/images/og-root-word-finder.jpg" />
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Root Word Finder – Discover English Root Words" />
+    <meta name="twitter:description" content="Find the root word, origin, prefixes, suffixes, and related word families for any English word." />
+
+    <!-- ═══ SCHEMA.ORG – WEBPAGE ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Root Word Finder",
+        "url": "https://ovidhan.net/root-word-finder.html",
+        "description": "Find the root word, origin, prefixes, suffixes, and related word families for any English word.",
+        "about": {
+            "@type": "Thing",
+            "name": "English Root Word Finder"
+        }
+    }
+    </script>
+
+    <!-- ═══ GOOGLE FONTS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ═══ GOOGLE ANALYTICS ═══ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7PS8PRT4KW');
+    </script>
+
+    <style>
+        /* ── Ovidhan Dark Premium Theme ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --red: #f87171;
+            --red-dim: rgba(248,113,113,0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192,132,252,0.10);
+            --orange: #fb923c;
+            --orange-dim: rgba(251,146,60,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo { font-size: 22px; font-weight: 700; color: var(--gold); text-decoration: none; }
+        .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-mid); text-decoration: none; font-size: 14px; font-family: var(--font-en); transition: color .2s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta { background: var(--gold); color: #0B1F1A !important; font-weight: 600 !important; padding: 7px 16px; border-radius: 8px; }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px 60px; }
+
+        .hero {
+            background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
+            padding: 40px 24px 50px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 4.5vw, 2.6rem);
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+        .hero .subtitle {
+            max-width: 700px;
+            margin: 0 auto 8px;
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+        .hero .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .hero .badge {
+            background: rgba(255,215,0,0.10);
+            border: 1px solid rgba(255,215,0,0.25);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .search-box {
+            margin: 0 auto 24px;
+            max-width: 640px;
+        }
+        .search-box form {
+            display: flex;
+            gap: 8px;
+            background: var(--surface);
+            border-radius: 50px;
+            padding: 6px;
+            border: 2px solid var(--border);
+            transition: border-color .3s;
+        }
+        .search-box form:focus-within { border-color: var(--gold); }
+        .search-box input {
+            flex: 1;
+            padding: 14px 22px;
+            border: none;
+            background: transparent;
+            color: var(--text);
+            font-size: 1rem;
+            outline: none;
+            font-family: var(--font-bn);
+        }
+        .search-box input::placeholder { color: var(--text-soft); }
+        .search-box button {
+            padding: 14px 28px;
+            border-radius: 40px;
+            border: none;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: var(--font-en);
+            transition: background .2s;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+        .search-box button:hover { background: #f0c85a; }
+
+        .popular-roots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .popular-roots .tag {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 4px 16px;
+            font-size: 0.8rem;
+            color: var(--teal);
+            cursor: pointer;
+            transition: border-color .2s, color .2s;
+        }
+        .popular-roots .tag:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .result-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-top: 20px;
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .result-card.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-card .root-word {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        .result-card .root-meaning {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+        .result-card .root-origin {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            font-family: var(--font-en);
+            margin-bottom: 16px;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .family-item {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px 18px;
+            transition: border-color .2s;
+        }
+        .family-item:hover { border-color: var(--gold); }
+        .family-item .word {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1rem;
+        }
+        .family-item .meaning {
+            font-size: 0.9rem;
+            color: var(--text-mid);
+        }
+        .family-item .type {
+            font-size: 0.7rem;
+            color: var(--text-soft);
+            font-family: var(--font-en);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-top: 2px;
+            padding: 1px 10px;
+            border-radius: 12px;
+            background: var(--bg);
+        }
+
+        .family-item .type.prefix { color: var(--teal); }
+        .family-item .type.suffix { color: var(--purple); }
+        .family-item .type.root { color: var(--gold); }
+        .family-item .type.derived { color: var(--green); }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-mid);
+        }
+        .no-results .big-icon { font-size: 3rem; margin-bottom: 12px; }
+        .no-results .suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 12px;
+        }
+        .no-results .suggestions .tag {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 4px 16px;
+            font-size: 0.8rem;
+            color: var(--teal);
+            cursor: pointer;
+            transition: border-color .2s, color .2s;
+        }
+        .no-results .suggestions .tag:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .quick-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+        .quick-actions a {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: border-color .2s, color .2s;
+        }
+        .quick-actions a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .related-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        .related-section h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 12px; }
+        .related-section p { color: var(--text-mid); margin-bottom: 16px; }
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .related-links a {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+            color: var(--teal);
+            text-decoration: none;
+            transition: border-color .2s, color .2s;
+            font-weight: 500;
+        }
+        .related-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .cta-banner {
+            background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
+            border: 1px solid rgba(230,184,74,0.3);
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            margin: 32px 0;
+        }
+        .cta-banner h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 8px; }
+        .cta-banner p { color: var(--text-mid); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            font-family: var(--font-en);
+            padding: 13px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background .2s, transform .2s;
+        }
+        .cta-btn:hover { background: #f0c85a; transform: translateY(-2px); }
+        .cta-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 18px;
+        }
+        .cta-feat { font-size: 13px; color: var(--teal); display: flex; align-items: center; gap: 5px; }
+
+        .site-footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+        }
+        .site-footer a { color: var(--teal); text-decoration: none; }
+        .site-footer a:hover { color: var(--gold); }
+
+        @media (max-width: 600px) {
+            .hero { padding: 28px 16px 36px; }
+            .hero h1 { font-size: 1.5rem; }
+            .container { padding: 20px 12px 40px; }
+            .family-grid { grid-template-columns: 1fr; }
+            .search-box form { flex-direction: column; border-radius: var(--radius); }
+            .search-box input { border-radius: var(--radius); }
+            .search-box button { border-radius: var(--radius); }
+            .result-card { padding: 20px 16px; }
+            .nav-links .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/dictionary.html" style="color:var(--gold);font-weight:600;">📕 Dictionary</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://ovidhan.net/assessment.html" style="color:var(--teal);">🎯 Assessment</a>
+        <a href="https://ovidhan.net/journey.html">📊 Journey</a>
+        <a href="https://ovidhan.net/search.html" style="color:var(--teal);font-weight:600;">🔍 Search</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+    <h1>🔍 Root Word Finder</h1>
+    <p class="subtitle">Find the <strong>root, origin, prefixes, suffixes, and word families</strong> of any English word. Build your vocabulary for BCS, IELTS, and Bank Jobs.</p>
+    <div class="badge-group">
+        <span class="badge">📖 Roots</span>
+        <span class="badge">🔗 Prefixes &amp; Suffixes</span>
+        <span class="badge">📊 Word Families</span>
+        <span class="badge">📊 Free</span>
+    </div>
+</section>
+
+<!-- ══ MAIN ══ -->
+<div class="container">
+
+    <!-- Search -->
+    <div class="search-box">
+        <form onsubmit="searchRoot(event)">
+            <input type="text" id="searchInput" placeholder="Type a word or root (e.g., act, bene, dict, spect)..." autofocus />
+            <button type="submit">🔍 Find Root</button>
+        </form>
+    </div>
+
+    <!-- Popular Roots -->
+    <div class="popular-roots">
+        <span style="color:var(--text-soft);font-size:0.85rem;">🔥 Popular:</span>
+        <span class="tag" onclick="searchRootWord('act')">act</span>
+        <span class="tag" onclick="searchRootWord('bene')">bene</span>
+        <span class="tag" onclick="searchRootWord('dict')">dict</span>
+        <span class="tag" onclick="searchRootWord('spect')">spect</span>
+        <span class="tag" onclick="searchRootWord('form')">form</span>
+        <span class="tag" onclick="searchRootWord('port')">port</span>
+        <span class="tag" onclick="searchRootWord('scrib')">scrib</span>
+        <span class="tag" onclick="searchRootWord('vis')">vis</span>
+        <span class="tag" onclick="searchRootWord('aud')">aud</span>
+        <span class="tag" onclick="searchRootWord('struct')">struct</span>
+    </div>
+
+    <!-- Result -->
+    <div class="result-card" id="resultCard">
+        <div id="resultContent">
+            <!-- Rendered by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Related -->
+    <div class="related-section">
+        <h3>📚 Vocabulary Resources</h3>
+        <p>Strengthen your vocabulary with these free resources.</p>
+        <div class="related-links">
+            <a href="word-family-finder.html">🔍 Word Family Finder</a>
+            <a href="dictionary.html">📕 Dictionary</a>
+            <a href="vocabulary-quiz.html">🧠 Vocabulary Quiz</a>
+            <a href="bcs-vocabulary-guide.html">📖 BCS Vocabulary Guide</a>
+            <a href="assessment.html">🎯 Assessment Center</a>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+        <h3>📱 Build Vocabulary Anywhere</h3>
+        <p>Get 12,658+ words, flashcards, quizzes, and vocabulary tools – all offline.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank" rel="noopener">
+            📥 Download Ovidhan Now
+        </a>
+        <div class="cta-features">
+            <span class="cta-feat">✅ 100% Offline</span>
+            <span class="cta-feat">✅ 12,658+ Words</span>
+            <span class="cta-feat">✅ BCS / IELTS / Bank</span>
+            <span class="cta-feat">✅ Free</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/assessment.html">Assessment</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/journey.html">Journey</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<!-- ══ ROOT WORD DATA & LOGIC ══ -->
+<script>
+    // ─────────────────────────────────────────────────────────────
+    //  ROOT WORD DATA – 15+ Common Roots with Families
+    // ─────────────────────────────────────────────────────────────
+
+    const rootData = {
+        // ── Root: act ──
+        "act": {
+            root: "act",
+            meaning: "কাজ করা, ক্রিয়া",
+            origin: "From Latin 'agere' meaning 'to do'",
+            family: [
+                { word: "act", meaning: "কাজ করা", type: "root" },
+                { word: "action", meaning: "কর্ম", type: "derived" },
+                { word: "active", meaning: "সক্রিয়", type: "derived" },
+                { word: "actively", meaning: "সক্রিয়ভাবে", type: "derived" },
+                { word: "activity", meaning: "কার্যকলাপ", type: "derived" },
+                { word: "activate", meaning: "সক্রিয় করা", type: "derived" },
+                { word: "react", meaning: "প্রতিক্রিয়া করা", type: "derived" },
+                { word: "reaction", meaning: "প্রতিক্রিয়া", type: "derived" },
+                { word: "interact", meaning: "মিথস্ক্রিয়া করা", type: "derived" },
+                { word: "interaction", meaning: "মিথস্ক্রিয়া", type: "derived" },
+                { word: "actor", meaning: "অভিনেতা", type: "derived" },
+                { word: "actress", meaning: "অভিনেত্রী", type: "derived" }
+            ]
+        },
+        // ── Root: bene ──
+        "bene": {
+            root: "bene",
+            meaning: "ভাল, কল্যাণ",
+            origin: "From Latin 'bene' meaning 'well'",
+            family: [
+                { word: "bene", meaning: "ভাল (মূল)", type: "root" },
+                { word: "benefit", meaning: "সুবিধা", type: "derived" },
+                { word: "beneficial", meaning: "উপকারী", type: "derived" },
+                { word: "beneficiary", meaning: "সুবিধাভোগী", type: "derived" },
+                { word: "benevolent", meaning: "দয়ালু", type: "derived" },
+                { word: "benevolence", meaning: "দয়া", type: "derived" },
+                { word: "benign", meaning: "সৌম্য", type: "derived" }
+            ]
+        },
+        // ── Root: dict ──
+        "dict": {
+            root: "dict",
+            meaning: "বলা, ঘোষণা করা",
+            origin: "From Latin 'dicere' meaning 'to say'",
+            family: [
+                { word: "dict", meaning: "বলা (মূল)", type: "root" },
+                { word: "dictionary", meaning: "অভিধান", type: "derived" },
+                { word: "dictation", meaning: "শ্রুতিলিপি", type: "derived" },
+                { word: "dictator", meaning: "স্বৈরশাসক", type: "derived" },
+                { word: "predict", meaning: "ভবিষ্যদ্বাণী করা", type: "derived" },
+                { word: "prediction", meaning: "ভবিষ্যদ্বাণী", type: "derived" },
+                { word: "contradict", meaning: "বিরোধিতা করা", type: "derived" },
+                { word: "contradiction", meaning: "বিরোধিতা", type: "derived" },
+                { word: "indict", meaning: "অভিযুক্ত করা", type: "derived" }
+            ]
+        },
+        // ── Root: spect ──
+        "spect": {
+            root: "spect",
+            meaning: "দেখা, পর্যবেক্ষণ",
+            origin: "From Latin 'spectare' meaning 'to look'",
+            family: [
+                { word: "spect", meaning: "দেখা (মূল)", type: "root" },
+                { word: "inspect", meaning: "পরিদর্শন করা", type: "derived" },
+                { word: "inspection", meaning: "পরিদর্শন", type: "derived" },
+                { word: "respect", meaning: "সম্মান", type: "derived" },
+                { word: "respectful", meaning: "সম্মানজনক", type: "derived" },
+                { word: "spectator", meaning: "দর্শক", type: "derived" },
+                { word: "spectacle", meaning: "দৃশ্য", type: "derived" },
+                { word: "spectacular", meaning: "দর্শনীয়", type: "derived" },
+                { word: "prospect", meaning: "সম্ভাবনা", type: "derived" },
+                { word: "prospective", meaning: "ভবিষ্যতের", type: "derived" },
+                { word: "introspect", meaning: "আত্মবিশ্লেষণ", type: "derived" }
+            ]
+        },
+        // ── Root: form ──
+        "form": {
+            root: "form",
+            meaning: "রূপ, গঠন",
+            origin: "From Latin 'forma' meaning 'shape'",
+            family: [
+                { word: "form", meaning: "রূপ", type: "root" },
+                { word: "formation", meaning: "গঠন", type: "derived" },
+                { word: "formal", meaning: "আনুষ্ঠানিক", type: "derived" },
+                { word: "formally", meaning: "আনুষ্ঠানিকভাবে", type: "derived" },
+                { word: "inform", meaning: "জানানো", type: "derived" },
+                { word: "information", meaning: "তথ্য", type: "derived" },
+                { word: "informative", meaning: "তথ্যবহুল", type: "derived" },
+                { word: "reform", meaning: "সংস্কার করা", type: "derived" },
+                { word: "reformation", meaning: "সংস্কার", type: "derived" },
+                { word: "transform", meaning: "রূপান্তর করা", type: "derived" },
+                { word: "transformation", meaning: "রূপান্তর", type: "derived" }
+            ]
+        },
+        // ── Root: port ──
+        "port": {
+            root: "port",
+            meaning: "বহন করা, নিয়ে যাওয়া",
+            origin: "From Latin 'portare' meaning 'to carry'",
+            family: [
+                { word: "port", meaning: "বহন করা (মূল)", type: "root" },
+                { word: "import", meaning: "আমদানি করা", type: "derived" },
+                { word: "importation", meaning: "আমদানি", type: "derived" },
+                { word: "export", meaning: "রপ্তানি করা", type: "derived" },
+                { word: "exportation", meaning: "রপ্তানি", type: "derived" },
+                { word: "transport", meaning: "পরিবহন করা", type: "derived" },
+                { word: "transportation", meaning: "পরিবহন", type: "derived" },
+                { word: "portable", meaning: "বহনযোগ্য", type: "derived" },
+                { word: "porter", meaning: "বাহক", type: "derived" }
+            ]
+        },
+        // ── Root: scrib ──
+        "scrib": {
+            root: "scrib",
+            meaning: "লেখা",
+            origin: "From Latin 'scribere' meaning 'to write'",
+            family: [
+                { word: "scrib", meaning: "লেখা (মূল)", type: "root" },
+                { word: "scribe", meaning: "লেখক", type: "derived" },
+                { word: "script", meaning: "লিপি", type: "derived" },
+                { word: "describe", meaning: "বর্ণনা করা", type: "derived" },
+                { word: "description", meaning: "বর্ণনা", type: "derived" },
+                { word: "prescribe", meaning: "নির্ধারণ করা", type: "derived" },
+                { word: "prescription", meaning: "প্রেসক্রিপশন", type: "derived" },
+                { word: "subscribe", meaning: "সদস্যতা নেওয়া", type: "derived" },
+                { word: "subscription", meaning: "সদস্যতা", type: "derived" },
+                { word: "manuscript", meaning: "পাণ্ডুলিপি", type: "derived" },
+                { word: "postscript", meaning: "পোস্টস্ক্রিপ্ট", type: "derived" }
+            ]
+        },
+        // ── Root: vis ──
+        "vis": {
+            root: "vis",
+            meaning: "দেখা",
+            origin: "From Latin 'videre' meaning 'to see'",
+            family: [
+                { word: "vis", meaning: "দেখা (মূল)", type: "root" },
+                { word: "vision", meaning: "দৃষ্টি", type: "derived" },
+                { word: "visual", meaning: "দৃষ্টিগত", type: "derived" },
+                { word: "visible", meaning: "দৃশ্যমান", type: "derived" },
+                { word: "visibility", meaning: "দৃশ্যমানতা", type: "derived" },
+                { word: "visit", meaning: "দেখা করতে যাওয়া", type: "derived" },
+                { word: "visitor", meaning: "দর্শক", type: "derived" },
+                { word: "revise", meaning: "পুনর্বিবেচনা করা", type: "derived" },
+                { word: "revision", meaning: "পুনর্বিবেচনা", type: "derived" },
+                { word: "supervise", meaning: "তত্ত্বাবধান করা", type: "derived" },
+                { word: "supervision", meaning: "তত্ত্বাবধান", type: "derived" }
+            ]
+        },
+        // ── Root: aud ──
+        "aud": {
+            root: "aud",
+            meaning: "শোনা",
+            origin: "From Latin 'audire' meaning 'to hear'",
+            family: [
+                { word: "aud", meaning: "শোনা (মূল)", type: "root" },
+                { word: "audio", meaning: "শ্রাব্য", type: "derived" },
+                { word: "audience", meaning: "শ্রোতা", type: "derived" },
+                { word: "auditorium", meaning: "শ্রোতাকক্ষ", type: "derived" },
+                { word: "audit", meaning: "অডিট", type: "derived" },
+                { word: "audible", meaning: "শ্রবণযোগ্য", type: "derived" },
+                { word: "inaudible", meaning: "অশ্রবণীয়", type: "derived" }
+            ]
+        },
+        // ── Root: struct ──
+        "struct": {
+            root: "struct",
+            meaning: "নির্মাণ করা",
+            origin: "From Latin 'struere' meaning 'to build'",
+            family: [
+                { word: "struct", meaning: "নির্মাণ করা (মূল)", type: "root" },
+                { word: "structure", meaning: "গঠন", type: "derived" },
+                { word: "structural", meaning: "গাঠনিক", type: "derived" },
+                { word: "construct", meaning: "নির্মাণ করা", type: "derived" },
+                { word: "construction", meaning: "নির্মাণ", type: "derived" },
+                { word: "reconstruct", meaning: "পুনর্নির্মাণ", type: "derived" },
+                { word: "destruct", meaning: "ধ্বংস করা", type: "derived" },
+                { word: "destruction", meaning: "ধ্বংস", type: "derived" },
+                { word: "instruct", meaning: "নির্দেশ দেওয়া", type: "derived" },
+                { word: "instruction", meaning: "নির্দেশনা", type: "derived" }
+            ]
+        },
+        // ── Root: bio ──
+        "bio": {
+            root: "bio",
+            meaning: "জীবন",
+            origin: "From Greek 'bios' meaning 'life'",
+            family: [
+                { word: "bio", meaning: "জীবন (মূল)", type: "root" },
+                { word: "biology", meaning: "জীববিজ্ঞান", type: "derived" },
+                { word: "biological", meaning: "জৈবিক", type: "derived" },
+                { word: "biography", meaning: "জীবনী", type: "derived" },
+                { word: "biographical", meaning: "জীবনীমূলক", type: "derived" },
+                { word: "biosphere", meaning: "জীবমণ্ডল", type: "derived" },
+                { word: "biodegradable", meaning: "জৈব-অপচয়যোগ্য", type: "derived" }
+            ]
+        },
+        // ── Root: auto ──
+        "auto": {
+            root: "auto",
+            meaning: "স্বয়ং, নিজে",
+            origin: "From Greek 'autos' meaning 'self'",
+            family: [
+                { word: "auto", meaning: "স্বয়ং (মূল)", type: "root" },
+                { word: "automobile", meaning: "মোটরগাড়ি", type: "derived" },
+                { word: "automatic", meaning: "স্বয়ংক্রিয়", type: "derived" },
+                { word: "automatically", meaning: "স্বয়ংক্রিয়ভাবে", type: "derived" },
+                { word: "autograph", meaning: "স্বহস্তাক্ষর", type: "derived" },
+                { word: "autobiography", meaning: "আত্মজীবনী", type: "derived" },
+                { word: "autonomous", meaning: "স্বায়ত্তশাসিত", type: "derived" }
+            ]
+        },
+        // ── Root: chron ──
+        "chron": {
+            root: "chron",
+            meaning: "সময়",
+            origin: "From Greek 'chronos' meaning 'time'",
+            family: [
+                { word: "chron", meaning: "সময় (মূল)", type: "root" },
+                { word: "chronic", meaning: "দীর্ঘস্থায়ী", type: "derived" },
+                { word: "chronicle", meaning: "ইতিহাস", type: "derived" },
+                { word: "chronology", meaning: "কালানুক্রম", type: "derived" },
+                { word: "chronological", meaning: "কালানুক্রমিক", type: "derived" },
+                { word: "synchronize", meaning: "সমলয় করা", type: "derived" },
+                { word: "anachronism", meaning: "কালবৈষম্য", type: "derived" }
+            ]
+        },
+        // ── Root: cred ──
+        "cred": {
+            root: "cred",
+            meaning: "বিশ্বাস",
+            origin: "From Latin 'credere' meaning 'to believe'",
+            family: [
+                { word: "cred", meaning: "বিশ্বাস (মূল)", type: "root" },
+                { word: "credit", meaning: "ঋণ, বিশ্বাস", type: "derived" },
+                { word: "credible", meaning: "বিশ্বাসযোগ্য", type: "derived" },
+                { word: "incredible", meaning: "অবিশ্বাস্য", type: "derived" },
+                { word: "credibility", meaning: "বিশ্বাসযোগ্যতা", type: "derived" },
+                { word: "incredulous", meaning: "অবিশ্বাসী", type: "derived" },
+                { word: "creed", meaning: "ধর্মবিশ্বাস", type: "derived" }
+            ]
+        },
+        // ── Root: phon ──
+        "phon": {
+            root: "phon",
+            meaning: "শব্দ",
+            origin: "From Greek 'phone' meaning 'sound'",
+            family: [
+                { word: "phon", meaning: "শব্দ (মূল)", type: "root" },
+                { word: "phone", meaning: "টেলিফোন", type: "derived" },
+                { word: "phonetic", meaning: "ধ্বনিগত", type: "derived" },
+                { word: "phonetics", meaning: "ধ্বনিবিজ্ঞান", type: "derived" },
+                { word: "symphony", meaning: "সিম্ফনি", type: "derived" },
+                { word: "microphone", meaning: "মাইক্রোফোন", type: "derived" },
+                { word: "headphone", meaning: "হেডফোন", type: "derived" },
+                { word: "telephone", meaning: "টেলিফোন", type: "derived" }
+            ]
+        },
+        // ── Root: photo ──
+        "photo": {
+            root: "photo",
+            meaning: "আলো",
+            origin: "From Greek 'phos' meaning 'light'",
+            family: [
+                { word: "photo", meaning: "আলো (মূল)", type: "root" },
+                { word: "photograph", meaning: "আলোকচিত্র", type: "derived" },
+                { word: "photography", meaning: "আলোকচিত্রবিদ্যা", type: "derived" },
+                { word: "photographic", meaning: "আলোকচিত্রসংক্রান্ত", type: "derived" },
+                { word: "photon", meaning: "ফোটন", type: "derived" },
+                { word: "photosynthesis", meaning: "সালোকসংশ্লেষণ", type: "derived" }
+            ]
+        },
+        // ── Root: tele ──
+        "tele": {
+            root: "tele",
+            meaning: "দূর, দূরবর্তী",
+            origin: "From Greek 'tele' meaning 'far off'",
+            family: [
+                { word: "tele", meaning: "দূর (মূল)", type: "root" },
+                { word: "telephone", meaning: "টেলিফোন", type: "derived" },
+                { word: "television", meaning: "টেলিভিশন", type: "derived" },
+                { word: "telegram", meaning: "টেলিগ্রাম", type: "derived" },
+                { word: "telepathy", meaning: "টেলিপ্যাথি", type: "derived" },
+                { word: "telescope", meaning: "দূরবীক্ষণ যন্ত্র", type: "derived" },
+                { word: "teleport", meaning: "টেলিপোর্ট", type: "derived" }
+            ]
+        },
+        // ── Root: geo ──
+        "geo": {
+            root: "geo",
+            meaning: "পৃথিবী",
+            origin: "From Greek 'ge' meaning 'earth'",
+            family: [
+                { word: "geo", meaning: "পৃথিবী (মূল)", type: "root" },
+                { word: "geography", meaning: "ভূগোল", type: "derived" },
+                { word: "geological", meaning: "ভূতাত্ত্বিক", type: "derived" },
+                { word: "geology", meaning: "ভূতত্ত্ব", type: "derived" },
+                { word: "geometry", meaning: "জ্যামিতি", type: "derived" },
+                { word: "geopolitical", meaning: "ভূ-রাজনৈতিক", type: "derived" }
+            ]
+        }
+    };
+
+    // ─────────────────────────────────────────────────────────────
+    //  LOGIC
+    // ─────────────────────────────────────────────────────────────
+
+    function searchRoot(e) {
+        if (e) e.preventDefault();
+        const query = document.getElementById('searchInput').value.trim().toLowerCase();
+        if (!query) {
+            document.getElementById('resultCard').classList.remove('active');
+            return;
+        }
+        searchRootWord(query);
+    }
+
+    function searchRootWord(query) {
+        document.getElementById('searchInput').value = query;
+        const card = document.getElementById('resultCard');
+        const content = document.getElementById('resultContent');
+
+        // First, try exact match
+        let data = rootData[query];
+
+        // If not found, try partial match (check if query contains a known root)
+        if (!data) {
+            const keys = Object.keys(rootData);
+            for (const key of keys) {
+                if (key.includes(query) || query.includes(key)) {
+                    data = rootData[key];
+                    break;
+                }
+            }
+        }
+
+        if (!data) {
+            // Try to find if the query is a derived word (e.g., "inspection" -> root "spect")
+            // We'll check if any family word matches the query
+            let foundRoot = null;
+            for (const [rootKey, root] of Object.entries(rootData)) {
+                for (const family of root.family) {
+                    if (family.word === query) {
+                        foundRoot = rootKey;
+                        break;
+                    }
+                }
+                if (foundRoot) break;
+            }
+            if (foundRoot) {
+                data = rootData[foundRoot];
+                // Update input to show the root
+                document.getElementById('searchInput').value = foundRoot;
+            }
+        }
+
+        if (!data) {
+            // No results
+            content.innerHTML = `
+                <div class="no-results">
+                    <div class="big-icon">🔍</div>
+                    <p>No root found for "<strong>${query}</strong>"</p>
+                    <p style="font-size:0.9rem;">Try searching for: act, bene, dict, spect, form, port, scrib, vis, aud, struct, bio, auto, chron, cred, phon, photo, tele, geo</p>
+                    <div class="suggestions">
+                        <span class="tag" onclick="searchRootWord('act')">act</span>
+                        <span class="tag" onclick="searchRootWord('bene')">bene</span>
+                        <span class="tag" onclick="searchRootWord('dict')">dict</span>
+                        <span class="tag" onclick="searchRootWord('spect')">spect</span>
+                        <span class="tag" onclick="searchRootWord('form')">form</span>
+                        <span class="tag" onclick="searchRootWord('port')">port</span>
+                        <span class="tag" onclick="searchRootWord('bio')">bio</span>
+                        <span class="tag" onclick="searchRootWord('geo')">geo</span>
+                    </div>
+                </div>
+            `;
+            card.classList.add('active');
+            return;
+        }
+
+        // Render result
+        renderResult(data, query);
+        card.classList.add('active');
+
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'root_word_search', { word: query });
+        }
+    }
+
+    function renderResult(data, query) {
+        const content = document.getElementById('resultContent');
+
+        const typeLabels = {
+            root: '🌱 Root Word',
+            prefix: '🔗 Prefix',
+            suffix: '🔗 Suffix',
+            derived: '📝 Derived Word'
+        };
+
+        const rootItem = data.family.find(f => f.type === 'root');
+        const others = data.family.filter(f => f.type !== 'root');
+
+        const familyHtml = others.map(f => `
+            <div class="family-item">
+                <div class="word">${f.word}</div>
+                <div class="meaning">${f.meaning}</div>
+                <span class="type ${f.type}">${typeLabels[f.type] || f.type}</span>
+            </div>
+        `).join('');
+
+        content.innerHTML = `
+            <div class="root-word">${data.root}</div>
+            <div class="root-meaning">📖 ${data.meaning}</div>
+            <div class="root-origin">📜 ${data.origin}</div>
+
+            <div style="margin:16px 0;padding:12px 16px;background:var(--gold-dim);border-radius:var(--radius);border-left:3px solid var(--gold);">
+                <strong style="color:var(--gold);">📚 Word Family (${data.family.length} words):</strong>
+            </div>
+
+            <div class="family-grid">
+                ${familyHtml}
+            </div>
+
+            <div class="quick-actions">
+                <a href="dictionary.html?q=${data.root}">📕 Dictionary</a>
+                <a href="word-family-finder.html?q=${data.root}">🔍 Word Family</a>
+                <a href="journey.html">📊 Track Progress</a>
+                <a href="vocabulary-quiz.html">🧠 Practice Quiz</a>
+            </div>
+        `;
+    }
+
+    // ─── Auto-search from URL ───
+    function autoSearch() {
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get('q');
+        if (q) {
+            document.getElementById('searchInput').value = q;
+            searchRootWord(q);
+        }
+    }
+
+    // ─── Enter key triggers search ───
+    document.getElementById('searchInput').addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') searchRoot(e);
+    });
+
+    document.addEventListener('DOMContentLoaded', autoSearch);
+</script>
+
+</body>
+</html>

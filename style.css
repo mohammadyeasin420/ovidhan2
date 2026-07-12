@@ -1,0 +1,59 @@
+/* Ovidhan - Dark Premium Theme */
+:root {
+    --bg: #0B1F1A;
+    --surface: #122820;
+    --surface2: #1A3530;
+    --border: #1E3D38;
+    --gold: #E6B84A;
+    --gold-dim: rgba(230, 184, 74, 0.12);
+    --teal: #4ECDC4;
+    --text: #D8EDEB;
+    --text-mid: #8AADA9;
+    --text-soft: #5A7D79;
+    --radius: 12px;
+    --font-bn: 'Hind Siliguri', sans-serif;
+    --font-en: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-en);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+a {
+    color: var(--teal);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--gold);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}

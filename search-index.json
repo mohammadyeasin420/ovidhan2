@@ -1,0 +1,722 @@
+[
+    {
+        "id": "grammar-hub",
+        "title": "Grammar Hub – Complete A to Z Grammar Guide",
+        "url": "grammar.html",
+        "category": "Grammar",
+        "emoji": "📚",
+        "date": "2026-07-10",
+        "description": "Central hub linking to all grammar articles, tools, and resources on Ovidhan.",
+        "keywords": ["grammar hub", "grammar guide", "all grammar", "complete grammar"]
+    },
+    {
+        "id": "parts-of-speech",
+        "title": "Parts of Speech in Bangla – 8 Parts with Examples",
+        "url": "parts-of-speech-bangla.html",
+        "category": "Grammar",
+        "emoji": "📚",
+        "date": "2026-07-06",
+        "description": "Complete guide to 8 parts of speech with Bangla examples and tables.",
+        "keywords": ["parts of speech", "noun", "pronoun", "verb", "adjective", "adverb", "preposition", "conjunction", "interjection"]
+    },
+    {
+        "id": "noun-rules",
+        "title": "Noun Rules in Bangla – Types, Number, Gender & Case with Examples",
+        "url": "noun-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "📖",
+        "date": "2026-07-06",
+        "description": "Complete Noun Rules guide with 5 types of nouns, number rules, gender rules, and case rules.",
+        "keywords": ["noun", "proper noun", "common noun", "abstract noun", "collective noun", "material noun", "number", "gender", "case"]
+    },
+    {
+        "id": "pronoun-rules",
+        "title": "Pronoun Rules in Bangla – Complete English Pronoun Guide",
+        "url": "pronoun-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "📖",
+        "date": "2026-07-05",
+        "description": "Complete Pronoun guide with 8 types, 100+ examples, and common mistakes.",
+        "keywords": ["pronoun", "personal pronoun", "possessive", "reflexive", "demonstrative", "indefinite", "interrogative", "relative", "reciprocal"]
+    },
+    {
+        "id": "verb-rules",
+        "title": "Verb Rules in Bangla – Complete English Grammar Guide with Examples",
+        "url": "verb-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "⚡",
+        "date": "2026-07-06",
+        "description": "Complete Verb Rules guide with 3 types of verbs, 100+ examples, and common mistakes.",
+        "keywords": ["verb", "action verb", "linking verb", "transitive", "intransitive", "regular", "irregular", "V1", "V2", "V3"]
+    },
+    {
+        "id": "adjective-rules",
+        "title": "Adjective Rules in Bangla – Complete English Grammar Guide with Examples",
+        "url": "adjective-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "🎨",
+        "date": "2026-07-06",
+        "description": "Complete Adjective Rules guide with 8 types, degree of comparison, 100+ examples.",
+        "keywords": ["adjective", "descriptive", "quantitative", "demonstrative", "possessive", "interrogative", "degree of comparison", "positive", "comparative", "superlative"]
+    },
+    {
+        "id": "adverb-rules",
+        "title": "Adverb Rules in Bangla – Complete English Grammar Guide with Examples",
+        "url": "adverb-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "⏩",
+        "date": "2026-07-06",
+        "description": "Complete Adverb Rules guide with 8 types, 15+ rules, 100+ examples, and common mistakes.",
+        "keywords": ["adverb", "manner", "place", "time", "frequency", "degree", "interrogative", "relative"]
+    },
+    {
+        "id": "preposition-rules",
+        "title": "Preposition Rules in Bangla – Complete English Grammar Guide with Examples",
+        "url": "preposition-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "📍",
+        "date": "2026-07-07",
+        "description": "Complete Preposition Rules guide with 3 types, 20+ rules, 100+ examples, and common mistakes.",
+        "keywords": ["preposition", "place", "time", "direction", "agency", "instrument", "cause", "purpose", "possession"]
+    },
+    {
+        "id": "conjunction-rules",
+        "title": "Conjunction Rules in Bangla – Complete English Grammar Guide",
+        "url": "conjunction-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "🔗",
+        "date": "2026-07-06",
+        "description": "Complete Conjunction Rules guide with 3 types, 20+ rules, 100+ examples.",
+        "keywords": ["conjunction", "coordinating", "subordinating", "correlative", "FANBOYS", "both...and", "either...or", "neither...nor"]
+    },
+    {
+        "id": "interjection-rules",
+        "title": "Interjection Rules in Bangla – Complete English Grammar Guide",
+        "url": "interjection-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "❗",
+        "date": "2026-07-06",
+        "description": "Complete Interjection Rules guide with types, examples, and common usage.",
+        "keywords": ["interjection", "emotion", "surprise", "joy", "sorrow", "approval"]
+    },
+    {
+        "id": "subject-verb-agreement",
+        "title": "Subject-Verb Agreement Rules in Bangla – 15+ Rules with Examples",
+        "url": "subject-verb-agreement-bangla.html",
+        "category": "Grammar",
+        "emoji": "📝",
+        "date": "2026-07-05",
+        "description": "Complete Subject-Verb Agreement rules with 15+ rules, 100+ examples, 30 practice questions.",
+        "keywords": ["subject verb agreement", "SVA", "singular", "plural", "subject", "verb", "concord"]
+    },
+    {
+        "id": "tense-rules",
+        "title": "Complete Tenses Guide in Bangla – Covering Present, Past & Future",
+        "url": "tense-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "⏳",
+        "date": "2026-07-04",
+        "description": "Complete guide to 12 English tenses with structures, examples, and practice quizzes.",
+        "keywords": ["tense", "present", "past", "future", "indefinite", "continuous", "perfect", "perfect continuous", "12 tenses"]
+    },
+    {
+        "id": "voice-change",
+        "title": "Voice Change Rules in Bangla – Active to Passive with Examples",
+        "url": "voice-change-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "🔄",
+        "date": "2026-07-05",
+        "description": "Complete Voice Change rules for Present, Past, Future, Modals, Imperatives & Interrogatives.",
+        "keywords": ["voice", "active voice", "passive voice", "active to passive", "voice change", "transform"]
+    },
+    {
+        "id": "narration-rules",
+        "title": "Narration Rules in Bangla – Direct to Indirect Speech with Examples",
+        "url": "narration-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "💬",
+        "date": "2026-07-09",
+        "description": "Complete Narration rules with step-by-step conversion from Direct to Indirect Speech. Includes 100+ examples.",
+        "keywords": ["narration", "direct speech", "indirect speech", "reported speech", "reporting verb", "tense change", "pronoun change"]
+    },
+    {
+        "id": "articles-rules",
+        "title": "English Articles Rules in Bangla – A, An, The সম্পূর্ণ গাইড",
+        "url": "articles-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "📋",
+        "date": "2026-07-05",
+        "description": "Complete guide to English Articles (A, An, The) covering all rules, exceptions, and BCS exam patterns.",
+        "keywords": ["article", "definite article", "indefinite article", "a", "an", "the", "zero article"]
+    },
+    {
+        "id": "common-grammar-mistakes",
+        "title": "Common English Grammar Mistakes – 200+ Mistakes with Corrections",
+        "url": "common-grammar-mistakes-bangla.html",
+        "category": "Grammar",
+        "emoji": "⚠️",
+        "date": "2026-07-08",
+        "description": "200+ common grammar mistakes with corrections for BCS, IELTS, and bank jobs.",
+        "keywords": ["mistakes", "errors", "common errors", "grammar mistakes", "correction"]
+    },
+    {
+        "id": "100-grammar-rules",
+        "title": "100 Essential English Grammar Rules – Quick Reference Guide",
+        "url": "100-english-grammar-rules-bangla.html",
+        "category": "Grammar",
+        "emoji": "📝",
+        "date": "2026-07-08",
+        "description": "Quick reference guide to 100 essential English grammar rules.",
+        "keywords": ["grammar rules", "essential rules", "quick reference", "100 rules"]
+    },
+    {
+        "id": "grammar-roadmap",
+        "title": "English Grammar Learning Roadmap – 12‑Week Study Plan",
+        "url": "english-grammar-learning-roadmap-bangla.html",
+        "category": "Grammar",
+        "emoji": "🗺️",
+        "date": "2026-07-07",
+        "description": "Complete 12‑week study plan to master English grammar from beginner to advanced.",
+        "keywords": ["roadmap", "study plan", "how to learn grammar", "12 weeks", "beginner", "intermediate", "advanced"]
+    },
+    {
+        "id": "grammar-index",
+        "title": "Grammar A–Z Index – Complete English Grammar Reference Guide",
+        "url": "grammar-index-a-z-bangla.html",
+        "category": "Grammar",
+        "emoji": "📚",
+        "date": "2026-07-07",
+        "description": "Complete alphabetical reference guide to all grammar topics from Adjective to Zero Article.",
+        "keywords": ["grammar index", "A to Z", "reference", "dictionary of grammar"]
+    },
+    {
+        "id": "english-grammar-beginners",
+        "title": "English Grammar for Beginners in Bangla – Complete Basic Grammar Course",
+        "url": "english-grammar-for-beginners-bangla.html",
+        "category": "Grammar",
+        "emoji": "📚",
+        "date": "2026-07-04",
+        "description": "Learn English Grammar for Beginners in Bangla with easy explanations, examples, tenses, and parts of speech.",
+        "keywords": ["beginners", "basic grammar", "learn grammar", "english for beginners"]
+    },
+    {
+        "id": "bcs-english-grammar",
+        "title": "BCS English Grammar Rules with Bangla Explanation",
+        "url": "bcs-english-grammar-bangla.html",
+        "category": "Grammar",
+        "emoji": "🎓",
+        "date": "2026-07-03",
+        "description": "Easy BCS English grammar guide with Bangla examples – tense, voice, narration, articles, and more.",
+        "keywords": ["bcs grammar", "bcs english", "exam grammar", "bcs preparation"]
+    },
+    {
+        "id": "bcs-english",
+        "title": "BCS Preliminary English Question Pattern 2026 – সম্পূর্ণ গাইড",
+        "url": "bcs-english-question-pattern-2026.html",
+        "category": "Exam",
+        "emoji": "🎓",
+        "date": "2026-07-04",
+        "description": "Complete guide to BCS Preliminary English question pattern with preparation tips.",
+        "keywords": ["BCS", "Preliminary", "English question pattern", "BCS English", "admission"]
+    },
+    {
+        "id": "bcs-synonyms-antonyms",
+        "title": "800+ BCS English Synonyms and Antonyms List with Bangla Meaning",
+        "url": "bcs-english-synonyms-antonyms.html",
+        "category": "Vocabulary",
+        "emoji": "📖",
+        "date": "2026-07-03",
+        "description": "Master BCS vocabulary with 800+ synonyms and antonyms with Bangla meanings and examples.",
+        "keywords": ["synonyms", "antonyms", "BCS vocabulary", "synonym antonym", "800+ words"]
+    },
+    {
+        "id": "bcs-vocabulary-guide",
+        "title": "BCS Vocabulary – 100 Most Important Words with Bangla Meaning",
+        "url": "bcs-vocabulary-guide.html",
+        "category": "Vocabulary",
+        "emoji": "📖",
+        "date": "2026-07-08",
+        "description": "Master BCS vocabulary with 100 most repeated English words with Bangla meanings, synonyms, antonyms, and memory tips.",
+        "keywords": ["BCS vocabulary", "vocabulary guide", "BCS words", "exam vocabulary"]
+    },
+    {
+        "id": "5000-common-words",
+        "title": "5,000 Most Common English Words with Bangla Meaning",
+        "url": "5000-common-english-words-bangla.html",
+        "category": "Vocabulary",
+        "emoji": "📖",
+        "date": "2026-07-09",
+        "description": "Learn the 5,000 most common English words with Bangla meaning, pronunciation, and examples.",
+        "keywords": ["common English words", "English words with Bangla meaning", "5000 words", "vocabulary list"]
+    },
+    {
+        "id": "1000-daily-words",
+        "title": "1000 Daily Use English Words with Bangla Meaning",
+        "url": "1000-daily-use-english-words-bangla.html",
+        "category": "Vocabulary",
+        "emoji": "📖",
+        "date": "2026-07-09",
+        "description": "Learn 1000 daily use English words with Bangla meaning, pronunciation, and example sentences.",
+        "keywords": ["daily use English words", "common words", "spoken English vocabulary", "daily vocabulary"]
+    },
+    {
+        "id": "english-synonyms-dictionary",
+        "title": "English Synonyms Dictionary with Bangla Meaning – 500+ Synonyms",
+        "url": "english-synonyms-bangla.html",
+        "category": "Vocabulary",
+        "emoji": "📚",
+        "date": "2026-07-10",
+        "description": "Learn 500+ English synonyms with Bangla meanings. Perfect for BCS, IELTS, Bank Jobs, and vocabulary building.",
+        "keywords": ["synonyms", "synonym dictionary", "English synonyms", "synonym list", "BCS synonyms"]
+    },
+    {
+        "id": "english-antonyms-dictionary",
+        "title": "English Antonyms Dictionary with Bangla Meaning – 500+ Antonyms",
+        "url": "english-antonyms-bangla.html",
+        "category": "Vocabulary",
+        "emoji": "🔄",
+        "date": "2026-07-10",
+        "description": "Learn 500+ English antonyms with Bangla meanings. Perfect for BCS, IELTS, Bank Jobs, and vocabulary building.",
+        "keywords": ["antonyms", "antonym dictionary", "English antonyms", "antonym list", "BCS antonyms"]
+    },
+    {
+        "id": "daily-english",
+        "title": "Daily English Sentences & Word of the Day – Practice Daily",
+        "url": "daily-english.html",
+        "category": "Speaking",
+        "emoji": "🗣️",
+        "date": "2026-07-04",
+        "description": "Learn daily English sentences with Bangla translation and Word of the Day.",
+        "keywords": ["daily English", "spoken English", "daily sentences", "word of the day"]
+    },
+    {
+        "id": "english-speaking-practice",
+        "title": "English Speaking Practice for Bangladeshi Students – Learn Spoken English Easily",
+        "url": "english-speaking-practice-bangladeshi-students.html",
+        "category": "Speaking",
+        "emoji": "🗣️",
+        "date": "2026-07-03",
+        "description": "Complete spoken English guide with Bangla translation, common phrases, and practice methods.",
+        "keywords": ["spoken English", "speaking practice", "Bangladeshi students", "dialogue", "conversation"]
+    },
+    {
+        "id": "daily-english-sentences",
+        "title": "Daily English Speaking Sentences for Beginners – 100+ Phrases",
+        "url": "daily-english-speaking-sentences-beginners.html",
+        "category": "Speaking",
+        "emoji": "🗣️",
+        "date": "2026-07-03",
+        "description": "Learn 100+ daily English sentences with Bangla translation. Practice spoken English at home.",
+        "keywords": ["daily sentences", "spoken English", "beginners", "Bangla translation"]
+    },
+    {
+        "id": "english-conversation",
+        "title": "English Conversation Practice at Home – 100+ Daily Life Dialogues",
+        "url": "english-conversation-practice-at-home.html",
+        "category": "Speaking",
+        "emoji": "💬",
+        "date": "2026-07-03",
+        "description": "Practice English conversation at home with 100+ daily life dialogues and Bangla translation.",
+        "keywords": ["conversation", "dialogue", "spoken English", "daily life", "Bangla translation"]
+    },
+    {
+        "id": "speaking-practice",
+        "title": "English Speaking Practice – Dialogues & Pronunciation Tips",
+        "url": "speaking-practice.html",
+        "category": "Speaking",
+        "emoji": "🎙️",
+        "date": "2026-07-04",
+        "description": "Practice English speaking with real-life dialogues, pronunciation tips, and common phrases.",
+        "keywords": ["speaking practice", "pronunciation", "dialogues", "spoken English"]
+    },
+    {
+        "id": "best-dictionary-apps",
+        "title": "Best Offline English to Bangla Dictionary Apps 2026 – Complete Comparison",
+        "url": "best-offline-english-bangla-dictionary-apps-2026.html",
+        "category": "General",
+        "emoji": "📱",
+        "date": "2026-07-04",
+        "description": "Top 5 offline English-Bangla dictionary apps compared. Find the best app for BCS, Bank Jobs, IELTS.",
+        "keywords": ["dictionary apps", "offline dictionary", "English to Bangla", "app comparison", "2026"]
+    },
+    {
+        "id": "tools-hub",
+        "title": "Free English Learning Tools – Grammar, Vocabulary & Practice",
+        "url": "tools.html",
+        "category": "Tools",
+        "emoji": "🛠️",
+        "date": "2026-07-10",
+        "description": "All interactive English learning tools in one place. Grammar quizzes, vocabulary practice, sentence analyzer, and more.",
+        "keywords": ["english tools", "learning tools", "grammar tools", "vocabulary tools", "practice tools"]
+    },
+    {
+        "id": "assessment-hub",
+        "title": "English Assessment Center – Free Practice Tests & Level Tests",
+        "url": "assessment.html",
+        "category": "Tools",
+        "emoji": "🎯",
+        "date": "2026-07-10",
+        "description": "Free English assessment tests for BCS, IELTS, Bank Jobs, and University Admission. Find your level and get recommendations.",
+        "keywords": ["assessment", "level test", "BCS test", "IELTS test", "grammar test", "vocabulary test"]
+    },
+    {
+        "id": "journey",
+        "title": "My English Journey – Personalized Learning Dashboard",
+        "url": "journey.html",
+        "category": "Tools",
+        "emoji": "📊",
+        "date": "2026-07-09",
+        "description": "Track your XP, streak, skill levels, and learning progress. Get daily recommendations and follow your learning path.",
+        "keywords": ["dashboard", "progress", "XP", "streak", "learning path", "journey"]
+    },
+    {
+        "id": "dictionary",
+        "title": "English to Bangla Dictionary – Search 12,658+ Words",
+        "url": "dictionary.html",
+        "category": "Tools",
+        "emoji": "📕",
+        "date": "2026-07-10",
+        "description": "Search 12,658+ English words with Bangla meanings, pronunciation, examples, synonyms, and antonyms. Save words, practice flashcards.",
+        "keywords": ["dictionary", "English to Bangla", "word meaning", "vocabulary", "offline dictionary"]
+    },
+    {
+        "id": "verb-forms-tool",
+        "title": "Verb Forms Tool – Search V1, V2, V3, V4, V5 with Bangla Meaning",
+        "url": "verb-forms.html",
+        "category": "Tools",
+        "emoji": "🔤",
+        "date": "2026-07-06",
+        "description": "Search any verb and see its 5 forms with Bangla meaning. 100+ verbs included.",
+        "keywords": ["verb forms", "V1", "V2", "V3", "V4", "V5", "past tense", "past participle"]
+    },
+    {
+        "id": "plural-maker",
+        "title": "Plural Maker – Convert Singular to Plural",
+        "url": "plural-maker.html",
+        "category": "Tools",
+        "emoji": "🔢",
+        "date": "2026-07-06",
+        "description": "Convert singular nouns to plural form with rules and exceptions.",
+        "keywords": ["plural", "singular", "plural maker", "plural rules"]
+    },
+    {
+        "id": "grammar-quiz",
+        "title": "Grammar Quiz – 50+ Questions with Explanations",
+        "url": "grammar-quiz.html",
+        "category": "Tools",
+        "emoji": "🧠",
+        "date": "2026-07-06",
+        "description": "Test your grammar with 50+ multiple-choice questions with detailed explanations.",
+        "keywords": ["grammar quiz", "quiz", "practice", "50 questions"]
+    },
+    {
+        "id": "tense-quiz",
+        "title": "Tense Quiz – 50+ Questions with Explanations",
+        "url": "tense-quiz.html",
+        "category": "Tools",
+        "emoji": "⏳",
+        "date": "2026-07-06",
+        "description": "Practice your tenses with 50+ multiple-choice questions and explanations.",
+        "keywords": ["tense quiz", "quiz", "tenses", "practice"]
+    },
+    {
+        "id": "vocabulary-quiz",
+        "title": "Vocabulary Quiz – 100+ Words with Bangla Meaning",
+        "url": "vocabulary-quiz.html",
+        "category": "Tools",
+        "emoji": "📝",
+        "date": "2026-07-06",
+        "description": "Test your vocabulary with 100+ words and get instant feedback.",
+        "keywords": ["vocabulary quiz", "quiz", "100 words", "practice"]
+    },
+    {
+        "id": "articles-quiz",
+        "title": "Articles Quiz – A, An, The & Zero Article Practice",
+        "url": "articles-quiz.html",
+        "category": "Tools",
+        "emoji": "📋",
+        "date": "2026-07-06",
+        "description": "Practice using A, An, The, and Zero article with interactive quiz.",
+        "keywords": ["articles quiz", "a an the", "zero article", "practice"]
+    },
+    {
+        "id": "preposition-quiz",
+        "title": "Preposition Quiz – 45+ Questions with Rules",
+        "url": "preposition-quiz.html",
+        "category": "Tools",
+        "emoji": "📍",
+        "date": "2026-07-06",
+        "description": "Test your preposition knowledge with 45+ questions and learn the rules.",
+        "keywords": ["preposition quiz", "prepositions", "practice", "45 questions"]
+    },
+    {
+        "id": "subject-verb-quiz",
+        "title": "Subject-Verb Agreement Quiz – 50+ Questions with Rules",
+        "url": "subject-verb-quiz.html",
+        "category": "Tools",
+        "emoji": "📝",
+        "date": "2026-07-06",
+        "description": "Practice Subject-Verb Agreement with 50+ multiple-choice questions and explanations.",
+        "keywords": ["subject verb agreement quiz", "SVA", "subject verb", "practice"]
+    },
+    {
+        "id": "grammar-practice-generator",
+        "title": "Grammar Practice Generator – Custom Tense Practice",
+        "url": "grammar-practice-generator.html",
+        "category": "Tools",
+        "emoji": "⚙️",
+        "date": "2026-07-06",
+        "description": "Generate custom tense practice exercises with instant answers.",
+        "keywords": ["practice generator", "custom practice", "tense practice", "generate"]
+    },
+    {
+        "id": "sentence-analyzer",
+        "title": "Sentence Analyzer – Analyze Subject, Verb, Tense & Mistakes",
+        "url": "sentence-analyzer.html",
+        "category": "Tools",
+        "emoji": "🔍",
+        "date": "2026-07-07",
+        "description": "Analyze any English sentence and get subject, verb, tense, voice, and grammar mistakes instantly.",
+        "keywords": ["sentence analyzer", "grammar", "subject", "verb", "tense"]
+    },
+    {
+        "id": "parts-of-speech-identifier",
+        "title": "Parts of Speech Identifier – Tag Each Word with Its POS",
+        "url": "parts-of-speech-identifier.html",
+        "category": "Tools",
+        "emoji": "📝",
+        "date": "2026-07-07",
+        "description": "Tag each word in an English sentence with its part of speech – noun, verb, adjective, etc.",
+        "keywords": ["parts of speech", "POS", "identifier", "grammar"]
+    },
+    {
+        "id": "common-mistake-detector",
+        "title": "Common Mistake Detector – Find Grammar Errors with Fixes",
+        "url": "common-mistake-detector.html",
+        "category": "Tools",
+        "emoji": "⚠️",
+        "date": "2026-07-07",
+        "description": "Find common grammar mistakes in any sentence with clear explanations and corrections.",
+        "keywords": ["grammar mistakes", "error detection", "common errors", "fixes"]
+    },
+    {
+        "id": "sentence-maker",
+        "title": "English Sentence Maker – Generate Example Sentences",
+        "url": "sentence-maker.html",
+        "category": "Tools",
+        "emoji": "📝",
+        "date": "2026-07-10",
+        "description": "Generate 5 example sentences for any English word. See vocabulary in context with 50+ words included.",
+        "keywords": ["sentence maker", "example sentences", "vocabulary practice", "sentence generator"]
+    },
+    {
+        "id": "word-family-finder",
+        "title": "Word Family Finder – Root Words, Prefixes & Suffixes",
+        "url": "word-family-finder.html",
+        "category": "Tools",
+        "emoji": "🔍",
+        "date": "2026-07-09",
+        "description": "Find root words, prefixes, suffixes, and related words with Bangla meanings. Expand your vocabulary.",
+        "keywords": ["word family", "root words", "prefixes", "suffixes", "vocabulary", "BCS", "IELTS"]
+    },
+    {
+        "id": "root-word-finder",
+        "title": "Root Word Finder – Discover English Root Words, Prefixes & Suffixes",
+        "url": "root-word-finder.html",
+        "category": "Tools",
+        "emoji": "🔍",
+        "date": "2026-07-10",
+        "description": "Find the root word, origin, prefixes, suffixes, and related word families for any English word.",
+        "keywords": ["root word finder", "root words", "prefixes", "suffixes", "word families", "vocabulary"]
+    },
+    {
+        "id": "vocabulary-builder-planner",
+        "title": "Vocabulary Builder Planner – Personalized Learning Plan",
+        "url": "vocabulary-builder-planner.html",
+        "category": "Tools",
+        "emoji": "📋",
+        "date": "2026-07-09",
+        "description": "Create a personalized vocabulary learning plan for BCS, IELTS, Bank Jobs, or University Admission.",
+        "keywords": ["vocabulary planner", "learning plan", "BCS plan", "IELTS plan", "personalized learning"]
+    },
+    {
+        "id": "bcs-english-mock-test",
+        "title": "BCS English Mock Test – 35 MCQ Questions for BCS Preliminary",
+        "url": "bcs-english-mock-test.html",
+        "category": "Tools",
+        "emoji": "📝",
+        "date": "2026-07-08",
+        "description": "Take our free BCS English mock test with 35 MCQ questions covering vocabulary, grammar, idioms, and sentence correction.",
+        "keywords": ["bcs", "mock test", "english", "preliminary", "mcq", "exam", "practice", "bcs english", "preparation"]
+    },
+    {
+        "id": "english-level-test",
+        "title": "English Level Test – Find Your CEFR Level (A1–C2)",
+        "url": "english-level-test.html",
+        "category": "Tools",
+        "emoji": "🌍",
+        "date": "2026-07-09",
+        "description": "Take our free English level test and find your CEFR proficiency level (A1–C2) with personalized recommendations.",
+        "keywords": ["english level test", "CEFR", "proficiency", "level assessment", "A1", "C2"]
+    },
+    {
+        "id": "grammar-level-test",
+        "title": "Grammar Level Test – Assess Your Grammar Skills",
+        "url": "grammar-level-test.html",
+        "category": "Tools",
+        "emoji": "📚",
+        "date": "2026-07-09",
+        "description": "Assess your grammar across 8 categories: Tense, Article, Preposition, Voice, Narration, SVA, and more.",
+        "keywords": ["grammar level test", "grammar assessment", "tenses", "articles", "prepositions"]
+    },
+    {
+        "id": "vocabulary-size-test",
+        "title": "Vocabulary Size Test – How Many Words Do You Know?",
+        "url": "vocabulary-size-test.html",
+        "category": "Tools",
+        "emoji": "📖",
+        "date": "2026-07-09",
+        "description": "Find out how many English words you know. Get a detailed breakdown by level with personalized recommendations.",
+        "keywords": ["vocabulary size", "word count", "how many words", "vocabulary assessment"]
+    },
+    {
+        "id": "synonym-test",
+        "title": "Synonym Test – 20 Essential Synonyms for BCS & IELTS",
+        "url": "synonym-test.html",
+        "category": "Tools",
+        "emoji": "📚",
+        "date": "2026-07-09",
+        "description": "Test your vocabulary with 20 essential synonyms frequently asked in BCS, IELTS, and Bank Job exams.",
+        "keywords": ["synonym test", "synonyms", "vocabulary", "BCS", "IELTS"]
+    },
+    {
+        "id": "antonym-test",
+        "title": "Antonym Test – 20 Essential Antonyms for BCS & IELTS",
+        "url": "antonym-test.html",
+        "category": "Tools",
+        "emoji": "🔄",
+        "date": "2026-07-09",
+        "description": "Test your vocabulary with 20 essential antonyms frequently asked in BCS, IELTS, and Bank Job exams.",
+        "keywords": ["antonym test", "antonyms", "vocabulary", "BCS", "IELTS"]
+    },
+    {
+        "id": "idiom-test",
+        "title": "Idiom Test – 40 Essential Idioms for BCS Preparation",
+        "url": "idiom-test.html",
+        "category": "Tools",
+        "emoji": "💡",
+        "date": "2026-07-09",
+        "description": "Take our free idiom test with 40 essential English idioms frequently asked in BCS Preliminary exams.",
+        "keywords": ["idiom test", "idioms", "BCS idioms", "phrase", "exam"]
+    },
+    {
+        "id": "phrasal-verb-test",
+        "title": "Phrasal Verb Test – 20 Essential Phrasal Verbs for BCS & IELTS",
+        "url": "phrasal-verb-test.html",
+        "category": "Tools",
+        "emoji": "🔗",
+        "date": "2026-07-09",
+        "description": "Test your knowledge with 20 essential phrasal verbs frequently asked in BCS, IELTS, and Bank Job exams.",
+        "keywords": ["phrasal verb test", "phrasal verbs", "vocabulary", "BCS", "IELTS"]
+    },
+    {
+        "id": "bcs-english-diagnostic",
+        "title": "BCS English Diagnostic Test – Find Your Weak Areas",
+        "url": "bcs-english-diagnostic.html",
+        "category": "Tools",
+        "emoji": "🎯",
+        "date": "2026-07-09",
+        "description": "Identify your weak areas across Grammar, Vocabulary, Idioms, Reading, and Sentence Correction with personalized recommendations.",
+        "keywords": ["BCS diagnostic", "weak areas", "BCS preparation", "grammar", "vocabulary"]
+    },
+    {
+        "id": "ielts-diagnostic",
+        "title": "IELTS Diagnostic Test – Estimate Your Band Score",
+        "url": "ielts-diagnostic.html",
+        "category": "Tools",
+        "emoji": "🌍",
+        "date": "2026-07-09",
+        "description": "Estimate your IELTS Band Score across Reading, Writing, Listening, Speaking, Grammar, and Vocabulary.",
+        "keywords": ["IELTS diagnostic", "band score", "IELTS preparation", "IELTS test"]
+    },
+    {
+        "id": "dashboard",
+        "title": "Dashboard – Track Your Learning Progress",
+        "url": "dashboard.html",
+        "category": "Tools",
+        "emoji": "📊",
+        "date": "2026-07-06",
+        "description": "Track your XP, streak, achievements, and lesson completion across Ovidhan.",
+        "keywords": ["dashboard", "progress", "XP", "streak", "achievements", "tracker"]
+    },
+    {
+        "id": "blog-hub",
+        "title": "English Learning Blog – Grammar, Vocabulary, Speaking & Exam Tips",
+        "url": "blog.html",
+        "category": "General",
+        "emoji": "📝",
+        "date": "2026-07-10",
+        "description": "Free English learning articles in Bangla. Grammar guides, vocabulary lists, speaking practice, and exam preparation for BCS, IELTS & Bank Jobs.",
+        "keywords": ["blog", "articles", "learning", "grammar", "vocabulary", "speaking", "exam"]
+    },
+    {
+        "id": "learning-path-beginners",
+        "title": "English Learning Path for Beginners – Complete Roadmap",
+        "url": "learning-path-beginners.html",
+        "category": "Learning Paths",
+        "emoji": "🌱",
+        "date": "2026-07-09",
+        "description": "Follow this complete English learning path for beginners. Start from zero and build your grammar, vocabulary, and speaking skills.",
+        "keywords": ["beginners", "learning path", "english for beginners", "roadmap"]
+    },
+    {
+        "id": "learning-path-bcs",
+        "title": "BCS English Learning Path – Complete Preparation Roadmap",
+        "url": "learning-path-bcs.html",
+        "category": "Learning Paths",
+        "emoji": "🎓",
+        "date": "2026-07-09",
+        "description": "Follow this complete BCS English learning path. Master vocabulary, grammar, idioms, and sentence correction.",
+        "keywords": ["bcs", "learning path", "bcs preparation", "bcs english"]
+    },
+    {
+        "id": "learning-path-ielts",
+        "title": "IELTS Learning Path – Complete Band Score Roadmap",
+        "url": "learning-path-ielts.html",
+        "category": "Learning Paths",
+        "emoji": "🌍",
+        "date": "2026-07-09",
+        "description": "Follow this complete IELTS learning path. Master Reading, Writing, Listening, Speaking, Grammar, and Vocabulary.",
+        "keywords": ["ielts", "learning path", "ielts preparation", "band score"]
+    },
+    {
+        "id": "learning-path-hsc",
+        "title": "HSC English Learning Path – Complete Preparation Roadmap",
+        "url": "learning-path-hsc.html",
+        "category": "Learning Paths",
+        "emoji": "📚",
+        "date": "2026-07-10",
+        "description": "Follow this complete HSC English learning path. Master grammar, vocabulary, writing, reading comprehension, and literary terms.",
+        "keywords": ["hsc", "learning path", "hsc preparation", "hsc english"]
+    },
+    {
+        "id": "learning-path-university",
+        "title": "University Admission English Learning Path – Complete Guide",
+        "url": "learning-path-university.html",
+        "category": "Learning Paths",
+        "emoji": "🎓",
+        "date": "2026-07-10",
+        "description": "Follow this complete University Admission English learning path for DU, GST, Medical, and Engineering admission tests.",
+        "keywords": ["university admission", "learning path", "du admission", "gst admission", "medical admission"]
+    },
+    {
+        "id": "search",
+        "title": "Search Ovidhan – Find English Learning Resources",
+        "url": "search.html",
+        "category": "Tools",
+        "emoji": "🔍",
+        "date": "2026-07-10",
+        "description": "Search all grammar articles, vocabulary, tools, exam guides, and spoken English content on Ovidhan.",
+        "keywords": ["search", "find", "discover", "resources", "articles", "tools"]
+    }
+]

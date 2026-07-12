@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>Vocabulary Builder Planner – Personalized English Learning Plan | Ovidhan</title>
+    <meta name="description" content="Create a personalized vocabulary learning plan for BCS, IELTS, Bank Jobs, or University Admission. Enter your goal and current level to get a custom study plan." />
+    <meta name="keywords" content="vocabulary planner, English learning plan, BCS vocabulary plan, IELTS vocabulary plan, personalized learning, Bangladesh" />
+    <link rel="canonical" href="https://ovidhan.net/vocabulary-builder-planner.html" />
+
+    <!-- ═══ OPEN GRAPH ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vocabulary Builder Planner – Personalized English Learning Plan" />
+    <meta property="og:description" content="Create a personalized vocabulary learning plan for BCS, IELTS, Bank Jobs, or University Admission." />
+    <meta property="og:url" content="https://ovidhan.net/vocabulary-builder-planner.html" />
+    <meta property="og:site_name" content="Ovidhan – English to Bangla Dictionary" />
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vocabulary Builder Planner – Personalized English Learning Plan" />
+    <meta name="twitter:description" content="Create a personalized vocabulary learning plan for BCS, IELTS, Bank Jobs, or University Admission." />
+
+    <!-- ═══ SCHEMA.ORG – WEBPAGE ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Vocabulary Builder Planner",
+        "url": "https://ovidhan.net/vocabulary-builder-planner.html",
+        "description": "Create a personalized vocabulary learning plan for BCS, IELTS, Bank Jobs, or University Admission."
+    }
+    </script>
+
+    <!-- ═══ GOOGLE FONTS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ═══ GOOGLE ANALYTICS ═══ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7PS8PRT4KW');
+    </script>
+
+    <style>
+        /* ── Ovidhan Dark Premium Theme ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --red: #f87171;
+            --red-dim: rgba(248,113,113,0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192,132,252,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo { font-size: 22px; font-weight: 700; color: var(--gold); text-decoration: none; }
+        .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-mid); text-decoration: none; font-size: 14px; font-family: var(--font-en); transition: color .2s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta { background: var(--gold); color: #0B1F1A !important; font-weight: 600 !important; padding: 7px 16px; border-radius: 8px; }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        .container { max-width: 820px; margin: 0 auto; padding: 40px 24px 60px; }
+
+        .hero {
+            background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
+            padding: 40px 24px 50px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 4.5vw, 2.6rem);
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+        .hero .subtitle {
+            max-width: 700px;
+            margin: 0 auto 8px;
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+        .hero .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .hero .badge {
+            background: rgba(255,215,0,0.10);
+            border: 1px solid rgba(255,215,0,0.25);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .form-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-bottom: 24px;
+        }
+        .form-box label {
+            display: block;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+        }
+        .form-box .help-text {
+            color: var(--text-soft);
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        .form-box select,
+        .form-box input[type="number"],
+        .form-box input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-size: 1rem;
+            font-family: var(--font-bn);
+            outline: none;
+            transition: border-color .3s;
+            margin-bottom: 16px;
+        }
+        .form-box select:focus,
+        .form-box input:focus {
+            border-color: var(--gold);
+        }
+        .form-box select option {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .form-box .btn-primary {
+            width: 100%;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            padding: 14px;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-family: var(--font-en);
+            font-size: 1.05rem;
+            transition: background .2s, transform .2s;
+        }
+        .form-box .btn-primary:hover {
+            background: #f0c85a;
+            transform: translateY(-2px);
+        }
+
+        .plan-output {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .plan-output.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .plan-output h2 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+        }
+        .plan-output .summary {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+        }
+        .plan-output .week {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 12px;
+        }
+        .plan-output .week .week-title {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+        .plan-output .week .tasks {
+            padding-left: 20px;
+            color: var(--text-mid);
+        }
+        .plan-output .week .tasks li { margin-bottom: 4px; }
+        .plan-output .week .tasks li a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+        .plan-output .week .tasks li a:hover { color: var(--gold); }
+
+        .plan-output .btn-secondary {
+            display: inline-block;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 10px 24px;
+            color: var(--text-mid);
+            text-decoration: none;
+            font-weight: 600;
+            transition: border-color .2s, color .2s;
+            font-family: var(--font-en);
+            margin-right: 8px;
+            margin-top: 8px;
+        }
+        .plan-output .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .related-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        .related-section h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 12px; }
+        .related-section p { color: var(--text-mid); margin-bottom: 16px; }
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .related-links a {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+            color: var(--teal);
+            text-decoration: none;
+            transition: border-color .2s, color .2s;
+            font-weight: 500;
+        }
+        .related-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .cta-banner {
+            background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
+            border: 1px solid rgba(230,184,74,0.3);
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            margin: 32px 0;
+        }
+        .cta-banner h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 8px; }
+        .cta-banner p { color: var(--text-mid); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            font-family: var(--font-en);
+            padding: 13px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background .2s, transform .2s;
+        }
+        .cta-btn:hover { background: #f0c85a; transform: translateY(-2px); }
+        .cta-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 18px;
+        }
+        .cta-feat { font-size: 13px; color: var(--teal); display: flex; align-items: center; gap: 5px; }
+
+        .site-footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+        }
+        .site-footer a { color: var(--teal); text-decoration: none; }
+        .site-footer a:hover { color: var(--gold); }
+
+        @media (max-width: 600px) {
+            .hero { padding: 28px 16px 36px; }
+            .hero h1 { font-size: 1.5rem; }
+            .container { padding: 20px 12px 40px; }
+            .form-box { padding: 20px 16px; }
+            .plan-output { padding: 20px 16px; }
+            .nav-links .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/dictionary.html" style="color:var(--gold);font-weight:600;">📕 Dictionary</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://ovidhan.net/assessment.html" style="color:var(--teal);">🎯 Assessment</a>
+        <a href="https://ovidhan.net/journey.html">📊 Journey</a>
+        <a href="https://ovidhan.net/search.html" style="color:var(--teal);font-weight:600;">🔍 Search</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+    <h1>📋 Vocabulary Builder Planner</h1>
+    <p class="subtitle">Create a <strong>personalized vocabulary learning plan</strong> for BCS, IELTS, Bank Jobs, University Admission, or daily learning.</p>
+    <div class="badge-group">
+        <span class="badge">🎯 Personalized</span>
+        <span class="badge">📊 Free</span>
+        <span class="badge">📱 Works Offline</span>
+        <span class="badge">🔄 Updated 2026</span>
+    </div>
+</section>
+
+<!-- ══ MAIN ══ -->
+<div class="container">
+
+    <!-- Form -->
+    <div class="form-box">
+        <label for="goal">🎯 What's Your Goal?</label>
+        <select id="goal">
+            <option value="bcs">BCS Preliminary</option>
+            <option value="ielts">IELTS (Academic)</option>
+            <option value="bank">Bank Jobs</option>
+            <option value="university">University Admission</option>
+            <option value="spoken">Spoken English</option>
+            <option value="general">General English Improvement</option>
+        </select>
+
+        <label for="level">📊 Current Level</label>
+        <select id="level">
+            <option value="beginner">Beginner</option>
+            <option value="elementary">Elementary</option>
+            <option value="intermediate" selected>Intermediate</option>
+            <option value="upper-intermediate">Upper Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+
+        <label for="days">📅 How Many Days?</label>
+        <input type="number" id="days" value="30" min="7" max="90" />
+
+        <button class="btn-primary" onclick="generatePlan()">🚀 Generate Your Plan</button>
+    </div>
+
+    <!-- Plan Output -->
+    <div class="plan-output" id="planOutput">
+        <h2 id="planTitle">Your Learning Plan</h2>
+        <div class="summary" id="planSummary">Loading...</div>
+        <div id="planWeeks"></div>
+        <div style="margin-top:16px;">
+            <a href="journey.html" class="btn-secondary">📊 Track Progress</a>
+            <a href="dictionary.html" class="btn-secondary">📕 Search Words</a>
+            <a href="grammar.html" class="btn-secondary">📚 Learn Grammar</a>
+            <a href="assessment.html" class="btn-secondary">🎯 Assessment Center</a>
+        </div>
+    </div>
+
+    <!-- Related -->
+    <div class="related-section">
+        <h3>📚 Vocabulary Resources</h3>
+        <p>Strengthen your vocabulary with these free resources.</p>
+        <div class="related-links">
+            <a href="bcs-vocabulary-guide.html">📖 BCS Vocabulary Guide</a>
+            <a href="vocabulary-quiz.html">🧠 Vocabulary Quiz</a>
+            <a href="5000-common-english-words-bangla.html">📖 5,000 Common Words</a>
+            <a href="dictionary.html">📕 Dictionary</a>
+            <a href="assessment.html">🎯 Assessment Center</a>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+        <h3>📱 Build Vocabulary Anywhere</h3>
+        <p>Get 12,658+ words, flashcards, quizzes, and vocabulary tools – all offline.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank" rel="noopener">
+            📥 Download Ovidhan Now
+        </a>
+        <div class="cta-features">
+            <span class="cta-feat">✅ 100% Offline</span>
+            <span class="cta-feat">✅ 12,658+ Words</span>
+            <span class="cta-feat">✅ BCS / IELTS / Bank</span>
+            <span class="cta-feat">✅ Free</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/assessment.html">Assessment</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/journey.html">Journey</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<!-- ══ PLAN LOGIC ══ -->
+<script>
+    function generatePlan() {
+        const goal = document.getElementById('goal').value;
+        const level = document.getElementById('level').value;
+        const days = parseInt(document.getElementById('days').value) || 30;
+
+        const goalLabels = {
+            bcs: 'BCS Preliminary',
+            ielts: 'IELTS (Academic)',
+            bank: 'Bank Jobs',
+            university: 'University Admission',
+            spoken: 'Spoken English',
+            general: 'General English Improvement'
+        };
+
+        const weeks = Math.ceil(days / 7);
+
+        // ── Build Plan ──
+        const plan = {
+            title: `Your ${goalLabels[goal]} Learning Plan`,
+            summary: `${weeks} weeks • ${days} days • Level: ${level.charAt(0).toUpperCase() + level.slice(1)}`,
+            weeks: []
+        };
+
+        // ── Generate Weekly Tasks ──
+        for (let w = 1; w <= weeks; w++) {
+            const weekTasks = [];
+
+            // Grammar focus based on week
+            if (w === 1) {
+                weekTasks.push({ text: '📚 Read Parts of Speech', url: 'parts-of-speech-bangla.html' });
+                weekTasks.push({ text: '📖 Learn 10 New Words', url: 'dictionary.html' });
+                weekTasks.push({ text: '🧠 Take Grammar Quiz', url: 'grammar-quiz.html' });
+            } else if (w === 2) {
+                weekTasks.push({ text: '⏳ Study Tenses', url: 'tense-rules-bangla.html' });
+                weekTasks.push({ text: '📖 Learn 10 New Words', url: 'dictionary.html' });
+                weekTasks.push({ text: '🧠 Take Tense Quiz', url: 'tense-quiz.html' });
+            } else if (w === 3) {
+                weekTasks.push({ text: '🔄 Study Voice Change', url: 'voice-change-rules-bangla.html' });
+                weekTasks.push({ text: '📖 Learn 10 New Words', url: 'dictionary.html' });
+                weekTasks.push({ text: '🧠 Take Subject-Verb Quiz', url: 'subject-verb-quiz.html' });
+            } else if (w === 4) {
+                weekTasks.push({ text: '💬 Study Narration', url: 'narration-rules-bangla.html' });
+                weekTasks.push({ text: '📖 Learn 10 New Words', url: 'dictionary.html' });
+                weekTasks.push({ text: '📋 Study Articles', url: 'articles-rules-bangla.html' });
+            } else if (w === 5) {
+                weekTasks.push({ text: '📍 Study Prepositions', url: 'preposition-rules-bangla.html' });
+                weekTasks.push({ text: '📖 Learn 10 New Words', url: 'dictionary.html' });
+                weekTasks.push({ text: '🧠 Take Preposition Quiz', url: 'preposition-quiz.html' });
+            } else if (w === 6) {
+                weekTasks.push({ text: '📝 Practice Sentence Correction', url: 'common-grammar-mistakes-bangla.html' });
+                weekTasks.push({ text: '📖 Learn 10 New Words', url: 'dictionary.html' });
+                weekTasks.push({ text: '🎯 Take Assessment', url: 'assessment.html' });
+            } else {
+                weekTasks.push({ text: '📚 Review Grammar', url: 'grammar.html' });
+                weekTasks.push({ text: '📖 Learn 10 New Words', url: 'dictionary.html' });
+                weekTasks.push({ text: '🧠 Take Grammar Quiz', url: 'grammar-quiz.html' });
+                weekTasks.push({ text: '🎯 Take Mock Test', url: 'assessment.html' });
+            }
+
+            // Add exam-specific tasks
+            if (goal === 'bcs' && w % 2 === 0) {
+                weekTasks.push({ text: '🎓 BCS Vocabulary Practice', url: 'bcs-vocabulary-guide.html' });
+            }
+            if (goal === 'ielts' && w % 2 === 0) {
+                weekTasks.push({ text: '🌍 IELTS Vocabulary Practice', url: 'ielts-diagnostic.html' });
+            }
+            if (goal === 'bank' && w % 2 === 0) {
+                weekTasks.push({ text: '🏦 Bank Job English Practice', url: 'assessment.html' });
+            }
+
+            // Add spoken English for spoken goal
+            if (goal === 'spoken') {
+                weekTasks.push({ text: '🗣️ Daily Speaking Practice', url: 'daily-english.html' });
+            }
+
+            // Always include Journey tracking
+            weekTasks.push({ text: '📊 Track Progress', url: 'journey.html' });
+
+            plan.weeks.push({
+                title: `Week ${w}`,
+                tasks: weekTasks
+            });
+        }
+
+        // ── Render ──
+        const output = document.getElementById('planOutput');
+        document.getElementById('planTitle').textContent = plan.title;
+        document.getElementById('planSummary').textContent = plan.summary;
+
+        const weeksContainer = document.getElementById('planWeeks');
+        weeksContainer.innerHTML = plan.weeks.map(w => `
+            <div class="week">
+                <div class="week-title">📅 ${w.title}</div>
+                <ul class="tasks">
+                    ${w.tasks.map(t => `<li>${t.url ? `<a href="${t.url}">${t.text}</a>` : t.text}</li>`).join('')}
+                </ul>
+            </div>
+        `).join('');
+
+        output.classList.add('active');
+        output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Track in GA
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'generate_plan', { goal: goal, level: level, days: days });
+        }
+    }
+
+    // Auto-generate on load with default values
+    document.addEventListener('DOMContentLoaded', function() {
+        generatePlan();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Ovidhan – Find English Learning Resources</title>
+    <meta name="description" content="Search all grammar articles, vocabulary, tools, exam guides, and spoken English content on Ovidhan." />
+    <link rel="canonical" href="https://ovidhan.net/search.html" />
+
+    <!-- Google Fonts & Dark Theme (same as your homepage) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ── Ovidhan Dark Theme ── (reuse your homepage styles) */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── Nav ── (copy from homepage) */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 14px;
+            font-family: var(--font-en);
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold);
+            color: #0B1F1A !important;
+            font-weight: 600 !important;
+            padding: 7px 16px;
+            border-radius: 8px;
+        }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        /* ── Search Page Content ── */
+        .search-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 24px;
+            flex: 1;
+        }
+
+        .search-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .search-header h1 {
+            font-size: 2.2rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .search-header p {
+            color: var(--text-mid);
+            font-size: 1.1rem;
+        }
+
+        .search-box-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .search-box-wrapper input {
+            width: 100%;
+            padding: 16px 20px 16px 50px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+            outline: none;
+            transition: border-color .3s, box-shadow .3s;
+            font-family: var(--font-bn);
+        }
+        .search-box-wrapper input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px var(--gold-dim);
+        }
+        .search-box-wrapper .icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.4rem;
+            color: var(--text-soft);
+        }
+
+        .search-box-wrapper .clear-btn {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-soft);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: none;
+            padding: 4px 8px;
+        }
+        .search-box-wrapper .clear-btn.visible { display: block; }
+
+        /* Category Filters */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+            justify-content: center;
+        }
+        .filter-btn {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 0.85rem;
+            font-family: var(--font-en);
+            color: var(--text-mid);
+            cursor: pointer;
+            transition: background .2s, color .2s, border-color .2s;
+            font-weight: 500;
+        }
+        .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+        .filter-btn.active {
+            background: var(--gold);
+            color: #0B1F1A;
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Keyboard shortcut hint */
+        .shortcut-hint {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-soft);
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+        .shortcut-hint kbd {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-family: var(--font-en);
+            font-size: 0.75rem;
+            color: var(--text-mid);
+        }
+
+        /* Popular Searches */
+        .popular-searches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .popular-searches .label {
+            color: var(--text-soft);
+            font-size: 0.9rem;
+            margin-right: 4px;
+        }
+        .popular-tag {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 0.8rem;
+            color: var(--teal);
+            cursor: pointer;
+            transition: background .2s, color .2s;
+        }
+        .popular-tag:hover {
+            background: var(--gold-dim);
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* Results */
+        .results {
+            margin-top: 20px;
+        }
+        .result-group {
+            margin-bottom: 28px;
+        }
+        .result-group .group-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .result-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px 18px;
+            margin-bottom: 8px;
+            transition: border-color .2s, transform .2s;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: var(--text);
+        }
+        .result-item:hover {
+            border-color: var(--gold);
+            transform: translateX(4px);
+        }
+        .result-item .emoji { font-size: 1.6rem; flex-shrink: 0; }
+        .result-item .content { flex: 1; }
+        .result-item .title {
+            font-weight: 600;
+            color: #fff;
+            font-size: 1rem;
+        }
+        .result-item .desc {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            margin-top: 2px;
+        }
+        .result-item .category-badge {
+            font-size: 0.7rem;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2px 10px;
+            color: var(--text-soft);
+            font-family: var(--font-en);
+            flex-shrink: 0;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-mid);
+        }
+        .no-results .big-icon { font-size: 3rem; margin-bottom: 10px; }
+        .no-results .suggestions {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 30px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+            margin-top: auto;
+        }
+        .site-footer a { color: var(--teal); text-decoration: none; }
+        .site-footer a:hover { color: var(--gold); }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .search-container { padding: 0 16px; margin-top: 20px; }
+            .search-header h1 { font-size: 1.8rem; }
+            .search-box-wrapper input { font-size: 1rem; padding: 14px 16px 14px 44px; }
+            .result-item { flex-wrap: wrap; }
+            .result-item .category-badge { margin-left: auto; }
+            .nav-links .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ (same as homepage) -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/dictionary.html" class="hide-mobile">Dictionary</a>
+        <a href="https://ovidhan.net/dashboard.html" style="color:var(--gold);font-weight:600;">📊 Dashboard</a>
+        <a href="https://ovidhan.net/exam-prep.html" class="hide-mobile">Exam Prep</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download App</a>
+    </div>
+</nav>
+
+<!-- ══ SEARCH PAGE ══ -->
+<main class="search-container">
+    <div class="search-header">
+        <h1>🔍 Search Ovidhan</h1>
+        <p>Find grammar, vocabulary, tools, exams, and more</p>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box-wrapper">
+        <span class="icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Type your search..." autofocus />
+        <button class="clear-btn" id="clearBtn">✕</button>
+    </div>
+
+    <div class="shortcut-hint">
+        Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to focus search
+    </div>
+
+    <!-- Category Filters -->
+    <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Grammar">📚 Grammar</button>
+        <button class="filter-btn" data-filter="Vocabulary">📖 Vocabulary</button>
+        <button class="filter-btn" data-filter="Speaking">🗣️ Speaking</button>
+        <button class="filter-btn" data-filter="Exam">🎓 Exam</button>
+        <button class="filter-btn" data-filter="Tools">🛠️ Tools</button>
+    </div>
+
+    <!-- Popular Searches -->
+    <div class="popular-searches" id="popularSearches">
+        <span class="label">🔥 Popular:</span>
+        <!-- Dynamically populated from localStorage or default -->
+    </div>
+
+    <!-- Results Container -->
+    <div class="results" id="results">
+        <!-- Rendered by JavaScript -->
+    </div>
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<!-- ══ SEARCH JAVASCRIPT ══ -->
+<script src="search.js"></script>
+</body>
+</html>

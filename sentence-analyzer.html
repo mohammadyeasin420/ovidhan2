@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentence Analyzer – Free English Grammar Analysis Tool | Ovidhan</title>
+    <meta name="description" content="Analyze any English sentence instantly. Get subject, verb, object, tense, voice, and common grammar mistakes with links to detailed lessons. Free tool for BCS, IELTS, and students." />
+    <link rel="canonical" href="https://ovidhan.net/sentence-analyzer.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ── Ovidhan Dark Theme ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --red: #f87171;
+            --red-dim: rgba(248,113,113,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 14px;
+            font-family: var(--font-en);
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold);
+            color: #0B1F1A !important;
+            font-weight: 600 !important;
+            padding: 7px 16px;
+            border-radius: 8px;
+        }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .page-header h1 {
+            font-size: 2.4rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .page-header p {
+            color: var(--text-mid);
+            font-size: 1.1rem;
+        }
+        .page-header .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .page-header .badge {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--text-mid);
+        }
+
+        .analyzer-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-bottom: 30px;
+        }
+        .analyzer-box textarea {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            resize: vertical;
+            min-height: 100px;
+            outline: none;
+            transition: border-color .3s;
+        }
+        .analyzer-box textarea:focus {
+            border-color: var(--gold);
+        }
+        .analyzer-box .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .analyzer-box .btn {
+            padding: 10px 28px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background .2s, transform .2s;
+            font-family: var(--font-en);
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: #0B1F1A;
+        }
+        .btn-primary:hover { background: #f0c85a; transform: translateY(-2px); }
+        .btn-secondary {
+            background: var(--surface2);
+            color: var(--text-mid);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+        .example-sentences {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .example-sentences .ex {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 16px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            cursor: pointer;
+            transition: background .2s, border-color .2s;
+        }
+        .example-sentences .ex:hover {
+            background: var(--gold-dim);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ── Results ── */
+        .results {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .results.visible { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        .result-section .section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gold);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .result-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+        }
+        .result-grid .label { color: var(--text-soft); font-size: 0.9rem; }
+        .result-grid .value { color: #fff; font-weight: 600; }
+
+        .error-item {
+            background: var(--red-dim);
+            border-left: 4px solid var(--red);
+            padding: 12px 16px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin-bottom: 8px;
+        }
+        .error-item .err-title { color: var(--red); font-weight: 700; }
+        .error-item .err-desc { color: var(--text-mid); font-size: 0.95rem; }
+        .error-item .err-fix { color: var(--green); font-weight: 600; margin-top: 2px; }
+        .error-item .err-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 4px;
+        }
+        .error-item .err-link:hover { text-decoration: underline; }
+
+        .word-tag {
+            display: inline-block;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2px 12px;
+            margin: 2px 4px 2px 0;
+            font-size: 0.85rem;
+        }
+        .word-tag .pos {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        .word-tag .w {
+            color: #fff;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .related-links a {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 16px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            text-decoration: none;
+            transition: border-color .2s, color .2s;
+        }
+        .related-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 30px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+            margin-top: 48px;
+        }
+        .footer a { color: var(--teal); text-decoration: none; }
+        .footer a:hover { color: var(--gold); }
+
+        @media (max-width: 600px) {
+            .result-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.8rem; }
+            .analyzer-box { padding: 20px; }
+            .nav-links .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/search.html" style="color:var(--gold);font-weight:600;">🔍 Search</a>
+        <a href="https://ovidhan.net/dashboard.html" class="hide-mobile">📊 Dashboard</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ MAIN ══ -->
+<div class="container">
+
+    <div class="page-header">
+        <h1>🔍 Sentence Analyzer</h1>
+        <p>Paste any English sentence and get instant grammar analysis — subject, verb, tense, voice, and mistakes.</p>
+        <div class="badge-group">
+            <span class="badge">📖 Free</span>
+            <span class="badge">⚡ Instant</span>
+            <span class="badge">🎓 BCS / IELTS</span>
+        </div>
+    </div>
+
+    <!-- Input -->
+    <div class="analyzer-box">
+        <textarea id="sentenceInput" placeholder="Type or paste an English sentence here...">I goes to school every day.</textarea>
+        <div class="actions">
+            <button class="btn btn-primary" onclick="analyzeSentence()">🔍 Analyze Sentence</button>
+            <button class="btn btn-secondary" onclick="clearAll()">✕ Clear</button>
+        </div>
+        <div class="example-sentences">
+            <span style="color:var(--text-soft);font-size:0.85rem;">Try:</span>
+            <span class="ex" onclick="loadExample('I goes to school every day.')">I goes to school every day.</span>
+            <span class="ex" onclick="loadExample('The book was written by Rahim.')">Passive</span>
+            <span class="ex" onclick="loadExample('She has been studying for 3 hours.')">Perfect Continuous</span>
+            <span class="ex" onclick="loadExample('He is a teacher and he works hard.')">Compound</span>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results" id="resultsContainer">
+        <!-- Rendered by JS -->
+    </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>
+    </p>
+</footer>
+
+<!-- ══ ANALYZER LOGIC ══ -->
+<script>
+    // ─────────────────────────────────────────────────────────────
+    //  SENTENCE ANALYZER – Ovidhan
+    //  Rule-based, no AI, 100% client-side
+    // ─────────────────────────────────────────────────────────────
+
+    function loadExample(text) {
+        document.getElementById('sentenceInput').value = text;
+        analyzeSentence();
+    }
+
+    function clearAll() {
+        document.getElementById('sentenceInput').value = '';
+        document.getElementById('resultsContainer').classList.remove('visible');
+        document.getElementById('resultsContainer').innerHTML = '';
+    }
+
+    function analyzeSentence() {
+        const input = document.getElementById('sentenceInput');
+        const raw = input.value.trim();
+        if (!raw) {
+            alert('Please enter a sentence.');
+            return;
+        }
+
+        const result = parseSentence(raw);
+        renderResults(result, raw);
+        document.getElementById('resultsContainer').classList.add('visible');
+
+        // Track in Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'analyze_sentence', { sentence_length: raw.length });
+        }
+    }
+
+    // ─────────────────────────────────────────────────────────────
+    //  CORE PARSER
+    // ─────────────────────────────────────────────────────────────
+
+    function parseSentence(sentence) {
+        // Normalize
+        const clean = sentence.replace(/[^a-zA-Z0-9\s,.?!']/g, '').trim();
+        const words = clean.split(/\s+/);
+
+        // --- 1. Identify Parts of Speech (simple mapping) ---
+        const posMap = {
+            // Pronouns
+            'i': 'Pronoun', 'you': 'Pronoun', 'he': 'Pronoun', 'she': 'Pronoun', 'it': 'Pronoun',
+            'we': 'Pronoun', 'they': 'Pronoun', 'me': 'Pronoun', 'him': 'Pronoun', 'her': 'Pronoun',
+            'us': 'Pronoun', 'them': 'Pronoun', 'my': 'Pronoun', 'your': 'Pronoun', 'his': 'Pronoun',
+            'her': 'Pronoun', 'our': 'Pronoun', 'their': 'Pronoun', 'mine': 'Pronoun', 'yours': 'Pronoun',
+            'ours': 'Pronoun', 'theirs': 'Pronoun',
+            // Articles
+            'a': 'Article', 'an': 'Article', 'the': 'Article',
+            // Common verbs
+            'is': 'Verb', 'am': 'Verb', 'are': 'Verb', 'was': 'Verb', 'were': 'Verb',
+            'have': 'Verb', 'has': 'Verb', 'had': 'Verb',
+            'do': 'Verb', 'does': 'Verb', 'did': 'Verb',
+            'go': 'Verb', 'goes': 'Verb', 'went': 'Verb', 'gone': 'Verb',
+            'eat': 'Verb', 'eats': 'Verb', 'ate': 'Verb', 'eaten': 'Verb',
+            'write': 'Verb', 'writes': 'Verb', 'wrote': 'Verb', 'written': 'Verb',
+            'read': 'Verb', 'reads': 'Verb',
+            'study': 'Verb', 'studies': 'Verb', 'studied': 'Verb',
+            'play': 'Verb', 'plays': 'Verb', 'played': 'Verb',
+            'work': 'Verb', 'works': 'Verb', 'worked': 'Verb',
+            'sing': 'Verb', 'sings': 'Verb', 'sang': 'Verb', 'sung': 'Verb',
+            'be': 'Verb', 'been': 'Verb', 'being': 'Verb'
+        };
+
+        const wordPos = words.map(w => {
+            const lower = w.toLowerCase().replace(/[.,?!']/g, '');
+            return posMap[lower] || 'Noun'; // default to Noun
+        });
+
+        // --- 2. Identify Subject (first noun/pronoun that isn't an article) ---
+        let subject = null;
+        let subjectIndex = -1;
+        for (let i = 0; i < words.length; i++) {
+            const w = words[i].toLowerCase().replace(/[.,?!']/g, '');
+            const pos = wordPos[i];
+            if ((pos === 'Noun' || pos === 'Pronoun') && !['a','an','the'].includes(w)) {
+                subject = words[i].replace(/[.,?!']/g, '');
+                subjectIndex = i;
+                break;
+            }
+        }
+
+        // --- 3. Identify Verb (first word tagged as Verb after subject) ---
+        let verb = null;
+        let verbIndex = -1;
+        for (let i = (subjectIndex + 1); i < words.length; i++) {
+            if (wordPos[i] === 'Verb') {
+                verb = words[i].replace(/[.,?!']/g, '');
+                verbIndex = i;
+                break;
+            }
+        }
+        // Fallback: if no verb found, look for any word after subject
+        if (!verb && subjectIndex >= 0 && words.length > subjectIndex + 1) {
+            // check if next word looks like a verb (common pattern)
+            const next = words[subjectIndex + 1].toLowerCase().replace(/[.,?!']/g, '');
+            if (posMap[next] === 'Verb') {
+                verb = next;
+                verbIndex = subjectIndex + 1;
+            } else {
+                // default to second word
+                verb = words[subjectIndex + 1].replace(/[.,?!']/g, '');
+                verbIndex = subjectIndex + 1;
+            }
+        }
+
+        // --- 4. Identify Object (noun after verb) ---
+        let object = null;
+        if (verbIndex >= 0) {
+            for (let i = verbIndex + 1; i < words.length; i++) {
+                const w = words[i].toLowerCase().replace(/[.,?!']/g, '');
+                if (wordPos[i] === 'Noun' || wordPos[i] === 'Pronoun') {
+                    if (!['a','an','the'].includes(w)) {
+                        object = words[i].replace(/[.,?!']/g, '');
+                        break;
+                    }
+                }
+            }
+        }
+
+        // --- 5. Detect Tense ---
+        const verbLower = verb ? verb.toLowerCase().replace(/[.,?!']/g, '') : '';
+        let tense = 'Unknown';
+        let tenseCategory = 'Unknown';
+
+        const presentVerbs = ['am','is','are','have','has','do','does','go','goes','eat','eats','write','writes','read','reads','study','studies','play','plays','work','works','sing','sings'];
+        const pastVerbs = ['was','were','had','did','went','ate','wrote','read','studied','played','worked','sang'];
+        const pastParticiples = ['been','gone','eaten','written','read','studied','played','worked','sung'];
+        const presentParticiples = ['going','eating','writing','reading','studying','playing','working','singing','being'];
+
+        // Check for perfect continuous markers: have/has/had + been + Ving
+        const hasBeen = words.some(w => w.toLowerCase() === 'been');
+        const hasHave = words.some(w => ['have','has','had'].includes(w.toLowerCase()));
+        const hasVing = words.some(w => w.endsWith('ing') && w.length > 4);
+
+        if (hasHave && hasBeen && hasVing) {
+            if (words.some(w => ['have','has'].includes(w.toLowerCase()))) {
+                tense = 'Present Perfect Continuous';
+                tenseCategory = 'Present';
+            } else if (words.some(w => w.toLowerCase() === 'had')) {
+                tense = 'Past Perfect Continuous';
+                tenseCategory = 'Past';
+            } else {
+                tense = 'Future Perfect Continuous';
+                tenseCategory = 'Future';
+            }
+        } else if (hasHave && hasBeen) {
+            // Perfect: have/has/had + been
+            if (words.some(w => ['have','has'].includes(w.toLowerCase()))) {
+                tense = 'Present Perfect';
+                tenseCategory = 'Present';
+            } else if (words.some(w => w.toLowerCase() === 'had')) {
+                tense = 'Past Perfect';
+                tenseCategory = 'Past';
+            } else {
+                tense = 'Future Perfect';
+                tenseCategory = 'Future';
+            }
+        } else if (hasHave && !hasBeen && verbLower) {
+            // have/has/had + V3 (or just have/has)
+            if (words.some(w => ['have','has'].includes(w.toLowerCase()))) {
+                tense = 'Present Perfect';
+                tenseCategory = 'Present';
+            } else if (words.some(w => w.toLowerCase() === 'had')) {
+                tense = 'Past Perfect';
+                tenseCategory = 'Past';
+            } else {
+                tense = 'Future Perfect';
+                tenseCategory = 'Future';
+            }
+        } else if (verbLower.endsWith('ing') || words.some(w => w.endsWith('ing') && w.length > 4)) {
+            // Continuous
+            if (['am','is','are'].includes(verbLower) || words.some(w => ['am','is','are'].includes(w.toLowerCase()))) {
+                tense = 'Present Continuous';
+                tenseCategory = 'Present';
+            } else if (['was','were'].includes(verbLower) || words.some(w => ['was','were'].includes(w.toLowerCase()))) {
+                tense = 'Past Continuous';
+                tenseCategory = 'Past';
+            } else if (verbLower === 'will' || words.some(w => w.toLowerCase() === 'will')) {
+                tense = 'Future Continuous';
+                tenseCategory = 'Future';
+            } else {
+                tense = 'Present Continuous';
+                tenseCategory = 'Present';
+            }
+        } else if (pastVerbs.includes(verbLower)) {
+            tense = 'Past Indefinite';
+            tenseCategory = 'Past';
+        } else if (presentVerbs.includes(verbLower) || verbLower === '') {
+            // Check for future marker "will"
+            if (words.some(w => w.toLowerCase() === 'will')) {
+                tense = 'Future Indefinite';
+                tenseCategory = 'Future';
+            } else {
+                tense = 'Present Indefinite';
+                tenseCategory = 'Present';
+            }
+        } else if (verbLower.startsWith('will') || words.some(w => w.toLowerCase() === 'will')) {
+            tense = 'Future Indefinite';
+            tenseCategory = 'Future';
+        } else {
+            tense = 'Present Indefinite';
+            tenseCategory = 'Present';
+        }
+
+        // --- 6. Detect Voice (Active/Passive) ---
+        const isPassive = words.some(w => ['am','is','are','was','were','be','been','being'].includes(w.toLowerCase())) &&
+                         (words.some(w => w.endsWith('ed') || w.endsWith('en')) || words.some(w => ['written','eaten','gone','sung','played','worked','read'].includes(w.toLowerCase())));
+        const voice = isPassive ? 'Passive' : 'Active';
+
+        // --- 7. Detect Sentence Type ---
+        let sentenceType = 'Simple';
+        const hasComma = clean.includes(',');
+        const hasAnd = words.some(w => w.toLowerCase() === 'and');
+        const hasBut = words.some(w => w.toLowerCase() === 'but');
+        const hasOr = words.some(w => w.toLowerCase() === 'or');
+        const hasBecause = words.some(w => w.toLowerCase() === 'because');
+        const hasAlthough = words.some(w => w.toLowerCase() === 'although' || w.toLowerCase() === 'though');
+        const hasSince = words.some(w => w.toLowerCase() === 'since');
+        const hasWhile = words.some(w => w.toLowerCase() === 'while');
+        const hasIf = words.some(w => w.toLowerCase() === 'if');
+
+        if ((hasAnd || hasBut || hasOr) && !hasBecause && !hasAlthough && !hasSince && !hasWhile && !hasIf) {
+            sentenceType = 'Compound';
+        } else if (hasBecause || hasAlthough || hasSince || hasWhile || hasIf) {
+            sentenceType = 'Complex';
+        } else {
+            sentenceType = 'Simple';
+        }
+
+        // --- 8. Find Errors ---
+        const errors = [];
+        const subjectLower = subject ? subject.toLowerCase().replace(/[.,?!']/g, '') : '';
+        const verbLowerClean = verb ? verb.toLowerCase().replace(/[.,?!']/g, '') : '';
+
+        // SVA: Subject-Verb Agreement (he/she/it + -s/-es)
+        const thirdPersonSingular = ['he','she','it','rahim','karim','teacher','student','boy','girl','book','cat','dog'];
+        const isThirdSing = thirdPersonSingular.includes(subjectLower);
+        const verbEndsS = verbLowerClean.endsWith('s') || verbLowerClean.endsWith('es');
+
+        if (isThirdSing && !verbEndsS && tense === 'Present Indefinite') {
+            errors.push({
+                type: 'subject-verb-agreement',
+                title: '❌ Subject-Verb Agreement Error',
+                description: `"${subject}" is third-person singular, so the verb must end with -s/-es.`,
+                fix: `Use "${verbLowerClean}s" instead of "${verbLowerClean}".`,
+                link: 'subject-verb-agreement-bangla.html',
+                linkText: 'Learn Subject-Verb Agreement →'
+            });
+        }
+        if (!isThirdSing && verbEndsS && tense === 'Present Indefinite' && !['i','you','we','they'].includes(subjectLower)) {
+            // check if subject is plural
+            const isPlural = !thirdPersonSingular.includes(subjectLower) && subjectLower !== 'i' && subjectLower !== 'you';
+            if (isPlural) {
+                errors.push({
+                    type: 'subject-verb-agreement',
+                    title: '❌ Subject-Verb Agreement Error',
+                    description: `"${subject}" is plural, but the verb "${verb}" ends with -s/-es.`,
+                    fix: `Use "${verbLowerClean.replace(/s$/, '').replace(/es$/, '')}" instead of "${verbLowerClean}".`,
+                    link: 'subject-verb-agreement-bangla.html',
+                    linkText: 'Learn Subject-Verb Agreement →'
+                });
+            }
+        }
+
+        // Double negative (don't + no)
+        if (words.some(w => w.toLowerCase() === "don't" || w.toLowerCase() === "doesn't") &&
+            words.some(w => w.toLowerCase() === 'no' || w.toLowerCase() === 'never')) {
+            errors.push({
+                type: 'double-negative',
+                title: '❌ Double Negative',
+                description: 'You used two negatives in the same clause.',
+                fix: 'Remove one negative. Example: "I don\'t have any" (not "don\'t have no").',
+                link: 'common-grammar-mistakes-bangla.html',
+                linkText: 'See Common Mistakes →'
+            });
+        }
+
+        // Tense consistency (simple check: if has "yesterday" but present tense)
+        if (words.some(w => w.toLowerCase() === 'yesterday' || w.toLowerCase() === 'last') &&
+            tenseCategory === 'Present') {
+            errors.push({
+                type: 'tense-consistency',
+                title: '⚠️ Tense Inconsistency',
+                description: 'You used a past time marker ("yesterday"/"last") but the tense is Present.',
+                fix: 'Change to Past tense. Example: "I went" instead of "I go".',
+                link: 'tense-rules-bangla.html',
+                linkText: 'Learn Tenses →'
+            });
+        }
+        if (words.some(w => w.toLowerCase() === 'tomorrow' || w.toLowerCase() === 'next') &&
+            tenseCategory === 'Past') {
+            errors.push({
+                type: 'tense-consistency',
+                title: '⚠️ Tense Inconsistency',
+                description: 'You used a future time marker ("tomorrow"/"next") but the tense is Past.',
+                fix: 'Change to Future tense. Example: "I will go" instead of "I went".',
+                link: 'tense-rules-bangla.html',
+                linkText: 'Learn Tenses →'
+            });
+        }
+
+        // Missing verb
+        if (!verb) {
+            errors.push({
+                type: 'missing-verb',
+                title: '❌ Missing Verb',
+                description: 'Every sentence needs a verb (action or state of being).',
+                fix: 'Add a verb. Example: "She is a teacher." or "He runs fast."',
+                link: 'verb-rules-bangla.html',
+                linkText: 'Learn Verb Rules →'
+            });
+        }
+
+        // --- 9. Related Articles ---
+        const relatedArticles = [];
+        if (errors.some(e => e.type === 'subject-verb-agreement')) {
+            relatedArticles.push({ title: 'Subject-Verb Agreement Rules', url: 'subject-verb-agreement-bangla.html' });
+        }
+        if (errors.some(e => e.type === 'tense-consistency') || tense) {
+            relatedArticles.push({ title: 'Complete Tenses Guide', url: 'tense-rules-bangla.html' });
+        }
+        if (voice) {
+            relatedArticles.push({ title: 'Voice Change Rules', url: 'voice-change-rules-bangla.html' });
+        }
+        if (verb) {
+            relatedArticles.push({ title: 'Verb Rules in Bangla', url: 'verb-rules-bangla.html' });
+        }
+        if (subject) {
+            relatedArticles.push({ title: 'Noun & Pronoun Rules', url: 'noun-rules-bangla.html' });
+        }
+        // Add generic links if few
+        if (relatedArticles.length < 2) {
+            relatedArticles.push({ title: 'Grammar Hub – All Topics', url: 'grammar.html' });
+            relatedArticles.push({ title: '100 Essential Grammar Rules', url: '100-english-grammar-rules-bangla.html' });
+        }
+
+        // --- 10. Build POS tags ---
+        const posTags = words.map((w, i) => {
+            const cleanW = w.replace(/[.,?!']/g, '');
+            const pos = wordPos[i] || 'Unknown';
+            let color = 'var(--text-mid)';
+            if (pos === 'Noun') color = 'var(--teal)';
+            else if (pos === 'Verb') color = 'var(--gold)';
+            else if (pos === 'Pronoun') color = 'var(--green)';
+            else if (pos === 'Article') color = 'var(--red)';
+            return { word: w, pos, color };
+        });
+
+        return {
+            original: sentence,
+            clean,
+            words,
+            subject,
+            verb,
+            object,
+            tense,
+            tenseCategory,
+            voice,
+            sentenceType,
+            errors,
+            relatedArticles,
+            posTags,
+            wordPos
+        };
+    }
+
+    // ─────────────────────────────────────────────────────────────
+    //  RENDER RESULTS
+    // ─────────────────────────────────────────────────────────────
+
+    function renderResults(result, raw) {
+        const container = document.getElementById('resultsContainer');
+
+        let html = '';
+
+        // ─── Summary ───
+        html += `
+            <div class="result-section">
+                <div class="section-title">📋 Sentence Summary</div>
+                <div class="result-grid">
+                    <div><span class="label">Subject</span><br><span class="value">${result.subject || '❌ Not found'}</span></div>
+                    <div><span class="label">Verb</span><br><span class="value">${result.verb || '❌ Not found'}</span></div>
+                    <div><span class="label">Object</span><br><span class="value">${result.object || '❌ Not found'}</span></div>
+                    <div><span class="label">Tense</span><br><span class="value">${result.tense}</span></div>
+                    <div><span class="label">Voice</span><br><span class="value">${result.voice}</span></div>
+                    <div><span class="label">Sentence Type</span><br><span class="value">${result.sentenceType}</span></div>
+                </div>
+            </div>
+        `;
+
+        // ─── Parts of Speech ───
+        let posHtml = '';
+        result.posTags.forEach(t => {
+            posHtml += `<span class="word-tag"><span class="w">${t.word}</span> <span class="pos">(${t.pos})</span></span>`;
+        });
+        html += `
+            <div class="result-section">
+                <div class="section-title">📝 Parts of Speech</div>
+                <div style="display:flex;flex-wrap:wrap;gap:4px;">${posHtml}</div>
+            </div>
+        `;
+
+        // ─── Errors ───
+        if (result.errors.length > 0) {
+            let errHtml = '';
+            result.errors.forEach(e => {
+                errHtml += `
+                    <div class="error-item">
+                        <div class="err-title">${e.title}</div>
+                        <div class="err-desc">${e.description}</div>
+                        <div class="err-fix">✅ ${e.fix}</div>
+                        <a href="${e.link}" class="err-link">${e.linkText}</a>
+                    </div>
+                `;
+            });
+            html += `
+                <div class="result-section">
+                    <div class="section-title">⚠️ Errors Found (${result.errors.length})</div>
+                    ${errHtml}
+                </div>
+            `;
+        } else {
+            html += `
+                <div class="result-section" style="border-left:4px solid var(--green);">
+                    <div class="section-title">✅ No Errors Found</div>
+                    <p style="color:var(--text-mid);">Your sentence looks grammatically correct!</p>
+                </div>
+            `;
+        }
+
+        // ─── Related Articles ───
+        html += `
+            <div class="result-section">
+                <div class="section-title">📚 Learn More</div>
+                <p style="color:var(--text-mid);font-size:0.95rem;margin-bottom:8px;">Deepen your understanding with these guides:</p>
+                <div class="related-links">
+                    ${result.relatedArticles.map(a => `<a href="${a.url}">${a.title}</a>`).join('')}
+                </div>
+            </div>
+        `;
+
+        // ─── Share / Save ───
+        html += `
+            <div class="result-section" style="text-align:center;border:1px dashed var(--border);">
+                <p style="color:var(--text-soft);font-size:0.9rem;">🔖 Bookmark this tool — analyze any sentence instantly!</p>
+                <div style="margin-top:8px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+                    <button class="btn btn-secondary" onclick="window.location.href='search.html?q=Sentence%20Analyzer'">🔍 Search Tools</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='grammar.html'">📚 Grammar Hub</button>
+                </div>
+            </div>
+        `;
+
+        container.innerHTML = html;
+    }
+
+    // ─────────────────────────────────────────────────────────────
+    //  KEYBOARD SHORTCUT: Ctrl+Enter to analyze
+    // ─────────────────────────────────────────────────────────────
+
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+            const active = document.activeElement;
+            if (active && active.id === 'sentenceInput') {
+                e.preventDefault();
+                analyzeSentence();
+            }
+        }
+    });
+
+    // Auto-analyze on load (example)
+    window.addEventListener('DOMContentLoaded', function() {
+        analyzeSentence();
+    });
+</script>
+
+</body>
+</html>

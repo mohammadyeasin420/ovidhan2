@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>English Learning Blog – Grammar, Vocabulary, Speaking & Exam Tips | Ovidhan</title>
+    <meta name="description" content="Free English learning articles in Bangla. Grammar guides, vocabulary lists, speaking practice, and exam preparation for BCS, IELTS & Bank Jobs." />
+    <meta name="keywords" content="English learning blog, grammar articles, vocabulary lists, BCS preparation, IELTS tips, spoken English, Bangladesh" />
+    <link rel="canonical" href="https://ovidhan.net/blog.html" />
+
+    <!-- ═══ OPEN GRAPH ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="English Learning Blog – Grammar, Vocabulary, Speaking & Exam Tips | Ovidhan" />
+    <meta property="og:description" content="Free English learning articles in Bangla. Grammar guides, vocabulary lists, speaking practice, and exam preparation for BCS, IELTS & Bank Jobs." />
+    <meta property="og:url" content="https://ovidhan.net/blog.html" />
+    <meta property="og:site_name" content="Ovidhan – English to Bangla Dictionary" />
+    <meta property="og:image" content="https://ovidhan.net/images/og-blog.jpg" />
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="English Learning Blog – Grammar, Vocabulary, Speaking & Exam Tips" />
+    <meta name="twitter:description" content="Free English learning articles in Bangla for BCS, IELTS & Bank Jobs." />
+
+    <!-- ═══ SCHEMA.ORG – BLOG PAGINATION ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "English Learning Blog – Ovidhan",
+        "url": "https://ovidhan.net/blog.html",
+        "description": "Free English learning articles in Bangla. Grammar guides, vocabulary lists, speaking practice, and exam preparation.",
+        "about": {
+            "@type": "Thing",
+            "name": "English Language Learning"
+        }
+    }
+    </script>
+
+    <!-- ═══ GOOGLE FONTS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ═══ GOOGLE ANALYTICS ═══ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7PS8PRT4KW');
+    </script>
+
+    <style>
+        /* ── Ovidhan Dark Premium Theme ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Nav ── */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 14px;
+            font-family: var(--font-en);
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links .active { color: var(--gold); font-weight: 600; }
+        .nav-cta {
+            background: var(--gold);
+            color: #0B1F1A !important;
+            font-weight: 600 !important;
+            padding: 7px 16px;
+            border-radius: 8px;
+        }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
+            padding: 60px 24px 70px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 12px;
+            text-shadow: 0 0 40px rgba(255,215,0,0.15);
+            line-height: 1.2;
+        }
+        .hero .subtitle {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+        .hero .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .hero .badge {
+            background: rgba(255,215,0,0.10);
+            border: 1px solid rgba(255,215,0,0.25);
+            padding: 5px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* ── Main Container ── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* ── Search & Filter ── */
+        .search-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+            align-items: center;
+        }
+        .search-filter .search-box {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            gap: 8px;
+            background: var(--surface);
+            border-radius: 50px;
+            padding: 6px;
+            border: 2px solid var(--border);
+            transition: border-color .3s;
+        }
+        .search-filter .search-box:focus-within {
+            border-color: var(--gold);
+        }
+        .search-filter .search-box input {
+            flex: 1;
+            padding: 10px 18px;
+            border: none;
+            background: transparent;
+            color: var(--text);
+            font-size: 0.95rem;
+            outline: none;
+            font-family: var(--font-bn);
+        }
+        .search-filter .search-box button {
+            padding: 10px 20px;
+            border-radius: 40px;
+            border: none;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: var(--font-en);
+            transition: background .2s;
+            font-size: 0.85rem;
+        }
+        .search-filter .search-box button:hover { background: #f0c85a; }
+
+        .search-filter .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .search-filter .filter-btn {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 6px 16px;
+            font-size: 0.8rem;
+            font-family: var(--font-en);
+            color: var(--text-mid);
+            cursor: pointer;
+            transition: background .2s, color .2s, border-color .2s;
+            font-weight: 500;
+        }
+        .search-filter .filter-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .search-filter .filter-btn.active {
+            background: var(--gold);
+            color: #0B1F1A;
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* ── Blog Grid ── */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .blog-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        .blog-card .date {
+            color: var(--text-soft);
+            font-size: 0.8rem;
+            font-family: var(--font-en);
+            margin-bottom: 4px;
+        }
+        .blog-card .category-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-family: var(--font-en);
+            font-weight: 600;
+            padding: 2px 12px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            background: var(--gold-dim);
+            color: var(--gold);
+            align-self: flex-start;
+        }
+        .blog-card .category-tag.grammar { background: var(--gold-dim); color: var(--gold); }
+        .blog-card .category-tag.vocabulary { background: var(--teal-dim); color: var(--teal); }
+        .blog-card .category-tag.speaking { background: var(--green-dim); color: var(--green); }
+        .blog-card .category-tag.exam { background: var(--purple-dim); color: var(--purple); }
+        .blog-card .category-tag.general { background: var(--surface2); color: var(--text-mid); }
+
+        .blog-card h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .blog-card p {
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            flex: 1;
+        }
+        .blog-card .read-more {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 12px;
+            align-self: flex-start;
+            transition: color .2s;
+        }
+        .blog-card .read-more:hover { color: #fff; }
+
+        /* ── No Results ── */
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-mid);
+        }
+        .no-results .big-icon { font-size: 3rem; margin-bottom: 12px; }
+
+        /* ── Pagination ── */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .pagination button {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: var(--text-mid);
+            cursor: pointer;
+            font-family: var(--font-en);
+            transition: background .2s, color .2s, border-color .2s;
+            font-size: 0.85rem;
+        }
+        .pagination button:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .pagination button.active {
+            background: var(--gold);
+            color: #0B1F1A;
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+        .pagination button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* ── Statistics ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 16px;
+            background: var(--surface);
+            padding: 28px 20px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            margin: 32px 0;
+        }
+        .stat-item { text-align: center; }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: var(--font-en);
+        }
+        .stat-label { color: var(--text-mid); font-size: 0.85rem; margin-top: 2px; }
+
+        /* ── Related Links ── */
+        .related-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        .related-section h3 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+        .related-section p {
+            color: var(--text-mid);
+            margin-bottom: 16px;
+        }
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .related-links a {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+            color: var(--teal);
+            text-decoration: none;
+            transition: border-color .2s, color .2s;
+            font-weight: 500;
+        }
+        .related-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
+            border: 1px solid rgba(230,184,74,0.3);
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-banner h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 8px; }
+        .cta-banner p { color: var(--text-mid); margin-bottom: 20px; font-size: 1rem; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            font-family: var(--font-en);
+            padding: 13px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background .2s, transform .2s;
+        }
+        .cta-btn:hover { background: #f0c85a; transform: translateY(-2px); }
+        .cta-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 18px;
+        }
+        .cta-feat { font-size: 13px; color: var(--teal); display: flex; align-items: center; gap: 5px; }
+
+        /* ── Footer ── */
+        .site-footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+        }
+        .site-footer a { color: var(--teal); text-decoration: none; }
+        .site-footer a:hover { color: var(--gold); }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .hero { padding: 40px 18px 50px; }
+            .hero h1 { font-size: 1.6rem; }
+            .container { padding: 24px 16px 60px; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .search-filter { flex-direction: column; }
+            .search-filter .search-box { border-radius: var(--radius); width: 100%; }
+            .search-filter .search-box input { border-radius: var(--radius); }
+            .search-filter .search-box button { border-radius: var(--radius); }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .nav-links .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/dictionary.html" class="hide-mobile">Dictionary</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://ovidhan.net/blog.html" class="active">Blog</a>
+        <a href="https://ovidhan.net/exam-prep.html" class="hide-mobile">Exam Prep</a>
+        <a href="https://ovidhan.net/search.html" style="color:var(--teal);font-weight:600;">🔍 Search</a>
+        <a href="https://ovidhan.net/dashboard.html" class="hide-mobile">📊 Dashboard</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+    <h1>📝 English Learning Blog</h1>
+    <p class="subtitle">
+        Free articles on <strong>grammar, vocabulary, speaking, and exam preparation</strong> — all in Bangla for BCS, IELTS, Bank Jobs, and everyday learning.
+    </p>
+    <div class="badge-group">
+        <span class="badge">📚 Grammar Guides</span>
+        <span class="badge">📖 Vocabulary Lists</span>
+        <span class="badge">🗣️ Speaking Tips</span>
+        <span class="badge">🎓 Exam Prep</span>
+    </div>
+</section>
+
+<!-- ══ MAIN ══ -->
+<div class="container">
+
+    <!-- Search & Filter -->
+    <div class="search-filter">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search articles..." />
+            <button onclick="filterBlog()">🔍</button>
+        </div>
+        <div class="category-filters" id="categoryFilters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="grammar">📚 Grammar</button>
+            <button class="filter-btn" data-category="vocabulary">📖 Vocabulary</button>
+            <button class="filter-btn" data-category="speaking">🗣️ Speaking</button>
+            <button class="filter-btn" data-category="exam">🎓 Exam</button>
+            <button class="filter-btn" data-category="general">📄 General</button>
+        </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid" id="blogGrid">
+        <!-- Rendered by JavaScript -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination">
+        <!-- Rendered by JavaScript -->
+    </div>
+
+    <!-- ═══ STATISTICS ═══ -->
+    <div class="stats-grid" id="statsGrid">
+        <!-- Rendered by JavaScript -->
+    </div>
+
+    <!-- ═══ RELATED SECTIONS ═══ -->
+    <div class="related-section">
+        <h3>📚 Explore More Learning Resources</h3>
+        <p>Complement your reading with our interactive tools and guides.</p>
+        <div class="related-links">
+            <a href="grammar.html">Grammar Hub</a>
+            <a href="tools.html">Tools Hub</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="search.html">Search Everything</a>
+            <a href="exam-prep.html">Exam Prep</a>
+        </div>
+    </div>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <div class="cta-banner">
+        <h3>📱 Get All Articles Offline – Download Ovidhan App</h3>
+        <p>12,658+ words, grammar guides, quizzes, and practice tools – all in one app. 100% free.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank" rel="noopener">
+            📥 Download Ovidhan Now
+        </a>
+        <div class="cta-features">
+            <span class="cta-feat">✅ 100% Offline</span>
+            <span class="cta-feat">✅ 12,658+ Words</span>
+            <span class="cta-feat">✅ BCS / IELTS / Bank</span>
+            <span class="cta-feat">✅ Free</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/blog.html">Blog</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<!-- ══ BLOG LOGIC ══ -->
+<script>
+    // ─────────────────────────────────────────────────────────────
+    //  BLOG DATA – All articles organized by category
+    //  EXCLUDED: common-grammar-mistakes-bangla.html
+    //  EXCLUDED: 100-english-grammar-rules-bangla.html
+    // ─────────────────────────────────────────────────────────────
+
+    const blogPosts = [
+        // ── GRAMMAR ──
+        {
+            title: "Parts of Speech in Bangla – 8 Parts with Examples",
+            url: "parts-of-speech-bangla.html",
+            category: "grammar",
+            date: "July 6, 2026",
+            description: "Complete Parts of Speech guide with 8 parts (Noun, Pronoun, Verb, Adjective, Adverb, Preposition, Conjunction, Interjection) with examples and practice questions.",
+            emoji: "📚"
+        },
+        {
+            title: "Noun Rules in Bangla – Types, Number, Gender & Case with Examples",
+            url: "noun-rules-bangla.html",
+            category: "grammar",
+            date: "July 6, 2026",
+            description: "Complete Noun Rules guide with 5 types of nouns, number rules, gender rules, case rules, 100+ examples, and common mistakes.",
+            emoji: "📖"
+        },
+        {
+            title: "Pronoun Rules in Bangla – Complete English Pronoun Guide",
+            url: "pronoun-rules-bangla.html",
+            category: "grammar",
+            date: "July 5, 2026",
+            description: "Complete Pronoun guide with 8 types (Personal, Possessive, Reflexive, Demonstrative, Indefinite, Interrogative, Relative, Reciprocal) with 100+ examples.",
+            emoji: "📖"
+        },
+        {
+            title: "Verb Rules in Bangla – Complete English Grammar Guide",
+            url: "verb-rules-bangla.html",
+            category: "grammar",
+            date: "July 6, 2026",
+            description: "Complete Verb Rules guide with 3 types of verbs, transitive & intransitive, regular & irregular, 100+ examples, and common mistakes.",
+            emoji: "⚡"
+        },
+        {
+            title: "Adjective Rules in Bangla – Complete English Grammar Guide",
+            url: "adjective-rules-bangla.html",
+            category: "grammar",
+            date: "July 6, 2026",
+            description: "Complete Adjective Rules guide with 8 types of adjectives, degree of comparison, 100+ examples, and common mistakes.",
+            emoji: "🎨"
+        },
+        {
+            title: "Adverb Rules in Bangla – Complete English Grammar Guide",
+            url: "adverb-rules-bangla.html",
+            category: "grammar",
+            date: "July 6, 2026",
+            description: "Complete Adverb Rules guide with 8 types of adverbs, 15+ rules, 100+ examples, common mistakes, and confusing adverb pairs.",
+            emoji: "⏩"
+        },
+        {
+            title: "Preposition Rules in Bangla – Complete English Grammar Guide",
+            url: "preposition-rules-bangla.html",
+            category: "grammar",
+            date: "July 7, 2026",
+            description: "Complete Preposition Rules guide with 3 types of prepositions, 20+ rules, 100+ examples, common mistakes, and BCS exam tips.",
+            emoji: "📍"
+        },
+        {
+            title: "Conjunction Rules in Bangla – Complete English Grammar Guide",
+            url: "conjunction-rules-bangla.html",
+            category: "grammar",
+            date: "July 6, 2026",
+            description: "Complete Conjunction Rules guide with 3 types, 20+ rules, 100+ examples, and common mistakes.",
+            emoji: "🔗"
+        },
+        {
+            title: "Interjection Rules in Bangla – Complete English Grammar Guide",
+            url: "interjection-rules-bangla.html",
+            category: "grammar",
+            date: "July 6, 2026",
+            description: "Complete Interjection Rules guide with types, examples, and common usage.",
+            emoji: "❗"
+        },
+        {
+            title: "Subject-Verb Agreement Rules in Bangla – 15+ Rules with Examples",
+            url: "subject-verb-agreement-bangla.html",
+            category: "grammar",
+            date: "July 5, 2026",
+            description: "Complete Subject-Verb Agreement rules with 15+ rules, 100+ examples, 30 practice questions, and BCS & IELTS exam tips.",
+            emoji: "📝"
+        },
+        {
+            title: "Complete Tenses Guide in Bangla – Present, Past & Future",
+            url: "tense-rules-bangla.html",
+            category: "grammar",
+            date: "July 4, 2026",
+            description: "Complete guide to 12 English tenses with structures, examples, practice quizzes, and common mistakes.",
+            emoji: "⏳"
+        },
+        {
+            title: "Voice Change Rules in Bangla – Active to Passive with Examples",
+            url: "voice-change-rules-bangla.html",
+            category: "grammar",
+            date: "July 5, 2026",
+            description: "Complete Voice Change rules for Present, Past, Future, Modals, Imperatives & Interrogatives with 20 practice MCQs.",
+            emoji: "🔄"
+        },
+        {
+            title: "English Articles Rules in Bangla – A, An, The সম্পূর্ণ গাইড",
+            url: "articles-rules-bangla.html",
+            category: "grammar",
+            date: "July 5, 2026",
+            description: "Complete guide to English Articles (A, An, The) covering all rules, exceptions, BCS question patterns, and interactive quizzes.",
+            emoji: "📋"
+        },
+        {
+            title: "English Grammar Learning Roadmap – 12‑Week Study Plan",
+            url: "english-grammar-learning-roadmap-bangla.html",
+            category: "grammar",
+            date: "July 7, 2026",
+            description: "Complete 12‑week study plan to master English grammar from beginner to advanced.",
+            emoji: "🗺️"
+        },
+        {
+            title: "Grammar A–Z Index – Complete English Grammar Reference Guide",
+            url: "grammar-index-a-z-bangla.html",
+            category: "grammar",
+            date: "July 7, 2026",
+            description: "Complete alphabetical reference guide to all grammar topics from Adjective to Zero Article.",
+            emoji: "📚"
+        },
+        {
+            title: "English Grammar for Beginners in Bangla – Complete Basic Grammar Course",
+            url: "english-grammar-for-beginners-bangla.html",
+            category: "grammar",
+            date: "July 4, 2026",
+            description: "Learn English Grammar for Beginners in Bangla with easy explanations, examples, tenses, and parts of speech.",
+            emoji: "📚"
+        },
+        {
+            title: "BCS English Grammar Rules with Bangla Explanation",
+            url: "bcs-english-grammar-bangla.html",
+            category: "grammar",
+            date: "July 3, 2026",
+            description: "Easy BCS English grammar guide with Bangla examples – tense, voice, narration, articles, and more.",
+            emoji: "🎓"
+        },
+
+        // ── VOCABULARY ──
+        {
+            title: "800+ BCS English Synonyms and Antonyms List with Bangla Meaning",
+            url: "bcs-english-synonyms-antonyms.html",
+            category: "vocabulary",
+            date: "July 3, 2026",
+            description: "Master BCS vocabulary with 800+ synonyms and antonyms with Bangla meanings and examples.",
+            emoji: "📖"
+        },
+
+        // ── SPEAKING ──
+        {
+            title: "Daily English Sentences & Word of the Day – Practice Daily",
+            url: "daily-english.html",
+            category: "speaking",
+            date: "July 4, 2026",
+            description: "Learn daily English sentences with Bangla translation and Word of the Day. Practice spoken English daily for IELTS, BCS, and Bank Jobs.",
+            emoji: "🗣️"
+        },
+        {
+            title: "Daily English Speaking Sentences for Beginners – 100+ Phrases with Bangla Translation",
+            url: "daily-english-speaking-sentences-beginners.html",
+            category: "speaking",
+            date: "July 3, 2026",
+            description: "Learn 100+ daily English sentences with Bangla translation. Practice spoken English at home.",
+            emoji: "🗣️"
+        },
+        {
+            title: "English Conversation Practice at Home – 100+ Daily Life Dialogues",
+            url: "english-conversation-practice-at-home.html",
+            category: "speaking",
+            date: "July 3, 2026",
+            description: "Practice English conversation at home with 100+ daily life dialogues and Bangla translation for family, school, market, and travel.",
+            emoji: "💬"
+        },
+        {
+            title: "English Speaking Practice for Bangladeshi Students – Learn Spoken English Easily",
+            url: "english-speaking-practice-bangladeshi-students.html",
+            category: "speaking",
+            date: "July 3, 2026",
+            description: "Complete spoken English guide with Bangla translation, common phrases, and practice methods.",
+            emoji: "🗣️"
+        },
+        {
+            title: "English Speaking Practice – Dialogues & Pronunciation Tips",
+            url: "speaking-practice.html",
+            category: "speaking",
+            date: "July 4, 2026",
+            description: "Practice English speaking with real-life dialogues, pronunciation tips, and common phrases with Bangla translation.",
+            emoji: "🎙️"
+        },
+
+        // ── EXAM ──
+        {
+            title: "BCS Preliminary English Question Pattern 2024-2026 – সম্পূর্ণ গাইড",
+            url: "bcs-english-question-pattern-2026.html",
+            category: "exam",
+            date: "July 4, 2026",
+            description: "Complete guide to BCS Preliminary English question pattern with preparation tips.",
+            emoji: "🎓"
+        },
+
+        // ── GENERAL ──
+        {
+            title: "Best Offline English to Bangla Dictionary Apps 2026 – Complete Comparison",
+            url: "best-offline-english-bangla-dictionary-apps-2026.html",
+            category: "general",
+            date: "July 4, 2026",
+            description: "Top 5 offline English-Bangla dictionary apps compared. Find the best app for BCS, Bank Jobs, IELTS, and daily use.",
+            emoji: "📱"
+        }
+    ];
+
+    // ─────────────────────────────────────────────────────────────
+    //  RENDER LOGIC
+    // ─────────────────────────────────────────────────────────────
+
+    let currentCategory = 'all';
+    let currentSearch = '';
+    const postsPerPage = 9;
+    let currentPage = 1;
+
+    function getFilteredPosts() {
+        let filtered = blogPosts;
+
+        // Category filter
+        if (currentCategory !== 'all') {
+            filtered = filtered.filter(post => post.category === currentCategory);
+        }
+
+        // Search filter
+        if (currentSearch.trim()) {
+            const q = currentSearch.toLowerCase().trim();
+            filtered = filtered.filter(post =>
+                post.title.toLowerCase().includes(q) ||
+                post.description.toLowerCase().includes(q) ||
+                post.category.includes(q)
+            );
+        }
+
+        // Sort by date (newest first)
+        filtered.sort((a, b) => {
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+            return dateB - dateA;
+        });
+
+        return filtered;
+    }
+
+    function renderBlog() {
+        const filtered = getFilteredPosts();
+        const totalPosts = filtered.length;
+        const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+        // Ensure current page is valid
+        if (currentPage > totalPages) currentPage = 1;
+        if (currentPage < 1) currentPage = 1;
+
+        const start = (currentPage - 1) * postsPerPage;
+        const end = Math.min(start + postsPerPage, totalPosts);
+        const pagePosts = filtered.slice(start, end);
+
+        const grid = document.getElementById('blogGrid');
+
+        if (pagePosts.length === 0) {
+            grid.innerHTML = `
+                <div class="no-results" style="grid-column:1/-1;">
+                    <div class="big-icon">😕</div>
+                    <p>No articles found for "<strong>${currentSearch || 'this category'}</strong>"</p>
+                    <p style="font-size:0.9rem;margin-top:4px;">Try a different search or browse our categories.</p>
+                </div>
+            `;
+        } else {
+            grid.innerHTML = pagePosts.map(post => {
+                const categoryLabel = post.category.charAt(0).toUpperCase() + post.category.slice(1);
+                return `
+                    <a href="${post.url}" class="blog-card">
+                        <div class="category-tag ${post.category}">${post.emoji} ${categoryLabel}</div>
+                        <div class="date">${post.date}</div>
+                        <h3>${post.title}</h3>
+                        <p>${post.description}</p>
+                        <span class="read-more">Read More →</span>
+                    </a>
+                `;
+            }).join('');
+        }
+
+        // Render pagination
+        renderPagination(totalPages, totalPosts);
+
+        // Render stats
+        renderStats(totalPosts);
+    }
+
+    function renderPagination(totalPages, totalPosts) {
+        const container = document.getElementById('pagination');
+
+        if (totalPages <= 1) {
+            container.innerHTML = '';
+            return;
+        }
+
+        let html = '';
+        html += `<button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← Prev</button>`;
+
+        for (let i = 1; i <= totalPages; i++) {
+            if (i === currentPage) {
+                html += `<button class="active">${i}</button>`;
+            } else if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 2) {
+                html += `<button onclick="goToPage(${i})">${i}</button>`;
+            } else if (i === currentPage - 3 || i === currentPage + 3) {
+                html += `<button disabled>…</button>`;
+            }
+        }
+
+        html += `<button onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>Next →</button>`;
+
+        container.innerHTML = html;
+    }
+
+    function renderStats(totalPosts) {
+        const container = document.getElementById('statsGrid');
+
+        // Count posts by category
+        const categoryCounts = {
+            grammar: blogPosts.filter(p => p.category === 'grammar').length,
+            vocabulary: blogPosts.filter(p => p.category === 'vocabulary').length,
+            speaking: blogPosts.filter(p => p.category === 'speaking').length,
+            exam: blogPosts.filter(p => p.category === 'exam').length,
+            general: blogPosts.filter(p => p.category === 'general').length
+        };
+
+        container.innerHTML = `
+            <div class="stat-item"><div class="stat-number">${totalPosts}</div><div class="stat-label">Total Articles</div></div>
+            <div class="stat-item"><div class="stat-number">${categoryCounts.grammar}</div><div class="stat-label">Grammar Guides</div></div>
+            <div class="stat-item"><div class="stat-number">${categoryCounts.vocabulary}</div><div class="stat-label">Vocabulary Lists</div></div>
+            <div class="stat-item"><div class="stat-number">${categoryCounts.speaking}</div><div class="stat-label">Speaking Tips</div></div>
+            <div class="stat-item"><div class="stat-number">${categoryCounts.exam}</div><div class="stat-label">Exam Prep</div></div>
+        `;
+    }
+
+    function goToPage(page) {
+        const filtered = getFilteredPosts();
+        const totalPages = Math.ceil(filtered.length / postsPerPage);
+        if (page < 1 || page > totalPages) return;
+        currentPage = page;
+        renderBlog();
+        // Scroll to top of grid
+        document.getElementById('blogGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ─── Filter Functions ───
+    function filterBlog() {
+        const searchInput = document.getElementById('searchInput');
+        currentSearch = searchInput.value;
+        currentPage = 1;
+        renderBlog();
+    }
+
+    function setCategory(category) {
+        currentCategory = category;
+        currentPage = 1;
+
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.category === category);
+        });
+
+        renderBlog();
+    }
+
+    // ─── Event Listeners ───
+    document.addEventListener('DOMContentLoaded', function() {
+        // Category filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                setCategory(this.dataset.category);
+            });
+        });
+
+        // Search input - live search
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', function() {
+            currentSearch = this.value;
+            currentPage = 1;
+            renderBlog();
+        });
+
+        // Enter key in search
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                filterBlog();
+            }
+        });
+
+        // Initial render
+        renderBlog();
+    });
+</script>
+
+</body>
+</html>

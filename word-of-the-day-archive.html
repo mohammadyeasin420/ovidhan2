@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word of the Day Archive – All Past Words | Ovidhan</title>
+    <meta name="description" content="Browse all past Words of the Day from Ovidhan. Learn English vocabulary with Bangla meanings, examples, and pronunciation." />
+    <link rel="canonical" href="https://ovidhan.net/word-of-the-day-archive.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --teal: #4ECDC4;
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo { font-size: 22px; font-weight: 700; color: var(--gold); text-decoration: none; }
+        .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-mid); text-decoration: none; font-size: 14px; font-family: var(--font-en); transition: color .2s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta { background: var(--gold); color: #0B1F1A !important; font-weight: 600 !important; padding: 7px 16px; border-radius: 8px; }
+        .nav-cta:hover { background: #f0c85a !important; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px 60px; }
+        .breadcrumb {
+            font-family: var(--font-en);
+            font-size: 13px;
+            color: var(--text-soft);
+            margin-bottom: 16px;
+        }
+        .breadcrumb a { color: var(--teal); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--gold); }
+        h1 {
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--text-mid);
+            font-size: 1.05rem;
+            margin-bottom: 24px;
+        }
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        .archive-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px 18px;
+            text-decoration: none;
+            color: var(--text);
+            transition: border-color .2s, transform .2s;
+            display: block;
+            text-align: center;
+        }
+        .archive-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+        .archive-item .date {
+            font-family: var(--font-en);
+            font-size: 0.8rem;
+            color: var(--text-soft);
+        }
+        .archive-item .word {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+        .site-footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+        }
+        .site-footer a { color: var(--teal); text-decoration: none; }
+        .site-footer a:hover { color: var(--gold); }
+        @media (max-width: 600px) {
+            .container { padding: 20px 12px 40px; }
+            .archive-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+            .nav-links .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/dictionary.html" style="color:var(--gold);font-weight:600;">📕 Dictionary</a>
+        <a href="https://ovidhan.net/word-of-the-day.html" style="color:var(--teal);">🌟 Word of the Day</a>
+        <a href="https://ovidhan.net/tools.html" class="hide-mobile">Tools</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<main class="container">
+    <nav class="breadcrumb">
+        <a href="https://ovidhan.net">Home</a> ›
+        <a href="https://ovidhan.net/word-of-the-day.html">Word of the Day</a> ›
+        Archive
+    </nav>
+
+    <h1>📅 Word of the Day Archive</h1>
+    <p class="subtitle">Browse all past words – learn a new English word with Bangla meaning every day.</p>
+
+    <div class="archive-grid" id="archiveGrid">
+        <p style="color:var(--text-soft); grid-column:1/-1; text-align:center; padding:40px 0;">
+            Loading archive...
+        </p>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/word-of-the-day.html">Word of the Day</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<script>
+    // ─── Load archive from the generated pages ────────────────────
+    async function loadArchive() {
+        const grid = document.getElementById('archiveGrid');
+        try {
+            // Try to fetch a list of archive pages (you'll need to generate these)
+            // For now, we'll show a message with instructions
+            grid.innerHTML = `
+                <div style="grid-column:1/-1; text-align:center; padding:20px; color:var(--text-mid);">
+                    <p style="font-size:1.2rem;">📚 Archive coming soon!</p>
+                    <p style="font-size:0.95rem; margin-top:8px;">
+                        We're building our archive of daily words. 
+                        Check back soon to see all past Words of the Day.
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-soft); margin-top:12px;">
+                        In the meantime, visit the 
+                        <a href="/word-of-the-day.html" style="color:var(--gold);">Word of the Day</a> 
+                        page for today's word.
+                    </p>
+                </div>
+            `;
+        } catch (e) {
+            grid.innerHTML = `<p style="color:var(--text-soft); grid-column:1/-1; text-align:center;">Could not load archive.</p>`;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadArchive);
+</script>
+
+</body>
+</html>

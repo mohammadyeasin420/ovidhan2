@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Mistake Detector – Free English Grammar Checker | Ovidhan</title>
+    <meta name="description" content="Detect common English grammar mistakes instantly. Get corrections for subject-verb agreement, tense, articles, prepositions, and more. Free tool for BCS, IELTS, and students." />
+    <link rel="canonical" href="https://ovidhan.net/common-mistake-detector.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ── Ovidhan Dark Theme (same as before) ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --red: #f87171;
+            --red-dim: rgba(248,113,113,0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192,132,252,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11,31,26,0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 14px;
+            font-family: var(--font-en);
+            transition: color .2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold);
+            color: #0B1F1A !important;
+            font-weight: 600 !important;
+            padding: 7px 16px;
+            border-radius: 8px;
+        }
+        .nav-cta:hover { background: #f0c85a !important; }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .page-header h1 {
+            font-size: 2.4rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .page-header p {
+            color: var(--text-mid);
+            font-size: 1.1rem;
+        }
+        .page-header .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .page-header .badge {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--text-mid);
+        }
+
+        .tool-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 30px;
+            margin-bottom: 30px;
+        }
+        .tool-box textarea {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            resize: vertical;
+            min-height: 100px;
+            outline: none;
+            transition: border-color .3s;
+        }
+        .tool-box textarea:focus {
+            border-color: var(--gold);
+        }
+        .tool-box .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .tool-box .btn {
+            padding: 10px 28px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background .2s, transform .2s;
+            font-family: var(--font-en);
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: #0B1F1A;
+        }
+        .btn-primary:hover { background: #f0c85a; transform: translateY(-2px); }
+        .btn-secondary {
+            background: var(--surface2);
+            color: var(--text-mid);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+        .example-sentences {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .example-sentences .ex {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 16px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            cursor: pointer;
+            transition: background .2s, border-color .2s;
+        }
+        .example-sentences .ex:hover {
+            background: var(--gold-dim);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .results {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .results.visible { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        .result-section .section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gold);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .error-item {
+            background: var(--red-dim);
+            border-left: 4px solid var(--red);
+            padding: 12px 16px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin-bottom: 10px;
+        }
+        .error-item .err-title {
+            color: var(--red);
+            font-weight: 700;
+        }
+        .error-item .err-desc {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+            margin-top: 2px;
+        }
+        .error-item .err-fix {
+            color: var(--green);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+        .error-item .err-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 4px;
+        }
+        .error-item .err-link:hover { text-decoration: underline; }
+
+        .no-errors {
+            background: var(--green-dim);
+            border-left: 4px solid var(--green);
+            padding: 16px 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--green);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .related-links a {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 16px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            text-decoration: none;
+            transition: border-color .2s, color .2s;
+        }
+        .related-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .footer {
+            background: #060F0D;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 30px 24px;
+            color: var(--text-soft);
+            font-size: 13px;
+            line-height: 2.2;
+            margin-top: 48px;
+        }
+        .footer a { color: var(--teal); text-decoration: none; }
+        .footer a:hover { color: var(--gold); }
+
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 1.8rem; }
+            .tool-box { padding: 20px; }
+            .nav-links .hide-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/search.html" style="color:var(--gold);font-weight:600;">🔍 Search</a>
+        <a href="https://ovidhan.net/dashboard.html" class="hide-mobile">📊 Dashboard</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ MAIN ══ -->
+<div class="container">
+
+    <div class="page-header">
+        <h1>⚠️ Common Mistake Detector</h1>
+        <p>Paste a sentence and instantly find common grammar errors with corrections and links to lessons.</p>
+        <div class="badge-group">
+            <span class="badge">📖 Free</span>
+            <span class="badge">⚡ Instant</span>
+            <span class="badge">🎓 BCS / IELTS</span>
+        </div>
+    </div>
+
+    <!-- Input -->
+    <div class="tool-box">
+        <textarea id="sentenceInput" placeholder="Type or paste an English sentence here...">I goes to school every day.</textarea>
+        <div class="actions">
+            <button class="btn btn-primary" onclick="detectMistakes()">🔍 Detect Mistakes</button>
+            <button class="btn btn-secondary" onclick="clearAll()">✕ Clear</button>
+        </div>
+        <div class="example-sentences">
+            <span style="color:var(--text-soft);font-size:0.85rem;">Try:</span>
+            <span class="ex" onclick="loadExample('I goes to school every day.')">I goes to school every day.</span>
+            <span class="ex" onclick="loadExample('She don\'t like coffee.')">She don't like coffee.</span>
+            <span class="ex" onclick="loadExample('He is a teacher and he work hard.')">He is a teacher and he work hard.</span>
+            <span class="ex" onclick="loadExample('I have a apple.')">I have a apple.</span>
+            <span class="ex" onclick="loadExample('She is senior than me.')">She is senior than me.</span>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results" id="resultsContainer">
+        <!-- Rendered by JS -->
+    </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>
+    </p>
+</footer>
+
+<!-- ══ MISTAKE DETECTOR LOGIC ══ -->
+<script>
+    // ─────────────────────────────────────────────────────────────
+    //  COMMON MISTAKE DETECTOR – Ovidhan
+    //  Rule-based, no AI, 100% client-side
+    // ─────────────────────────────────────────────────────────────
+
+    // ─── Word Lists ───
+    const thirdPersonSingular = ['he', 'she', 'it', 'rahim', 'karim', 'teacher', 'student', 'boy', 'girl', 'book', 'cat', 'dog', 'man', 'woman', 'child', 'person'];
+    const pluralSubjects = ['they', 'we', 'you', 'i', 'people', 'children', 'men', 'women', 'students', 'teachers', 'books', 'cats', 'dogs'];
+    const presentVerbs = ['am', 'is', 'are', 'have', 'has', 'do', 'does', 'go', 'goes', 'eat', 'eats', 'write', 'writes', 'read', 'reads', 'study', 'studies', 'play', 'plays', 'work', 'works', 'sing', 'sings'];
+    const pastVerbs = ['was', 'were', 'had', 'did', 'went', 'ate', 'wrote', 'read', 'studied', 'played', 'worked', 'sang'];
+
+    // ─── Main Detection Function ───
+    function detectMistakes() {
+        const input = document.getElementById('sentenceInput');
+        const raw = input.value.trim();
+        if (!raw) {
+            alert('Please enter a sentence.');
+            return;
+        }
+
+        const words = raw.split(/\s+/);
+        const errors = [];
+        const lowerWords = words.map(w => w.toLowerCase().replace(/[.,!?'"]/g, ''));
+
+        // ── 1. Subject-Verb Agreement ──
+        // Find subject (first noun/pronoun that isn't article)
+        let subject = null;
+        let subjectIndex = -1;
+        const articles = ['a', 'an', 'the'];
+        for (let i = 0; i < words.length; i++) {
+            const w = lowerWords[i];
+            if ((w in thirdPersonSingularMap || w in pluralSubjectsMap) && !articles.includes(w)) {
+                subject = w;
+                subjectIndex = i;
+                break;
+            }
+        }
+        // If no subject found, try to guess from first word
+        if (!subject && words.length > 0) {
+            subject = lowerWords[0];
+            subjectIndex = 0;
+        }
+
+        // Find verb (first word after subject that is a verb)
+        let verb = null;
+        let verbIndex = -1;
+        if (subjectIndex >= 0) {
+            for (let i = subjectIndex + 1; i < words.length; i++) {
+                const w = lowerWords[i];
+                if (presentVerbs.includes(w) || pastVerbs.includes(w)) {
+                    verb = w;
+                    verbIndex = i;
+                    break;
+                }
+            }
+            // If no verb found, try to find any word that looks like a verb (ends with -s/-es or -ed)
+            if (!verb) {
+                for (let i = subjectIndex + 1; i < words.length; i++) {
+                    const w = lowerWords[i];
+                    if (w.endsWith('s') || w.endsWith('ed') || w.endsWith('ing')) {
+                        verb = w;
+                        verbIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // SVA check: third-person singular + verb without -s/-es
+        if (subject && verb) {
+            const isThirdSing = thirdPersonSingular.includes(subject);
+            const verbEndsS = verb.endsWith('s') || verb.endsWith('es');
+            const isPresentTense = presentVerbs.includes(verb) || presentVerbs.some(v => verb === v);
+            // If subject is third-person singular and verb is present tense but doesn't end with -s/-es
+            if (isThirdSing && isPresentTense && !verbEndsS && !['am', 'is', 'are', 'was', 'were', 'have', 'has', 'do', 'does', 'did', 'had'].includes(verb)) {
+                errors.push({
+                    title: '❌ Subject-Verb Agreement Error',
+                    description: `"${subject}" is third-person singular, so the verb must end with -s/-es.`,
+                    fix: `Use "${verb}s" or "${verb}es" instead of "${verb}".`,
+                    link: 'subject-verb-agreement-bangla.html',
+                    linkText: 'Learn Subject-Verb Agreement →'
+                });
+            }
+            // If subject is plural but verb ends with -s/-es (except for "i", "you")
+            const isPlural = !thirdPersonSingular.includes(subject) && !['i', 'you'].includes(subject);
+            if (isPlural && verbEndsS && isPresentTense) {
+                // Check if verb base without s is common
+                const base = verb.endsWith('es') ? verb.slice(0, -2) : verb.slice(0, -1);
+                if (presentVerbs.includes(base)) {
+                    errors.push({
+                        title: '❌ Subject-Verb Agreement Error',
+                        description: `"${subject}" is plural, so the verb should not end with -s/-es.`,
+                        fix: `Use "${base}" instead of "${verb}".`,
+                        link: 'subject-verb-agreement-bangla.html',
+                        linkText: 'Learn Subject-Verb Agreement →'
+                    });
+                }
+            }
+        }
+
+        // ── 2. Double Negative ──
+        const negWords = ["don't", "doesn't", "didn't", "won't", "can't", "couldn't", "shouldn't", "wouldn't", "never", "no", "none", "nobody", "nothing", "nowhere"];
+        const hasNeg = negWords.some(w => lowerWords.includes(w));
+        if (hasNeg) {
+            // Count negatives
+            let negCount = 0;
+            for (const w of lowerWords) {
+                if (negWords.includes(w)) negCount++;
+            }
+            if (negCount >= 2) {
+                errors.push({
+                    title: '❌ Double Negative',
+                    description: 'You used two negatives in the same clause, which creates a positive meaning or is non-standard.',
+                    fix: 'Remove one negative. Example: "I don\'t have any" (not "don\'t have no").',
+                    link: 'common-grammar-mistakes-bangla.html',
+                    linkText: 'See Common Mistakes →'
+                });
+            }
+        }
+
+        // ── 3. Tense Inconsistency ──
+        const pastTimeMarkers = ['yesterday', 'last', 'ago', 'in 2020', 'in 2019'];
+        const futureTimeMarkers = ['tomorrow', 'next', 'in 2025', 'soon'];
+        let hasPastMarker = pastTimeMarkers.some(m => raw.toLowerCase().includes(m));
+        let hasFutureMarker = futureTimeMarkers.some(m => raw.toLowerCase().includes(m));
+
+        // Detect tense from verb
+        let tense = 'present';
+        if (verb) {
+            if (pastVerbs.includes(verb)) tense = 'past';
+            else if (verb === 'will' || words.some(w => w.toLowerCase() === 'will')) tense = 'future';
+            else if (verb.endsWith('ing')) tense = 'continuous';
+        }
+
+        if (hasPastMarker && tense === 'present') {
+            errors.push({
+                title: '⚠️ Tense Inconsistency',
+                description: 'You used a past time marker ("yesterday"/"last") but the tense is Present.',
+                fix: 'Change to Past tense. Example: "I went" instead of "I go".',
+                link: 'tense-rules-bangla.html',
+                linkText: 'Learn Tenses →'
+            });
+        }
+        if (hasFutureMarker && tense === 'past') {
+            errors.push({
+                title: '⚠️ Tense Inconsistency',
+                description: 'You used a future time marker ("tomorrow"/"next") but the tense is Past.',
+                fix: 'Change to Future tense. Example: "I will go" instead of "I went".',
+                link: 'tense-rules-bangla.html',
+                linkText: 'Learn Tenses →'
+            });
+        }
+
+        // ── 4. Missing Verb ──
+        if (!verb && words.length > 1) {
+            // Check if any word is a verb
+            let foundVerb = false;
+            for (const w of lowerWords) {
+                if (presentVerbs.includes(w) || pastVerbs.includes(w) || w.endsWith('ing') || w.endsWith('ed')) {
+                    foundVerb = true;
+                    break;
+                }
+            }
+            if (!foundVerb) {
+                errors.push({
+                    title: '❌ Missing Verb',
+                    description: 'This sentence appears to have no verb. Every sentence needs a verb (action or state of being).',
+                    fix: 'Add a verb. Example: "She is a teacher." or "He runs fast."',
+                    link: 'verb-rules-bangla.html',
+                    linkText: 'Learn Verb Rules →'
+                });
+            }
+        }
+
+        // ── 5. Article Mistakes ──
+        // Check for "a" before vowel sound, or "an" before consonant sound
+        const articleRegex = /\b(a|an)\s+([aeiou]\w*)/gi;
+        let match;
+        while ((match = articleRegex.exec(raw)) !== null) {
+            const article = match[1].toLowerCase();
+            const nextWord = match[2].toLowerCase();
+            const startsVowel = 'aeiou'.includes(nextWord[0]);
+            if (article === 'a' && startsVowel) {
+                errors.push({
+                    title: '❌ Article Error',
+                    description: `You used "a" before a word starting with a vowel sound ("${match[2]}").`,
+                    fix: `Use "an" instead of "a". Example: "an ${match[2]}".`,
+                    link: 'articles-rules-bangla.html',
+                    linkText: 'Learn Articles →'
+                });
+            }
+            if (article === 'an' && !startsVowel) {
+                errors.push({
+                    title: '❌ Article Error',
+                    description: `You used "an" before a word starting with a consonant sound ("${match[2]}").`,
+                    fix: `Use "a" instead of "an". Example: "a ${match[2]}".`,
+                    link: 'articles-rules-bangla.html',
+                    linkText: 'Learn Articles →'
+                });
+            }
+        }
+
+        // ── 6. Preposition Mistakes (common ones) ──
+        const prepErrors = [
+            { wrong: 'senior than', correct: 'senior to', article: 'preposition-rules-bangla.html' },
+            { wrong: 'junior than', correct: 'junior to', article: 'preposition-rules-bangla.html' },
+            { wrong: 'superior than', correct: 'superior to', article: 'preposition-rules-bangla.html' },
+            { wrong: 'inferior than', correct: 'inferior to', article: 'preposition-rules-bangla.html' },
+            { wrong: 'prefer than', correct: 'prefer to', article: 'preposition-rules-bangla.html' },
+            { wrong: 'agree with', correct: 'agree to', article: 'preposition-rules-bangla.html' }, // depends, but we'll flag
+            { wrong: 'depend of', correct: 'depend on', article: 'preposition-rules-bangla.html' },
+            { wrong: 'arrive at', correct: 'arrive in', article: 'preposition-rules-bangla.html' },
+        ];
+        for (const err of prepErrors) {
+            if (raw.toLowerCase().includes(err.wrong)) {
+                errors.push({
+                    title: '❌ Preposition Mistake',
+                    description: `You used "${err.wrong}" which is incorrect.`,
+                    fix: `Use "${err.correct}" instead.`,
+                    link: err.article,
+                    linkText: 'Learn Prepositions →'
+                });
+                break; // only one per sentence to avoid spam
+            }
+        }
+
+        // ── 7. Subject-Verb Agreement with "don't/doesn't" ──
+        if (subject) {
+            if (lowerWords.includes("don't") && thirdPersonSingular.includes(subject)) {
+                errors.push({
+                    title: '❌ Subject-Verb Agreement with "don\'t"',
+                    description: `"${subject}" is third-person singular, so you should use "doesn't" not "don't".`,
+                    fix: `Use "doesn't" instead of "don't".`,
+                    link: 'subject-verb-agreement-bangla.html',
+                    linkText: 'Learn Subject-Verb Agreement →'
+                });
+            }
+            if (lowerWords.includes("doesn't") && !thirdPersonSingular.includes(subject) && !['i', 'you'].includes(subject)) {
+                errors.push({
+                    title: '❌ Subject-Verb Agreement with "doesn\'t"',
+                    description: `"${subject}" is plural, so you should use "don't" not "doesn't".`,
+                    fix: `Use "don't" instead of "doesn't".`,
+                    link: 'subject-verb-agreement-bangla.html',
+                    linkText: 'Learn Subject-Verb Agreement →'
+                });
+            }
+        }
+
+        // ── 8. Run-on / Comma Splice (simple) ──
+        if (raw.includes(',') && !raw.toLowerCase().includes(' and ') && !raw.toLowerCase().includes(' but ') && !raw.toLowerCase().includes(' or ')) {
+            // Possibly a comma splice
+            const parts = raw.split(',');
+            if (parts.length > 1) {
+                // Check if each part could be a clause (contains a verb)
+                let hasVerbInParts = parts.every(p => p.trim().split(/\s+/).some(w => presentVerbs.includes(w.toLowerCase().replace(/[.,!?'"]/g, '')) || pastVerbs.includes(w.toLowerCase().replace(/[.,!?'"]/g, ''))));
+                if (hasVerbInParts) {
+                    errors.push({
+                        title: '⚠️ Comma Splice / Run-on Sentence',
+                        description: 'You joined two independent clauses with just a comma. This can be confusing.',
+                        fix: 'Use a conjunction (and, but, or) or a semicolon, or split into two sentences.',
+                        link: 'sentence-transformation-bangla.html',
+                        linkText: 'Learn Sentence Structure →'
+                    });
+                }
+            }
+        }
+
+        // ── 9. Missing Subject ──
+        if (!subject && words.length > 0) {
+            // Check if first word is a verb
+            const firstWord = lowerWords[0];
+            if (presentVerbs.includes(firstWord) || pastVerbs.includes(firstWord) || firstWord.endsWith('ing')) {
+                // Imperative? We'll skip for now.
+            } else {
+                errors.push({
+                    title: '❌ Missing Subject',
+                    description: 'This sentence does not have a clear subject (who or what performs the action).',
+                    fix: 'Add a subject. Example: "She runs." instead of "Runs."',
+                    link: 'sentence-patterns-bangla.html',
+                    linkText: 'Learn Sentence Structure →'
+                });
+            }
+        }
+
+        // ── 10. Unnecessary "more" with comparative adjectives ending in -er ──
+        const moreEr = raw.match(/\bmore\s+(\w+er)\b/);
+        if (moreEr) {
+            errors.push({
+                title: '⚠️ Redundant "more"',
+                description: `You used "more" with "${moreEr[1]}" which already is a comparative form.`,
+                fix: `Remove "more". Example: "taller" not "more taller".`,
+                link: 'adjective-rules-bangla.html',
+                linkText: 'Learn Adjectives →'
+            });
+        }
+
+        // ── 11. Double superlative (most + -est) ──
+        const mostEst = raw.match(/\bmost\s+(\w+est)\b/);
+        if (mostEst) {
+            errors.push({
+                title: '⚠️ Redundant "most"',
+                description: `You used "most" with "${mostEst[1]}" which already is a superlative form.`,
+                fix: `Remove "most". Example: "tallest" not "most tallest".`,
+                link: 'adjective-rules-bangla.html',
+                linkText: 'Learn Adjectives →'
+            });
+        }
+
+        // ── 12. "Have" vs "Has" with "I" or "You" ──
+        if (subject === 'i' || subject === 'you') {
+            if (lowerWords.includes('has') && !lowerWords.includes('had') && !lowerWords.includes('have')) {
+                errors.push({
+                    title: '❌ "Has" with "I/You"',
+                    description: `With "I" and "you", we use "have", not "has".`,
+                    fix: `Use "have" instead of "has".`,
+                    link: 'verb-rules-bangla.html',
+                    linkText: 'Learn Verb Rules →'
+                });
+            }
+        }
+
+        // ── 13. "Me" vs "I" misuse ──
+        if (raw.toLowerCase().includes('me and') || raw.toLowerCase().includes('me and')) {
+            errors.push({
+                title: '⚠️ Pronoun Case Error',
+                description: 'Using "me" as a subject is incorrect. Use "I" for subjects.',
+                fix: 'Change "me" to "I" when it is the subject of the sentence.',
+                link: 'pronoun-rules-bangla.html',
+                linkText: 'Learn Pronouns →'
+            });
+        }
+
+        // ── Now, if no errors, add a success message ──
+        // But we'll render the results after building the list.
+
+        // Build related articles list based on errors
+        const relatedArticles = [];
+        const errorTypes = errors.map(e => e.link);
+        if (errorTypes.some(l => l.includes('subject-verb'))) {
+            relatedArticles.push({ title: 'Subject-Verb Agreement Rules', url: 'subject-verb-agreement-bangla.html' });
+        }
+        if (errorTypes.some(l => l.includes('tense'))) {
+            relatedArticles.push({ title: 'Complete Tenses Guide', url: 'tense-rules-bangla.html' });
+        }
+        if (errorTypes.some(l => l.includes('articles'))) {
+            relatedArticles.push({ title: 'Articles Rules', url: 'articles-rules-bangla.html' });
+        }
+        if (errorTypes.some(l => l.includes('preposition'))) {
+            relatedArticles.push({ title: 'Preposition Rules', url: 'preposition-rules-bangla.html' });
+        }
+        if (errorTypes.some(l => l.includes('verb'))) {
+            relatedArticles.push({ title: 'Verb Rules in Bangla', url: 'verb-rules-bangla.html' });
+        }
+        if (errorTypes.some(l => l.includes('pronoun'))) {
+            relatedArticles.push({ title: 'Pronoun Rules', url: 'pronoun-rules-bangla.html' });
+        }
+        if (errorTypes.some(l => l.includes('adjective'))) {
+            relatedArticles.push({ title: 'Adjective Rules', url: 'adjective-rules-bangla.html' });
+        }
+        // Add generic if few
+        if (relatedArticles.length < 2) {
+            relatedArticles.push({ title: 'Grammar Hub – All Topics', url: 'grammar.html' });
+            relatedArticles.push({ title: '100 Essential Grammar Rules', url: '100-english-grammar-rules-bangla.html' });
+        }
+
+        // Render results
+        renderResults(errors, relatedArticles, raw);
+
+        // GA tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'detect_mistakes', { error_count: errors.length, sentence_length: raw.length });
+        }
+    }
+
+    function renderResults(errors, related, original) {
+        const container = document.getElementById('resultsContainer');
+
+        let html = '';
+
+        if (errors.length === 0) {
+            html += `
+                <div class="result-section">
+                    <div class="no-errors">✅ No common mistakes found! Your sentence looks grammatically correct.</div>
+                </div>
+            `;
+        } else {
+            // List errors
+            let errHtml = '';
+            errors.forEach(e => {
+                errHtml += `
+                    <div class="error-item">
+                        <div class="err-title">${e.title}</div>
+                        <div class="err-desc">${e.description}</div>
+                        <div class="err-fix">✅ ${e.fix}</div>
+                        <a href="${e.link}" class="err-link">${e.linkText || 'Learn More →'}</a>
+                    </div>
+                `;
+            });
+            html += `
+                <div class="result-section">
+                    <div class="section-title">⚠️ Mistakes Found (${errors.length})</div>
+                    ${errHtml}
+                </div>
+            `;
+        }
+
+        // Related Articles
+        html += `
+            <div class="result-section">
+                <div class="section-title">📚 Learn More</div>
+                <p style="color:var(--text-mid);font-size:0.95rem;margin-bottom:8px;">Deepen your understanding of these topics:</p>
+                <div class="related-links">
+                    ${related.map(a => `<a href="${a.url}">${a.title}</a>`).join('')}
+                </div>
+            </div>
+        `;
+
+        // Footer call to action
+        html += `
+            <div class="result-section" style="text-align:center;border:1px dashed var(--border);">
+                <p style="color:var(--text-soft);font-size:0.9rem;">🔖 Bookmark this tool — check any sentence for mistakes!</p>
+                <div style="margin-top:8px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+                    <button class="btn btn-secondary" onclick="window.location.href='search.html?q=Common%20Mistake%20Detector'">🔍 Search Tools</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='grammar.html'">📚 Grammar Hub</button>
+                </div>
+            </div>
+        `;
+
+        container.innerHTML = html;
+        container.classList.add('visible');
+    }
+
+    // ─── Helpers ───
+    function loadExample(text) {
+        document.getElementById('sentenceInput').value = text;
+        detectMistakes();
+    }
+
+    function clearAll() {
+        document.getElementById('sentenceInput').value = '';
+        document.getElementById('resultsContainer').classList.remove('visible');
+        document.getElementById('resultsContainer').innerHTML = '';
+    }
+
+    // ─── Keyboard shortcut: Ctrl+Enter ───
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+            const active = document.activeElement;
+            if (active && active.id === 'sentenceInput') {
+                e.preventDefault();
+                detectMistakes();
+            }
+        }
+    });
+
+    // Auto-analyze on load with example
+    window.addEventListener('DOMContentLoaded', function() {
+        detectMistakes();
+    });
+</script>
+
+</body>
+</html>
