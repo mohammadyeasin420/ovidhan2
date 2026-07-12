@@ -81,21 +81,7 @@ def generate_tags(items, label):
         html += f'<a href="{link}" class="tag">{item}</a>'
     return html
 
-def generate_collocations(word):
-    base = {
-        'make': ['make a decision', 'make a mistake', 'make a difference'],
-        'do': ['do your best', 'do a favor', 'do business'],
-        'take': ['take a break', 'take care', 'take responsibility'],
-        'get': ['get started', 'get ready', 'get a job'],
-        'have': ['have a good time', 'have a chance', 'have fun'],
-        'break': ['break the ice', 'break a record', 'break a habit'],
-        'run': ['run a business', 'run an errand', 'run out of time']
-    }
-    for key, colls in base.items():
-        if word.startswith(key):
-            return colls[:3]
-    return ['daily use phrase', 'common expression', 'popular collocation']
-
+    
 def main():
     print(f"🚀 Generating V3 Learning Pages for {len(words_data)} words...")
     for idx, entry in enumerate(words_data):
@@ -140,7 +126,7 @@ def main():
         synonyms = entry.get('synonyms', [])
         antonyms = entry.get('antonyms', [])
         family = entry.get('word_family', [])
-        collocations = generate_collocations(word.lower())
+        collocations = entry.get('collocations', ["common phrase", "daily usage"])
         
         synonyms_html = generate_tags(synonyms, 'Synonym')
         antonyms_html = generate_tags(antonyms, 'Antonym')
