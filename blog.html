@@ -85,7 +85,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ── Nav ── */
         .site-nav {
             position: sticky;
             top: 0;
@@ -130,7 +129,6 @@
         }
         .nav-cta:hover { background: #f0c85a !important; }
 
-        /* ── Hero ── */
         .hero {
             background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
             padding: 60px 24px 70px;
@@ -168,14 +166,12 @@
             font-weight: 500;
         }
 
-        /* ── Main Container ── */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 40px 24px 80px;
         }
 
-        /* ── Search & Filter ── */
         .search-filter {
             display: flex;
             flex-wrap: wrap;
@@ -249,7 +245,6 @@
             font-weight: 600;
         }
 
-        /* ── Blog Grid ── */
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -321,7 +316,6 @@
         }
         .blog-card .read-more:hover { color: #fff; }
 
-        /* ── No Results ── */
         .no-results {
             text-align: center;
             padding: 60px 20px;
@@ -329,7 +323,6 @@
         }
         .no-results .big-icon { font-size: 3rem; margin-bottom: 12px; }
 
-        /* ── Pagination ── */
         .pagination {
             display: flex;
             justify-content: center;
@@ -363,7 +356,6 @@
             cursor: not-allowed;
         }
 
-        /* ── Statistics ── */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -383,7 +375,6 @@
         }
         .stat-label { color: var(--text-mid); font-size: 0.85rem; margin-top: 2px; }
 
-        /* ── Related Links ── */
         .related-section {
             margin-top: 40px;
             padding: 30px;
@@ -423,7 +414,6 @@
             color: var(--gold);
         }
 
-        /* ── CTA Banner ── */
         .cta-banner {
             background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
             border: 1px solid rgba(230,184,74,0.3);
@@ -456,7 +446,6 @@
         }
         .cta-feat { font-size: 13px; color: var(--teal); display: flex; align-items: center; gap: 5px; }
 
-        /* ── Footer ── */
         .site-footer {
             background: #060F0D;
             border-top: 1px solid var(--border);
@@ -469,7 +458,6 @@
         .site-footer a { color: var(--teal); text-decoration: none; }
         .site-footer a:hover { color: var(--gold); }
 
-        /* ── Responsive ── */
         @media (max-width: 600px) {
             .hero { padding: 40px 18px 50px; }
             .hero h1 { font-size: 1.6rem; }
@@ -597,13 +585,12 @@
 <!-- ══ BLOG LOGIC ══ -->
 <script>
     // ─────────────────────────────────────────────────────────────
-    //  BLOG DATA – All articles organized by category
-    //  EXCLUDED: common-grammar-mistakes-bangla.html
-    //  EXCLUDED: 100-english-grammar-rules-bangla.html
+    //  BLOG DATA – ONLY articles that are currently built & exist
+    //  Last updated: July 14, 2026
     // ─────────────────────────────────────────────────────────────
 
     const blogPosts = [
-        // ── GRAMMAR ──
+        // ── GRAMMAR (17 articles) ──
         {
             title: "Parts of Speech in Bangla – 8 Parts with Examples",
             url: "parts-of-speech-bangla.html",
@@ -741,7 +728,47 @@
             emoji: "🎓"
         },
 
-        // ── VOCABULARY ──
+        // ── VOCABULARY (6 articles – all confirmed existing) ──
+        {
+            title: "English Collocations with Bangla Meaning – Complete Guide",
+            url: "vocabulary-builder.html",
+            category: "vocabulary",
+            date: "July 13, 2026",
+            description: "Master English collocations with Bangla meanings. 200+ common collocations with examples, rules, and practice. Perfect for BCS, IELTS, Bank Jobs.",
+            emoji: "📘"
+        },
+        {
+            title: "Make Collocations with Bangla Meaning – Complete Guide",
+            url: "make-collocations-bangla.html",
+            category: "vocabulary",
+            date: "July 13, 2026",
+            description: "Learn 50+ 'make' collocations with Bangla meanings and example sentences. Essential for BCS, IELTS, Bank Jobs, and daily English.",
+            emoji: "🔨"
+        },
+        {
+            title: "Do Collocations with Bangla Meaning – Complete Guide",
+            url: "do-collocations-bangla.html",
+            category: "vocabulary",
+            date: "July 13, 2026",
+            description: "Learn 40+ 'do' collocations with Bangla meanings and example sentences. Perfect for daily English, BCS, IELTS, and Bank Jobs.",
+            emoji: "📋"
+        },
+        {
+            title: "Take Collocations with Bangla Meaning – Complete Guide",
+            url: "take-collocations-bangla.html",
+            category: "vocabulary",
+            date: "July 13, 2026",
+            description: "Learn 40+ 'take' collocations with Bangla meanings and example sentences. Essential for BCS, IELTS, Bank Jobs, and daily English.",
+            emoji: "📸"
+        },
+        {
+            title: "Get Collocations with Bangla Meaning – Complete Guide",
+            url: "get-collocations-bangla.html",
+            category: "vocabulary",
+            date: "July 13, 2026",
+            description: "Learn 40+ 'get' collocations with Bangla meanings and example sentences. Perfect for BCS, IELTS, Bank Jobs, and daily English.",
+            emoji: "🎯"
+        },
         {
             title: "800+ BCS English Synonyms and Antonyms List with Bangla Meaning",
             url: "bcs-english-synonyms-antonyms.html",
@@ -751,7 +778,7 @@
             emoji: "📖"
         },
 
-        // ── SPEAKING ──
+        // ── SPEAKING (5 articles) ──
         {
             title: "Daily English Sentences & Word of the Day – Practice Daily",
             url: "daily-english.html",
@@ -793,7 +820,7 @@
             emoji: "🎙️"
         },
 
-        // ── EXAM ──
+        // ── EXAM (1 article) ──
         {
             title: "BCS Preliminary English Question Pattern 2024-2026 – সম্পূর্ণ গাইড",
             url: "bcs-english-question-pattern-2026.html",
@@ -803,7 +830,7 @@
             emoji: "🎓"
         },
 
-        // ── GENERAL ──
+        // ── GENERAL (1 article) ──
         {
             title: "Best Offline English to Bangla Dictionary Apps 2026 – Complete Comparison",
             url: "best-offline-english-bangla-dictionary-apps-2026.html",
@@ -826,12 +853,10 @@
     function getFilteredPosts() {
         let filtered = blogPosts;
 
-        // Category filter
         if (currentCategory !== 'all') {
             filtered = filtered.filter(post => post.category === currentCategory);
         }
 
-        // Search filter
         if (currentSearch.trim()) {
             const q = currentSearch.toLowerCase().trim();
             filtered = filtered.filter(post =>
@@ -841,7 +866,6 @@
             );
         }
 
-        // Sort by date (newest first)
         filtered.sort((a, b) => {
             const dateA = new Date(a.date);
             const dateB = new Date(b.date);
@@ -856,7 +880,6 @@
         const totalPosts = filtered.length;
         const totalPages = Math.ceil(totalPosts / postsPerPage);
 
-        // Ensure current page is valid
         if (currentPage > totalPages) currentPage = 1;
         if (currentPage < 1) currentPage = 1;
 
@@ -889,10 +912,7 @@
             }).join('');
         }
 
-        // Render pagination
         renderPagination(totalPages, totalPosts);
-
-        // Render stats
         renderStats(totalPosts);
     }
 
@@ -925,7 +945,6 @@
     function renderStats(totalPosts) {
         const container = document.getElementById('statsGrid');
 
-        // Count posts by category
         const categoryCounts = {
             grammar: blogPosts.filter(p => p.category === 'grammar').length,
             vocabulary: blogPosts.filter(p => p.category === 'vocabulary').length,
@@ -949,11 +968,9 @@
         if (page < 1 || page > totalPages) return;
         currentPage = page;
         renderBlog();
-        // Scroll to top of grid
         document.getElementById('blogGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // ─── Filter Functions ───
     function filterBlog() {
         const searchInput = document.getElementById('searchInput');
         currentSearch = searchInput.value;
@@ -965,7 +982,6 @@
         currentCategory = category;
         currentPage = 1;
 
-        // Update active button
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.category === category);
         });
@@ -973,16 +989,13 @@
         renderBlog();
     }
 
-    // ─── Event Listeners ───
     document.addEventListener('DOMContentLoaded', function() {
-        // Category filter buttons
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 setCategory(this.dataset.category);
             });
         });
 
-        // Search input - live search
         const searchInput = document.getElementById('searchInput');
         searchInput.addEventListener('input', function() {
             currentSearch = this.value;
@@ -990,7 +1003,6 @@
             renderBlog();
         });
 
-        // Enter key in search
         searchInput.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
@@ -998,7 +1010,6 @@
             }
         });
 
-        // Initial render
         renderBlog();
     });
 </script>
