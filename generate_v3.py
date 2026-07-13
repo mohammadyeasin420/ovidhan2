@@ -130,8 +130,11 @@ def main():
         synonyms_html = generate_tags(synonyms, 'Synonym')
         antonyms_html = generate_tags(antonyms, 'Antonym')
         family_html = generate_tags(family, 'Family')
-        collocations_html = generate_tags(collocations, 'Collocation')
-        
+                # Display collocations as plain text (no links) to avoid 404s
+        if collocations:
+            collocations_html = ''.join([f'<span class="tag" style="cursor: default; opacity: 0.8;">{c}</span>' for c in collocations])
+        else:
+            collocations_html = '<span style="color: var(--text-soft);">None found</span>'
         grammar_link_result = get_grammar_link(pos)
         grammar_link = f'<a href="{grammar_link_result[1]}" class="internal-link">{grammar_link_result[0]}</a>' if grammar_link_result else ''
         
