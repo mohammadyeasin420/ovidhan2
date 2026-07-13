@@ -8,15 +8,31 @@
     <!-- Homepage -->
     <url>
         <loc>https://ovidhan.net/</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>
+
+    <!-- Dictionary (SEO Hub – NEW) -->
+    <url>
+        <loc>https://ovidhan.net/dictionary.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.98</priority>
+    </url>
+
+    <!-- Explorer (Interactive Search – NEW) -->
+    <url>
+        <loc>https://ovidhan.net/explorer.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
     </url>
 
     <!-- Grammar Hub -->
     <url>
         <loc>https://ovidhan.net/grammar.html</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
@@ -24,7 +40,7 @@
     <!-- Tools Hub -->
     <url>
         <loc>https://ovidhan.net/tools.html</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
@@ -32,7 +48,7 @@
     <!-- Assessment Center -->
     <url>
         <loc>https://ovidhan.net/assessment.html</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.92</priority>
     </url>
@@ -40,7 +56,7 @@
     <!-- Journey Dashboard -->
     <url>
         <loc>https://ovidhan.net/journey.html</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.88</priority>
     </url>
@@ -48,39 +64,23 @@
     <!-- Blog Hub -->
     <url>
         <loc>https://ovidhan.net/blog.html</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
-    </url>
-
-    <!-- Dictionary -->
-    <url>
-        <loc>https://ovidhan.net/dictionary.html</loc>
-        <lastmod>2026-07-10</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.92</priority>
     </url>
 
     <!-- Search -->
     <url>
         <loc>https://ovidhan.net/search.html</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
-    </url>
-
-    <!-- Dashboard -->
-    <url>
-        <loc>https://ovidhan.net/dashboard.html</loc>
-        <lastmod>2026-07-10</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.80</priority>
     </url>
 
     <!-- Exam Prep -->
     <url>
         <loc>https://ovidhan.net/exam-prep.html</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
@@ -90,28 +90,55 @@
     <!--  VOCABULARY RESOURCES (PILLAR PAGES)                       -->
     <!-- ════════════════════════════════════════════════════════════ -->
 
-    <!-- 1,000 Daily Use Words -->
     <url>
         <loc>https://ovidhan.net/1000-daily-use-english-words-bangla.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.88</priority>
     </url>
 
-    <!-- BCS Vocabulary Guide -->
     <url>
         <loc>https://ovidhan.net/bcs-vocabulary-guide.html</loc>
-        <lastmod>2026-07-08</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- 800+ Synonyms & Antonyms -->
     <url>
         <loc>https://ovidhan.net/bcs-english-synonyms-antonyms.html</loc>
-        <lastmod>2026-07-03</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.70</priority>
+    </url>
+
+    <!-- English Synonyms & Antonyms (NEW) -->
+    <url>
+        <loc>https://ovidhan.net/english-synonyms-bangla.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://ovidhan.net/english-antonyms-bangla.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <!-- English Idioms & Phrasal Verbs (NEW) -->
+    <url>
+        <loc>https://ovidhan.net/english-idioms-dictionary-bangla.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://ovidhan.net/english-phrasal-verbs-dictionary-bangla.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
     </url>
 
 
@@ -119,26 +146,23 @@
     <!--  LEVEL TESTS (ASSESSMENT)                                  -->
     <!-- ════════════════════════════════════════════════════════════ -->
 
-    <!-- English Level Test (CEFR) -->
     <url>
         <loc>https://ovidhan.net/english-level-test.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Grammar Level Test -->
     <url>
         <loc>https://ovidhan.net/grammar-level-test.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Vocabulary Size Test -->
     <url>
         <loc>https://ovidhan.net/vocabulary-size-test.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
@@ -148,34 +172,30 @@
     <!--  VOCABULARY TESTS                                          -->
     <!-- ════════════════════════════════════════════════════════════ -->
 
-    <!-- Synonym Test -->
     <url>
         <loc>https://ovidhan.net/synonym-test.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Antonym Test -->
     <url>
         <loc>https://ovidhan.net/antonym-test.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Idiom Test -->
     <url>
         <loc>https://ovidhan.net/idiom-test.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Phrasal Verb Test -->
     <url>
         <loc>https://ovidhan.net/phrasal-verb-test.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
@@ -185,26 +205,23 @@
     <!--  DIAGNOSTIC TESTS                                          -->
     <!-- ════════════════════════════════════════════════════════════ -->
 
-    <!-- BCS English Diagnostic -->
     <url>
         <loc>https://ovidhan.net/bcs-english-diagnostic.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- IELTS Diagnostic -->
     <url>
         <loc>https://ovidhan.net/ielts-diagnostic.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- BCS English Mock Test -->
     <url>
         <loc>https://ovidhan.net/bcs-english-mock-test.html</loc>
-        <lastmod>2026-07-08</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
@@ -214,352 +231,297 @@
     <!--  GRAMMAR ARTICLES – 14 CORE                                -->
     <!-- ════════════════════════════════════════════════════════════ -->
 
-    <!-- Parts of Speech -->
     <url>
         <loc>https://ovidhan.net/parts-of-speech-bangla.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Noun Rules -->
     <url>
         <loc>https://ovidhan.net/noun-rules-bangla.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Pronoun Rules -->
     <url>
         <loc>https://ovidhan.net/pronoun-rules-bangla.html</loc>
-        <lastmod>2026-07-05</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Verb Rules -->
     <url>
         <loc>https://ovidhan.net/verb-rules-bangla.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Adjective Rules -->
     <url>
         <loc>https://ovidhan.net/adjective-rules-bangla.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Adverb Rules -->
     <url>
         <loc>https://ovidhan.net/adverb-rules-bangla.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Preposition Rules -->
     <url>
         <loc>https://ovidhan.net/preposition-rules-bangla.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Conjunction Rules -->
     <url>
         <loc>https://ovidhan.net/conjunction-rules-bangla.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Interjection Rules -->
     <url>
         <loc>https://ovidhan.net/interjection-rules-bangla.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Subject-Verb Agreement -->
     <url>
         <loc>https://ovidhan.net/subject-verb-agreement-bangla.html</loc>
-        <lastmod>2026-07-05</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Tense Rules -->
     <url>
         <loc>https://ovidhan.net/tense-rules-bangla.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Voice Change -->
     <url>
         <loc>https://ovidhan.net/voice-change-rules-bangla.html</loc>
-        <lastmod>2026-07-05</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Narration Rules -->
     <url>
         <loc>https://ovidhan.net/narration-rules-bangla.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Articles Rules -->
     <url>
         <loc>https://ovidhan.net/articles-rules-bangla.html</loc>
-        <lastmod>2026-07-05</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
 
     <!-- ════════════════════════════════════════════════════════════ -->
-    <!--  BRIDGE ARTICLES                                           -->
+    <!--  NEW GRAMMAR BRIDGE ARTICLES                               -->
     <!-- ════════════════════════════════════════════════════════════ -->
 
-    <!-- Common English Grammar Mistakes -->
     <url>
         <loc>https://ovidhan.net/common-grammar-mistakes-bangla.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- 100 Essential English Grammar Rules -->
     <url>
         <loc>https://ovidhan.net/100-english-grammar-rules-bangla.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Grammar Learning Roadmap -->
     <url>
         <loc>https://ovidhan.net/english-grammar-learning-roadmap-bangla.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Grammar A–Z Index -->
     <url>
         <loc>https://ovidhan.net/grammar-index-a-z-bangla.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- Grammar for Beginners -->
     <url>
         <loc>https://ovidhan.net/english-grammar-for-beginners-bangla.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- BCS English Grammar -->
     <url>
         <loc>https://ovidhan.net/bcs-english-grammar-bangla.html</loc>
-        <lastmod>2026-07-03</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
 
     <!-- ════════════════════════════════════════════════════════════ -->
-    <!--  INTERACTIVE TOOLS                                         -->
+    <!--  INTERACTIVE TOOLS (ALL 13)                                -->
     <!-- ════════════════════════════════════════════════════════════ -->
 
-    <!-- Sentence Analyzer -->
     <url>
         <loc>https://ovidhan.net/sentence-analyzer.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Parts of Speech Identifier -->
     <url>
         <loc>https://ovidhan.net/parts-of-speech-identifier.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Common Mistake Detector -->
     <url>
         <loc>https://ovidhan.net/common-mistake-detector.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Word Family Finder -->
     <url>
         <loc>https://ovidhan.net/word-family-finder.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- English Sentence Maker -->
     <url>
         <loc>https://ovidhan.net/sentence-maker.html</loc>
-        <lastmod>2026-07-10</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Vocabulary Builder Planner -->
     <url>
         <loc>https://ovidhan.net/vocabulary-builder-planner.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Verb Forms -->
     <url>
         <loc>https://ovidhan.net/verb-forms.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Grammar Quiz -->
     <url>
         <loc>https://ovidhan.net/grammar-quiz.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Vocabulary Quiz -->
     <url>
         <loc>https://ovidhan.net/vocabulary-quiz.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Tense Quiz -->
     <url>
         <loc>https://ovidhan.net/tense-quiz.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Articles Quiz -->
     <url>
         <loc>https://ovidhan.net/articles-quiz.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Preposition Quiz -->
     <url>
         <loc>https://ovidhan.net/preposition-quiz.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Subject-Verb Quiz -->
     <url>
         <loc>https://ovidhan.net/subject-verb-quiz.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Irregular Verbs List -->
     <url>
         <loc>https://ovidhan.net/irregular-verbs-list.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Plural Maker -->
     <url>
         <loc>https://ovidhan.net/plural-maker.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
-    <!-- Grammar Practice Generator -->
     <url>
         <loc>https://ovidhan.net/grammar-practice-generator.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
 
     <!-- ════════════════════════════════════════════════════════════ -->
-    <!--  SPEAKING ARTICLES                                         -->
+    <!--  SPEAKING & EXAM GUIDES                                    -->
     <!-- ════════════════════════════════════════════════════════════ -->
-
-    <url>
-        <loc>https://ovidhan.net/daily-english.html</loc>
-        <lastmod>2026-07-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.70</priority>
-    </url>
-
-    <url>
-        <loc>https://ovidhan.net/daily-english-speaking-sentences-beginners.html</loc>
-        <lastmod>2026-07-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.70</priority>
-    </url>
-
-    <url>
-        <loc>https://ovidhan.net/english-conversation-practice-at-home.html</loc>
-        <lastmod>2026-07-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.70</priority>
-    </url>
-
-    <url>
-        <loc>https://ovidhan.net/english-speaking-practice-bangladeshi-students.html</loc>
-        <lastmod>2026-07-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.70</priority>
-    </url>
 
     <url>
         <loc>https://ovidhan.net/speaking-practice.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.70</priority>
     </url>
 
-
-    <!-- ════════════════════════════════════════════════════════════ -->
-    <!--  EXAM GUIDES                                               -->
-    <!-- ════════════════════════════════════════════════════════════ -->
-
     <url>
         <loc>https://ovidhan.net/bcs-english-question-pattern-2026.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://ovidhan.net/ielts-guide.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://ovidhan.net/ielts-vocabulary-2026-bangla-meaning.html</loc>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
@@ -571,9 +533,16 @@
 
     <url>
         <loc>https://ovidhan.net/best-offline-english-bangla-dictionary-apps-2026.html</loc>
-        <lastmod>2026-07-04</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://ovidhan.net/english-to-bangla-dictionary-online-free.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
     </url>
 
 
@@ -583,37 +552,202 @@
 
     <url>
         <loc>https://ovidhan.net/learning-path-beginners.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://ovidhan.net/learning-path-bcs.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://ovidhan.net/learning-path-ielts.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://ovidhan.net/learning-path-hsc.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://ovidhan.net/learning-path-university.html</loc>
-        <lastmod>2026-07-09</lastmod>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
+    </url>
+
+
+    <!-- ════════════════════════════════════════════════════════════ -->
+    <!--  DYNAMIC WORD PAGES (5,000+ Pages – Auto Generated)        -->
+    <!--  We list the category pages and alphabet index. Google     -->
+    <!--  will discover individual word pages via internal links.   -->
+    <!-- ════════════════════════════════════════════════════════════ -->
+
+    <!-- A–Z Index Pages (Entry points for crawlers) -->
+    <url>
+        <loc>https://ovidhan.net/word/a.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/b.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/c.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/d.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/e.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/f.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/g.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/h.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/i.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/j.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/k.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/l.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/m.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/n.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/o.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/p.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/q.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/r.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/s.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/t.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/u.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/v.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/w.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/x.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/y.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://ovidhan.net/word/z.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
     </url>
 
 </urlset>
