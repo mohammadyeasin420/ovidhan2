@@ -72,17 +72,33 @@ def clean_word(word):
     clean = re.sub(r'[^a-zA-Z0-9\s-]', '', word).strip().lower()
     return clean.replace(' ', '-')
 
-def generate_tags(items, label):
+def generate_tags(items, label, dictionary_set):
+    """Generate HTML for synonyms/antonyms/family, only linking to words that EXIST in the dictionary."""
     if not items:
         return '<span style="color: var(--text-soft);">None found</span>'
+    
     html = ''
-    for item in items[:15]:
+    count = 0
+    for item in items:
+        # Skip if the word is NOT in our dictionary (prevents 404s)
+        if item.lower() not in dictionary_set:
+            continue
+        if count >= 15:
+            break
         link = f'/word/{clean_word(item)}.html'
         html += f'<a href="{link}" class="tag">{item}</a>'
+        count += 1
+    
+    if not html:
+        return '<span style="color: var(--text-soft);">None found</span>'
     return html
 
 def main():
     print(f"🚀 Generating V3 Learning Pages for {len(words_data)} words...")
+    
+    # Create a set of all dictionary words for fast filtering
+    all_words = {entry['english'].lower() for entry in words_data}
+    
     for idx, entry in enumerate(words_data):
         word = entry['english'].strip()
         filename = clean_word(word)
@@ -127,41 +143,33 @@ def main():
         family = entry.get('word_family', [])
         collocations = entry.get('collocations', ["common phrase", "daily usage"])
         
-        synonyms_html = generate_tags(synonyms, 'Synonym')
-        antonyms_html = generate_tags(antonyms, 'Antonym')
-        family_html = generate_tags(family, 'Family')
-                # Display collocations as plain text (no links) to avoid 404s
+        synonyms_html = generate_tags(synonyms, 'Synonym', all_words)
+        antonyms_html = generate_tags(antonyms, 'Antonym', all_words)
+        family_html = generate_tags(family, 'Family', all_words)
+        
+        # Display collocations as plain text (no links) to avoid 404s
         if collocations:
             collocations_html = ''.join([f'<span class="tag" style="cursor: default; opacity: 0.8;">{c}</span>' for c in collocations])
         else:
             collocations_html = '<span style="color: var(--text-soft);">None found</span>'
+        
         grammar_link_result = get_grammar_link(pos)
         grammar_link = f'<a href="{grammar_link_result[1]}" class="internal-link">{grammar_link_result[0]}</a>' if grammar_link_result else ''
         
         html_content = html_template.substitute(
-            word=word,
-            filename=filename,
-            bangla=entry.get('bangla', ''),
+            word=word, filename=filename, bangla=entry.get('bangla', ''),
             example=entry.get('example', 'No example available.'),
             pronunciation=entry.get('pronunciation', 'Pronunciation coming soon'),
-            pos=pos,
-            definition=definition,
-            synonyms_html=synonyms_html,
-            antonyms_html=antonyms_html,
-            family_html=family_html,
-            collocations_html=collocations_html,
-            badges=badges,
-            grammar_link=grammar_link,
-            prev_file=prev_file,
-            prev_word=prev_word,
-            next_file=next_file,
-            next_word=next_word,
+            pos=pos, definition=definition,
+            synonyms_html=synonyms_html, antonyms_html=antonyms_html,
+            family_html=family_html, collocations_html=collocations_html,
+            badges=badges, grammar_link=grammar_link,
+            prev_file=prev_file, prev_word=prev_word,
+            next_file=next_file, next_word=next_word,
             prev_next=prev_next_tags,
             bangladeshi_usage=bangladeshi_usage,
-            bcs_stars=bcs_stars,
-            ielts_stars=ielts_stars,
-            cefr=cefr,
-            common_mistake=common_mistake,
+            bcs_stars=bcs_stars, ielts_stars=ielts_stars,
+            cefr=cefr, common_mistake=common_mistake,
             comparatives_section=comparatives_html,
             bn_teaching_note=entry.get('bn_teaching_note', '📘 এই শব্দটির ব্যবহার ও অর্থ সম্পর্কে বিস্তারিত শিখতে আমাদের সাথে থাকুন।')
         )
