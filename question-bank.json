@@ -1,8 +1,8 @@
 {
   "version": "2.0",
   "metadata": {
-    "total_questions": 4,
-    "generated_on": "2026-07-14T11:54:38.926468Z",
+    "total_questions": 40,
+    "generated_on": "2026-07-14T17:01:43.482826Z",
     "schema": "Ovidhan Question Bank Specification v2.0"
   },
   "questions": [
@@ -108,6 +108,731 @@
       "_source_file": "past-simple.json"
     },
     {
+      "id": "grammar_tense_001",
+      "exam_tags": [
+        "general",
+        "bcs",
+        "hsc"
+      ],
+      "recommended_for": [
+        "BCS",
+        "HSC"
+      ],
+      "topic": "Tense",
+      "skill": "grammar",
+      "subskill": "Present Simple",
+      "difficulty": 1,
+      "cefr": "A1",
+      "thinking_time_seconds": 10,
+      "learning_objective": "Use Present Simple correctly.",
+      "common_mistake": "Forgetting 's' with third person singular.",
+      "question_text": "She ____ breakfast at 7 AM.",
+      "options": [
+        "have",
+        "has",
+        "had",
+        "having"
+      ],
+      "correct_index": 1,
+      "explanation": "Third person singular in Present Simple uses 'has'.",
+      "bangla_explanation": "Present Simple-এ third person singular-এর সাথে 'has' ব্যবহার হয়।",
+      "distractor_explanations": [
+        "have → First person",
+        "had → Past",
+        "having → Continuous"
+      ],
+      "related_article": "/grammar/present-simple-tense-bangla.html",
+      "related_words": [
+        "breakfast",
+        "morning"
+      ],
+      "learning_links": [
+        "/grammar/present-simple-tense-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "tenses.json"
+    },
+    {
+      "id": "grammar_tense_002",
+      "exam_tags": [
+        "general",
+        "bcs",
+        "hsc"
+      ],
+      "recommended_for": [
+        "BCS",
+        "HSC"
+      ],
+      "topic": "Tense",
+      "skill": "grammar",
+      "subskill": "Past Simple",
+      "difficulty": 1,
+      "cefr": "A1",
+      "thinking_time_seconds": 10,
+      "learning_objective": "Use Past Simple correctly.",
+      "common_mistake": "Using present tense with past time markers.",
+      "question_text": "They ____ to the cinema yesterday.",
+      "options": [
+        "go",
+        "goes",
+        "went",
+        "going"
+      ],
+      "correct_index": 2,
+      "explanation": "'Yesterday' indicates past time, so use Past Simple 'went'.",
+      "bangla_explanation": "'Yesterday' অতীত নির্দেশ করে, তাই Past Simple 'went' ব্যবহার করব।",
+      "distractor_explanations": [
+        "go → Present",
+        "goes → Present third person",
+        "going → Continuous"
+      ],
+      "related_article": "/grammar/past-simple-tense-bangla.html",
+      "related_words": [
+        "cinema",
+        "yesterday"
+      ],
+      "learning_links": [
+        "/grammar/past-simple-tense-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "tenses.json"
+    },
+    {
+      "id": "grammar_tense_003",
+      "exam_tags": [
+        "general",
+        "bcs",
+        "ielts"
+      ],
+      "recommended_for": [
+        "BCS",
+        "IELTS"
+      ],
+      "topic": "Tense",
+      "skill": "grammar",
+      "subskill": "Present Perfect",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use Present Perfect correctly.",
+      "common_mistake": "Using Past Simple instead of Present Perfect for recent events.",
+      "question_text": "I ____ just ____ my homework.",
+      "options": [
+        "have / finished",
+        "was / finishing",
+        "am / finishing",
+        "had / finished"
+      ],
+      "correct_index": 0,
+      "explanation": "'Just' is used with Present Perfect to indicate a recently completed action.",
+      "bangla_explanation": "'Just' Present Perfect-এর সাথে ব্যবহৃত হয় সম্প্রতি সম্পন্ন হওয়া কাজ বোঝাতে।",
+      "distractor_explanations": [
+        "was finishing → Past continuous",
+        "am finishing → Present continuous",
+        "had finished → Past perfect"
+      ],
+      "related_article": "/grammar/present-perfect-tense-bangla.html",
+      "related_words": [
+        "homework",
+        "just"
+      ],
+      "learning_links": [
+        "/grammar/present-perfect-tense-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "tenses.json"
+    },
+    {
+      "id": "grammar_tense_004",
+      "exam_tags": [
+        "general",
+        "bcs",
+        "ssc"
+      ],
+      "recommended_for": [
+        "BCS",
+        "SSC"
+      ],
+      "topic": "Tense",
+      "skill": "grammar",
+      "subskill": "Future Simple",
+      "difficulty": 1,
+      "cefr": "A1",
+      "thinking_time_seconds": 10,
+      "learning_objective": "Use Future Simple correctly.",
+      "common_mistake": "Using present tense for future plans.",
+      "question_text": "We ____ to the zoo next Sunday.",
+      "options": [
+        "go",
+        "goes",
+        "will go",
+        "went"
+      ],
+      "correct_index": 2,
+      "explanation": "'Next Sunday' indicates future, so use 'will go'.",
+      "bangla_explanation": "'Next Sunday' ভবিষ্যত নির্দেশ করে, তাই 'will go' ব্যবহার করব।",
+      "distractor_explanations": [
+        "go → Present",
+        "goes → Present third person",
+        "went → Past"
+      ],
+      "related_article": "/grammar/future-tense-bangla.html",
+      "related_words": [
+        "zoo",
+        "Sunday"
+      ],
+      "learning_links": [
+        "/grammar/future-tense-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "tenses.json"
+    },
+    {
+      "id": "grammar_tense_005",
+      "exam_tags": [
+        "general",
+        "bcs",
+        "ielts"
+      ],
+      "recommended_for": [
+        "BCS",
+        "IELTS"
+      ],
+      "topic": "Tense",
+      "skill": "grammar",
+      "subskill": "Past Continuous",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use Past Continuous correctly.",
+      "common_mistake": "Using Past Simple instead of Past Continuous for interrupted actions.",
+      "question_text": "I ____ TV when the phone rang.",
+      "options": [
+        "watched",
+        "was watching",
+        "had watched",
+        "have watched"
+      ],
+      "correct_index": 1,
+      "explanation": "Use Past Continuous for the action in progress that was interrupted.",
+      "bangla_explanation": "যে কাজটি চলছিল এবং ব্যাহত হয়েছিল তার জন্য Past Continuous ব্যবহার হয়।",
+      "distractor_explanations": [
+        "watched → Past Simple (not continuous)",
+        "had watched → Past Perfect",
+        "have watched → Present Perfect"
+      ],
+      "related_article": "/grammar/past-continuous-tense-bangla.html",
+      "related_words": [
+        "TV",
+        "phone"
+      ],
+      "learning_links": [
+        "/grammar/past-continuous-tense-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "tenses.json"
+    },
+    {
+      "id": "bcs_grammar_001",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Subject-Verb Agreement",
+      "skill": "grammar",
+      "subskill": "SVA",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Identify correct subject-verb agreement in complex sentences.",
+      "common_mistake": "Matching verb with the nearest noun instead of the actual subject.",
+      "question_text": "The list of items ____ on the table.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have"
+      ],
+      "correct_index": 1,
+      "explanation": "The subject is 'The list' (singular), so the verb must be 'is'.",
+      "bangla_explanation": "Subject হলো 'The list' (একবচন), তাই verb 'is' হবে।",
+      "distractor_explanations": [
+        "are → Plural verb",
+        "were → Past plural",
+        "have → Incorrect auxiliary"
+      ],
+      "related_article": "/grammar/subject-verb-agreement-bangla.html",
+      "related_words": [
+        "list",
+        "items"
+      ],
+      "learning_links": [
+        "/grammar/subject-verb-agreement-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_grammar_002",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Tense",
+      "skill": "grammar",
+      "subskill": "Present Perfect",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Use Present Perfect tense correctly with 'since' and 'for'.",
+      "common_mistake": "Using Past Simple instead of Present Perfect with 'since'.",
+      "question_text": "I ____ here since 2010.",
+      "options": [
+        "lived",
+        "have lived",
+        "was living",
+        "had lived"
+      ],
+      "correct_index": 1,
+      "explanation": "'Since' indicates a period from the past to now, so Present Perfect is required.",
+      "bangla_explanation": "'Since' অতীত থেকে বর্তমান পর্যন্ত সময় নির্দেশ করে, তাই Present Perfect ব্যবহার করতে হবে।",
+      "distractor_explanations": [
+        "lived → Past Simple (incorrect with since)",
+        "was living → Past Continuous",
+        "had lived → Past Perfect"
+      ],
+      "related_article": "/grammar/present-perfect-tense-bangla.html",
+      "related_words": [
+        "live",
+        "since"
+      ],
+      "learning_links": [
+        "/grammar/present-perfect-tense-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_grammar_003",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Preposition",
+      "skill": "grammar",
+      "subskill": "Prepositions of Time",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use correct prepositions of time.",
+      "common_mistake": "Using 'in' instead of 'on' for specific days.",
+      "question_text": "We will meet ____ Monday.",
+      "options": [
+        "in",
+        "on",
+        "at",
+        "by"
+      ],
+      "correct_index": 1,
+      "explanation": "We use 'on' for specific days of the week.",
+      "bangla_explanation": "নির্দিষ্ট দিন বোঝাতে 'on' ব্যবহার হয়।",
+      "distractor_explanations": [
+        "in → Months/Years",
+        "at → Specific times",
+        "by → Deadline"
+      ],
+      "related_article": "/grammar/prepositions-of-time-bangla.html",
+      "related_words": [
+        "Monday",
+        "meet"
+      ],
+      "learning_links": [
+        "/grammar/prepositions-of-time-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_grammar_004",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Voice Change",
+      "skill": "grammar",
+      "subskill": "Passive Voice",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Transform active voice to passive voice correctly.",
+      "common_mistake": "Changing the tense incorrectly in passive voice.",
+      "question_text": "The teacher _____ the lesson.",
+      "options": [
+        "has explained",
+        "has been explained",
+        "was explained",
+        "explained"
+      ],
+      "correct_index": 0,
+      "explanation": "Active voice: 'The teacher has explained' is correct because the subject performs the action.",
+      "bangla_explanation": "Active voice: 'The teacher has explained' সঠিক কারণ subject নিজে কাজটি করে।",
+      "distractor_explanations": [
+        "has been explained → Passive (subject receives action)",
+        "was explained → Past passive",
+        "explained → Simple past (tense mismatch)"
+      ],
+      "related_article": "/grammar/voice-change-rules-bangla.html",
+      "related_words": [
+        "teacher",
+        "explain"
+      ],
+      "learning_links": [
+        "/grammar/voice-change-rules-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_vocab_001",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Synonyms",
+      "skill": "vocabulary",
+      "subskill": "Synonyms",
+      "difficulty": 3,
+      "cefr": "B2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Identify the correct synonym for common words.",
+      "common_mistake": "Confusing synonyms with slightly different meanings.",
+      "question_text": "What is the meaning of 'ABUNDANT'?",
+      "options": [
+        "Plentiful",
+        "Rare",
+        "Scarce",
+        "Limited"
+      ],
+      "correct_index": 0,
+      "explanation": "'Abundant' means plentiful or existing in large quantities.",
+      "bangla_explanation": "'Abundant' মানে প্রচুর বা পর্যাপ্ত পরিমাণে বিদ্যমান।",
+      "distractor_explanations": [
+        "Rare → Opposite",
+        "Scarce → Opposite",
+        "Limited → Opposite"
+      ],
+      "related_article": "/grammar/synonyms-antonyms-bangla.html",
+      "related_words": [
+        "abundant",
+        "plentiful"
+      ],
+      "learning_links": [
+        "/word/abundant.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_vocab_002",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Antonyms",
+      "skill": "vocabulary",
+      "subskill": "Antonyms",
+      "difficulty": 3,
+      "cefr": "B2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Identify the correct antonym for common words.",
+      "common_mistake": "Confusing antonyms with synonyms.",
+      "question_text": "What is the OPPOSITE of 'GENEROUS'?",
+      "options": [
+        "Kind",
+        "Stingy",
+        "Charitable",
+        "Benevolent"
+      ],
+      "correct_index": 1,
+      "explanation": "'Stingy' means unwilling to give, the opposite of 'generous'.",
+      "bangla_explanation": "'Stingy' মানে কৃপণ, যা 'generous'-এর বিপরীত।",
+      "distractor_explanations": [
+        "Kind → Similar",
+        "Charitable → Similar",
+        "Benevolent → Similar"
+      ],
+      "related_article": "/grammar/synonyms-antonyms-bangla.html",
+      "related_words": [
+        "generous",
+        "stingy"
+      ],
+      "learning_links": [
+        "/word/generous.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_idiom_001",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Idioms",
+      "skill": "vocabulary",
+      "subskill": "Idioms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Recognize common English idioms and their meanings.",
+      "common_mistake": "Taking idioms literally instead of understanding figurative meaning.",
+      "question_text": "What does 'A PIECE OF CAKE' mean?",
+      "options": [
+        "Very difficult",
+        "Very easy",
+        "Delicious",
+        "Expensive"
+      ],
+      "correct_index": 1,
+      "explanation": "'A piece of cake' means something very easy to do.",
+      "bangla_explanation": "'A piece of cake' মানে খুব সহজ কাজ।",
+      "distractor_explanations": [
+        "Very difficult → Opposite",
+        "Delicious → Literal meaning",
+        "Expensive → Unrelated"
+      ],
+      "related_article": "/grammar/idioms-phrases-bangla.html",
+      "related_words": [
+        "cake",
+        "easy"
+      ],
+      "learning_links": [
+        "/grammar/idioms-phrases-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_idiom_002",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Idioms",
+      "skill": "vocabulary",
+      "subskill": "Idioms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Recognize common English idioms and their meanings.",
+      "common_mistake": "Taking idioms literally instead of understanding figurative meaning.",
+      "question_text": "What does 'COST AN ARM AND A LEG' mean?",
+      "options": [
+        "Very cheap",
+        "Very expensive",
+        "Painful",
+        "Tiring"
+      ],
+      "correct_index": 1,
+      "explanation": "'Cost an arm and a leg' means very expensive.",
+      "bangla_explanation": "'Cost an arm and a leg' মানে খুব দামি।",
+      "distractor_explanations": [
+        "Very cheap → Opposite",
+        "Painful → Literal",
+        "Tiring → Unrelated"
+      ],
+      "related_article": "/grammar/idioms-phrases-bangla.html",
+      "related_words": [
+        "expensive",
+        "cost"
+      ],
+      "learning_links": [
+        "/grammar/idioms-phrases-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_phrasal_001",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Phrasal Verbs",
+      "skill": "vocabulary",
+      "subskill": "Phrasal Verbs",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Recognize common phrasal verbs and their meanings.",
+      "common_mistake": "Confusing phrasal verbs with prepositional phrases.",
+      "question_text": "What does 'GIVE UP' mean?",
+      "options": [
+        "Continue",
+        "Surrender",
+        "Start",
+        "Increase"
+      ],
+      "correct_index": 1,
+      "explanation": "'Give up' means to surrender or stop trying.",
+      "bangla_explanation": "'Give up' মানে আত্মসমর্পণ করা বা চেষ্টা বন্ধ করা।",
+      "distractor_explanations": [
+        "Continue → Opposite",
+        "Start → Opposite",
+        "Increase → Unrelated"
+      ],
+      "related_article": "/grammar/phrasal-verbs-bangla.html",
+      "related_words": [
+        "give",
+        "surrender"
+      ],
+      "learning_links": [
+        "/grammar/phrasal-verbs-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
+      "id": "bcs_phrasal_002",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Phrasal Verbs",
+      "skill": "vocabulary",
+      "subskill": "Phrasal Verbs",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Recognize common phrasal verbs and their meanings.",
+      "common_mistake": "Confusing phrasal verbs with prepositional phrases.",
+      "question_text": "What does 'LOOK FORWARD TO' mean?",
+      "options": [
+        "Fear",
+        "Expect with pleasure",
+        "Ignore",
+        "Avoid"
+      ],
+      "correct_index": 1,
+      "explanation": "'Look forward to' means to anticipate with pleasure.",
+      "bangla_explanation": "'Look forward to' মানে আনন্দের সাথে প্রতীক্ষা করা।",
+      "distractor_explanations": [
+        "Fear → Opposite",
+        "Ignore → Opposite",
+        "Avoid → Opposite"
+      ],
+      "related_article": "/grammar/phrasal-verbs-bangla.html",
+      "related_words": [
+        "look",
+        "forward"
+      ],
+      "learning_links": [
+        "/grammar/phrasal-verbs-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-full.json"
+    },
+    {
       "id": "bcs_error_004",
       "exam_tags": [
         "bcs",
@@ -154,6 +879,971 @@
       "created_date": "2026-07-14",
       "updated_date": "2026-07-14",
       "_source_file": "bcs-mixed.json"
+    },
+    {
+      "id": "hsc_grammar_001",
+      "exam_tags": [
+        "hsc"
+      ],
+      "recommended_for": [
+        "HSC"
+      ],
+      "topic": "Completing Sentence",
+      "skill": "grammar",
+      "subskill": "Conditional",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Complete sentences with correct grammar.",
+      "common_mistake": "Using wrong tense in conditional sentences.",
+      "question_text": "If you had informed me, I ____ you.",
+      "options": [
+        "would help",
+        "would have helped",
+        "will help",
+        "help"
+      ],
+      "correct_index": 1,
+      "explanation": "Third conditional: 'would have + past participle' for unreal past situations.",
+      "bangla_explanation": "Third conditional: 'would have + past participle' ব্যবহার হয় অবাস্তব অতীত পরিস্থিতিতে।",
+      "distractor_explanations": [
+        "would help → Second conditional",
+        "will help → Future",
+        "help → Present"
+      ],
+      "related_article": "/grammar/conditional-sentences-bangla.html",
+      "related_words": [
+        "inform",
+        "help"
+      ],
+      "learning_links": [
+        "/grammar/conditional-sentences-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "hsc-full.json"
+    },
+    {
+      "id": "hsc_grammar_002",
+      "exam_tags": [
+        "hsc"
+      ],
+      "recommended_for": [
+        "HSC"
+      ],
+      "topic": "Sentence Transformation",
+      "skill": "grammar",
+      "subskill": "Active to Passive",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Transform active to passive voice correctly.",
+      "common_mistake": "Changing the tense incorrectly.",
+      "question_text": "The boy broke the window. (Transform into passive)",
+      "options": [
+        "The window was broken by the boy.",
+        "The window is broken by the boy.",
+        "The window has broken by the boy.",
+        "The window were broken by the boy."
+      ],
+      "correct_index": 0,
+      "explanation": "Past simple active → Past simple passive: 'was broken'.",
+      "bangla_explanation": "Past simple active → Past simple passive: 'was broken'।",
+      "distractor_explanations": [
+        "is broken → Present passive",
+        "has broken → Present perfect (incorrect voice)",
+        "were broken → Plural verb (incorrect)"
+      ],
+      "related_article": "/grammar/voice-change-rules-bangla.html",
+      "related_words": [
+        "boy",
+        "window"
+      ],
+      "learning_links": [
+        "/grammar/voice-change-rules-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "hsc-full.json"
+    },
+    {
+      "id": "hsc_grammar_003",
+      "exam_tags": [
+        "hsc"
+      ],
+      "recommended_for": [
+        "HSC"
+      ],
+      "topic": "Narration",
+      "skill": "grammar",
+      "subskill": "Direct to Indirect",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Change direct speech to indirect speech.",
+      "common_mistake": "Changing the tense incorrectly.",
+      "question_text": "He said, 'I am happy.' (Change into indirect speech)",
+      "options": [
+        "He said that he was happy.",
+        "He said that I am happy.",
+        "He said that he is happy.",
+        "He said that I was happy."
+      ],
+      "correct_index": 0,
+      "explanation": "Present → Past: 'am' becomes 'was'.",
+      "bangla_explanation": "Present → Past: 'am' 'was'-এ পরিবর্তিত হয়।",
+      "distractor_explanations": [
+        "I am happy → Pronoun unchanged",
+        "he is happy → Tense unchanged",
+        "I was happy → Pronoun unchanged"
+      ],
+      "related_article": "/grammar/narration-rules-bangla.html",
+      "related_words": [
+        "say",
+        "happy"
+      ],
+      "learning_links": [
+        "/grammar/narration-rules-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "hsc-full.json"
+    },
+    {
+      "id": "hsc_grammar_004",
+      "exam_tags": [
+        "hsc"
+      ],
+      "recommended_for": [
+        "HSC"
+      ],
+      "topic": "Article",
+      "skill": "grammar",
+      "subskill": "Definite & Indefinite",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use correct articles.",
+      "common_mistake": "Using 'a' before vowel sounds.",
+      "question_text": "He is ____ honest man.",
+      "options": [
+        "a",
+        "an",
+        "the",
+        "no article"
+      ],
+      "correct_index": 1,
+      "explanation": "'Honest' starts with a vowel sound, so we use 'an'.",
+      "bangla_explanation": "'Honest' উচ্চারণে স্বরবর্ণের শব্দ হয়, তাই 'an' ব্যবহার করব।",
+      "distractor_explanations": [
+        "a → Used before consonant sounds",
+        "the → Definite article (not needed)",
+        "no article → Incorrect"
+      ],
+      "related_article": "/grammar/articles-rules-bangla.html",
+      "related_words": [
+        "honest",
+        "man"
+      ],
+      "learning_links": [
+        "/grammar/articles-rules-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "hsc-full.json"
+    },
+    {
+      "id": "hsc_grammar_005",
+      "exam_tags": [
+        "hsc"
+      ],
+      "recommended_for": [
+        "HSC"
+      ],
+      "topic": "Preposition",
+      "skill": "grammar",
+      "subskill": "Prepositions",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use correct prepositions.",
+      "common_mistake": "Using wrong prepositions with familiar verbs.",
+      "question_text": "She is interested ____ music.",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "for"
+      ],
+      "correct_index": 0,
+      "explanation": "The correct preposition after 'interested' is 'in'.",
+      "bangla_explanation": "'Interested'-এর পরে সঠিক preposition হলো 'in'।",
+      "distractor_explanations": [
+        "at → Incorrect",
+        "on → Incorrect",
+        "for → Incorrect"
+      ],
+      "related_article": "/grammar/prepositions-bangla.html",
+      "related_words": [
+        "interested",
+        "music"
+      ],
+      "learning_links": [
+        "/grammar/prepositions-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "hsc-full.json"
+    },
+    {
+      "id": "hsc_grammar_006",
+      "exam_tags": [
+        "hsc"
+      ],
+      "recommended_for": [
+        "HSC"
+      ],
+      "topic": "Subject-Verb Agreement",
+      "skill": "grammar",
+      "subskill": "SVA",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Identify correct subject-verb agreement.",
+      "common_mistake": "Using plural verb with singular collective noun.",
+      "question_text": "The team ____ playing well.",
+      "options": [
+        "is",
+        "are",
+        "were",
+        "have"
+      ],
+      "correct_index": 0,
+      "explanation": "Collective noun 'team' takes a singular verb 'is'.",
+      "bangla_explanation": "Collective noun 'team' singular verb 'is' নেয়।",
+      "distractor_explanations": [
+        "are → Plural verb",
+        "were → Past plural",
+        "have → Incorrect"
+      ],
+      "related_article": "/grammar/subject-verb-agreement-bangla.html",
+      "related_words": [
+        "team",
+        "playing"
+      ],
+      "learning_links": [
+        "/grammar/subject-verb-agreement-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "hsc-full.json"
+    },
+    {
+      "id": "ielts_reading_001",
+      "exam_tags": [
+        "ielts"
+      ],
+      "recommended_for": [
+        "IELTS"
+      ],
+      "topic": "Reading Comprehension",
+      "skill": "reading",
+      "subskill": "Main Idea",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 40,
+      "learning_objective": "Identify the main idea of a passage.",
+      "common_mistake": "Choosing a detail instead of the main idea.",
+      "question_text": "The main purpose of the passage is to _____.",
+      "options": [
+        "Describe a historical event",
+        "Explain a scientific concept",
+        "Argue for a political change",
+        "Tell a personal story"
+      ],
+      "correct_index": 1,
+      "explanation": "The passage primarily explains a scientific concept.",
+      "bangla_explanation": "প্যাসেজটি মূলত একটি বৈজ্ঞানিক ধারণা ব্যাখ্যা করে।",
+      "distractor_explanations": [
+        "Historical event → Not mentioned",
+        "Political change → Not argued",
+        "Personal story → Not told"
+      ],
+      "related_article": "/grammar/ielts-reading-tips-bangla.html",
+      "related_words": [
+        "passage",
+        "main idea"
+      ],
+      "learning_links": [
+        "/grammar/ielts-reading-tips-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ielts-full.json"
+    },
+    {
+      "id": "ielts_grammar_001",
+      "exam_tags": [
+        "ielts"
+      ],
+      "recommended_for": [
+        "IELTS"
+      ],
+      "topic": "Complex Sentences",
+      "skill": "grammar",
+      "subskill": "Conditional",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Use conditional sentences correctly.",
+      "common_mistake": "Mixing tenses in conditional sentences.",
+      "question_text": "If I ____ rich, I would travel the world.",
+      "options": [
+        "am",
+        "was",
+        "were",
+        "will be"
+      ],
+      "correct_index": 2,
+      "explanation": "In second conditional, we use 'were' for all subjects.",
+      "bangla_explanation": "Second conditional-এ সব subject-এর জন্য 'were' ব্যবহার হয়।",
+      "distractor_explanations": [
+        "am → Present tense (incorrect)",
+        "was → Informal but accepted",
+        "will be → Future (incorrect)"
+      ],
+      "related_article": "/grammar/conditional-sentences-bangla.html",
+      "related_words": [
+        "rich",
+        "travel"
+      ],
+      "learning_links": [
+        "/grammar/conditional-sentences-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ielts-full.json"
+    },
+    {
+      "id": "ielts_grammar_002",
+      "exam_tags": [
+        "ielts"
+      ],
+      "recommended_for": [
+        "IELTS"
+      ],
+      "topic": "Cohesion",
+      "skill": "grammar",
+      "subskill": "Linking Words",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Use linking words correctly for coherence.",
+      "common_mistake": "Using informal linking words in formal writing.",
+      "question_text": "The experiment failed, ____ it was repeated.",
+      "options": [
+        "however",
+        "because",
+        "so",
+        "despite"
+      ],
+      "correct_index": 2,
+      "explanation": "'So' shows a logical consequence of the first clause.",
+      "bangla_explanation": "'So' প্রথম বাক্যের ফলাফল বোঝায়।",
+      "distractor_explanations": [
+        "however → Contrast",
+        "because → Reason",
+        "despite → Contrast"
+      ],
+      "related_article": "/grammar/linking-words-bangla.html",
+      "related_words": [
+        "failed",
+        "repeated"
+      ],
+      "learning_links": [
+        "/grammar/linking-words-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ielts-full.json"
+    },
+    {
+      "id": "ielts_vocab_001",
+      "exam_tags": [
+        "ielts"
+      ],
+      "recommended_for": [
+        "IELTS"
+      ],
+      "topic": "Academic Vocabulary",
+      "skill": "vocabulary",
+      "subskill": "Word Families",
+      "difficulty": 5,
+      "cefr": "C1",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Recognize academic word families.",
+      "common_mistake": "Using informal vocabulary in academic contexts.",
+      "question_text": "The ____ of the research was published in a journal.",
+      "options": [
+        "findings",
+        "find",
+        "finds",
+        "found"
+      ],
+      "correct_index": 0,
+      "explanation": "'Findings' is the academic noun form for research results.",
+      "bangla_explanation": "'Findings' গবেষণার ফলাফল বোঝাতে ব্যবহৃত একাডেমিক শব্দ।",
+      "distractor_explanations": [
+        "find → Verb",
+        "finds → Verb (third person)",
+        "found → Verb (past tense)"
+      ],
+      "related_article": "/grammar/academic-vocabulary-bangla.html",
+      "related_words": [
+        "research",
+        "findings"
+      ],
+      "learning_links": [
+        "/grammar/academic-vocabulary-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ielts-full.json"
+    },
+    {
+      "id": "ielts_vocab_002",
+      "exam_tags": [
+        "ielts"
+      ],
+      "recommended_for": [
+        "IELTS"
+      ],
+      "topic": "Academic Vocabulary",
+      "skill": "vocabulary",
+      "subskill": "Collocations",
+      "difficulty": 5,
+      "cefr": "C1",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Recognize academic collocations.",
+      "common_mistake": "Using informal collocations in academic writing.",
+      "question_text": "The government should ____ measures to reduce pollution.",
+      "options": [
+        "make",
+        "do",
+        "take",
+        "give"
+      ],
+      "correct_index": 2,
+      "explanation": "The correct collocation is 'take measures'.",
+      "bangla_explanation": "সঠিক collocation হলো 'take measures'।",
+      "distractor_explanations": [
+        "make → Incorrect collocation",
+        "do → Incorrect collocation",
+        "give → Incorrect collocation"
+      ],
+      "related_article": "/grammar/collocations-bangla.html",
+      "related_words": [
+        "measures",
+        "pollution"
+      ],
+      "learning_links": [
+        "/grammar/collocations-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ielts-full.json"
+    },
+    {
+      "id": "ssc_grammar_001",
+      "exam_tags": [
+        "ssc"
+      ],
+      "recommended_for": [
+        "SSC"
+      ],
+      "topic": "Right Form of Verb",
+      "skill": "grammar",
+      "subskill": "Tense",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use correct verb forms.",
+      "common_mistake": "Using wrong tense with time markers.",
+      "question_text": "She ____ to school every day.",
+      "options": [
+        "go",
+        "goes",
+        "went",
+        "going"
+      ],
+      "correct_index": 1,
+      "explanation": "Present simple third person singular: 'goes'.",
+      "bangla_explanation": "Present simple third person singular: 'goes'।",
+      "distractor_explanations": [
+        "go → First person",
+        "went → Past",
+        "going → Continuous"
+      ],
+      "related_article": "/grammar/right-form-of-verb-bangla.html",
+      "related_words": [
+        "school",
+        "go"
+      ],
+      "learning_links": [
+        "/grammar/right-form-of-verb-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ssc-full.json"
+    },
+    {
+      "id": "ssc_grammar_002",
+      "exam_tags": [
+        "ssc"
+      ],
+      "recommended_for": [
+        "SSC"
+      ],
+      "topic": "Article",
+      "skill": "grammar",
+      "subskill": "Articles",
+      "difficulty": 1,
+      "cefr": "A1",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use correct articles.",
+      "common_mistake": "Using 'a' before vowel sounds.",
+      "question_text": "He is ____ engineer.",
+      "options": [
+        "a",
+        "an",
+        "the",
+        "no article"
+      ],
+      "correct_index": 1,
+      "explanation": "'Engineer' starts with a vowel sound, so use 'an'.",
+      "bangla_explanation": "'Engineer' উচ্চারণে স্বরবর্ণের শব্দ হয়, তাই 'an' ব্যবহার করব।",
+      "distractor_explanations": [
+        "a → Before consonant",
+        "the → Definite",
+        "no article → Incorrect"
+      ],
+      "related_article": "/grammar/articles-rules-bangla.html",
+      "related_words": [
+        "engineer"
+      ],
+      "learning_links": [
+        "/grammar/articles-rules-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ssc-full.json"
+    },
+    {
+      "id": "ssc_grammar_003",
+      "exam_tags": [
+        "ssc"
+      ],
+      "recommended_for": [
+        "SSC"
+      ],
+      "topic": "Preposition",
+      "skill": "grammar",
+      "subskill": "Prepositions",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use correct prepositions.",
+      "common_mistake": "Using wrong prepositions.",
+      "question_text": "He went ____ the park.",
+      "options": [
+        "in",
+        "to",
+        "at",
+        "for"
+      ],
+      "correct_index": 1,
+      "explanation": "We use 'to' to indicate destination.",
+      "bangla_explanation": "গন্তব্য বোঝাতে 'to' ব্যবহার হয়।",
+      "distractor_explanations": [
+        "in → Inside",
+        "at → Specific point",
+        "for → Purpose"
+      ],
+      "related_article": "/grammar/prepositions-bangla.html",
+      "related_words": [
+        "park",
+        "go"
+      ],
+      "learning_links": [
+        "/grammar/prepositions-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ssc-full.json"
+    },
+    {
+      "id": "ssc_grammar_004",
+      "exam_tags": [
+        "ssc"
+      ],
+      "recommended_for": [
+        "SSC"
+      ],
+      "topic": "Voice Change",
+      "skill": "grammar",
+      "subskill": "Passive Voice",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Transform active to passive voice.",
+      "common_mistake": "Changing the tense incorrectly.",
+      "question_text": "The cat ____ the mouse.",
+      "options": [
+        "was chased",
+        "is chasing",
+        "chased",
+        "has chased"
+      ],
+      "correct_index": 0,
+      "explanation": "Passive voice: 'was chased' (past simple passive).",
+      "bangla_explanation": "Passive voice: 'was chased' (past simple passive)।",
+      "distractor_explanations": [
+        "is chasing → Present continuous (active)",
+        "chased → Past simple (active)",
+        "has chased → Present perfect (active)"
+      ],
+      "related_article": "/grammar/voice-change-rules-bangla.html",
+      "related_words": [
+        "cat",
+        "mouse"
+      ],
+      "learning_links": [
+        "/grammar/voice-change-rules-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ssc-full.json"
+    },
+    {
+      "id": "ssc_grammar_005",
+      "exam_tags": [
+        "ssc"
+      ],
+      "recommended_for": [
+        "SSC"
+      ],
+      "topic": "Narration",
+      "skill": "grammar",
+      "subskill": "Direct to Indirect",
+      "difficulty": 2,
+      "cefr": "A2",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Change direct speech to indirect speech.",
+      "common_mistake": "Changing the tense incorrectly.",
+      "question_text": "She said, 'I like tea.' (Change into indirect)",
+      "options": [
+        "She said that she liked tea.",
+        "She said that I like tea.",
+        "She said that she likes tea.",
+        "She said that I liked tea."
+      ],
+      "correct_index": 0,
+      "explanation": "Present → Past: 'like' becomes 'liked'.",
+      "bangla_explanation": "Present → Past: 'like' 'liked'-এ পরিবর্তিত হয়।",
+      "distractor_explanations": [
+        "I like tea → Pronoun unchanged",
+        "she likes tea → Tense unchanged",
+        "I liked tea → Pronoun unchanged"
+      ],
+      "related_article": "/grammar/narration-rules-bangla.html",
+      "related_words": [
+        "tea",
+        "like"
+      ],
+      "learning_links": [
+        "/grammar/narration-rules-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "ssc-full.json"
+    },
+    {
+      "id": "uni_grammar_001",
+      "exam_tags": [
+        "university"
+      ],
+      "recommended_for": [
+        "University Admission"
+      ],
+      "topic": "Error Detection",
+      "skill": "grammar",
+      "subskill": "Sentence Correction",
+      "difficulty": 4,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Identify grammatical errors in sentences.",
+      "common_mistake": "Missing grammatical errors in complex sentences.",
+      "question_text": "Identify the error: 'Neither the teacher nor the students is present.'",
+      "options": [
+        "Neither",
+        "nor",
+        "students is",
+        "present"
+      ],
+      "correct_index": 2,
+      "explanation": "When 'neither...nor' joins a singular and plural subject, the verb agrees with the nearest subject ('students'). So it should be 'are' not 'is'.",
+      "bangla_explanation": "'Neither...nor' এর সংযুক্ত subject-এর মধ্যে শেষটির সাথে verb согласуется। তাই 'is' না হয়ে 'are' হবে।",
+      "distractor_explanations": [
+        "Neither → Correct",
+        "nor → Correct",
+        "present → Correct"
+      ],
+      "related_article": "/grammar/subject-verb-agreement-bangla.html",
+      "related_words": [
+        "neither",
+        "nor"
+      ],
+      "learning_links": [
+        "/grammar/subject-verb-agreement-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "university-full.json"
+    },
+    {
+      "id": "uni_grammar_002",
+      "exam_tags": [
+        "university"
+      ],
+      "recommended_for": [
+        "University Admission"
+      ],
+      "topic": "Sentence Correction",
+      "skill": "grammar",
+      "subskill": "Tense",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Correct tense errors in sentences.",
+      "common_mistake": "Using wrong tense with time expressions.",
+      "question_text": "He has been living here ____ 2015.",
+      "options": [
+        "since",
+        "for",
+        "from",
+        "in"
+      ],
+      "correct_index": 0,
+      "explanation": "We use 'since' with a specific point in time (2015).",
+      "bangla_explanation": "'Since' নির্দিষ্ট সময়ের সাথে ব্যবহৃত হয় (2015)।",
+      "distractor_explanations": [
+        "for → Duration (with years/periods)",
+        "from → Starting point",
+        "in → Year/month"
+      ],
+      "related_article": "/grammar/present-perfect-tense-bangla.html",
+      "related_words": [
+        "living",
+        "2015"
+      ],
+      "learning_links": [
+        "/grammar/present-perfect-tense-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "university-full.json"
+    },
+    {
+      "id": "uni_grammar_003",
+      "exam_tags": [
+        "university"
+      ],
+      "recommended_for": [
+        "University Admission"
+      ],
+      "topic": "Preposition",
+      "skill": "grammar",
+      "subskill": "Prepositions",
+      "difficulty": 3,
+      "cefr": "B1",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use correct prepositions.",
+      "common_mistake": "Using wrong prepositions with verbs.",
+      "question_text": "She succeeded ____ her efforts.",
+      "options": [
+        "in",
+        "by",
+        "with",
+        "through"
+      ],
+      "correct_index": 0,
+      "explanation": "The correct preposition after 'succeed' is 'in'.",
+      "bangla_explanation": "'Succeed'-এর পরে সঠিক preposition হলো 'in'।",
+      "distractor_explanations": [
+        "by → Means/method",
+        "with → Accompaniment",
+        "through → Process"
+      ],
+      "related_article": "/grammar/prepositions-bangla.html",
+      "related_words": [
+        "succeed",
+        "efforts"
+      ],
+      "learning_links": [
+        "/grammar/prepositions-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "university-full.json"
+    },
+    {
+      "id": "uni_vocab_001",
+      "exam_tags": [
+        "university"
+      ],
+      "recommended_for": [
+        "University Admission"
+      ],
+      "topic": "Synonyms",
+      "skill": "vocabulary",
+      "subskill": "Synonyms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Identify correct synonyms.",
+      "common_mistake": "Confusing similar-sounding words.",
+      "question_text": "Choose the synonym of 'CONCEAL'.",
+      "options": [
+        "Hide",
+        "Show",
+        "Find",
+        "Place"
+      ],
+      "correct_index": 0,
+      "explanation": "'Conceal' means to hide or keep secret.",
+      "bangla_explanation": "'Conceal' মানে লুকিয়ে রাখা বা গোপন করা।",
+      "distractor_explanations": [
+        "Show → Opposite",
+        "Find → Unrelated",
+        "Place → Unrelated"
+      ],
+      "related_article": "/grammar/synonyms-antonyms-bangla.html",
+      "related_words": [
+        "conceal",
+        "hide"
+      ],
+      "learning_links": [
+        "/word/conceal.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "university-full.json"
+    },
+    {
+      "id": "uni_vocab_002",
+      "exam_tags": [
+        "university"
+      ],
+      "recommended_for": [
+        "University Admission"
+      ],
+      "topic": "Antonyms",
+      "skill": "vocabulary",
+      "subskill": "Antonyms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Identify correct antonyms.",
+      "common_mistake": "Confusing antonyms with synonyms.",
+      "question_text": "Choose the antonym of 'URBAN'.",
+      "options": [
+        "Rural",
+        "City",
+        "Modern",
+        "Developed"
+      ],
+      "correct_index": 0,
+      "explanation": "'Urban' means related to cities, the opposite is 'rural' (countryside).",
+      "bangla_explanation": "'Urban' মানে শহুরে, এর বিপরীত 'rural' (গ্রামীণ)।",
+      "distractor_explanations": [
+        "City → Similar",
+        "Modern → Related",
+        "Developed → Related"
+      ],
+      "related_article": "/grammar/synonyms-antonyms-bangla.html",
+      "related_words": [
+        "urban",
+        "rural"
+      ],
+      "learning_links": [
+        "/word/urban.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "university-full.json"
     },
     {
       "id": "ielts_vocab_003",
