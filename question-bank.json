@@ -1,0 +1,208 @@
+{
+  "version": "2.0",
+  "metadata": {
+    "total_questions": 4,
+    "generated_on": "2026-07-14T11:54:38.926468Z",
+    "schema": "Ovidhan Question Bank Specification v2.0"
+  },
+  "questions": [
+    {
+      "id": "bcs_tense_001",
+      "exam_tags": [
+        "bcs",
+        "university",
+        "general"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Past Simple Tense",
+      "skill": "grammar",
+      "subskill": "Past Simple",
+      "difficulty": 3,
+      "cefr": "A2",
+      "thinking_time_seconds": 25,
+      "learning_objective": "Identify the correct past simple form for irregular verbs.",
+      "common_mistake": "Students use the base form or past participle when a past time marker (yesterday) is present.",
+      "question_text": "She ____ to school yesterday.",
+      "options": [
+        "go",
+        "went",
+        "gone",
+        "going"
+      ],
+      "correct_index": 1,
+      "explanation": "'Yesterday' indicates a completed past action. 'Went' is the correct Past Simple form of 'go'.",
+      "bangla_explanation": "'Yesterday' অতীত নির্দেশ করে। তাই Past Simple ব্যবহার করতে হবে। 'go'-এর Past Simple হলো 'went'।",
+      "distractor_explanations": [
+        "go → Present tense.",
+        "gone → Past Participle (needs has/have).",
+        "going → Continuous (needs was/is)."
+      ],
+      "related_article": "/grammar/past-simple-tense-bangla.html",
+      "related_words": [
+        "go",
+        "went",
+        "gone"
+      ],
+      "learning_links": [
+        "/word/go.html",
+        "/word/went.html",
+        "/grammar/past-simple-tense-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-13",
+      "updated_date": "2026-07-13",
+      "_source_file": "past-simple.json"
+    },
+    {
+      "id": "hsc_preposition_002",
+      "exam_tags": [
+        "hsc",
+        "ssc",
+        "general"
+      ],
+      "recommended_for": [
+        "HSC",
+        "SSC"
+      ],
+      "topic": "Prepositions of Time",
+      "skill": "grammar",
+      "subskill": "Prepositions",
+      "difficulty": 2,
+      "cefr": "A1",
+      "thinking_time_seconds": 15,
+      "learning_objective": "Use 'at' for specific clock times.",
+      "common_mistake": "Using 'in' instead of 'at' for precise times.",
+      "question_text": "We wake up ____ 6:00 AM every day.",
+      "options": [
+        "in",
+        "on",
+        "at",
+        "for"
+      ],
+      "correct_index": 2,
+      "explanation": "We use 'at' for precise times (clock time).",
+      "bangla_explanation": "নির্দিষ্ট সময় বোঝাতে 'at' ব্যবহার হয়। '6:00 AM' একটি নির্দিষ্ট সময়, তাই 'at' সঠিক।",
+      "distractor_explanations": [
+        "in → Months/Years.",
+        "on → Days/Dates.",
+        "for → Duration."
+      ],
+      "related_article": "/grammar/prepositions-of-time-bangla.html",
+      "related_words": [
+        "time",
+        "morning"
+      ],
+      "learning_links": [
+        "/grammar/prepositions-of-time-bangla.html"
+      ],
+      "verified": true,
+      "editorial_status": "Verified",
+      "version": 1,
+      "created_date": "2026-07-13",
+      "updated_date": "2026-07-13",
+      "_source_file": "past-simple.json"
+    },
+    {
+      "id": "bcs_error_004",
+      "exam_tags": [
+        "bcs",
+        "university"
+      ],
+      "recommended_for": [
+        "BCS",
+        "University Admission"
+      ],
+      "topic": "Error Detection (Subject-Verb)",
+      "skill": "grammar",
+      "subskill": "Subject-Verb Agreement",
+      "difficulty": 4,
+      "cefr": "B1",
+      "thinking_time_seconds": 20,
+      "learning_objective": "Identify errors in subject-verb agreement in complex sentences.",
+      "common_mistake": "The verb is matched with the nearest noun instead of the actual subject.",
+      "question_text": "The list of items ____ on the table.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have"
+      ],
+      "correct_index": 1,
+      "explanation": "The subject is 'The list' (singular), not 'items'. So the verb must be 'is'.",
+      "bangla_explanation": "এখানে subject হলো 'The list' (একবচন), 'items' নয়। তাই singular verb 'is' হবে।",
+      "distractor_explanations": [
+        "are → Plural verb for plural subject.",
+        "were → Past plural.",
+        "have → Incorrect auxiliary."
+      ],
+      "related_article": "/grammar/subject-verb-agreement-bangla.html",
+      "related_words": [
+        "list",
+        "items"
+      ],
+      "learning_links": [
+        "/grammar/subject-verb-agreement-bangla.html"
+      ],
+      "verified": false,
+      "editorial_status": "Draft",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "bcs-mixed.json"
+    },
+    {
+      "id": "ielts_vocab_003",
+      "exam_tags": [
+        "ielts",
+        "bcs"
+      ],
+      "recommended_for": [
+        "IELTS",
+        "BCS"
+      ],
+      "topic": "Academic Synonyms",
+      "skill": "vocabulary",
+      "subskill": "Synonyms",
+      "difficulty": 4,
+      "cefr": "B2",
+      "thinking_time_seconds": 30,
+      "learning_objective": "Recognize formal academic synonyms for common words.",
+      "common_mistake": "Using informal words (like 'kids' or 'a lot of') in academic writing.",
+      "question_text": "Which is the BEST academic synonym for 'many'?",
+      "options": [
+        "A lot of",
+        "Numerous",
+        "Plenty of",
+        "Couple of"
+      ],
+      "correct_index": 1,
+      "explanation": "'Numerous' is the most formal and academic synonym for 'many' in IELTS/BCS writing.",
+      "bangla_explanation": "'Numerous' হলো 'many'-এর সবচেয়ে আনুষ্ঠানিক ও একাডেমিক প্রতিশব্দ।",
+      "distractor_explanations": [
+        "A lot of → Informal.",
+        "Plenty of → Implies 'more than enough'.",
+        "Couple of → Means 'two'."
+      ],
+      "related_article": "/grammar/academic-ielts-vocabulary-bangla.html",
+      "related_words": [
+        "many",
+        "numerous"
+      ],
+      "learning_links": [
+        "/word/many.html",
+        "/word/numerous.html"
+      ],
+      "verified": true,
+      "editorial_status": "Reviewed",
+      "version": 1,
+      "created_date": "2026-07-14",
+      "updated_date": "2026-07-14",
+      "_source_file": "synonyms.json"
+    }
+  ]
+}

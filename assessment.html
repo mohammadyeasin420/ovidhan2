@@ -1,59 +1,12 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ═══ PRIMARY SEO ═══ -->
-    <title>English Assessment Center – Free Practice Tests & Level Tests | Ovidhan</title>
-    <meta name="description" content="Free English assessment tests for BCS, IELTS, Bank Jobs, and University Admission. Take our English level test, grammar test, vocabulary size test, synonym test, antonym test, idiom test, phrasal verb test, BCS diagnostic, IELTS diagnostic, and BCS mock test." />
-    <meta name="keywords" content="English assessment, free English tests, BCS mock test, grammar test, vocabulary test, English level test, synonym test, antonym test, idiom test, phrasal verb test, BCS diagnostic, IELTS diagnostic, Bangladesh" />
-    <link rel="canonical" href="https://ovidhan.net/assessment.html" />
-
-    <!-- ═══ OPEN GRAPH ═══ -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="English Assessment Center – Free Practice Tests & Level Tests | Ovidhan" />
-    <meta property="og:description" content="Free English assessment tests for BCS, IELTS, Bank Jobs, and University Admission. Take our English level test, grammar test, vocabulary size test, and more." />
-    <meta property="og:url" content="https://ovidhan.net/assessment.html" />
-    <meta property="og:site_name" content="Ovidhan – English to Bangla Dictionary" />
-    <meta property="og:image" content="https://ovidhan.net/images/og-assessment.jpg" />
-
-    <!-- ═══ TWITTER CARD ═══ -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="English Assessment Center – Free Practice Tests & Level Tests" />
-    <meta name="twitter:description" content="Free English assessment tests for BCS, IELTS, Bank Jobs, and University Admission." />
-
-    <!-- ═══ SCHEMA.ORG – WEBPAGE ═══ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "English Assessment Center – Free Practice Tests",
-        "url": "https://ovidhan.net/assessment.html",
-        "description": "Free English assessment tests for BCS, IELTS, Bank Jobs, and University Admission.",
-        "about": {
-            "@type": "Thing",
-            "name": "English Language Assessment"
-        }
-    }
-    </script>
-
-    <!-- ═══ GOOGLE FONTS ═══ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-    <!-- ═══ GOOGLE ANALYTICS ═══ -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-7PS8PRT4KW');
-    </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Center | Ovidhan</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* ── Ovidhan Dark Premium Theme ── */
+        /* ─── Your Official Color System ─── */
         :root {
             --bg: #0B1F1A;
             --surface: #122820;
@@ -69,6 +22,8 @@
             --red-dim: rgba(248,113,113,0.10);
             --purple: #c084fc;
             --purple-dim: rgba(192,132,252,0.10);
+            --pink: #f472b6;
+            --pink-dim: rgba(244,114,182,0.10);
             --orange: #fb923c;
             --orange-dim: rgba(251,146,60,0.10);
             --text: #D8EDEB;
@@ -79,736 +34,571 @@
             --font-en: 'Inter', sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
             background: var(--bg);
             color: var(--text);
             font-family: var(--font-bn);
-            font-size: 17px;
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
+            line-height: 1.9;
         }
 
-        .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(11,31,26,0.93);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            padding: 14px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .nav-logo { font-size: 22px; font-weight: 700; color: var(--gold); text-decoration: none; }
-        .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-        .nav-links a { color: var(--text-mid); text-decoration: none; font-size: 14px; font-family: var(--font-en); transition: color .2s; }
-        .nav-links a:hover { color: var(--gold); }
-        .nav-links .active { color: var(--gold); font-weight: 600; }
-        .nav-cta { background: var(--gold); color: #0B1F1A !important; font-weight: 600 !important; padding: 7px 16px; border-radius: 8px; }
-        .nav-cta:hover { background: #f0c85a !important; }
+        .container { max-width:1200px; margin:0 auto; padding:1.5rem 1rem; }
 
-        .hero {
-            background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
-            padding: 50px 24px 60px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: clamp(2rem, 4.5vw, 2.8rem);
-            font-weight: 800;
-            color: var(--gold);
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-        .hero .subtitle {
-            max-width: 700px;
-            margin: 0 auto 16px;
-            font-size: clamp(1rem, 1.8vw, 1.2rem);
-            color: var(--text-mid);
-            line-height: 1.8;
-        }
-        .hero .badge-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 12px;
-        }
-        .hero .badge {
-            background: rgba(255,215,0,0.10);
-            border: 1px solid rgba(255,215,0,0.25);
-            padding: 5px 16px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            color: var(--gold);
-            font-weight: 500;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 24px 80px;
-        }
-
-        .search-box {
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-        .search-box form {
-            display: flex;
-            gap: 8px;
+        /* ─── Assessment Hero ─── */
+        .assessment-hero {
             background: var(--surface);
-            border-radius: 50px;
-            padding: 6px;
-            border: 2px solid var(--border);
-            transition: border-color .3s;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
         }
-        .search-box form:focus-within { border-color: var(--gold); }
+        .assessment-hero h1 {
+            font-size: 2.8rem;
+            font-family: var(--font-en);
+        }
+        .assessment-hero h1 span {
+            color: var(--gold);
+        }
+        .assessment-hero p {
+            color: var(--text-mid);
+            max-width: 700px;
+            margin: 0.5rem auto 1.2rem;
+        }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .hero-stats .stat {
+            background: var(--gold-dim);
+            padding: 0.4rem 1.5rem;
+            border-radius: 40px;
+            color: var(--text-mid);
+            border: 1px solid var(--border);
+        }
+        .hero-stats .stat strong {
+            color: var(--gold);
+        }
+
+        /* ─── Controls ─── */
+        .assessment-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search-box {
+            flex: 1 1 280px;
+            display: flex;
+            background: var(--surface);
+            border-radius: 40px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
         .search-box input {
             flex: 1;
-            padding: 12px 20px;
-            border: none;
             background: transparent;
+            border: none;
+            padding: 0.8rem 1.2rem;
             color: var(--text);
             font-size: 1rem;
             outline: none;
-            font-family: var(--font-bn);
         }
         .search-box button {
-            padding: 12px 24px;
-            border-radius: 40px;
+            background: transparent;
             border: none;
-            background: var(--gold);
-            color: #0B1F1A;
-            font-weight: 700;
+            padding: 0.8rem 1.4rem;
+            color: var(--text-mid);
             cursor: pointer;
+        }
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .filter-tabs .tab {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-mid);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.2s;
             font-family: var(--font-en);
-            transition: background .2s;
         }
-        .search-box button:hover { background: #f0c85a; }
+        .filter-tabs .tab:hover,
+        .filter-tabs .tab.active {
+            background: var(--gold);
+            color: var(--bg);
+            border-color: var(--gold);
+        }
 
-        .category-section {
-            margin-bottom: 48px;
-        }
-        .category-title {
-            font-size: 1.6rem;
-            font-weight: 700;
+        /* ─── Section Titles ─── */
+        .section-title {
+            font-size: 1.8rem;
+            font-family: var(--font-en);
             color: var(--gold);
+            margin: 2.5rem 0 1.2rem;
+            padding-bottom: 0.4rem;
             border-bottom: 2px solid var(--border);
-            padding-bottom: 10px;
-            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 0.8rem;
         }
-        .category-title .icon { font-size: 1.8rem; }
-        .category-desc {
-            color: var(--text-mid);
-            margin-bottom: 16px;
-            font-size: 1rem;
+        .section-title .badge {
+            font-size: 0.7rem;
+            background: var(--gold-dim);
+            color: var(--gold);
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-weight: 500;
         }
 
-        .tool-grid {
+        /* ─── Test Cards ─── */
+        .test-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
-        .tool-card {
+        .test-card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 20px 22px;
+            padding: 1.5rem;
             text-decoration: none;
-            color: var(--text);
-            transition: border-color .2s, transform .2s, box-shadow .2s;
+            color: inherit;
+            transition: transform 0.2s, border-color 0.2s;
             display: flex;
             flex-direction: column;
         }
-        .tool-card:hover {
-            border-color: var(--gold);
+        .test-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        }
-        .tool-card .tool-icon { font-size: 2rem; margin-bottom: 6px; }
-        .tool-card .tool-name {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-        .tool-card .tool-desc {
-            font-size: 0.9rem;
-            color: var(--text-mid);
-            line-height: 1.6;
-            flex: 1;
-        }
-        .tool-card .tool-meta {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-            font-size: 0.7rem;
-            font-family: var(--font-en);
-            color: var(--text-soft);
-        }
-        .tool-card .tool-meta span {
-            background: var(--surface2);
-            padding: 2px 12px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-        .tool-card .tool-tag {
-            display: inline-block;
-            margin-top: 8px;
-            font-size: 0.7rem;
-            font-family: var(--font-en);
-            color: var(--gold);
-            background: var(--gold-dim);
-            padding: 2px 12px;
-            border-radius: 12px;
-            align-self: flex-start;
-            font-weight: 600;
-        }
-        .tool-card .tool-tag.hot { background: var(--red-dim); color: var(--red); }
-        .tool-card .tool-tag.new { background: var(--green-dim); color: var(--green); }
-        .tool-card .tool-tag.popular { background: var(--purple-dim); color: var(--purple); }
-        .tool-card .tool-tag.bcs { background: var(--gold-dim); color: var(--gold); }
-        .tool-card .tool-tag.ielts { background: var(--teal-dim); color: var(--teal); }
-        .tool-card .tool-tag.free { background: var(--green-dim); color: var(--green); }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 20px;
-            background: var(--surface);
-            padding: 32px 24px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            margin: 40px 0;
-        }
-        .stat-item { text-align: center; }
-        .stat-number {
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: var(--gold);
-            font-family: var(--font-en);
-        }
-        .stat-label { color: var(--text-mid); font-size: 0.9rem; margin-top: 2px; }
-
-        .related-section {
-            margin-top: 40px;
-            padding: 30px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            text-align: center;
-        }
-        .related-section h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 12px; }
-        .related-section p { color: var(--text-mid); margin-bottom: 16px; }
-        .related-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-        .related-links a {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: 30px;
-            padding: 8px 20px;
-            font-size: 0.9rem;
-            color: var(--teal);
-            text-decoration: none;
-            transition: border-color .2s, color .2s;
-            font-weight: 500;
-        }
-        .related-links a:hover {
             border-color: var(--gold);
-            color: var(--gold);
         }
-
-        .cta-banner {
-            background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
-            border: 1px solid rgba(230,184,74,0.3);
-            border-radius: 16px;
-            padding: 36px 28px;
-            text-align: center;
-            margin: 40px 0;
+        .test-card .card-icon {
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
         }
-        .cta-banner h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 8px; }
-        .cta-banner p { color: var(--text-mid); margin-bottom: 20px; font-size: 1rem; }
-        .cta-btn {
-            display: inline-block;
-            background: var(--gold);
-            color: #0B1F1A;
-            font-weight: 700;
+        .test-card h3 {
             font-family: var(--font-en);
-            padding: 13px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 15px;
-            transition: background .2s, transform .2s;
+            color: var(--text);
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
         }
-        .cta-btn:hover { background: #f0c85a; transform: translateY(-2px); }
-        .cta-features {
+        .test-card p {
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            flex: 1;
+            margin-bottom: 0.8rem;
+        }
+        .test-card .meta {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 14px;
-            margin-top: 18px;
+            gap: 0.5rem;
+            font-size: 0.75rem;
         }
-        .cta-feat { font-size: 13px; color: var(--teal); display: flex; align-items: center; gap: 5px; }
+        .test-card .meta .tag {
+            background: var(--gold-dim);
+            color: var(--gold);
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+        }
+        .test-card .meta .tag.popular {
+            background: var(--teal-dim);
+            color: var(--teal);
+            border-color: var(--teal);
+        }
 
-        .site-footer {
-            background: #060F0D;
-            border-top: 1px solid var(--border);
+        /* ─── Tools Grid ─── */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .tools-grid .tool-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.2rem;
             text-align: center;
-            padding: 40px 24px;
-            color: var(--text-soft);
-            font-size: 13px;
-            line-height: 2.2;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s;
         }
-        .site-footer a { color: var(--teal); text-decoration: none; }
-        .site-footer a:hover { color: var(--gold); }
+        .tools-grid .tool-card:hover {
+            border-color: var(--teal);
+        }
+        .tools-grid .tool-card .icon {
+            font-size: 2.2rem;
+        }
+        .tools-grid .tool-card h4 {
+            font-family: var(--font-en);
+            color: var(--text);
+            margin: 0.3rem 0 0.1rem;
+        }
+        .tools-grid .tool-card p {
+            color: var(--text-mid);
+            font-size: 0.8rem;
+        }
 
-        @media (max-width: 600px) {
-            .hero { padding: 32px 16px 40px; }
-            .hero h1 { font-size: 1.6rem; }
-            .container { padding: 24px 16px 60px; }
-            .tool-grid { grid-template-columns: 1fr; }
-            .search-box form { flex-direction: column; border-radius: var(--radius); }
-            .search-box input { border-radius: var(--radius); }
-            .search-box button { border-radius: var(--radius); }
-            .category-title { font-size: 1.3rem; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .nav-links .hide-mobile { display: none; }
+        /* ─── Daily Challenge CTA ─── */
+        .daily-challenge {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            margin: 2.5rem 0;
         }
-        @media (max-width: 400px) {
-            .stats-grid { grid-template-columns: 1fr; }
+        .daily-challenge h2 {
+            font-family: var(--font-en);
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+        .daily-challenge p {
+            color: var(--text-mid);
+            max-width: 500px;
+            margin: 0.5rem auto 1.2rem;
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--bg);
+            padding: 0.7rem 2.5rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: var(--font-en);
+            display: inline-block;
+            transition: 0.2s;
+        }
+        .btn-primary:hover {
+            opacity: 0.85;
+            transform: scale(1.02);
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 640px) {
+            .assessment-hero h1 { font-size: 2rem; }
+            .hero-stats { gap: 0.8rem; }
+            .hero-stats .stat { font-size: 0.75rem; padding: 0.3rem 1rem; }
+            .test-grid { grid-template-columns: 1fr; }
+            .tools-grid { grid-template-columns: 1fr 1fr; }
+            .assessment-controls { flex-direction: column; align-items: stretch; }
         }
     </style>
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
-<nav class="site-nav">
-    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
-    <div class="nav-links">
-        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
-        <a href="https://ovidhan.net/grammar.html">Grammar</a>
-        <a href="https://ovidhan.net/dictionary.html" class="hide-mobile">Dictionary</a>
-        <a href="https://ovidhan.net/tools.html">Tools</a>
-        <a href="https://ovidhan.net/blog.html" class="hide-mobile">Blog</a>
-        <a href="https://ovidhan.net/exam-prep.html" class="hide-mobile">Exam Prep</a>
-        <a href="https://ovidhan.net/assessment.html" class="active">🎯 Assessment</a>
-        <a href="https://ovidhan.net/journey.html">📊 Journey</a>
-        <a href="https://ovidhan.net/search.html" style="color:var(--teal);font-weight:600;">🔍 Search</a>
-        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
-    </div>
-</nav>
-
-<!-- ══ HERO ══ -->
-<section class="hero">
-    <h1>🎯 English Assessment Center</h1>
-    <p class="subtitle">
-        Free English assessment tests to find your <strong>CEFR level</strong>, assess your <strong>grammar, vocabulary, synonyms, antonyms, idioms, phrasal verbs</strong>, and practice for <strong>BCS &amp; IELTS</strong>. Get <strong>personalized weakness reports</strong> with recommendations.
-    </p>
-    <div class="badge-group">
-        <span class="badge">📋 13+ Tests</span>
-        <span class="badge">⚡ Instant Results</span>
-        <span class="badge">📊 Detailed Reports</span>
-        <span class="badge">📊 Free</span>
-    </div>
-</section>
-
-<!-- ══ MAIN ══ -->
-<div class="container">
-
-    <!-- Search -->
-    <div class="search-box">
-        <form action="search.html" method="get">
-            <input type="text" name="q" placeholder="Search tests..." />
-            <button type="submit">🔍 Search</button>
-        </form>
-    </div>
-
-    <!-- ═══ LEVEL TESTS ═══ -->
-    <section class="category-section">
-        <h2 class="category-title"><span class="icon">📊</span> Level Tests</h2>
-        <p class="category-desc">Find your English proficiency level with our comprehensive assessment tests.</p>
-
-        <div class="tool-grid">
-
-            <!-- English Level Test (CEFR) -->
-            <a href="english-level-test.html" class="tool-card" style="border-color: var(--gold);">
-                <div class="tool-icon">🌍</div>
-                <div class="tool-name">English Level Test (CEFR)</div>
-                <div class="tool-desc">Find your CEFR level (A1–C2) with a comprehensive test covering grammar, vocabulary, and reading.</div>
-                <div class="tool-meta">
-                    <span>📋 40 Questions</span>
-                    <span>⏱️ 12 min</span>
-                </div>
-                <span class="tool-tag popular">⭐ Popular</span>
-            </a>
-
-            <!-- Grammar Level Test -->
-            <a href="grammar-level-test.html" class="tool-card">
-                <div class="tool-icon">📚</div>
-                <div class="tool-name">Grammar Level Test</div>
-                <div class="tool-desc">Assess your grammar across 8 categories: Tense, Article, Preposition, Voice, Narration, SVA, and more.</div>
-                <div class="tool-meta">
-                    <span>📋 40 Questions</span>
-                    <span>⏱️ 10 min</span>
-                </div>
-                <span class="tool-tag">📝 Grammar</span>
-            </a>
-
-            <!-- Vocabulary Size Test -->
-            <a href="vocabulary-size-test.html" class="tool-card">
-                <div class="tool-icon">📖</div>
-                <div class="tool-name">Vocabulary Size Test</div>
-                <div class="tool-desc">Find out how many English words you know. Get a detailed breakdown by level.</div>
-                <div class="tool-meta">
-                    <span>📋 40 Questions</span>
-                    <span>⏱️ 5 min</span>
-                </div>
-                <span class="tool-tag">📖 Vocabulary</span>
-            </a>
-
+    <!-- Header -->
+    <header style="background:var(--bg); border-bottom:1px solid var(--border); padding:1rem 0;">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+            <a href="/" style="font-size:1.8rem; font-weight:700; color:var(--gold); text-decoration:none; font-family:var(--font-en);">📖 Ovidhan</a>
+            <nav style="display:flex; gap:1.5rem; font-family:var(--font-en);">
+                <a href="/grammar/" style="color:var(--text-mid); text-decoration:none;">Grammar</a>
+                <a href="/tools/" style="color:var(--text-mid); text-decoration:none;">Tools</a>
+                <a href="/assessment.html" style="color:var(--gold); font-weight:600; text-decoration:none;">Assessment</a>
+                <a href="/journey/" style="color:var(--text-mid); text-decoration:none;">Journey</a>
+            </nav>
+            <div style="display:flex; gap:0.5rem;">
+                <a href="/explorer.html" style="color:var(--teal); text-decoration:none; border:1px solid var(--teal); padding:0.4rem 1.2rem; border-radius:40px;">Search</a>
+                <a href="#" style="color:var(--text-mid); text-decoration:none; border:1px solid var(--border); padding:0.4rem 1.2rem; border-radius:40px;">Download</a>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <!-- ═══ VOCABULARY TESTS ═══ -->
-    <section class="category-section">
-        <h2 class="category-title"><span class="icon">📖</span> Vocabulary Tests</h2>
-        <p class="category-desc">Master synonyms, antonyms, idioms, and phrasal verbs with our focused vocabulary tests.</p>
+    <main class="container">
+        <!-- Hero -->
+        <section class="assessment-hero">
+            <h1>📊 <span>Learning Assessment Center</span></h1>
+            <p>
+                Free English assessment tests to find your <strong>CEFR level</strong>, assess your
+                <strong>grammar, vocabulary, synonyms, antonyms, idioms, phrasal verbs</strong>,
+                and practice for <strong>BCS &amp; IELTS</strong>.
+                Get <strong>personalized weakness reports</strong> with recommendations.
+            </p>
+            <div class="hero-stats">
+                <span class="stat"><strong>13+</strong> Tests</span>
+                <span class="stat"><strong>Instant</strong> Results</span>
+                <span class="stat"><strong>Detailed</strong> Reports</span>
+                <span class="stat"><strong>100%</strong> Free</span>
+            </div>
+        </section>
 
-        <div class="tool-grid">
-
-            <!-- Synonym Test -->
-            <a href="synonym-test.html" class="tool-card">
-                <div class="tool-icon">📚</div>
-                <div class="tool-name">Synonym Test</div>
-                <div class="tool-desc">20 essential synonyms frequently asked in BCS, IELTS, and Bank Job exams.</div>
-                <div class="tool-meta">
-                    <span>📋 20 Questions</span>
-                    <span>⏱️ 5 min</span>
-                </div>
-                <span class="tool-tag">📖 Vocabulary</span>
-            </a>
-
-            <!-- Antonym Test -->
-            <a href="antonym-test.html" class="tool-card">
-                <div class="tool-icon">🔄</div>
-                <div class="tool-name">Antonym Test</div>
-                <div class="tool-desc">20 essential antonyms frequently asked in BCS, IELTS, and Bank Job exams.</div>
-                <div class="tool-meta">
-                    <span>📋 20 Questions</span>
-                    <span>⏱️ 5 min</span>
-                </div>
-                <span class="tool-tag">📖 Vocabulary</span>
-            </a>
-
-            <!-- Idiom Test -->
-            <a href="idiom-test.html" class="tool-card" style="border-color: var(--gold);">
-                <div class="tool-icon">💡</div>
-                <div class="tool-name">Idiom Test</div>
-                <div class="tool-desc">40 essential English idioms frequently asked in BCS Preliminary exams. Learn meaning, usage, and practice.</div>
-                <div class="tool-meta">
-                    <span>📋 40 Questions</span>
-                    <span>⏱️ 10 min</span>
-                </div>
-                <span class="tool-tag hot">🔥 BCS</span>
-            </a>
-
-            <!-- Phrasal Verb Test -->
-            <a href="phrasal-verb-test.html" class="tool-card">
-                <div class="tool-icon">🔗</div>
-                <div class="tool-name">Phrasal Verb Test</div>
-                <div class="tool-desc">20 essential phrasal verbs frequently asked in BCS, IELTS, and Bank Job exams.</div>
-                <div class="tool-meta">
-                    <span>📋 20 Questions</span>
-                    <span>⏱️ 5 min</span>
-                </div>
-                <span class="tool-tag">📖 Vocabulary</span>
-            </a>
-<a href="root-word-finder.html" class="tool-card">
-    <div class="tool-icon">🔍</div>
-    <div class="tool-name">Root Word Finder</div>
-    <div class="tool-desc">Discover root words &amp; word families</div>
-    <span class="tool-tag">📖 Vocabulary</span>
-</a>
+        <!-- Controls -->
+        <div class="assessment-controls">
+            <div class="search-box">
+                <input type="text" id="testSearch" placeholder="Search tests..." onkeyup="filterTests()">
+                <button aria-label="Search">🔍</button>
+            </div>
+            <div class="filter-tabs">
+                <button class="tab active" data-filter="all" onclick="setFilter('all')">All</button>
+                <button class="tab" data-filter="level" onclick="setFilter('level')">Level</button>
+                <button class="tab" data-filter="diagnostic" onclick="setFilter('diagnostic')">Diagnostic</button>
+                <button class="tab" data-filter="mock" onclick="setFilter('mock')">Mock Exams</button>
+                <button class="tab" data-filter="vocabulary" onclick="setFilter('vocabulary')">Vocabulary</button>
+                <button class="tab" data-filter="grammar" onclick="setFilter('grammar')">Grammar</button>
+            </div>
         </div>
-    </section>
 
-    <!-- ═══ DIAGNOSTIC TESTS ═══ -->
-    <section class="category-section">
-        <h2 class="category-title"><span class="icon">🎯</span> Diagnostic Tests</h2>
-        <p class="category-desc">Identify your strengths and weaknesses with comprehensive diagnostic assessments.</p>
-
-        <div class="tool-grid">
-
-            <!-- BCS English Diagnostic -->
-            <a href="bcs-english-diagnostic.html" class="tool-card" style="border-color: var(--gold);">
-                <div class="tool-icon">🎓</div>
-                <div class="tool-name">BCS English Diagnostic</div>
-                <div class="tool-desc">Identify your weak areas across Grammar, Vocabulary, Idioms, Reading, and Sentence Correction with personalized recommendations.</div>
-                <div class="tool-meta">
-                    <span>📋 40 Questions</span>
-                    <span>⏱️ 15 min</span>
+        <!-- Level Tests -->
+        <h2 class="section-title" id="level-tests">
+            🎯 Level Tests
+            <span class="badge">Find your level</span>
+        </h2>
+        <div class="test-grid filter-level" data-category="level">
+            <a href="/mock-tests/general-test-1.html" class="test-card">
+                <div class="card-icon">🌍</div>
+                <h3>English Level Test (CEFR)</h3>
+                <p>Find your CEFR level (A1–C2) with a comprehensive test covering grammar, vocabulary, and reading.</p>
+                <div class="meta">
+                    <span class="tag">40 Questions</span>
+                    <span class="tag popular">12 min</span>
+                    <span class="tag popular">Popular</span>
                 </div>
-                <span class="tool-tag hot">🔥 BCS</span>
             </a>
-
-            <!-- IELTS Diagnostic -->
-            <a href="ielts-diagnostic.html" class="tool-card" style="border-color: var(--teal);">
-                <div class="tool-icon">🌍</div>
-                <div class="tool-name">IELTS Diagnostic Test</div>
-                <div class="tool-desc">Estimate your IELTS Band Score across Reading, Writing, Listening, Speaking, Grammar, and Vocabulary.</div>
-                <div class="tool-meta">
-                    <span>📋 40 Questions</span>
-                    <span>⏱️ 15 min</span>
+            <a href="/mock-tests/grammar-test-2.html" class="test-card">
+                <div class="card-icon">📝</div>
+                <h3>Grammar Level Test</h3>
+                <p>Assess your grammar across 8 categories: Tense, Article, Preposition, Voice, Narration, SVA, and more.</p>
+                <div class="meta">
+                    <span class="tag">40 Questions</span>
+                    <span class="tag popular">10 min</span>
+                    <span class="tag popular">Popular</span>
                 </div>
-                <span class="tool-tag ielts">🌍 IELTS</span>
             </a>
-
         </div>
-    </section>
 
-    <!-- ═══ EXAM PRACTICE ═══ -->
-    <section class="category-section">
-        <h2 class="category-title"><span class="icon">📝</span> Exam Practice</h2>
-        <p class="category-desc">Practice with full-length mock tests for BCS, IELTS, Bank Jobs, and University Admission.</p>
-
-        <div class="tool-grid">
-
-            <!-- BCS English Mock Test -->
-            <a href="bcs-english-mock-test.html" class="tool-card" style="border-color: var(--gold);">
-                <div class="tool-icon">📝</div>
-                <div class="tool-name">BCS English Mock Test</div>
-                <div class="tool-desc">35 MCQ questions covering vocabulary, grammar, idioms, and sentence correction for BCS Preliminary.</div>
-                <div class="tool-meta">
-                    <span>📋 35 Questions</span>
-                    <span>⏱️ 20 min</span>
+        <!-- Diagnostic -->
+        <h2 class="section-title" id="diagnostic-tests">
+            🩺 Diagnostic Tests
+            <span class="badge">Identify weaknesses</span>
+        </h2>
+        <div class="test-grid filter-diagnostic" data-category="diagnostic">
+            <a href="/mock-tests/bcs-test-1.html" class="test-card">
+                <div class="card-icon">🎓</div>
+                <h3>BCS English Diagnostic</h3>
+                <p>Identify your weak areas across Grammar, Vocabulary, Idioms, Reading, and Sentence Correction with personalized recommendations.</p>
+                <div class="meta">
+                    <span class="tag">40 Questions</span>
+                    <span class="tag">15 min</span>
+                    <span class="tag">BCS</span>
                 </div>
-                <span class="tool-tag hot">🔥 BCS</span>
             </a>
-
+            <a href="/mock-tests/ielts-test-1.html" class="test-card">
+                <div class="card-icon">🎧</div>
+                <h3>IELTS Diagnostic Test</h3>
+                <p>Estimate your IELTS Band Score across Reading, Writing, Listening, Speaking, Grammar, and Vocabulary.</p>
+                <div class="meta">
+                    <span class="tag">40 Questions</span>
+                    <span class="tag">15 min</span>
+                    <span class="tag">IELTS</span>
+                </div>
+            </a>
         </div>
-    </section>
 
-    <!-- ═══ PRACTICE TOOLS ═══ -->
-    <section class="category-section">
-        <h2 class="category-title"><span class="icon">🛠️</span> Practice Tools</h2>
-        <p class="category-desc">Practice with interactive tools that help you identify and correct errors, analyze sentences, and build vocabulary.</p>
-
-        <div class="tool-grid">
-
-            <!-- Sentence Analyzer -->
-            <a href="sentence-analyzer.html" class="tool-card">
-                <div class="tool-icon">🔍</div>
-                <div class="tool-name">Sentence Analyzer</div>
-                <div class="tool-desc">Analyze any English sentence and get subject, verb, tense, voice, and grammar mistakes instantly.</div>
-                <div class="tool-meta">
-                    <span>⚡ Instant</span>
+        <!-- Mock Exams -->
+        <h2 class="section-title" id="mock-exams">
+            📝 Mock Exams
+            <span class="badge">Full practice</span>
+        </h2>
+        <div class="test-grid filter-mock" data-category="mock">
+            <a href="/mock-tests/bcs-test-1.html" class="test-card">
+                <div class="card-icon">📚</div>
+                <h3>BCS English Mock Test</h3>
+                <p>35 MCQ questions covering vocabulary, grammar, idioms, and sentence correction for BCS Preliminary.</p>
+                <div class="meta">
+                    <span class="tag">35 Questions</span>
+                    <span class="tag">20 min</span>
+                    <span class="tag">BCS</span>
                 </div>
-                <span class="tool-tag">📝 Grammar</span>
             </a>
-
-            <!-- Parts of Speech Identifier -->
-            <a href="parts-of-speech-identifier.html" class="tool-card">
-                <div class="tool-icon">📝</div>
-                <div class="tool-name">Parts of Speech Identifier</div>
-                <div class="tool-desc">Tag each word in an English sentence with its part of speech – noun, verb, adjective, and more.</div>
-                <div class="tool-meta">
-                    <span>⚡ Instant</span>
+            <a href="/mock-tests/ielts-test-1.html" class="test-card">
+                <div class="card-icon">🌏</div>
+                <h3>IELTS Mock Test</h3>
+                <p>Full IELTS-style practice covering Reading, Writing, Listening, and Speaking modules.</p>
+                <div class="meta">
+                    <span class="tag">40 Questions</span>
+                    <span class="tag">25 min</span>
+                    <span class="tag">IELTS</span>
                 </div>
-                <span class="tool-tag">📝 Grammar</span>
             </a>
-
-            <!-- Common Mistake Detector -->
-            <a href="common-mistake-detector.html" class="tool-card">
-                <div class="tool-icon">⚠️</div>
-                <div class="tool-name">Common Mistake Detector</div>
-                <div class="tool-desc">Find subject-verb agreement errors, tense issues, article mistakes, and more in any sentence.</div>
-                <div class="tool-meta">
-                    <span>⚡ Instant</span>
+            <a href="/mock-tests/hsc-test-1.html" class="test-card">
+                <div class="card-icon">📖</div>
+                <h3>HSC English Mock Test</h3>
+                <p>Practice for HSC English with grammar, comprehension, and writing questions.</p>
+                <div class="meta">
+                    <span class="tag">30 Questions</span>
+                    <span class="tag">15 min</span>
+                    <span class="tag">HSC</span>
                 </div>
-                <span class="tool-tag">📝 Grammar</span>
             </a>
-
-            <!-- Grammar Quiz -->
-            <a href="grammar-quiz.html" class="tool-card">
-                <div class="tool-icon">🧠</div>
-                <div class="tool-name">Grammar Quiz</div>
-                <div class="tool-desc">50+ multiple-choice questions covering all grammar topics with detailed explanations.</div>
-                <div class="tool-meta">
-                    <span>📋 50+ Qs</span>
+            <a href="/mock-tests/ssc-test-1.html" class="test-card">
+                <div class="card-icon">📗</div>
+                <h3>SSC English Mock Test</h3>
+                <p>Simpler level practice for SSC English grammar and vocabulary.</p>
+                <div class="meta">
+                    <span class="tag">25 Questions</span>
+                    <span class="tag">12 min</span>
+                    <span class="tag">SSC</span>
                 </div>
-                <span class="tool-tag">📝 Quiz</span>
             </a>
-
-            <!-- Vocabulary Quiz -->
-            <a href="vocabulary-quiz.html" class="tool-card">
-                <div class="tool-icon">📝</div>
-                <div class="tool-name">Vocabulary Quiz</div>
-                <div class="tool-desc">100+ words with Bangla meanings — test and expand your vocabulary.</div>
-                <div class="tool-meta">
-                    <span>📋 100+ Words</span>
-                </div>
-                <span class="tool-tag">📖 Vocabulary</span>
-            </a>
-
-            <!-- Tense Quiz -->
-            <a href="tense-quiz.html" class="tool-card">
-                <div class="tool-icon">⏳</div>
-                <div class="tool-name">Tense Quiz</div>
-                <div class="tool-desc">Practice all 12 English tenses with 50+ questions and instant feedback.</div>
-                <div class="tool-meta">
-                    <span>📋 50+ Qs</span>
-                </div>
-                <span class="tool-tag">📝 Grammar</span>
-            </a>
-
-            <!-- Articles Quiz -->
-            <a href="articles-quiz.html" class="tool-card">
-                <div class="tool-icon">📋</div>
-                <div class="tool-name">Articles Quiz</div>
-                <div class="tool-desc">Practice A, An, The, and Zero article with interactive questions.</div>
-                <div class="tool-meta">
-                    <span>📋 30+ Qs</span>
-                </div>
-                <span class="tool-tag">📝 Grammar</span>
-            </a>
-
-            <!-- Preposition Quiz -->
-            <a href="preposition-quiz.html" class="tool-card">
-                <div class="tool-icon">📍</div>
-                <div class="tool-name">Preposition Quiz</div>
-                <div class="tool-desc">45+ questions to master prepositions with rules and examples.</div>
-                <div class="tool-meta">
-                    <span>📋 45+ Qs</span>
-                </div>
-                <span class="tool-tag">📝 Grammar</span>
-            </a>
-
-            <!-- Subject-Verb Quiz -->
-            <a href="subject-verb-quiz.html" class="tool-card">
-                <div class="tool-icon">📝</div>
-                <div class="tool-name">Subject-Verb Agreement Quiz</div>
-                <div class="tool-desc">50+ questions to master subject-verb agreement rules.</div>
-                <div class="tool-meta">
-                    <span>📋 50+ Qs</span>
-                </div>
-                <span class="tool-tag">📝 Grammar</span>
-            </a>
-
-            <!-- Grammar Practice Generator -->
-            <a href="grammar-practice-generator.html" class="tool-card">
-                <div class="tool-icon">⚙️</div>
-                <div class="tool-name">Grammar Practice Generator</div>
-                <div class="tool-desc">Generate custom grammar practice exercises with instant answers.</div>
-                <div class="tool-meta">
-                    <span>⚡ Custom</span>
-                </div>
-                <span class="tool-tag">📝 Practice</span>
-            </a>
-
-            <!-- Verb Forms Tool -->
-            <a href="verb-forms.html" class="tool-card">
-                <div class="tool-icon">🔤</div>
-                <div class="tool-name">Verb Forms Tool</div>
-                <div class="tool-desc">Search any verb and see its 5 forms (V1, V2, V3, V4, V5) with Bangla meaning.</div>
-                <div class="tool-meta">
-                    <span>📚 100+ Verbs</span>
-                </div>
-                <span class="tool-tag">🔤 Reference</span>
-            </a>
-
-            <!-- Irregular Verbs List -->
-            <a href="irregular-verbs-list.html" class="tool-card">
-                <div class="tool-icon">📚</div>
-                <div class="tool-name">Irregular Verbs List</div>
-                <div class="tool-desc">200+ irregular verbs with Bangla meanings and example sentences.</div>
-                <div class="tool-meta">
-                    <span>📚 200+ Verbs</span>
-                </div>
-                <span class="tool-tag">📚 Reference</span>
-            </a>
-
-            <!-- Plural Maker -->
-            <a href="plural-maker.html" class="tool-card">
-                <div class="tool-icon">🔢</div>
-                <div class="tool-name">Plural Maker</div>
-                <div class="tool-desc">Convert singular nouns to plural form with rules and exceptions.</div>
-                <div class="tool-meta">
-                    <span>⚡ Instant</span>
-                </div>
-                <span class="tool-tag">🔢 Reference</span>
-            </a>
-
         </div>
-    </section>
 
-    <!-- ═══ STATISTICS ═══ -->
-    <div class="stats-grid">
-        <div class="stat-item"><div class="stat-number">13</div><div class="stat-label">Assessment Tests</div></div>
-        <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Practice Questions</div></div>
-        <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Categories</div></div>
-        <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Free</div></div>
-    </div>
-
-    <!-- ═══ RELATED SECTIONS ═══ -->
-    <div class="related-section">
-        <h3>📚 Explore More Learning Resources</h3>
-        <p>Complement your assessment with our comprehensive guides and tools.</p>
-        <div class="related-links">
-            <a href="grammar.html">Grammar Hub</a>
-            <a href="tools.html">Tools Hub</a>
-            <a href="dictionary.html">Dictionary</a>
-            <a href="search.html">Search Everything</a>
-            <a href="exam-prep.html">Exam Prep</a>
-            <a href="journey.html">📊 Journey Dashboard</a>
+        <!-- Vocabulary Tests -->
+        <h2 class="section-title" id="vocabulary-tests">
+            🧠 Vocabulary Tests
+            <span class="badge">Master words</span>
+        </h2>
+        <div class="test-grid filter-vocabulary" data-category="vocabulary">
+            <a href="/mock-tests/vocabulary-test-5.html" class="test-card">
+                <div class="card-icon">📊</div>
+                <h3>Vocabulary Size Test</h3>
+                <p>Find out how many English words you know. Get a detailed breakdown by level.</p>
+                <div class="meta">
+                    <span class="tag">40 Questions</span>
+                    <span class="tag">5 min</span>
+                    <span class="tag">Vocabulary</span>
+                </div>
+            </a>
+            <a href="/mock-tests/vocabulary-test-1.html" class="test-card">
+                <div class="card-icon">🔗</div>
+                <h3>Synonym Test</h3>
+                <p>20 essential synonyms frequently asked in BCS, IELTS, and Bank Job exams.</p>
+                <div class="meta">
+                    <span class="tag">20 Questions</span>
+                    <span class="tag">5 min</span>
+                    <span class="tag">Vocabulary</span>
+                </div>
+            </a>
+            <a href="/mock-tests/vocabulary-test-2.html" class="test-card">
+                <div class="card-icon">🔀</div>
+                <h3>Antonym Test</h3>
+                <p>20 essential antonyms frequently asked in BCS, IELTS, and Bank Job exams.</p>
+                <div class="meta">
+                    <span class="tag">20 Questions</span>
+                    <span class="tag">5 min</span>
+                    <span class="tag">Vocabulary</span>
+                </div>
+            </a>
+            <a href="/mock-tests/vocabulary-test-3.html" class="test-card">
+                <div class="card-icon">💬</div>
+                <h3>Idiom Test</h3>
+                <p>40 essential English idioms frequently asked in BCS Preliminary exams. Learn meaning, usage, and practice.</p>
+                <div class="meta">
+                    <span class="tag">40 Questions</span>
+                    <span class="tag">10 min</span>
+                    <span class="tag">BCS</span>
+                </div>
+            </a>
+            <a href="/mock-tests/vocabulary-test-4.html" class="test-card">
+                <div class="card-icon">🔑</div>
+                <h3>Phrasal Verb Test</h3>
+                <p>20 essential phrasal verbs frequently asked in BCS, IELTS, and Bank Job exams.</p>
+                <div class="meta">
+                    <span class="tag">20 Questions</span>
+                    <span class="tag">5 min</span>
+                    <span class="tag">Vocabulary</span>
+                </div>
+            </a>
         </div>
-    </div>
 
-    <!-- ═══ CTA BANNER ═══ -->
-    <div class="cta-banner">
-        <h3>📱 Practice on the Go – Download Ovidhan App</h3>
-        <p>Get 12,658+ words, grammar guides, quizzes, and practice tools – all in one app. 100% free.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank" rel="noopener">
-            📥 Download Ovidhan Now
-        </a>
-        <div class="cta-features">
-            <span class="cta-feat">✅ 100% Offline</span>
-            <span class="cta-feat">✅ 12,658+ Words</span>
-            <span class="cta-feat">✅ BCS / IELTS / Bank</span>
-            <span class="cta-feat">✅ Free</span>
+        <!-- Grammar Tests -->
+        <h2 class="section-title" id="grammar-tests">
+            ✍️ Grammar Tests
+            <span class="badge">Build confidence</span>
+        </h2>
+        <div class="test-grid filter-grammar" data-category="grammar">
+            <a href="/mock-tests/grammar-test-1.html" class="test-card">
+                <div class="card-icon">📝</div>
+                <h3>Grammar Quiz</h3>
+                <p>50+ multiple-choice questions covering all grammar topics with detailed explanations.</p>
+                <div class="meta">
+                    <span class="tag">50+ Qs</span>
+                    <span class="tag">Quiz</span>
+                </div>
+            </a>
+            <a href="/mock-tests/vocabulary-test-1.html" class="test-card">
+                <div class="card-icon">📚</div>
+                <h3>Vocabulary Quiz</h3>
+                <p>100+ words with Bangla meanings — test and expand your English vocabulary.</p>
+                <div class="meta">
+                    <span class="tag">100+ Qs</span>
+                    <span class="tag">Quiz</span>
+                </div>
+            </a>
         </div>
-    </div>
 
-</div>
+        <!-- Tools -->
+        <h2 class="section-title" id="tools">
+            🛠️ Practice Tools
+            <span class="badge">Interactive</span>
+        </h2>
+        <div class="tools-grid">
+            <a href="/common-mistake-detector.html" class="tool-card">
+                <div class="icon">🔍</div>
+                <h4>Common Mistake Detector</h4>
+                <p>Find subject-verb agreement, tense, article mistakes instantly.</p>
+            </a>
+            <a href="/sentence-analyzer.html" class="tool-card">
+                <div class="icon">📊</div>
+                <h4>Sentence Analyzer</h4>
+                <p>Get subject, verb, tense, voice, and grammar mistakes instantly.</p>
+            </a>
+            <a href="/parts-of-speech.html" class="tool-card">
+                <div class="icon">🏷️</div>
+                <h4>Parts of Speech Identifier</h4>
+                <p>Tag each word with its part of speech – noun, verb, adjective, and more.</p>
+            </a>
+            <a href="/root-word-finder.html" class="tool-card">
+                <div class="icon">🌱</div>
+                <h4>Root Word Finder</h4>
+                <p>Discover root words &amp; word families.</p>
+            </a>
+        </div>
 
-<!-- ══ FOOTER ══ -->
-<footer class="site-footer">
-    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary &amp; Learning App</p>
-    <p>
-        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
-        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
-        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
-        <a href="https://ovidhan.net/blog.html">Blog</a> &nbsp;•&nbsp;
-        <a href="https://ovidhan.net/assessment.html">Assessment</a> &nbsp;•&nbsp;
-        <a href="https://ovidhan.net/journey.html">Journey</a> &nbsp;•&nbsp;
-        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
-        <a href="https://ovidhan.net/privacy.html">Privacy Policy</a>
-    </p>
-    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
-</footer>
+        <!-- Daily Challenge -->
+        <div class="daily-challenge">
+            <h2>🔥 Daily Challenge</h2>
+            <p>Test yourself with 5 random questions every day. Build your streak!</p>
+            <a href="/mock-tests/daily-challenge.html" class="btn-primary">Start Today's Challenge →</a>
+        </div>
+    </main>
 
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--border); padding:2rem 1rem; text-align:center; color:var(--text-soft); font-size:0.85rem; margin-top:2rem;">
+        <p>© 2026 <strong style="color:var(--gold);">Ovidhan</strong> — English to Bangla Dictionary &amp; Learning Ecosystem<br>Built for Bangladeshi students 🇧🇩</p>
+    </footer>
+
+    <script>
+        let currentFilter = 'all';
+        function setFilter(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-tabs .tab').forEach(el => {
+                el.classList.toggle('active', el.dataset.filter === filter);
+            });
+            applyFilters();
+        }
+        function filterTests() { applyFilters(); }
+        function applyFilters() {
+            const searchTerm = document.getElementById('testSearch').value.toLowerCase().trim();
+            document.querySelectorAll('.test-card').forEach(card => {
+                const grid = card.closest('.test-grid');
+                const category = grid ? grid.dataset.category : 'all';
+                const title = card.querySelector('h3')?.textContent?.toLowerCase() || '';
+                const desc = card.querySelector('p')?.textContent?.toLowerCase() || '';
+                const meta = card.textContent.toLowerCase();
+                const filterMatch = (currentFilter === 'all' || category === currentFilter);
+                const searchMatch = (searchTerm === '' || title.includes(searchTerm) || desc.includes(searchTerm) || meta.includes(searchTerm));
+                card.style.display = (filterMatch && searchMatch) ? 'flex' : 'none';
+            });
+        }
+        setFilter('all');
+    </script>
 </body>
 </html>
