@@ -1050,69 +1050,70 @@
     //  HOMEPAGE – Auto-Load Latest 6 Articles from search-index.json
     // ─────────────────────────────────────────────────────────────
 
-    async function loadLatestArticles() {
-        const grid = document.getElementById('blogGrid');
+async function loadLatestArticles() {
+    const grid = document.getElementById('blogGrid');
 
-        try {
-            const response = await fetch('search-index.json');
-            if (!response.ok) throw new Error('Failed to load articles');
+    try {
+        // ─── Load from blog-posts.js instead ───
+        const response = await fetch('blog-posts.js');
+        if (!response.ok) throw new Error('Failed to load articles');
 
-            const articles = await response.json();
+        // Evaluate the JavaScript file to get the blogPosts array
+        const scriptContent = await response.text();
+        eval(scriptContent); // This creates the blogPosts variable
 
-            // Filter out non-article entries
-            const excludedIds = ['grammar-hub', 'tools-hub', 'assessment-hub', 'dashboard', 'journey', 'dictionary'];
-            const filteredArticles = articles.filter(item =>
-                item.date &&
-                item.url &&
-                !excludedIds.includes(item.id)
-            );
+        // blogPosts is now available
+        const articles = blogPosts;
 
-            // Sort by date (newest first)
-            filteredArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-            // Take only the 6 most recent
-            const latest = filteredArticles.slice(0, 6);
-
-            if (latest.length === 0) {
-                grid.innerHTML = `
-                    <div style="grid-column:1/-1;text-align:center;color:var(--text-mid);padding:40px;">
-                        📝 No articles found. Check back soon!
-                    </div>
-                `;
-                return;
-            }
-
-            grid.innerHTML = latest.map(article => {
-                const categoryClass = (article.category || 'General').toLowerCase();
-                const emoji = article.emoji || '📄';
-                const date = article.date ? formatDate(article.date) : 'Recent';
-                const description = article.description || 'Read this article to improve your English.';
-                const url = article.url || '#';
-
-                // Ensure category class is valid for CSS
-                const validCategories = ['grammar', 'vocabulary', 'speaking', 'exam', 'general'];
-                const catClass = validCategories.includes(categoryClass) ? categoryClass : 'general';
-
-                return `
-                    <a href="${url}" class="blog-card">
-                        <span class="category-tag ${catClass}">${emoji} ${article.category || 'General'}</span>
-                        <div class="date">${date}</div>
-                        <h3>${article.title}</h3>
-                        <p>${description}</p>
-                        <span class="read-more">Read More →</span>
-                    </a>
-                `;
-            }).join('');
-
-        } catch (error) {
-            console.error('Error loading articles:', error);
+        if (!articles || articles.length === 0) {
             grid.innerHTML = `
                 <div style="grid-column:1/-1;text-align:center;color:var(--text-mid);padding:40px;">
-                    ⚠️ Could not load articles. Please refresh the page.
+                    📝 No articles found. Check back soon!
                 </div>
             `;
+            return;
         }
+
+        // Sort by date (newest first)
+        const sorted = [...articles].sort((a, b) => {
+            const dateA = new Date(a.date_iso || a.date);
+            const dateB = new Date(b.date_iso || b.date);
+            return dateB - dateA;
+        });
+
+        // Take only the 6 most recent
+        const latest = sorted.slice(0, 6);
+
+        grid.innerHTML = latest.map(article => {
+            const categoryClass = (article.category || 'general').toLowerCase();
+            const emoji = article.emoji || '📄';
+            const date = article.date || 'Recent';
+            const description = article.description || 'Read this article to improve your English.';
+            const url = article.url || '#';
+
+            const validCategories = ['grammar', 'vocabulary', 'speaking', 'exam', 'general'];
+            const catClass = validCategories.includes(categoryClass) ? categoryClass : 'general';
+
+            return `
+                <a href="${url}" class="blog-card">
+                    <span class="category-tag ${catClass}">${emoji} ${article.category || 'General'}</span>
+                    <div class="date">${date}</div>
+                    <h3>${article.title}</h3>
+                    <p>${description}</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+            `;
+        }).join('');
+
+    } catch (error) {
+        console.error('Error loading articles:', error);
+        grid.innerHTML = `
+            <div style="grid-column:1/-1;text-align:center;color:var(--text-mid);padding:40px;">
+                ⚠️ Could not load articles. Please refresh the page.
+            </div>
+        `;
     }
+}
 
     function formatDate(dateStr) {
         if (!dateStr) return 'Recent';
