@@ -2,7 +2,7 @@
   "version": "2.0",
   "metadata": {
     "total_questions": 40,
-    "generated_on": "2026-07-14T17:01:43.482826Z",
+    "generated_on": "2026-07-14T17:53:23.028255Z",
     "schema": "Ovidhan Question Bank Specification v2.0"
   },
   "questions": [
@@ -40,7 +40,7 @@
         "gone → Past Participle (needs has/have).",
         "going → Continuous (needs was/is)."
       ],
-      "related_article": "/grammar/past-simple-tense-bangla.html",
+      "related_article": "/past-simple-tense-bangla.html",
       "related_words": [
         "go",
         "went",
@@ -49,7 +49,7 @@
       "learning_links": [
         "/word/go.html",
         "/word/went.html",
-        "/grammar/past-simple-tense-bangla.html"
+        "/past-simple-tense-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -92,13 +92,13 @@
         "on → Days/Dates.",
         "for → Duration."
       ],
-      "related_article": "/grammar/prepositions-of-time-bangla.html",
+      "related_article": "/prepositions-of-time-bangla.html",
       "related_words": [
         "time",
         "morning"
       ],
       "learning_links": [
-        "/grammar/prepositions-of-time-bangla.html"
+        "/prepositions-of-time-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -141,13 +141,13 @@
         "had → Past",
         "having → Continuous"
       ],
-      "related_article": "/grammar/present-simple-tense-bangla.html",
+      "related_article": "/present-simple-tense-bangla.html",
       "related_words": [
         "breakfast",
         "morning"
       ],
       "learning_links": [
-        "/grammar/present-simple-tense-bangla.html"
+        "/present-simple-tense-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -190,13 +190,13 @@
         "goes → Present third person",
         "going → Continuous"
       ],
-      "related_article": "/grammar/past-simple-tense-bangla.html",
+      "related_article": "/past-simple-tense-bangla.html",
       "related_words": [
         "cinema",
         "yesterday"
       ],
       "learning_links": [
-        "/grammar/past-simple-tense-bangla.html"
+        "/past-simple-tense-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -239,13 +239,13 @@
         "am finishing → Present continuous",
         "had finished → Past perfect"
       ],
-      "related_article": "/grammar/present-perfect-tense-bangla.html",
+      "related_article": "/present-perfect-tense-bangla.html",
       "related_words": [
         "homework",
         "just"
       ],
       "learning_links": [
-        "/grammar/present-perfect-tense-bangla.html"
+        "/present-perfect-tense-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -288,13 +288,13 @@
         "goes → Present third person",
         "went → Past"
       ],
-      "related_article": "/grammar/future-tense-bangla.html",
+      "related_article": "/future-tense-bangla.html",
       "related_words": [
         "zoo",
         "Sunday"
       ],
       "learning_links": [
-        "/grammar/future-tense-bangla.html"
+        "/future-tense-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -337,13 +337,13 @@
         "had watched → Past Perfect",
         "have watched → Present Perfect"
       ],
-      "related_article": "/grammar/past-continuous-tense-bangla.html",
+      "related_article": "/past-continuous-tense-bangla.html",
       "related_words": [
         "TV",
         "phone"
       ],
       "learning_links": [
-        "/grammar/past-continuous-tense-bangla.html"
+        "/past-continuous-tense-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -385,13 +385,13 @@
         "were → Past plural",
         "have → Incorrect auxiliary"
       ],
-      "related_article": "/grammar/subject-verb-agreement-bangla.html",
+      "related_article": "/subject-verb-agreement-bangla.html",
       "related_words": [
         "list",
         "items"
       ],
       "learning_links": [
-        "/grammar/subject-verb-agreement-bangla.html"
+        "/subject-verb-agreement-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -433,13 +433,13 @@
         "was living → Past Continuous",
         "had lived → Past Perfect"
       ],
-      "related_article": "/grammar/present-perfect-tense-bangla.html",
+      "related_article": "/present-perfect-tense-bangla.html",
       "related_words": [
         "live",
         "since"
       ],
       "learning_links": [
-        "/grammar/present-perfect-tense-bangla.html"
+        "/present-perfect-tense-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -481,13 +481,13 @@
         "at → Specific times",
         "by → Deadline"
       ],
-      "related_article": "/grammar/prepositions-of-time-bangla.html",
+      "related_article": "/prepositions-of-time-bangla.html",
       "related_words": [
         "Monday",
         "meet"
       ],
       "learning_links": [
-        "/grammar/prepositions-of-time-bangla.html"
+        "/prepositions-of-time-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -529,13 +529,13 @@
         "was explained → Past passive",
         "explained → Simple past (tense mismatch)"
       ],
-      "related_article": "/grammar/voice-change-rules-bangla.html",
+      "related_article": "/voice-change-rules-bangla.html",
       "related_words": [
         "teacher",
         "explain"
       ],
       "learning_links": [
-        "/grammar/voice-change-rules-bangla.html"
+        "/voice-change-rules-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -577,7 +577,7 @@
         "Scarce → Opposite",
         "Limited → Opposite"
       ],
-      "related_article": "/grammar/synonyms-antonyms-bangla.html",
+      "related_article": "/synonyms-antonyms-bangla.html",
       "related_words": [
         "abundant",
         "plentiful"
@@ -625,7 +625,7 @@
         "Charitable → Similar",
         "Benevolent → Similar"
       ],
-      "related_article": "/grammar/synonyms-antonyms-bangla.html",
+      "related_article": "/synonyms-antonyms-bangla.html",
       "related_words": [
         "generous",
         "stingy"
@@ -673,13 +673,13 @@
         "Delicious → Literal meaning",
         "Expensive → Unrelated"
       ],
-      "related_article": "/grammar/idioms-phrases-bangla.html",
+      "related_article": "/idioms-phrases-bangla.html",
       "related_words": [
         "cake",
         "easy"
       ],
       "learning_links": [
-        "/grammar/idioms-phrases-bangla.html"
+        "/idioms-phrases-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -721,13 +721,13 @@
         "Painful → Literal",
         "Tiring → Unrelated"
       ],
-      "related_article": "/grammar/idioms-phrases-bangla.html",
+      "related_article": "/idioms-phrases-bangla.html",
       "related_words": [
         "expensive",
         "cost"
       ],
       "learning_links": [
-        "/grammar/idioms-phrases-bangla.html"
+        "/idioms-phrases-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -769,13 +769,13 @@
         "Start → Opposite",
         "Increase → Unrelated"
       ],
-      "related_article": "/grammar/phrasal-verbs-bangla.html",
+      "related_article": "/phrasal-verbs-bangla.html",
       "related_words": [
         "give",
         "surrender"
       ],
       "learning_links": [
-        "/grammar/phrasal-verbs-bangla.html"
+        "/phrasal-verbs-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -817,13 +817,13 @@
         "Ignore → Opposite",
         "Avoid → Opposite"
       ],
-      "related_article": "/grammar/phrasal-verbs-bangla.html",
+      "related_article": "/phrasal-verbs-bangla.html",
       "related_words": [
         "look",
         "forward"
       ],
       "learning_links": [
-        "/grammar/phrasal-verbs-bangla.html"
+        "/phrasal-verbs-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -865,13 +865,13 @@
         "were → Past plural.",
         "have → Incorrect auxiliary."
       ],
-      "related_article": "/grammar/subject-verb-agreement-bangla.html",
+      "related_article": "/subject-verb-agreement-bangla.html",
       "related_words": [
         "list",
         "items"
       ],
       "learning_links": [
-        "/grammar/subject-verb-agreement-bangla.html"
+        "/subject-verb-agreement-bangla.html"
       ],
       "verified": false,
       "editorial_status": "Draft",
@@ -911,13 +911,13 @@
         "will help → Future",
         "help → Present"
       ],
-      "related_article": "/grammar/conditional-sentences-bangla.html",
+      "related_article": "/conditional-sentences-bangla.html",
       "related_words": [
         "inform",
         "help"
       ],
       "learning_links": [
-        "/grammar/conditional-sentences-bangla.html"
+        "/conditional-sentences-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -957,13 +957,13 @@
         "has broken → Present perfect (incorrect voice)",
         "were broken → Plural verb (incorrect)"
       ],
-      "related_article": "/grammar/voice-change-rules-bangla.html",
+      "related_article": "/voice-change-rules-bangla.html",
       "related_words": [
         "boy",
         "window"
       ],
       "learning_links": [
-        "/grammar/voice-change-rules-bangla.html"
+        "/voice-change-rules-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1003,13 +1003,13 @@
         "he is happy → Tense unchanged",
         "I was happy → Pronoun unchanged"
       ],
-      "related_article": "/grammar/narration-rules-bangla.html",
+      "related_article": "/narration-rules-bangla.html",
       "related_words": [
         "say",
         "happy"
       ],
       "learning_links": [
-        "/grammar/narration-rules-bangla.html"
+        "/narration-rules-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1049,13 +1049,13 @@
         "the → Definite article (not needed)",
         "no article → Incorrect"
       ],
-      "related_article": "/grammar/articles-rules-bangla.html",
+      "related_article": "/articles-rules-bangla.html",
       "related_words": [
         "honest",
         "man"
       ],
       "learning_links": [
-        "/grammar/articles-rules-bangla.html"
+        "/articles-rules-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1095,13 +1095,13 @@
         "on → Incorrect",
         "for → Incorrect"
       ],
-      "related_article": "/grammar/prepositions-bangla.html",
+      "related_article": "/prepositions-bangla.html",
       "related_words": [
         "interested",
         "music"
       ],
       "learning_links": [
-        "/grammar/prepositions-bangla.html"
+        "/prepositions-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1141,13 +1141,13 @@
         "were → Past plural",
         "have → Incorrect"
       ],
-      "related_article": "/grammar/subject-verb-agreement-bangla.html",
+      "related_article": "/subject-verb-agreement-bangla.html",
       "related_words": [
         "team",
         "playing"
       ],
       "learning_links": [
-        "/grammar/subject-verb-agreement-bangla.html"
+        "/subject-verb-agreement-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1187,13 +1187,13 @@
         "Political change → Not argued",
         "Personal story → Not told"
       ],
-      "related_article": "/grammar/ielts-reading-tips-bangla.html",
+      "related_article": "/ielts-reading-tips-bangla.html",
       "related_words": [
         "passage",
         "main idea"
       ],
       "learning_links": [
-        "/grammar/ielts-reading-tips-bangla.html"
+        "/ielts-reading-tips-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1233,13 +1233,13 @@
         "was → Informal but accepted",
         "will be → Future (incorrect)"
       ],
-      "related_article": "/grammar/conditional-sentences-bangla.html",
+      "related_article": "/conditional-sentences-bangla.html",
       "related_words": [
         "rich",
         "travel"
       ],
       "learning_links": [
-        "/grammar/conditional-sentences-bangla.html"
+        "/conditional-sentences-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1279,13 +1279,13 @@
         "because → Reason",
         "despite → Contrast"
       ],
-      "related_article": "/grammar/linking-words-bangla.html",
+      "related_article": "/linking-words-bangla.html",
       "related_words": [
         "failed",
         "repeated"
       ],
       "learning_links": [
-        "/grammar/linking-words-bangla.html"
+        "/linking-words-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1325,13 +1325,13 @@
         "finds → Verb (third person)",
         "found → Verb (past tense)"
       ],
-      "related_article": "/grammar/academic-vocabulary-bangla.html",
+      "related_article": "/academic-vocabulary-bangla.html",
       "related_words": [
         "research",
         "findings"
       ],
       "learning_links": [
-        "/grammar/academic-vocabulary-bangla.html"
+        "/academic-vocabulary-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1371,13 +1371,13 @@
         "do → Incorrect collocation",
         "give → Incorrect collocation"
       ],
-      "related_article": "/grammar/collocations-bangla.html",
+      "related_article": "/collocations-bangla.html",
       "related_words": [
         "measures",
         "pollution"
       ],
       "learning_links": [
-        "/grammar/collocations-bangla.html"
+        "/collocations-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1417,13 +1417,13 @@
         "went → Past",
         "going → Continuous"
       ],
-      "related_article": "/grammar/right-form-of-verb-bangla.html",
+      "related_article": "/right-form-of-verb-bangla.html",
       "related_words": [
         "school",
         "go"
       ],
       "learning_links": [
-        "/grammar/right-form-of-verb-bangla.html"
+        "/right-form-of-verb-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1463,12 +1463,12 @@
         "the → Definite",
         "no article → Incorrect"
       ],
-      "related_article": "/grammar/articles-rules-bangla.html",
+      "related_article": "/articles-rules-bangla.html",
       "related_words": [
         "engineer"
       ],
       "learning_links": [
-        "/grammar/articles-rules-bangla.html"
+        "/articles-rules-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1508,13 +1508,13 @@
         "at → Specific point",
         "for → Purpose"
       ],
-      "related_article": "/grammar/prepositions-bangla.html",
+      "related_article": "/prepositions-bangla.html",
       "related_words": [
         "park",
         "go"
       ],
       "learning_links": [
-        "/grammar/prepositions-bangla.html"
+        "/prepositions-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1554,13 +1554,13 @@
         "chased → Past simple (active)",
         "has chased → Present perfect (active)"
       ],
-      "related_article": "/grammar/voice-change-rules-bangla.html",
+      "related_article": "/voice-change-rules-bangla.html",
       "related_words": [
         "cat",
         "mouse"
       ],
       "learning_links": [
-        "/grammar/voice-change-rules-bangla.html"
+        "/voice-change-rules-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1600,13 +1600,13 @@
         "she likes tea → Tense unchanged",
         "I liked tea → Pronoun unchanged"
       ],
-      "related_article": "/grammar/narration-rules-bangla.html",
+      "related_article": "/narration-rules-bangla.html",
       "related_words": [
         "tea",
         "like"
       ],
       "learning_links": [
-        "/grammar/narration-rules-bangla.html"
+        "/narration-rules-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1646,13 +1646,13 @@
         "nor → Correct",
         "present → Correct"
       ],
-      "related_article": "/grammar/subject-verb-agreement-bangla.html",
+      "related_article": "/subject-verb-agreement-bangla.html",
       "related_words": [
         "neither",
         "nor"
       ],
       "learning_links": [
-        "/grammar/subject-verb-agreement-bangla.html"
+        "/subject-verb-agreement-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1692,13 +1692,13 @@
         "from → Starting point",
         "in → Year/month"
       ],
-      "related_article": "/grammar/present-perfect-tense-bangla.html",
+      "related_article": "/present-perfect-tense-bangla.html",
       "related_words": [
         "living",
         "2015"
       ],
       "learning_links": [
-        "/grammar/present-perfect-tense-bangla.html"
+        "/present-perfect-tense-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1738,13 +1738,13 @@
         "with → Accompaniment",
         "through → Process"
       ],
-      "related_article": "/grammar/prepositions-bangla.html",
+      "related_article": "/prepositions-bangla.html",
       "related_words": [
         "succeed",
         "efforts"
       ],
       "learning_links": [
-        "/grammar/prepositions-bangla.html"
+        "/prepositions-bangla.html"
       ],
       "verified": true,
       "editorial_status": "Verified",
@@ -1784,7 +1784,7 @@
         "Find → Unrelated",
         "Place → Unrelated"
       ],
-      "related_article": "/grammar/synonyms-antonyms-bangla.html",
+      "related_article": "/synonyms-antonyms-bangla.html",
       "related_words": [
         "conceal",
         "hide"
@@ -1830,7 +1830,7 @@
         "Modern → Related",
         "Developed → Related"
       ],
-      "related_article": "/grammar/synonyms-antonyms-bangla.html",
+      "related_article": "/synonyms-antonyms-bangla.html",
       "related_words": [
         "urban",
         "rural"
@@ -1878,7 +1878,7 @@
         "Plenty of → Implies 'more than enough'.",
         "Couple of → Means 'two'."
       ],
-      "related_article": "/grammar/academic-ielts-vocabulary-bangla.html",
+      "related_article": "/academic-ielts-vocabulary-bangla.html",
       "related_words": [
         "many",
         "numerous"
