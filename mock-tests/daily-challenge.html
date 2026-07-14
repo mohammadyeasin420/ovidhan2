@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge | Ovidhan</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --green: #4ade80;
+            --red: #f87171;
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            line-height: 1.9;
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin:0 auto; padding:2rem 1.5rem; }
+        .challenge-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .challenge-header h1 {
+            font-family: var(--font-en);
+            color: var(--gold);
+            font-size: 2.5rem;
+        }
+        .challenge-header p {
+            color: var(--text-mid);
+            margin-top: 0.5rem;
+        }
+        .challenge-header .streak-badge {
+            display: inline-block;
+            background: var(--gold-dim);
+            color: var(--gold);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--teal);
+            text-decoration: none;
+            font-family: var(--font-en);
+        }
+        .back-link:hover { color: var(--gold); }
+        #test-container { margin-top: 1.5rem; }
+        /* Override test-player styles */
+        .option-btn {
+            display: block;
+            width: 100%;
+            padding: 14px 18px;
+            margin: 8px 0;
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-bn);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        .option-btn:hover:not(:disabled) {
+            background: var(--surface2);
+            border-color: var(--gold);
+        }
+        .option-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .feedback {
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: var(--radius);
+        }
+        .correct { background: var(--green); color: #0B1F1A; border-left: 4px solid var(--gold); }
+        .wrong { background: var(--red); color: #0B1F1A; border-left: 4px solid var(--gold); }
+        .next-btn {
+            background: var(--gold);
+            color: var(--bg);
+            padding: 12px 28px;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 700;
+            font-family: var(--font-en);
+            margin-top: 12px;
+            transition: 0.2s;
+        }
+        .next-btn:hover { opacity: 0.85; transform: scale(1.02); }
+        .result-box {
+            text-align: center;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .score-display { font-size: 3.5rem; font-weight: 700; color: var(--gold); margin: 1rem 0; }
+        .grade { font-size: 1.5rem; margin-bottom: 1rem; }
+        .learning-links a {
+            color: var(--teal);
+            text-decoration: none;
+            margin-right: 12px;
+            font-weight: 500;
+        }
+        .learning-links a:hover { color: var(--gold); }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 700;
+            font-family: var(--font-en);
+            text-decoration: none;
+            display: inline-block;
+            margin: 8px;
+            transition: 0.2s;
+        }
+        .btn-secondary:hover { background: var(--gold); color: var(--bg); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Challenge Header -->
+        <div class="challenge-header">
+            <h1>🔥 Daily Challenge</h1>
+            <p>Test yourself with 5 random questions. Every day is a new opportunity to learn!</p>
+            <div class="streak-badge">📅 6-Day Streak</div>
+        </div>
+
+        <!-- Test Container (populated by test-player.js) -->
+        <div id="test-container">
+            <p style="text-align:center; color:var(--text-mid); padding:2rem;">Loading today's challenge...</p>
+        </div>
+
+        <a href="/assessment.html" class="back-link">← Back to Assessment Center</a>
+    </div>
+
+    <!-- Load the daily challenge questions -->
+    <script>
+        (function() {
+            const container = document.getElementById('test-container');
+            if (!container) return;
+
+            // Fetch questions from the master question bank
+            async function loadDailyChallenge() {
+                try {
+                    const response = await fetch('/question-bank.json');
+                    if (!response.ok) throw new Error('Failed to load question bank');
+                    const data = await response.json();
+                    const allQuestions = data.questions || [];
+                    
+                    if (allQuestions.length === 0) {
+                        container.innerHTML = `
+                            <p style="color:var(--text-mid); text-align:center; padding:2rem;">
+                                ⚠️ No questions available for today's challenge. Please check back later!
+                            </p>
+                        `;
+                        return;
+                    }
+                    
+                    // Shuffle and pick 5 random questions
+                    const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+                    const selected = shuffled.slice(0, 5);
+                    
+                    // Set the questions for the test player
+                    window.TEST_QUESTIONS = selected;
+                    window.TEST_TITLE = "🔥 Daily Challenge";
+                    window.TEST_TAG = "daily";
+                    
+                    // Load the test player
+                    const script = document.createElement('script');
+                    script.src = '/test-player.js';
+                    script.onload = function() {
+                        // test-player.js should auto-render when TEST_QUESTIONS is set
+                        if (typeof renderTest === 'function') {
+                            renderTest();
+                        }
+                    };
+                    script.onerror = function() {
+                        container.innerHTML = `
+                            <p style="color:var(--red); text-align:center; padding:2rem;">
+                                ⚠️ Error loading the test player. Please try again later.
+                            </p>
+                        `;
+                    };
+                    document.body.appendChild(script);
+                } catch (error) {
+                    container.innerHTML = `
+                        <p style="color:var(--red); text-align:center; padding:2rem;">
+                            ⚠️ Could not load questions. Please try again later.
+                        </p>
+                    `;
+                }
+            }
+
+            loadDailyChallenge();
+        })();
+    </script>
+
+</body>
+</html>
