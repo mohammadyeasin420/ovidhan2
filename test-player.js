@@ -97,19 +97,84 @@
     }
 
     // Add CSS dynamically
-    const style = document.createElement('style');
-    style.textContent = `
-        .option-btn { display: block; width: 100%; padding: 12px; margin: 8px 0; background: #1e1e2e; color: #fff; border: 1px solid #444; border-radius: 8px; cursor: pointer; text-align: left; }
-        .option-btn:hover:not(:disabled) { background: #2a2a3e; border-color: #888; }
-        .option-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-        .feedback { margin-top: 20px; padding: 15px; border-radius: 8px; }
-        .correct { background: #1e3a1e; border-left: 4px solid #4caf50; }
-        .wrong { background: #3a1e1e; border-left: 4px solid #f44336; }
-        .next-btn, .retry-btn, .back-btn { background: #4caf50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px; }
-        .score-display { font-size: 3em; font-weight: bold; margin: 20px 0; }
-        .learning-links a { color: #90caf9; margin-right: 10px; }
-    `;
-    document.head.appendChild(style);
+const style = document.createElement('style');
+style.textContent = `
+    .option-btn { display: block; width: 100%; padding: 12px; margin: 8px 0; background: #1e1e2e; color: #fff; border: 1px solid #444; border-radius: 8px; cursor: pointer; text-align: left; font-size: 1rem; }
+    .option-btn:hover:not(:disabled) { background: #2a2a3e; border-color: #E6B84A; }
+    .option-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .feedback { margin-top: 20px; padding: 18px; border-radius: 8px; }
+    
+    /* ✅ FIXED: Light backgrounds with readable text */
+    .correct { 
+        background: rgba(74, 222, 128, 0.12); 
+        border-left: 4px solid #4ade80; 
+        color: #D8EDEB;
+    }
+    .wrong { 
+        background: rgba(248, 113, 113, 0.12); 
+        border-left: 4px solid #f87171; 
+        color: #D8EDEB;
+    }
+    .correct h4, .wrong h4 { color: #fff; margin-bottom: 8px; }
+    .correct strong, .wrong strong { color: #fff; }
+    .correct p, .wrong p { color: #D8EDEB; }
+    
+    .next-btn, .retry-btn, .back-btn { 
+        background: #E6B84A; 
+        color: #0B1F1A; 
+        padding: 10px 24px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        margin: 5px; 
+        font-weight: 700;
+        font-size: 1rem;
+        transition: 0.2s;
+    }
+    .next-btn:hover, .retry-btn:hover, .back-btn:hover { 
+        opacity: 0.85; 
+        transform: scale(1.02);
+    }
+    .score-display { 
+        font-size: 3em; 
+        font-weight: bold; 
+        margin: 20px 0; 
+        color: #E6B84A;
+    }
+    .learning-links a { 
+        color: #4ECDC4; 
+        margin-right: 12px; 
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .learning-links a:hover { 
+        color: #E6B84A; 
+        text-decoration: underline;
+    }
+    .grade { 
+        font-size: 1.5em; 
+        margin: 10px 0;
+        color: #D8EDEB;
+    }
+    .result-box { 
+        text-align: center; 
+        padding: 30px 20px; 
+        background: #122820; 
+        border-radius: 12px; 
+        border: 1px solid #1E3D38;
+    }
+    .progress {
+        color: #8AADA9;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+    .question-card h3 {
+        color: #D8EDEB;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+`;
+document.head.appendChild(style);
 
     // Start the test
     if (questions.length > 0) {
