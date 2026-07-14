@@ -6,6 +6,12 @@ os.system("python scripts/compile_question_bank.py")
 print("📄 Generating test pages...")
 os.system("python generate_tests.py")
 
+print("📝 Generating blog data and latest articles...")
+os.system("python generate_blog.py")
+
+print("🔍 Generating search index for homepage...")
+os.system("python generate_search_index.py")
+
 print("🗺️ Generating sitemap...")
 os.system("python generate_sitemap.py")
 
