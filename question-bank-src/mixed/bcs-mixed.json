@@ -1,0 +1,29 @@
+[
+  {
+    "id": "bcs_error_004",
+    "exam_tags": ["bcs", "university"],
+    "recommended_for": ["BCS", "University Admission"],
+    "topic": "Error Detection (Subject-Verb)",
+    "skill": "grammar",
+    "subskill": "Subject-Verb Agreement",
+    "difficulty": 4,
+    "cefr": "B1",
+    "thinking_time_seconds": 20,
+    "learning_objective": "Identify errors in subject-verb agreement in complex sentences.",
+    "common_mistake": "The verb is matched with the nearest noun instead of the actual subject.",
+    "question_text": "The list of items ____ on the table.",
+    "options": ["are", "is", "were", "have"],
+    "correct_index": 1,
+    "explanation": "The subject is 'The list' (singular), not 'items'. So the verb must be 'is'.",
+    "bangla_explanation": "এখানে subject হলো 'The list' (একবচন), 'items' নয়। তাই singular verb 'is' হবে।",
+    "distractor_explanations": ["are → Plural verb for plural subject.", "were → Past plural.", "have → Incorrect auxiliary."],
+    "related_article": "/grammar/subject-verb-agreement-bangla.html",
+    "related_words": ["list", "items"],
+    "learning_links": ["/grammar/subject-verb-agreement-bangla.html"],
+    "verified": false,
+    "editorial_status": "Draft",
+    "version": 1,
+    "created_date": "2026-07-14",
+    "updated_date": "2026-07-14"
+  }
+]
