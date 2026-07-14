@@ -1049,21 +1049,13 @@
     // ─────────────────────────────────────────────────────────────
     //  HOMEPAGE – Auto-Load Latest 6 Articles from search-index.json
     // ─────────────────────────────────────────────────────────────
-
 async function loadLatestArticles() {
     const grid = document.getElementById('blogGrid');
 
     try {
-        // ─── Load from blog-posts.js instead ───
-        const response = await fetch('blog-posts.js');
+        const response = await fetch('search-index.json');
         if (!response.ok) throw new Error('Failed to load articles');
-
-        // Evaluate the JavaScript file to get the blogPosts array
-        const scriptContent = await response.text();
-        eval(scriptContent); // This creates the blogPosts variable
-
-        // blogPosts is now available
-        const articles = blogPosts;
+        const articles = await response.json();
 
         if (!articles || articles.length === 0) {
             grid.innerHTML = `
@@ -1076,8 +1068,8 @@ async function loadLatestArticles() {
 
         // Sort by date (newest first)
         const sorted = [...articles].sort((a, b) => {
-            const dateA = new Date(a.date_iso || a.date);
-            const dateB = new Date(b.date_iso || b.date);
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
             return dateB - dateA;
         });
 
@@ -1087,7 +1079,7 @@ async function loadLatestArticles() {
         grid.innerHTML = latest.map(article => {
             const categoryClass = (article.category || 'general').toLowerCase();
             const emoji = article.emoji || '📄';
-            const date = article.date || 'Recent';
+            const date = article.date ? formatDate(article.date) : 'Recent';
             const description = article.description || 'Read this article to improve your English.';
             const url = article.url || '#';
 
@@ -1115,14 +1107,6 @@ async function loadLatestArticles() {
     }
 }
 
-    function formatDate(dateStr) {
-        if (!dateStr) return 'Recent';
-        const date = new Date(dateStr);
-        if (isNaN(date.getTime())) return 'Recent';
-        const months = ['January', 'February', 'March', 'April', 'May', 'June',
-                        'July', 'August', 'September', 'October', 'November', 'December'];
-        return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
-    }
 
     // ─── Initialize ───
     document.addEventListener('DOMContentLoaded', function() {
