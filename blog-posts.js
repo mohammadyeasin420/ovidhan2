@@ -1,8 +1,26 @@
 // ─── AUTO-GENERATED BLOG DATA ───
 // Generated on: July 16, 2026
-// Total articles: 95
+// Total articles: 112
 
 const blogPosts = [
+  {
+    "title": "Accept vs Except with Bangla Meaning – Difference, Rules & Examples",
+    "url": "/accept-vs-except-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn the difference between Accept and Except with Bangla meanings, rules, examples, and memory tricks. Essential for BCS, IELTS, Bank Jobs, and dail...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Affect vs Effect with Bangla Meaning – Difference, Rules & Examples",
+    "url": "/affect-vs-effect-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn the difference between Affect and Effect with Bangla meanings, rules, examples, and memory tricks. Essential for BCS, IELTS, Bank Jobs, and dail...",
+    "emoji": "📚"
+  },
   {
     "title": "English to Bangla Dictionary Online Free – Best Offline App 2025",
     "url": "/english-to-bangla-dictionary-online-free.html",
@@ -11,6 +29,168 @@ const blogPosts = [
     "date_iso": "2026-07-16",
     "description": "Discover the best free offline English to Bangla dictionary online. Learn 12,658+ words with Bangla meanings, pronunciation, and examples. Perfect for...",
     "emoji": "📄"
+  },
+  {
+    "title": "Future Continuous Tense with Bangla Meaning – Rules, Examples & Practice",
+    "url": "/future-continuous-tense-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn Future Continuous Tense in Bangla – structure, rules, examples, common mistakes, and practice. Perfect for BCS, IELTS, HSC, and Bank Jobs. Free ...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Future Perfect Continuous Tense with Bangla Meaning – Rules, Examples & Practice",
+    "url": "/future-perfect-continuous-tense-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn Future Perfect Continuous Tense in Bangla – structure, rules, examples, common mistakes, and practice. Perfect for BCS, IELTS, HSC, and Bank Job...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Future Simple Tense with Bangla Meaning – Rules, Examples & Practice",
+    "url": "/future-simple-tense-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn Future Simple Tense in Bangla – structure, rules, examples, common mistakes, and practice. Perfect for BCS, IELTS, HSC, and Bank Jobs. Free guid...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Grammar Checker – Free Online Grammar Checker with Bangla Explanation",
+    "url": "/grammar-checker.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Check English grammar online for free. Detect subject-verb agreement, article, preposition, tense, and punctuation errors with Bangla explanations. Pe...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Grammar Pattern Explorer – Find Correct Grammar Patterns with Bangla Meaning",
+    "url": "/grammar-pattern-explorer.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Find the correct grammar patterns, prepositions, and collocations for any English word. Learn which patterns are correct with Bangla meanings and exam...",
+    "emoji": "📚"
+  },
+  {
+    "title": "It's vs Its with Bangla Meaning – Difference, Rules & Examples",
+    "url": "/its-vs-its-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn the difference between It",
+    "emoji": "📚"
+  },
+  {
+    "title": "Narration Converter – Free Direct to Indirect Speech Converter",
+    "url": "/narration-converter.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Convert direct speech to indirect speech and indirect to direct instantly. Free narration converter with Bangla explanations. Perfect for BCS, IELTS, ...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Parts of Speech Identifier – Free POS Tool with Bangla Meaning & Quiz",
+    "url": "/parts-of-speech-identifier.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Instantly identify parts of speech for any English sentence. Free tool with examples, rules, and quiz. Perfect for BCS, IELTS, and students in Banglad...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Past Continuous Tense with Bangla Meaning – Rules, Examples & Practice",
+    "url": "/past-continuous-tense-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn Past Continuous Tense in Bangla – structure, rules, examples, common mistakes, and practice. Perfect for BCS, IELTS, HSC, and Bank Jobs. Free gu...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Past Perfect Continuous Tense with Bangla Meaning – Rules, Examples & Practice",
+    "url": "/past-perfect-continuous-tense-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn Past Perfect Continuous Tense in Bangla – structure, rules, examples, common mistakes, and practice. Perfect for BCS, IELTS, HSC, and Bank Jobs....",
+    "emoji": "📚"
+  },
+  {
+    "title": "Past Perfect Tense with Bangla Meaning – Rules, Examples & Practice",
+    "url": "/past-perfect-tense-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn Past Perfect Tense in Bangla – structure, rules, examples, common mistakes, and practice. Perfect for BCS, IELTS, HSC, and Bank Jobs. Free guide...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Plural Maker (Free POS Finder) – Identify Nouns, Verbs, Adjectives & More",
+    "url": "/plural-maker.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Identify parts of speech instantly using our free Parts of Speech Identifier. Find nouns, verbs, adjectives, adverbs, pronouns, prepositions, conjunct...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Present Simple Tense with Bangla Meaning – Rules, Examples & Practice",
+    "url": "/present-simple-tense-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn Present Simple Tense in Bangla – structure, rules, examples, common mistakes, and practice. Perfect for BCS, IELTS, HSC, and Bank Jobs. Free gui...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Sentence Analyzer – Free Grammar Checker with Subject, Verb, Tense & Errors",
+    "url": "/sentence-analyzer.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Analyze any English sentence instantly. Get subject, verb, object, tense, voice, and common grammar mistakes with links to detailed lessons. Free tool...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Tense Identifier – Free Online Tense Detector with Bangla Explanation",
+    "url": "/tense-identifier.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Identify the tense of any English sentence instantly. Free tense detector with Bangla explanations for all 12 tenses. Perfect for BCS, IELTS, HSC, and...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Then vs Than with Bangla Meaning – Difference, Rules & Examples",
+    "url": "/then-vs-than-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn the difference between Then and Than with Bangla meanings, rules, examples, and memory tricks. Essential for BCS, IELTS, Bank Jobs, and daily En...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Voice Converter – Free Active to Passive & Passive to Active Converter",
+    "url": "/voice-converter.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Convert active voice to passive voice and passive to active instantly. Free voice converter with Bangla explanations. Perfect for BCS, IELTS, HSC, and...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Your vs You're with Bangla Meaning – Difference, Rules & Examples",
+    "url": "/your-vs-youre-bangla.html",
+    "category": "grammar",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Learn the difference between Your and You",
+    "emoji": "📚"
   },
   {
     "title": "Dictionary Review Dashboard",
@@ -127,33 +307,6 @@ const blogPosts = [
     "date": "July 13, 2026",
     "date_iso": "2026-07-13",
     "description": "Test your English grammar knowledge with our free Grammar Quiz. 50+ questions on Subject-Verb Agreement, Tenses, Articles, Prepositions, and more. Ins...",
-    "emoji": "📚"
-  },
-  {
-    "title": "Parts of Speech Identifier – Free Tool with Examples & Quiz",
-    "url": "/parts-of-speech-identifier.html",
-    "category": "grammar",
-    "date": "July 13, 2026",
-    "date_iso": "2026-07-13",
-    "description": "Identify parts of speech for any English sentence with our free tool. Learn noun, verb, adjective, adverb, and more with examples, rules, and a quiz. ...",
-    "emoji": "📚"
-  },
-  {
-    "title": "Plural Maker – Rules, Examples & Common Mistakes",
-    "url": "/plural-maker.html",
-    "category": "grammar",
-    "date": "July 13, 2026",
-    "date_iso": "2026-07-13",
-    "description": "Convert any singular noun to plural with our free Plural Maker tool. Includes 150+ nouns, 6 plural rules, examples, common mistakes, and a quiz. Perfe...",
-    "emoji": "📚"
-  },
-  {
-    "title": "Sentence Analyzer – Free Grammar Checker with Subject, Verb, Tense & Errors",
-    "url": "/sentence-analyzer.html",
-    "category": "grammar",
-    "date": "July 13, 2026",
-    "date_iso": "2026-07-13",
-    "description": "Analyze any English sentence instantly. Get subject, verb, object, tense, voice, and common grammar mistakes with links to detailed lessons. Free tool...",
     "emoji": "📚"
   },
   {
