@@ -1,8 +1,26 @@
 // ─── AUTO-GENERATED BLOG DATA ───
-// Generated on: July 14, 2026
-// Total articles: 93
+// Generated on: July 16, 2026
+// Total articles: 95
 
 const blogPosts = [
+  {
+    "title": "English to Bangla Dictionary Online Free – Best Offline App 2025",
+    "url": "/english-to-bangla-dictionary-online-free.html",
+    "category": "general",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "description": "Discover the best free offline English to Bangla dictionary online. Learn 12,658+ words with Bangla meanings, pronunciation, and examples. Perfect for...",
+    "emoji": "📄"
+  },
+  {
+    "title": "Dictionary Review Dashboard",
+    "url": "/review.html",
+    "category": "grammar",
+    "date": "July 15, 2026",
+    "date_iso": "2026-07-15",
+    "description": "",
+    "emoji": "📚"
+  },
   {
     "title": "10,000 Verb Forms with Bangla Meaning – Complete List & Guide",
     "url": "/10k-verb-forms-bangla.html",
@@ -29,15 +47,6 @@ const blogPosts = [
     "date_iso": "2026-07-14",
     "description": "Learn 40+ ",
     "emoji": "📚"
-  },
-  {
-    "title": "English to Bangla Dictionary Online Free – Best Offline App 2025",
-    "url": "/english-to-bangla-dictionary-online-free.html",
-    "category": "general",
-    "date": "July 14, 2026",
-    "date_iso": "2026-07-14",
-    "description": "Discover the best free offline English to Bangla dictionary online. Learn 12,658+ words with Bangla meanings, pronunciation, and examples. Perfect for...",
-    "emoji": "📄"
   },
   {
     "title": "Get Collocations with Bangla Meaning – Complete Guide",
@@ -73,6 +82,15 @@ const blogPosts = [
     "date": "July 14, 2026",
     "date_iso": "2026-07-14",
     "description": "Learn 50+ ",
+    "emoji": "📚"
+  },
+  {
+    "title": "Present Perfect Tense with Bangla Meaning – Rules, Examples & Practice",
+    "url": "/present-perfect-tense-bangla.html",
+    "category": "grammar",
+    "date": "July 14, 2026",
+    "date_iso": "2026-07-14",
+    "description": "Learn Present Perfect Tense in Bangla – structure, rules, examples, common mistakes, and practice. Perfect for BCS, IELTS, HSC, and Bank Jobs. Free gu...",
     "emoji": "📚"
   },
   {
