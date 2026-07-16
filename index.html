@@ -1053,7 +1053,7 @@ async function loadLatestArticles() {
     const grid = document.getElementById('blogGrid');
 
     try {
-        const response = await fetch('search-index.json');
+        const response = await fetch('/search-index.json');
         if (!response.ok) throw new Error('Failed to load articles');
         const articles = await response.json();
 
@@ -1107,6 +1107,14 @@ async function loadLatestArticles() {
     }
 }
 
+function formatDate(dateStr) {
+    if (!dateStr) return 'Recent';
+    const date = new Date(dateStr);
+    if (isNaN(date.getTime())) return 'Recent';
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+}
 
     // ─── Initialize ───
     document.addEventListener('DOMContentLoaded', function() {
