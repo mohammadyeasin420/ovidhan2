@@ -483,29 +483,6 @@
         }
         .toc ul li a:hover { color:var(--gold); }
 
-        /* ─── STICKY TOC (DESKTOP) ─── */
-        @media (min-width: 1024px) {
-            .toc {
-                position: sticky;
-                top: 80px;
-                z-index: 40;
-                max-height: calc(100vh - 160px);
-                overflow-y: auto;
-                scrollbar-width: thin;
-                scrollbar-color: var(--gold) transparent;
-            }
-            .toc::-webkit-scrollbar {
-                width: 4px;
-            }
-            .toc::-webkit-scrollbar-thumb {
-                background: var(--gold);
-                border-radius: 4px;
-            }
-            .toc::-webkit-scrollbar-track {
-                background: transparent;
-            }
-        }
-
         .learning-section {
             background:var(--surface);
             border:1px solid var(--border);
@@ -1002,7 +979,7 @@
         <div class="item"><span class="icon">📧</span><div class="label">Writing</div></div>
     </div>
 
-    <!-- ═══ TABLE OF CONTENTS (UPDATED) ═══ -->
+    <!-- ═══ TABLE OF CONTENTS (NON-STICKY – FIXED) ═══ -->
     <nav class="toc" aria-label="Table of Contents">
         <h2>📌 Table of Contents</h2>
         <ul>
@@ -1173,7 +1150,7 @@
         </p>
     </section>
 
-    <!-- ═══ 3. SCENARIO SENTENCE BANKS (NEW) ═══ -->
+    <!-- ═══ 3. SCENARIO SENTENCE BANKS ═══ -->
     <section id="sentence-banks" class="learning-section" style="margin-top:0; border-left: 4px solid var(--gold);">
         <h2>📖 3. Scenario Sentence Banks – Start Speaking Today</h2>
         <p style="color:var(--text-mid);">
