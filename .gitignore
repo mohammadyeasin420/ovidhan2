@@ -3,3 +3,13 @@ word_old_backup/
 "candidate_generator.py" 
 "editorial_pipeline.py" 
 "dictionary-schema-v4.json" 
+# Windows reserved filenames (cannot exist on Windows)
+word/con.html
+word/aux.html
+word/prn.html
+word/nul.html
+word/com1.html
+word/com2.html
+word/lpt1.html
+word/lpt2.html
+word/aux*
