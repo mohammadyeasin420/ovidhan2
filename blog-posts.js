@@ -1,8 +1,143 @@
 // ─── AUTO-GENERATED BLOG DATA ───
-// Generated on: July 16, 2026
-// Total articles: 112
+// Generated on: July 18, 2026
+// Total articles: 126
 
 const blogPosts = [
+  {
+    "title": "Business Vocabulary – 200+ Essential English Terms",
+    "url": "/business-vocabulary-bangla.html",
+    "category": "grammar",
+    "date": "July 18, 2026",
+    "date_iso": "2026-07-18",
+    "description": "Master 200+ essential business vocabulary words with Bangla translation. Learn corporate, finance, marketing, meeting, and management terms for Bangla...",
+    "emoji": "📚"
+  },
+  {
+    "title": "English to Bangla Dictionary Online Free – Best Offline App 2025",
+    "url": "/english-to-bangla-dictionary-online-free.html",
+    "category": "general",
+    "date": "July 18, 2026",
+    "date_iso": "2026-07-18",
+    "description": "Discover the best free offline English to Bangla dictionary online. Learn 12,658+ words with Bangla meanings, pronunciation, and examples. Perfect for...",
+    "emoji": "📄"
+  },
+  {
+    "title": "Presentation English – Bangla to English | How to Present in English",
+    "url": "/presentation-english-bangla.html",
+    "category": "grammar",
+    "date": "July 18, 2026",
+    "date_iso": "2026-07-18",
+    "description": "Master presentation English with Bangla translation. Learn how to open, deliver, engage, and close presentations like a professional. Perfect for BCS,...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Airport & Travel – Bangla to English Sentences | How to Check-in & Board",
+    "url": "/airport-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Learn how to navigate the airport in English. Check-in, security, immigration, boarding, and customs – complete guide with Bangla translation for Bang...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Bangla to English Translation Hub – Learn Spoken English with Real Scenarios",
+    "url": "/bangla-to-english-translation-hub.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Master spoken English with Bangla translation. Learn natural English for daily routines, job interviews, offices, travel, and more. Free practice exer...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Business Email Writing – Bangla to English | Professional Email Phrases",
+    "url": "/business-email-writing-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Master business email writing in English with Bangla translation. Learn professional email phrases, templates, and etiquette for Bangladeshi professio...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Daily Activities – Bangla to English Sentences",
+    "url": "/daily-activities-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Learn how to describe your daily activities in English. Household chores, work tasks, study routines – with Bangla translation, natural English, and p...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Hospital & Doctor – Bangla to English Sentences | Medical English for Bangladesh",
+    "url": "/hospital-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Master hospital and doctor visit English with Bangla translation. Learn how to describe symptoms, talk to doctors, get medicine, and navigate healthca...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Job Interview – Bangla to English Sentences | BCS, Bank Job & Corporate",
+    "url": "/job-interview-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Master job interview English with Bangla translation. Learn how to answer common questions, introduce yourself, use the STAR method, and ace BCS Viva,...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Meeting Phrases – Bangla to English | Business Meeting Vocabulary",
+    "url": "/meeting-phrases-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Master English meeting phrases with Bangla translation. Learn how to open meetings, participate, agree, disagree, interrupt politely, and close meetin...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Morning Routine – Bangla to English Sentences",
+    "url": "/morning-routine-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Learn how to talk about your morning routine in English. Wake up, brush teeth, have breakfast – with Bangla translation, natural English, adverbs of f...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Restaurant & Food – Bangla to English Sentences | Ordering Food in English",
+    "url": "/restaurant-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Learn how to order food in English at a restaurant. Complete guide with Bangla translation – ordering, asking for the bill, complaints, and real dialo...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Daily Activities – Bangla to English Sentences",
+    "url": "/self-introduction-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Learn how to describe your daily activities in English. Household chores, work tasks, study routines – with Bangla translation, natural English, and p...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Shopping & Market – Bangla to English Sentences | How to Bargain & Shop",
+    "url": "/shopping-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Learn how to shop and bargain in English. Complete guide with Bangla translation – clothing, vegetables, electronics, bargaining phrases, and real dia...",
+    "emoji": "📚"
+  },
+  {
+    "title": "Telephone & Email – Bangla to English Sentences | Business Communication",
+    "url": "/telephone-email-english-bangla.html",
+    "category": "grammar",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "description": "Master telephone and email communication in English with Bangla translation. Learn how to make calls, take messages, write professional emails, and ha...",
+    "emoji": "📚"
+  },
   {
     "title": "Accept vs Except with Bangla Meaning – Difference, Rules & Examples",
     "url": "/accept-vs-except-bangla.html",
@@ -20,15 +155,6 @@ const blogPosts = [
     "date_iso": "2026-07-16",
     "description": "Learn the difference between Affect and Effect with Bangla meanings, rules, examples, and memory tricks. Essential for BCS, IELTS, Bank Jobs, and dail...",
     "emoji": "📚"
-  },
-  {
-    "title": "English to Bangla Dictionary Online Free – Best Offline App 2025",
-    "url": "/english-to-bangla-dictionary-online-free.html",
-    "category": "general",
-    "date": "July 16, 2026",
-    "date_iso": "2026-07-16",
-    "description": "Discover the best free offline English to Bangla dictionary online. Learn 12,658+ words with Bangla meanings, pronunciation, and examples. Perfect for...",
-    "emoji": "📄"
   },
   {
     "title": "Future Continuous Tense with Bangla Meaning – Rules, Examples & Practice",
