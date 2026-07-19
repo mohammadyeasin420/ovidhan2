@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>Privacy Policy – Ovidhan English to Bangla Dictionary & Learning App</title>
+    <meta name="description" content="Ovidhan's privacy policy explains how we collect, use, and protect your data. Your privacy matters to us. Learn about your rights and our commitments." />
+    <meta name="author" content="Mohammad Yeasin — অভিধান" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ovidhan.net/privacy.html" />
+
+    <!-- ═══ OPEN GRAPH ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Privacy Policy – Ovidhan English to Bangla Dictionary & Learning App" />
+    <meta property="og:description" content="Ovidhan's privacy policy explains how we collect, use, and protect your data. Your privacy matters to us." />
+    <meta property="og:url" content="https://ovidhan.net/privacy.html" />
+    <meta property="og:site_name" content="Ovidhan – English to Bangla Dictionary" />
+    <meta property="og:locale" content="bn_BD" />
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy Policy – Ovidhan" />
+    <meta name="twitter:description" content="Ovidhan's privacy policy explains how we collect, use, and protect your data." />
+
+    <!-- ═══ SCHEMA.ORG – WEBPAGE ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy",
+        "description": "Ovidhan's privacy policy explains how we collect, use, and protect your data.",
+        "url": "https://ovidhan.net/privacy.html",
+        "inLanguage": "bn",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Ovidhan – English to Bangla Dictionary",
+            "url": "https://ovidhan.net"
+        }
+    }
+    </script>
+
+    <!-- ═══ GOOGLE FONTS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ─── Ovidhan Dark Premium Theme ─── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230,184,74,0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78,205,196,0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74,222,128,0.10);
+            --red: #f87171;
+            --red-dim: rgba(248,113,113,0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192,132,252,0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.9;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .progress-bar {
+            position:sticky; top:0; z-index:99;
+            height:4px; background:var(--surface2); width:100%;
+        }
+        .progress-bar .progress-fill {
+            height:100%; width:0%;
+            background:linear-gradient(90deg,var(--gold),var(--teal));
+            transition:width .1s linear;
+        }
+
+        .site-nav {
+            position:sticky; top:0; z-index:100;
+            background:rgba(11,31,26,0.95);
+            backdrop-filter:blur(14px);
+            border-bottom:1px solid var(--border);
+            padding:13px 24px;
+            display:flex; justify-content:space-between; align-items:center; gap:12px;
+            flex-wrap:wrap;
+        }
+        .nav-logo { font-size:22px; font-weight:700; color:var(--gold); text-decoration:none; }
+        .nav-links { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+        .nav-links a { color:var(--text-mid); text-decoration:none; font-size:14px; font-family:var(--font-en); transition:color .2s; }
+        .nav-links a:hover { color:var(--gold); }
+        .nav-cta { background:var(--gold); color:#0B1F1A !important; font-weight:700 !important; padding:7px 16px; border-radius:8px; }
+        .nav-cta:hover { background:#f0c85a !important; }
+
+        .main-wrap {
+            max-width:820px;
+            margin:0 auto;
+            padding:40px 24px 80px;
+            flex:1;
+            width:100%;
+        }
+
+        .breadcrumb {
+            font-family:var(--font-en);
+            font-size:13px;
+            color:var(--text-soft);
+            margin-bottom:24px;
+            display:flex;
+            gap:6px;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .breadcrumb a { color:var(--teal); text-decoration:none; }
+        .breadcrumb a:hover { color:var(--gold); }
+
+        .article-category {
+            display:inline-block;
+            background:var(--gold-dim);
+            color:var(--gold);
+            font-family:var(--font-en);
+            font-size:11px;
+            font-weight:700;
+            letter-spacing:1.5px;
+            text-transform:uppercase;
+            padding:4px 12px;
+            border-radius:20px;
+            margin-bottom:12px;
+        }
+
+        .hero-header { margin-bottom:32px; }
+        h1 {
+            font-size:clamp(1.8rem,4vw,2.6rem);
+            font-weight:800;
+            line-height:1.3;
+            color:#fff;
+            margin-bottom:10px;
+        }
+        h1 em { font-style:normal; color:var(--gold); }
+
+        .article-meta {
+            display:flex;
+            flex-wrap:wrap;
+            gap:12px 24px;
+            color:var(--text-mid);
+            font-size:0.9rem;
+            padding-bottom:12px;
+            border-bottom:1px solid var(--border);
+            margin-bottom:16px;
+        }
+        .article-meta .author { color:var(--teal); font-weight:600; }
+
+        .badge-group {
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            margin-bottom:16px;
+        }
+        .badge {
+            background:var(--surface2);
+            border:1px solid var(--border);
+            border-radius:20px;
+            padding:2px 14px;
+            font-size:0.75rem;
+            color:var(--text-mid);
+            font-family:var(--font-en);
+        }
+        .badge.gold { border-color:var(--gold); color:var(--gold); }
+        .badge.teal { border-color:var(--teal); color:var(--teal); }
+        .badge.green { border-color:var(--green); color:var(--green); }
+        .badge.purple { border-color:var(--purple); color:var(--purple); }
+
+        /* ─── Privacy Policy Content ─── */
+        .policy-section {
+            background:var(--surface);
+            border:1px solid var(--border);
+            border-radius:var(--radius);
+            padding:28px 30px;
+            margin:24px 0;
+        }
+        .policy-section h2 {
+            color:var(--gold);
+            font-size:1.4rem;
+            margin-bottom:12px;
+        }
+        .policy-section h3 {
+            color:var(--teal);
+            font-size:1.1rem;
+            margin:20px 0 10px;
+        }
+        .policy-section h4 {
+            color:var(--gold);
+            font-size:1rem;
+            margin:16px 0 8px;
+        }
+        .policy-section p {
+            color:var(--text-mid);
+            margin-bottom:12px;
+        }
+        .policy-section ul {
+            list-style:none;
+            padding:0;
+            margin:12px 0 16px 0;
+        }
+        .policy-section ul li {
+            padding:6px 0 6px 28px;
+            background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23E6B84A" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>') left center no-repeat;
+            background-size:16px;
+            color:var(--text-mid);
+        }
+        .policy-section .highlight-box {
+            background:var(--surface2);
+            border-left:4px solid var(--gold);
+            padding:16px 20px;
+            border-radius:4px;
+            margin:16px 0;
+        }
+        .policy-section .highlight-box strong {
+            color:var(--gold);
+        }
+        .policy-section .last-updated {
+            color:var(--text-soft);
+            font-size:0.9rem;
+            margin-top:8px;
+            font-family:var(--font-en);
+        }
+
+        .cta-banner {
+            background:linear-gradient(135deg,#0F3D3E 0%,#1A5C5A 100%);
+            border:1px solid rgba(230,184,74,0.3);
+            border-radius:16px;
+            padding:32px 28px;
+            text-align:center;
+            margin:40px 0;
+        }
+        .cta-banner h3 { color:var(--gold); font-size:1.3rem; margin-bottom:10px; }
+        .cta-banner p { color:var(--text-mid); margin-bottom:20px; font-size:15px; }
+        .cta-btn {
+            display:inline-block;
+            background:var(--gold);
+            color:#0B1F1A;
+            font-weight:700;
+            font-family:var(--font-en);
+            padding:13px 30px;
+            border-radius:10px;
+            text-decoration:none;
+            font-size:15px;
+            transition:background .2s, transform .2s;
+        }
+        .cta-btn:hover { background:#f0c85a; transform:translateY(-2px); }
+        .cta-features {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:14px;
+            margin-top:20px;
+        }
+        .cta-feat { font-size:13px; color:var(--teal); display:flex; align-items:center; gap:5px; }
+
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--gold);
+            color: #0B1F1A;
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(230, 184, 74, 0.4);
+            z-index: 999;
+            transition: transform 0.2s, opacity 0.2s;
+            opacity: 0.8;
+        }
+        #backToTop:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .site-footer {
+            background:#060F0D;
+            border-top:1px solid var(--border);
+            text-align:center;
+            padding:40px 24px;
+            color:var(--text-soft);
+            font-size:13px;
+            line-height:2.2;
+        }
+        .site-footer a { color:var(--teal); text-decoration:none; }
+        .site-footer a:hover { color:var(--gold); }
+
+        @media (max-width:640px) {
+            .main-wrap { padding:24px 16px 60px; }
+            .policy-section { padding:16px; }
+            .nav-links .hide-mobile { display:none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ PROGRESS BAR ══ -->
+<div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+    <a href="https://ovidhan.net" class="nav-logo">অভিধান</a>
+    <div class="nav-links">
+        <a href="https://ovidhan.net" class="hide-mobile">Home</a>
+        <a href="https://ovidhan.net/grammar.html">Grammar</a>
+        <a href="https://ovidhan.net/dictionary.html" class="hide-mobile">Dictionary</a>
+        <a href="https://ovidhan.net/tools.html">Tools</a>
+        <a href="https://ovidhan.net/blog.html" class="hide-mobile">Blog</a>
+        <a href="https://ovidhan.net/exam-prep.html" class="hide-mobile">Exam Prep</a>
+        <a href="https://ovidhan.net/assessment.html" style="color:var(--gold);font-weight:600;">🎯 Assessment</a>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank" rel="noopener">📱 Download</a>
+    </div>
+</nav>
+
+<!-- ══ MAIN ══ -->
+<main class="main-wrap">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://ovidhan.net">Home</a> ›
+        Privacy Policy
+    </nav>
+
+    <!-- ═══ HERO SECTION ═══ -->
+    <header class="hero-header">
+        <div class="article-category">⚖️ Legal</div>
+        <h1>Privacy Policy – <em>Ovidhan</em></h1>
+
+        <div class="article-meta">
+            <span class="author">✍️ Mohammad Yeasin</span>
+            <span>📅 July 19, 2026</span>
+            <span>🇧🇩 Ovidhan</span>
+            <span>🔄 Updated: July 19, 2026</span>
+        </div>
+
+        <div class="badge-group">
+            <span class="badge gold">⭐ GDPR Compliant</span>
+            <span class="badge teal">🔒 Privacy First</span>
+            <span class="badge green">✅ Transparent</span>
+            <span class="badge purple">📖 Clear &amp; Simple</span>
+        </div>
+    </header>
+
+    <!-- ═══ PRIVACY POLICY CONTENT ═══ -->
+
+    <!-- 1. Introduction -->
+    <section class="policy-section">
+        <h2>1. Introduction</h2>
+        <p>
+            Welcome to Ovidhan! Your privacy is important to us. This Privacy Policy explains how <strong>অভিধান</strong> ("Ovidhan," "we," "us," or "our") collects, uses, stores, and protects your information when you use our website (<a href="https://ovidhan.net" style="color:var(--gold);">ovidhan.net</a>), our mobile application, and any related services (collectively, the "Services").
+        </p>
+        <p>
+            We are committed to being transparent about our data practices. Whether you're a student preparing for BCS, a professional improving your English, or a casual learner, we want you to feel confident and secure when using Ovidhan.
+        </p>
+        <p>
+            This policy applies to all users of our Services. By using Ovidhan, you agree to the collection and use of information in accordance with this policy.
+        </p>
+        <div class="highlight-box">
+            <strong>📌 Key Principle:</strong> Ovidhan is designed to be <strong>privacy-first</strong>. The dictionary works entirely offline — your searches and saved words stay on your device. We only collect minimal data to improve your experience and keep the service running.
+        </div>
+        <p class="last-updated">📅 <strong>Last Updated:</strong> July 19, 2026</p>
+    </section>
+
+    <!-- 2. Information We Collect -->
+    <section class="policy-section">
+        <h2>2. Information We Collect</h2>
+        <p>
+            We collect very little information. Here's what we collect and why:
+        </p>
+
+        <h3>2.1 Information You Provide Directly</h3>
+        <ul>
+            <li><strong>Email Address:</strong> If you contact us via email or sign up for our newsletter (if we offer one), we collect your email address to respond to you or send you updates.</li>
+            <li><strong>Feedback and Communications:</strong> If you send us feedback, report a bug, or contact our support team, we collect the information you provide to help us assist you.</li>
+        </ul>
+
+        <h3>2.2 Information Collected Automatically</h3>
+        <ul>
+            <li><strong>Usage Data:</strong> We may collect anonymous usage data such as which pages you visit, how long you stay, and which features you use. This helps us understand how people use Ovidhan and improve the experience.</li>
+            <li><strong>Device Information:</strong> We may collect information about the device you use to access our Services, such as your browser type, operating system, and screen resolution. This helps us ensure compatibility and optimize performance.</li>
+            <li><strong>IP Address:</strong> We may collect your IP address to help diagnose problems with our server, administer our website, and analyze trends. This information is generally anonymized.</li>
+        </ul>
+
+        <h3>2.3 Cookies and Similar Technologies</h3>
+        <p>
+            We use cookies and similar tracking technologies to enhance your experience on our website. Cookies are small text files stored on your device. We use them to:
+        </p>
+        <ul>
+            <li>Remember your preferences (e.g., language settings).</li>
+            <li>Understand how you interact with our website (via analytics).</li>
+            <li>Improve our Services based on user behavior.</li>
+        </ul>
+        <p>
+            You can control cookies through your browser settings. However, disabling cookies may affect some functionalities of our website.
+        </p>
+
+        <h3>2.4 What We Do NOT Collect</h3>
+        <ul>
+            <li><strong>No Personal Identifiable Information (PII) is required</strong> to use the core dictionary. You don't need to create an account or provide your name, address, or phone number.</li>
+            <li><strong>No Sensitive Data:</strong> We do not collect sensitive information such as race, religion, political views, health data, or biometric data.</li>
+            <li><strong>No Payment Information:</strong> Ovidhan is completely free. We do not collect payment information of any kind.</li>
+        </ul>
+        <div class="highlight-box">
+            <strong>🔒 Offline First:</strong> All dictionary data, your saved words, and your learning progress are stored <strong>locally on your device</strong>. We do not have access to this data.
+        </div>
+    </section>
+
+    <!-- 3. How We Use Your Information -->
+    <section class="policy-section">
+        <h2>3. How We Use Your Information</h2>
+        <p>
+            We use the information we collect for the following purposes:
+        </p>
+        <ul>
+            <li><strong>To Provide and Improve Our Services:</strong> We use usage data to understand how users interact with Ovidhan and to make improvements.</li>
+            <li><strong>To Communicate with You:</strong> If you contact us, we use your email address to respond to your inquiries.</li>
+            <li><strong>To Ensure Security:</strong> We use IP addresses and device information to prevent fraud, abuse, and unauthorized access.</li>
+            <li><strong>To Comply with Legal Obligations:</strong> We may process your information to comply with applicable laws and regulations.</li>
+        </ul>
+        <p>
+            We do <strong>not</strong> sell, rent, or trade your personal information to third parties for marketing purposes.
+        </p>
+    </section>
+
+    <!-- 4. Third-Party Services -->
+    <section class="policy-section">
+        <h2>4. Third-Party Services</h2>
+        <p>
+            We use a few third-party services to help us operate and improve Ovidhan. These services may collect information about you as described in their own privacy policies.
+        </p>
+        <ul>
+            <li><strong>Google Analytics:</strong> We use Google Analytics to understand how users interact with our website. Google Analytics collects anonymous usage data via cookies. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--teal);">Learn more about Google's privacy practices</a>.</li>
+            <li><strong>Google Play Store:</strong> If you download our Android app from the Google Play Store, Google collects information as described in their privacy policy. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--teal);">Learn more</a>.</li>
+            <li><strong>Google Fonts:</strong> We use Google Fonts for typography. Your browser may request fonts from Google's servers, which may collect information about your IP address and browser. <a href="https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users" target="_blank" rel="noopener" style="color:var(--teal);">Learn more</a>.</li>
+        </ul>
+        <p>
+            We do not share any personal information with these third parties. They may collect data directly from your device as described in their own policies.
+        </p>
+        <div class="highlight-box">
+            <strong>📢 Important:</strong> Our app does <strong>not</strong> use third-party advertising networks. You will never see ads in the Ovidhan app.
+        </div>
+    </section>
+
+    <!-- 5. AI Features -->
+    <section class="policy-section">
+        <h2>5. AI Features</h2>
+        <p>
+            Ovidhan may offer AI-powered features, such as the <strong>AI Tutor</strong> or other intelligent learning tools. We are committed to using AI responsibly and protecting your privacy.
+        </p>
+        <ul>
+            <li><strong>AI Features Are Optional:</strong> You are not required to use AI features to benefit from Ovidhan. The dictionary and core learning tools work fully offline.</li>
+            <li><strong>Data Used for AI:</strong> When you use an AI feature, we may process your input (e.g., a question or a sentence) to generate a response. This data is used solely to provide the service you requested.</li>
+            <li><strong>No Model Training:</strong> We do <strong>not</strong> use your data to train third-party AI models. Any data processed by AI features is not retained longer than necessary.</li>
+            <li><strong>No Personal Data Sharing:</strong> We do not share your personal information with AI service providers. They process data on our behalf under strict confidentiality agreements.</li>
+            <li><strong>User Control:</strong> You have control over whether you use AI features. They are clearly labeled and require your active input.</li>
+        </ul>
+        <p>
+            We are committed to using AI in a way that supports responsible educational outcomes and protects your privacy. <a href="https://ovidhan.net/ai-policy.html" style="color:var(--gold);">Learn more about our AI Policy →</a>
+        </p>
+    </section>
+
+    <!-- 6. Data Retention -->
+    <section class="policy-section">
+        <h2>6. Data Retention</h2>
+        <p>
+            We retain your information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.
+        </p>
+        <ul>
+            <li><strong>Local Data:</strong> Your saved words, learning progress, and preferences are stored locally on your device. We do not have access to this data, and it remains on your device until you delete it or uninstall the app.</li>
+            <li><strong>Usage Data:</strong> Anonymous usage data collected via Google Analytics is retained for a limited period to help us analyze trends and improve our Services.</li>
+            <li><strong>Communications:</strong> If you contact us via email, we retain your email and our correspondence for as long as necessary to resolve your inquiry and improve our support.</li>
+        </ul>
+    </section>
+
+    <!-- 7. Your Rights -->
+    <section class="policy-section">
+        <h2>7. Your Rights</h2>
+        <p>
+            We respect your privacy rights. Depending on your location (e.g., under the GDPR in Europe or the CCPA in California), you may have the following rights:
+        </p>
+        <ul>
+            <li><strong>Right to Access:</strong> You can request a copy of the personal data we hold about you.</li>
+            <li><strong>Right to Rectification:</strong> You can request that we correct any inaccurate or incomplete data.</li>
+            <li><strong>Right to Erasure:</strong> You can request that we delete your personal data.</li>
+            <li><strong>Right to Restrict Processing:</strong> You can request that we limit how we use your data.</li>
+            <li><strong>Right to Data Portability:</strong> You can request a copy of your data in a structured, machine-readable format.</li>
+            <li><strong>Right to Object:</strong> You can object to our processing of your data for certain purposes.</li>
+            <li><strong>Right to Withdraw Consent:</strong> If we rely on your consent to process data, you can withdraw that consent at any time.</li>
+        </ul>
+        <p>
+            To exercise any of these rights, please <a href="mailto:yeasinarat@yahoo.com" style="color:var(--gold);">contact us</a> . We will respond to your request in accordance with applicable laws.
+        </p>
+        <div class="highlight-box">
+            <strong>🌍 Global Compliance:</strong> We aim to comply with major privacy regulations, including the <strong>GDPR (EU)</strong> and the <strong>CCPA (California)</strong>. We believe in giving you control over your data.
+        </div>
+    </section>
+
+    <!-- 8. Children's Privacy -->
+    <section class="policy-section">
+        <h2>8. Children's Privacy</h2>
+        <p>
+            Ovidhan is intended for general audiences and is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please <a href="mailto:ovidhan.app@gmail.com" style="color:var(--gold);">contact us</a> and we will delete it.
+        </p>
+    </section>
+
+    <!-- 9. Security -->
+    <section class="policy-section">
+        <h2>9. Security</h2>
+        <p>
+            We take the security of your information seriously. We implement appropriate technical and organizational measures to protect your data from unauthorized access, loss, or misuse. However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.
+        </p>
+        <ul>
+            <li><strong>Encryption:</strong> We use encryption (HTTPS) to protect data transmitted between your device and our servers.</li>
+            <li><strong>Access Controls:</strong> Only authorized personnel have access to personal data, and they are bound by strict confidentiality obligations.</li>
+            <li><strong>Data Minimization:</strong> We collect only the data we need and retain it only as long as necessary.</li>
+        </ul>
+    </section>
+
+    <!-- 10. Changes to This Policy -->
+    <section class="policy-section">
+        <h2>10. Changes to This Policy</h2>
+        <p>
+            We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new policy on this page and updating the "Last Updated" date at the top.
+        </p>
+        <p>
+            We encourage you to review this policy periodically to stay informed about how we protect your privacy.
+        </p>
+    </section>
+
+    <!-- 11. Contact Us -->
+    <section class="policy-section">
+        <h2>11. Contact Us</h2>
+        <p>
+            If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please don't hesitate to <a href="mailto:ovidhan.app@gmail.com" style="color:var(--gold);">contact us</a>.
+        </p>
+        <p>
+            <strong>📧 Email:</strong> <a href="mailto:ovidhan.app@gmail.com" style="color:var(--teal);">ovidhan.app@gmail.com</a>
+        </p>
+        <p>
+            <strong>🌐 Website:</strong> <a href="https://ovidhan.net" style="color:var(--teal);">ovidhan.net</a>
+        </p>
+        <p>
+            We are committed to addressing your concerns and will respond as quickly as possible.
+        </p>
+    </section>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <div class="cta-banner">
+        <h3>📱 Learn English with Confidence – Your Privacy Matters</h3>
+        <p>
+            Download Ovidhan today and start learning English with a platform that respects your privacy.
+            12,658+ offline words, grammar guides, vocabulary quizzes, and exam preparation – all completely free.
+        </p>
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank" rel="noopener noreferrer">
+            📥 Download Ovidhan Now
+        </a>
+        <div class="cta-features">
+            <span class="cta-feat">✅ 100% Free</span>
+            <span class="cta-feat">✅ 12,658+ Words</span>
+            <span class="cta-feat">✅ BCS / IELTS / Bank</span>
+            <span class="cta-feat">✅ Dictionary Offline</span>
+        </div>
+    </div>
+
+</main>
+
+<!-- ══ BACK TO TOP BUTTON ══ -->
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+    <p>
+        <a href="https://ovidhan.net">Home</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/blog.html">Blog</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
+        <a href="https://ovidhan.net/privacy.html" style="color:var(--gold);font-weight:600;">Privacy Policy</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<script>
+    // ── Reading Progress Bar ──
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = (scrollTop / docHeight) * 100;
+        document.getElementById('progressFill').style.width = progress + '%';
+    });
+
+    // ── Back to Top Button ──
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) {
+            backBtn.style.display = 'block';
+        } else {
+            backBtn.style.display = 'none';
+        }
+    });
+    backBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
