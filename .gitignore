@@ -13,3 +13,48 @@ word/com2.html
 word/lpt1.html
 word/lpt2.html
 word/aux*
+# Temporary scripts
+fix_all_missing.py
+translate_remaining.py
+translate_mymemory.py
+translate_words.py
+wordlist.txt
+review.html
+review_queue.json
+enriched-dictionary-backup-*.json
+*.backup.json
+*.tmp
+*.temp
+python *.py
+python generate-*.py
+python generate_v3.py
+python upgrade_schema_v2.py
+word-template.htm
+real-missing-words.txt
+my apps details.txt
+[.txt
+*.log
+# Temporary scripts and wordlists
+bulk_expand.py
+candidate_generator.py
+editorial_pipeline.py
+expand_dictionary.py
+expand_to_10k.py
+fix_all_missing.py
+translate_remaining.py
+translate_mymemory.py
+translate_words.py
+wordlist.txt
+review.html
+review_queue.json
+*.backup.json
+enriched-dictionary-backup-*.json
+*.tmp
+*.txt
+!blog-posts.js
+!question-bank.json
+!search-index.json
+python *.py
+word-template.htm
+[.txt
+my apps details.txt
