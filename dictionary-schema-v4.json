@@ -1,0 +1,217 @@
+{
+  "$schema": "https://ovidhan.net/dictionary-schema-v4.json",
+  "version": "4.0",
+  "description": "Gold Standard Dictionary Schema for Ovidhan",
+  "fields": {
+    "word": {
+      "type": "string",
+      "required": true,
+      "description": "The main word in English"
+    },
+    "bangla": {
+      "type": "string",
+      "required": true,
+      "description": "Primary Bangla translation"
+    },
+    "pronunciation": {
+      "type": "object",
+      "properties": {
+        "ipa": { "type": "string", "description": "IPA pronunciation" },
+        "audio_url": { "type": "string", "description": "URL to audio file" },
+        "bangla_script": { "type": "string", "description": "Bangla pronunciation guide" }
+      }
+    },
+    "part_of_speech": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["noun", "verb", "adjective", "adverb", "pronoun", "preposition", "conjunction", "interjection", "determiner"] },
+      "description": "Parts of speech this word can be used as"
+    },
+    "definitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "english": { "type": "string", "description": "English definition" },
+          "bangla": { "type": "string", "description": "Bangla definition" },
+          "context": { "type": "string", "description": "Contextual usage note" }
+        }
+      },
+      "minItems": 1,
+      "description": "Multiple definitions for different contexts"
+    },
+    "word_family": {
+      "type": "object",
+      "properties": {
+        "noun": { "type": "string" },
+        "verb": { "type": "string" },
+        "adjective": { "type": "string" },
+        "adverb": { "type": "string" },
+        "other_forms": { "type": "array", "items": { "type": "string" } }
+      },
+      "description": "Related word forms"
+    },
+    "verb_forms": {
+      "type": "object",
+      "properties": {
+        "base": { "type": "string" },
+        "past": { "type": "string" },
+        "past_participle": { "type": "string" },
+        "present_participle": { "type": "string" },
+        "third_person": { "type": "string" }
+      },
+      "description": "Verb conjugation forms (for verbs only)"
+    },
+    "plural": {
+      "type": "string",
+      "description": "Plural form (for nouns only)"
+    },
+    "comparative": {
+      "type": "string",
+      "description": "Comparative form (for adjectives/adverbs)"
+    },
+    "superlative": {
+      "type": "string",
+      "description": "Superlative form (for adjectives/adverbs)"
+    },
+    "synonyms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Words with similar meanings"
+    },
+    "antonyms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Words with opposite meanings"
+    },
+    "collocations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "phrase": { "type": "string" },
+          "bangla": { "type": "string" },
+          "example": { "type": "string" }
+        }
+      },
+      "description": "Common phrase combinations"
+    },
+    "idioms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "phrase": { "type": "string" },
+          "bangla": { "type": "string" },
+          "example": { "type": "string" }
+        }
+      },
+      "description": "Idiomatic expressions using this word"
+    },
+    "phrasal_verbs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "phrase": { "type": "string" },
+          "bangla": { "type": "string" },
+          "example": { "type": "string" }
+        }
+      },
+      "description": "Phrasal verbs formed with this word"
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "english": { "type": "string" },
+          "bangla": { "type": "string" },
+          "context": { "type": "string", "enum": ["academic", "daily", "formal", "informal", "exam"] }
+        }
+      },
+      "minItems": 3,
+      "description": "Example sentences in English and Bangla"
+    },
+    "common_mistakes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "wrong": { "type": "string" },
+          "correct": { "type": "string" },
+          "bangla_explanation": { "type": "string" }
+        }
+      },
+      "description": "Common errors and how to avoid them"
+    },
+    "cefr_level": {
+      "type": "string",
+      "enum": ["A1", "A2", "B1", "B2", "C1", "C2"],
+      "description": "CEFR proficiency level"
+    },
+    "frequency": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Frequency band (1=most common, 5=least common)"
+    },
+    "frequency_label": {
+      "type": "string",
+      "enum": ["Top 500", "Top 1000", "Top 3000", "Top 10000", "Rare"],
+      "description": "Readable frequency label"
+    },
+    "exam_tags": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["bcs", "ielts", "hsc", "ssc", "university", "bank", "general"] },
+      "description": "Which exams this word is relevant for"
+    },
+    "related_grammar": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Links to grammar articles"
+    },
+    "related_articles": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Links to learning articles"
+    },
+    "related_words": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Words to learn next (recommendation)"
+    },
+    "quality_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Overall quality score (calculated)"
+    },
+    "editorial_status": {
+      "type": "string",
+      "enum": ["draft", "review", "approved", "gold"],
+      "description": "Editorial workflow status"
+    },
+    "verified_by": {
+      "type": "string",
+      "description": "Name or ID of the editor"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date of last update"
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date when word was first added"
+    },
+    "audio_available": {
+      "type": "boolean",
+      "description": "Whether audio pronunciation is available"
+    },
+    "image_available": {
+      "type": "boolean",
+      "description": "Whether an image is available for this word"
+    }
+  }
+}
