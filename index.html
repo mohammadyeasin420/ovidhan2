@@ -1241,23 +1241,35 @@ function formatDate(dateStr) {
 }
 
     // ─── Initialize ───
-    document.addEventListener('DOMContentLoaded', function() {
-        // Load articles
-        loadLatestArticles();
+document.addEventListener('DOMContentLoaded', function() {
+    // Load articles
+    loadLatestArticles();
 
-        // Open first FAQ by default
-        const firstFaq = document.querySelector('.faq-item');
-        if (firstFaq) firstFaq.classList.add('open');
-    });
-</script>
+    // Open first FAQ by default
+    const firstFaq = document.querySelector('.faq-item');
+    if (firstFaq) firstFaq.classList.add('open');
 
-
-<script>
-    // Simple mobile menu close on link click
-    document.querySelectorAll('.mega-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.querySelector('.mega-menu')?.classList.remove('open');
+    // ─── Mobile Menu Toggle (adds the missing functionality) ───
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.mega-menu');
+    if (toggle && menu) {
+        toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menu.classList.toggle('open');
         });
+    }
+
+    // Sub-menu toggle on mobile (tap to expand)
+    document.querySelectorAll('.mega-menu > li').forEach(function(li) {
+        const link = li.querySelector('a');
+        const dropdown = li.querySelector('.dropdown');
+        if (dropdown && window.innerWidth <= 768) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                li.classList.toggle('active');
+            });
+        }
     });
+});
 </script>
 </html>
