@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Flashcards – Spaced Repetition Vocabulary | Ovidhan</title>
+    <meta name="description" content="Master English vocabulary with spaced repetition flashcards. Learn and review words effectively with Ovidhan's SRS system." />
+    <link rel="canonical" href="https://ovidhan.net/flashcards.html" />
+
+    <!-- ═══ SCHEMA ═══ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Flashcards – Spaced Repetition",
+        "description": "Master English vocabulary with spaced repetition flashcards.",
+        "url": "https://ovidhan.net/flashcards.html"
+    }
+    </script>
+
+    <!-- ═══ GOOGLE FONTS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Phase 2 Scripts -->
+    <script src="gamification.js" defer></script>
+    <script src="flashcards.js" defer></script>
+
+    <style>
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-bn);
+            font-size: 17px;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .breadcrumb {
+            font-family: var(--font-en);
+            font-size: 13px;
+            color: var(--text-soft);
+            margin-bottom: 24px;
+        }
+        .breadcrumb a { color: var(--teal); text-decoration:none; }
+        .breadcrumb a:hover { color: var(--gold); }
+
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: var(--text-mid);
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        /* ── Stats Bar ── */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+        .stats-bar .stat {
+            text-align: center;
+        }
+        .stats-bar .stat .number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: var(--font-en);
+        }
+        .stats-bar .stat .label {
+            font-size: 0.8rem;
+            color: var(--text-mid);
+        }
+
+        /* ── Flashcard Area ── */
+        .card-container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 24px;
+            transition: border-color 0.3s;
+            position: relative;
+        }
+        .card-container.flipped {
+            border-color: var(--gold);
+        }
+        .card-container .card-front,
+        .card-container .card-back {
+            width: 100%;
+        }
+        .card-container .card-back {
+            display: none;
+        }
+        .card-container.flipped .card-front {
+            display: none;
+        }
+        .card-container.flipped .card-back {
+            display: block;
+        }
+
+        .card-container .card-word {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .card-container .card-meaning {
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        .card-container .card-example {
+            font-size: 1rem;
+            color: var(--text-mid);
+            font-style: italic;
+            margin-top: 8px;
+        }
+        .card-container .card-hint {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            margin-top: 16px;
+        }
+        .card-container .card-progress {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            font-size: 0.8rem;
+            color: var(--text-soft);
+            font-family: var(--font-en);
+        }
+
+        /* ── Buttons ── */
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 40px;
+            font-weight: 700;
+            font-family: var(--font-en);
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            font-size: 0.95rem;
+            min-width: 80px;
+        }
+        .btn:hover { transform: scale(1.04); }
+        .btn:active { transform: scale(0.96); }
+
+        .btn-primary { background: var(--gold); color: #0B1F1A; }
+        .btn-primary:hover { opacity: 0.9; }
+
+        .btn-again { background: var(--red); color: #fff; }
+        .btn-hard { background: var(--orange); color: #0B1F1A; }
+        .btn-good { background: var(--teal); color: #0B1F1A; }
+        .btn-easy { background: var(--green); color: #0B1F1A; }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--border);
+            color: var(--text-mid);
+        }
+        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+        .btn-secondary {
+            background: var(--surface2);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { border-color: var(--teal); color: var(--teal); }
+
+        .btn-success { background: var(--green); color: #0B1F1A; }
+
+        /* ── Empty / Done State ── */
+        .done-state {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .done-state .icon { font-size: 4rem; display: block; margin-bottom: 12px; }
+        .done-state h3 { color: var(--gold); font-size: 1.4rem; }
+        .done-state p { color: var(--text-mid); max-width: 400px; margin: 8px auto; }
+
+        /* ── Reset / Manage ── */
+        .manage-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-top: 30px;
+        }
+        .manage-section h3 {
+            color: var(--text-mid);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .manage-section .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .card-container { padding: 30px 20px; min-height: 220px; }
+            .card-container .card-word { font-size: 1.8rem; }
+            .card-container .card-meaning { font-size: 1.4rem; }
+            .action-buttons .btn { padding: 10px 18px; font-size: 0.85rem; min-width: 60px; }
+            .stats-bar { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 400px) {
+            .action-buttons .btn { padding: 8px 12px; font-size: 0.75rem; min-width: 50px; }
+            .stats-bar { grid-template-columns: 1fr 1fr; gap: 6px; }
+        }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="nav-inner">
+        <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
+        
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <!-- Play Store Download Button -->
+            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" 
+               target="_blank" 
+               rel="noopener" 
+               class="nav-cta" 
+               style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                📱 Download App
+            </a>
+            <!-- Mobile Toggle Button -->
+            <button class="menu-toggle" onclick="document.querySelector('.mega-menu').classList.toggle('open')">☰</button>
+        </div>
+
+        <ul class="mega-menu">
+            <li><a href="/">🏠 Home</a></li>
+            
+            <li>
+                <a href="/learn.html">📚 Learn</a>
+                <div class="dropdown">
+                    <a href="/learn.html#beginner">Beginner (A1)</a>
+                    <a href="/learn.html#elementary">Elementary (A2)</a>
+                    <a href="/learn.html#intermediate">Intermediate (B1)</a>
+                    <a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+                    <a href="/learn.html#advanced">Advanced (C1)</a>
+                    <a href="/dashboard.html">📊 Progress</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/dictionary.html">📖 Dictionary</a>
+                <div class="dropdown">
+                    <a href="/dictionary.html">Search Words</a>
+                    <a href="/explorer.html">Word Explorer</a>
+                    <a href="/word-of-the-day.html">Word of the Day</a>
+                    <a href="/vocabulary-builder.html">Vocabulary Builder</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/grammar.html">📝 Grammar</a>
+                <div class="dropdown">
+                    <a href="/grammar.html#beginner">Beginner Grammar</a>
+                    <a href="/grammar.html#intermediate">Intermediate Grammar</a>
+                    <a href="/grammar.html#advanced">Advanced Grammar</a>
+                    <a href="/grammar-quiz.html">Grammar Quiz</a>
+                    <a href="/grammar-checker.html">Grammar Checker</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/speaking.html">🗣 Speaking</a>
+                <div class="dropdown">
+                    <a href="/speaking.html#daily">Daily Conversation</a>
+                    <a href="/speaking.html#travel">Travel English</a>
+                    <a href="/speaking.html#office">Office English</a>
+                    <a href="/speaking.html#interview">Job Interview</a>
+                    <a href="/speaking-practice.html">Speaking Practice</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/writing.html">✍ Writing</a>
+                <div class="dropdown">
+                    <a href="/writing.html#academic">Academic Writing</a>
+                    <a href="/writing.html#business">Business English</a>
+                    <a href="/writing.html#daily">Daily Writing</a>
+                    <a href="/sentence-analyzer.html">Sentence Analyzer</a>
+                    <a href="/grammar-checker.html">Grammar Checker</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/practice.html">🎯 Practice</a>
+                <div class="dropdown">
+                    <a href="/daily-challenge.html">Daily Challenge</a>
+                    <a href="/flashcards.html">Flashcards</a>
+                    <a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+                    <a href="/grammar-quiz.html">Grammar Quiz</a>
+                    <a href="/speaking-practice.html">Speaking Practice</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/assessment.html">🧪 Assessment</a>
+                <div class="dropdown">
+                    <a href="/english-level-test.html">CEFR Level Test</a>
+                    <a href="/grammar-level-test.html">Grammar Test</a>
+                    <a href="/vocabulary-size-test.html">Vocabulary Size</a>
+                    <a href="/assessment.html#report">Progress Report</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/exam-prep.html">🎓 Exam Prep</a>
+                <div class="dropdown">
+                    <a href="/ielts-guide.html">IELTS</a>
+                    <a href="/bcs-english-mock-test.html">BCS</a>
+                    <a href="/bank-job-english-preparation-guide.html">Bank Jobs</a>
+                    <a href="/exam-prep.html#ssc">SSC / HSC</a>
+                    <a href="/exam-prep.html#university">University Admission</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/tools.html">🛠 Tools</a>
+                <div class="dropdown">
+                    <a href="/sentence-analyzer.html">Sentence Analyzer</a>
+                    <a href="/tense-identifier.html">Tense Identifier</a>
+                    <a href="/voice-converter.html">Voice Converter</a>
+                    <a href="/plural-maker.html">Plural Maker</a>
+                    <a href="/verb-forms.html">Verb Forms</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+                <div class="dropdown">
+                    <a href="/bangladesh.html#visa">Visa & Immigration</a>
+                    <a href="/bangladesh.html#job">Job Interview</a>
+                    <a href="/bangladesh.html#daily">Daily Life English</a>
+                    <a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+                </div>
+            </li>
+
+            <li><a href="/blog.html">📖 Blog</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Header will be injected by the layout script -->
+
+<main class="main-wrap">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="https://ovidhan.net">Home</a> ›
+        <a href="/practice.html">Practice</a> ›
+        Flashcards
+    </nav>
+
+    <h1>📇 Spaced Repetition Flashcards</h1>
+    <p class="subtitle">Master vocabulary with intelligent scheduling. Words you forget appear more often; words you know appear less.</p>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar" id="statsBar">
+        <div class="stat"><div class="number" id="totalCards">0</div><div class="label">Total Cards</div></div>
+        <div class="stat"><div class="number" id="dueCards">0</div><div class="label">Due Today</div></div>
+        <div class="stat"><div class="number" id="masteredCards">0</div><div class="label">Mastered</div></div>
+        <div class="stat"><div class="number" id="percentMastered">0%</div><div class="label">Progress</div></div>
+    </div>
+
+    <!-- Flashcard Container -->
+    <div class="card-container" id="cardContainer">
+        <div class="card-progress" id="cardProgress">1 / 1</div>
+        <div class="card-front" id="cardFront">
+            <div class="card-word" id="frontWord">Click "Load Deck"</div>
+            <div class="card-hint">👆 Tap "Show Answer" to reveal</div>
+        </div>
+        <div class="card-back" id="cardBack">
+            <div class="card-meaning" id="backMeaning">—</div>
+            <div class="card-example" id="backExample"></div>
+            <div class="card-hint">❓ How well did you know this?</div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons" id="actionButtons">
+        <button class="btn btn-primary" id="showAnswerBtn">👀 Show Answer</button>
+        <button class="btn btn-again" id="againBtn" style="display:none;">🔄 Again</button>
+        <button class="btn btn-hard" id="hardBtn" style="display:none;">📖 Hard</button>
+        <button class="btn btn-good" id="goodBtn" style="display:none;">👍 Good</button>
+        <button class="btn btn-easy" id="easyBtn" style="display:none;">🚀 Easy</button>
+    </div>
+
+    <!-- Loading / Done State -->
+    <div id="emptyState" style="display:none;">
+        <div class="done-state">
+            <span class="icon">🎉</span>
+            <h3>All caught up!</h3>
+            <p>You have no due cards right now. Check back later for more reviews.</p>
+            <button class="btn btn-secondary" id="resetDeckBtn" style="margin-top:12px;">🔄 Add More Words</button>
+        </div>
+    </div>
+
+    <!-- Manage Section -->
+    <div class="manage-section">
+        <h3>⚙️ Manage Your Deck</h3>
+        <div class="btn-group">
+            <button class="btn btn-secondary" id="loadDeckBtn">📚 Load / Refresh Deck</button>
+            <button class="btn btn-secondary" id="resetAllBtn" style="border-color:var(--red);color:var(--red);">🗑️ Reset All Progress</button>
+        </div>
+        <p style="color:var(--text-soft);font-size:0.8rem;margin-top:10px;">
+            <strong>How SRS works:</strong> Words are scheduled based on your answers. <span style="color:var(--green);">Good</span> = longer interval, <span style="color:var(--red);">Again</span> = shorter interval. This optimizes your learning.
+        </p>
+    </div>
+
+</main>
+
+<!-- Footer will be injected by the layout script -->
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        // ── DOM refs ──
+        const cardContainer = document.getElementById('cardContainer');
+        const frontWord = document.getElementById('frontWord');
+        const backMeaning = document.getElementById('backMeaning');
+        const backExample = document.getElementById('backExample');
+        const cardProgress = document.getElementById('cardProgress');
+        const showAnswerBtn = document.getElementById('showAnswerBtn');
+        const againBtn = document.getElementById('againBtn');
+        const hardBtn = document.getElementById('hardBtn');
+        const goodBtn = document.getElementById('goodBtn');
+        const easyBtn = document.getElementById('easyBtn');
+        const emptyState = document.getElementById('emptyState');
+        const statsBar = document.getElementById('statsBar');
+        const loadDeckBtn = document.getElementById('loadDeckBtn');
+        const resetAllBtn = document.getElementById('resetAllBtn');
+        const resetDeckBtn = document.getElementById('resetDeckBtn');
+
+        // ── State ──
+        let currentDeck = [];
+        let currentCardIndex = 0;
+        let dueCards = [];
+
+        // ── Helper: Update Stats ──
+        function updateStats() {
+            const state = window.FlashcardEngine.loadFlashcards();
+            if (!state) {
+                document.getElementById('totalCards').textContent = '0';
+                document.getElementById('dueCards').textContent = '0';
+                document.getElementById('masteredCards').textContent = '0';
+                document.getElementById('percentMastered').textContent = '0%';
+                return;
+            }
+            const stats = window.FlashcardEngine.getCardStats(state);
+            document.getElementById('totalCards').textContent = stats.total;
+            document.getElementById('dueCards').textContent = stats.due;
+            document.getElementById('masteredCards').textContent = stats.mastered;
+            document.getElementById('percentMastered').textContent = stats.percentMastered + '%';
+        }
+
+        // ── Render Current Card ──
+        function renderCard() {
+            if (!dueCards || dueCards.length === 0) {
+                cardContainer.style.display = 'none';
+                document.getElementById('actionButtons').style.display = 'none';
+                emptyState.style.display = 'block';
+                updateStats();
+                return;
+            }
+
+            cardContainer.style.display = 'flex';
+            document.getElementById('actionButtons').style.display = 'flex';
+            emptyState.style.display = 'none';
+
+            const card = dueCards[currentCardIndex] || dueCards[0];
+            if (!card) return;
+
+            // Reset flip state
+            cardContainer.classList.remove('flipped');
+            showAnswerBtn.style.display = 'inline-block';
+            againBtn.style.display = 'none';
+            hardBtn.style.display = 'none';
+            goodBtn.style.display = 'none';
+            easyBtn.style.display = 'none';
+
+            frontWord.textContent = card.word || 'Unknown Word';
+            backMeaning.textContent = card.meaning || '—';
+            backExample.textContent = card.example ? `"${card.example}"` : '';
+            cardProgress.textContent = `${currentCardIndex + 1} / ${dueCards.length}`;
+
+            // Update stats
+            updateStats();
+        }
+
+        // ── Show Answer ──
+        function showAnswer() {
+            cardContainer.classList.add('flipped');
+            showAnswerBtn.style.display = 'none';
+            againBtn.style.display = 'inline-block';
+            hardBtn.style.display = 'inline-block';
+            goodBtn.style.display = 'inline-block';
+            easyBtn.style.display = 'inline-block';
+        }
+
+        // ── Handle Answer ──
+        function handleAnswer(quality) {
+            if (!dueCards || dueCards.length === 0) return;
+
+            const card = dueCards[currentCardIndex];
+            const state = window.FlashcardEngine.loadFlashcards();
+            if (!state) return;
+
+            // Find the card in the state and schedule it
+            const indexInState = state.cards.findIndex(c => c.word === card.word);
+            if (indexInState === -1) return;
+
+            const scheduledCard = window.FlashcardEngine.scheduleCard(state.cards[indexInState], quality);
+
+            // Award XP for correct answers (quality >= 2)
+            if (quality >= 2) {
+                if (typeof window.OvidhanGamification !== 'undefined') {
+                    window.OvidhanGamification.addXP(5);
+                    // Also update streak
+                    window.OvidhanGamification.updateStreak();
+                }
+            }
+
+            // Save updated state
+            window.FlashcardEngine.saveFlashcards(state);
+
+            // Move to next card
+            currentCardIndex++;
+            if (currentCardIndex >= dueCards.length) {
+                // Refresh due cards
+                const freshState = window.FlashcardEngine.loadFlashcards();
+                dueCards = window.FlashcardEngine.getDueCards(freshState);
+                currentCardIndex = 0;
+                if (dueCards.length === 0) {
+                    renderCard();
+                    return;
+                }
+            }
+
+            renderCard();
+        }
+
+        // ── Load / Initialize Deck ──
+        async function loadDeck() {
+            try {
+                // Show loading state
+                frontWord.textContent = '⏳ Loading words...';
+                backMeaning.textContent = '—';
+                cardContainer.classList.remove('flipped');
+                showAnswerBtn.style.display = 'none';
+                againBtn.style.display = 'none';
+                hardBtn.style.display = 'none';
+                goodBtn.style.display = 'none';
+                easyBtn.style.display = 'none';
+
+                const words = await window.FlashcardEngine.loadDictionaryWords();
+                if (!words || words.length === 0) {
+                    alert('⚠️ No words found. Please check your dictionary files.');
+                    return;
+                }
+
+                const state = window.FlashcardEngine.initializeDeck(words);
+                dueCards = window.FlashcardEngine.getDueCards(state);
+                currentCardIndex = 0;
+
+                if (dueCards.length === 0) {
+                    cardContainer.style.display = 'none';
+                    emptyState.style.display = 'block';
+                } else {
+                    renderCard();
+                }
+                updateStats();
+            } catch (e) {
+                console.error('Error loading deck:', e);
+                alert('⚠️ Failed to load deck. Please try again.');
+            }
+        }
+
+        // ── Reset All Progress ──
+        function resetAll() {
+            if (!confirm('⚠️ This will delete all your flashcard progress. Are you sure?')) return;
+            localStorage.removeItem('ovidhan_flashcards');
+            dueCards = [];
+            currentCardIndex = 0;
+            cardContainer.style.display = 'none';
+            emptyState.style.display = 'block';
+            updateStats();
+            alert('🗑️ All flashcard data has been reset.');
+        }
+
+        // ── Event Listeners ──
+        showAnswerBtn.addEventListener('click', showAnswer);
+        againBtn.addEventListener('click', () => handleAnswer(0));
+        hardBtn.addEventListener('click', () => handleAnswer(1));
+        goodBtn.addEventListener('click', () => handleAnswer(2));
+        easyBtn.addEventListener('click', () => handleAnswer(3));
+
+        loadDeckBtn.addEventListener('click', loadDeck);
+        resetAllBtn.addEventListener('click', resetAll);
+        resetDeckBtn.addEventListener('click', loadDeck);
+
+        // ── Initialize on page load ──
+        const existingState = window.FlashcardEngine.loadFlashcards();
+        if (existingState && existingState.cards && existingState.cards.length > 0) {
+            dueCards = window.FlashcardEngine.getDueCards(existingState);
+            currentCardIndex = 0;
+            if (dueCards.length === 0) {
+                cardContainer.style.display = 'none';
+                emptyState.style.display = 'block';
+            } else {
+                renderCard();
+            }
+            updateStats();
+        } else {
+            // Auto-load deck on first visit
+            await loadDeck();
+        }
+    });
+</script>
+
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান | Ovidhan</strong> — English Learning Ecosystem for Bangladesh</p>
+    <p>
+        <a href="/">Home</a> &nbsp;•&nbsp;
+        <a href="/learn.html">Learn</a> &nbsp;•&nbsp;
+        <a href="/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="/practice.html">Practice</a> &nbsp;•&nbsp;
+        <a href="/exam-prep.html">Exam Prep</a> &nbsp;•&nbsp;
+        <a href="/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" target="_blank">📱 Download App</a>
+    </p>
+    <p style="margin-top: 12px;">© 2026 Ovidhan • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+</body>
+</html>
