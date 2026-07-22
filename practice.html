@@ -112,6 +112,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
+    <!-- ═══ Phase 2 Scripts ═══ -->
+    <script src="gamification.js" defer></script>
+    <script src="daily-challenge.js" defer></script>
+
     <style>
         /* ─── Ovidhan Dark Premium Theme ─── */
         :root {
@@ -165,22 +169,6 @@
             background:linear-gradient(90deg,var(--gold),var(--teal));
             transition:width .1s linear;
         }
-
-        .site-nav {
-            position:sticky; top:0; z-index:100;
-            background:rgba(11,31,26,0.95);
-            backdrop-filter:blur(14px);
-            border-bottom:1px solid var(--border);
-            padding:13px 24px;
-            display:flex; justify-content:space-between; align-items:center; gap:12px;
-            flex-wrap:wrap;
-        }
-        .nav-logo { font-size:22px; font-weight:700; color:var(--gold); text-decoration:none; }
-        .nav-links { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
-        .nav-links a { color:var(--text-mid); text-decoration:none; font-size:14px; font-family:var(--font-en); transition:color .2s; }
-        .nav-links a:hover { color:var(--gold); }
-        .nav-cta { background:var(--gold); color:#0B1F1A !important; font-weight:700 !important; padding:7px 16px; border-radius:8px; }
-        .nav-cta:hover { background:#f0c85a !important; }
 
         .main-wrap {
             max-width:820px;
@@ -373,7 +361,6 @@
             font-size:0.85rem;
         }
 
-        /* ─── BEFORE / AFTER LEARNING ─── */
         .before-after {
             background:var(--surface2);
             border:1px solid var(--border);
@@ -762,149 +749,13 @@
     </style>
 </head>
 <body>
-<header class="site-header">
-    <div class="nav-inner">
-        <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
-        
-        <div style="display: flex; align-items: center; gap: 12px;">
-            <!-- Play Store Download Button -->
-            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" 
-               target="_blank" 
-               rel="noopener" 
-               class="nav-cta" 
-               style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-                📱 Download App
-            </a>
-            <!-- Mobile Toggle Button -->
-            <button class="menu-toggle" onclick="document.querySelector('.mega-menu').classList.toggle('open')">☰</button>
-        </div>
-
-        <ul class="mega-menu">
-            <li><a href="/">🏠 Home</a></li>
-            
-            <li>
-                <a href="/learn.html">📚 Learn</a>
-                <div class="dropdown">
-                    <a href="/learn.html#beginner">Beginner (A1)</a>
-                    <a href="/learn.html#elementary">Elementary (A2)</a>
-                    <a href="/learn.html#intermediate">Intermediate (B1)</a>
-                    <a href="/learn.html#upper">Upper-Intermediate (B2)</a>
-                    <a href="/learn.html#advanced">Advanced (C1)</a>
-                    <a href="/dashboard.html">📊 Progress</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/dictionary.html">📖 Dictionary</a>
-                <div class="dropdown">
-                    <a href="/dictionary.html">Search Words</a>
-                    <a href="/explorer.html">Word Explorer</a>
-                    <a href="/word-of-the-day.html">Word of the Day</a>
-                    <a href="/vocabulary-builder.html">Vocabulary Builder</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/grammar.html">📝 Grammar</a>
-                <div class="dropdown">
-                    <a href="/grammar.html#beginner">Beginner Grammar</a>
-                    <a href="/grammar.html#intermediate">Intermediate Grammar</a>
-                    <a href="/grammar.html#advanced">Advanced Grammar</a>
-                    <a href="/grammar-quiz.html">Grammar Quiz</a>
-                    <a href="/grammar-checker.html">Grammar Checker</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/speaking.html">🗣 Speaking</a>
-                <div class="dropdown">
-                    <a href="/speaking.html#daily">Daily Conversation</a>
-                    <a href="/speaking.html#travel">Travel English</a>
-                    <a href="/speaking.html#office">Office English</a>
-                    <a href="/speaking.html#interview">Job Interview</a>
-                    <a href="/speaking-practice.html">Speaking Practice</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/writing.html">✍ Writing</a>
-                <div class="dropdown">
-                    <a href="/writing.html#academic">Academic Writing</a>
-                    <a href="/writing.html#business">Business English</a>
-                    <a href="/writing.html#daily">Daily Writing</a>
-                    <a href="/sentence-analyzer.html">Sentence Analyzer</a>
-                    <a href="/grammar-checker.html">Grammar Checker</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/practice.html">🎯 Practice</a>
-                <div class="dropdown">
-                    <a href="/daily-challenge.html">Daily Challenge</a>
-                    <a href="/flashcards.html">Flashcards</a>
-                    <a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
-                    <a href="/grammar-quiz.html">Grammar Quiz</a>
-                    <a href="/speaking-practice.html">Speaking Practice</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/assessment.html">🧪 Assessment</a>
-                <div class="dropdown">
-                    <a href="/english-level-test.html">CEFR Level Test</a>
-                    <a href="/grammar-level-test.html">Grammar Test</a>
-                    <a href="/vocabulary-size-test.html">Vocabulary Size</a>
-                    <a href="/assessment.html#report">Progress Report</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/exam-prep.html">🎓 Exam Prep</a>
-                <div class="dropdown">
-                    <a href="/ielts-guide.html">IELTS</a>
-                    <a href="/bcs-english-mock-test.html">BCS</a>
-                    <a href="/bank-job-english-preparation-guide.html">Bank Jobs</a>
-                    <a href="/exam-prep.html#ssc">SSC / HSC</a>
-                    <a href="/exam-prep.html#university">University Admission</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/tools.html">🛠 Tools</a>
-                <div class="dropdown">
-                    <a href="/sentence-analyzer.html">Sentence Analyzer</a>
-                    <a href="/tense-identifier.html">Tense Identifier</a>
-                    <a href="/voice-converter.html">Voice Converter</a>
-                    <a href="/plural-maker.html">Plural Maker</a>
-                    <a href="/verb-forms.html">Verb Forms</a>
-                </div>
-            </li>
-
-            <li>
-                <a href="/bangladesh.html">🇧🇩 Bangladesh</a>
-                <div class="dropdown">
-                    <a href="/bangladesh.html#visa">Visa & Immigration</a>
-                    <a href="/bangladesh.html#job">Job Interview</a>
-                    <a href="/bangladesh.html#daily">Daily Life English</a>
-                    <a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
-                </div>
-            </li>
-
-            <li><a href="/blog.html">📖 Blog</a></li>
-        </ul>
-    </div>
-</header>
-
-
-
 
 <!-- ══ PROGRESS BAR ══ -->
 <div class="progress-bar">
     <div class="progress-fill" id="progressFill"></div>
 </div>
 
-<!-- ══ NAV ══ -->
-
+<!-- ══ HEADER (injected by script) ══ -->
 
 <!-- ══ MAIN ══ -->
 <main class="main-wrap">
@@ -917,7 +768,6 @@
 
     <!-- ═══ HERO SECTION ═══ -->
     <header class="hero-header">
-    <link rel="stylesheet" href="styles.css" />
         <div class="article-category">🎯 Practice Hub</div>
         <h1>Practice English Daily – <em>Speaking, Listening, Reading & Writing</em></h1>
 
@@ -945,7 +795,7 @@
             <span class="author">✍️ Mohammad Yeasin</span>
             <span>📅 July 19, 2026</span>
             <span>🇧🇩 Practice</span>
-            <span>🔄 Updated: July 19, 2026</span>
+            <span>🔄 Updated: July 22, 2026</span>
         </div>
 
         <div class="badge-group">
@@ -956,6 +806,31 @@
             <span class="badge purple">📖 A1–C2</span>
         </div>
     </header>
+
+    <!-- ═══ USER STATS & DAILY CHALLENGE STATUS ═══ -->
+    <section style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between;">
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+            <div><span style="color:var(--text-soft);">⭐ XP</span> <strong id="userXp" style="color:var(--gold);font-size:1.4rem;">0</strong></div>
+            <div><span style="color:var(--text-soft);">📊 Level</span> <strong id="userLevel" style="color:var(--teal);font-size:1.4rem;">1</strong></div>
+            <div><span style="color:var(--text-soft);">🔥 Streak</span> <strong id="userStreak" style="color:var(--orange);font-size:1.4rem;">0</strong> days</div>
+        </div>
+        <div style="background:var(--surface); padding:6px 14px; border-radius:20px; border:1px solid var(--gold);">
+            <span id="challengeStatus" style="color:var(--gold);">⏳ Today's Challenge: Not Done</span>
+        </div>
+    </section>
+
+    <!-- ═══ DAILY CHALLENGE WIDGET ═══ -->
+    <div id="dailyChallengeWidget" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px; margin-bottom:24px; border-left:4px solid var(--gold); display:none;">
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+            <span id="challengeIcon" style="font-size:2.5rem;">📝</span>
+            <div style="flex:1;">
+                <h3 id="challengeTitle" style="color:var(--gold); font-size:1.2rem; margin:0;">Daily Challenge</h3>
+                <p id="challengeDesc" style="color:var(--text-mid); margin:4px 0 0;">Write 3 sentences using the word of the day.</p>
+                <span id="challengeDuration" style="color:var(--text-soft); font-size:0.85rem;">⏱️ 5 min</span>
+            </div>
+            <button id="startChallengeBtn" style="background:var(--gold); color:#0B1F1A; font-weight:700; padding:8px 20px; border:none; border-radius:40px; cursor:pointer; font-family:var(--font-en); transition:0.2s;">Start Challenge</button>
+        </div>
+    </div>
 
     <!-- ═══ QUICK ANSWER BOX ═══ -->
     <div class="quick-answer" role="region" aria-label="Quick Answer">
@@ -1100,7 +975,6 @@
 
         <div class="practice-grid">
 
-            <!-- Card 1 -->
             <a href="/english-speaking-practice-bangladeshi-students.html" class="practice-card" style="border-left:4px solid var(--gold);">
                 <div class="card-icon">💬</div>
                 <div class="card-title">Speaking Practice</div>
@@ -1108,7 +982,6 @@
                 <span class="card-tag a1">A1-B2</span>
             </a>
 
-            <!-- Card 2 -->
             <a href="/english-conversation-practice-at-home.html" class="practice-card" style="border-left:4px solid var(--teal);">
                 <div class="card-icon">🏠</div>
                 <div class="card-title">Conversation at Home</div>
@@ -1116,7 +989,6 @@
                 <span class="card-tag a1">A1-A2</span>
             </a>
 
-            <!-- Card 3 -->
             <a href="/daily-english-speaking-sentences-beginners.html" class="practice-card" style="border-left:4px solid var(--purple);">
                 <div class="card-icon">📝</div>
                 <div class="card-title">Daily Speaking Sentences</div>
@@ -1124,7 +996,6 @@
                 <span class="card-tag a1">A1-A2</span>
             </a>
 
-            <!-- Card 4 -->
             <a href="/daily-english.html" class="practice-card" style="border-left:4px solid var(--green);">
                 <div class="card-icon">📋</div>
                 <div class="card-title">Daily English</div>
@@ -1132,7 +1003,6 @@
                 <span class="card-tag a1">A1-A2</span>
             </a>
 
-            <!-- Card 5 -->
             <a href="/job-interview-english-bangla.html" class="practice-card" style="border-left:4px solid var(--orange);">
                 <div class="card-icon">🎤</div>
                 <div class="card-title">Interview English</div>
@@ -1140,7 +1010,6 @@
                 <span class="card-tag b1">B1-B2</span>
             </a>
 
-            <!-- Card 6 -->
             <a href="/self-introduction-english-bangla.html" class="practice-card" style="border-left:4px solid var(--pink);">
                 <div class="card-icon">👤</div>
                 <div class="card-title">Self-Introduction</div>
@@ -1150,7 +1019,6 @@
 
         </div>
 
-        <!-- 💼 Real-Life Use -->
         <div style="background:var(--teal-dim);border:1px solid var(--teal);border-radius:var(--radius);padding:16px 20px;margin:16px 0;border-left:4px solid var(--teal);">
             <div style="color:var(--teal);font-weight:700;font-size:0.85rem;font-family:var(--font-en);letter-spacing:0.5px;margin-bottom:4px;">💼 Real-Life Use</div>
             <p style="color:var(--text-mid);margin:0;">
@@ -1172,7 +1040,6 @@
 
         <div class="practice-grid">
 
-            <!-- Card 1 -->
             <a href="/airport-english-bangla.html" class="practice-card" style="border-left:4px solid var(--gold);">
                 <div class="card-icon">✈️</div>
                 <div class="card-title">Airport Conversations</div>
@@ -1180,7 +1047,6 @@
                 <span class="card-tag a2">A2-B1</span>
             </a>
 
-            <!-- Card 2 -->
             <a href="/restaurant-english-bangla.html" class="practice-card" style="border-left:4px solid var(--teal);">
                 <div class="card-icon">🍽️</div>
                 <div class="card-title">Restaurant Dialogues</div>
@@ -1188,7 +1054,6 @@
                 <span class="card-tag a1">A1-B1</span>
             </a>
 
-            <!-- Card 3 -->
             <a href="/shopping-english-bangla.html" class="practice-card" style="border-left:4px solid var(--purple);">
                 <div class="card-icon">🛍️</div>
                 <div class="card-title">Shopping Conversations</div>
@@ -1196,7 +1061,6 @@
                 <span class="card-tag a1">A1-A2</span>
             </a>
 
-            <!-- Card 4 -->
             <a href="/telephone-email-english-bangla.html" class="practice-card" style="border-left:4px solid var(--orange);">
                 <div class="card-icon">📞</div>
                 <div class="card-title">Phone Conversations</div>
@@ -1206,7 +1070,6 @@
 
         </div>
 
-        <!-- 🎯 Exam Focus -->
         <div style="background:var(--green-dim);border:1px solid var(--green);border-radius:var(--radius);padding:16px 20px;margin:16px 0;border-left:4px solid var(--green);">
             <div style="color:var(--green);font-weight:700;font-size:0.85rem;font-family:var(--font-en);letter-spacing:0.5px;margin-bottom:4px;">🎯 Exam Focus</div>
             <p style="color:var(--text-mid);margin:0;">
@@ -1227,7 +1090,6 @@
 
         <div class="practice-grid">
 
-            <!-- Card 1 -->
             <a href="/dictionary.html" class="practice-card" style="border-left:4px solid var(--gold);">
                 <div class="card-icon">📕</div>
                 <div class="card-title">Read Dictionary Words</div>
@@ -1235,7 +1097,6 @@
                 <span class="card-tag a1">A1-C2</span>
             </a>
 
-            <!-- Card 2 -->
             <a href="/bcs-500-words.html" class="practice-card" style="border-left:4px solid var(--teal);">
                 <div class="card-icon">📚</div>
                 <div class="card-title">BCS Vocabulary</div>
@@ -1243,7 +1104,6 @@
                 <span class="card-tag b1">B1-B2</span>
             </a>
 
-            <!-- Card 3 -->
             <a href="/ielts-vocabulary-2026-bangla-meaning.html" class="practice-card" style="border-left:4px solid var(--purple);">
                 <div class="card-icon">🌍</div>
                 <div class="card-title">IELTS Vocabulary</div>
@@ -1251,7 +1111,6 @@
                 <span class="card-tag b1">B1-B2</span>
             </a>
 
-            <!-- Card 4 -->
             <a href="/common-english-sentences.html" class="practice-card" style="border-left:4px solid var(--green);">
                 <div class="card-icon">💬</div>
                 <div class="card-title">Common English Sentences</div>
@@ -1261,7 +1120,6 @@
 
         </div>
 
-        <!-- 🧠 Remember Forever -->
         <div style="background:var(--purple-dim);border:1px solid var(--purple);border-radius:var(--radius);padding:16px 20px;margin:16px 0;border-left:4px solid var(--purple);">
             <div style="color:var(--purple);font-weight:700;font-size:0.85rem;font-family:var(--font-en);letter-spacing:0.5px;margin-bottom:4px;">🧠 Remember Forever</div>
             <p style="color:var(--text-mid);margin:0;">
@@ -1280,7 +1138,6 @@
 
         <div class="practice-grid">
 
-            <!-- Card 1 -->
             <a href="/sentence-rewriter.html" class="practice-card" style="border-left:4px solid var(--gold);">
                 <div class="card-icon">✍️</div>
                 <div class="card-title">Sentence Rewriter</div>
@@ -1288,7 +1145,6 @@
                 <span class="card-tag a1">A1-C2</span>
             </a>
 
-            <!-- Card 2 -->
             <a href="/grammar-checker.html" class="practice-card" style="border-left:4px solid var(--teal);">
                 <div class="card-icon">✅</div>
                 <div class="card-title">Grammar Checker</div>
@@ -1296,7 +1152,6 @@
                 <span class="card-tag a1">A1-C2</span>
             </a>
 
-            <!-- Card 3 -->
             <a href="/business-email-writing-bangla.html" class="practice-card" style="border-left:4px solid var(--purple);">
                 <div class="card-icon">✉️</div>
                 <div class="card-title">Email Writing</div>
@@ -1304,7 +1159,6 @@
                 <span class="card-tag b1">B1-B2</span>
             </a>
 
-            <!-- Card 4 -->
             <a href="/sentence-analyzer.html" class="practice-card" style="border-left:4px solid var(--orange);">
                 <div class="card-icon">📊</div>
                 <div class="card-title">Sentence Analyzer</div>
@@ -1314,7 +1168,6 @@
 
         </div>
 
-        <!-- 🇧🇩 Bangladesh Learner Alert -->
         <div style="background:var(--gold-dim);border:1px solid var(--gold);border-radius:var(--radius);padding:16px 20px;margin:16px 0;border-left:4px solid var(--gold);">
             <div style="color:var(--gold);font-weight:700;font-size:0.85rem;font-family:var(--font-en);letter-spacing:0.5px;margin-bottom:4px;">🇧🇩 Bangladesh Learner Alert</div>
             <p style="color:var(--text-mid);margin:0;">
@@ -1335,7 +1188,6 @@
 
         <div class="practice-grid">
 
-            <!-- Quiz 1 -->
             <a href="/grammar-quiz.html" class="practice-card" style="border-left:4px solid var(--gold);">
                 <div class="card-icon">📝</div>
                 <div class="card-title">Grammar Quiz</div>
@@ -1343,7 +1195,6 @@
                 <span class="card-tag a1">A1-B2</span>
             </a>
 
-            <!-- Quiz 2 -->
             <a href="/vocabulary-quiz.html" class="practice-card" style="border-left:4px solid var(--teal);">
                 <div class="card-icon">📚</div>
                 <div class="card-title">Vocabulary Quiz</div>
@@ -1351,7 +1202,6 @@
                 <span class="card-tag a1">A1-C1</span>
             </a>
 
-            <!-- Quiz 3 -->
             <a href="/vocabulary-size-test.html" class="practice-card" style="border-left:4px solid var(--purple);">
                 <div class="card-icon">📊</div>
                 <div class="card-title">Vocabulary Size Test</div>
@@ -1359,7 +1209,6 @@
                 <span class="card-tag a1">A1-C2</span>
             </a>
 
-            <!-- Quiz 4 -->
             <a href="/articles-quiz.html" class="practice-card" style="border-left:4px solid var(--orange);">
                 <div class="card-icon">📝</div>
                 <div class="card-title">Articles Quiz</div>
@@ -1367,7 +1216,6 @@
                 <span class="card-tag a1">A1-B1</span>
             </a>
 
-            <!-- Quiz 5 -->
             <a href="/tense-quiz.html" class="practice-card" style="border-left:4px solid var(--pink);">
                 <div class="card-icon">⏳</div>
                 <div class="card-title">Tense Quiz</div>
@@ -1375,7 +1223,6 @@
                 <span class="card-tag a1">A1-B2</span>
             </a>
 
-            <!-- Quiz 6 -->
             <a href="/subject-verb-quiz.html" class="practice-card" style="border-left:4px solid var(--green);">
                 <div class="card-icon">✅</div>
                 <div class="card-title">Subject-Verb Quiz</div>
@@ -1537,8 +1384,7 @@
 <!-- ══ BACK TO TOP BUTTON ══ -->
 <button id="backToTop" aria-label="Back to top">↑</button>
 
-<!-- ══ FOOTER ══ -->
-
+<!-- ══ FOOTER (injected by script) ══ -->
 
 <script>
     // ── Reading Progress Bar ──
@@ -1579,28 +1425,49 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ── Initialize FAQ (first one open) ──
+    // ── Load Gamification & Daily Challenge ──
     document.addEventListener('DOMContentLoaded', function() {
+        // Open first FAQ
         const firstFaq = document.querySelector('.faq-item');
         if (firstFaq) firstFaq.classList.add('open');
+
+        // Load stats
+        if (typeof window.OvidhanGamification !== 'undefined') {
+            const stats = window.OvidhanGamification.loadStats();
+            document.getElementById('userXp').textContent = stats.xp;
+            document.getElementById('userLevel').textContent = stats.level;
+            document.getElementById('userStreak').textContent = stats.streak;
+
+            // Challenge
+            const challenge = window.DailyChallenge.getDailyChallenge();
+            const completed = window.DailyChallenge.isChallengeCompleted();
+            document.getElementById('challengeStatus').textContent = completed ? '✅ Completed!' : `⏳ Today's Challenge: ${challenge.title}`;
+
+            if (!completed) {
+                const widget = document.getElementById('dailyChallengeWidget');
+                widget.style.display = 'block';
+                document.getElementById('challengeIcon').textContent = challenge.icon;
+                document.getElementById('challengeTitle').textContent = challenge.title;
+                document.getElementById('challengeDesc').textContent = challenge.description;
+                document.getElementById('challengeDuration').textContent = '⏱️ ' + challenge.duration;
+                document.getElementById('startChallengeBtn').onclick = function() {
+                    if (window.DailyChallenge.completeChallenge()) {
+                        const newStats = window.OvidhanGamification.loadStats();
+                        document.getElementById('userXp').textContent = newStats.xp;
+                        document.getElementById('userLevel').textContent = newStats.level;
+                        document.getElementById('userStreak').textContent = newStats.streak;
+                        document.getElementById('challengeStatus').textContent = '✅ Completed!';
+                        widget.style.display = 'none';
+                        alert('🎉 Challenge completed! +20 XP');
+                    }
+                };
+            }
+        } else {
+            // Fallback if scripts didn't load
+            console.warn('Gamification scripts not loaded – check file paths.');
+        }
     });
 </script>
 
-
-
-<footer class="site-footer">
-    <p><strong style="color:var(--gold);">অভিধান | Ovidhan</strong> — English Learning Ecosystem for Bangladesh</p>
-    <p>
-        <a href="/">Home</a> &nbsp;•&nbsp;
-        <a href="/learn.html">Learn</a> &nbsp;•&nbsp;
-        <a href="/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
-        <a href="/grammar.html">Grammar</a> &nbsp;•&nbsp;
-        <a href="/practice.html">Practice</a> &nbsp;•&nbsp;
-        <a href="/exam-prep.html">Exam Prep</a> &nbsp;•&nbsp;
-        <a href="/tools.html">Tools</a> &nbsp;•&nbsp;
-        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" target="_blank">📱 Download App</a>
-    </p>
-    <p style="margin-top: 12px;">© 2026 Ovidhan • Made with ❤️ for Bangladesh 🇧🇩</p>
-</footer>
 </body>
 </html>
