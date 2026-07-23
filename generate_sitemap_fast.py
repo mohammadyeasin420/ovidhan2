@@ -41,8 +41,7 @@ def generate_sitemap():
             url['changefreq'] = 'weekly'
     
     urls.sort(key=lambda x: x['loc'])
-    
-    chunk_size = 50000
+    chunk_size = 12500
     total = len(urls)
     num_chunks = math.ceil(total / chunk_size)
     
