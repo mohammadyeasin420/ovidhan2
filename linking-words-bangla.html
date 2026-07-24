@@ -1,3 +1,5 @@
+<!-- ═══ LINKING WORDS – CONTENT BLOCK ═══ -->
+
 <body>
 <header class="site-header">
     <link rel="stylesheet" href="styles.css" />
@@ -250,1104 +252,1070 @@
         }
     }
 </style>
-<!-- ═══ LINKING WORDS – CONTENT BLOCK (Self-Contained) ═══ -->
 
-<div class="article-container">
+<div class="container">
 
-    <style>
-        /* ── Ovidhan Dark Theme ── */
-        :root {
-            --bg: #0B1F1A;
-            --surface: #122820;
-            --surface2: #1A3530;
-            --border: #1E3D38;
-            --gold: #E6B84A;
-            --gold-dim: rgba(230,184,74,0.12);
-            --teal: #4ECDC4;
-            --teal-dim: rgba(78,205,196,0.10);
-            --green: #4ade80;
-            --green-dim: rgba(74,222,128,0.10);
-            --red: #f87171;
-            --red-dim: rgba(248,113,113,0.10);
-            --purple: #c084fc;
-            --purple-dim: rgba(192,132,252,0.10);
-            --text: #D8EDEB;
-            --text-mid: #8AADA9;
-            --text-soft: #5A7D79;
-            --radius: 12px;
-            --font-bn: 'Hind Siliguri', sans-serif;
-            --font-en: 'Inter', sans-serif;
-        }
+    <div class="article-container">
 
-        .article-container {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 2.5rem 2rem;
-            margin-top: 1.5rem;
-            color: var(--text);
-            font-family: var(--font-bn);
-            line-height: 1.8;
-            position: relative;
-        }
+        <style>
+            /* ── Ovidhan Dark Theme ── */
+            :root {
+                --bg: #0B1F1A;
+                --surface: #122820;
+                --surface2: #1A3530;
+                --border: #1E3D38;
+                --gold: #E6B84A;
+                --gold-dim: rgba(230,184,74,0.12);
+                --teal: #4ECDC4;
+                --teal-dim: rgba(78,205,196,0.10);
+                --green: #4ade80;
+                --green-dim: rgba(74,222,128,0.10);
+                --red: #f87171;
+                --red-dim: rgba(248,113,113,0.10);
+                --purple: #c084fc;
+                --purple-dim: rgba(192,132,252,0.10);
+                --text: #D8EDEB;
+                --text-mid: #8AADA9;
+                --text-soft: #5A7D79;
+                --radius: 12px;
+                --font-bn: 'Hind Siliguri', sans-serif;
+                --font-en: 'Inter', sans-serif;
+            }
 
-        /* ── Navigation Buttons ── */
-        .nav-arrows {
-            display: flex;
-            justify-content: space-between;
-            margin: 2rem 0 1rem;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .nav-arrows a {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 0.6rem 1.5rem;
-            color: var(--teal);
-            text-decoration: none;
-            transition: 0.2s;
-            font-family: var(--font-en);
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .nav-arrows a:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-        .nav-arrows .next {
-            margin-left: auto;
-        }
+            .article-container {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 2.5rem 2rem;
+                margin-top: 1.5rem;
+                color: var(--text);
+                font-family: var(--font-bn);
+                line-height: 1.8;
+                position: relative;
+                max-width: 880px;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-        /* ── Back to Top ── */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--gold);
-            color: var(--bg);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-            transform: translateY(20px);
-            z-index: 999;
-            font-family: var(--font-en);
-            border: none;
-            cursor: pointer;
-        }
-        .back-to-top.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .back-to-top:hover {
-            background: #f0c85a;
-            transform: scale(1.05);
-        }
+            /* ── Navigation Buttons ── */
+            .nav-arrows {
+                display: flex;
+                justify-content: space-between;
+                margin: 2rem 0 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            .nav-arrows a {
+                background: var(--surface2);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 0.6rem 1.5rem;
+                color: var(--teal);
+                text-decoration: none;
+                transition: 0.2s;
+                font-family: var(--font-en);
+                font-size: 0.9rem;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .nav-arrows a:hover {
+                border-color: var(--gold);
+                color: var(--gold);
+            }
+            .nav-arrows .next {
+                margin-left: auto;
+            }
 
-        h1 {
-            color: var(--gold);
-            font-family: var(--font-en);
-            font-size: 2.4rem;
-            margin-bottom: 0.3rem;
-            line-height: 1.3;
-        }
-        .subhead {
-            color: var(--text-mid);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            align-items: center;
-        }
-        .badge {
-            display: inline-block;
-            background: var(--gold-dim);
-            color: var(--gold);
-            padding: 0.2rem 1rem;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            font-family: var(--font-en);
-        }
-        .badge-exam { background: var(--purple-dim); color: var(--purple); }
-        .badge-level { background: var(--teal-dim); color: var(--teal); }
+            .back-to-top {
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                background: var(--gold);
+                color: var(--bg);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 1.5rem;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                opacity: 0;
+                transition: opacity 0.3s, transform 0.3s;
+                transform: translateY(20px);
+                z-index: 999;
+                font-family: var(--font-en);
+                border: none;
+                cursor: pointer;
+            }
+            .back-to-top.visible { opacity: 1; transform: translateY(0); }
+            .back-to-top:hover { background: #f0c85a; transform: scale(1.05); }
 
-        h2 {
-            color: var(--gold);
-            margin-top: 2.2rem;
-            font-family: var(--font-en);
-            font-size: 1.6rem;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.3rem;
-        }
-        h3 {
-            color: var(--teal);
-            margin-top: 1.3rem;
-            font-size: 1.2rem;
-        }
-        h4 {
-            color: var(--text);
-            margin-top: 1rem;
-            font-size: 1.05rem;
-        }
-        ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
-        li { margin-bottom: 0.3rem; }
+            h1 {
+                color: var(--gold);
+                font-family: var(--font-en);
+                font-size: 2.4rem;
+                margin-bottom: 0.3rem;
+                line-height: 1.3;
+            }
+            .subhead {
+                color: var(--text-mid);
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                align-items: center;
+            }
+            .badge {
+                display: inline-block;
+                background: var(--gold-dim);
+                color: var(--gold);
+                padding: 0.2rem 1rem;
+                border-radius: 30px;
+                font-size: 0.75rem;
+                font-weight: 600;
+                font-family: var(--font-en);
+            }
+            .badge-exam { background: var(--purple-dim); color: var(--purple); }
+            .badge-level { background: var(--teal-dim); color: var(--teal); }
 
-        .example-box {
-            background: rgba(230,184,74,0.05);
-            padding: 1rem 1.5rem;
-            border-left: 4px solid var(--gold);
-            border-radius: var(--radius);
-            margin: 0.8rem 0;
-        }
-        .example-box strong { color: var(--gold); }
-        .example-box .bn { color: var(--text-mid); font-size: 0.95rem; }
+            h2 {
+                color: var(--gold);
+                margin-top: 2.2rem;
+                font-family: var(--font-en);
+                font-size: 1.6rem;
+                border-bottom: 2px solid var(--border);
+                padding-bottom: 0.3rem;
+            }
+            h3 {
+                color: var(--teal);
+                margin-top: 1.3rem;
+                font-size: 1.2rem;
+            }
+            h4 {
+                color: var(--text);
+                margin-top: 1rem;
+                font-size: 1.05rem;
+            }
+            ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+            li { margin-bottom: 0.3rem; }
 
-        .mistake-box {
-            background: var(--red-dim);
-            border-left: 4px solid var(--red);
-            padding: 0.8rem 1.2rem;
-            border-radius: var(--radius);
-            margin: 0.8rem 0;
-        }
-        .correct-box {
-            background: var(--green-dim);
-            border-left: 4px solid var(--green);
-            padding: 0.8rem 1.2rem;
-            border-radius: var(--radius);
-            margin: 0.8rem 0;
-        }
-        .exam-tip {
-            background: var(--purple-dim);
-            border-left: 4px solid var(--purple);
-            padding: 1rem 1.5rem;
-            border-radius: var(--radius);
-            margin: 1.2rem 0;
-        }
-        .exam-tip strong { color: var(--purple); }
+            .example-box {
+                background: rgba(230,184,74,0.05);
+                padding: 1rem 1.5rem;
+                border-left: 4px solid var(--gold);
+                border-radius: var(--radius);
+                margin: 0.8rem 0;
+            }
+            .example-box strong { color: var(--gold); }
+            .example-box .bn { color: var(--text-mid); font-size: 0.95rem; }
 
-        .memory-tip {
-            background: rgba(78,205,196,0.06);
-            border: 1px dashed var(--teal);
-            border-radius: var(--radius);
-            padding: 0.8rem 1.2rem;
-            margin: 0.8rem 0;
-            font-size: 0.95rem;
-            color: var(--text-mid);
-        }
-        .memory-tip strong { color: var(--teal); }
+            .mistake-box {
+                background: var(--red-dim);
+                border-left: 4px solid var(--red);
+                padding: 0.8rem 1.2rem;
+                border-radius: var(--radius);
+                margin: 0.8rem 0;
+            }
+            .correct-box {
+                background: var(--green-dim);
+                border-left: 4px solid var(--green);
+                padding: 0.8rem 1.2rem;
+                border-radius: var(--radius);
+                margin: 0.8rem 0;
+            }
+            .exam-tip {
+                background: var(--purple-dim);
+                border-left: 4px solid var(--purple);
+                padding: 1rem 1.5rem;
+                border-radius: var(--radius);
+                margin: 1.2rem 0;
+            }
+            .exam-tip strong { color: var(--purple); }
 
-        .teacher-tip {
-            background: var(--teal-dim);
-            border-left: 4px solid var(--teal);
-            padding: 12px 16px;
-            border-radius: 4px;
-            margin: 12px 0;
-        }
-        .teacher-tip .tip-label {
-            color: var(--teal);
-            font-weight: 600;
-            font-size: 0.85rem;
-            font-family: var(--font-en);
-            letter-spacing: 0.5px;
-        }
+            .memory-tip {
+                background: rgba(78,205,196,0.06);
+                border: 1px dashed var(--teal);
+                border-radius: var(--radius);
+                padding: 0.8rem 1.2rem;
+                margin: 0.8rem 0;
+                font-size: 0.95rem;
+                color: var(--text-mid);
+            }
+            .memory-tip strong { color: var(--teal); }
 
-        .pronounce-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 16px;
-            padding: 12px;
-            background: var(--surface2);
-            border-radius: var(--radius);
-            margin: 8px 0;
-        }
-        .pronounce-box .word-item {
-            color: var(--text);
-            font-family: var(--font-en);
-            font-size: 0.9rem;
-            background: var(--bg);
-            padding: 4px 12px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-        .pronounce-box .sound-icon {
-            color: var(--teal);
-            font-size: 0.85rem;
-            margin-left: auto;
-        }
+            .teacher-tip {
+                background: var(--teal-dim);
+                border-left: 4px solid var(--teal);
+                padding: 12px 16px;
+                border-radius: 4px;
+                margin: 12px 0;
+            }
+            .teacher-tip .tip-label {
+                color: var(--teal);
+                font-weight: 600;
+                font-size: 0.85rem;
+                font-family: var(--font-en);
+                letter-spacing: 0.5px;
+            }
 
-        .context-box {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 12px 16px;
-            margin: 12px 0;
-        }
-        .context-box .context-label {
-            color: var(--teal);
-            font-weight: 600;
-            font-size: 0.8rem;
-            font-family: var(--font-en);
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-        }
-        .context-box .en { color: var(--text); }
-        .context-box .bn { color: var(--text-mid); }
+            .pronounce-box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px 16px;
+                padding: 12px;
+                background: var(--surface2);
+                border-radius: var(--radius);
+                margin: 8px 0;
+            }
+            .pronounce-box .word-item {
+                color: var(--text);
+                font-family: var(--font-en);
+                font-size: 0.9rem;
+                background: var(--bg);
+                padding: 4px 12px;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+            }
+            .pronounce-box .sound-icon {
+                color: var(--teal);
+                font-size: 0.85rem;
+                margin-left: auto;
+            }
 
-        .dictionary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
-            gap: 10px;
-            margin: 12px 0;
-        }
-        .dictionary-card {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 12px 14px;
-            text-decoration: none;
-            color: var(--text);
-            transition: border-color .2s, transform .2s;
-            text-align: center;
-        }
-        .dictionary-card:hover {
-            border-color: var(--gold);
-            transform:translateY(-3px);
-        }
-        .dictionary-card .word {
-            color: var(--text);
-            font-weight:600;
-            font-size:1rem;
-        }
-        .dictionary-card .meaning {
-            color: var(--text-mid);
-            font-size:0.85rem;
-        }
-        .dictionary-card .pos {
-            color: var(--text-soft);
-            font-size:0.7rem;
-            font-family:var(--font-en);
-            background:var(--bg);
-            display:inline-block;
-            padding:0 8px;
-            border-radius:10px;
-            margin-top:4px;
-        }
+            .context-box {
+                background: var(--surface2);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 12px 16px;
+                margin: 12px 0;
+            }
+            .context-box .context-label {
+                color: var(--teal);
+                font-weight: 600;
+                font-size: 0.8rem;
+                font-family: var(--font-en);
+                letter-spacing: 0.5px;
+                margin-bottom: 4px;
+            }
+            .context-box .en { color: var(--text); }
+            .context-box .bn { color: var(--text-mid); }
 
-        .flashcard-box {
-            display:grid;
-            grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
-            gap:10px;
-            margin:12px 0;
-        }
-        .flashcard-box .card {
-            background:var(--surface2);
-            border:1px solid var(--border);
-            border-radius:var(--radius);
-            padding:12px 10px;
-            text-align:center;
-            transition:border-color .2s, transform .2s;
-        }
-        .flashcard-box .card:hover {
-            border-color:var(--gold);
-            transform:scale(1.02);
-        }
-        .flashcard-box .card .en {
-            color:var(--text);
-            font-weight:600;
-            font-size:0.95rem;
-            font-family:var(--font-en);
-        }
-        .flashcard-box .card .bn {
-            color:var(--text-mid);
-            font-size:0.8rem;
-            margin-top:4px;
-        }
+            .dictionary-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+                gap: 10px;
+                margin: 12px 0;
+            }
+            .dictionary-card {
+                background: var(--surface2);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 12px 14px;
+                text-decoration: none;
+                color: var(--text);
+                transition: border-color .2s, transform .2s;
+                text-align: center;
+            }
+            .dictionary-card:hover {
+                border-color: var(--gold);
+                transform:translateY(-3px);
+            }
+            .dictionary-card .word {
+                color: var(--text);
+                font-weight:600;
+                font-size:1rem;
+            }
+            .dictionary-card .meaning {
+                color: var(--text-mid);
+                font-size:0.85rem;
+            }
+            .dictionary-card .pos {
+                color: var(--text-soft);
+                font-size:0.7rem;
+                font-family:var(--font-en);
+                background:var(--bg);
+                display:inline-block;
+                padding:0 8px;
+                border-radius:10px;
+                margin-top:4px;
+            }
 
-        .table-wrap {
-            overflow-x:auto;
-            margin:1rem 0;
-            border-radius:var(--radius);
-            border:1px solid var(--border);
-        }
-        .table-wrap table {
-            width:100%;
-            border-collapse:collapse;
-            font-size:0.9rem;
-        }
-        .table-wrap thead {
-            background:var(--surface2);
-        }
-        .table-wrap thead th {
-            padding:0.7rem 1rem;
-            text-align:left;
-            color:var(--gold);
-            font-weight:600;
-            font-family:var(--font-en);
-            font-size:0.8rem;
-        }
-        .table-wrap tbody tr {
-            border-top:1px solid var(--border);
-        }
-        .table-wrap tbody td {
-            padding:0.7rem 1rem;
-            color:var(--text);
-            vertical-align:top;
-        }
-        .table-wrap tbody td .highlight-text {
-            color:var(--gold);
-            font-weight:600;
-        }
+            .flashcard-box {
+                display:grid;
+                grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+                gap:10px;
+                margin:12px 0;
+            }
+            .flashcard-box .card {
+                background:var(--surface2);
+                border:1px solid var(--border);
+                border-radius:var(--radius);
+                padding:12px 10px;
+                text-align:center;
+                transition:border-color .2s, transform .2s;
+            }
+            .flashcard-box .card:hover {
+                border-color:var(--gold);
+                transform:scale(1.02);
+            }
+            .flashcard-box .card .en {
+                color:var(--text);
+                font-weight:600;
+                font-size:0.95rem;
+                font-family:var(--font-en);
+            }
+            .flashcard-box .card .bn {
+                color:var(--text-mid);
+                font-size:0.8rem;
+                margin-top:4px;
+            }
 
-        .related-grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-            gap:0.8rem;
-            margin:1rem 0;
-        }
-        .related-grid a {
-            background:var(--surface2);
-            border:1px solid var(--border);
-            border-radius:var(--radius);
-            padding:0.6rem 1rem;
-            text-decoration:none;
-            color:var(--teal);
-            text-align:center;
-            transition:0.2s;
-            font-size:0.9rem;
-        }
-        .related-grid a:hover { border-color:var(--gold); color:var(--gold); }
+            .table-wrap {
+                overflow-x:auto;
+                margin:1rem 0;
+                border-radius:var(--radius);
+                border:1px solid var(--border);
+            }
+            .table-wrap table {
+                width:100%;
+                border-collapse:collapse;
+                font-size:0.9rem;
+            }
+            .table-wrap thead {
+                background:var(--surface2);
+            }
+            .table-wrap thead th {
+                padding:0.7rem 1rem;
+                text-align:left;
+                color:var(--gold);
+                font-weight:600;
+                font-family:var(--font-en);
+                font-size:0.8rem;
+            }
+            .table-wrap tbody tr {
+                border-top:1px solid var(--border);
+            }
+            .table-wrap tbody td {
+                padding:0.7rem 1rem;
+                color:var(--text);
+                vertical-align:top;
+            }
+            .table-wrap tbody td .highlight-text {
+                color:var(--gold);
+                font-weight:600;
+            }
 
-        .back-link {
-            display:inline-block;
-            margin-top:2rem;
-            color:var(--teal);
-            text-decoration:none;
-        }
-        .back-link:hover { color:var(--gold); }
+            .related-grid {
+                display:grid;
+                grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+                gap:0.8rem;
+                margin:1rem 0;
+            }
+            .related-grid a {
+                background:var(--surface2);
+                border:1px solid var(--border);
+                border-radius:var(--radius);
+                padding:0.6rem 1rem;
+                text-decoration:none;
+                color:var(--teal);
+                text-align:center;
+                transition:0.2s;
+                font-size:0.9rem;
+            }
+            .related-grid a:hover { border-color:var(--gold); color:var(--gold); }
 
-        .continue-learning {
-            background:var(--surface);
-            border:1px solid var(--border);
-            border-radius:var(--radius);
-            padding:24px 28px;
-            margin:30px 0;
-        }
-        .continue-learning h3 {
-            color:var(--gold);
-            font-size:1.1rem;
-            margin-bottom:12px;
-        }
-        .continue-learning .cl-grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-            gap:10px;
-        }
-        .continue-learning .cl-item {
-            background:var(--surface2);
-            border:1px solid var(--border);
-            border-radius:var(--radius);
-            padding:12px 16px;
-            text-align:center;
-            text-decoration:none;
-            color:var(--text);
-            transition:border-color .2s, transform .2s;
-        }
-        .continue-learning .cl-item:hover {
-            border-color:var(--gold);
-            transform:translateY(-3px);
-        }
-        .continue-learning .cl-item .icon { font-size:1.8rem; display:block; margin-bottom:4px; }
-        .continue-learning .cl-item .label { font-size:0.85rem; color:var(--teal); font-weight:600; }
+            .back-link {
+                display:inline-block;
+                margin-top:2rem;
+                color:var(--teal);
+                text-decoration:none;
+            }
+            .back-link:hover { color:var(--gold); }
 
-        .faq-item .question {
-            font-weight:600;
-            color:#fff;
-            cursor:pointer;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:10px 0;
-            border-bottom:1px solid var(--border);
-        }
-        .faq-item .question:hover { color:var(--gold); }
-        .faq-item .answer {
-            color:var(--text-mid);
-            padding:10px 0;
-            display:none;
-            font-size:0.95rem;
-        }
-        .faq-item.open .answer { display:block; }
-        .faq-item .arrow { color:var(--gold); transition:transform .3s; }
-        .faq-item.open .arrow { transform:rotate(180deg); }
+            .continue-learning {
+                background:var(--surface);
+                border:1px solid var(--border);
+                border-radius:var(--radius);
+                padding:24px 28px;
+                margin:30px 0;
+            }
+            .continue-learning h3 {
+                color:var(--gold);
+                font-size:1.1rem;
+                margin-bottom:12px;
+            }
+            .continue-learning .cl-grid {
+                display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+                gap:10px;
+            }
+            .continue-learning .cl-item {
+                background:var(--surface2);
+                border:1px solid var(--border);
+                border-radius:var(--radius);
+                padding:12px 16px;
+                text-align:center;
+                text-decoration:none;
+                color:var(--text);
+                transition:border-color .2s, transform .2s;
+            }
+            .continue-learning .cl-item:hover {
+                border-color:var(--gold);
+                transform:translateY(-3px);
+            }
+            .continue-learning .cl-item .icon { font-size:1.8rem; display:block; margin-bottom:4px; }
+            .continue-learning .cl-item .label { font-size:0.85rem; color:var(--teal); font-weight:600; }
 
-        .quiz-container {
-            background:var(--surface2);
-            border:2px solid var(--gold);
-            border-radius:var(--radius);
-            padding:1.5rem;
-            margin:1.5rem 0;
-        }
-        .quiz-container .q-item {
-            padding:0.8rem 0;
-            border-bottom:1px solid var(--border);
-        }
-        .quiz-container .q-item:last-child { border-bottom:none; }
-        .quiz-container .q-item .question-text {
-            font-weight:600;
-            color:var(--text);
-        }
-        .quiz-container .q-item .options {
-            display:flex;
-            flex-wrap:wrap;
-            gap:0.5rem 1.5rem;
-            margin-top:0.3rem;
-        }
-        .quiz-container .q-item .options label {
-            display:flex;
-            align-items:center;
-            gap:0.3rem;
-            color:var(--text-mid);
-            cursor:pointer;
-        }
-        .quiz-container .q-item .options label:hover { color:var(--text); }
-        .quiz-container .q-item .options input[type="radio"] {
-            accent-color:var(--gold);
-            width:16px;
-            height:16px;
-        }
+            .faq-item .question {
+                font-weight:600;
+                color:#fff;
+                cursor:pointer;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                padding:10px 0;
+                border-bottom:1px solid var(--border);
+            }
+            .faq-item .question:hover { color:var(--gold); }
+            .faq-item .answer {
+                color:var(--text-mid);
+                padding:10px 0;
+                display:none;
+                font-size:0.95rem;
+            }
+            .faq-item.open .answer { display:block; }
+            .faq-item .arrow { color:var(--gold); transition:transform .3s; }
+            .faq-item.open .arrow { transform:rotate(180deg); }
 
-        .quiz-controls {
-            display:flex;
-            gap:1rem;
-            flex-wrap:wrap;
-            margin:1.5rem 0 0.5rem;
-        }
-        .btn {
-            background:var(--gold);
-            color:var(--bg);
-            border:none;
-            padding:0.7rem 2rem;
-            border-radius:var(--radius);
-            font-weight:700;
-            cursor:pointer;
-            transition:0.2s;
-            font-family:var(--font-en);
-        }
-        .btn:hover { opacity:0.85; transform:scale(1.02); }
-        .btn-secondary {
-            background:var(--surface2);
-            color:var(--text);
-            border:1px solid var(--border);
-        }
-        .btn-secondary:hover { background:var(--surface); }
+            .quiz-container {
+                background:var(--surface2);
+                border:2px solid var(--gold);
+                border-radius:var(--radius);
+                padding:1.5rem;
+                margin:1.5rem 0;
+            }
+            .quiz-container .q-item {
+                padding:0.8rem 0;
+                border-bottom:1px solid var(--border);
+            }
+            .quiz-container .q-item:last-child { border-bottom:none; }
+            .quiz-container .q-item .question-text {
+                font-weight:600;
+                color:var(--text);
+            }
+            .quiz-container .q-item .options {
+                display:flex;
+                flex-wrap:wrap;
+                gap:0.5rem 1.5rem;
+                margin-top:0.3rem;
+            }
+            .quiz-container .q-item .options label {
+                display:flex;
+                align-items:center;
+                gap:0.3rem;
+                color:var(--text-mid);
+                cursor:pointer;
+            }
+            .quiz-container .q-item .options label:hover { color:var(--text); }
+            .quiz-container .q-item .options input[type="radio"] {
+                accent-color:var(--gold);
+                width:16px;
+                height:16px;
+            }
 
-        .score-display {
-            margin:1rem 0;
-            padding:1rem;
-            border-radius:var(--radius);
-            background:var(--surface);
-            border:1px solid var(--border);
-            text-align:center;
-        }
-        .score-display .score-number {
-            font-size:3rem;
-            font-weight:700;
-            color:var(--gold);
-            font-family:var(--font-en);
-        }
-        .score-display .score-label {
-            color:var(--text-mid);
-            font-size:1.1rem;
-        }
-        .score-display .recommendation {
-            margin-top:0.8rem;
-            padding:0.8rem 1.2rem;
-            background:var(--surface2);
-            border-radius:var(--radius);
-        }
-        .score-display .recommendation a {
-            color:var(--teal);
-            text-decoration:none;
-        }
-        .score-display .recommendation a:hover { color:var(--gold); }
+            .quiz-controls {
+                display:flex;
+                gap:1rem;
+                flex-wrap:wrap;
+                margin:1.5rem 0 0.5rem;
+            }
+            .btn {
+                background:var(--gold);
+                color:var(--bg);
+                border:none;
+                padding:0.7rem 2rem;
+                border-radius:var(--radius);
+                font-weight:700;
+                cursor:pointer;
+                transition:0.2s;
+                font-family:var(--font-en);
+            }
+            .btn:hover { opacity:0.85; transform:scale(1.02); }
+            .btn-secondary {
+                background:var(--surface2);
+                color:var(--text);
+                border:1px solid var(--border);
+            }
+            .btn-secondary:hover { background:var(--surface); }
 
-        @media (max-width:640px) {
-            .article-container { padding:1.2rem 0.8rem; }
-            h1 { font-size:1.6rem; }
-            .related-grid { grid-template-columns:1fr 1fr; }
-            .quiz-container .q-item .options { flex-direction:column; gap:0.2rem; }
-            .nav-arrows { flex-direction:column; align-items:stretch; }
-            .nav-arrows .next { margin-left:0; }
-            .continue-learning .cl-grid { grid-template-columns:1fr 1fr; }
-            .dictionary-grid { grid-template-columns:repeat(2,1fr); }
-            .flashcard-box { grid-template-columns:repeat(2,1fr); }
-        }
-        @media (max-width:400px) {
-            .continue-learning .cl-grid { grid-template-columns:1fr; }
-            .dictionary-grid { grid-template-columns:1fr; }
-            .flashcard-box { grid-template-columns:1fr; }
-        }
-    </style>
+            .score-display {
+                margin:1rem 0;
+                padding:1rem;
+                border-radius:var(--radius);
+                background:var(--surface);
+                border:1px solid var(--border);
+                text-align:center;
+            }
+            .score-display .score-number {
+                font-size:3rem;
+                font-weight:700;
+                color:var(--gold);
+                font-family:var(--font-en);
+            }
+            .score-display .score-label {
+                color:var(--text-mid);
+                font-size:1.1rem;
+            }
+            .score-display .recommendation {
+                margin-top:0.8rem;
+                padding:0.8rem 1.2rem;
+                background:var(--surface2);
+                border-radius:var(--radius);
+            }
+            .score-display .recommendation a {
+                color:var(--teal);
+                text-decoration:none;
+            }
+            .score-display .recommendation a:hover { color:var(--gold); }
 
-    <!-- ═══ HERO ═══ -->
-    <h1>Linking Words in English Grammar with Bangla Meaning</h1>
-    <div class="subhead">
-        <span class="badge badge-exam">📘 BCS</span>
-        <span class="badge badge-exam">📘 IELTS</span>
-        <span class="badge badge-exam">📘 HSC</span>
-        <span class="badge badge-exam">📘 SSC</span>
-        <span class="badge badge-level">🎯 CEFR: B1–B2</span>
-        <span style="color:var(--text-soft);">| 50+ MCQ Quiz</span>
-    </div>
+            @media (max-width:640px) {
+                .article-container { padding:1.2rem 0.8rem; }
+                h1 { font-size:1.6rem; }
+                .related-grid { grid-template-columns:1fr 1fr; }
+                .quiz-container .q-item .options { flex-direction:column; gap:0.2rem; }
+                .nav-arrows { flex-direction:column; align-items:stretch; }
+                .nav-arrows .next { margin-left:0; }
+                .continue-learning .cl-grid { grid-template-columns:1fr 1fr; }
+                .dictionary-grid { grid-template-columns:repeat(2,1fr); }
+                .flashcard-box { grid-template-columns:repeat(2,1fr); }
+            }
+            @media (max-width:400px) {
+                .continue-learning .cl-grid { grid-template-columns:1fr; }
+                .dictionary-grid { grid-template-columns:1fr; }
+                .flashcard-box { grid-template-columns:1fr; }
+            }
+        </style>
 
-    <p><strong>English:</strong> Master Linking Words (Connectors) – the key to coherent writing and speaking.</p>
-    <p><strong>বাংলা:</strong> Linking Words (সংযোজক শব্দ) সম্পূর্ণ গাইড। ৬টি ক্যাটেগরি, ৫০+ উদাহরণ, সাধারণ ভুল ও সংশোধন, এবং ৫০টি ইন্টারেক্টিভ প্রশ্ন – সবকিছু একসাথে।</p>
-
-    <!-- ═══ INTRODUCTION ═══ -->
-    <h2>🔍 What are Linking Words?</h2>
-    <p><strong>Linking Words</strong> (also called <strong>connectors</strong> or <strong>transition words</strong>) are words or phrases that <strong>connect ideas, sentences, and paragraphs</strong> together. They help create <strong>coherence</strong> and <strong>logical flow</strong> in your writing and speaking.</p>
-    <p>For Bangladeshi students, linking words are <strong>essential</strong> for <strong>BCS, IELTS, HSC, and Bank Jobs</strong>. They are tested in <strong>sentence connectors, essay writing, and error correction</strong> sections.</p>
-
-    <div class="memory-tip">
-        <strong>💡 Remember:</strong> Linking Words = Connectors = Transition Words = Words that connect ideas
-    </div>
-
-    <p><a href="/grammar.html" style="color:var(--gold);">📖 Back to Grammar Hub →</a></p>
-
-    <!-- ═══ 6 CATEGORIES ═══ -->
-    <h2>📌 ৬টি ক্যাটেগরি – Linking Words এর প্রকারভেদ</h2>
-
-    <!-- CATEGORY 1: ADDITION -->
-    <h3>1. Addition – যোগ (Adding Information)</h3>
-    <p>এই সংযোজক শব্দগুলো পূর্ববর্তী তথ্যের সাথে <strong>যোগ</strong> করে।</p>
-    <div class="table-wrap">
-        <table>
-            <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
-            <tbody>
-                <tr><td><span class="highlight-text">and</span></td><td>এবং</td><td>I like tea <span class="highlight-text">and</span> coffee.</td></tr>
-                <tr><td><span class="highlight-text">also</span></td><td>এছাড়াও</td><td>She is smart. <span class="highlight-text">Also</span>, she is kind.</td></tr>
-                <tr><td><span class="highlight-text">moreover</span></td><td>আরও</td><td>The food is delicious. <span class="highlight-text">Moreover</span>, it's affordable.</td></tr>
-                <tr><td><span class="highlight-text">furthermore</span></td><td>আরও বেশি</td><td>The hotel is cheap. <span class="highlight-text">Furthermore</span>, it's clean.</td></tr>
-                <tr><td><span class="highlight-text">in addition</span></td><td>এর পাশাপাশি</td><td><span class="highlight-text">In addition</span>, we need more time.</td></tr>
-                <tr><td><span class="highlight-text">as well as</span></td><td>সাথে</td><td>He speaks English <span class="highlight-text">as well as</span> Bangla.</td></tr>
-                <tr><td><span class="highlight-text">besides</span></td><td>এ ছাড়া</td><td><span class="highlight-text">Besides</span>, I have work to do.</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="example-box">
-        <p><strong>Example:</strong> "Bangladesh has beautiful beaches. <strong>Moreover</strong>, it has the world's largest mangrove forest."</p>
-        <p class="bn">"বাংলাদেশে সুন্দর সৈকত আছে। <strong>আরও</strong>, এখানে বিশ্বের বৃহত্তম ম্যানগ্রোভ বন আছে।"</p>
-    </div>
-
-    <!-- CATEGORY 2: CONTRAST -->
-    <h3>2. Contrast – বিরোধ (Showing Difference)</h3>
-    <p>এই সংযোজক শব্দগুলো দুটি ধারণার মধ্যে <strong>বিরোধ</strong> বা <strong>পার্থক্য</strong> দেখায়।</p>
-    <div class="table-wrap">
-        <table>
-            <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
-            <tbody>
-                <tr><td><span class="highlight-text">but</span></td><td>কিন্তু</td><td>I like tea, <span class="highlight-text">but</span> I don't like coffee.</td></tr>
-                <tr><td><span class="highlight-text">however</span></td><td>তবে</td><td>I studied hard. <span class="highlight-text">However</span>, I failed.</td></tr>
-                <tr><td><span class="highlight-text">although</span></td><td>যদিও</td><td><span class="highlight-text">Although</span> he is poor, he is honest.</td></tr>
-                <tr><td><span class="highlight-text">though</span></td><td>যদিও</td><td>He is rich, <span class="highlight-text">though</span> he is not happy.</td></tr>
-                <tr><td><span class="highlight-text">whereas</span></td><td>যখন</td><td>He is tall, <span class="highlight-text">whereas</span> his brother is short.</td></tr>
-                <tr><td><span class="highlight-text">on the other hand</span></td><td>অন্যদিকে</td><td><span class="highlight-text">On the other hand</span>, she is very shy.</td></tr>
-                <tr><td><span class="highlight-text">nevertheless</span></td><td>তবুও</td><td>It was raining. <span class="highlight-text">Nevertheless</span>, we went out.</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="example-box">
-        <p><strong>Example:</strong> "<strong>Although</strong> Bangladesh is a small country, it has a large population."</p>
-        <p class="bn">"<strong>যদিও</strong> বাংলাদেশ একটি ছোট দেশ, এর জনসংখ্যা অনেক বেশি।"</p>
-    </div>
-    <div class="memory-tip">
-        <strong>⚠️ Important:</strong> <strong>However</strong> starts a new sentence. <strong>Although</strong> stays in the same sentence.
-    </div>
-
-    <!-- CATEGORY 3: CAUSE & EFFECT -->
-    <h3>3. Cause & Effect – কারণ ও ফলাফল</h3>
-    <p>এই সংযোজক শব্দগুলো কোনো কাজের <strong>কারণ</strong> বা <strong>ফলাফল</strong> দেখায়।</p>
-    <div class="table-wrap">
-        <table>
-            <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
-            <tbody>
-                <tr><td><span class="highlight-text">because</span></td><td>কারণ</td><td>I stayed home <span class="highlight-text">because</span> it was raining.</td></tr>
-                <tr><td><span class="highlight-text">so</span></td><td>অতএব</td><td>It was raining, <span class="highlight-text">so</span> I stayed home.</td></tr>
-                <tr><td><span class="highlight-text">therefore</span></td><td>অতএব</td><td>He worked hard. <span class="highlight-text">Therefore</span>, he succeeded.</td></tr>
-                <tr><td><span class="highlight-text">since</span></td><td>যেহেতু</td><td><span class="highlight-text">Since</span> you are here, let's start.</td></tr>
-                <tr><td><span class="highlight-text">as</span></td><td>কারণ</td><td><span class="highlight-text">As</span> it was late, we went home.</td></tr>
-                <tr><td><span class="highlight-text">due to</span></td><td>কারণে</td><td>The match was cancelled <span class="highlight-text">due to</span> rain.</td></tr>
-                <tr><td><span class="highlight-text">consequently</span></td><td>ফলে</td><td>He missed the bus. <span class="highlight-text">Consequently</span>, he was late.</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="example-box">
-        <p><strong>Example:</strong> "<strong>Because</strong> of the heavy rain, the match was cancelled."</p>
-        <p class="bn">"<strong>কারণে</strong> প্রবল বৃষ্টির, ম্যাচটি বাতিল করা হয়েছিল।"</p>
-    </div>
-    <div class="memory-tip">
-        <strong>🧠 Memory Trick:</strong> <strong>Because</strong> + Clause (subject + verb) | <strong>Because of</strong> + Noun
-    </div>
-
-    <!-- CATEGORY 4: SEQUENCE -->
-    <h3>4. Sequence – ক্রম (Order and Time)</h3>
-    <p>এই সংযোজক শব্দগুলো ঘটনা বা ধারণার <strong>ক্রম</strong> দেখায়।</p>
-    <div class="table-wrap">
-        <table>
-            <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
-            <tbody>
-                <tr><td><span class="highlight-text">first / firstly</span></td><td>প্রথমত</td><td><span class="highlight-text">Firstly</span>, we need to plan.</td></tr>
-                <tr><td><span class="highlight-text">secondly</span></td><td>দ্বিতীয়ত</td><td><span class="highlight-text">Secondly</span>, we need resources.</td></tr>
-                <tr><td><span class="highlight-text">then</span></td><td>তারপর</td><td>We ate dinner, <span class="highlight-text">then</span> we watched TV.</td></tr>
-                <tr><td><span class="highlight-text">next</span></td><td>পরবর্তী</td><td><span class="highlight-text">Next</span>, we need to review.</td></tr>
-                <tr><td><span class="highlight-text">finally</span></td><td>শেষ পর্যন্ত</td><td><span class="highlight-text">Finally</span>, we presented the project.</td></tr>
-                <tr><td><span class="highlight-text">after that</span></td><td>তার পরে</td><td>We went shopping. <span class="highlight-text">After that</span>, we had lunch.</td></tr>
-                <tr><td><span class="highlight-text">in the end</span></td><td>শেষে</td><td><span class="highlight-text">In the end</span>, we succeeded.</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="example-box">
-        <p><strong>Example:</strong> "<strong>Firstly</strong>, gather all materials. <strong>Secondly</strong>, start writing. <strong>Finally</strong>, edit and submit."</p>
-        <p class="bn">"<strong>প্রথমত</strong>, সব উপকরণ সংগ্রহ করুন। <strong>দ্বিতীয়ত</strong>, লেখা শুরু করুন। <strong>শেষ পর্যন্ত</strong>, সম্পাদনা করে জমা দিন।"</p>
-    </div>
-
-    <!-- CATEGORY 5: EXAMPLE -->
-    <h3>5. Example – উদাহরণ (Giving Examples)</h3>
-    <p>এই সংযোজক শব্দগুলো ধারণা সমর্থনের জন্য <strong>উদাহরণ</strong> দেয়।</p>
-    <div class="table-wrap">
-        <table>
-            <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
-            <tbody>
-                <tr><td><span class="highlight-text">for example</span></td><td>উদাহরণস্বরূপ</td><td>Many countries, <span class="highlight-text">for example</span>, Japan, are small.</td></tr>
-                <tr><td><span class="highlight-text">for instance</span></td><td>উদাহরণস্বরূপ</td><td><span class="highlight-text">For instance</span>, Bangladesh is a riverine country.</td></tr>
-                <tr><td><span class="highlight-text">such as</span></td><td>যেমন</td><td>I like fruits <span class="highlight-text">such as</span> mangoes and bananas.</td></tr>
-                <tr><td><span class="highlight-text">like</span></td><td>যেমন</td><td>Countries <span class="highlight-text">like</span> Bangladesh need development.</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="example-box">
-        <p><strong>Example:</strong> "Many Bangladeshi dishes, <strong>such as</strong> biryani and hilsa, are world-famous."</p>
-        <p class="bn">"অনেক বাংলাদেশি খাবার, <strong>যেমন</strong> বিরিয়ানি ও ইলিশ, বিশ্ববিখ্যাত।"</p>
-    </div>
-
-    <!-- CATEGORY 6: CONDITION -->
-    <h3>6. Condition – শর্ত (If and Unless)</h3>
-    <p>এই সংযোজক শব্দগুলো কোনো কিছুর জন্য <strong>শর্ত</strong> দেখায়।</p>
-    <div class="table-wrap">
-        <table>
-            <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
-            <tbody>
-                <tr><td><span class="highlight-text">if</span></td><td>যদি</td><td><span class="highlight-text">If</span> you study, you will pass.</td></tr>
-                <tr><td><span class="highlight-text">unless</span></td><td>যদি না</td><td>You will fail <span class="highlight-text">unless</span> you study.</td></tr>
-                <tr><td><span class="highlight-text">provided that</span></td><td>শর্তে যে</td><td>You can go <span class="highlight-text">provided that</span> you finish work.</td></tr>
-                <tr><td><span class="highlight-text">as long as</span></td><td>যতক্ষণ</td><td><span class="highlight-text">As long as</span> you try, you will succeed.</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="example-box">
-        <p><strong>Example:</strong> "<strong>Unless</strong> you practice daily, you won't improve your English."</p>
-        <p class="bn">"<strong>যদি না</strong> আপনি প্রতিদিন অনুশীলন করেন, আপনার ইংরেজি উন্নতি হবে না।"</p>
-    </div>
-
-    <!-- ═══ COMMON MISTAKES – BANGLADESHI STUDENTS ═══ -->
-    <h2>⚠️ Common Mistakes – Bangladeshi Students</h2>
-
-    <div class="mistake-box">
-        <p><strong>❌ ভুল:</strong> Although he is rich, <strong>but</strong> he is not happy.</p>
-        <p><strong>✅ শুদ্ধ:</strong> Although he is rich, he is not happy.</p>
-        <p style="color:var(--text-mid);">ব্যাখ্যা: 'Although' এবং 'but' একসাথে ব্যবহার করা যায় না।</p>
-    </div>
-
-    <div class="mistake-box">
-        <p><strong>❌ ভুল:</strong> I studied hard. <strong>Although</strong>, I failed.</p>
-        <p><strong>✅ শুদ্ধ:</strong> I studied hard. <strong>However</strong>, I failed.</p>
-        <p style="color:var(--text-mid);">ব্যাখ্যা: 'Although' নতুন বাক্য শুরু করতে পারে না। 'However' ব্যবহার করুন।</p>
-    </div>
-
-    <div class="mistake-box">
-        <p><strong>❌ ভুল:</strong> Because of <strong>it was raining</strong>, I stayed home.</p>
-        <p><strong>✅ শুদ্ধ:</strong> Because <strong>it was raining</strong>, I stayed home. <span style="color:var(--text-mid);">অথবা</span> Because of <strong>the rain</strong>, I stayed home.</p>
-        <p style="color:var(--text-mid);">ব্যাখ্যা: 'Because of' + noun, 'Because' + clause.</p>
-    </div>
-
-    <div class="mistake-box">
-        <p><strong>❌ ভুল:</strong> I like tea, <strong>however</strong> I don't like coffee.</p>
-        <p><strong>✅ শুদ্ধ:</strong> I like tea. <strong>However</strong>, I don't like coffee.</p>
-        <p style="color:var(--text-mid);">ব্যাখ্যা: 'However' সাধারণত নতুন বাক্য শুরু করে এবং কমা দিয়ে অনুসরণ করে।</p>
-    </div>
-
-    <div class="mistake-box">
-        <p><strong>❌ ভুল:</strong> He is poor, <strong>so</strong> he is honest.</p>
-        <p><strong>✅ শুদ্ধ:</strong> He is poor, <strong>but</strong> he is honest. <span style="color:var(--text-mid);">অথবা</span> Although he is poor, he is honest.</p>
-        <p style="color:var(--text-mid);">ব্যাখ্যা: 'So' ফলাফল বোঝায়, 'but' বা 'although' বিরোধ বোঝায়।</p>
-    </div>
-
-    <!-- ═══ BANGLA TRANSLATION ERRORS ═══ -->
-    <h2>🔄 Common Bangla Translation Errors</h2>
-
-    <div class="mistake-box">
-        <p><strong>❌ ভুল (Bangla):</strong> "যদিও সে ধনী কিন্তু সে খুশি নয়।"</p>
-        <p><strong>❌ ভুল (English):</strong> "Although he is rich, <strong>but</strong> he is not happy."</p>
-        <p><strong>✅ শুদ্ধ:</strong> "Although he is rich, he is not happy."</p>
-        <p style="color:var(--text-mid);">📖 বাংলায় 'যদিও...কিন্তু' ব্যবহার করা হয়, কিন্তু ইংরেজিতে 'although' এবং 'but' একসাথে ব্যবহার করা যায় না।</p>
-    </div>
-
-    <div class="mistake-box">
-        <p><strong>❌ ভুল (Bangla):</strong> "বৃষ্টির কারণে আমি বাড়িতে থেকেছি।"</p>
-        <p><strong>❌ ভুল (English):</strong> "Because of <strong>it was raining</strong>, I stayed home."</p>
-        <p><strong>✅ শুদ্ধ:</strong> "Because <strong>it was raining</strong>, I stayed home." <span style="color:var(--text-mid);">অথবা</span> "Because of <strong>the rain</strong>, I stayed home."</p>
-        <p style="color:var(--text-mid);">📖 'Because of' + noun, 'Because' + clause.</p>
-    </div>
-
-    <!-- ═══ PRONUNCIATION GUIDE ═══ -->
-    <h2>🔊 Pronunciation Guide</h2>
-
-    <div class="pronounce-box">
-        <span class="word-item">although /ɔːlˈðoʊ/</span>
-        <span class="word-item">however /haʊˈev.ər/</span>
-        <span class="word-item">moreover /mɔːrˈoʊ.vər/</span>
-        <span class="word-item">furthermore /ˈfɜːr.ðər.mɔːr/</span>
-        <span class="word-item">therefore /ˈðer.fɔːr/</span>
-        <span class="word-item">nevertheless /ˌnev.ər.ðəˈles/</span>
-        <span class="word-item">consequently /ˈkɑːn.sə.kwənt.li/</span>
-        <span class="sound-icon">🔊 Tap to hear (in app)</span>
-    </div>
-    <p style="font-size:0.85rem;color:var(--text-soft);">
-        📌 <a href="/dictionary.html" style="color:var(--gold);">Search any word in the dictionary for audio pronunciation →</a>
-    </p>
-
-    <!-- ═══ REAL LIFE EXAMPLES ═══ -->
-    <h2>💬 Real Life Examples</h2>
-
-    <div class="context-box">
-        <div class="context-label">📝 Writing an Essay</div>
-        <div class="en">"<strong>Firstly</strong>, pollution affects our health. <strong>Moreover</strong>, it damages the environment. <strong>However</strong>, we can reduce it by planting trees."</div>
-        <div class="bn">"<strong>প্রথমত</strong>, দূষণ আমাদের স্বাস্থ্যকে প্রভাবিত করে। <strong>আরও</strong>, এটি পরিবেশের ক্ষতি করে। <strong>তবে</strong>, আমরা গাছ লাগিয়ে এটি কমাতে পারি।"</div>
-    </div>
-
-    <div class="context-box">
-        <div class="context-label">🗣️ Daily Conversation</div>
-        <div class="en">"I was tired. <strong>So</strong>, I went to bed early. <strong>However</strong>, I couldn't sleep <strong>because</strong> it was too hot."</div>
-        <div class="bn">"আমি ক্লান্ত ছিলাম। <strong>অতএব</strong>, আমি তাড়াতাড়ি ঘুমাতে গিয়েছিলাম। <strong>তবে</strong>, আমি ঘুমাতে পারিনি <strong>কারণ</strong> আবহাওয়া খুব গরম ছিল।"</div>
-    </div>
-
-    <div class="context-box">
-        <div class="context-label">📧 Email Writing</div>
-        <div class="en">"<strong>As</strong> you requested, I have attached the document. <strong>Furthermore</strong>, I have included a summary. Please review it <strong>and</strong> let me know your feedback."</div>
-        <div class="bn">"<strong>যেহেতু</strong> আপনি অনুরোধ করেছিলেন, আমি নথিটি সংযুক্ত করেছি। <strong>আরও বেশি</strong>, আমি একটি সারসংক্ষেপ অন্তর্ভুক্ত করেছি। দয়া করে এটি পর্যালোচনা করুন <strong>এবং</strong> আপনার মতামত জানান।"</div>
-    </div>
-
-    <!-- ═══ COMMON TRAPS TO AVOID ═══ -->
-    <h2>🚫 Common Traps to Avoid</h2>
-    <ul>
-        <li><strong>Don't overuse linking words.</strong> Use them naturally – 2-3 per paragraph is enough.</li>
-        <li><strong>Don't use 'although' and 'but' together.</strong> Choose one.</li>
-        <li><strong>Don't use 'however' as a conjunction.</strong> It starts a new sentence.</li>
-        <li><strong>Don't confuse 'because' and 'because of'.</strong> 'Because' + clause, 'Because of' + noun.</li>
-        <li><strong>Don't start a sentence with 'because' in formal writing unless it's a full clause.</strong></li>
-    </ul>
-    <div class="mistake-box">
-        <div class="wrong">❌ "Although he is poor, but he is honest."</div>
-        <div class="right">✅ "Although he is poor, he is honest." <span style="color:var(--text-soft);">or</span> "He is poor, but he is honest."</div>
-    </div>
-
-    <!-- ═══ DICTIONARY WORDS ═══ -->
-    <h2>📕 Related Dictionary Words</h2>
-
-    <div class="dictionary-grid">
-        <a href="/dictionary.html?q=although" class="dictionary-card">
-            <div class="word">although</div>
-            <div class="meaning">যদিও</div>
-            <span class="pos">Conjunction</span>
-        </a>
-        <a href="/dictionary.html?q=however" class="dictionary-card">
-            <div class="word">however</div>
-            <div class="meaning">তবে</div>
-            <span class="pos">Adverb</span>
-        </a>
-        <a href="/dictionary.html?q=therefore" class="dictionary-card">
-            <div class="word">therefore</div>
-            <div class="meaning">অতএব</div>
-            <span class="pos">Adverb</span>
-        </a>
-        <a href="/dictionary.html?q=because" class="dictionary-card">
-            <div class="word">because</div>
-            <div class="meaning">কারণ</div>
-            <span class="pos">Conjunction</span>
-        </a>
-        <a href="/dictionary.html?q=moreover" class="dictionary-card">
-            <div class="word">moreover</div>
-            <div class="meaning">আরও</div>
-            <span class="pos">Adverb</span>
-        </a>
-        <a href="/dictionary.html?q=nevertheless" class="dictionary-card">
-            <div class="word">nevertheless</div>
-            <div class="meaning">তবুও</div>
-            <span class="pos">Adverb</span>
-        </a>
-        <a href="/dictionary.html?q=consequently" class="dictionary-card">
-            <div class="word">consequently</div>
-            <div class="meaning">ফলে</div>
-            <span class="pos">Adverb</span>
-        </a>
-        <a href="/dictionary.html?q=furthermore" class="dictionary-card">
-            <div class="word">furthermore</div>
-            <div class="meaning">আরও বেশি</div>
-            <span class="pos">Adverb</span>
-        </a>
-        <a href="/dictionary.html?q=whereas" class="dictionary-card">
-            <div class="word">whereas</div>
-            <div class="meaning">যখন</div>
-            <span class="pos">Conjunction</span>
-        </a>
-        <a href="/dictionary.html?q=since" class="dictionary-card">
-            <div class="word">since</div>
-            <div class="meaning">যেহেতু</div>
-            <span class="pos">Conjunction</span>
-        </a>
-    </div>
-
-    <!-- ═══ TEACHER TIPS ═══ -->
-    <h2>👨‍🏫 Teacher Tips</h2>
-
-    <div class="teacher-tip">
-        <div class="tip-label">💡 Tip 1 – 'Although' vs 'But'</div>
-        <p style="color:var(--text-mid);margin:4px 0 0;">Never use 'but' with 'although'. They do the same job. Choose one.</p>
-    </div>
-
-    <div class="teacher-tip">
-        <div class="tip-label">💡 Tip 2 – 'However' Rules</div>
-        <p style="color:var(--text-mid);margin:4px 0 0;">'However' starts a new sentence or follows a semicolon. It needs a comma after it.</p>
-    </div>
-
-    <div class="teacher-tip">
-        <div class="tip-label">💡 Tip 3 – 'Because' vs 'Because of'</div>
-        <p style="color:var(--text-mid);margin:4px 0 0;"><strong>Because</strong> + clause (subject + verb) | <strong>Because of</strong> + noun phrase</p>
-    </div>
-
-    <div class="teacher-tip">
-        <div class="tip-label">💡 Tip 4 – IELTS Coherence</div>
-        <p style="color:var(--text-mid);margin:4px 0 0;">In IELTS Writing, using a variety of linking words directly improves your <strong>Coherence and Cohesion</strong> score.</p>
-    </div>
-
-    <!-- ═══ EXAM CORNER ═══ -->
-    <h2>🎯 Exam Corner – BCS, IELTS & HSC</h2>
-
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:12px 0;">
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px;">
-            <div style="color:var(--gold); font-weight:600; font-size:0.85rem; font-family:var(--font-en);">📘 BCS / Bank</div>
-            <div style="color:var(--text); font-size:0.9rem; margin:4px 0;">"______ he is poor, he is honest."</div>
-            <div style="color:var(--green); font-size:0.9rem;">✅ Correct: <strong>Although</strong></div>
-            <div style="color:var(--text-soft); font-size:0.85rem;">'Although' shows contrast.</div>
+        <!-- ═══ HERO ═══ -->
+        <h1>Linking Words in English Grammar with Bangla Meaning</h1>
+        <div class="subhead">
+            <span class="badge badge-exam">📘 BCS</span>
+            <span class="badge badge-exam">📘 IELTS</span>
+            <span class="badge badge-exam">📘 HSC</span>
+            <span class="badge badge-exam">📘 SSC</span>
+            <span class="badge badge-level">🎯 CEFR: B1–B2</span>
+            <span style="color:var(--text-soft);">| 50+ MCQ Quiz</span>
         </div>
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px;">
-            <div style="color:var(--gold); font-weight:600; font-size:0.85rem; font-family:var(--font-en);">📘 BCS / Bank</div>
-            <div style="color:var(--text); font-size:0.9rem; margin:4px 0;">"I was tired, ______ I went to bed."</div>
-            <div style="color:var(--green); font-size:0.9rem;">✅ Correct: <strong>so</strong></div>
-            <div style="color:var(--text-soft); font-size:0.85rem;">'So' shows result.</div>
-        </div>
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px;">
-            <div style="color:var(--gold); font-weight:600; font-size:0.85rem; font-family:var(--font-en);">🌍 IELTS Writing</div>
-            <div style="color:var(--text); font-size:0.9rem; margin:4px 0;">"______, pollution is a major problem. ______, it affects our health."</div>
-            <div style="color:var(--green); font-size:0.9rem;">✅ Correct: <strong>Firstly</strong> / <strong>Moreover</strong></div>
-            <div style="color:var(--text-soft); font-size:0.85rem;">Using linking words improves coherence.</div>
-        </div>
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px;">
-            <div style="color:var(--gold); font-weight:600; font-size:0.85rem; font-family:var(--font-en);">🎒 HSC / SSC</div>
-            <div style="color:var(--text); font-size:0.9rem; margin:4px 0;">"______ it was raining, we went out."</div>
-            <div style="color:var(--green); font-size:0.9rem;">✅ Correct: <strong>Although</strong></div>
-            <div style="color:var(--text-soft); font-size:0.85rem;">'Although' shows unexpected contrast.</div>
-        </div>
-    </div>
 
-    <!-- ═══ INTERACTIVE QUIZ ═══ -->
-    <h2>✍️ Practice Workshop – ৫০টি ইন্টারেক্টিভ প্রশ্ন</h2>
-    <p style="color:var(--text-mid);">নিচের প্রতিটি প্রশ্নের সঠিক উত্তর নির্বাচন করুন। Submit করলে স্কোর দেখাবে এবং দুর্বল বিষয়গুলো সম্পর্কে রেকমেন্ডেশন দেবে।</p>
+        <p><strong>English:</strong> Master Linking Words (Connectors) – the key to coherent writing and speaking.</p>
+        <p><strong>বাংলা:</strong> Linking Words (সংযোজক শব্দ) সম্পূর্ণ গাইড। ৬টি ক্যাটেগরি, ৫০+ উদাহরণ, সাধারণ ভুল ও সংশোধন, এবং ৫০টি ইন্টারেক্টিভ প্রশ্ন – সবকিছু একসাথে।</p>
 
-    <div class="quiz-container" id="quizContainer">
-        <div id="quizQuestions"></div>
-        <div class="quiz-controls">
-            <button class="btn" onclick="submitQuiz()">✅ Submit Answers</button>
-            <button class="btn btn-secondary" onclick="resetQuiz()">🔄 Reset</button>
+        <div class="memory-tip">
+            <strong>💡 Remember:</strong> Linking Words = Connectors = Transition Words = Words that connect ideas
         </div>
-        <div id="scoreDisplay" class="score-display" style="display:none;"></div>
-    </div>
 
-    <!-- ═══ FLASHCARDS ═══ -->
-    <h2>🃏 Flashcards – Study These Linking Words</h2>
+        <p><a href="/grammar.html" style="color:var(--gold);">📖 Back to Grammar Hub →</a></p>
 
-    <div class="flashcard-box">
-        <div class="card"><div class="en">and</div><div class="bn">এবং</div></div>
-        <div class="card"><div class="en">but</div><div class="bn">কিন্তু</div></div>
-        <div class="card"><div class="en">because</div><div class="bn">কারণ</div></div>
-        <div class="card"><div class="en">so</div><div class="bn">অতএব</div></div>
-        <div class="card"><div class="en">although</div><div class="bn">যদিও</div></div>
-        <div class="card"><div class="en">however</div><div class="bn">তবে</div></div>
-        <div class="card"><div class="en">moreover</div><div class="bn">আরও</div></div>
-        <div class="card"><div class="en">furthermore</div><div class="bn">আরও বেশি</div></div>
-        <div class="card"><div class="en">therefore</div><div class="bn">অতএব</div></div>
-        <div class="card"><div class="en">nevertheless</div><div class="bn">তবুও</div></div>
-        <div class="card"><div class="en">firstly</div><div class="bn">প্রথমত</div></div>
-        <div class="card"><div class="en">secondly</div><div class="bn">দ্বিতীয়ত</div></div>
-        <div class="card"><div class="en">for example</div><div class="bn">উদাহরণস্বরূপ</div></div>
-        <div class="card"><div class="en">such as</div><div class="bn">যেমন</div></div>
-        <div class="card"><div class="en">if</div><div class="bn">যদি</div></div>
-        <div class="card"><div class="en">unless</div><div class="bn">যদি না</div></div>
-    </div>
+        <!-- ═══ 6 CATEGORIES ═══ -->
+        <h2>📌 ৬টি ক্যাটেগরি – Linking Words এর প্রকারভেদ</h2>
 
-    <!-- ═══ FAQ ═══ -->
-    <h2>❓ Frequently Asked Questions</h2>
-
-    <div class="faq-item open">
-        <div class="question" onclick="toggleFAQ(this)">
-            What are Linking Words in English Grammar?
-            <span class="arrow">▾</span>
+        <!-- CATEGORY 1: ADDITION -->
+        <h3>1. Addition – যোগ (Adding Information)</h3>
+        <p>এই সংযোজক শব্দগুলো পূর্ববর্তী তথ্যের সাথে <strong>যোগ</strong> করে।</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="highlight-text">and</span></td><td>এবং</td><td>I like tea <span class="highlight-text">and</span> coffee.</td></tr>
+                    <tr><td><span class="highlight-text">also</span></td><td>এছাড়াও</td><td>She is smart. <span class="highlight-text">Also</span>, she is kind.</td></tr>
+                    <tr><td><span class="highlight-text">moreover</span></td><td>আরও</td><td>The food is delicious. <span class="highlight-text">Moreover</span>, it's affordable.</td></tr>
+                    <tr><td><span class="highlight-text">furthermore</span></td><td>আরও বেশি</td><td>The hotel is cheap. <span class="highlight-text">Furthermore</span>, it's clean.</td></tr>
+                    <tr><td><span class="highlight-text">in addition</span></td><td>এর পাশাপাশি</td><td><span class="highlight-text">In addition</span>, we need more time.</td></tr>
+                    <tr><td><span class="highlight-text">as well as</span></td><td>সাথে</td><td>He speaks English <span class="highlight-text">as well as</span> Bangla.</td></tr>
+                    <tr><td><span class="highlight-text">besides</span></td><td>এ ছাড়া</td><td><span class="highlight-text">Besides</span>, I have work to do.</td></tr>
+                </tbody>
+            </table>
         </div>
-        <div class="answer">Linking Words (also called connectors or transition words) are words or phrases that connect ideas, sentences, and paragraphs together. They help create coherence and logical flow in writing and speaking.</div>
-    </div>
-    <div class="faq-item">
-        <div class="question" onclick="toggleFAQ(this)">
-            Why are Linking Words important for BCS and IELTS?
-            <span class="arrow">▾</span>
+        <div class="example-box">
+            <p><strong>Example:</strong> "Bangladesh has beautiful beaches. <strong>Moreover</strong>, it has the world's largest mangrove forest."</p>
+            <p class="bn">"বাংলাদেশে সুন্দর সৈকত আছে। <strong>আরও</strong>, এখানে বিশ্বের বৃহত্তম ম্যানগ্রোভ বন আছে।"</p>
         </div>
-        <div class="answer">Linking Words are crucial for BCS, IELTS, and Bank Jobs because they test your ability to write coherent essays, complete sentence connectors, and understand logical relationships between ideas. In IELTS, they directly affect your Coherence and Cohesion score.</div>
-    </div>
-    <div class="faq-item">
-        <div class="question" onclick="toggleFAQ(this)">
-            What are the main types of Linking Words?
-            <span class="arrow">▾</span>
-        </div>
-        <div class="answer">The main types are: Addition (and, also, moreover), Contrast (but, however, although), Cause and Effect (because, so, therefore), Sequence (first, then, finally), and Example (for example, such as).</div>
-    </div>
-    <div class="faq-item">
-        <div class="question" onclick="toggleFAQ(this)">
-            What is the difference between 'because' and 'because of'?
-            <span class="arrow">▾</span>
-        </div>
-        <div class="answer">'Because' is a conjunction followed by a clause (subject + verb). Example: 'I stayed home because it was raining.' 'Because of' is a preposition followed by a noun phrase. Example: 'I stayed home because of the rain.'</div>
-    </div>
-    <div class="faq-item">
-        <div class="question" onclick="toggleFAQ(this)">
-            What is the difference between 'however' and 'although'?
-            <span class="arrow">▾</span>
-        </div>
-        <div class="answer">'However' is used to introduce a contrasting statement in a new sentence. 'Although' is used to introduce a contrasting clause within the same sentence. Example: 'I studied hard. However, I failed.' vs 'Although I studied hard, I failed.'</div>
-    </div>
 
-    <!-- ═══ SUMMARY ═══ -->
-    <h2>📝 Summary</h2>
-    <p><strong>Linking Words</strong> are essential for coherent writing and speaking. Here are the key takeaways:</p>
-    <ul>
-        <li><strong>Addition:</strong> and, also, moreover, furthermore, in addition</li>
-        <li><strong>Contrast:</strong> but, however, although, though, whereas, on the other hand</li>
-        <li><strong>Cause & Effect:</strong> because, so, therefore, since, as, due to</li>
-        <li><strong>Sequence:</strong> first, secondly, then, next, finally</li>
-        <li><strong>Example:</strong> for example, for instance, such as, like</li>
-        <li><strong>Condition:</strong> if, unless, provided that, as long as</li>
-    </ul>
+        <!-- CATEGORY 2: CONTRAST -->
+        <h3>2. Contrast – বিরোধ (Showing Difference)</h3>
+        <p>এই সংযোজক শব্দগুলো দুটি ধারণার মধ্যে <strong>বিরোধ</strong> বা <strong>পার্থক্য</strong> দেখায়।</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="highlight-text">but</span></td><td>কিন্তু</td><td>I like tea, <span class="highlight-text">but</span> I don't like coffee.</td></tr>
+                    <tr><td><span class="highlight-text">however</span></td><td>তবে</td><td>I studied hard. <span class="highlight-text">However</span>, I failed.</td></tr>
+                    <tr><td><span class="highlight-text">although</span></td><td>যদিও</td><td><span class="highlight-text">Although</span> he is poor, he is honest.</td></tr>
+                    <tr><td><span class="highlight-text">though</span></td><td>যদিও</td><td>He is rich, <span class="highlight-text">though</span> he is not happy.</td></tr>
+                    <tr><td><span class="highlight-text">whereas</span></td><td>যখন</td><td>He is tall, <span class="highlight-text">whereas</span> his brother is short.</td></tr>
+                    <tr><td><span class="highlight-text">on the other hand</span></td><td>অন্যদিকে</td><td><span class="highlight-text">On the other hand</span>, she is very shy.</td></tr>
+                    <tr><td><span class="highlight-text">nevertheless</span></td><td>তবুও</td><td>It was raining. <span class="highlight-text">Nevertheless</span>, we went out.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="example-box">
+            <p><strong>Example:</strong> "<strong>Although</strong> Bangladesh is a small country, it has a large population."</p>
+            <p class="bn">"<strong>যদিও</strong> বাংলাদেশ একটি ছোট দেশ, এর জনসংখ্যা অনেক বেশি।"</p>
+        </div>
+        <div class="memory-tip">
+            <strong>⚠️ Important:</strong> <strong>However</strong> starts a new sentence. <strong>Although</strong> stays in the same sentence.
+        </div>
 
-    <div class="memory-tip">
-        <strong>💡 Golden Rule:</strong> "Never use two connectors together. <strong>Although...but</strong> and <strong>Because...so</strong> are common mistakes. Choose one!"
-    </div>
+        <!-- CATEGORY 3: CAUSE & EFFECT -->
+        <h3>3. Cause & Effect – কারণ ও ফলাফল</h3>
+        <p>এই সংযোজক শব্দগুলো কোনো কাজের <strong>কারণ</strong> বা <strong>ফলাফল</strong> দেখায়।</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="highlight-text">because</span></td><td>কারণ</td><td>I stayed home <span class="highlight-text">because</span> it was raining.</td></tr>
+                    <tr><td><span class="highlight-text">so</span></td><td>অতএব</td><td>It was raining, <span class="highlight-text">so</span> I stayed home.</td></tr>
+                    <tr><td><span class="highlight-text">therefore</span></td><td>অতএব</td><td>He worked hard. <span class="highlight-text">Therefore</span>, he succeeded.</td></tr>
+                    <tr><td><span class="highlight-text">since</span></td><td>যেহেতু</td><td><span class="highlight-text">Since</span> you are here, let's start.</td></tr>
+                    <tr><td><span class="highlight-text">as</span></td><td>কারণ</td><td><span class="highlight-text">As</span> it was late, we went home.</td></tr>
+                    <tr><td><span class="highlight-text">due to</span></td><td>কারণে</td><td>The match was cancelled <span class="highlight-text">due to</span> rain.</td></tr>
+                    <tr><td><span class="highlight-text">consequently</span></td><td>ফলে</td><td>He missed the bus. <span class="highlight-text">Consequently</span>, he was late.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="example-box">
+            <p><strong>Example:</strong> "<strong>Because</strong> of the heavy rain, the match was cancelled."</p>
+            <p class="bn">"<strong>কারণে</strong> প্রবল বৃষ্টির, ম্যাচটি বাতিল করা হয়েছিল।"</p>
+        </div>
+        <div class="memory-tip">
+            <strong>🧠 Memory Trick:</strong> <strong>Because</strong> + Clause (subject + verb) | <strong>Because of</strong> + Noun
+        </div>
 
-    <!-- ═══ CONTINUE LEARNING ═══ -->
-    <h2>🔄 Continue Learning</h2>
-    <div class="continue-learning">
-        <div class="cl-grid">
-            <a href="/grammar.html" class="cl-item">
-                <span class="icon">📚</span>
-                <span class="label">Grammar Hub</span>
+        <!-- CATEGORY 4: SEQUENCE -->
+        <h3>4. Sequence – ক্রম (Order and Time)</h3>
+        <p>এই সংযোজক শব্দগুলো ঘটনা বা ধারণার <strong>ক্রম</strong> দেখায়।</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="highlight-text">first / firstly</span></td><td>প্রথমত</td><td><span class="highlight-text">Firstly</span>, we need to plan.</td></tr>
+                    <tr><td><span class="highlight-text">secondly</span></td><td>দ্বিতীয়ত</td><td><span class="highlight-text">Secondly</span>, we need resources.</td></tr>
+                    <tr><td><span class="highlight-text">then</span></td><td>তারপর</td><td>We ate dinner, <span class="highlight-text">then</span> we watched TV.</td></tr>
+                    <tr><td><span class="highlight-text">next</span></td><td>পরবর্তী</td><td><span class="highlight-text">Next</span>, we need to review.</td></tr>
+                    <tr><td><span class="highlight-text">finally</span></td><td>শেষ পর্যন্ত</td><td><span class="highlight-text">Finally</span>, we presented the project.</td></tr>
+                    <tr><td><span class="highlight-text">after that</span></td><td>তার পরে</td><td>We went shopping. <span class="highlight-text">After that</span>, we had lunch.</td></tr>
+                    <tr><td><span class="highlight-text">in the end</span></td><td>শেষে</td><td><span class="highlight-text">In the end</span>, we succeeded.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="example-box">
+            <p><strong>Example:</strong> "<strong>Firstly</strong>, gather all materials. <strong>Secondly</strong>, start writing. <strong>Finally</strong>, edit and submit."</p>
+            <p class="bn">"<strong>প্রথমত</strong>, সব উপকরণ সংগ্রহ করুন। <strong>দ্বিতীয়ত</strong>, লেখা শুরু করুন। <strong>শেষ পর্যন্ত</strong>, সম্পাদনা করে জমা দিন।"</p>
+        </div>
+
+        <!-- CATEGORY 5: EXAMPLE -->
+        <h3>5. Example – উদাহরণ (Giving Examples)</h3>
+        <p>এই সংযোজক শব্দগুলো ধারণা সমর্থনের জন্য <strong>উদাহরণ</strong> দেয়।</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="highlight-text">for example</span></td><td>উদাহরণস্বরূপ</td><td>Many countries, <span class="highlight-text">for example</span>, Japan, are small.</td></tr>
+                    <tr><td><span class="highlight-text">for instance</span></td><td>উদাহরণস্বরূপ</td><td><span class="highlight-text">For instance</span>, Bangladesh is a riverine country.</td></tr>
+                    <tr><td><span class="highlight-text">such as</span></td><td>যেমন</td><td>I like fruits <span class="highlight-text">such as</span> mangoes and bananas.</td></tr>
+                    <tr><td><span class="highlight-text">like</span></td><td>যেমন</td><td>Countries <span class="highlight-text">like</span> Bangladesh need development.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="example-box">
+            <p><strong>Example:</strong> "Many Bangladeshi dishes, <strong>such as</strong> biryani and hilsa, are world-famous."</p>
+            <p class="bn">"অনেক বাংলাদেশি খাবার, <strong>যেমন</strong> বিরিয়ানি ও ইলিশ, বিশ্ববিখ্যাত।"</p>
+        </div>
+
+        <!-- CATEGORY 6: CONDITION -->
+        <h3>6. Condition – শর্ত (If and Unless)</h3>
+        <p>এই সংযোজক শব্দগুলো কোনো কিছুর জন্য <strong>শর্ত</strong> দেখায়।</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Linking Word</th><th>Bangla Meaning</th><th>Example</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="highlight-text">if</span></td><td>যদি</td><td><span class="highlight-text">If</span> you study, you will pass.</td></tr>
+                    <tr><td><span class="highlight-text">unless</span></td><td>যদি না</td><td>You will fail <span class="highlight-text">unless</span> you study.</td></tr>
+                    <tr><td><span class="highlight-text">provided that</span></td><td>শর্তে যে</td><td>You can go <span class="highlight-text">provided that</span> you finish work.</td></tr>
+                    <tr><td><span class="highlight-text">as long as</span></td><td>যতক্ষণ</td><td><span class="highlight-text">As long as</span> you try, you will succeed.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="example-box">
+            <p><strong>Example:</strong> "<strong>Unless</strong> you practice daily, you won't improve your English."</p>
+            <p class="bn">"<strong>যদি না</strong> আপনি প্রতিদিন অনুশীলন করেন, আপনার ইংরেজি উন্নতি হবে না।"</p>
+        </div>
+
+        <!-- ═══ COMMON MISTAKES ═══ -->
+        <h2>⚠️ সাধারণ ভুল ও সংশোধন</h2>
+
+        <div class="mistake-box">
+            <p><strong>❌ ভুল:</strong> Although he is rich, <strong>but</strong> he is not happy.</p>
+            <p><strong>✅ শুদ্ধ:</strong> Although he is rich, he is not happy.</p>
+            <p style="color:var(--text-mid);">ব্যাখ্যা: 'Although' এবং 'but' একসাথে ব্যবহার করা যায় না।</p>
+        </div>
+
+        <div class="mistake-box">
+            <p><strong>❌ ভুল:</strong> I studied hard. <strong>Although</strong>, I failed.</p>
+            <p><strong>✅ শুদ্ধ:</strong> I studied hard. <strong>However</strong>, I failed.</p>
+            <p style="color:var(--text-mid);">ব্যাখ্যা: 'Although' নতুন বাক্য শুরু করতে পারে না। 'However' ব্যবহার করুন।</p>
+        </div>
+
+        <div class="mistake-box">
+            <p><strong>❌ ভুল:</strong> Because of <strong>it was raining</strong>, I stayed home.</p>
+            <p><strong>✅ শুদ্ধ:</strong> Because <strong>it was raining</strong>, I stayed home. <span style="color:var(--text-mid);">অথবা</span> Because of <strong>the rain</strong>, I stayed home.</p>
+            <p style="color:var(--text-mid);">ব্যাখ্যা: 'Because of' + noun, 'Because' + clause.</p>
+        </div>
+
+        <div class="mistake-box">
+            <p><strong>❌ ভুল:</strong> I like tea, <strong>however</strong> I don't like coffee.</p>
+            <p><strong>✅ শুদ্ধ:</strong> I like tea. <strong>However</strong>, I don't like coffee.</p>
+            <p style="color:var(--text-mid);">ব্যাখ্যা: 'However' সাধারণত নতুন বাক্য শুরু করে এবং কমা দিয়ে অনুসরণ করে।</p>
+        </div>
+
+        <!-- ═══ PRONUNCIATION GUIDE ═══ -->
+        <h2>🔊 Pronunciation Guide</h2>
+
+        <div class="pronounce-box">
+            <span class="word-item">although /ɔːlˈðoʊ/</span>
+            <span class="word-item">however /haʊˈev.ər/</span>
+            <span class="word-item">moreover /mɔːrˈoʊ.vər/</span>
+            <span class="word-item">furthermore /ˈfɜːr.ðər.mɔːr/</span>
+            <span class="word-item">therefore /ˈðer.fɔːr/</span>
+            <span class="word-item">nevertheless /ˌnev.ər.ðəˈles/</span>
+            <span class="word-item">consequently /ˈkɑːn.sə.kwənt.li/</span>
+            <span class="sound-icon">🔊 Tap to hear (in app)</span>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-soft);">
+            📌 <a href="/dictionary.html" style="color:var(--gold);">Search any word in the dictionary for audio pronunciation →</a>
+        </p>
+
+        <!-- ═══ REAL LIFE EXAMPLES ═══ -->
+        <h2>💬 Real Life Examples</h2>
+
+        <div class="context-box">
+            <div class="context-label">📝 Writing an Essay</div>
+            <div class="en">"<strong>Firstly</strong>, pollution affects our health. <strong>Moreover</strong>, it damages the environment. <strong>However</strong>, we can reduce it by planting trees."</div>
+            <div class="bn">"<strong>প্রথমত</strong>, দূষণ আমাদের স্বাস্থ্যকে প্রভাবিত করে। <strong>আরও</strong>, এটি পরিবেশের ক্ষতি করে। <strong>তবে</strong>, আমরা গাছ লাগিয়ে এটি কমাতে পারি।"</div>
+        </div>
+
+        <div class="context-box">
+            <div class="context-label">🗣️ Daily Conversation</div>
+            <div class="en">"I was tired. <strong>So</strong>, I went to bed early. <strong>However</strong>, I couldn't sleep <strong>because</strong> it was too hot."</div>
+            <div class="bn">"আমি ক্লান্ত ছিলাম। <strong>অতএব</strong>, আমি তাড়াতাড়ি ঘুমাতে গিয়েছিলাম। <strong>তবে</strong>, আমি ঘুমাতে পারিনি <strong>কারণ</strong> আবহাওয়া খুব গরম ছিল।"</div>
+        </div>
+
+        <div class="context-box">
+            <div class="context-label">📧 Email Writing</div>
+            <div class="en">"<strong>As</strong> you requested, I have attached the document. <strong>Furthermore</strong>, I have included a summary. Please review it <strong>and</strong> let me know your feedback."</div>
+            <div class="bn">"<strong>যেহেতু</strong> আপনি অনুরোধ করেছিলেন, আমি নথিটি সংযুক্ত করেছি। <strong>আরও বেশি</strong>, আমি একটি সারসংক্ষেপ অন্তর্ভুক্ত করেছি। দয়া করে এটি পর্যালোচনা করুন <strong>এবং</strong> আপনার মতামত জানান।"</div>
+        </div>
+
+        <!-- ═══ COMMON TRAPS ═══ -->
+        <h2>🚫 Common Traps to Avoid</h2>
+        <ul>
+            <li><strong>Don't overuse linking words.</strong> Use them naturally – 2-3 per paragraph is enough.</li>
+            <li><strong>Don't use 'although' and 'but' together.</strong> Choose one.</li>
+            <li><strong>Don't use 'however' as a conjunction.</strong> It starts a new sentence.</li>
+            <li><strong>Don't confuse 'because' and 'because of'.</strong> 'Because' + clause, 'Because of' + noun.</li>
+        </ul>
+
+        <!-- ═══ DICTIONARY WORDS ═══ -->
+        <h2>📕 Related Dictionary Words</h2>
+
+        <div class="dictionary-grid">
+            <a href="/dictionary.html?q=although" class="dictionary-card">
+                <div class="word">although</div>
+                <div class="meaning">যদিও</div>
+                <span class="pos">Conjunction</span>
             </a>
-            <a href="/right-form-of-verb-bangla.html" class="cl-item">
-                <span class="icon">📝</span>
-                <span class="label">Right Form of Verb</span>
+            <a href="/dictionary.html?q=however" class="dictionary-card">
+                <div class="word">however</div>
+                <div class="meaning">তবে</div>
+                <span class="pos">Adverb</span>
             </a>
-            <a href="/conditional-sentences-bangla.html" class="cl-item">
-                <span class="icon">📖</span>
-                <span class="label">Conditional Sentences</span>
+            <a href="/dictionary.html?q=therefore" class="dictionary-card">
+                <div class="word">therefore</div>
+                <div class="meaning">অতএব</div>
+                <span class="pos">Adverb</span>
             </a>
-            <a href="/modal-verbs-bangla.html" class="cl-item">
-                <span class="icon">🔧</span>
-                <span class="label">Modal Verbs</span>
+            <a href="/dictionary.html?q=because" class="dictionary-card">
+                <div class="word">because</div>
+                <div class="meaning">কারণ</div>
+                <span class="pos">Conjunction</span>
             </a>
-            <a href="/subject-verb-agreement-bangla.html" class="cl-item">
-                <span class="icon">📝</span>
-                <span class="label">Subject-Verb Agreement</span>
+            <a href="/dictionary.html?q=moreover" class="dictionary-card">
+                <div class="word">moreover</div>
+                <div class="meaning">আরও</div>
+                <span class="pos">Adverb</span>
             </a>
-            <a href="/tense-rules-bangla.html" class="cl-item">
-                <span class="icon">⏳</span>
-                <span class="label">All 12 Tenses</span>
+            <a href="/dictionary.html?q=nevertheless" class="dictionary-card">
+                <div class="word">nevertheless</div>
+                <div class="meaning">তবুও</div>
+                <span class="pos">Adverb</span>
             </a>
-            <a href="/voice-change-rules-bangla.html" class="cl-item">
-                <span class="icon">🔄</span>
-                <span class="label">Voice Change</span>
+            <a href="/dictionary.html?q=consequently" class="dictionary-card">
+                <div class="word">consequently</div>
+                <div class="meaning">ফলে</div>
+                <span class="pos">Adverb</span>
             </a>
-            <a href="/narration-rules-bangla.html" class="cl-item">
-                <span class="icon">💬</span>
-                <span class="label">Narration Rules</span>
+            <a href="/dictionary.html?q=furthermore" class="dictionary-card">
+                <div class="word">furthermore</div>
+                <div class="meaning">আরও বেশি</div>
+                <span class="pos">Adverb</span>
             </a>
-            <a href="/mock-tests/grammar-test-1.html" class="cl-item">
-                <span class="icon">🧠</span>
-                <span class="label">Grammar Quiz</span>
+            <a href="/dictionary.html?q=whereas" class="dictionary-card">
+                <div class="word">whereas</div>
+                <div class="meaning">যখন</div>
+                <span class="pos">Conjunction</span>
             </a>
-            <a href="/assessment.html" class="cl-item">
-                <span class="icon">🎯</span>
-                <span class="label">Assessment</span>
-            </a>
-            <a href="/dictionary.html" class="cl-item">
-                <span class="icon">📕</span>
-                <span class="label">Dictionary</span>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cl-item" target="_blank">
-                <span class="icon">📱</span>
-                <span class="label">Ovidhan App</span>
+            <a href="/dictionary.html?q=since" class="dictionary-card">
+                <div class="word">since</div>
+                <div class="meaning">যেহেতু</div>
+                <span class="pos">Conjunction</span>
             </a>
         </div>
+
+        <!-- ═══ TEACHER TIPS ═══ -->
+        <h2>👨‍🏫 Teacher Tips</h2>
+
+        <div class="teacher-tip">
+            <div class="tip-label">💡 Tip 1 – 'Although' vs 'But'</div>
+            <p style="color:var(--text-mid);margin:4px 0 0;">Never use 'but' with 'although'. They do the same job. Choose one.</p>
+        </div>
+
+        <div class="teacher-tip">
+            <div class="tip-label">💡 Tip 2 – 'However' Rules</div>
+            <p style="color:var(--text-mid);margin:4px 0 0;">'However' starts a new sentence or follows a semicolon. It needs a comma after it.</p>
+        </div>
+
+        <div class="teacher-tip">
+            <div class="tip-label">💡 Tip 3 – 'Because' vs 'Because of'</div>
+            <p style="color:var(--text-mid);margin:4px 0 0;"><strong>Because</strong> + clause (subject + verb) | <strong>Because of</strong> + noun phrase</p>
+        </div>
+
+        <div class="teacher-tip">
+            <div class="tip-label">💡 Tip 4 – IELTS Coherence</div>
+            <p style="color:var(--text-mid);margin:4px 0 0;">In IELTS Writing, using a variety of linking words directly improves your <strong>Coherence and Cohesion</strong> score.</p>
+        </div>
+
+        <!-- ═══ EXAM CORNER ═══ -->
+        <h2>🎯 Exam Corner – BCS, IELTS & HSC</h2>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:12px 0;">
+            <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px;">
+                <div style="color:var(--gold); font-weight:600; font-size:0.85rem; font-family:var(--font-en);">📘 BCS / Bank</div>
+                <div style="color:var(--text); font-size:0.9rem; margin:4px 0;">"______ he is poor, he is honest."</div>
+                <div style="color:var(--green); font-size:0.9rem;">✅ Correct: <strong>Although</strong></div>
+                <div style="color:var(--text-soft); font-size:0.85rem;">'Although' shows contrast.</div>
+            </div>
+            <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px;">
+                <div style="color:var(--gold); font-weight:600; font-size:0.85rem; font-family:var(--font-en);">📘 BCS / Bank</div>
+                <div style="color:var(--text); font-size:0.9rem; margin:4px 0;">"I was tired, ______ I went to bed."</div>
+                <div style="color:var(--green); font-size:0.9rem;">✅ Correct: <strong>so</strong></div>
+                <div style="color:var(--text-soft); font-size:0.85rem;">'So' shows result.</div>
+            </div>
+            <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px;">
+                <div style="color:var(--gold); font-weight:600; font-size:0.85rem; font-family:var(--font-en);">🌍 IELTS Writing</div>
+                <div style="color:var(--text); font-size:0.9rem; margin:4px 0;">"______, pollution is a major problem. ______, it affects our health."</div>
+                <div style="color:var(--green); font-size:0.9rem;">✅ Correct: <strong>Firstly</strong> / <strong>Moreover</strong></div>
+                <div style="color:var(--text-soft); font-size:0.85rem;">Using linking words improves coherence.</div>
+            </div>
+            <div style="background:var(--surface2); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px;">
+                <div style="color:var(--gold); font-weight:600; font-size:0.85rem; font-family:var(--font-en);">🎒 HSC / SSC</div>
+                <div style="color:var(--text); font-size:0.9rem; margin:4px 0;">"______ it was raining, we went out."</div>
+                <div style="color:var(--green); font-size:0.9rem;">✅ Correct: <strong>Although</strong></div>
+                <div style="color:var(--text-soft); font-size:0.85rem;">'Although' shows unexpected contrast.</div>
+            </div>
+        </div>
+
+        <!-- ═══ INTERACTIVE QUIZ ═══ -->
+        <h2>✍️ Practice Workshop – ৫০টি ইন্টারেক্টিভ প্রশ্ন</h2>
+        <p style="color:var(--text-mid);">নিচের প্রতিটি প্রশ্নের সঠিক উত্তর নির্বাচন করুন। Submit করলে স্কোর দেখাবে এবং দুর্বল বিষয়গুলো সম্পর্কে রেকমেন্ডেশন দেবে।</p>
+
+        <div class="quiz-container" id="quizContainer">
+            <div id="quizQuestions"></div>
+            <div class="quiz-controls">
+                <button class="btn" onclick="submitQuiz()">✅ Submit Answers</button>
+                <button class="btn btn-secondary" onclick="resetQuiz()">🔄 Reset</button>
+            </div>
+            <div id="scoreDisplay" class="score-display" style="display:none;"></div>
+        </div>
+
+        <!-- ═══ FLASHCARDS ═══ -->
+        <h2>🃏 Flashcards – Study These Linking Words</h2>
+
+        <div class="flashcard-box">
+            <div class="card"><div class="en">and</div><div class="bn">এবং</div></div>
+            <div class="card"><div class="en">but</div><div class="bn">কিন্তু</div></div>
+            <div class="card"><div class="en">because</div><div class="bn">কারণ</div></div>
+            <div class="card"><div class="en">so</div><div class="bn">অতএব</div></div>
+            <div class="card"><div class="en">although</div><div class="bn">যদিও</div></div>
+            <div class="card"><div class="en">however</div><div class="bn">তবে</div></div>
+            <div class="card"><div class="en">moreover</div><div class="bn">আরও</div></div>
+            <div class="card"><div class="en">furthermore</div><div class="bn">আরও বেশি</div></div>
+            <div class="card"><div class="en">therefore</div><div class="bn">অতএব</div></div>
+            <div class="card"><div class="en">nevertheless</div><div class="bn">তবুও</div></div>
+            <div class="card"><div class="en">firstly</div><div class="bn">প্রথমত</div></div>
+            <div class="card"><div class="en">secondly</div><div class="bn">দ্বিতীয়ত</div></div>
+            <div class="card"><div class="en">for example</div><div class="bn">উদাহরণস্বরূপ</div></div>
+            <div class="card"><div class="en">such as</div><div class="bn">যেমন</div></div>
+            <div class="card"><div class="en">if</div><div class="bn">যদি</div></div>
+            <div class="card"><div class="en">unless</div><div class="bn">যদি না</div></div>
+        </div>
+
+        <!-- ═══ FAQ ═══ -->
+        <h2>❓ Frequently Asked Questions</h2>
+
+        <div class="faq-item open">
+            <div class="question" onclick="toggleFAQ(this)">
+                What are Linking Words in English Grammar?
+                <span class="arrow">▾</span>
+            </div>
+            <div class="answer">Linking Words (also called connectors or transition words) are words or phrases that connect ideas, sentences, and paragraphs together. They help create coherence and logical flow in writing and speaking.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question" onclick="toggleFAQ(this)">
+                Why are Linking Words important for BCS and IELTS?
+                <span class="arrow">▾</span>
+            </div>
+            <div class="answer">Linking Words are crucial for BCS, IELTS, and Bank Jobs because they test your ability to write coherent essays, complete sentence connectors, and understand logical relationships between ideas. In IELTS, they directly affect your Coherence and Cohesion score.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question" onclick="toggleFAQ(this)">
+                What are the main types of Linking Words?
+                <span class="arrow">▾</span>
+            </div>
+            <div class="answer">The main types are: Addition (and, also, moreover), Contrast (but, however, although), Cause and Effect (because, so, therefore), Sequence (first, then, finally), and Example (for example, such as).</div>
+        </div>
+        <div class="faq-item">
+            <div class="question" onclick="toggleFAQ(this)">
+                What is the difference between 'because' and 'because of'?
+                <span class="arrow">▾</span>
+            </div>
+            <div class="answer">'Because' is a conjunction followed by a clause (subject + verb). Example: 'I stayed home because it was raining.' 'Because of' is a preposition followed by a noun phrase. Example: 'I stayed home because of the rain.'</div>
+        </div>
+        <div class="faq-item">
+            <div class="question" onclick="toggleFAQ(this)">
+                What is the difference between 'however' and 'although'?
+                <span class="arrow">▾</span>
+            </div>
+            <div class="answer">'However' is used to introduce a contrasting statement in a new sentence. 'Although' is used to introduce a contrasting clause within the same sentence. Example: 'I studied hard. However, I failed.' vs 'Although I studied hard, I failed.'</div>
+        </div>
+
+        <!-- ═══ SUMMARY ═══ -->
+        <h2>📝 Summary</h2>
+        <p><strong>Linking Words</strong> are essential for coherent writing and speaking. Here are the key takeaways:</p>
+        <ul>
+            <li><strong>Addition:</strong> and, also, moreover, furthermore, in addition</li>
+            <li><strong>Contrast:</strong> but, however, although, though, whereas, on the other hand</li>
+            <li><strong>Cause & Effect:</strong> because, so, therefore, since, as, due to</li>
+            <li><strong>Sequence:</strong> first, secondly, then, next, finally</li>
+            <li><strong>Example:</strong> for example, for instance, such as, like</li>
+            <li><strong>Condition:</strong> if, unless, provided that, as long as</li>
+        </ul>
+
+        <div class="memory-tip">
+            <strong>💡 Golden Rule:</strong> "Never use two connectors together. <strong>Although...but</strong> and <strong>Because...so</strong> are common mistakes. Choose one!"
+        </div>
+
+        <!-- ═══ CONTINUE LEARNING ═══ -->
+        <h2>🔄 Continue Learning</h2>
+        <div class="continue-learning">
+            <div class="cl-grid">
+                <a href="/grammar.html" class="cl-item">
+                    <span class="icon">📚</span>
+                    <span class="label">Grammar Hub</span>
+                </a>
+                <a href="/right-form-of-verb-bangla.html" class="cl-item">
+                    <span class="icon">📝</span>
+                    <span class="label">Right Form of Verb</span>
+                </a>
+                <a href="/conditional-sentences-bangla.html" class="cl-item">
+                    <span class="icon">📖</span>
+                    <span class="label">Conditional Sentences</span>
+                </a>
+                <a href="/modal-verbs-bangla.html" class="cl-item">
+                    <span class="icon">🔧</span>
+                    <span class="label">Modal Verbs</span>
+                </a>
+                <a href="/subject-verb-agreement-bangla.html" class="cl-item">
+                    <span class="icon">📝</span>
+                    <span class="label">Subject-Verb Agreement</span>
+                </a>
+                <a href="/tense-rules-bangla.html" class="cl-item">
+                    <span class="icon">⏳</span>
+                    <span class="label">All 12 Tenses</span>
+                </a>
+                <a href="/voice-change-rules-bangla.html" class="cl-item">
+                    <span class="icon">🔄</span>
+                    <span class="label">Voice Change</span>
+                </a>
+                <a href="/narration-rules-bangla.html" class="cl-item">
+                    <span class="icon">💬</span>
+                    <span class="label">Narration Rules</span>
+                </a>
+                <a href="/mock-tests/grammar-test-1.html" class="cl-item">
+                    <span class="icon">🧠</span>
+                    <span class="label">Grammar Quiz</span>
+                </a>
+                <a href="/assessment.html" class="cl-item">
+                    <span class="icon">🎯</span>
+                    <span class="label">Assessment</span>
+                </a>
+                <a href="/dictionary.html" class="cl-item">
+                    <span class="icon">📕</span>
+                    <span class="label">Dictionary</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cl-item" target="_blank">
+                    <span class="icon">📱</span>
+                    <span class="label">Ovidhan App</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ═══ UP/DOWN NAVIGATION ═══ -->
+        <div class="nav-arrows">
+            <a href="/right-form-of-verb-bangla.html" class="prev">← Previous: Right Form of Verb</a>
+            <a href="/conditional-sentences-bangla.html" class="next">Next: Conditional Sentences →</a>
+        </div>
+
+        <!-- ═══ BACK TO TOP BUTTON ═══ -->
+        <a href="#" id="backToTop" class="back-to-top">↑</a>
+
+        <!-- ═══ RELATED LESSONS ═══ -->
+        <h2>🔗 সম্পর্কিত লেসন ও ডিকশনারি লিংক</h2>
+        <div class="related-grid">
+            <a href="/right-form-of-verb-bangla.html">📝 Right Form of Verb</a>
+            <a href="/conditional-sentences-bangla.html">📖 Conditional Sentences</a>
+            <a href="/modal-verbs-bangla.html">🔧 Modal Verbs</a>
+            <a href="/tense-rules-bangla.html">📚 Tense Rules</a>
+            <a href="/subject-verb-agreement-bangla.html">📝 Subject-Verb Agreement</a>
+            <a href="/voice-change-rules-bangla.html">🔄 Voice Change</a>
+            <a href="/narration-rules-bangla.html">💬 Narration Rules</a>
+            <a href="/mock-tests/grammar-test-1.html">🧠 Grammar Quiz</a>
+            <a href="/mock-tests/ielts-test-1.html">🌏 IELTS Test</a>
+            <a href="/mock-tests/bcs-test-1.html">🎓 BCS Mock Test</a>
+            <a href="/word/although.html">📕 although (Dictionary)</a>
+            <a href="/word/however.html">📕 however (Dictionary)</a>
+            <a href="/word/therefore.html">📕 therefore (Dictionary)</a>
+            <a href="/word/because.html">📕 because (Dictionary)</a>
+        </div>
+
+        <a href="/grammar.html" class="back-link">← Back to Grammar Hub</a>
+
     </div>
-
-    <!-- ═══ UP/DOWN NAVIGATION ═══ -->
-    <div class="nav-arrows">
-        <a href="/right-form-of-verb-bangla.html" class="prev">← Previous: Right Form of Verb</a>
-        <a href="/conditional-sentences-bangla.html" class="next">Next: Conditional Sentences →</a>
-    </div>
-
-    <!-- ═══ BACK TO TOP BUTTON ═══ -->
-    <a href="#" id="backToTop" class="back-to-top">↑</a>
-
-    <!-- ═══ RELATED LESSONS ═══ -->
-    <h2>🔗 সম্পর্কিত লেসন ও ডিকশনারি লিংক</h2>
-    <div class="related-grid">
-        <a href="/right-form-of-verb-bangla.html">📝 Right Form of Verb</a>
-        <a href="/conditional-sentences-bangla.html">📖 Conditional Sentences</a>
-        <a href="/modal-verbs-bangla.html">🔧 Modal Verbs</a>
-        <a href="/tense-rules-bangla.html">📚 Tense Rules</a>
-        <a href="/subject-verb-agreement-bangla.html">📝 Subject-Verb Agreement</a>
-        <a href="/voice-change-rules-bangla.html">🔄 Voice Change</a>
-        <a href="/narration-rules-bangla.html">💬 Narration Rules</a>
-        <a href="/mock-tests/grammar-test-1.html">🧠 Grammar Quiz</a>
-        <a href="/mock-tests/ielts-test-1.html">🌏 IELTS Test</a>
-        <a href="/mock-tests/bcs-test-1.html">🎓 BCS Mock Test</a>
-        <a href="/word/although.html">📕 although (Dictionary)</a>
-        <a href="/word/however.html">📕 however (Dictionary)</a>
-        <a href="/word/therefore.html">📕 therefore (Dictionary)</a>
-        <a href="/word/because.html">📕 because (Dictionary)</a>
-    </div>
-
-    <a href="/grammar.html" class="back-link">← Back to Grammar Hub</a>
 
 </div>
 
@@ -1498,11 +1466,11 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         renderQuiz();
-        // Open first FAQ
         var firstFaq = document.querySelector('.faq-item');
         if (firstFaq) firstFaq.classList.add('open');
     });
 </script>
+
 <footer class="site-footer">
     <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
     <p>
