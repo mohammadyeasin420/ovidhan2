@@ -59,7 +59,7 @@ const DEFAULT_WORDS = [
 
 function getDefaultFlashcardState() {
     return {
-        cards: [],            // Array of card objects
+        cards: [],
         dueCount: 0,
         totalCards: 0,
         lastSessionDate: null
@@ -71,10 +71,10 @@ function getCardDefaults(wordObj) {
         word: wordObj.word,
         meaning: wordObj.meaning || wordObj.bangla || wordObj.definition || '',
         example: wordObj.example || wordObj.sentence || '',
-        interval: 1,           // Days until next review
-        nextReviewDate: new Date().toISOString().split('T')[0], // Today
-        ease: 2.5,            // Multiplier for spacing
-        stage: 0,              // 0 = new/learning, 1-4 = box levels
+        interval: 1,
+        nextReviewDate: new Date().toISOString().split('T')[0],
+        ease: 2.5,
+        stage: 0,
         correctCount: 0,
         incorrectCount: 0
     };
@@ -97,19 +97,15 @@ function saveFlashcards(state) {
 function initializeDeck(words) {
     const existing = loadFlashcards();
     if (existing && existing.cards && existing.cards.length > 0) {
-        // Only add new words that aren't already in the deck
         const existingWords = new Set(existing.cards.map(c => c.word.toLowerCase()));
         const newWords = words.filter(w => !existingWords.has(w.word.toLowerCase()));
-        if (newWords.length === 0) {
-            return existing; // Nothing new to add
-        }
+        if (newWords.length === 0) return existing;
         const newCards = newWords.map(w => getCardDefaults(w));
         existing.cards = existing.cards.concat(newCards);
         existing.totalCards = existing.cards.length;
         saveFlashcards(existing);
         return existing;
     } else {
-        // Fresh deck
         const cards = words.map(w => getCardDefaults(w));
         const state = {
             cards: cards,
@@ -131,34 +127,32 @@ function getDueCards(state) {
 }
 
 function scheduleCard(card, quality) {
-    // quality: 0 = again (wrong), 1 = hard, 2 = good, 3 = easy
     const today = new Date();
     let interval = card.interval || 1;
     let ease = card.ease || 2.5;
 
-    if (quality === 0) { // Again (Wrong)
+    if (quality === 0) {
         interval = 1;
         ease = Math.max(1.3, ease - 0.2);
         card.stage = Math.max(0, card.stage - 1);
         card.incorrectCount += 1;
-    } else if (quality === 1) { // Hard
+    } else if (quality === 1) {
         interval = Math.max(1, interval * 1.2);
         ease = Math.max(1.3, ease - 0.15);
         card.stage = Math.min(4, card.stage + 0.5);
         card.correctCount += 1;
-    } else if (quality === 2) { // Good
+    } else if (quality === 2) {
         interval = Math.max(1, interval * 2.5);
         ease = Math.min(4.0, ease + 0.1);
         card.stage = Math.min(4, card.stage + 1);
         card.correctCount += 1;
-    } else if (quality === 3) { // Easy
+    } else if (quality === 3) {
         interval = Math.max(1, interval * 3.5);
         ease = Math.min(4.0, ease + 0.15);
         card.stage = Math.min(4, card.stage + 2);
         card.correctCount += 1;
     }
 
-    // Cap interval at 365 days
     interval = Math.min(365, interval);
     card.interval = Math.round(interval);
     card.ease = Math.round(ease * 10) / 10;
@@ -167,19 +161,25 @@ function scheduleCard(card, quality) {
     nextDate.setDate(nextDate.getDate() + card.interval);
     card.nextReviewDate = nextDate.toISOString().split('T')[0];
 
+    // ─── ✅ DASHBOARD INTEGRATION ───
+    // If the card has just reached stage 4 (mastered), inform the dashboard
+    if (card.stage >= 4 && typeof window.ovidhan !== 'undefined' && window.ovidhan.trackFlashcardMastered) {
+        window.ovidhan.trackFlashcardMastered();
+    }
+
     return card;
 }
 
 function getCardStats(state) {
     const total = state.cards.length;
-    const due = state.cards.filter(c => c.nextReviewDate <= new Date().toISOString().split('T')[0]).length;
+    const today = new Date().toISOString().split('T')[0];
+    const due = state.cards.filter(c => c.nextReviewDate <= today).length;
     const mastered = state.cards.filter(c => c.stage >= 4).length;
     return { total, due, mastered, percentMastered: Math.round((mastered / total) * 100) || 0 };
 }
 
 async function loadDictionaryWords() {
     try {
-        // Try to load the enriched dictionary first
         let response = await fetch('/enriched-dictionary.json');
         if (!response.ok) {
             response = await fetch('/dictionary.json');
@@ -188,7 +188,6 @@ async function loadDictionaryWords() {
             throw new Error('Dictionary not found');
         }
         const data = await response.json();
-        // Handle different JSON structures
         if (Array.isArray(data)) {
             return data.map(item => ({
                 word: item.word || item.english || item.term || '',
