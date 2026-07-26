@@ -264,17 +264,6 @@
     ]
   },
   {
-    "url": "/assessment.html",
-    "title": "Free English Assessment Test – BCS, IELTS, Grammar & Vocabulary | Ovidhan",
-    "description": "Take free English assessment tests for BCS, IELTS, HSC, SSC, and University admission. Find your CEFR level, test grammar, vocabulary, synonyms, and idioms with",
-    "cluster": "assessment",
-    "subcluster": "general",
-    "tags": [
-      "assessment",
-      "assessment"
-    ]
-  },
-  {
     "url": "/bangla-to-english-translation-hub.html",
     "title": "Bangla to English Translation Hub – Learn Spoken English with Real Scenarios | Ovidhan",
     "description": "Master spoken English with Bangla translation. Learn natural English for daily routines, job interviews, offices, travel, and more. Free practice exercises and ",
@@ -430,17 +419,6 @@
     ]
   },
   {
-    "url": "/blog.html",
-    "title": "English Learning Blog – Grammar, Vocabulary, Speaking & Exam Tips | Ovidhan",
-    "description": "Free English learning articles in Bangla. Grammar guides, vocabulary lists, speaking practice, and exam preparation for BCS, IELTS & Bank Jobs.",
-    "cluster": "general",
-    "subcluster": "general",
-    "tags": [
-      "general",
-      "blog"
-    ]
-  },
-  {
     "url": "/business-email-writing-bangla.html",
     "title": "Business Email Writing – Bangla to English | Professional Email Phrases",
     "description": "Master business email writing in English with Bangla translation. Learn professional email phrases, templates, and etiquette for Bangladeshi professionals.",
@@ -559,36 +537,14 @@
   },
   {
     "url": "/daily-english.html",
-    "title": "Daily English Sentences & Word of the Day – Ovidhan",
-    "description": "Learn daily English sentences with Bangla translation and Word of the Day. Practice spoken English daily for IELTS, BCS, and Bank Jobs.",
+    "title": "Daily English Practice in Bangla | Learn English Every Day | Ovidhan",
+    "description": "Practice English every day with vocabulary, grammar, speaking, listening, writing and quizzes. Free daily English lessons in Bangla for beginners.",
     "cluster": "general",
     "subcluster": "general",
     "tags": [
       "general",
       "daily",
       "english"
-    ]
-  },
-  {
-    "url": "/dashboard.html",
-    "title": "My Learning Dashboard – Track Your English Progress | Ovidhan",
-    "description": "Track your English learning progress with Ovidhan's Learning Dashboard. View your streak, XP, level, completed lessons, quiz scores, and daily goals. No account",
-    "cluster": "general",
-    "subcluster": "general",
-    "tags": [
-      "general",
-      "dashboard"
-    ]
-  },
-  {
-    "url": "/dictionary.html",
-    "title": "English to Bangla Dictionary – 5,000+ Words with Synonyms & Examples | Ovidhan",
-    "description": "The best English to Bangla dictionary for Bangladeshi students. Search 5,000+ words, learn meanings, pronunciation, synonyms, and prepare for BCS, IELTS, and un",
-    "cluster": "general",
-    "subcluster": "general",
-    "tags": [
-      "general",
-      "dictionary"
     ]
   },
   {
@@ -732,18 +688,6 @@
       "english",
       "to",
       "bangla"
-    ]
-  },
-  {
-    "url": "/exam-prep.html",
-    "title": "Exam Preparation – BCS, IELTS, Bank Jobs | Ovidhan",
-    "description": "Prepare for BCS, IELTS, Bank Jobs, and University Admission with free vocabulary lists, grammar lessons, and mock tests.",
-    "cluster": "general",
-    "subcluster": "general",
-    "tags": [
-      "general",
-      "exam",
-      "prep"
     ]
   },
   {
@@ -899,17 +843,6 @@
     ]
   },
   {
-    "url": "/grammar.html",
-    "title": "English Grammar in Bangla – Complete A to Z Guide for Beginners, BCS, IELTS & Bank Jobs | Ovidhan",
-    "description": "Complete English Grammar in Bangla – A to Z guide covering Parts of Speech, Tenses, Voice, Narration, Articles, and more. Free for BCS, IELTS, Bank Jobs, and be",
-    "cluster": "grammar",
-    "subcluster": "general",
-    "tags": [
-      "grammar",
-      "grammar"
-    ]
-  },
-  {
     "url": "/have-collocations-bangla.html",
     "title": "Have Collocations with Bangla Meaning – Complete Guide | Ovidhan",
     "description": "Learn 50+ 'have' collocations with Bangla meanings and example sentences. Essential for BCS, IELTS, Bank Jobs, and daily English conversation. Free guide with q",
@@ -1047,17 +980,6 @@
     ]
   },
   {
-    "url": "/learn.html",
-    "title": "Learn English – Structured Courses | Ovidhan",
-    "description": "Learn English from Beginner to Advanced with Ovidhan's structured courses, daily lessons, and learning paths for Bangladeshi students.",
-    "cluster": "learn",
-    "subcluster": "general",
-    "tags": [
-      "learn",
-      "learn"
-    ]
-  },
-  {
     "url": "/learning-path-bcs.html",
     "title": "BCS English Learning Path – Complete Preparation Roadmap | Ovidhan",
     "description": "Follow this complete BCS English learning path. Master vocabulary, grammar, idioms, and sentence correction with a structured roadmap for BCS Preliminary.",
@@ -1124,8 +1046,8 @@
   },
   {
     "url": "/linking-words-bangla.html",
-    "title": "Linking Words in English Grammar with Bangla Meaning – Complete Guide | Ovidhan",
-    "description": "Learn Linking Words in English Grammar with Bangla meaning. Master connectors, transition words, and cohesive devices for BCS, IELTS, HSC, and Bank Jobs. Free g",
+    "title": "Linking Words in Bangla – Complete List with Examples | Ovidhan",
+    "description": "Learn linking words in Bangla with examples. Master connectors like 'and', 'but', 'because', 'although' for better English writing. Perfect for BCS, IELTS, and ",
     "cluster": "bangladesh",
     "subcluster": "general",
     "tags": [
@@ -1300,17 +1222,6 @@
       "general",
       "plural",
       "maker"
-    ]
-  },
-  {
-    "url": "/practice.html",
-    "title": "Practice English Daily – Speaking, Listening, Reading & Writing | Ovidhan",
-    "description": "Practice English daily with free interactive exercises. Improve speaking, listening, reading, and writing skills with daily challenges and quizzes. Perfect for ",
-    "cluster": "general",
-    "subcluster": "general",
-    "tags": [
-      "general",
-      "practice"
     ]
   },
   {
@@ -1490,25 +1401,14 @@
   },
   {
     "url": "/speaking-practice.html",
-    "title": "English Speaking Practice – Dialogues & Pronunciation | Ovidhan",
-    "description": "Practice English speaking with real-life dialogues, pronunciation tips, and common phrases with Bangla translation. Perfect for IELTS, BCS, and daily conversati",
+    "title": "English Speaking Practice – Speaking Training Center | Ovidhan",
+    "description": "Improve your English speaking with real conversations, pronunciation exercises, shadowing, role-play, and daily speaking challenges. Learn with Bangla explanati",
     "cluster": "speaking",
     "subcluster": "general",
     "tags": [
       "speaking",
       "speaking",
       "practice"
-    ]
-  },
-  {
-    "url": "/speaking.html",
-    "title": "Learn to Speak English – Complete Guide for Bangladeshi Learners | Ovidhan",
-    "description": "Learn how to speak English fluently with our complete guide. Pronunciation tips, fluency techniques, real-life dialogues, and common mistakes for Bangladeshi le",
-    "cluster": "speaking",
-    "subcluster": "general",
-    "tags": [
-      "speaking",
-      "speaking"
     ]
   },
   {
@@ -1623,17 +1523,6 @@
       "then",
       "vs",
       "than"
-    ]
-  },
-  {
-    "url": "/tools.html",
-    "title": "Free English Learning Tools – Grammar, Vocabulary, Practice & Assessment | Ovidhan",
-    "description": "Free English learning tools for BCS, IELTS & Bank Jobs. Grammar quizzes, vocabulary practice, sentence analyzer, verb forms, assessment tests, and more. 20+ int",
-    "cluster": "tools",
-    "subcluster": "general",
-    "tags": [
-      "tools",
-      "tools"
     ]
   },
   {
@@ -1788,6 +1677,130 @@
     ]
   },
   {
+    "url": "/your-vs-youre-bangla.html",
+    "title": "Your vs You're with Bangla Meaning – Difference, Rules & Examples | Ovidhan",
+    "description": "Learn the difference between Your and You're with Bangla meanings, rules, examples, and memory tricks. Essential for BCS, IELTS, Bank Jobs, and daily English.",
+    "cluster": "bangladesh",
+    "subcluster": "general",
+    "tags": [
+      "bangladesh",
+      "your",
+      "vs",
+      "youre"
+    ]
+  },
+  {
+    "url": "/assessment.html",
+    "title": "Free English Assessment Test – BCS, IELTS, Grammar & Vocabulary | Ovidhan",
+    "description": "Take free English assessment tests for BCS, IELTS, HSC, SSC, and University admission. Find your CEFR level, test grammar, vocabulary, synonyms, and idioms with",
+    "cluster": "assessment",
+    "subcluster": "general",
+    "tags": [
+      "assessment",
+      "assessment"
+    ]
+  },
+  {
+    "url": "/blog.html",
+    "title": "English Learning Blog – Grammar, Vocabulary, Speaking & Exam Tips | Ovidhan",
+    "description": "Free English learning articles in Bangla. Grammar guides, vocabulary lists, speaking practice, and exam preparation for BCS, IELTS & Bank Jobs.",
+    "cluster": "general",
+    "subcluster": "general",
+    "tags": [
+      "general",
+      "blog"
+    ]
+  },
+  {
+    "url": "/dashboard.html",
+    "title": "My Learning Dashboard – Track Your English Progress | Ovidhan",
+    "description": "Track your English learning progress with Ovidhan's Learning Dashboard. View your streak, XP, level, completed lessons, quiz scores, and daily goals. No account",
+    "cluster": "general",
+    "subcluster": "general",
+    "tags": [
+      "general",
+      "dashboard"
+    ]
+  },
+  {
+    "url": "/dictionary.html",
+    "title": "English to Bangla Dictionary – 5,000+ Words with Synonyms & Examples | Ovidhan",
+    "description": "The best English to Bangla dictionary for Bangladeshi students. Search 5,000+ words, learn meanings, pronunciation, synonyms, and prepare for BCS, IELTS, and un",
+    "cluster": "general",
+    "subcluster": "general",
+    "tags": [
+      "general",
+      "dictionary"
+    ]
+  },
+  {
+    "url": "/exam-prep.html",
+    "title": "Exam Preparation – BCS, IELTS, Bank Jobs | Ovidhan",
+    "description": "Prepare for BCS, IELTS, Bank Jobs, and University Admission with free vocabulary lists, grammar lessons, and mock tests.",
+    "cluster": "general",
+    "subcluster": "general",
+    "tags": [
+      "general",
+      "exam",
+      "prep"
+    ]
+  },
+  {
+    "url": "/grammar.html",
+    "title": "English Grammar in Bangla – Complete A to Z Guide for Beginners, BCS, IELTS & Bank Jobs | Ovidhan",
+    "description": "Complete English Grammar in Bangla – A to Z guide covering Parts of Speech, Tenses, Voice, Narration, Articles, and more. Free for BCS, IELTS, Bank Jobs, and be",
+    "cluster": "grammar",
+    "subcluster": "general",
+    "tags": [
+      "grammar",
+      "grammar"
+    ]
+  },
+  {
+    "url": "/learn.html",
+    "title": "Learn English – Structured Courses | Ovidhan",
+    "description": "Learn English from Beginner to Advanced with Ovidhan's structured courses, daily lessons, and learning paths for Bangladeshi students.",
+    "cluster": "learn",
+    "subcluster": "general",
+    "tags": [
+      "learn",
+      "learn"
+    ]
+  },
+  {
+    "url": "/practice.html",
+    "title": "Practice English Daily – Speaking, Listening, Reading & Writing | Ovidhan",
+    "description": "Practice English daily with free interactive exercises. Improve speaking, listening, reading, and writing skills with daily challenges and quizzes. Perfect for ",
+    "cluster": "general",
+    "subcluster": "general",
+    "tags": [
+      "general",
+      "practice"
+    ]
+  },
+  {
+    "url": "/speaking.html",
+    "title": "Learn to Speak English – Complete Guide for Bangladeshi Learners | Ovidhan",
+    "description": "Learn how to speak English fluently with our complete guide. Pronunciation tips, fluency techniques, real-life dialogues, and common mistakes for Bangladeshi le",
+    "cluster": "speaking",
+    "subcluster": "general",
+    "tags": [
+      "speaking",
+      "speaking"
+    ]
+  },
+  {
+    "url": "/tools.html",
+    "title": "Free English Learning Tools – Grammar, Vocabulary, Practice & Assessment | Ovidhan",
+    "description": "Free English learning tools for BCS, IELTS & Bank Jobs. Grammar quizzes, vocabulary practice, sentence analyzer, verb forms, assessment tests, and more. 20+ int",
+    "cluster": "tools",
+    "subcluster": "general",
+    "tags": [
+      "tools",
+      "tools"
+    ]
+  },
+  {
     "url": "/writing.html",
     "title": "English Writing Guide – Improve Your Writing Skills for Bangladeshi Learners | Ovidhan",
     "description": "Learn how to write English with confidence. Complete guide for Bangladeshi learners – sentence structure, paragraph writing, essay writing, letter writing, and ",
@@ -1799,16 +1812,112 @@
     ]
   },
   {
-    "url": "/your-vs-youre-bangla.html",
-    "title": "Your vs You're with Bangla Meaning – Difference, Rules & Examples | Ovidhan",
-    "description": "Learn the difference between Your and You're with Bangla meanings, rules, examples, and memory tricks. Essential for BCS, IELTS, Bank Jobs, and daily English.",
+    "url": "/right-form-of-verb-bangla.html",
+    "title": "Right Form of Verb in Bangla – Complete Guide with 50+ Exercises | Ovidhan",
+    "description": "সঠিকভাবে Right Form of Verb শিখুন বাংলায়। ১৫টি নিয়ম, ৫০+ ইন্টারেক্টিভ অনুশীলন, BCS ও IELTS টিপস, সাধারণ ভুল ও সংশোধন – সম্পূর্ণ গাইড।",
+    "cluster": "grammar",
+    "subcluster": "general",
+    "tags": [
+      "grammar",
+      "right",
+      "form",
+      "of"
+    ]
+  },
+  {
+    "url": "/flashcards.html",
+    "title": "Flashcards – Spaced Repetition Vocabulary | Ovidhan",
+    "description": "Master English vocabulary with spaced repetition flashcards. Learn and review words effectively with Ovidhan's SRS system.",
+    "cluster": "practice",
+    "subcluster": "general",
+    "tags": [
+      "practice",
+      "flashcards"
+    ]
+  },
+  {
+    "url": "/quiz.html",
+    "title": "Unified Quiz Engine – Grammar, Vocabulary, IELTS & BCS Quizzes | Ovidhan",
+    "description": "Take free interactive English quizzes on Grammar, Vocabulary, Tenses, BCS, and IELTS. Get instant feedback, explanations, and earn XP. Practice for Bangladeshi ",
+    "cluster": "practice",
+    "subcluster": "general",
+    "tags": [
+      "practice",
+      "quiz"
+    ]
+  },
+  {
+    "url": "/bangladesh.html",
+    "title": "Bangladesh English Hub – Learn English for RMG, Call Center, Visa & Daily Life | Ovidhan",
+    "description": "Free English learning resources for Bangladeshi professionals. Learn RMG/garments English, call center customer service English, visa interview preparation, hos",
     "cluster": "bangladesh",
     "subcluster": "general",
     "tags": [
       "bangladesh",
-      "your",
-      "vs",
-      "youre"
+      "bangladesh"
+    ]
+  },
+  {
+    "url": "/english-alphabet-guide.html",
+    "title": "English Alphabet Guide with Bangla Pronunciation | Ovidhan",
+    "description": "Learn the English alphabet with Bangla pronunciation, examples, quizzes, flashcards, and speaking practice. A complete beginner guide for Bangladeshi learners.",
+    "cluster": "general",
+    "subcluster": "general",
+    "tags": [
+      "general",
+      "english",
+      "alphabet",
+      "guide"
+    ]
+  },
+  {
+    "url": "/pronunciation-basics.html",
+    "title": "English Pronunciation Basics (Bangla Guide) | Ovidhan",
+    "description": "Learn English pronunciation from the beginning with Bangla explanations. Master English sounds, stress, rhythm, intonation, and speaking practice through simple",
+    "cluster": "speaking",
+    "subcluster": "general",
+    "tags": [
+      "speaking",
+      "pronunciation",
+      "basics"
+    ]
+  },
+  {
+    "url": "/basic-vocabulary-list.html",
+    "title": "Basic English Vocabulary List (A1–A2) with Bangla Meaning | Ovidhan",
+    "description": "Learn the most important English words with Bangla meaning. Basic vocabulary for beginners, BCS, IELTS, Bank Jobs, SSC, HSC. Includes audio, flashcards, and qui",
+    "cluster": "dictionary",
+    "subcluster": "general",
+    "tags": [
+      "dictionary",
+      "basic",
+      "vocabulary",
+      "list"
+    ]
+  },
+  {
+    "url": "/daily-conversation.html",
+    "title": "Daily English Conversation Practice (Bangla Guide) | Ovidhan",
+    "description": "Practice real English conversations for daily life. Learn greetings, restaurant, hospital, airport, job interview, shopping, and more with Bangla explanations, ",
+    "cluster": "speaking",
+    "subcluster": "general",
+    "tags": [
+      "speaking",
+      "daily",
+      "conversation"
+    ]
+  },
+  {
+    "url": "/learning-path-elementary.html",
+    "title": "A2 Elementary English Course – Complete Interactive Learning | Ovidhan",
+    "description": "Complete A2 Elementary English course with interactive audio, MCQ quizzes, speaking practice, and 6 modules. Learn grammar, vocabulary, listening, reading, and ",
+    "cluster": "learn",
+    "subcluster": "level",
+    "tags": [
+      "learn",
+      "learning",
+      "path",
+      "elementary"
     ]
   }
 ]
