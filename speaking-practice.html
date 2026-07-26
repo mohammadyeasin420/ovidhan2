@@ -1,73 +1,808 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>English Speaking Practice – Dialogues & Pronunciation | Ovidhan</title>
-    <meta name="description" content="Practice English speaking with real-life dialogues, pronunciation tips, and common phrases with Bangla translation. Perfect for IELTS, BCS, and daily conversation." />
-    <meta name="keywords" content="English speaking practice, spoken English dialogues, pronunciation tips, English conversation, Bangla translation, IELTS speaking, BCS English" />
+
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>English Speaking Practice – Speaking Training Center | Ovidhan</title>
+    <meta name="description" content="Improve your English speaking with real conversations, pronunciation exercises, shadowing, role-play, and daily speaking challenges. Learn with Bangla explanations." />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://ovidhan.net/speaking-practice.html" />
-    <meta property="og:title" content="English Speaking Practice – Dialogues & Pronunciation | Ovidhan" />
-    <meta property="og:description" content="Practice English speaking with real-life dialogues, pronunciation tips, and common phrases with Bangla translation." />
-    <meta property="og:url" content="https://ovidhan.net/speaking-practice.html" />
+
+    <!-- ═══ OPEN GRAPH ═══ -->
     <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="Ovidhan – English to Bangla Dictionary" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="English Speaking Practice – Dialogues & Pronunciation" />
-    <meta name="twitter:description" content="Practice English speaking with real-life dialogues, pronunciation tips, and common phrases with Bangla translation." />
+    <meta property="og:title" content="English Speaking Practice – Speaking Training Center | Ovidhan" />
+    <meta property="og:description" content="Improve your English speaking with real conversations, pronunciation exercises, shadowing, role-play, and daily speaking challenges. Learn with Bangla explanations." />
+    <meta property="og:url" content="https://ovidhan.net/speaking-practice.html" />
+    <meta property="og:site_name" content="Ovidhan – English Learning Ecosystem" />
+    <meta property="og:locale" content="bn_BD" />
+    <meta property="og:image" content="https://ovidhan.net/images/og-speaking.jpg" />
+
+    <!-- ═══ SCHEMA – Article ═══ -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "English Speaking Practice – Dialogues & Pronunciation",
-        "description": "Practice English speaking with real-life dialogues, pronunciation tips, and common phrases with Bangla translation.",
-        "author": { "@type": "Person", "name": "Mohammad Yeasin" },
-        "publisher": { "@type": "Organization", "name": "অভিধান", "url": "https://ovidhan.net" },
-        "datePublished": "2026-07-04",
-        "dateModified": "2026-07-04",
-        "inLanguage": "bn",
-        "url": "https://ovidhan.net/speaking-practice.html"
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "English Speaking Practice – Speaking Training Center",
+            "description": "Improve your English speaking with real conversations, pronunciation exercises, shadowing, role-play, and daily speaking challenges. Learn with Bangla explanations.",
+            "author": { "@type": "Person", "name": "Mohammad Yeasin", "url": "https://ovidhan.net" },
+            "publisher": { "@type": "Organization", "name": "অভিধান — Ovidhan", "url": "https://ovidhan.net" },
+            "datePublished": "2026-07-26",
+            "dateModified": "2026-07-26",
+            "inLanguage": "bn",
+            "url": "https://ovidhan.net/speaking-practice.html",
+            "educationalLevel": "A1-B1",
+            "audience": { "@type": "Audience", "audienceType": "Students", "geographicArea": { "@type": "AdministrativeArea", "name": "Bangladesh" } }
+        }
     </script>
+
+    <!-- ═══ STYLESHEET ═══ -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0F1A1A; color: #E0F2F1; line-height: 1.6; }
-        nav { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-        nav a { color: #B2DFDB; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; padding: 4px 8px; }
-        nav a:hover { color: #FFD700; }
-        .logo { font-size: 26px; font-weight: 700; color: #FFD700; letter-spacing: 1px; }
-        .nav-cta { background: #FFD700; color: #0F1A1A; padding: 6px 18px; border-radius: 30px; font-weight: 600; }
-        .nav-cta:hover { background: #FFC107; color: #0F1A1A; }
-        .main { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-        h1 { color: #FFD700; font-size: 2.2rem; margin-bottom: 8px; }
-        .subtitle { color: #80CBC4; margin-bottom: 32px; }
-        .dialogue { background: #1E2A2A; border-radius: 12px; padding: 18px 20px; margin: 16px 0; border: 1px solid #1E3A3A; transition: border-color .2s; }
-        .dialogue:hover { border-color: #FFD700; }
-        .speaker { font-weight: 600; color: #FFD700; font-size: 0.9rem; }
-        .en { color: #E0F2F1; margin: 2px 0; }
-        .bn { color: #80CBC4; font-size: 0.95rem; padding-left: 12px; border-left: 2px solid #1E3A3A; margin-bottom: 6px; }
-        .tip-box { background: #1E2A2A; border-radius: 12px; padding: 20px; border-left: 4px solid #FFD700; margin: 24px 0; }
-        .tip-box h3 { color: #FFD700; font-size: 1.1rem; margin-bottom: 6px; }
-        .tip-box p { color: #B2DFDB; font-size: 0.95rem; }
-        .cta-banner { background: linear-gradient(135deg, #0F3D3E, #1A5C5A); border-radius: 16px; padding: 32px 28px; text-align: center; margin: 48px 0; border: 1px solid rgba(255,215,0,0.3); }
-        .cta-banner h3 { color: #FFD700; font-size: 1.3rem; margin-bottom: 10px; }
-        .cta-banner p { color: #B2DFDB; margin-bottom: 22px; }
-        .cta-btn { display: inline-block; background: #FFD700; color: #0F1A1A; font-weight: 700; padding: 13px 30px; border-radius: 10px; text-decoration: none; transition: background .2s; }
-        .cta-btn:hover { background: #f0c85a; }
-        .cta-features { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 20px; }
-        .cta-feat { font-size: 13px; color: #4ECDC4; display: flex; align-items: center; gap: 5px; }
-        .share-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin: 30px 0 20px; }
-        .share-btn { background: #1E2A2A; padding: 10px 20px; border-radius: 30px; border: 1px solid #244545; color: #B2DFDB; text-decoration: none; font-size: 14px; transition: border-color .2s, color .2s; display: inline-flex; align-items: center; gap: 8px; }
-        .share-btn:hover { border-color: #FFD700; color: #FFD700; }
-        .share-btn.whatsapp:hover { border-color: #25D366; color: #25D366; }
-        .share-btn.facebook:hover { border-color: #1877F2; color: #1877F2; }
-        .share-btn.telegram:hover { border-color: #0088cc; color: #0088cc; }
-        .share-btn.twitter:hover { border-color: #1DA1F2; color: #1DA1F2; }
-        footer { text-align: center; padding: 40px 24px; background: #080F0F; color: #80CBC4; font-size: 0.9rem; line-height: 2; }
-        footer a { color: #80CBC4; text-decoration: none; transition: color 0.2s; }
-        footer a:hover { color: #FFD700; }
-        @media (max-width: 600px) { nav { flex-direction: column; gap: 8px; } }
+        /* ── Your Theme Variables ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230, 184, 74, 0.12);
+            --teal: #4ECDC4;
+            --teal-dim: rgba(78, 205, 196, 0.10);
+            --green: #4ade80;
+            --green-dim: rgba(74, 222, 128, 0.10);
+            --red: #f87171;
+            --red-dim: rgba(248, 113, 113, 0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192, 132, 252, 0.10);
+            --orange: #fb923c;
+            --orange-dim: rgba(251, 146, 60, 0.10);
+            --pink: #f472b6;
+            --blue: #60a5fa;
+            --blue-dim: rgba(96, 165, 250, 0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 12px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+
+        /* ── Layout ── */
+        .lesson-container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 24px 24px 60px;
+        }
+
+        .hero-lesson {
+            background: linear-gradient(160deg, #0A2828 0%, #0F3D3E 50%, #1A5C5A 100%);
+            padding: 40px 24px 50px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .hero-lesson .level-badge {
+            display: inline-block;
+            background: var(--gold-dim);
+            color: var(--gold);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-family: var(--font-en);
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .hero-lesson h1 {
+            font-size: clamp(2rem, 4.5vw, 2.8rem);
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .hero-lesson p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+        .hero-lesson .meta-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+        .hero-lesson .meta-tag {
+            background: rgba(255, 215, 0, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 5px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--gold);
+        }
+
+        .nav-links-top {
+            display: flex;
+            justify-content: space-between;
+            margin: 16px 0 24px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-links-top a {
+            color: var(--teal);
+            text-decoration: none;
+            font-family: var(--font-en);
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav-links-top a:hover {
+            color: var(--gold);
+        }
+
+        /* ── Progress Box ── */
+        .progress-box {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .progress-box .label {
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            font-family: var(--font-en);
+        }
+        .progress-box .steps {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .progress-box .step {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-soft);
+            font-size: 0.85rem;
+            font-family: var(--font-en);
+        }
+        .progress-box .step.done {
+            color: var(--green);
+        }
+        .progress-box .step.done::before {
+            content: "✅";
+        }
+        .progress-box .step.active {
+            color: var(--gold);
+        }
+        .progress-box .step.active::before {
+            content: "⏳";
+        }
+        .progress-box .step::before {
+            content: "⬜";
+            font-size: 1.1rem;
+        }
+        .progress-box .percent {
+            color: var(--gold);
+            font-weight: 700;
+            font-family: var(--font-en);
+            font-size: 1.1rem;
+        }
+        .progress-bar-bg {
+            width: 100%;
+            height: 6px;
+            background: var(--surface);
+            border-radius: 4px;
+            margin-top: 6px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            width: 20%;
+            background: var(--gold);
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+
+        /* ── Tabs ── */
+        .tabs {
+            display: flex;
+            gap: 4px;
+            background: var(--surface);
+            border-radius: var(--radius) var(--radius) 0 0;
+            padding: 6px 6px 0 6px;
+            border: 1px solid var(--border);
+            border-bottom: none;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            flex: 1 1 auto;
+            padding: 12px 18px;
+            background: transparent;
+            border: none;
+            border-radius: var(--radius) var(--radius) 0 0;
+            color: var(--text-mid);
+            font-family: var(--font-en);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.25s ease;
+            border-bottom: 3px solid transparent;
+            min-width: 80px;
+            white-space: nowrap;
+        }
+        .tab-btn:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .tab-btn.active {
+            color: var(--gold);
+            background: var(--surface2);
+            border-bottom-color: var(--gold);
+        }
+        .tab-panels {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-top: none;
+            border-radius: 0 0 var(--radius) var(--radius);
+            padding: 24px 28px;
+        }
+        .tab-panel {
+            display: none;
+            animation: fadeUp 0.3s ease;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+        @keyframes fadeUp {
+            0% { opacity: 0.6; transform: translateY(8px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Cards ── */
+        .section-card {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .section-card:last-child {
+            margin-bottom: 0;
+        }
+        .section-card h2 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+        }
+        .section-card h3 {
+            color: var(--teal);
+            font-size: 1.1rem;
+            margin-top: 16px;
+            margin-bottom: 6px;
+        }
+        .section-card h4 {
+            color: #fff;
+            font-size: 1rem;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        .section-card p {
+            color: var(--text-mid);
+            margin-bottom: 8px;
+            line-height: 1.8;
+        }
+        .section-card ul,
+        .section-card ol {
+            color: var(--text-mid);
+            padding-left: 24px;
+            line-height: 2;
+        }
+
+        .example-box {
+            background: rgba(230, 184, 74, 0.06);
+            border-left: 4px solid var(--gold);
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .example-box .en {
+            color: var(--text);
+        }
+        .example-box .bn {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+        }
+
+        /* ── Lesson Grid ── */
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 12px 0;
+        }
+        .lesson-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-align: center;
+            transition: border-color 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+        .lesson-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+        .lesson-card .icon {
+            font-size: 2rem;
+        }
+        .lesson-card .name {
+            font-weight: 600;
+            color: var(--text);
+            font-family: var(--font-en);
+            margin-top: 4px;
+        }
+        .lesson-card .desc {
+            color: var(--text-mid);
+            font-size: 0.85rem;
+        }
+        .lesson-card .status {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 0.75rem;
+            color: var(--text-soft);
+            background: var(--surface2);
+            padding: 2px 12px;
+            border-radius: 12px;
+        }
+        .lesson-card .status.completed {
+            color: var(--green);
+            background: var(--green-dim);
+        }
+
+        /* ── Speaking Lesson Flow ── */
+        .flow-step {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin: 12px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: border-color 0.2s;
+        }
+        .flow-step:hover {
+            border-color: var(--gold);
+        }
+        .flow-step .step-number {
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            font-family: var(--font-en);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+        .flow-step .step-content {
+            flex: 1;
+        }
+        .flow-step .step-content h4 {
+            color: var(--gold);
+            margin-top: 0;
+            font-size: 1rem;
+        }
+        .flow-step .step-content p {
+            color: var(--text-mid);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        .flow-step .step-content .btn-secondary {
+            margin-top: 6px;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+        }
+
+        /* ── Speaking Practice Area ── */
+        .speaking-area {
+            background: var(--surface);
+            border: 2px solid var(--gold);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin: 16px 0;
+            text-align: center;
+        }
+        .speaking-area .sentence {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text);
+            font-family: var(--font-en);
+            margin: 8px 0;
+        }
+        .speaking-area .bangla {
+            color: var(--text-mid);
+            font-size: 1rem;
+            font-family: var(--font-bn);
+        }
+
+        /* ── Buttons ── */
+        .btn {
+            background: var(--gold);
+            color: #0B1F1A;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-family: var(--font-en);
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            opacity: 0.85;
+            transform: scale(1.02);
+        }
+        .btn-secondary {
+            background: var(--surface2);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover {
+            background: var(--surface);
+        }
+        .btn-success {
+            background: var(--green);
+            color: #0B1F1A;
+        }
+        .btn-success:hover {
+            opacity: 0.85;
+        }
+
+        /* ── Recording ── */
+        .mic-btn {
+            background: var(--red);
+            color: #fff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .mic-btn:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .mic-btn.recording {
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .result-text {
+            color: var(--text-mid);
+            margin-top: 12px;
+            font-size: 1.1rem;
+        }
+
+        /* ── Shadowing ── */
+        .shadowing-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 12px 0;
+        }
+        #shadowingStatus {
+            color: var(--text-mid);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* ── Daily Challenge ── */
+        .daily-challenge {
+            background: var(--surface);
+            border: 2px solid var(--gold);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .daily-challenge .challenge-title {
+            color: var(--gold);
+            font-weight: 700;
+            font-family: var(--font-en);
+            font-size: 1.2rem;
+        }
+        .daily-challenge .challenge-topic {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin: 6px 0;
+        }
+
+        /* ── Pronunciation Practice ── */
+        .sound-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            margin: 12px 0;
+        }
+        .sound-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px;
+            text-align: center;
+            transition: border-color 0.2s;
+        }
+        .sound-card:hover {
+            border-color: var(--gold);
+        }
+        .sound-card .ipa {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: var(--font-en);
+        }
+        .sound-card .example {
+            color: var(--text);
+            font-family: var(--font-en);
+        }
+        .sound-card .bangla {
+            color: var(--text-mid);
+            font-size: 0.8rem;
+        }
+
+        /* ── Quiz ── */
+        .quiz-container {
+            background: var(--surface);
+            border: 2px solid var(--gold);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+        .quiz-container .q-item {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .quiz-container .q-item:last-child {
+            border-bottom: none;
+        }
+        .quiz-container .q-item .question-text {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .quiz-container input[type="radio"] {
+            accent-color: var(--gold);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .quiz-container label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            color: var(--text-mid);
+            cursor: pointer;
+        }
+        .quiz-container label:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .quiz-controls {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 16px 0 8px;
+        }
+        .quiz-feedback {
+            padding: 16px;
+            background: var(--surface2);
+            border-radius: var(--radius);
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* ── Related Grid ── */
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin: 16px 0;
+        }
+        .related-grid a {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--teal);
+            text-align: center;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+        .related-grid a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .next-lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .next-lesson-grid a {
+            background: var(--surface);
+            border: 2px solid var(--gold);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-decoration: none;
+            color: var(--text);
+            text-align: center;
+            transition: 0.2s;
+            font-weight: 600;
+            font-family: var(--font-en);
+        }
+        .next-lesson-grid a:hover {
+            background: var(--gold);
+            color: #0B1F1A;
+            transform: translateY(-3px);
+        }
+        .next-lesson-grid a small {
+            display: block;
+            font-weight: 400;
+            color: var(--text-mid);
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
+        .next-lesson-grid a:hover small {
+            color: #0B1F1A;
+        }
+
+        /* ── FAQ ── */
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px 18px;
+            margin: 8px 0;
+        }
+        .faq-item .question {
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item .question::after {
+            content: "▸";
+            color: var(--gold);
+            transition: transform 0.2s;
+        }
+        .faq-item .question.open::after {
+            transform: rotate(90deg);
+        }
+        .faq-item .answer {
+            display: none;
+            color: var(--text-mid);
+            padding-top: 8px;
+            line-height: 1.8;
+        }
+        .faq-item .answer.open {
+            display: block;
+        }
+
+        /* ── CTA ── */
+        .cta-banner {
+            background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
+            border: 1px solid rgba(230, 184, 74, 0.3);
+            border-radius: 16px;
+            padding: 32px 28px;
+            text-align: center;
+            margin: 40px 0 0;
+        }
+        .cta-banner h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        .cta-banner p {
+            color: var(--text-mid);
+            margin-bottom: 20px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #0B1F1A;
+            font-weight: 700;
+            font-family: var(--font-en);
+            padding: 13px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .cta-btn:hover {
+            background: #f0c85a;
+            transform: translateY(-2px);
+        }
+
+        /* ── Back to Top ── */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--gold);
+            color: #0B1F1A;
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(230, 184, 74, 0.4);
+            z-index: 999;
+            transition: transform 0.2s, opacity 0.2s;
+            opacity: 0.8;
+        }
+        #backToTop:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .lesson-container { padding: 16px 12px 40px; }
+            .tab-panels { padding: 16px 16px; }
+            .section-card { padding: 16px 18px; }
+            .lesson-grid { grid-template-columns: 1fr 1fr; }
+            .flow-step { flex-direction: column; align-items: center; text-align: center; }
+            .flow-step .step-number { margin: 0 auto; }
+            .sound-grid { grid-template-columns: 1fr 1fr; }
+            .related-grid { grid-template-columns: 1fr 1fr; }
+            .next-lesson-grid { grid-template-columns: 1fr 1fr; }
+            .tab-btn { font-size: 0.75rem; padding: 10px 10px; min-width: 50px; white-space: normal; }
+            .hero-lesson h1 { font-size: 1.8rem; }
+            .progress-box { flex-direction: column; align-items: stretch; }
+            .progress-box .steps { justify-content: space-between; }
+        }
+        @media (max-width: 400px) {
+            .lesson-grid { grid-template-columns: 1fr; }
+            .sound-grid { grid-template-columns: 1fr; }
+            .related-grid { grid-template-columns: 1fr; }
+            .next-lesson-grid { grid-template-columns: 1fr; }
+            .tab-btn { flex: 1 1 100%; }
+        }
     </style>
 </head>
 <body>
@@ -151,7 +886,7 @@
             <li>
                 <a href="/practice.html">🎯 Practice</a>
                 <div class="dropdown">
-                    <a href="/daily-challenge.html">Daily Challenge</a>
+                    <a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
                     <a href="/flashcards.html">Flashcards</a>
                     <a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
                     <a href="/grammar-quiz.html">Grammar Quiz</a>
@@ -323,856 +1058,913 @@
 </style>
 
 
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-
-
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-
-
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-
-
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-
-
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-
-
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-
-
-
-
-
-
-
-
-
-    <nav>
-        <div class="logo">অভিধান</div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
-            <a href="https://ovidhan.net">Home</a>
-            <a href="https://ovidhan.net/dictionary.html">Dictionary</a>
-            <a href="https://ovidhan.net/exam-prep.html">Exam Prep</a>
-            <a href="https://ovidhan.net/daily-english.html">Daily English</a>
-            <a href="https://ovidhan.net/speaking-practice.html">Speaking</a>
-            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="nav-cta" target="_blank">Download App</a>
+    <!-- ══ HERO ══ -->
+    <section class="hero-lesson">
+        <div style="max-width: 880px; margin: 0 auto;">
+            <span class="level-badge">🗣️ Speaking Training Center</span>
+            <h1>English Speaking Practice</h1>
+            <p><strong>Speak English with confidence.</strong> Practice real conversations, improve pronunciation, and build fluency with daily speaking challenges and Bangla explanations.</p>
+            <div class="meta-tags">
+                <span class="meta-tag">🗣️ 10+ Lessons</span>
+                <span class="meta-tag">🔊 Audio</span>
+                <span class="meta-tag">🎤 Shadowing</span>
+                <span class="meta-tag">📝 Quiz</span>
+                <span class="meta-tag">⭐ Daily Challenge</span>
+            </div>
         </div>
-    </nav>
+    </section>
 
-    <main class="main">
-        <h1>🗣️ English Speaking Practice – Dialogues & Pronunciation</h1>
-        <p class="subtitle">Practice real-life conversations with Bangla translation. Improve your pronunciation and fluency.</p>
+    <!-- ══ MAIN CONTENT ══ -->
+    <div class="lesson-container">
 
-        <!-- Tip 1 -->
-        <div class="tip-box">
-            <h3>🎯 Speaking Tip 1 – Listen and Repeat</h3>
-            <p>Listen to native speakers and repeat what they say. This is called "shadowing" – it improves your pronunciation and fluency faster than any other method.</p>
+        <!-- Navigation -->
+        <div class="nav-links-top">
+            <a href="/learn.html">← Back to Learn Hub</a>
+            <a href="/daily-conversation.html">Next: Daily Conversation →</a>
         </div>
 
-        <!-- Dialogue 1 -->
-        <h2 style="color:#FFD700; margin-top:32px; margin-bottom:12px;">📞 At a Restaurant</h2>
-        <div class="dialogue">
-            <div class="speaker">👨 Waiter:</div>
-            <div class="en">Welcome to our restaurant. What would you like to order?</div>
-            <div class="bn">আমাদের রেস্টুরেন্টে স্বাগতম। আপনি কী অর্ডার করতে চান?</div>
-            <div class="speaker">👩 Customer:</div>
-            <div class="en">I would like to have chicken biryani.</div>
-            <div class="bn">আমি চিকেন বিরিয়ানি খেতে চাই।</div>
-            <div class="speaker">👨 Waiter:</div>
-            <div class="en">Would you like anything to drink?</div>
-            <div class="bn">আপনি কিছু পান করতে চান?</div>
-            <div class="speaker">👩 Customer:</div>
-            <div class="en">Yes, I would like a glass of water.</div>
-            <div class="bn">হ্যাঁ, আমি এক গ্লাস পানি চাই।</div>
+        <!-- ─── PROGRESS BOX ─── -->
+        <div class="progress-box" id="progressBox">
+            <div>
+                <span class="label">🗣️ Speaking Progress</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressFill" style="width:20%;"></div>
+                </div>
+            </div>
+            <div class="steps">
+                <span class="step done">Learn</span>
+                <span class="step active">Practice</span>
+                <span class="step">Quiz</span>
+                <span class="step">Resources</span>
+            </div>
+            <span class="percent" id="progressPercent">20%</span>
         </div>
 
-        <!-- Dialogue 2 -->
-        <h2 style="color:#FFD700; margin-top:24px; margin-bottom:12px;">🚍 At a Bus Stop</h2>
-        <div class="dialogue">
-            <div class="speaker">👨 Passenger:</div>
-            <div class="en">Excuse me, which bus goes to the station?</div>
-            <div class="bn">ক্ষমা করবেন, স্টেশনে কোন বাস যায়?</div>
-            <div class="speaker">👨 Local:</div>
-            <div class="en">Bus number 7 goes directly to the station.</div>
-            <div class="bn">৭ নম্বর বাস সরাসরি স্টেশনে যায়।</div>
-            <div class="speaker">👨 Passenger:</div>
-            <div class="en">How much is the fare?</div>
-            <div class="bn">ভাড়া কত?</div>
-            <div class="speaker">👨 Local:</div>
-            <div class="en">It is 20 taka.</div>
-            <div class="bn">এটি ২০ টাকা।</div>
-            <div class="speaker">👨 Passenger:</div>
-            <div class="en">Thank you for your help!</div>
-            <div class="bn">আপনার সাহায্যের জন্য ধন্যবাদ!</div>
+        <!-- ═══ TABS ═══ -->
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" data-tab="learn" role="tab">📖 Learn</button>
+            <button class="tab-btn" data-tab="practice" role="tab">✍ Practice</button>
+            <button class="tab-btn" data-tab="quiz" role="tab">🎯 Quiz</button>
+            <button class="tab-btn" data-tab="resources" role="tab">📚 Resources</button>
         </div>
 
-        <!-- Dialogue 3 -->
-        <h2 style="color:#FFD700; margin-top:24px; margin-bottom:12px;">🏥 At a Doctor's Clinic</h2>
-        <div class="dialogue">
-            <div class="speaker">👨 Doctor:</div>
-            <div class="en">What seems to be the problem?</div>
-            <div class="bn">কী সমস্যা মনে হচ্ছে?</div>
-            <div class="speaker">👩 Patient:</div>
-            <div class="en">I have a headache and fever.</div>
-            <div class="bn">আমার মাথাব্যথা এবং জ্বর আছে।</div>
-            <div class="speaker">👨 Doctor:</div>
-            <div class="en">Let me check your temperature. You have a mild fever.</div>
-            <div class="bn">আমি আপনার তাপমাত্রা পরীক্ষা করি। আপনার সামান্য জ্বর আছে।</div>
-            <div class="speaker">👩 Patient:</div>
-            <div class="en">What should I do?</div>
-            <div class="bn">আমার কী করা উচিত?</div>
-            <div class="speaker">👨 Doctor:</div>
-            <div class="en">Take this medicine three times a day and rest for two days.</div>
-            <div class="bn">এই ওষুধটি দিনে তিনবার খান এবং দুই দিন বিশ্রাম নিন।</div>
-        </div>
+        <div class="tab-panels">
 
-        <!-- Pronunciation Tips -->
-        <h2 style="color:#FFD700; margin-top:40px; margin-bottom:12px;">🔊 Pronunciation Tips</h2>
-        <div class="tip-box">
-            <h3>1. The "th" Sound</h3>
-            <p>Place your tongue between your teeth and blow air. Practice: "three", "thank you", "the", "this".</p>
-        </div>
-        <div class="tip-box">
-            <h3>2. The "r" Sound</h3>
-            <p>In English, the "r" is pronounced with the tongue curled back but not touching the roof of the mouth. Practice: "red", "right", "car".</p>
-        </div>
-        <div class="tip-box">
-            <h3>3. The "v" Sound</h3>
-            <p>Touch your upper teeth to your lower lip and vibrate. Practice: "very", "every", "voice".</p>
-        </div>
+            <!-- ─── TAB 1: LEARN ─── -->
+            <div class="tab-panel active" id="panel-learn" role="tabpanel">
 
-        <!-- Common Mistakes -->
-        <h2 style="color:#FFD700; margin-top:40px; margin-bottom:12px;">⚠️ Common Speaking Mistakes</h2>
-        <div class="tip-box">
-            <h3>❌ "I am agree"</h3>
-            <p>✅ "I agree" – the verb "agree" doesn't need "am".</p>
-        </div>
-        <div class="tip-box">
-            <h3>❌ "She don't know"</h3>
-            <p>✅ "She doesn't know" – third person singular takes "doesn't".</p>
-        </div>
-        <div class="tip-box">
-            <h3>❌ "I have a work"</h3>
-            <p>✅ "I have work" – "work" is uncountable in this context.</p>
-        </div>
+                <!-- Introduction -->
+                <div class="section-card">
+                    <h2>🗣️ Why Practice Speaking?</h2>
+                    <p><strong>Speaking English is a skill.</strong> The more you speak, the more confident you become.</p>
+                    <p>Many learners know grammar and vocabulary but cannot speak confidently. Speaking practice helps you:</p>
+                    <ul>
+                        <li>✔ Improve pronunciation</li>
+                        <li>✔ Build confidence</li>
+                        <li>✔ Think in English</li>
+                        <li>✔ Speak naturally</li>
+                        <li>✔ Prepare for interviews</li>
+                        <li>✔ Communicate in daily life</li>
+                    </ul>
+                    <div class="example-box">
+                        <p class="en"><strong>💡 Tip:</strong> Don't be afraid of mistakes. Every mistake is an opportunity to improve.</p>
+                        <p class="bn"><strong>💡 টিপ:</strong> ভুল করতে ভয় পাবেন না। প্রতিটি ভুল উন্নতির একটি সুযোগ।</p>
+                    </div>
+                </div>
 
-        <!-- CTA -->
+                <!-- Speaking Learning Path -->
+                <div class="section-card">
+                    <h2>📚 Speaking Learning Path</h2>
+                    <p>Follow these steps every day to improve your speaking skills.</p>
+
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>🎧 Listen</h4>
+                            <p>Listen carefully to native English pronunciation. Pay attention to stress and intonation.</p>
+                            <button class="btn btn-secondary" onclick="speakText('Hello, how are you today?')">🔊 Listen</button>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>🎤 Repeat</h4>
+                            <p>Repeat the sentence aloud. Practice until it feels natural.</p>
+                            <button id="repeatRecordBtn" class="btn btn-secondary" onclick="startRepeatRecording()">🎙️ Record Yourself</button>
+                            <div id="repeatResult" class="result-text" style="margin-top:6px;"></div>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>🔍 Compare</h4>
+                            <p>Compare your pronunciation with the original audio. Notice the differences.</p>
+                            <p style="color:var(--text-soft); font-size:0.85rem;">Play both recordings and listen carefully.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>📖 Learn</h4>
+                            <p>Read the Bangla explanation. Understand the meaning and learn useful vocabulary.</p>
+                            <p style="color:var(--text-mid);">Example: "Hello, how are you?" → "হ্যালো, আপনি কেমন আছেন?"</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>✍ Practice</h4>
+                            <p>Answer simple speaking questions. Role-play the conversation with yourself or a partner.</p>
+                            <button class="btn btn-secondary" onclick="startRolePlay()">🎭 Start Role Play</button>
+                            <div id="rolePlayResult" class="result-text" style="margin-top:6px;"></div>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>📝 Review</h4>
+                            <p>Complete a short quiz. Earn XP and unlock the next lesson.</p>
+                            <button class="btn" onclick="switchTab('quiz')">📝 Take Quiz</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaking Lessons -->
+                <div class="section-card">
+                    <h2>📚 Speaking Lessons</h2>
+                    <p>Click any lesson to start practicing. Each lesson includes audio, practice exercises, and a quiz.</p>
+                    <div class="lesson-grid" id="lessonGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+            </div> <!-- end Learn tab -->
+
+            <!-- ─── TAB 2: PRACTICE ─── -->
+            <div class="tab-panel" id="panel-practice" role="tabpanel">
+
+                <!-- Lesson Selector -->
+                <div class="section-card">
+                    <h2>✍ Speaking Practice</h2>
+                    <p>Select a lesson to practice speaking. Follow the steps: Listen → Repeat → Compare → Learn → Practice.</p>
+                    <div id="practiceSelector" style="display:flex; flex-wrap:wrap; gap:8px; margin:12px 0;">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Current Lesson -->
+                <div class="section-card" id="practiceLessonCard">
+                    <h2 id="practiceLessonTitle">💬 Select a Lesson</h2>
+                    <div id="practiceLessonContent">
+                        <p style="color:var(--text-soft);">Choose a lesson from the buttons above to start practicing.</p>
+                    </div>
+                </div>
+
+                <!-- Shadowing Practice -->
+                <div class="section-card">
+                    <h2>🎤 Shadowing Practice</h2>
+                    <p>One of the fastest ways to improve spoken English. Listen and repeat immediately.</p>
+                    <div class="speaking-area">
+                        <div id="shadowingSentence" class="sentence">Select a lesson to start shadowing.</div>
+                        <div id="shadowingBangla" class="bangla"></div>
+                        <div class="shadowing-controls">
+                            <button class="btn" onclick="startShadowing()">🔊 Start Shadowing</button>
+                            <button class="btn btn-secondary" onclick="stopShadowing()">⏹️ Stop</button>
+                        </div>
+                        <div id="shadowingStatus">Ready. Click "Start Shadowing" to begin.</div>
+                    </div>
+                </div>
+
+                <!-- Speaking Recording -->
+                <div class="section-card">
+                    <h2>🎙️ Record Your Voice</h2>
+                    <p>Record yourself speaking the lesson sentences. Play it back and compare.</p>
+                    <div class="speaking-area">
+                        <p style="color:var(--text-mid); margin-bottom:12px;">Click the button to start recording. Speak clearly and naturally.</p>
+                        <button id="speakBtn" class="mic-btn">🎙️ Start Recording</button>
+                        <div id="speakResult" class="result-text">Your recording will appear here.</div>
+                    </div>
+                </div>
+
+                <!-- Pronunciation Practice -->
+                <div class="section-card">
+                    <h2>🔊 Pronunciation Practice</h2>
+                    <p>Practice difficult English sounds. Click each sound to hear it.</p>
+                    <div class="sound-grid">
+                        <div class="sound-card"><div class="ipa">θ</div><div class="example">think</div><div class="bangla">থিঙ্ক</div><button class="btn btn-secondary" onclick="speakText('think')" style="margin-top:4px;font-size:0.8rem;padding:4px 12px;">🔊</button></div>
+                        <div class="sound-card"><div class="ipa">ð</div><div class="example">this</div><div class="bangla">দিস</div><button class="btn btn-secondary" onclick="speakText('this')" style="margin-top:4px;font-size:0.8rem;padding:4px 12px;">🔊</button></div>
+                        <div class="sound-card"><div class="ipa">r</div><div class="example">red</div><div class="bangla">রেড</div><button class="btn btn-secondary" onclick="speakText('red')" style="margin-top:4px;font-size:0.8rem;padding:4px 12px;">🔊</button></div>
+                        <div class="sound-card"><div class="ipa">l</div><div class="example">light</div><div class="bangla">লাইট</div><button class="btn btn-secondary" onclick="speakText('light')" style="margin-top:4px;font-size:0.8rem;padding:4px 12px;">🔊</button></div>
+                        <div class="sound-card"><div class="ipa">v</div><div class="example">very</div><div class="bangla">ভেরি</div><button class="btn btn-secondary" onclick="speakText('very')" style="margin-top:4px;font-size:0.8rem;padding:4px 12px;">🔊</button></div>
+                        <div class="sound-card"><div class="ipa">w</div><div class="example">water</div><div class="bangla">ওয়াটার</div><button class="btn btn-secondary" onclick="speakText('water')" style="margin-top:4px;font-size:0.8rem;padding:4px 12px;">🔊</button></div>
+                        <div class="sound-card"><div class="ipa">ʃ</div><div class="example">ship</div><div class="bangla">শিপ</div><button class="btn btn-secondary" onclick="speakText('ship')" style="margin-top:4px;font-size:0.8rem;padding:4px 12px;">🔊</button></div>
+                        <div class="sound-card"><div class="ipa">tʃ</div><div class="example">chair</div><div class="bangla">চেয়ার</div><button class="btn btn-secondary" onclick="speakText('chair')" style="margin-top:4px;font-size:0.8rem;padding:4px 12px;">🔊</button></div>
+                    </div>
+                    <div class="example-box">
+                        <p class="en"><strong>💡 Tip:</strong> Practice these sounds daily. Focus on the ones that are difficult for Bangla speakers.</p>
+                        <p class="bn"><strong>💡 টিপ:</strong> প্রতিদিন এই শব্দগুলি অনুশীলন করুন। বাংলাভাষীদের জন্য যেগুলি কঠিন সেগুলিতে ফোকাস করুন।</p>
+                    </div>
+                </div>
+
+            </div> <!-- end Practice tab -->
+
+            <!-- ─── TAB 3: QUIZ ─── -->
+            <div class="tab-panel" id="panel-quiz" role="tabpanel">
+
+                <div class="section-card">
+                    <h2>📝 Speaking Quiz</h2>
+                    <p>Test your speaking knowledge. Answer these questions about the lessons you've practiced.</p>
+                    <div id="quizSelector" style="display:flex; flex-wrap:wrap; gap:8px; margin:12px 0;">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                    <div class="quiz-container" id="speakingQuiz">
+                        <div id="quizQuestions">
+                            <p style="color:var(--text-soft);">Select a lesson to start the quiz.</p>
+                        </div>
+                        <div class="quiz-controls">
+                            <button class="btn" onclick="submitSpeakingQuiz()" style="display:none;" id="submitQuizBtn">✅ Submit</button>
+                            <button class="btn btn-secondary" onclick="resetSpeakingQuiz()" style="display:none;" id="resetQuizBtn">🔄 Reset</button>
+                        </div>
+                        <div id="quizScoreDisplay" class="quiz-feedback" style="display:none;"></div>
+                    </div>
+                </div>
+
+            </div> <!-- end Quiz tab -->
+
+            <!-- ─── TAB 4: RESOURCES ─── -->
+            <div class="tab-panel" id="panel-resources" role="tabpanel">
+
+                <!-- Daily Speaking Challenge -->
+                <div class="section-card">
+                    <h2>⭐ Daily Speaking Challenge</h2>
+                    <div class="daily-challenge" id="dailyChallenge">
+                        <div class="challenge-title">🗣️ Today's Challenge</div>
+                        <div class="challenge-topic" id="challengeTopic">Speak for 2 minutes about your daily routine.</div>
+                        <p style="color:var(--text-mid); margin:8px 0;">Practice one challenge every day. Record yourself and track your progress.</p>
+                        <button class="btn" onclick="getDailyChallenge()">🔄 New Challenge</button>
+                        <div id="challengeResult" style="margin-top:12px; color:var(--gold);"></div>
+                    </div>
+                </div>
+
+                <!-- Speaking Tips -->
+                <div class="section-card">
+                    <h2>💡 Speaking Tips</h2>
+                    <ul>
+                        <li><strong>Speak slowly.</strong> Speed comes naturally with practice.</li>
+                        <li><strong>Don't translate every word.</strong> Try to think in English.</li>
+                        <li><strong>Practice every day.</strong> 10 minutes daily is better than 1 hour weekly.</li>
+                        <li><strong>Don't fear mistakes.</strong> Confidence comes from practice.</li>
+                        <li><strong>Record yourself.</strong> Listen to identify areas for improvement.</li>
+                        <li><strong>Shadow native speakers.</strong> Copy their rhythm and intonation.</li>
+                    </ul>
+                </div>
+
+                <!-- Beginner Speaking Plan -->
+                <div class="section-card">
+                    <h2>📅 Beginner Speaking Plan</h2>
+                    <p>Follow this 4-week plan to build your speaking confidence.</p>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:12px 0;">
+                        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px; text-align:center;">
+                            <div style="color:var(--gold); font-weight:700; font-family:var(--font-en);">Week 1</div>
+                            <div style="color:var(--text);">Greetings, Numbers, Family, Daily Words</div>
+                        </div>
+                        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px; text-align:center;">
+                            <div style="color:var(--gold); font-weight:700; font-family:var(--font-en);">Week 2</div>
+                            <div style="color:var(--text);">Shopping, Restaurant, Travel, Weather</div>
+                        </div>
+                        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px; text-align:center;">
+                            <div style="color:var(--gold); font-weight:700; font-family:var(--font-en);">Week 3</div>
+                            <div style="color:var(--text);">Work, Office, Hospital, Friends</div>
+                        </div>
+                        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:12px 16px; text-align:center;">
+                            <div style="color:var(--gold); font-weight:700; font-family:var(--font-en);">Week 4</div>
+                            <div style="color:var(--text);">Free conversation, Role play, Speaking challenge</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="section-card">
+                    <h2>❓ Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <div class="question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">How long should I practice speaking every day?</div>
+                        <div class="answer">Practicing for 10–20 minutes daily is enough to improve steadily. Consistency is more important than long study sessions.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">I'm afraid of making mistakes.</div>
+                        <div class="answer">Everyone makes mistakes while learning a language. Every mistake is an opportunity to improve your speaking skills.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">Can I improve my pronunciation without a teacher?</div>
+                        <div class="answer">Yes. Listening carefully, repeating aloud, and practicing regularly can significantly improve your pronunciation over time.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">Is this useful for IELTS and job interviews?</div>
+                        <div class="answer">Yes. Speaking practice builds fluency, confidence, and communication skills that are valuable for IELTS, interviews, travel, and everyday conversations.</div>
+                    </div>
+                </div>
+
+                <!-- Related Lessons -->
+                <div class="section-card">
+                    <h2>🔗 Related Learning</h2>
+                    <div class="related-grid">
+                        <a href="/daily-conversation.html">🗣️ Daily Conversation</a>
+                        <a href="/pronunciation-basics.html">🔊 Pronunciation Basics</a>
+                        <a href="/grammar.html">📝 Grammar Guide</a>
+                        <a href="/basic-vocabulary-list.html">📚 Basic Vocabulary</a>
+                        <a href="/flashcards.html">🃏 Flashcards</a>
+                        <a href="/dictionary.html">📕 Dictionary</a>
+                    </div>
+                </div>
+
+                <!-- Next Steps -->
+                <div class="section-card" style="border:2px solid var(--gold);">
+                    <h2 style="border-bottom-color:var(--gold);">🚀 Continue Learning</h2>
+                    <div class="next-lesson-grid">
+                        <a href="/daily-conversation.html">🗣️ Daily Conversation<span><small>Speak naturally</small></span></a>
+                        <a href="/pronunciation-basics.html">🔊 Pronunciation<span><small>Speak clearly</small></span></a>
+                        <a href="/basic-vocabulary-list.html">📚 Vocabulary<span><small>Build word power</small></span></a>
+                        <a href="/dictionary.html">📕 Dictionary<span><small>Explore all words</small></span></a>
+                    </div>
+                </div>
+
+            </div> <!-- end Resources tab -->
+
+        </div> <!-- end tab-panels -->
+
+        <!-- CTA Banner -->
         <div class="cta-banner">
-            <h3>📱 Practice Speaking with Ovidhan</h3>
-            <p>Learn pronunciation, vocabulary, and daily conversations – all offline and free.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank">Download Ovidhan Now</a>
-            <div class="cta-features">
-                <span class="cta-feat">✅ 100% Offline</span>
-                <span class="cta-feat">✅ 12,658+ Words</span>
-                <span class="cta-feat">✅ Pronunciation Guide</span>
-                <span class="cta-feat">✅ Free</span>
+            <h3>📱 Learn English by Speaking Every Day</h3>
+            <p>Download the app for offline access to 12,658+ words, grammar guides, and daily practice.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" class="cta-btn" target="_blank" rel="noopener">📥 Download Ovidhan Now</a>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:18px;">
+                <span style="font-size:13px; color:var(--teal);">✅ 100% Offline</span>
+                <span style="font-size:13px; color:var(--teal);">✅ 12,658+ Words</span>
+                <span style="font-size:13px; color:var(--teal);">✅ BCS / IELTS / Bank</span>
+                <span style="font-size:13px; color:var(--teal);">✅ Free</span>
             </div>
         </div>
 
-        <!-- Social Share -->
-        <div class="share-buttons">
-            <a href="https://api.whatsapp.com/send?text=English%20Speaking%20Practice%20-%20Dialogues%20%26%20Pronunciation%20https%3A%2F%2Fovidhan.net%2Fspeaking-practice.html" target="_blank" class="share-btn whatsapp">📱 WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fovidhan.net%2Fspeaking-practice.html" target="_blank" class="share-btn facebook">📘 Facebook</a>
-            <a href="https://t.me/share/url?url=https%3A%2F%2Fovidhan.net%2Fspeaking-practice.html&text=English%20Speaking%20Practice%20-%20Dialogues%20%26%20Pronunciation" target="_blank" class="share-btn telegram">📲 Telegram</a>
-            <a href="https://twitter.com/intent/tweet?text=English%20Speaking%20Practice%20-%20Dialogues%20%26%20Pronunciation%20https%3A%2F%2Fovidhan.net%2Fspeaking-practice.html" target="_blank" class="share-btn twitter">🐦 Twitter</a>
-        </div>
-    </main>
+    </div> <!-- end lesson-container -->
 
-    
+    <!-- ══ BACK TO TOP ══ -->
+    <button id="backToTop" aria-label="Back to top">↑</button>
 
+    <!-- ══ SCRIPTS ══ -->
+    <script>
+        // ── LESSON DATA ──
+        const lessons = [{
+            id: 'greetings',
+            icon: '👋',
+            name: 'Greetings',
+            desc: 'Practice introducing yourself and greeting others.',
+            sentences: [
+                { en: 'Hello! How are you?', bn: 'হ্যালো! আপনি কেমন আছেন?' },
+                { en: 'Good morning. Nice to meet you.', bn: 'শুভ সকাল। আপনার সাথে দেখা করে ভালো লাগলো।' },
+                { en: 'My name is Rahim. I am from Bangladesh.', bn: 'আমার নাম রহিম। আমি বাংলাদেশ থেকে এসেছি।' }
+            ],
+            vocab: ['Hello', 'Good morning', 'Nice to meet you', 'Name', 'From'],
+            quiz: [
+                { q: 'How do you say "হ্যালো" in English?', options: ['Hello', 'Goodbye', 'Thank you', 'Yes'], correct: 0 },
+                { q: 'What is the Bangla meaning of "Good morning"?', options: ['শুভ সকাল', 'শুভ বিকাল', 'শুভ রাত্রি', 'হ্যালো'],
+                    correct: 0 },
+                { q: '"Nice to meet you" means:', options: ['আপনার সাথে দেখা করে ভালো লাগলো', 'আপনাকে ধন্যবাদ', 'আমি ভালো আছি',
+                        'বিদায়'
+                    ], correct: 0 }
+            ]
+        }, {
+            id: 'restaurant',
+            icon: '🍽️',
+            name: 'Restaurant',
+            desc: 'Practice ordering food and talking to waiters.',
+            sentences: [
+                { en: 'I would like to order chicken biryani.', bn: 'আমি চিকেন বিরিয়ানি অর্ডার করতে চাই।' },
+                { en: 'Could I have a glass of water, please?', bn: 'আমি কি এক গ্লাস পানি পেতে পারি, দয়া করে?' },
+                { en: 'Can I have the bill, please?', bn: 'আমি কি বিলটি পেতে পারি, দয়া করে?' }
+            ],
+            vocab: ['Order', 'Menu', 'Bill', 'Waiter', 'Table'],
+            quiz: [
+                { q: '"I would like to order" means:', options: ['আমি অর্ডার করতে চাই', 'আমি খেতে চাই', 'আমি যেতে চাই',
+                        'আমি ঘুমাতে চাই'
+                    ], correct: 0 },
+                { q: 'How do you ask for the bill?', options: ['Can I have the bill?', 'Can I have the menu?',
+                        'Can I order food?', 'Can I leave?'
+                    ], correct: 0 }
+            ]
+        }, {
+            id: 'travel',
+            icon: '✈️',
+            name: 'Travel',
+            desc: 'Essential English for travel and immigration.',
+            sentences: [
+                { en: 'Where is the airport?', bn: 'বিমানবন্দরটি কোথায়?' },
+                { en: 'Here is my passport.', bn: 'এই আমার পাসপোর্ট।' },
+                { en: 'I am visiting Bangladesh for tourism.', bn: 'আমি পর্যটনের জন্য বাংলাদেশ দেখতে যাচ্ছি।' }
+            ],
+            vocab: ['Airport', 'Passport', 'Flight', 'Ticket', 'Hotel'],
+            quiz: [
+                { q: '"Where is the airport?" means:', options: ['বিমানবন্দরটি কোথায়?', 'হোটেলটি কোথায়?',
+                        'স্টেশনটি কোথায়?', 'রেস্টুরেন্টটি কোথায়?'
+                    ], correct: 0 },
+                { q: 'How do you say "পাসপোর্ট" in English?', options: ['Passport', 'Ticket', 'Flight', 'Hotel'],
+                    correct: 0 }
+            ]
+        }, {
+            id: 'interview',
+            icon: '💼',
+            name: 'Job Interview',
+            desc: 'Prepare for job interviews with common questions.',
+            sentences: [
+                { en: 'Tell me about yourself.', bn: 'আমাকে আপনার সম্পর্কে বলুন।' },
+                { en: 'I am hardworking and I love learning new things.', bn: 'আমি পরিশ্রমী এবং নতুন জিনিস শিখতে ভালোবাসি。' },
+                { en: 'What are your strengths?', bn: 'আপনার শক্তি কী?' }
+            ],
+            vocab: ['Interview', 'Strength', 'Experience', 'Teamwork', 'Salary'],
+            quiz: [
+                { q: '"Tell me about yourself" means:', options: ['আমাকে আপনার সম্পর্কে বলুন', 'আমি আপনাকে বলি',
+                        'আপনি কী করেন?', 'আপনি কোথায় থাকেন?'
+                    ], correct: 0 },
+                { q: 'What is the Bangla meaning of "strength"?', options: ['শক্তি', 'দুর্বলতা', 'অভিজ্ঞতা', 'বেতন'],
+                    correct: 0 }
+            ]
+        }];
 
-<script>
-    // Simple mobile menu close on link click
-    document.querySelectorAll('.mega-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.querySelector('.mega-menu')?.classList.remove('open');
+        // ── State ──
+        let currentLessonId = null;
+        let currentSentences = [];
+        let shadowingInterval = null;
+        let isRecording = false;
+        let mediaRecorder = null;
+        let recordedChunks = [];
+
+        // ── Render Lesson Grid ──
+        function renderLessonGrid() {
+            const container = document.getElementById('lessonGrid');
+            const completed = JSON.parse(localStorage.getItem('ovidhan_speaking_completed') || '[]');
+            container.innerHTML = lessons.map(lesson => `
+                <div class="lesson-card" onclick="loadLesson('${lesson.id}')" data-id="${lesson.id}">
+                    <div class="icon">${lesson.icon}</div>
+                    <div class="name">${lesson.name}</div>
+                    <div class="desc">${lesson.desc}</div>
+                    <span class="status ${completed.includes(lesson.id) ? 'completed' : ''}">
+                        ${completed.includes(lesson.id) ? '✅ Completed' : '📖 Start'}
+                    </span>
+                </div>
+            `).join('');
+        }
+
+        // ── Load Lesson ──
+        function loadLesson(id) {
+            currentLessonId = id;
+            const lesson = lessons.find(l => l.id === id);
+            if (!lesson) return;
+
+            currentSentences = lesson.sentences;
+
+            // Update progress
+            updateProgress('learn');
+
+            // Practice tab
+            renderPracticeSelector();
+            renderPracticeLesson(lesson);
+
+            // Quiz tab
+            renderQuizSelector();
+            renderQuiz(lesson);
+
+            // Scroll to practice on mobile
+            if (window.innerWidth < 600) {
+                document.getElementById('practiceLessonCard').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // ── Practice Selector ──
+        function renderPracticeSelector() {
+            const container = document.getElementById('practiceSelector');
+            container.innerHTML = lessons.map(lesson => `
+                <button class="btn ${lesson.id === currentLessonId ? '' : 'btn-secondary'}" 
+                        onclick="loadLesson('${lesson.id}')">
+                    ${lesson.icon} ${lesson.name}
+                </button>
+            `).join('');
+        }
+
+        // ── Practice Lesson ──
+        function renderPracticeLesson(lesson) {
+            const container = document.getElementById('practiceLessonContent');
+            document.getElementById('practiceLessonTitle').textContent = `${lesson.icon} ${lesson.name}`;
+
+            let html = `<p style="color:var(--text-mid); margin-bottom:12px;">${lesson.desc}</p>`;
+
+            // Sentences
+            html += `<div class="dialogue-box" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin:12px 0;">`;
+            lesson.sentences.forEach((s, i) => {
+                html += `
+                    <div class="dialogue-line" style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);gap:12px;flex-wrap:wrap;">
+                        <span style="color:var(--text);font-family:var(--font-en);">${s.en}</span>
+                        <span style="color:var(--text-mid);font-size:0.9rem;font-family:var(--font-bn);">${s.bn}</span>
+                        <span>
+                            <button onclick="speakText('${s.en}')" style="background:transparent;border:none;color:var(--teal);cursor:pointer;">🔊</button>
+                        </span>
+                    </div>
+                `;
+            });
+            html += `</div>`;
+
+            // Vocabulary
+            html += `<div style="margin-top:12px;">
+                <h4 style="color:var(--gold);">📚 New Words</h4>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;">`;
+            lesson.vocab.forEach(v => {
+                html += `
+                    <span style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:4px 14px;display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;">
+                        <span style="color:var(--text);font-family:var(--font-en);">${v}</span>
+                        <button onclick="speakText('${v}')" style="background:transparent;border:none;color:var(--teal);cursor:pointer;font-size:0.7rem;">🔊</button>
+                        <button onclick="saveVocabularyWord('${v}')" style="background:transparent;border:none;color:var(--text-soft);cursor:pointer;font-size:0.8rem;">☆</button>
+                    </span>
+                `;
+            });
+            html += `</div></div>`;
+
+            // Practice buttons
+            html += `
+                <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;">
+                    <button class="btn" onclick="speakFullLesson('${lesson.id}')">🔊 Play All</button>
+                    <button class="btn btn-secondary" onclick="startShadowing()">🎤 Shadowing</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('speakBtn').click()">🎙️ Record</button>
+                </div>
+            `;
+
+            container.innerHTML = html;
+
+            // Update shadowing sentence
+            if (lesson.sentences.length > 0) {
+                document.getElementById('shadowingSentence').textContent = lesson.sentences[0].en;
+                document.getElementById('shadowingBangla').textContent = lesson.sentences[0].bn;
+            }
+        }
+
+        // ── Quiz Selector ──
+        function renderQuizSelector() {
+            const container = document.getElementById('quizSelector');
+            container.innerHTML = lessons.map(lesson => `
+                <button class="btn ${lesson.id === currentLessonId ? '' : 'btn-secondary'}" 
+                        onclick="loadLesson('${lesson.id}'); switchTab('quiz')">
+                    ${lesson.icon} ${lesson.name}
+                </button>
+            `).join('');
+        }
+
+        // ── Render Quiz ──
+        let quizData = [];
+
+        function renderQuiz(lesson) {
+            const container = document.getElementById('quizQuestions');
+            quizData = lesson.quiz || [];
+            if (quizData.length === 0) {
+                container.innerHTML = '<p style="color:var(--text-soft);">No quiz available for this lesson.</p>';
+                return;
+            }
+
+            let html = '';
+            quizData.forEach((q, idx) => {
+                html += '<div class="q-item">';
+                html += `<div class="question-text">${idx+1}. ${q.q}</div>`;
+                html += '<div style="display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;">';
+                q.options.forEach((opt, oi) => {
+                    html += `<label><input type="radio" name="q${idx}" value="${oi}" /> ${String.fromCharCode(97+oi)}) ${opt}</label>`;
+                });
+                html += '</div></div>';
+            });
+            container.innerHTML = html;
+            document.getElementById('submitQuizBtn').style.display = 'inline-block';
+            document.getElementById('resetQuizBtn').style.display = 'inline-block';
+            document.getElementById('quizScoreDisplay').style.display = 'none';
+        }
+
+        function submitSpeakingQuiz() {
+            let correct = 0;
+            let total = quizData.length;
+            let allAnswered = true;
+            quizData.forEach((q, idx) => {
+                const radios = document.querySelectorAll(`input[name="q${idx}"]`);
+                let selected = null;
+                radios.forEach(r => { if (r.checked) selected = parseInt(r.value); });
+                if (selected === null) allAnswered = false;
+                else if (selected === q.correct) correct++;
+            });
+            if (!allAnswered) {
+                alert('Please answer all questions.');
+                return;
+            }
+            const percent = Math.round((correct / total) * 100);
+            const display = document.getElementById('quizScoreDisplay');
+            display.style.display = 'block';
+            let grade = '';
+            if (percent >= 80) grade = '🌟 Excellent speaking knowledge!';
+            else if (percent >= 60) grade = '📖 Good! Review the lesson again.';
+            else grade = '💪 Practice the lesson more!';
+
+            display.innerHTML = `
+                <div style="font-size:2rem;font-weight:700;color:var(--gold);">${correct}/${total}</div>
+                <div style="font-size:1.1rem;">${percent}% – ${grade}</div>
+                <button class="btn" onclick="resetSpeakingQuiz()" style="margin-top:8px;">🔄 Retry Quiz</button>
+            `;
+
+            // Mark as completed if score >= 70%
+            if (percent >= 70) {
+                const completed = JSON.parse(localStorage.getItem('ovidhan_speaking_completed') || '[]');
+                if (!completed.includes(currentLessonId)) {
+                    completed.push(currentLessonId);
+                    localStorage.setItem('ovidhan_speaking_completed', JSON.stringify(completed));
+                    renderLessonGrid();
+                }
+            }
+            display.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function resetSpeakingQuiz() {
+            const lesson = lessons.find(l => l.id === currentLessonId);
+            if (lesson) renderQuiz(lesson);
+        }
+
+        // ── Speaking / Recording ──
+        document.getElementById('speakBtn').addEventListener('click', function() {
+            if (isRecording) {
+                stopRecording();
+                return;
+            }
+            startRecording();
         });
-    });
-</script>
-
+
+        function startRecording() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(function(stream) {
+                    const btn = document.getElementById('speakBtn');
+                    btn.textContent = '⏹️ Stop Recording';
+                    btn.classList.add('recording');
+                    isRecording = true;
+
+                    mediaRecorder = new MediaRecorder(stream);
+                    recordedChunks = [];
+
+                    mediaRecorder.ondataavailable = function(event) {
+                        if (event.data.size > 0) recordedChunks.push(event.data);
+                    };
+
+                    mediaRecorder.onstop = function() {
+                        const blob = new Blob(recordedChunks, { type: 'audio/webm' });
+                        const url = URL.createObjectURL(blob);
+                        const result = document.getElementById('speakResult');
+                        result.innerHTML = `
+                            <audio controls src="${url}"></audio>
+                            <br><span style="color:var(--text-soft);">✅ Recorded! Play it back and compare.</span>
+                        `;
+                        const btn = document.getElementById('speakBtn');
+                        btn.textContent = '🎙️ Start Recording';
+                        btn.classList.remove('recording');
+                        isRecording = false;
+                    };
+
+                    mediaRecorder.start();
+                })
+                .catch(function() {
+                    alert('Please allow microphone access to use this feature.');
+                });
+        }
+
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                mediaRecorder.stop();
+                mediaRecorder.stream.getTracks().forEach(track => track.stop());
+            }
+        }
+
+        // ── Repeat Recording (Learning Path) ──
+        function startRepeatRecording() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(function(stream) {
+                    const btn = document.getElementById('repeatRecordBtn');
+                    btn.textContent = '⏹️ Stop';
+                    const recorder = new MediaRecorder(stream);
+                    let chunks = [];
+                    recorder.ondataavailable = function(e) { if (e.data.size > 0) chunks.push(e.data); };
+                    recorder.onstop = function() {
+                        const blob = new Blob(chunks, { type: 'audio/webm' });
+                        const url = URL.createObjectURL(blob);
+                        document.getElementById('repeatResult').innerHTML = `
+                            <audio controls src="${url}"></audio>
+                            <br><span style="color:var(--text-soft);">✅ Great! Listen to your recording.</span>
+                        `;
+                        btn.textContent = '🎙️ Record Yourself';
+                    };
+                    recorder.start();
+                    setTimeout(() => { if (recorder.state !== 'inactive') recorder.stop(); }, 5000);
+                })
+                .catch(() => alert('Please allow microphone access.'));
+        }
+
+        // ── Role Play ──
+        function startRolePlay() {
+            const result = document.getElementById('rolePlayResult');
+            const sentences = [
+                { speaker: 'A', en: 'Hello, how are you?', bn: 'হ্যালো, আপনি কেমন আছেন?' },
+                { speaker: 'B', en: 'I am fine, thank you. And you?', bn: 'আমি ভালো আছি, ধন্যবাদ। আর আপনি?' },
+                { speaker: 'A', en: 'I am good. What is your name?', bn: 'আমি ভালো আছি। আপনার নাম কী?' },
+                { speaker: 'B', en: 'My name is Rahim. Nice to meet you.', bn: 'আমার নাম রহিম। আপনার সাথে দেখা করে ভালো লাগলো।' }
+            ];
+            let index = 0;
+
+            function showNext() {
+                if (index >= sentences.length) {
+                    result.innerHTML = '<span style="color:var(--green);">✅ Role play complete! Great job!</span>';
+                    return;
+                }
+                const s = sentences[index];
+                result.innerHTML = `
+                    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;margin:4px 0;">
+                        <strong style="color:var(--gold);">${s.speaker}:</strong>
+                        <span style="color:var(--text);font-family:var(--font-en);">${s.en}</span>
+                        <br><span style="color:var(--text-mid);font-family:var(--font-bn);">${s.bn}</span>
+                        <button onclick="speakText('${s.en}')" style="background:transparent;border:none;color:var(--teal);cursor:pointer;margin-left:8px;">🔊</button>
+                    </div>
+                `;
+                index++;
+                setTimeout(showNext, 3000);
+            }
+            showNext();
+        }
+
+        // ── Shadowing ──
+        function startShadowing() {
+            const lesson = lessons.find(l => l.id === currentLessonId);
+            if (!lesson) {
+                alert('Please select a lesson first.');
+                return;
+            }
+            const sentences = lesson.sentences;
+            if (sentences.length === 0) return;
+
+            const status = document.getElementById('shadowingStatus');
+            let index = 0;
+
+            function speakNext() {
+                if (index >= sentences.length) {
+                    status.textContent = '✅ Shadowing complete! Great job!';
+                    return;
+                }
+                const s = sentences[index];
+                document.getElementById('shadowingSentence').textContent = s.en;
+                document.getElementById('shadowingBangla').textContent = s.bn;
+                status.textContent = `🎤 ${index+1}/${sentences.length}: Listen and repeat...`;
+                speakText(s.en);
+                index++;
+                const delay = Math.max(2500, s.en.split(' ').length * 350);
+                shadowingInterval = setTimeout(speakNext, delay);
+            }
+            speakNext();
+        }
+
+        function stopShadowing() {
+            if (shadowingInterval) {
+                clearTimeout(shadowingInterval);
+                shadowingInterval = null;
+                document.getElementById('shadowingStatus').textContent = '⏹️ Shadowing stopped.';
+            }
+        }
+
+        // ── Speak Full Lesson ──
+        function speakFullLesson(id) {
+            const lesson = lessons.find(l => l.id === id);
+            if (!lesson) return;
+            const text = lesson.sentences.map(s => s.en).join('. ');
+            speakText(text);
+        }
+
+        // ── Save Vocabulary Word ──
+        function saveVocabularyWord(word) {
+            let saved = JSON.parse(localStorage.getItem('ovidhan_saved_words') || '[]');
+            if (!saved.some(w => w.word === word)) {
+                saved.push({ word, bangla: word });
+                localStorage.setItem('ovidhan_saved_words', JSON.stringify(saved));
+                alert(`✅ "${word}" saved to flashcards!`);
+            } else {
+                alert(`"${word}" is already saved.`);
+            }
+        }
+
+        // ── Daily Challenge ──
+        const challengeTopics = [
+            'Speak for 2 minutes about your daily routine.',
+            'Speak for 2 minutes about your family.',
+            'Speak for 2 minutes about your job or studies.',
+            'Speak for 2 minutes about your hometown.',
+            'Speak for 2 minutes about your favorite food.',
+            'Speak for 2 minutes about your hobbies.',
+            'Speak for 2 minutes about your future plans.',
+            'Speak for 2 minutes about a recent trip.',
+            'Speak for 2 minutes about a movie you watched.',
+            'Speak for 2 minutes about a person you admire.'
+        ];
+
+        function getDailyChallenge() {
+            const random = challengeTopics[Math.floor(Math.random() * challengeTopics.length)];
+            document.getElementById('challengeTopic').textContent = random;
+            document.getElementById('challengeResult').textContent = '🎯 Record yourself speaking for 2 minutes on this topic!';
+        }
+
+        // ── Text-to-Speech ──
+        function speakText(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            utterance.rate = 0.8;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // ── Tabs ──
+        const tabs = document.querySelectorAll('.tab-btn');
+        const panels = {
+            learn: document.getElementById('panel-learn'),
+            practice: document.getElementById('panel-practice'),
+            quiz: document.getElementById('panel-quiz'),
+            resources: document.getElementById('panel-resources')
+        };
+
+        tabs.forEach(btn => {
+            btn.addEventListener('click', function() {
+                tabs.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const target = this.dataset.tab;
+                Object.keys(panels).forEach(key => {
+                    panels[key].classList.toggle('active', key === target);
+                });
+                updateProgress(target);
+            });
+        });
+
+        function switchTab(tabId) {
+            const btn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+            if (btn) btn.click();
+        }
+
+        // ── Progress ──
+        const stepOrder = ['learn', 'practice', 'quiz', 'resources'];
+
+        function updateProgress(activeTab) {
+            const idx = stepOrder.indexOf(activeTab);
+            const percent = Math.round(((idx + 1) / stepOrder.length) * 100);
+            document.getElementById('progressFill').style.width = percent + '%';
+            document.getElementById('progressPercent').textContent = percent + '%';
+            const steps = document.querySelectorAll('.progress-box .step');
+            steps.forEach((step, i) => {
+                step.classList.remove('done', 'active');
+                if (i < idx) step.classList.add('done');
+                else if (i === idx) step.classList.add('active');
+            });
+        }
+
+        // ── Back to Top ──
+        const backBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        backBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ── Init ──
+        document.addEventListener('DOMContentLoaded', function() {
+            renderLessonGrid();
+            renderPracticeSelector();
+            renderQuizSelector();
+            getDailyChallenge();
+            updateProgress('learn');
+
+            // Load first lesson
+            if (lessons.length > 0) {
+                loadLesson(lessons[0].id);
+            }
+        });
+    </script>
+
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+    <p>
+        <a href="/">Home</a> &nbsp;•&nbsp;
+        <a href="/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="/blog.html">Blog</a> &nbsp;•&nbsp;
+        <a href="/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
+        <a href="/privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+</body>
 </html>
