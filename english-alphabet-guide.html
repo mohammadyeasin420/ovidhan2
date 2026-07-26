@@ -148,6 +148,75 @@
             color: var(--gold);
         }
 
+        /* ── Progress Box ── */
+        .progress-box {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .progress-box .label {
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            font-family: var(--font-en);
+        }
+        .progress-box .steps {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .progress-box .step {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-soft);
+            font-size: 0.85rem;
+            font-family: var(--font-en);
+        }
+        .progress-box .step.done {
+            color: var(--green);
+        }
+        .progress-box .step.done::before {
+            content: "✅";
+        }
+        .progress-box .step.active {
+            color: var(--gold);
+        }
+        .progress-box .step.active::before {
+            content: "⏳";
+        }
+        .progress-box .step::before {
+            content: "⬜";
+            font-size: 1.1rem;
+        }
+        .progress-box .percent {
+            color: var(--gold);
+            font-weight: 700;
+            font-family: var(--font-en);
+            font-size: 1.1rem;
+        }
+        .progress-bar-bg {
+            width: 100%;
+            height: 6px;
+            background: var(--surface);
+            border-radius: 4px;
+            margin-top: 6px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            width: 25%;
+            background: var(--gold);
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+
         /* ── Tabs ── */
         .tabs {
             display: flex;
@@ -161,18 +230,19 @@
         }
         .tab-btn {
             flex: 1 1 auto;
-            padding: 12px 20px;
+            padding: 12px 18px;
             background: transparent;
             border: none;
             border-radius: var(--radius) var(--radius) 0 0;
             color: var(--text-mid);
             font-family: var(--font-en);
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: 0.25s ease;
             border-bottom: 3px solid transparent;
-            min-width: 100px;
+            min-width: 80px;
+            white-space: nowrap;
         }
         .tab-btn:hover {
             color: var(--text);
@@ -198,17 +268,11 @@
             display: block;
         }
         @keyframes fadeUp {
-            0% {
-                opacity: 0.6;
-                transform: translateY(8px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0.6; transform: translateY(8px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ── Cards (same as before, but we keep only one style) ── */
+        /* ── Cards ── */
         .section-card {
             background: var(--surface2);
             border: 1px solid var(--border);
@@ -253,7 +317,7 @@
         /* ── Alphabet Grid ── */
         .alphabet-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
             gap: 10px;
             margin: 12px 0;
         }
@@ -295,10 +359,10 @@
             margin-top: 2px;
         }
 
-        /* ── Vowels ── */
+        /* ── Vowels / Consonants ── */
         .vowel-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             gap: 10px;
             margin: 12px 0;
         }
@@ -329,10 +393,9 @@
             font-size: 0.8rem;
         }
 
-        /* ── Consonants ── */
         .consonant-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             gap: 10px;
             margin: 12px 0;
         }
@@ -380,6 +443,7 @@
             width: 100%;
             border-collapse: collapse;
             margin: 12px 0;
+            font-size: 0.95rem;
         }
         .pronounce-table th {
             background: var(--surface);
@@ -400,10 +464,36 @@
             font-family: var(--font-en);
         }
 
-        /* ── Flashcards (FIXED FLIP) ── */
+        /* ── Minimal Pairs ── */
+        .minimal-pair {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 32px;
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 12px 18px;
+            margin: 8px 0;
+        }
+        .minimal-pair .pair {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .minimal-pair .pair .word {
+            font-weight: 600;
+            color: var(--text);
+            font-family: var(--font-en);
+        }
+        .minimal-pair .pair .sound {
+            color: var(--teal);
+            font-size: 0.85rem;
+            font-family: var(--font-en);
+        }
+
+        /* ── Flashcards (flip) ── */
         .flashcard-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
             gap: 10px;
             margin: 12px 0;
         }
@@ -440,7 +530,6 @@
             font-family: var(--font-bn);
             display: none;
         }
-        /* 👇 THE FIX: flips the card content */
         .flashcard.flipped .en {
             display: none;
         }
@@ -448,7 +537,7 @@
             display: block;
         }
 
-        /* ── Quiz Styles ── */
+        /* ── Quiz ── */
         .quiz-container {
             background: var(--surface);
             border: 2px solid var(--gold);
@@ -556,15 +645,9 @@
             animation: pulse 1s infinite;
         }
         @keyframes pulse {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 1;
-            }
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
         }
         .speaking-section .result-text {
             color: var(--text-mid);
@@ -628,7 +711,7 @@
             font-family: var(--font-en);
         }
 
-        /* ── Related / CTA ── */
+        /* ── Related / Next Lesson ── */
         .related-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -652,6 +735,41 @@
             transform: translateY(-2px);
         }
 
+        .next-lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .next-lesson-grid a {
+            background: var(--surface);
+            border: 2px solid var(--gold);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-decoration: none;
+            color: var(--text);
+            text-align: center;
+            transition: 0.2s;
+            font-weight: 600;
+            font-family: var(--font-en);
+        }
+        .next-lesson-grid a:hover {
+            background: var(--gold);
+            color: #0B1F1A;
+            transform: translateY(-3px);
+        }
+        .next-lesson-grid a small {
+            display: block;
+            font-weight: 400;
+            color: var(--text-mid);
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
+        .next-lesson-grid a:hover small {
+            color: #0B1F1A;
+        }
+
+        /* ── Summary Check ── */
         .summary-check {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -669,6 +787,7 @@
             font-size: 1.2rem;
         }
 
+        /* ── CTA ── */
         .cta-banner {
             background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%);
             border: 1px solid rgba(230, 184, 74, 0.3);
@@ -729,69 +848,290 @@
 
         /* ── Responsive ── */
         @media (max-width: 600px) {
-            .lesson-container {
-                padding: 16px 12px 40px;
-            }
-            .tab-panels {
-                padding: 16px 16px;
-            }
-            .section-card {
-                padding: 16px 18px;
-            }
-            .alphabet-grid {
-                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            }
-            .vowel-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .consonant-grid {
-                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-            }
-            .daily-plan {
-                grid-template-columns: 1fr;
-            }
-            .summary-check {
-                grid-template-columns: 1fr;
-            }
-            .flashcard-grid {
-                grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-            }
-            .related-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .tab-btn {
-                font-size: 0.8rem;
-                padding: 10px 12px;
-                min-width: 60px;
-            }
-            .hero-lesson h1 {
-                font-size: 1.8rem;
-            }
+            .lesson-container { padding: 16px 12px 40px; }
+            .tab-panels { padding: 16px 16px; }
+            .section-card { padding: 16px 18px; }
+            .alphabet-grid { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
+            .vowel-grid { grid-template-columns: 1fr 1fr; }
+            .consonant-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+            .daily-plan { grid-template-columns: 1fr; }
+            .summary-check { grid-template-columns: 1fr; }
+            .flashcard-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+            .related-grid { grid-template-columns: 1fr 1fr; }
+            .next-lesson-grid { grid-template-columns: 1fr 1fr; }
+            .tab-btn { font-size: 0.75rem; padding: 10px 10px; min-width: 50px; white-space: normal; }
+            .hero-lesson h1 { font-size: 1.8rem; }
+            .progress-box { flex-direction: column; align-items: stretch; }
+            .progress-box .steps { justify-content: space-between; }
         }
         @media (max-width: 400px) {
-            .alphabet-grid {
-                grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-            }
-            .consonant-grid {
-                grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-            }
-            .related-grid {
-                grid-template-columns: 1fr;
-            }
-            .tab-btn {
-                flex: 1 1 100%;
-            }
+            .alphabet-grid { grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); }
+            .consonant-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+            .related-grid { grid-template-columns: 1fr; }
+            .next-lesson-grid { grid-template-columns: 1fr; }
+            .tab-btn { flex: 1 1 100%; }
         }
     </style>
 </head>
 <body>
+<header class="site-header">
+    <div class="nav-inner">
+        <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <!-- Play Store Download Button -->
+            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary"
+               target="_blank"
+               rel="noopener"
+               class="nav-cta"
+               style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                📱 Download App
+            </a>
+            <!-- Mobile Toggle Button -->
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <ul class="mega-menu" id="megaMenu">
+            <li><a href="/">🏠 Home</a></li>
+
+            <li>
+                <a href="/learn.html">📚 Learn</a>
+                <div class="dropdown">
+                    <a href="/learn.html#beginner">Beginner (A1)</a>
+                    <a href="/learn.html#elementary">Elementary (A2)</a>
+                    <a href="/learn.html#intermediate">Intermediate (B1)</a>
+                    <a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+                    <a href="/learn.html#advanced">Advanced (C1)</a>
+                    <a href="/dashboard.html">📊 Progress</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/dictionary.html">📖 Dictionary</a>
+                <div class="dropdown">
+                    <a href="/dictionary.html">Search Words</a>
+                    <a href="/explorer.html">Word Explorer</a>
+                    <a href="/word-of-the-day.html">Word of the Day</a>
+                    <a href="/vocabulary-builder.html">Vocabulary Builder</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/grammar.html">📝 Grammar</a>
+                <div class="dropdown">
+                    <a href="/grammar.html#beginner">Beginner Grammar</a>
+                    <a href="/grammar.html#intermediate">Intermediate Grammar</a>
+                    <a href="/grammar.html#advanced">Advanced Grammar</a>
+                    <a href="/grammar-quiz.html">Grammar Quiz</a>
+                    <a href="/grammar-checker.html">Grammar Checker</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/speaking.html">🗣 Speaking</a>
+                <div class="dropdown">
+                    <a href="/speaking.html#daily">Daily Conversation</a>
+                    <a href="/speaking.html#travel">Travel English</a>
+                    <a href="/speaking.html#office">Office English</a>
+                    <a href="/speaking.html#interview">Job Interview</a>
+                    <a href="/speaking-practice.html">Speaking Practice</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/writing.html">✍ Writing</a>
+                <div class="dropdown">
+                    <a href="/writing.html#academic">Academic Writing</a>
+                    <a href="/writing.html#business">Business English</a>
+                    <a href="/writing.html#daily">Daily Writing</a>
+                    <a href="/sentence-analyzer.html">Sentence Analyzer</a>
+                    <a href="/grammar-checker.html">Grammar Checker</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/practice.html">🎯 Practice</a>
+                <div class="dropdown">
+                    <a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
+                    <a href="/flashcards.html">Flashcards</a>
+                    <a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+                    <a href="/grammar-quiz.html">Grammar Quiz</a>
+                    <a href="/speaking-practice.html">Speaking Practice</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/assessment.html">🧪 Assessment</a>
+                <div class="dropdown">
+                    <a href="/english-level-test.html">CEFR Level Test</a>
+                    <a href="/grammar-level-test.html">Grammar Test</a>
+                    <a href="/vocabulary-size-test.html">Vocabulary Size</a>
+                    <a href="/assessment.html#report">Progress Report</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/exam-prep.html">🎓 Exam Prep</a>
+                <div class="dropdown">
+                    <a href="/ielts-guide.html">IELTS</a>
+                    <a href="/bcs-english-mock-test.html">BCS</a>
+                    <a href="/bank-job-english-preparation-guide.html">Bank Jobs</a>
+                    <a href="/exam-prep.html#ssc">SSC / HSC</a>
+                    <a href="/exam-prep.html#university">University Admission</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/tools.html">🛠 Tools</a>
+                <div class="dropdown">
+                    <a href="/sentence-analyzer.html">Sentence Analyzer</a>
+                    <a href="/tense-identifier.html">Tense Identifier</a>
+                    <a href="/voice-converter.html">Voice Converter</a>
+                    <a href="/plural-maker.html">Plural Maker</a>
+                    <a href="/verb-forms.html">Verb Forms</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+                <div class="dropdown">
+                    <a href="/bangladesh.html#visa">Visa & Immigration</a>
+                    <a href="/bangladesh.html#job">Job Interview</a>
+                    <a href="/bangladesh.html#daily">Daily Life English</a>
+                    <a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+                </div>
+            </li>
+
+            <li><a href="/blog.html">📰 Blog</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+
 
     <!-- ══ HERO ══ -->
     <section class="hero-lesson">
         <div style="max-width: 880px; margin: 0 auto;">
             <span class="level-badge">🌱 A1 Beginner</span>
             <h1>🔤 English Alphabet Guide with Bangla Pronunciation</h1>
-            <p>Learn the English alphabet with <strong>Bangla pronunciation</strong>, examples, quizzes, flashcards, and speaking practice. A complete beginner guide for <strong>Bangladeshi learners</strong>.</p>
+            <p>Master the English alphabet with <strong>pronunciation, writing practice, quizzes, and daily exercises</strong> – designed for Bangladeshi learners.</p>
             <div class="meta-tags">
                 <span class="meta-tag">📚 26 Letters</span>
                 <span class="meta-tag">🔊 Pronunciation</span>
@@ -811,11 +1151,31 @@
             <a href="/pronunciation-basics.html">Next: Pronunciation Basics →</a>
         </div>
 
+        <!-- ─── PROGRESS BOX ─── -->
+        <div class="progress-box" id="progressBox">
+            <div>
+                <span class="label">🔤 Alphabet Progress</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressFill" style="width:25%;"></div>
+                </div>
+            </div>
+            <div class="steps">
+                <span class="step done">Learn</span>
+                <span class="step active">Pronunciation</span>
+                <span class="step">Practice</span>
+                <span class="step">Quiz</span>
+                <span class="step">Resources</span>
+            </div>
+            <span class="percent" id="progressPercent">25%</span>
+        </div>
+
         <!-- ═══ TABS ═══ -->
         <div class="tabs" role="tablist">
             <button class="tab-btn active" data-tab="learn" role="tab">📖 Learn</button>
-            <button class="tab-btn" data-tab="practice" role="tab">🎯 Practice</button>
-            <button class="tab-btn" data-tab="extras" role="tab">📚 Extras</button>
+            <button class="tab-btn" data-tab="pronunciation" role="tab">🔊 Pronunciation</button>
+            <button class="tab-btn" data-tab="practice" role="tab">✍ Practice</button>
+            <button class="tab-btn" data-tab="quiz" role="tab">🎯 Quiz</button>
+            <button class="tab-btn" data-tab="resources" role="tab">📚 Resources</button>
         </div>
 
         <div class="tab-panels">
@@ -853,7 +1213,7 @@
                 <!-- 2. The 26 Letters -->
                 <div class="section-card">
                     <h2>🔤 2. The 26 English Letters</h2>
-                    <p>Here are all <strong>26 letters</strong> of the English alphabet with their <strong>names</strong> and <strong>Bangla pronunciation</strong>.</p>
+                    <p>Here are all <strong>26 letters</strong> with their <strong>names</strong> and <strong>Bangla pronunciation</strong>.</p>
                     <div class="alphabet-grid">
                         <div class="alphabet-card"><div class="letter">A</div><div class="name">/eɪ/</div><div class="bangla">এ</div><div class="example">Apple</div></div>
                         <div class="alphabet-card"><div class="letter">B</div><div class="name">/biː/</div><div class="bangla">বি</div><div class="example">Book</div></div>
@@ -893,31 +1253,11 @@
                     <h2>🔊 3. Vowels – A, E, I, O, U</h2>
                     <p>There are <strong>5 vowels</strong> in English: <strong>A, E, I, O, U</strong>. These letters make the most important sounds in English words.</p>
                     <div class="vowel-grid">
-                        <div class="vowel-card">
-                            <div class="letter">A</div>
-                            <div class="example">Apple → আপেল</div>
-                            <div class="bangla">স্বরবর্ণ: এ</div>
-                        </div>
-                        <div class="vowel-card">
-                            <div class="letter">E</div>
-                            <div class="example">Elephant → হাতি</div>
-                            <div class="bangla">স্বরবর্ণ: ই</div>
-                        </div>
-                        <div class="vowel-card">
-                            <div class="letter">I</div>
-                            <div class="example">Ice → বরফ</div>
-                            <div class="bangla">স্বরবর্ণ: আই</div>
-                        </div>
-                        <div class="vowel-card">
-                            <div class="letter">O</div>
-                            <div class="example">Orange → কমলা</div>
-                            <div class="bangla">স্বরবর্ণ: ও</div>
-                        </div>
-                        <div class="vowel-card">
-                            <div class="letter">U</div>
-                            <div class="example">Umbrella → ছাতা</div>
-                            <div class="bangla">স্বরবর্ণ: ইউ</div>
-                        </div>
+                        <div class="vowel-card"><div class="letter">A</div><div class="example">Apple → আপেল</div><div class="bangla">স্বরবর্ণ: এ</div></div>
+                        <div class="vowel-card"><div class="letter">E</div><div class="example">Elephant → হাতি</div><div class="bangla">স্বরবর্ণ: ই</div></div>
+                        <div class="vowel-card"><div class="letter">I</div><div class="example">Ice → বরফ</div><div class="bangla">স্বরবর্ণ: আই</div></div>
+                        <div class="vowel-card"><div class="letter">O</div><div class="example">Orange → কমলা</div><div class="bangla">স্বরবর্ণ: ও</div></div>
+                        <div class="vowel-card"><div class="letter">U</div><div class="example">Umbrella → ছাতা</div><div class="bangla">স্বরবর্ণ: ইউ</div></div>
                     </div>
                     <div class="example-box">
                         <p class="en"><strong>💡 Remember:</strong> Every English word has at least one vowel sound. "A, E, I, O, U" are the vowels.</p>
@@ -1096,9 +1436,14 @@
                     </div>
                 </div>
 
-                <!-- 7. Pronunciation Guide -->
+            </div> <!-- end Learn tab -->
+
+            <!-- ─── TAB 2: PRONUNCIATION ─── -->
+            <div class="tab-panel" id="panel-pronunciation" role="tabpanel">
+
+                <!-- Pronunciation Table -->
                 <div class="section-card">
-                    <h2>🔊 7. Pronunciation Guide</h2>
+                    <h2>🔊 1. Full Pronunciation Guide</h2>
                     <p>Each letter has a <strong>sound</strong>. Here is how to pronounce each letter with Bangla pronunciation.</p>
                     <table class="pronounce-table">
                         <thead><tr><th>Letter</th><th>Sound</th><th>Bangla</th><th>Example</th></tr></thead>
@@ -1137,9 +1482,9 @@
                     </div>
                 </div>
 
-                <!-- 8. Common Letter Sounds -->
+                <!-- Common Letter Sounds (Hard/Soft) -->
                 <div class="section-card">
-                    <h2>🔊 8. Common Letter Sounds (Soft vs Hard)</h2>
+                    <h2>🔊 2. Common Letter Sounds (Soft vs Hard)</h2>
                     <p>Some letters have <strong>different sounds</strong> depending on the word.</p>
                     <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:12px 0;">
                         <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px;">
@@ -1169,28 +1514,82 @@
                     </div>
                 </div>
 
-            </div> <!-- end Learn tab -->
-
-            <!-- ─── TAB 2: PRACTICE ─── -->
-            <div class="tab-panel" id="panel-practice" role="tabpanel">
-
-                <!-- Quiz -->
+                <!-- Minimal Pairs -->
                 <div class="section-card">
-                    <h2>📝 1. Quick Quiz – Test Your Knowledge</h2>
-                    <p>Answer these <strong>10 questions</strong> to check your understanding of the English alphabet.</p>
-                    <div class="quiz-container" id="quizContainer">
-                        <div id="quizQuestions"></div>
-                        <div class="quiz-controls">
-                            <button class="btn" onclick="submitAlphabetQuiz()">✅ Submit Answers</button>
-                            <button class="btn btn-secondary" onclick="resetAlphabetQuiz()">🔄 Reset</button>
-                        </div>
-                        <div id="quizScoreDisplay" class="quiz-feedback" style="display:none;"></div>
+                    <h2>🔊 3. Minimal Pairs – Hear the Difference</h2>
+                    <p>Practice distinguishing similar sounds that Bangladeshi learners often confuse.</p>
+                    <div class="minimal-pair">
+                        <div class="pair"><span class="word">Sheep</span> <span class="sound">/ʃiːp/</span></div>
+                        <div class="pair"><span class="word">Ship</span> <span class="sound">/ʃɪp/</span></div>
+                    </div>
+                    <div class="minimal-pair">
+                        <div class="pair"><span class="word">Heat</span> <span class="sound">/hiːt/</span></div>
+                        <div class="pair"><span class="word">Hit</span> <span class="sound">/hɪt/</span></div>
+                    </div>
+                    <div class="minimal-pair">
+                        <div class="pair"><span class="word">Bad</span> <span class="sound">/bæd/</span></div>
+                        <div class="pair"><span class="word">Bed</span> <span class="sound">/bed/</span></div>
+                    </div>
+                    <div class="minimal-pair">
+                        <div class="pair"><span class="word">Live</span> <span class="sound">/lɪv/</span></div>
+                        <div class="pair"><span class="word">Leave</span> <span class="sound">/liːv/</span></div>
+                    </div>
+                    <div class="example-box">
+                        <p class="en"><strong>💡 Tip:</strong> Click the 🔊 buttons below to hear each sound. Repeat them until you can hear the difference.</p>
+                        <p class="bn"><strong>💡 টিপ:</strong> নিচের 🔊 বাটনে ক্লিক করে প্রতিটি শব্দ শুনুন। পার্থক্য বুঝতে না পারা পর্যন্ত পুনরাবৃত্তি করুন।</p>
+                    </div>
+                    <div class="letter-sound-buttons">
+                        <button class="btn btn-secondary" onclick="speakLetter('sheep')">🔊 Sheep</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('ship')">🔊 Ship</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('heat')">🔊 Heat</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('hit')">🔊 Hit</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('bad')">🔊 Bad</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('bed')">🔊 Bed</button>
                     </div>
                 </div>
 
+                <!-- Listen & Repeat (Full Alphabet) -->
+                <div class="section-card">
+                    <h2>🔊 4. Listen & Repeat – Full Alphabet</h2>
+                    <p>Click any letter to hear its pronunciation. Listen carefully and repeat.</p>
+                    <div class="letter-sound-buttons">
+                        <button class="btn btn-secondary" onclick="speakLetter('A')">🔊 A</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('B')">🔊 B</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('C')">🔊 C</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('D')">🔊 D</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('E')">🔊 E</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('F')">🔊 F</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('G')">🔊 G</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('H')">🔊 H</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('I')">🔊 I</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('J')">🔊 J</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('K')">🔊 K</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('L')">🔊 L</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('M')">🔊 M</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('N')">🔊 N</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('O')">🔊 O</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('P')">🔊 P</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('Q')">🔊 Q</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('R')">🔊 R</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('S')">🔊 S</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('T')">🔊 T</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('U')">🔊 U</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('V')">🔊 V</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('W')">🔊 W</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('X')">🔊 X</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('Y')">🔊 Y</button>
+                        <button class="btn btn-secondary" onclick="speakLetter('Z')">🔊 Z</button>
+                    </div>
+                </div>
+
+            </div> <!-- end Pronunciation tab -->
+
+            <!-- ─── TAB 3: PRACTICE ─── -->
+            <div class="tab-panel" id="panel-practice" role="tabpanel">
+
                 <!-- Flashcards -->
                 <div class="section-card">
-                    <h2>🃏 2. Flashcards – Learn the Alphabet</h2>
+                    <h2>🃏 1. Flashcards – Learn the Alphabet</h2>
                     <p>Click each flashcard to reveal the letter and its Bangla meaning.</p>
                     <div class="flashcard-grid" id="flashcardGrid">
                         <div class="flashcard" onclick="this.classList.toggle('flipped')"><span class="en">A</span><span class="bn">এ</span></div>
@@ -1225,50 +1624,11 @@
                     </div>
                 </div>
 
-                <!-- Speaking Practice -->
-                <div class="section-card">
-                    <h2>🎤 3. Speaking Practice</h2>
-                    <p>Practice pronouncing the alphabet. <strong>Listen, repeat, and record your voice.</strong></p>
-                    <div class="speaking-section">
-                        <p style="color:var(--text-mid); margin-bottom:12px;">Click the button below to start recording. Say the letters from A to Z.</p>
-                        <button id="speakBtn" class="mic-btn">🎙️ Start Recording</button>
-                        <div id="speakResult" class="result-text">Your recording will appear here.</div>
-                    </div>
-                    <div class="letter-sound-buttons">
-                        <button class="btn btn-secondary" onclick="speakLetter('A')">🔊 A</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('B')">🔊 B</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('C')">🔊 C</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('D')">🔊 D</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('E')">🔊 E</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('F')">🔊 F</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('G')">🔊 G</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('H')">🔊 H</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('I')">🔊 I</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('J')">🔊 J</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('K')">🔊 K</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('L')">🔊 L</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('M')">🔊 M</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('N')">🔊 N</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('O')">🔊 O</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('P')">🔊 P</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('Q')">🔊 Q</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('R')">🔊 R</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('S')">🔊 S</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('T')">🔊 T</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('U')">🔊 U</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('V')">🔊 V</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('W')">🔊 W</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('X')">🔊 X</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('Y')">🔊 Y</button>
-                        <button class="btn btn-secondary" onclick="speakLetter('Z')">🔊 Z</button>
-                    </div>
-                </div>
-
                 <!-- Writing Practice -->
                 <div class="section-card">
-                    <h2>✍️ 4. Writing Practice – Trace the Letters</h2>
+                    <h2>✍️ 2. Writing Practice – Trace the Letters</h2>
                     <p>Practice writing each letter. Trace the letter, then write it on your own.</p>
-                    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:12px; margin:12px 0;">
+                    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:12px 0;">
                         <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px; text-align:center;">
                             <div style="font-size:3rem; font-weight:700; color:var(--gold); font-family:var(--font-en);">Aa</div>
                             <div style="font-size:0.8rem; color:var(--text-soft);">Trace: A a</div>
@@ -1315,9 +1675,20 @@
                     </div>
                 </div>
 
+                <!-- Speaking Practice (Recording) -->
+                <div class="section-card">
+                    <h2>🎤 3. Speaking Practice – Record & Compare</h2>
+                    <p>Record your voice saying the alphabet and play it back to check your pronunciation.</p>
+                    <div class="speaking-section">
+                        <p style="color:var(--text-mid); margin-bottom:12px;">Click the button below to start recording. Say the letters from A to Z.</p>
+                        <button id="speakBtn" class="mic-btn">🎙️ Start Recording</button>
+                        <div id="speakResult" class="result-text">Your recording will appear here.</div>
+                    </div>
+                </div>
+
                 <!-- Alphabet Song -->
                 <div class="section-card">
-                    <h2>🎵 5. Alphabet Song</h2>
+                    <h2>🎵 4. Alphabet Song</h2>
                     <p>Sing the alphabet song to remember the order of the letters!</p>
                     <div style="background:var(--surface); border:1px solid var(--gold); border-radius:var(--radius); padding:16px 20px; text-align:center; margin:12px 0;">
                         <p style="font-size:1.1rem; line-height:2; color:var(--text); font-family:var(--font-en);">
@@ -1336,8 +1707,26 @@
 
             </div> <!-- end Practice tab -->
 
-            <!-- ─── TAB 3: EXTRAS ─── -->
-            <div class="tab-panel" id="panel-extras" role="tabpanel">
+            <!-- ─── TAB 4: QUIZ ─── -->
+            <div class="tab-panel" id="panel-quiz" role="tabpanel">
+
+                <div class="section-card">
+                    <h2>📝 1. Alphabet Quiz – Test Your Knowledge</h2>
+                    <p>Answer these <strong>10 questions</strong> to check your understanding of the English alphabet.</p>
+                    <div class="quiz-container" id="quizContainer">
+                        <div id="quizQuestions"></div>
+                        <div class="quiz-controls">
+                            <button class="btn" onclick="submitAlphabetQuiz()">✅ Submit Answers</button>
+                            <button class="btn btn-secondary" onclick="resetAlphabetQuiz()">🔄 Reset</button>
+                        </div>
+                        <div id="quizScoreDisplay" class="quiz-feedback" style="display:none;"></div>
+                    </div>
+                </div>
+
+            </div> <!-- end Quiz tab -->
+
+            <!-- ─── TAB 5: RESOURCES ─── -->
+            <div class="tab-panel" id="panel-resources" role="tabpanel">
 
                 <!-- Beginner Vocabulary -->
                 <div class="section-card">
@@ -1431,11 +1820,6 @@
                     <div style="background:var(--surface); border:1px solid var(--gold); border-radius:var(--radius); padding:16px 20px; margin:12px 0; text-align:center;">
                         <p style="font-size:1.2rem; color:var(--gold); font-weight:600;">🎉 You are now ready to learn your first English words!</p>
                     </div>
-                    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
-                        <a href="/basic-vocabulary-list.html" class="btn" style="text-decoration:none;">📚 Next: Basic Vocabulary</a>
-                        <a href="/pronunciation-basics.html" class="btn btn-secondary" style="text-decoration:none;">🔊 Pronunciation Basics</a>
-                        <a href="/learn.html" class="btn btn-secondary" style="text-decoration:none;">📖 Back to Learn</a>
-                    </div>
                 </div>
 
                 <!-- Related Resources -->
@@ -1453,7 +1837,19 @@
                     </div>
                 </div>
 
-            </div> <!-- end Extras tab -->
+                <!-- Next Lesson CTA (Duolingo-style) -->
+                <div class="section-card" style="border:2px solid var(--gold);">
+                    <h2 style="border-bottom-color:var(--gold);">🚀 Your Next Lesson</h2>
+                    <p style="color:var(--text-mid);">Keep your momentum going – choose your next step:</p>
+                    <div class="next-lesson-grid">
+                        <a href="/phonics-guide.html">🔤 Phonics<span><small>Letter sounds & blending</small></span></a>
+                        <a href="/pronunciation-basics.html">🔊 Pronunciation<span><small>Speak clearly & confidently</small></span></a>
+                        <a href="/basic-vocabulary-list.html">📚 Vocabulary<span><small>500+ essential words</small></span></a>
+                        <a href="/grammar.html">📝 Grammar<span><small>Build correct sentences</small></span></a>
+                    </div>
+                </div>
+
+            </div> <!-- end Resources tab -->
 
         </div> <!-- end tab-panels -->
 
@@ -1481,23 +1877,42 @@
         const tabs = document.querySelectorAll('.tab-btn');
         const panels = {
             learn: document.getElementById('panel-learn'),
+            pronunciation: document.getElementById('panel-pronunciation'),
             practice: document.getElementById('panel-practice'),
-            extras: document.getElementById('panel-extras')
+            quiz: document.getElementById('panel-quiz'),
+            resources: document.getElementById('panel-resources')
         };
 
         tabs.forEach(function(btn) {
             btn.addEventListener('click', function() {
-                // Remove active from all tabs
                 tabs.forEach(function(b) { b.classList.remove('active'); });
                 this.classList.add('active');
-
-                // Hide all panels, show the selected one
                 const target = this.dataset.tab;
                 Object.keys(panels).forEach(function(key) {
                     panels[key].classList.toggle('active', key === target);
                 });
+                // Update progress bar (simulate)
+                updateProgress(target);
             });
         });
+
+        // ── Progress Box ──
+        const stepOrder = ['learn', 'pronunciation', 'practice', 'quiz', 'resources'];
+        const stepLabels = ['Learn', 'Pronunciation', 'Practice', 'Quiz', 'Resources'];
+
+        function updateProgress(activeTab) {
+            const idx = stepOrder.indexOf(activeTab);
+            const percent = Math.round(((idx + 1) / stepOrder.length) * 100);
+            document.getElementById('progressFill').style.width = percent + '%';
+            document.getElementById('progressPercent').textContent = percent + '%';
+
+            const steps = document.querySelectorAll('.progress-box .step');
+            steps.forEach(function(step, i) {
+                step.classList.remove('done', 'active');
+                if (i < idx) step.classList.add('done');
+                else if (i === idx) step.classList.add('active');
+            });
+        }
 
         // ── Back to Top ──
         const backBtn = document.getElementById('backToTop');
@@ -1516,9 +1931,9 @@
             window.speechSynthesis.speak(utterance);
         });
 
-        // ── Speaking: speak a letter ──
-        function speakLetter(letter) {
-            const utterance = new SpeechSynthesisUtterance(letter);
+        // ── Speaking: speak a letter or word ──
+        function speakLetter(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = 'en-US';
             utterance.rate = 0.7;
             window.speechSynthesis.speak(utterance);
@@ -1646,8 +2061,24 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             renderAlphabetQuiz();
+            // Set initial progress to Learn (tab 1 = 20%)
+            updateProgress('learn');
         });
     </script>
+
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+    <p>
+        <a href="/">Home</a> &nbsp;•&nbsp;
+        <a href="/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="/blog.html">Blog</a> &nbsp;•&nbsp;
+        <a href="/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
+        <a href="/privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
 
 </body>
 </html>
