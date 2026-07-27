@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ielts-mock-001",
+    "title": "IELTS Listening Mock Test 01",
+    "level": "B2",
+    "total_duration": 15,
+    "context_bn": "এটি একটি সম্পূর্ণ IELTS লিসনিং মক টেস্ট। প্রতিটি সেকশন শুনুন এবং প্রশ্নের উত্তর দিন।",
+    "sections": [
+      {
+        "id": "sec-1",
+        "title": "Section 1: Booking a Hotel Room",
+        "audio_text": "You will hear a conversation between a customer and a hotel receptionist. The customer is calling to book a room for a business trip. Receptionist: Good morning, Grand Hotel. How can I help you? Customer: Hello, I would like to book a double room for three nights, starting from next Monday. Receptionist: Let me check our availability. We have a standard double room available. The price is $120 per night, including breakfast. Customer: That sounds good. Do you have a room with a sea view? Receptionist: Yes, we have a sea view room for $150 per night. Customer: I will take the sea view room. Can I also request a late check-out? Receptionist: Certainly. You can check out at 2 PM on your final day. Customer: Excellent. Can you confirm my booking? Receptionist: Yes, I have confirmed your booking. The total cost will be $450. We will send you the confirmation email shortly. Customer: Thank you very much. Receptionist: You are welcome. Have a great day.",
+        "bangla_translation": "আপনি একজন গ্রাহক এবং হোটেল রিসেপশনিস্টের মধ্যে কথোপকথন শুনতে পাবেন। গ্রাহক একটি ব্যবসায়িক ভ্রমণের জন্য রুম বুক করতে কল করছেন। রিসেপশনিস্ট: শুভ সকাল, গ্র্যান্ড হোটেল। আমি কীভাবে আপনাকে সাহায্য করতে পারি? গ্রাহক: হ্যালো, আমি আগামী সোমবার থেকে তিন রাতের জন্য একটি ডাবল রুম বুক করতে চাই। রিসেপশনিস্ট: আমি আমাদের প্রাপ্যতা পরীক্ষা করি। আমাদের কাছে একটি স্ট্যান্ডার্ড ডাবল রুম পাওয়া যায়। মূল্য প্রতি রাতে $১২০, নাস্তাসহ। গ্রাহক: এটি ভালো শোনাচ্ছে। আপনার কি সমুদ্র দেখার রুম আছে? রিসেপশনিস্ট: হ্যাঁ, আমাদের কাছে প্রতি রাতে $১৫০-এ সমুদ্র দেখার রুম আছে। গ্রাহক: আমি সমুদ্র দেখার রুম নেব। আমি কি লেট চেক-আউটের জন্য অনুরোধ করতে পারি? রিসেপশনিস্ট: অবশ্যই। আপনি আপনার শেষ দিনে দুপুর ২টায় চেক-আউট করতে পারেন। গ্রাহক: চমৎকার। আপনি কি আমার বুকিং নিশ্চিত করতে পারেন? রিসেপশনিস্ট: হ্যাঁ, আমি আপনার বুকিং নিশ্চিত করেছি। মোট খরচ হবে $৪৫০। আমরা শীঘ্রই আপনাকে নিশ্চিতকরণ ইমেইল পাঠাব। গ্রাহক: আপনাকে অনেক ধন্যবাদ। রিসেপশনিস্ট: আপনাকে স্বাগতম। আপনার দিন শুভ হোক।",
+        "mcqs": [
+          {"question": "What type of room does the customer initially ask for?", "options": ["Single room", "Double room", "Suite", "Family room"], "correct": 1},
+          {"question": "How much does the standard double room cost per night?", "options": ["$100", "$120", "$150", "$180"], "correct": 1},
+          {"question": "Why does the customer choose the sea view room?", "options": ["It is cheaper", "It has breakfast", "It has a sea view", "It is larger"], "correct": 2},
+          {"question": "What time can the customer check out on the final day?", "options": ["10 AM", "12 PM", "2 PM", "4 PM"], "correct": 2}
+        ]
+      },
+      {
+        "id": "sec-2",
+        "title": "Section 2: College Admissions Talk",
+        "audio_text": "Welcome to the University of Dhaka admission seminar. Today we are going to discuss the application process for the upcoming academic year. First, you must ensure you meet the minimum GPA requirements. For science students, the requirement is a 4.0 out of 5.0. For humanities students, it is 3.8. Secondly, you will need to submit a completed application form, your academic transcripts, and two recommendation letters. The deadline for submissions is August 15th. Please do not submit your application after this date, as the system will reject it automatically. Thirdly, there will be a written admission test on September 5th. The test will cover English, Mathematics, and General Knowledge. We strongly advise you to use the sample papers on our website to practice. If you have any questions, please visit our help desk on campus or email us.",
+        "bangla_translation": "ঢাকা বিশ্ববিদ্যালয়ের ভর্তি সেমিনারে স্বাগতম। আজ আমরা আসন্ন শিক্ষাবর্ষের জন্য আবেদন প্রক্রিয়া নিয়ে আলোচনা করতে যাচ্ছি। প্রথমত, আপনাকে নিশ্চিত হতে হবে যে আপনি ন্যূনতম জিপিএ প্রয়োজনীয়তা পূরণ করছেন। বিজ্ঞান শিক্ষার্থীদের জন্য প্রয়োজন ৫-এর মধ্যে ৪.০। মানবিক শিক্ষার্থীদের জন্য এটি ৩.৮। দ্বিতীয়ত, আপনাকে একটি সম্পূর্ণ আবেদনপত্র, আপনার একাডেমিক ট্রান্সক্রিপ্ট এবং দুটি সুপারিশপত্র জমা দিতে হবে। জমা দেওয়ার শেষ তারিখ ১৫ আগস্ট। এই তারিখের পরে আপনার আবেদন জমা দেবেন না, কারণ সিস্টেমটি স্বয়ংক্রিয়ভাবে এটি প্রত্যাখ্যান করবে। তৃতীয়ত, ৫ সেপ্টেম্বর একটি লিখিত ভর্তি পরীক্ষা হবে। পরীক্ষাটি ইংরেজি, গণিত এবং সাধারণ জ্ঞানের উপর হবে। আমরা দৃঢ়ভাবে পরামর্শ দিচ্ছি যে আপনি আমাদের ওয়েবসাইটে নমুনা প্রশ্নপত্রগুলি ব্যবহার করে অনুশীলন করুন। আপনার যদি কোন প্রশ্ন থাকে, তাহলে অনুগ্রহ করে আমাদের ক্যাম্পাসে হেল্প ডেস্কে যান বা আমাদের ইমেইল করুন।",
+        "mcqs": [
+          {"question": "What is the minimum GPA for science students?", "options": ["3.5", "3.8", "4.0", "4.5"], "correct": 2},
+          {"question": "What is the deadline for applications?", "options": ["August 1st", "August 15th", "September 1st", "September 5th"], "correct": 1},
+          {"question": "What subjects are covered in the admission test?", "options": ["English, Math, Science", "English, Math, General Knowledge", "English, Science, History", "Math, Science, GK"], "correct": 1}
+        ]
+      },
+      {
+        "id": "sec-3",
+        "title": "Section 3: Business Meeting Discussion",
+        "audio_text": "Good morning everyone. Thank you for joining this quarterly sales meeting. I will start by reviewing our Q3 performance. Overall, our sales have increased by 15% compared to the previous quarter. The marketing team has done an excellent job with the new digital campaign. However, I must point out that our expenses have also risen by 8%, mainly due to higher shipping costs. We need to find a more cost-effective shipping partner. Our target for Q4 is to achieve a 20% growth. To achieve this, the sales team must focus on retaining existing clients rather than just acquiring new ones. I will send a detailed report to everyone by this afternoon. Are there any questions? Yes, Jane. You mentioned that the new software is delayed. We are currently in talks with the developer to speed up the deployment. We expect to have it ready by November 1st. Alright, thank you everyone. Let's make this next quarter our best one yet.",
+        "bangla_translation": "সকলকে শুভ সকাল। এই ত্রৈমাসিক বিক্রয় সভায় যোগ দেওয়ার জন্য ধন্যবাদ। আমি আমাদের Q3 কর্মক্ষমতা পর্যালোচনা করে শুরু করব। সামগ্রিকভাবে, আমাদের বিক্রয় পূর্ববর্তী ত্রৈমাসিকের তুলনায় ১৫% বৃদ্ধি পেয়েছে। মার্কেটিং টিম নতুন ডিজিটাল ক্যাম্পেইনের সাথে একটি চমৎকার কাজ করেছে। তবে, আমি উল্লেখ করতে চাই যে আমাদের খরচও ৮% বৃদ্ধি পেয়েছে, প্রধানত উচ্চ শিপিং খরচের কারণে। আমাদের একটি আরও সাশ্রয়ী শিপিং অংশীদার খুঁজে বের করতে হবে। Q4 এর জন্য আমাদের লক্ষ্য হল ২০% বৃদ্ধি অর্জন। এটি অর্জনের জন্য, বিক্রয় দলকে নতুন গ্রাহক অর্জনের পরিবর্তে বিদ্যমান গ্রাহকদের ধরে রাখার দিকে মনোনিবেশ করতে হবে। আমি আজ দুপুরের মধ্যে সবার কাছে একটি বিস্তারিত রিপোর্ট পাঠাব। কোন প্রশ্ন আছে? হ্যাঁ, জেন। আপনি উল্লেখ করেছেন যে নতুন সফটওয়্যারটি বিলম্বিত হচ্ছে। আমরা বর্তমানে ডেভেলপারের সাথে কথা বলছি যাতে দ্রুত স্থাপন করা যায়। আমরা আশা করি এটি ১ নভেম্বরের মধ্যে প্রস্তুত হবে। ঠিক আছে, সবাইকে ধন্যবাদ। চলুন এই পরবর্তী ত্রৈমাসিকটি আমাদের সেরা ত্রৈমাসিক করে তুলি।",
+        "mcqs": [
+          {"question": "What was the overall sales increase in Q3?", "options": ["8%", "10%", "15%", "20%"], "correct": 2},
+          {"question": "Why did expenses rise?", "options": ["Higher marketing costs", "Higher shipping costs", "New software costs", "Higher salaries"], "correct": 1},
+          {"question": "What is the Q4 sales target?", "options": ["10%", "15%", "20%", "25%"], "correct": 2},
+          {"question": "When is the new software expected to be ready?", "options": ["October 1st", "November 1st", "December 1st", "January 1st"], "correct": 1}
+        ]
+      },
+      {
+        "id": "sec-4",
+        "title": "Section 4: Academic Lecture (Climate Change)",
+        "audio_text": "Today, I am going to deliver a lecture on the impact of climate change on coastal regions. Climate change is one of the most critical challenges of our time. For countries like Bangladesh, which has a vast coastline and a massive population living in low-lying areas, the stakes are particularly high. Rising sea levels are causing saltwater intrusion into freshwater sources, which directly affects agriculture and drinking water supplies. Furthermore, the increase in cyclonic storms has become more frequent and intense. In the last decade, we have witnessed three major cyclones that displaced over a million people and caused billions of dollars in damage. The government is working on coastal embankment projects and early warning systems to mitigate these impacts. However, international cooperation is essential. We must push for global carbon emission reductions to slow down the warming of our planet. I encourage everyone here to advocate for sustainable policies in your communities. Thank you.",
+        "bangla_translation": "আজ, আমি উপকূলীয় অঞ্চলের উপর জলবায়ু পরিবর্তনের প্রভাব সম্পর্কে একটি বক্তৃতা দিতে যাচ্ছি। জলবায়ু পরিবর্তন আমাদের সময়ের অন্যতম গুরুত্বপূর্ণ চ্যালেঞ্জ। বাংলাদেশের মতো দেশের জন্য, যার বিশাল উপকূলরেখা এবং নিম্নাঞ্চলে বসবাসকারী বিশাল জনসংখ্যা রয়েছে, ঝুঁকিগুলো বিশেষভাবে বেশি। সমুদ্রপৃষ্ঠের ক্রমবর্ধমান উচ্চতা মিষ্টি জলের উৎসে লবণাক্ত পানি প্রবেশ করাচ্ছে, যা সরাসরি কৃষি ও পানীয় জল সরবরাহকে প্রভাবিত করে। তাছাড়া, ঘূর্ণিঝড়ের সংখ্যা আরও ঘন ঘন এবং তীব্র হয়ে উঠেছে। গত দশকে, আমরা তিনটি বড় ঘূর্ণিঝড় প্রত্যক্ষ করেছি যেগুলি এক মিলিয়নেরও বেশি মানুষকে স্থানচ্যুত করেছে এবং বিলিয়ন ডলারের ক্ষতি করেছে। সরকার এই প্রভাবগুলি কমানোর জন্য উপকূলীয় বাঁধ প্রকল্প এবং প্রাথমিক সতর্কতা ব্যবস্থা নিয়ে কাজ করছে। তবে, আন্তর্জাতিক সহযোগিতা অত্যন্ত গুরুত্বপূর্ণ। আমাদের গ্রহের উষ্ণতা ধীর করার জন্য বৈশ্বিক কার্বন নির্গমন হ্রাসের জন্য চাপ দিতে হবে। আমি এখানে উপস্থিত সকলকে আপনার সম্প্রদায়ের মধ্যে টেকসই নীতির পক্ষে সওয়াল করার জন্য উত্সাহিত করি। আপনাকে ধন্যবাদ।",
+        "mcqs": [
+          {"question": "What is the main topic of the lecture?", "options": ["Coastal agriculture", "Cyclone formation", "Climate change impacts on coastal regions", "International cooperation"], "correct": 2},
+          {"question": "What is causing saltwater intrusion?", "options": ["Rising sea levels", "Cyclones", "Flooding", "Drought"], "correct": 0},
+          {"question": "How many major cyclones occurred in the last decade?", "options": ["One", "Two", "Three", "Four"], "correct": 2},
+          {"question": "What does the lecturer encourage at the end?", "options": ["Building more cities", "Advocating for sustainable policies", "Moving to inland areas", "Increasing carbon emissions"], "correct": 1}
+        ]
+      }
+    ],
+    "xp": 100
+  }
+]

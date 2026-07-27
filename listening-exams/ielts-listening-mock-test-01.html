@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Listening Mock Test 01 - Ovidhan IELTS Practice</title>
+    <meta name="description" content="You will hear a conversation between a customer and a hotel receptionist. The customer is calling to book a room for a business trip. Receptionist: Good morning... (Full IELTS Mock Test)">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .section-box { background: var(--surface); padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0; border: 1px solid var(--border); }
+        .section-box.hidden { display: none; }
+        .mcq-question { margin: 1rem 0; }
+        .mcq-question label { display: block; margin: 0.3rem 0; cursor: pointer; }
+        .btn-translate { background: var(--teal-dim); color: var(--teal); border: 1px solid var(--teal); padding: 0.3rem 1rem; border-radius: 12px; cursor: pointer; font-size: 0.9rem; margin-left: 1rem; }
+        .btn-translate:hover { background: var(--teal); color: #000; }
+        .translation-text { display: none; margin-top: 0.5rem; color: var(--text-mid); font-style: italic; }
+        .progress-bar { background: var(--surface2); height: 8px; border-radius: 8px; margin: 1rem 0; overflow: hidden; }
+        .progress-fill { background: var(--gold); height: 100%; width: 0%; transition: width 0.3s; }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <link rel="stylesheet" href="../../styles.css" />
+    <div class="nav-inner">
+        <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <!-- Play Store Download Button -->
+            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary"
+               target="_blank"
+               rel="noopener"
+               class="nav-cta"
+               style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                📱 Download App
+            </a>
+            <!-- Mobile Toggle Button -->
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <ul class="mega-menu" id="megaMenu">
+            <li><a href="/">🏠 Home</a></li>
+
+            <li>
+                <a href="/learn.html">📚 Learn</a>
+                <div class="dropdown">
+                    <a href="/learn.html#beginner">Beginner (A1)</a>
+                    <a href="/learn.html#elementary">Elementary (A2)</a>
+                    <a href="/learn.html#intermediate">Intermediate (B1)</a>
+                    <a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+                    <a href="/learn.html#advanced">Advanced (C1)</a>
+                    <a href="/dashboard.html">📊 Progress</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/dictionary.html">📖 Dictionary</a>
+                <div class="dropdown">
+                    <a href="/dictionary.html">Search Words</a>
+                    <a href="/explorer.html">Word Explorer</a>
+                    <a href="/word-of-the-day.html">Word of the Day</a>
+                    <a href="/vocabulary-builder.html">Vocabulary Builder</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/grammar.html">📝 Grammar</a>
+                <div class="dropdown">
+                    <a href="/grammar.html#beginner">Beginner Grammar</a>
+                    <a href="/grammar.html#intermediate">Intermediate Grammar</a>
+                    <a href="/grammar.html#advanced">Advanced Grammar</a>
+                    <a href="/grammar-quiz.html">Grammar Quiz</a>
+                    <a href="/grammar-checker.html">Grammar Checker</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/speaking.html">🗣 Speaking</a>
+                <div class="dropdown">
+                    <a href="/speaking.html#daily">Daily Conversation</a>
+                    <a href="/speaking.html#travel">Travel English</a>
+                    <a href="/speaking.html#office">Office English</a>
+                    <a href="/speaking.html#interview">Job Interview</a>
+                    <a href="/speaking-practice.html">Speaking Practice</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/writing.html">✍ Writing</a>
+                <div class="dropdown">
+                    <a href="/writing.html#academic">Academic Writing</a>
+                    <a href="/writing.html#business">Business English</a>
+                    <a href="/writing.html#daily">Daily Writing</a>
+                    <a href="/sentence-analyzer.html">Sentence Analyzer</a>
+                    <a href="/grammar-checker.html">Grammar Checker</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/practice.html">🎯 Practice</a>
+                <div class="dropdown">
+                    <a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
+                    <a href="/flashcards.html">Flashcards</a>
+                    <a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+                    <a href="/grammar-quiz.html">Grammar Quiz</a>
+                    <a href="/speaking-practice.html">Speaking Practice</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/assessment.html">🧪 Assessment</a>
+                <div class="dropdown">
+                    <a href="/english-level-test.html">CEFR Level Test</a>
+                    <a href="/grammar-level-test.html">Grammar Test</a>
+                    <a href="/vocabulary-size-test.html">Vocabulary Size</a>
+                    <a href="/assessment.html#report">Progress Report</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/exam-prep.html">🎓 Exam Prep</a>
+                <div class="dropdown">
+                    <a href="/ielts-guide.html">IELTS</a>
+                    <a href="/bcs-english-mock-test.html">BCS</a>
+                    <a href="/bank-job-english-preparation-guide.html">Bank Jobs</a>
+                    <a href="/exam-prep.html#ssc">SSC / HSC</a>
+                    <a href="/exam-prep.html#university">University Admission</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/tools.html">🛠 Tools</a>
+                <div class="dropdown">
+                    <a href="/sentence-analyzer.html">Sentence Analyzer</a>
+                    <a href="/tense-identifier.html">Tense Identifier</a>
+                    <a href="/voice-converter.html">Voice Converter</a>
+                    <a href="/plural-maker.html">Plural Maker</a>
+                    <a href="/verb-forms.html">Verb Forms</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+                <div class="dropdown">
+                    <a href="/bangladesh.html#visa">Visa & Immigration</a>
+                    <a href="/bangladesh.html#job">Job Interview</a>
+                    <a href="/bangladesh.html#daily">Daily Life English</a>
+                    <a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+                </div>
+            </li>
+
+            <li><a href="/blog.html">📰 Blog</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('megaMenu');
+        const toggle = document.querySelector('.menu-toggle');
+        menu.classList.toggle('open');
+        toggle.classList.toggle('active');
+    }
+
+    // Close menu when a link is clicked (better UX)
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.mega-menu a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const menu = document.getElementById('megaMenu');
+                const toggle = document.querySelector('.menu-toggle');
+                if (menu.classList.contains('open')) {
+                    menu.classList.remove('open');
+                    toggle.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<style>
+    /* Ensure these styles are also in style.css, but include here as fallback */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 101;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        .menu-toggle {
+            display: flex;
+        }
+        .mega-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .mega-menu.open {
+            display: flex;
+        }
+        .mega-menu li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .mega-menu li:last-child {
+            border-bottom: none;
+        }
+        .mega-menu li .dropdown {
+            display: none;
+            background: var(--surface2);
+            padding: 0.5rem 0;
+        }
+        .mega-menu li .dropdown a {
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+        .mega-menu li:hover .dropdown {
+            display: none; /* prevent hover on mobile */
+        }
+        /* On mobile, show dropdown when parent is clicked? */
+        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
+        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
+        .mega-menu li a {
+            padding: 12px 0;
+            display: block;
+            width: 100%;
+        }
+        .nav-inner {
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+        }
+        .nav-cta {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+    }
+</style>
+
+    <main style="max-width: 820px; margin: 120px auto; padding: 2rem;">
+        <h1 class="gold-text">IELTS Listening Mock Test 01</h1>
+        <p style="font-size: 1.1rem; color: var(--text-mid);">এটি একটি সম্পূর্ণ IELTS লিসনিং মক টেস্ট। প্রতিটি সেকশন শুনুন এবং প্রশ্নের উত্তর দিন।</p>
+        <p><strong>Level:</strong> B2 &nbsp;|&nbsp; <strong>Total Duration:</strong> 15 minutes &nbsp;|&nbsp; <strong>XP:</strong> 100</p>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+
+        <div id="exam-container">
+            
+        <div class="section-box" id="sec-0">
+            <h3>Section 1: Booking a Hotel Room</h3>
+            <button class="btn-primary" onclick="playSection(0)">🎧 Play Audio</button>
+            <button class="btn-translate" onclick="toggleTranslation(0)">🌐 Show Bangla</button>
+            <p id="audio-text-0" style="font-size: 1.1rem; margin-top: 1rem;">You will hear a conversation between a customer and a hotel receptionist. The customer is calling to book a room for a business trip. Receptionist: Good morning, Grand Hotel. How can I help you? Customer: Hello, I would like to book a double room for three nights, starting from next Monday. Receptionist: Let me check our availability. We have a standard double room available. The price is $120 per night, including breakfast. Customer: That sounds good. Do you have a room with a sea view? Receptionist: Yes, we have a sea view room for $150 per night. Customer: I will take the sea view room. Can I also request a late check-out? Receptionist: Certainly. You can check out at 2 PM on your final day. Customer: Excellent. Can you confirm my booking? Receptionist: Yes, I have confirmed your booking. The total cost will be $450. We will send you the confirmation email shortly. Customer: Thank you very much. Receptionist: You are welcome. Have a great day.</p>
+            <div id="translation-0" class="translation-text">আপনি একজন গ্রাহক এবং হোটেল রিসেপশনিস্টের মধ্যে কথোপকথন শুনতে পাবেন। গ্রাহক একটি ব্যবসায়িক ভ্রমণের জন্য রুম বুক করতে কল করছেন। রিসেপশনিস্ট: শুভ সকাল, গ্র্যান্ড হোটেল। আমি কীভাবে আপনাকে সাহায্য করতে পারি? গ্রাহক: হ্যালো, আমি আগামী সোমবার থেকে তিন রাতের জন্য একটি ডাবল রুম বুক করতে চাই। রিসেপশনিস্ট: আমি আমাদের প্রাপ্যতা পরীক্ষা করি। আমাদের কাছে একটি স্ট্যান্ডার্ড ডাবল রুম পাওয়া যায়। মূল্য প্রতি রাতে $১২০, নাস্তাসহ। গ্রাহক: এটি ভালো শোনাচ্ছে। আপনার কি সমুদ্র দেখার রুম আছে? রিসেপশনিস্ট: হ্যাঁ, আমাদের কাছে প্রতি রাতে $১৫০-এ সমুদ্র দেখার রুম আছে। গ্রাহক: আমি সমুদ্র দেখার রুম নেব। আমি কি লেট চেক-আউটের জন্য অনুরোধ করতে পারি? রিসেপশনিস্ট: অবশ্যই। আপনি আপনার শেষ দিনে দুপুর ২টায় চেক-আউট করতে পারেন। গ্রাহক: চমৎকার। আপনি কি আমার বুকিং নিশ্চিত করতে পারেন? রিসেপশনিস্ট: হ্যাঁ, আমি আপনার বুকিং নিশ্চিত করেছি। মোট খরচ হবে $৪৫০। আমরা শীঘ্রই আপনাকে নিশ্চিতকরণ ইমেইল পাঠাব। গ্রাহক: আপনাকে অনেক ধন্যবাদ। রিসেপশনিস্ট: আপনাকে স্বাগতম। আপনার দিন শুভ হোক।</div>
+            <div style="margin-top: 1rem;"><div class="mcq-question"><strong>1. What type of room does the customer initially ask for?</strong><label><input type="radio" name="sec-0-q0" value="0"> Single room</label><label><input type="radio" name="sec-0-q0" value="1"> Double room</label><label><input type="radio" name="sec-0-q0" value="2"> Suite</label><label><input type="radio" name="sec-0-q0" value="3"> Family room</label></div><div class="mcq-question"><strong>2. How much does the standard double room cost per night?</strong><label><input type="radio" name="sec-0-q1" value="0"> $100</label><label><input type="radio" name="sec-0-q1" value="1"> $120</label><label><input type="radio" name="sec-0-q1" value="2"> $150</label><label><input type="radio" name="sec-0-q1" value="3"> $180</label></div><div class="mcq-question"><strong>3. Why does the customer choose the sea view room?</strong><label><input type="radio" name="sec-0-q2" value="0"> It is cheaper</label><label><input type="radio" name="sec-0-q2" value="1"> It has breakfast</label><label><input type="radio" name="sec-0-q2" value="2"> It has a sea view</label><label><input type="radio" name="sec-0-q2" value="3"> It is larger</label></div><div class="mcq-question"><strong>4. What time can the customer check out on the final day?</strong><label><input type="radio" name="sec-0-q3" value="0"> 10 AM</label><label><input type="radio" name="sec-0-q3" value="1"> 12 PM</label><label><input type="radio" name="sec-0-q3" value="2"> 2 PM</label><label><input type="radio" name="sec-0-q3" value="3"> 4 PM</label></div></div>
+        </div>
+        
+        <div class="section-box" id="sec-1">
+            <h3>Section 2: College Admissions Talk</h3>
+            <button class="btn-primary" onclick="playSection(1)">🎧 Play Audio</button>
+            <button class="btn-translate" onclick="toggleTranslation(1)">🌐 Show Bangla</button>
+            <p id="audio-text-1" style="font-size: 1.1rem; margin-top: 1rem;">Welcome to the University of Dhaka admission seminar. Today we are going to discuss the application process for the upcoming academic year. First, you must ensure you meet the minimum GPA requirements. For science students, the requirement is a 4.0 out of 5.0. For humanities students, it is 3.8. Secondly, you will need to submit a completed application form, your academic transcripts, and two recommendation letters. The deadline for submissions is August 15th. Please do not submit your application after this date, as the system will reject it automatically. Thirdly, there will be a written admission test on September 5th. The test will cover English, Mathematics, and General Knowledge. We strongly advise you to use the sample papers on our website to practice. If you have any questions, please visit our help desk on campus or email us.</p>
+            <div id="translation-1" class="translation-text">ঢাকা বিশ্ববিদ্যালয়ের ভর্তি সেমিনারে স্বাগতম। আজ আমরা আসন্ন শিক্ষাবর্ষের জন্য আবেদন প্রক্রিয়া নিয়ে আলোচনা করতে যাচ্ছি। প্রথমত, আপনাকে নিশ্চিত হতে হবে যে আপনি ন্যূনতম জিপিএ প্রয়োজনীয়তা পূরণ করছেন। বিজ্ঞান শিক্ষার্থীদের জন্য প্রয়োজন ৫-এর মধ্যে ৪.০। মানবিক শিক্ষার্থীদের জন্য এটি ৩.৮। দ্বিতীয়ত, আপনাকে একটি সম্পূর্ণ আবেদনপত্র, আপনার একাডেমিক ট্রান্সক্রিপ্ট এবং দুটি সুপারিশপত্র জমা দিতে হবে। জমা দেওয়ার শেষ তারিখ ১৫ আগস্ট। এই তারিখের পরে আপনার আবেদন জমা দেবেন না, কারণ সিস্টেমটি স্বয়ংক্রিয়ভাবে এটি প্রত্যাখ্যান করবে। তৃতীয়ত, ৫ সেপ্টেম্বর একটি লিখিত ভর্তি পরীক্ষা হবে। পরীক্ষাটি ইংরেজি, গণিত এবং সাধারণ জ্ঞানের উপর হবে। আমরা দৃঢ়ভাবে পরামর্শ দিচ্ছি যে আপনি আমাদের ওয়েবসাইটে নমুনা প্রশ্নপত্রগুলি ব্যবহার করে অনুশীলন করুন। আপনার যদি কোন প্রশ্ন থাকে, তাহলে অনুগ্রহ করে আমাদের ক্যাম্পাসে হেল্প ডেস্কে যান বা আমাদের ইমেইল করুন।</div>
+            <div style="margin-top: 1rem;"><div class="mcq-question"><strong>1. What is the minimum GPA for science students?</strong><label><input type="radio" name="sec-1-q0" value="0"> 3.5</label><label><input type="radio" name="sec-1-q0" value="1"> 3.8</label><label><input type="radio" name="sec-1-q0" value="2"> 4.0</label><label><input type="radio" name="sec-1-q0" value="3"> 4.5</label></div><div class="mcq-question"><strong>2. What is the deadline for applications?</strong><label><input type="radio" name="sec-1-q1" value="0"> August 1st</label><label><input type="radio" name="sec-1-q1" value="1"> August 15th</label><label><input type="radio" name="sec-1-q1" value="2"> September 1st</label><label><input type="radio" name="sec-1-q1" value="3"> September 5th</label></div><div class="mcq-question"><strong>3. What subjects are covered in the admission test?</strong><label><input type="radio" name="sec-1-q2" value="0"> English, Math, Science</label><label><input type="radio" name="sec-1-q2" value="1"> English, Math, General Knowledge</label><label><input type="radio" name="sec-1-q2" value="2"> English, Science, History</label><label><input type="radio" name="sec-1-q2" value="3"> Math, Science, GK</label></div></div>
+        </div>
+        
+        <div class="section-box" id="sec-2">
+            <h3>Section 3: Business Meeting Discussion</h3>
+            <button class="btn-primary" onclick="playSection(2)">🎧 Play Audio</button>
+            <button class="btn-translate" onclick="toggleTranslation(2)">🌐 Show Bangla</button>
+            <p id="audio-text-2" style="font-size: 1.1rem; margin-top: 1rem;">Good morning everyone. Thank you for joining this quarterly sales meeting. I will start by reviewing our Q3 performance. Overall, our sales have increased by 15% compared to the previous quarter. The marketing team has done an excellent job with the new digital campaign. However, I must point out that our expenses have also risen by 8%, mainly due to higher shipping costs. We need to find a more cost-effective shipping partner. Our target for Q4 is to achieve a 20% growth. To achieve this, the sales team must focus on retaining existing clients rather than just acquiring new ones. I will send a detailed report to everyone by this afternoon. Are there any questions? Yes, Jane. You mentioned that the new software is delayed. We are currently in talks with the developer to speed up the deployment. We expect to have it ready by November 1st. Alright, thank you everyone. Let's make this next quarter our best one yet.</p>
+            <div id="translation-2" class="translation-text">সকলকে শুভ সকাল। এই ত্রৈমাসিক বিক্রয় সভায় যোগ দেওয়ার জন্য ধন্যবাদ। আমি আমাদের Q3 কর্মক্ষমতা পর্যালোচনা করে শুরু করব। সামগ্রিকভাবে, আমাদের বিক্রয় পূর্ববর্তী ত্রৈমাসিকের তুলনায় ১৫% বৃদ্ধি পেয়েছে। মার্কেটিং টিম নতুন ডিজিটাল ক্যাম্পেইনের সাথে একটি চমৎকার কাজ করেছে। তবে, আমি উল্লেখ করতে চাই যে আমাদের খরচও ৮% বৃদ্ধি পেয়েছে, প্রধানত উচ্চ শিপিং খরচের কারণে। আমাদের একটি আরও সাশ্রয়ী শিপিং অংশীদার খুঁজে বের করতে হবে। Q4 এর জন্য আমাদের লক্ষ্য হল ২০% বৃদ্ধি অর্জন। এটি অর্জনের জন্য, বিক্রয় দলকে নতুন গ্রাহক অর্জনের পরিবর্তে বিদ্যমান গ্রাহকদের ধরে রাখার দিকে মনোনিবেশ করতে হবে। আমি আজ দুপুরের মধ্যে সবার কাছে একটি বিস্তারিত রিপোর্ট পাঠাব। কোন প্রশ্ন আছে? হ্যাঁ, জেন। আপনি উল্লেখ করেছেন যে নতুন সফটওয়্যারটি বিলম্বিত হচ্ছে। আমরা বর্তমানে ডেভেলপারের সাথে কথা বলছি যাতে দ্রুত স্থাপন করা যায়। আমরা আশা করি এটি ১ নভেম্বরের মধ্যে প্রস্তুত হবে। ঠিক আছে, সবাইকে ধন্যবাদ। চলুন এই পরবর্তী ত্রৈমাসিকটি আমাদের সেরা ত্রৈমাসিক করে তুলি।</div>
+            <div style="margin-top: 1rem;"><div class="mcq-question"><strong>1. What was the overall sales increase in Q3?</strong><label><input type="radio" name="sec-2-q0" value="0"> 8%</label><label><input type="radio" name="sec-2-q0" value="1"> 10%</label><label><input type="radio" name="sec-2-q0" value="2"> 15%</label><label><input type="radio" name="sec-2-q0" value="3"> 20%</label></div><div class="mcq-question"><strong>2. Why did expenses rise?</strong><label><input type="radio" name="sec-2-q1" value="0"> Higher marketing costs</label><label><input type="radio" name="sec-2-q1" value="1"> Higher shipping costs</label><label><input type="radio" name="sec-2-q1" value="2"> New software costs</label><label><input type="radio" name="sec-2-q1" value="3"> Higher salaries</label></div><div class="mcq-question"><strong>3. What is the Q4 sales target?</strong><label><input type="radio" name="sec-2-q2" value="0"> 10%</label><label><input type="radio" name="sec-2-q2" value="1"> 15%</label><label><input type="radio" name="sec-2-q2" value="2"> 20%</label><label><input type="radio" name="sec-2-q2" value="3"> 25%</label></div><div class="mcq-question"><strong>4. When is the new software expected to be ready?</strong><label><input type="radio" name="sec-2-q3" value="0"> October 1st</label><label><input type="radio" name="sec-2-q3" value="1"> November 1st</label><label><input type="radio" name="sec-2-q3" value="2"> December 1st</label><label><input type="radio" name="sec-2-q3" value="3"> January 1st</label></div></div>
+        </div>
+        
+        <div class="section-box" id="sec-3">
+            <h3>Section 4: Academic Lecture (Climate Change)</h3>
+            <button class="btn-primary" onclick="playSection(3)">🎧 Play Audio</button>
+            <button class="btn-translate" onclick="toggleTranslation(3)">🌐 Show Bangla</button>
+            <p id="audio-text-3" style="font-size: 1.1rem; margin-top: 1rem;">Today, I am going to deliver a lecture on the impact of climate change on coastal regions. Climate change is one of the most critical challenges of our time. For countries like Bangladesh, which has a vast coastline and a massive population living in low-lying areas, the stakes are particularly high. Rising sea levels are causing saltwater intrusion into freshwater sources, which directly affects agriculture and drinking water supplies. Furthermore, the increase in cyclonic storms has become more frequent and intense. In the last decade, we have witnessed three major cyclones that displaced over a million people and caused billions of dollars in damage. The government is working on coastal embankment projects and early warning systems to mitigate these impacts. However, international cooperation is essential. We must push for global carbon emission reductions to slow down the warming of our planet. I encourage everyone here to advocate for sustainable policies in your communities. Thank you.</p>
+            <div id="translation-3" class="translation-text">আজ, আমি উপকূলীয় অঞ্চলের উপর জলবায়ু পরিবর্তনের প্রভাব সম্পর্কে একটি বক্তৃতা দিতে যাচ্ছি। জলবায়ু পরিবর্তন আমাদের সময়ের অন্যতম গুরুত্বপূর্ণ চ্যালেঞ্জ। বাংলাদেশের মতো দেশের জন্য, যার বিশাল উপকূলরেখা এবং নিম্নাঞ্চলে বসবাসকারী বিশাল জনসংখ্যা রয়েছে, ঝুঁকিগুলো বিশেষভাবে বেশি। সমুদ্রপৃষ্ঠের ক্রমবর্ধমান উচ্চতা মিষ্টি জলের উৎসে লবণাক্ত পানি প্রবেশ করাচ্ছে, যা সরাসরি কৃষি ও পানীয় জল সরবরাহকে প্রভাবিত করে। তাছাড়া, ঘূর্ণিঝড়ের সংখ্যা আরও ঘন ঘন এবং তীব্র হয়ে উঠেছে। গত দশকে, আমরা তিনটি বড় ঘূর্ণিঝড় প্রত্যক্ষ করেছি যেগুলি এক মিলিয়নেরও বেশি মানুষকে স্থানচ্যুত করেছে এবং বিলিয়ন ডলারের ক্ষতি করেছে। সরকার এই প্রভাবগুলি কমানোর জন্য উপকূলীয় বাঁধ প্রকল্প এবং প্রাথমিক সতর্কতা ব্যবস্থা নিয়ে কাজ করছে। তবে, আন্তর্জাতিক সহযোগিতা অত্যন্ত গুরুত্বপূর্ণ। আমাদের গ্রহের উষ্ণতা ধীর করার জন্য বৈশ্বিক কার্বন নির্গমন হ্রাসের জন্য চাপ দিতে হবে। আমি এখানে উপস্থিত সকলকে আপনার সম্প্রদায়ের মধ্যে টেকসই নীতির পক্ষে সওয়াল করার জন্য উত্সাহিত করি। আপনাকে ধন্যবাদ।</div>
+            <div style="margin-top: 1rem;"><div class="mcq-question"><strong>1. What is the main topic of the lecture?</strong><label><input type="radio" name="sec-3-q0" value="0"> Coastal agriculture</label><label><input type="radio" name="sec-3-q0" value="1"> Cyclone formation</label><label><input type="radio" name="sec-3-q0" value="2"> Climate change impacts on coastal regions</label><label><input type="radio" name="sec-3-q0" value="3"> International cooperation</label></div><div class="mcq-question"><strong>2. What is causing saltwater intrusion?</strong><label><input type="radio" name="sec-3-q1" value="0"> Rising sea levels</label><label><input type="radio" name="sec-3-q1" value="1"> Cyclones</label><label><input type="radio" name="sec-3-q1" value="2"> Flooding</label><label><input type="radio" name="sec-3-q1" value="3"> Drought</label></div><div class="mcq-question"><strong>3. How many major cyclones occurred in the last decade?</strong><label><input type="radio" name="sec-3-q2" value="0"> One</label><label><input type="radio" name="sec-3-q2" value="1"> Two</label><label><input type="radio" name="sec-3-q2" value="2"> Three</label><label><input type="radio" name="sec-3-q2" value="3"> Four</label></div><div class="mcq-question"><strong>4. What does the lecturer encourage at the end?</strong><label><input type="radio" name="sec-3-q3" value="0"> Building more cities</label><label><input type="radio" name="sec-3-q3" value="1"> Advocating for sustainable policies</label><label><input type="radio" name="sec-3-q3" value="2"> Moving to inland areas</label><label><input type="radio" name="sec-3-q3" value="3"> Increasing carbon emissions</label></div></div>
+        </div>
+        
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; justify-content: space-between;">
+            <button id="btn-prev" class="btn-secondary" disabled>⬅ Previous</button>
+            <button id="btn-next" class="btn-primary">Next Section ➡</button>
+        </div>
+        <div id="exam-feedback" style="margin-top: 1rem; text-align: center;"></div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+            <a href="/learn.html" class="btn-primary">📚 Back to Learning Hub</a>
+        </div>
+    </main>
+    <script src="../listening-exam-engine.js"></script>
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+    <p>
+        <a href="/">Home</a> &nbsp;•&nbsp;
+        <a href="/grammar.html">Grammar</a> &nbsp;•&nbsp;
+        <a href="/tools.html">Tools</a> &nbsp;•&nbsp;
+        <a href="/blog.html">Blog</a> &nbsp;•&nbsp;
+        <a href="/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
+        <a href="/privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+</body>
+</html>
