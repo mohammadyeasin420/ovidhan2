@@ -1,0 +1,42 @@
+[
+  {
+    "id": "spk-restaurant-001",
+    "category": "travel",
+    "title": "Ordering Food in a Restaurant",
+    "level": "A2",
+    "objectives": [
+      "Ask for a menu",
+      "Order food politely",
+      "Ask for the bill"
+    ],
+    "context_bn": "আপনি একটি রেস্টুরেন্টে গেছেন। ওয়েটার আপনার অর্ডার নিচ্ছে।",
+    "dialogues": [
+      { "speaker": "Waiter", "en": "Good evening, sir. Are you ready to order?", "bn": "শুভ সন্ধ্যা, স্যার। আপনি কি অর্ডার করতে প্রস্তুত?" },
+      { "speaker": "You", "en": "Yes, I'd like the chicken biryani, please.", "bn": "হ্যাঁ, আমি চিকেন বিরিয়ানি নিতে চাই।" },
+      { "speaker": "Waiter", "en": "Would you like anything to drink?", "bn": "আপনি কি কিছু পান করতে চান?" },
+      { "speaker": "You", "en": "I'll have a lemonade, please.", "bn": "আমি একটি লেমনেড নেব, প্লিজ।" },
+      { "speaker": "Waiter", "en": "Here is your food. Enjoy your meal!", "bn": "এই নিন আপনার খাবার। ভালো করে খান!" },
+      { "speaker": "You", "en": "Thank you. Can I have the bill, please?", "bn": "ধন্যবাদ। আমি কি বিল পেতে পারি, প্লিজ?" }
+    ],
+    "vocab": [
+      { "word": "Order", "meaning": "অর্ডার করা" },
+      { "word": "Would like", "meaning": "চাওয়া/পছন্দ করা" },
+      { "word": "Lemonade", "meaning": "লেমনেড" },
+      { "word": "Bill", "meaning": "বিল" },
+      { "word": "Enjoy", "meaning": "উপভোগ করা" }
+    ],
+    "grammar_tip": "‘Would like’ is a polite way to say ‘want’. Use it with a noun (I would like water) or a verb (I would like to order).",
+    "pronunciation_tip": "Say ‘would like’ as /wʊd laɪk/ – the ‘l’ is clear, and the ‘d’ is soft.",
+    "key_phrases": [
+      "Are you ready to order?",
+      "I'd like ...",
+      "Can I have the bill?"
+    ],
+    "quiz": [
+      { "question": "What does the waiter ask first?", "options": ["Are you ready to order?", "Do you want water?", "What is your name?"], "correct": 0 },
+      { "question": "What does the customer order to drink?", "options": ["Coffee", "Lemonade", "Tea"], "correct": 1 },
+      { "question": "What does the customer ask for at the end?", "options": ["The menu", "The bill", "More food"], "correct": 1 }
+    ],
+    "xp": 20
+  }
+]

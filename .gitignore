@@ -1,9 +1,10 @@
-word/con.html 
-word_old_backup/ 
-"candidate_generator.py" 
-"editorial_pipeline.py" 
-"dictionary-schema-v4.json" 
-# Windows reserved filenames (cannot exist on Windows)
+# --- Folders ---
+/word/
+/word_old_backup/
+/data/
+/mock-tests_backup/
+
+# --- Specific files inside /word/ (Windows reserved) ---
 word/con.html
 word/aux.html
 word/prn.html
@@ -13,48 +14,39 @@ word/com2.html
 word/lpt1.html
 word/lpt2.html
 word/aux*
-# Temporary scripts
-fix_all_missing.py
-translate_remaining.py
-translate_mymemory.py
-translate_words.py
-wordlist.txt
-review.html
-review_queue.json
-enriched-dictionary-backup-*.json
-*.backup.json
-*.tmp
-*.temp
-python *.py
-python generate-*.py
-python generate_v3.py
-python upgrade_schema_v2.py
-word-template.htm
-real-missing-words.txt
-my apps details.txt
-[.txt
-*.log
-# Temporary scripts and wordlists
-bulk_expand.py
+
+# --- Python scripts to ignore ---
 candidate_generator.py
 editorial_pipeline.py
-expand_dictionary.py
-expand_to_10k.py
 fix_all_missing.py
 translate_remaining.py
 translate_mymemory.py
 translate_words.py
-wordlist.txt
-review.html
-review_queue.json
-*.backup.json
+bulk_expand.py
+expand_dictionary.py
+expand_to_10k.py
+generate_v3.py
+upgrade_schema_v2.py
+generate-*.py
+
+# --- JSON & data files ---
+dictionary-schema-v4.json
 enriched-dictionary-backup-*.json
+*.backup.json
+review_queue.json
+wordlist.txt
+
+# --- Temporary / log files ---
 *.tmp
-*.txt
+*.temp
+*.log
+[.txt
+my apps details.txt
+real-missing-words.txt
+word-template.htm
+review.html
+
+# --- But keep these JSON/JS files (they are needed) ---
 !blog-posts.js
 !question-bank.json
 !search-index.json
-python *.py
-word-template.htm
-[.txt
-my apps details.txt

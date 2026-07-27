@@ -255,7 +255,7 @@ let incorrectCount = 0;
 let selectedCategory = null;
 let isAnswered = false;
 
-// ── DOM refs (will be set after DOM load) ──
+// ── DOM refs ──
 let quizContainer, progressBar, categorySelect, questionCounter, questionText, optionsContainer;
 let nextBtn, resultContainer, finalScore, finalPercent, xpEarned, resultDetails, retryBtn, backBtn;
 
@@ -281,7 +281,6 @@ function loadCategory(categoryKey) {
     const bank = QUESTION_BANKS[categoryKey];
     if (!bank) return;
 
-    // Shuffle questions and pick 10 (or all if less than 10)
     const shuffled = [...bank.questions].sort(() => Math.random() - 0.5);
     currentQuestions = shuffled.slice(0, Math.min(10, shuffled.length));
     currentIndex = 0;
@@ -289,11 +288,9 @@ function loadCategory(categoryKey) {
     incorrectCount = 0;
     isAnswered = false;
 
-    // Update UI
     document.querySelector('.quiz-header .category-badge').textContent = `${bank.icon} ${bank.name}`;
     document.getElementById('categoryDescription').textContent = bank.description;
 
-    // Show quiz, hide result
     quizContainer.style.display = 'block';
     resultContainer.style.display = 'none';
     nextBtn.textContent = 'Next →';
@@ -312,11 +309,9 @@ function renderQuestion() {
     questionCounter.textContent = `Question ${currentIndex + 1} of ${currentQuestions.length}`;
     questionText.textContent = q.question;
 
-    // Update progress bar
     const progress = ((currentIndex) / currentQuestions.length) * 100;
     progressBar.style.width = progress + '%';
 
-    // Render options
     optionsContainer.innerHTML = '';
     q.options.forEach((opt, idx) => {
         const div = document.createElement('div');
@@ -327,12 +322,10 @@ function renderQuestion() {
         optionsContainer.appendChild(div);
     });
 
-    // Reset state
     isAnswered = false;
     nextBtn.disabled = true;
     nextBtn.textContent = 'Next →';
 
-    // Remove any existing feedback
     document.querySelectorAll('.option.correct, .option.incorrect').forEach(el => {
         el.classList.remove('correct', 'incorrect', 'show-explanation');
     });
@@ -348,7 +341,6 @@ function selectOption(selectedIdx) {
     isAnswered = true;
     nextBtn.disabled = false;
 
-    // Highlight correct and wrong
     options.forEach((opt, idx) => {
         if (idx === q.correct) opt.classList.add('correct');
         if (idx === selectedIdx && idx !== q.correct) opt.classList.add('incorrect');
@@ -356,20 +348,17 @@ function selectOption(selectedIdx) {
         opt.removeEventListener('click', selectOption);
     });
 
-    // Update score
     if (selectedIdx === q.correct) {
         correctCount++;
     } else {
         incorrectCount++;
     }
 
-    // Show explanation
     const explanationDiv = document.createElement('div');
     explanationDiv.className = 'explanation-text';
     explanationDiv.innerHTML = `<strong>💡 Explanation:</strong> ${q.explanation}`;
     optionsContainer.appendChild(explanationDiv);
 
-    // Change next button text if last question
     if (currentIndex === currentQuestions.length - 1) {
         nextBtn.textContent = '📊 See Results';
     }
@@ -384,9 +373,7 @@ function showResults() {
     const percent = Math.round((correct / total) * 100);
     let earnedXP = 0;
 
-    // Award XP for completing quiz
     if (correct > 0) {
-        // 10 XP per correct answer, capped at 100
         earnedXP = Math.min(correct * 10, 100);
         if (typeof window.OvidhanGamification !== 'undefined') {
             window.OvidhanGamification.addXP(earnedXP);
@@ -394,7 +381,6 @@ function showResults() {
         }
     }
 
-    // Show results
     finalScore.textContent = `${correct} / ${total}`;
     finalPercent.textContent = `${percent}%`;
     xpEarned.textContent = `+${earnedXP} XP earned!`;
@@ -406,7 +392,14 @@ function showResults() {
     else message = '💪 Keep practicing! Every mistake is a learning opportunity.';
     resultDetails.textContent = message;
 
-    // Update progress bar to full
+    // ─── ✅ DASHBOARD INTEGRATION ───
+    if (typeof window.ovidhan !== 'undefined' && window.ovidhan.trackQuizCompletion) {
+        // 'percent' is the score (0-100), 'selectedCategory' holds the current category key (e.g., 'grammar', 'vocabulary')
+        // We pass the category name from the bank for better readability in the dashboard.
+        const categoryName = selectedCategory ? QUESTION_BANKS[selectedCategory]?.name || selectedCategory : 'General';
+        window.ovidhan.trackQuizCompletion(percent, categoryName);
+    }
+
     progressBar.style.width = '100%';
 }
 
@@ -416,11 +409,9 @@ function restartQuiz() {
     }
 }
 
-// ── Event Listeners ──
 function initQuiz() {
     initDomRefs();
 
-    // Populate category selector
     categorySelect.innerHTML = '<option value="">-- Select a Category --</option>';
     for (const [key, bank] of Object.entries(QUESTION_BANKS)) {
         const opt = document.createElement('option');
@@ -454,5 +445,4 @@ function initQuiz() {
     });
 }
 
-// ── Initialize when DOM ready ──
 document.addEventListener('DOMContentLoaded', initQuiz);

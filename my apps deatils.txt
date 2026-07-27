@@ -1,0 +1,50 @@
+Here's the complete inventory of every environment variable, key, and secret in your Ovidhan project, with exact locations. Good news: the shipped app is 100% offline — no live API keys are baked into the APK/AAB. The only real secret is your keystore password.
+🔑 1. Signing keystore (the ONLY sensitive secret)
+
+File: credentials.json (project root) + credentials/upload.keystore
+Field	Value
+Keystore file	credentials/upload.keystore
+Keystore password	Ovidhan2026!
+Key alias	ovidhan
+Key password	Ovidhan2026!
+
+⚠️ Keep these private — this is what signs your Play Store uploads. Both are included in the source ZIP I gave you.
+📢 2. AdMob IDs (public identifiers, not secrets)
+
+Files: lib/ads.ts and app.config.ts
+Purpose	Value	Location
+Android App ID	ca-app-pub-8638443498834829~2531750402	app.config.ts line 141
+Banner unit	ca-app-pub-8638443498834829/5204235530	lib/ads.ts line 13
+Interstitial unit	ca-app-pub-8638443498834829/4400529564	lib/ads.ts line 14
+Rewarded unit	ca-app-pub-8638443498834829/2010106302	lib/ads.ts line 15
+☁️ 3. EAS / Expo account (build config)
+
+File: app.config.ts
+Field	Value
+Expo owner/account	bangladesh420 (email: yeasinarat@yahoo.com)
+EAS projectId	b39255ca-4cfc-4db6-b804-0e8c3e1184d8
+
+Authentication for cloud builds uses an Expo login session (stored in ~/.expo/state.json on the build machine), not a hardcoded token. On your computer you'd just run npx eas login.
+🤖 4. Build-time LLM key (NOT in the app)
+
+Referenced in: scripts/gen_grammar.py, scripts/gen_verbs.py, scripts/gen_admission.py → os.environ["EMERGENT_LLM_KEY"]
+
+This is the Emergent-managed Universal Key, used only here on the Emergent platform to generate dictionary/grammar content. It is not part of your shippable app and is not needed to build the .aab. It's managed under your Emergent Profile → Universal Key (credits deducted from your balance) — that's where it lives, not in any file in your repo. You only need it if you want to re-run the content-generation scripts.
+🗑️ 5. Unused template scaffolding (safe to ignore/delete)
+
+These reference env vars but are leftover boilerplate not wired into your offline app:
+
+    constants/oauth.ts → EXPO_PUBLIC_OAUTH_*, EXPO_PUBLIC_APP_ID (all default to empty "")
+    server/ folder → DATABASE_URL, JWT_SECRET, OAUTH_SERVER_URL, BUILT_IN_FORGE_API_KEY (a template backend server your app never calls)
+
+None of these have values set — there is no .env file with actual secrets in the project (root .env is empty).
+Summary
+
+    Real secret you must protect: the keystore password Ovidhan2026! (in credentials.json).
+    No runtime API keys ship inside the app — it's fully offline.
+    AdMob IDs are public and belong to your AdMob account.
+    Emergent LLM key is build-only and managed in your Emergent profile, not in the code.
+
+Want me to add a SECURITY.md / .env.example to the source download documenting exactly which env vars each folder expects?
+Jul 19, 12:22 AM
+Agent is waiting...

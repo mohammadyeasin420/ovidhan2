@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+42315d5788bbd7b527e962357d5e6159d28163ab refs/heads/backup-before-50k
+8629c4f234bbf351d8a87054f1d1388187b9a28a refs/heads/backup-before-assessment
+aa8ccfcf84e180830ebadf2d6e94409626ff8640 refs/heads/main
+8629c4f234bbf351d8a87054f1d1388187b9a28a refs/pull/1/head
+cb519ed6e7e7f56c7e8398f758cbc850b0bb29de refs/pull/1/merge

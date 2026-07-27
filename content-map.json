@@ -1919,5 +1919,30 @@
       "path",
       "elementary"
     ]
+  },
+  {
+    "url": "/lesson-player.html",
+    "title": "Speaking Lesson - Ovidhan",
+    "description": "",
+    "cluster": "general",
+    "subcluster": "general",
+    "tags": [
+      "general",
+      "lesson",
+      "player"
+    ]
+  },
+  {
+    "url": "/ielts-preparation-bangla.html",
+    "title": "IELTS Preparation for Bangladeshi Learners | Free IELTS Guide & Practice – Ovidhan",
+    "description": "Prepare for IELTS with Bangla explanations, grammar, vocabulary, speaking practice, writing lessons, mock tests and study plans. Free IELTS preparation for Bang",
+    "cluster": "exam-prep",
+    "subcluster": "general",
+    "tags": [
+      "exam-prep",
+      "ielts",
+      "preparation",
+      "bangla"
+    ]
   }
 ]

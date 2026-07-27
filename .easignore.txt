@@ -1,0 +1,30 @@
+# System folders (the main issue)
+AppData/
+AppData/Local/
+AppData/Local/ElevatedDiagnostics/
+AppData/Local/Mozilla/
+AppData/Local/Temp/
+AppData/Roaming/
+AppData/Roaming/npm/
+AppData/Roaming/Code/
+
+# Node modules
+node_modules/
+.expo/
+.git/
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build outputs
+*.aab
+*.apk
+*.ipa

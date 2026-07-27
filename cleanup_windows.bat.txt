@@ -1,0 +1,43 @@
+@echo off
+echo ================================
+echo   WINDOWS FULL CLEANUP SCRIPT
+echo ================================
+echo.
+
+echo Stopping Windows Update services...
+net stop wuauserv >nul 2>&1
+net stop bits >nul 2>&1
+
+echo Cleaning user TEMP folder...
+del /q /f /s %TEMP%\* >nul 2>&1
+
+echo Cleaning Windows TEMP folder...
+del /q /f /s C:\Windows\Temp\* >nul 2>&1
+
+echo Cleaning SoftwareDistribution (Windows Update cache)...
+del /q /f /s C:\Windows\SoftwareDistribution\Download\* >nul 2>&1
+del /q /f /s C:\Windows\SoftwareDistribution\DeliveryOptimization\* >nul 2>&1
+
+echo Cleaning Prefetch...
+del /q /f /s C:\Windows\Prefetch\* >nul 2>&1
+
+echo Cleaning DirectX Shader Cache...
+del /q /f /s "%LocalAppData%\D3DSCache\*" >nul 2>&1
+
+echo Cleaning Windows Error Reports...
+del /q /f /s C:\ProgramData\Microsoft\Windows\WER\* >nul 2>&1
+
+echo Cleaning Recycle Bin...
+rd /s /q C:\$Recycle.Bin >nul 2>&1
+
+echo Restarting Windows Update services...
+net start wuauserv >nul 2>&1
+net start bits >nul 2>&1
+
+echo.
+echo ================================
+echo   CLEANUP COMPLETE!
+echo ================================
+echo   You may have freed 5–10 GB.
+echo ================================
+pause

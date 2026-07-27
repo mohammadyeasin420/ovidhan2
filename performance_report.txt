@@ -1,0 +1,19 @@
+PERFORMANCE AUDIT REPORT
+============================================================
+
+/learning-path-elementary.html – 0.44s – 200
+/writing.html – 0.53s – 200
+/quiz.html – 0.54s – 200
+/exam-prep.html – 0.55s – 200
+/assessment.html – 0.56s – 200
+/flashcards.html – 0.60s – 200
+/practice.html – 0.60s – 200
+/dashboard.html – 0.61s – 200
+/blog.html – 0.64s – 200
+/tools.html – 0.65s – 200
+/dictionary.html – 0.65s – 200
+/grammar.html – 0.68s – 200
+/speaking.html – 0.69s – 200
+/bangladesh.html – 0.69s – 200
+/learn.html – 0.70s – 200
+ – 0.71s – 200
