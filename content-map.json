@@ -1944,5 +1944,28 @@
       "preparation",
       "bangla"
     ]
+  },
+  {
+    "url": "/listening.html",
+    "title": "Listening Practice - Ovidhan",
+    "description": "Improve your English listening skills with real-world scenarios from Bangladesh.",
+    "cluster": "general",
+    "subcluster": "general",
+    "tags": [
+      "general",
+      "listening"
+    ]
+  },
+  {
+    "url": "/test-listening.html",
+    "title": "Test",
+    "description": "",
+    "cluster": "practice",
+    "subcluster": "general",
+    "tags": [
+      "practice",
+      "test",
+      "listening"
+    ]
   }
 ]
