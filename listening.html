@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../styles.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listening Practice - Ovidhan</title>
@@ -48,7 +47,6 @@
 </head>
 <body>
 <header class="site-header">
-    <link rel="stylesheet" href="../styles.css" />
     <div class="nav-inner">
         <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
 
@@ -299,284 +297,149 @@
     }
 </style>
 
-
-
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-
-
-
-<main style="max-width: 1100px; margin: 120px auto; padding: 2rem;">
-    <div class="hub-hero">
-        <h1 class="gold-text">🎧 Listening Practice</h1>
-        <p>Boost your listening skills with real-world scenarios from Bangladesh. Listen, fill in the blanks, and test your comprehension.</p>
-    </div>
-
-    <div class="filter-bar">
-        <input type="text" id="search-input" placeholder="🔍 Search for a topic...">
-        <select id="category-filter">
-            <option value="all">All Categories</option>
-            <option value="bangladesh">🇧🇩 Bangladesh</option>
-            <option value="daily">☀️ Daily Life</option>
-            <option value="travel">✈️ Travel</option>
-            <option value="office">💼 Office</option>
-            <option value="student">🎓 Student</option>
-            <option value="confidence">💪 Confidence</option>
-        </select>
-        <div class="level-filters">
-            <button class="level-btn active" data-level="all">All</button>
-            <button class="level-btn" data-level="A1">A1</button>
-            <button class="level-btn" data-level="A2">A2</button>
-            <button class="level-btn" data-level="B1">B1</button>
-            <button class="level-btn" data-level="B2">B2</button>
+    <main style="max-width: 1100px; margin: 120px auto; padding: 2rem;">
+        <div class="hub-hero">
+            <h1 class="gold-text">🎧 Listening Practice</h1>
+            <p>Boost your listening skills with real-world scenarios from Bangladesh. Listen, fill in the blanks, and test your comprehension.</p>
         </div>
-    </div>
 
-    <div id="lesson-grid" class="lesson-grid">
-        <div class="loader">
-            <div class="spinner"></div>
-            <p>Loading exercises...</p>
+        <div class="filter-bar">
+            <input type="text" id="search-input" placeholder="🔍 Search for a topic...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="bangladesh">🇧🇩 Bangladesh</option>
+                <option value="daily">☀️ Daily Life</option>
+                <option value="travel">✈️ Travel</option>
+                <option value="office">💼 Office</option>
+                <option value="student">🎓 Student</option>
+                <option value="confidence">💪 Confidence</option>
+            </select>
+            <div class="level-filters">
+                <button class="level-btn active" data-level="all">All</button>
+                <button class="level-btn" data-level="A1">A1</button>
+                <button class="level-btn" data-level="A2">A2</button>
+                <button class="level-btn" data-level="B1">B1</button>
+                <button class="level-btn" data-level="B2">B2</button>
+            </div>
         </div>
-    </div>
 
-    <div style="margin-top: 3rem; text-align: center;">
-        <a href="/learn.html" class="btn-primary">📚 Back to Learning Hub</a>
-    </div>
-</main>
+        <div id="lesson-grid" class="lesson-grid">
+            <div class="loader">
+                <div class="spinner"></div>
+                <p>Loading exercises...</p>
+            </div>
+        </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const grid = document.getElementById('lesson-grid');
-        const searchInput = document.getElementById('search-input');
-        const categoryFilter = document.getElementById('category-filter');
-        const levelBtns = document.querySelectorAll('.level-btn');
-        let currentLevel = 'all';
-        let data = [];
+        <div style="margin-top: 3rem; text-align: center;">
+            <a href="/learn.html" class="btn-primary">📚 Back to Learning Hub</a>
+        </div>
+    </main>
 
-        // Category icons map
-        const category_icons = {
-            "bangladesh": "🇧🇩",
-            "daily": "☀️",
-            "travel": "✈️",
-            "office": "💼",
-            "student": "🎓",
-            "confidence": "💪"
-        };
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.getElementById('lesson-grid');
+            const searchInput = document.getElementById('search-input');
+            const categoryFilter = document.getElementById('category-filter');
+            const levelBtns = document.querySelectorAll('.level-btn');
+            let currentLevel = 'all';
+            let data = [];
 
-        // Slugify function (same as Python)
-        function slugify(title) {
-            return title.toLowerCase()
-                .replace(/[^a-z0-9\s-]/g, '')
-                .replace(/\s+/g, '-');
-        }
-
-        // Load completed from localStorage
-        function getCompletedIds() {
-            try {
-                const raw = localStorage.getItem('ovidhan_listening_completed');
-                return raw ? JSON.parse(raw) : [];
-            } catch { return []; }
-        }
-
-        // Render cards
-        function render() {
-            const search = searchInput.value.toLowerCase().trim();
-            const category = categoryFilter.value;
-            const completedIds = getCompletedIds();
-
-            const filtered = data.filter(item => {
-                const matchesSearch = item.title.toLowerCase().includes(search);
-                const matchesCategory = category === 'all' || item.category === category;
-                const matchesLevel = currentLevel === 'all' || item.level === currentLevel;
-                return matchesSearch && matchesCategory && matchesLevel;
-            });
-
-            if (filtered.length === 0) {
-                grid.innerHTML = `<div class="empty-state"><h3>😕 No exercises found</h3><p>Try adjusting your search or filters.</p></div>`;
-                return;
+            // Slugify function (same as Python)
+            function slugify(title) {
+                return title.toLowerCase()
+                    .replace(/[^a-z0-9\s-]/g, '')
+                    .replace(/\s+/g, '-');
             }
 
-            grid.innerHTML = filtered.map(item => {
-                const slug = slugify(item.title);
-                const url = `/listening/${item.category}/${slug}.html`;
-                const icon = category_icons[item.category] || '📄';
-                const isCompleted = completedIds.includes(item.id);
-                let levelClass = item.level.toLowerCase();
-                if (levelClass === 'b1') levelClass = 'b1';
-                else if (levelClass === 'b2') levelClass = 'b2';
+            // Load completed from localStorage
+            function getCompletedIds() {
+                try {
+                    const raw = localStorage.getItem('ovidhan_listening_completed');
+                    return raw ? JSON.parse(raw) : [];
+                } catch { return []; }
+            }
 
-                return `
-                    <div class="lesson-card">
-                        <div>
-                            <div class="card-top">
-                                <span class="card-category">${icon} ${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
-                                <span class="card-level ${levelClass}">${item.level}</span>
-                            </div>
-                            <h3 class="card-title">${item.title}</h3>
-                            <div class="card-meta">
-                                <span>⏱ ${item.duration_minutes} min</span>
-                                <span>⭐ ${item.xp} XP</span>
-                            </div>
-                        </div>
-                        <div class="card-actions">
-                            <a href="${url}" class="card-btn">Start Listening →</a>
-                            ${isCompleted ? `<span class="completed-badge">✅ Completed</span>` : ''}
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
+            // Render cards
+            function render() {
+                const search = searchInput.value.toLowerCase().trim();
+                const category = categoryFilter.value;
+                const completedIds = getCompletedIds();
 
-        // Fetch data
-        fetch('/listening-exercises.json')
-            .then(response => {
-                if (!response.ok) throw new Error('Failed to load exercises');
-                return response.json();
-            })
-            .then(json => {
-                data = json;
-                if (data.length === 0) {
-                    grid.innerHTML = `<div class="empty-state"><h3>📭 No exercises</h3><p>Add exercises to listening-exercises.json and reload.</p></div>`;
+                const filtered = data.filter(item => {
+                    const matchesSearch = item.title.toLowerCase().includes(search);
+                    const matchesCategory = category === 'all' || item.category === category;
+                    const matchesLevel = currentLevel === 'all' || item.level === currentLevel;
+                    return matchesSearch && matchesCategory && matchesLevel;
+                });
+
+                if (filtered.length === 0) {
+                    grid.innerHTML = `<div class="empty-state"><h3>😕 No exercises found</h3><p>Try adjusting your search or filters.</p></div>`;
                     return;
                 }
-                render();
-            })
-            .catch(error => {
-                console.error('Fetch error:', error);
-                grid.innerHTML = `<div class="empty-state"><h3>⚠️ Error loading data</h3><p>${error.message}</p><p><button onclick="location.reload()" class="btn-primary">Reload</button></p></div>`;
-            });
 
-        // Filter events
-        searchInput.addEventListener('input', render);
-        categoryFilter.addEventListener('change', render);
-        levelBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                levelBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                currentLevel = this.dataset.level;
-                render();
+                grid.innerHTML = filtered.map(item => {
+                    const slug = slugify(item.title);
+                    const url = `/listening/${item.category}/${slug}.html`;
+                    const icon = category_icons[item.category] || '📄';
+                    const isCompleted = completedIds.includes(item.id);
+                    let levelClass = item.level.toLowerCase();
+                    if (levelClass === 'b1') levelClass = 'b1';
+                    else if (levelClass === 'b2') levelClass = 'b2';
+
+                    return `
+                        <div class="lesson-card">
+                            <div>
+                                <div class="card-top">
+                                    <span class="card-category">${icon} ${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
+                                    <span class="card-level ${levelClass}">${item.level}</span>
+                                </div>
+                                <h3 class="card-title">${item.title}</h3>
+                                <div class="card-meta">
+                                    <span>⏱ ${item.duration_minutes} min</span>
+                                    <span>⭐ ${item.xp} XP</span>
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <a href="${url}" class="card-btn">Start Listening →</a>
+                                ${isCompleted ? `<span class="completed-badge">✅ Completed</span>` : ''}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Fetch data
+            fetch('/listening-exercises.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to load exercises');
+                    return response.json();
+                })
+                .then(json => {
+                    data = json;
+                    if (data.length === 0) {
+                        grid.innerHTML = `<div class="empty-state"><h3>📭 No exercises</h3><p>Add exercises to listening-exercises.json and reload.</p></div>`;
+                        return;
+                    }
+                    render();
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                    grid.innerHTML = `<div class="empty-state"><h3>⚠️ Error loading data</h3><p>${error.message}</p><p><button onclick="location.reload()" class="btn-primary">Reload</button></p></div>`;
+                });
+
+            // Filter events
+            searchInput.addEventListener('input', render);
+            categoryFilter.addEventListener('change', render);
+            levelBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    levelBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentLevel = this.dataset.level;
+                    render();
+                });
             });
         });
-    });
-</script>
-
-
-
-
-
+    </script>
 <footer class="site-footer">
     <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
     <p>
