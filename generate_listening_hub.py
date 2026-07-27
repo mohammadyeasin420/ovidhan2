@@ -1,11 +1,11 @@
 import json
-import os
+import re
 
 # Load the JSON data
 with open('listening-exercises.json', 'r', encoding='utf-8') as f:
     exercises = json.load(f)
 
-# Map categories to emojis for visual flair
+# Category icons
 category_icons = {
     "bangladesh": "🇧🇩",
     "daily": "☀️",
@@ -14,6 +14,14 @@ category_icons = {
     "student": "🎓",
     "confidence": "💪"
 }
+
+# Reliable slug function
+def slugify(title):
+    # Convert to lowercase, replace spaces and special chars
+    slug = title.lower()
+    slug = re.sub(r'[^a-z0-9\s-]', '', slug)  # remove punctuation
+    slug = re.sub(r'\s+', '-', slug)          # replace spaces with -
+    return slug
 
 # Build the HTML template
 html_template = """<!DOCTYPE html>
@@ -25,115 +33,34 @@ html_template = """<!DOCTYPE html>
     <meta name="description" content="Improve your English listening skills with 50+ real-world scenarios from Bangladesh. Dictation, quizzes, and Bangla translations.">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Extra Hub-Specific Styles */
-        .hub-hero {
-            text-align: center;
-            padding: 3rem 0 2rem;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 2rem;
-        }
+        /* (same styles as before) */
+        .hub-hero { text-align: center; padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
         .hub-hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
         .hub-hero p { font-size: 1.2rem; color: var(--text-mid); max-width: 600px; margin: 0 auto; }
-        
-        .filter-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            background: var(--surface);
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-        }
-        .filter-bar input, .filter-bar select {
-            padding: 0.8rem 1rem;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            background: var(--bg);
-            color: var(--text);
-            flex: 1;
-            min-width: 200px;
-        }
-        .filter-bar select { cursor: pointer; }
+        .filter-bar { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; padding: 1.5rem; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); }
+        .filter-bar input, .filter-bar select { padding: 0.8rem 1rem; border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg); color: var(--text); flex: 1; min-width: 200px; }
         .filter-bar input:focus, .filter-bar select:focus { outline: 2px solid var(--gold); }
-
-        .level-filters {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .level-btn {
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            background: transparent;
-            color: var(--text-mid);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
+        .level-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+        .level-btn { padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-mid); cursor: pointer; transition: all 0.2s; }
         .level-btn:hover { border-color: var(--gold); color: var(--gold); }
         .level-btn.active { background: var(--gold); color: #000; border-color: var(--gold); font-weight: bold; }
-
-        .lesson-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .lesson-card {
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .lesson-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--gold);
-            box-shadow: 0 8px 25px rgba(230, 184, 74, 0.15);
-        }
-        
+        .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+        .lesson-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 8px 25px rgba(230, 184, 74, 0.15); }
         .card-top { display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; }
         .card-category { font-size: 0.85rem; color: var(--text-mid); font-weight: 600; }
-        .card-level { 
-            background: var(--teal-dim); color: var(--teal); 
-            padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold;
-        }
+        .card-level { background: var(--teal-dim); color: var(--teal); padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold; }
         .card-level.b1 { background: var(--gold-dim); color: var(--gold); }
         .card-level.b2 { background: var(--purple-dim); color: var(--purple); }
-
         .card-title { font-size: 1.2rem; font-weight: 600; margin: 0.5rem 0 0.8rem; color: var(--text); line-height: 1.4; }
-        
         .card-meta { display: flex; gap: 1rem; font-size: 0.9rem; color: var(--text-mid); margin-bottom: 1.2rem; }
         .card-meta span { display: flex; align-items: center; gap: 0.3rem; }
-        
         .card-actions { display: flex; align-items: center; justify-content: space-between; }
-        .card-btn {
-            background: var(--gold);
-            color: #000;
-            padding: 0.5rem 1.2rem;
-            border-radius: var(--radius);
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
+        .card-btn { background: var(--gold); color: #000; padding: 0.5rem 1.2rem; border-radius: var(--radius); text-decoration: none; font-weight: 600; transition: background 0.2s; }
         .card-btn:hover { background: #d4a83a; }
-        
-        .completed-badge {
-            color: var(--green);
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
+        .completed-badge { color: var(--green); font-weight: bold; display: flex; align-items: center; gap: 0.3rem; }
         .empty-state { text-align: center; padding: 4rem 0; color: var(--text-mid); }
         .empty-state h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-
         @media (max-width: 640px) {
             .hub-hero h1 { font-size: 2.2rem; }
             .filter-bar { flex-direction: column; }
@@ -144,7 +71,6 @@ html_template = """<!DOCTYPE html>
 </head>
 <body>
     <main style="max-width: 1100px; margin: 120px auto; padding: 2rem;">
-        
         <div class="hub-hero">
             <h1 class="gold-text">🎧 Listening Practice</h1>
             <p>Boost your listening skills with real-world scenarios from Bangladesh. Listen, fill in the blanks, and test your comprehension.</p>
@@ -187,7 +113,22 @@ html_template = """<!DOCTYPE html>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const rawData = document.getElementById('listening-data').textContent;
-            const data = JSON.parse(rawData);
+            console.log("Raw data length:", rawData.length);
+            let data;
+            try {
+                data = JSON.parse(rawData);
+                console.log("Parsed data (first item):", data[0]);
+            } catch (e) {
+                console.error("JSON parse error:", e);
+                document.getElementById('lesson-grid').innerHTML = '<div class="empty-state"><h3>⚠️ Data error</h3><p>Could not load exercises. Check console for details.</p></div>';
+                return;
+            }
+
+            if (!data || data.length === 0) {
+                document.getElementById('lesson-grid').innerHTML = '<div class="empty-state"><h3>📭 No exercises</h3><p>Add exercises to listening-exercises.json and regenerate.</p></div>';
+                return;
+            }
+
             const grid = document.getElementById('lesson-grid');
             const searchInput = document.getElementById('search-input');
             const categoryFilter = document.getElementById('category-filter');
@@ -221,9 +162,9 @@ html_template = """<!DOCTYPE html>
                 }
 
                 grid.innerHTML = filtered.map(item => {
-                    const slug = item.title.toLowerCase().replace(/[,\/]/g, '').replace(/\s+/g, '-');
+                    const slug = slugify(item.title);
                     const url = `/listening/${item.category}/${slug}.html`;
-                    const icon = "{icon_placeholder}".replace('{icon_placeholder}', category_icons[item.category] || '📄');
+                    const icon = category_icons[item.category] || '📄';
                     const isCompleted = completedIds.includes(item.id);
                     
                     let levelClass = item.level.toLowerCase();
@@ -265,6 +206,13 @@ html_template = """<!DOCTYPE html>
                 });
             });
 
+            // Helper slug function (same as Python)
+            function slugify(title) {
+                return title.toLowerCase()
+                    .replace(/[^a-z0-9\s-]/g, '')
+                    .replace(/\s+/g, '-');
+            }
+
             // Initial render
             render();
         });
@@ -272,14 +220,15 @@ html_template = """<!DOCTYPE html>
 </body>
 </html>"""
 
-# Prepare the data (replace the icon placeholder in JS with actual icons for each item)
-data_json = json.dumps(exercises)
+# Prepare data with icon mapping
+category_icons_str = json.dumps(category_icons)
 
-# Create the final HTML
-html = html_template.replace('{data_json}', data_json)
+# Generate the final HTML
+html = html_template.replace('{data_json}', json.dumps(exercises))
 
 # Write the file
 with open('listening.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
 print("✅ World-Class Listening Hub generated: listening.html")
+print(f"   Contains {len(exercises)} exercises.")
