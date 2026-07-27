@@ -1,5 +1,5 @@
 import json
-import re
+import os
 
 # Load the JSON data
 with open('listening-exercises.json', 'r', encoding='utf-8') as f:
@@ -15,25 +15,16 @@ category_icons = {
     "confidence": "💪"
 }
 
-# Reliable slug function
-def slugify(title):
-    # Convert to lowercase, replace spaces and special chars
-    slug = title.lower()
-    slug = re.sub(r'[^a-z0-9\s-]', '', slug)  # remove punctuation
-    slug = re.sub(r'\s+', '-', slug)          # replace spaces with -
-    return slug
-
-# Build the HTML template
-html_template = """<!DOCTYPE html>
+# Build the HTML template (with fetch + loading spinner)
+html = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listening Practice - Ovidhan</title>
-    <meta name="description" content="Improve your English listening skills with 50+ real-world scenarios from Bangladesh. Dictation, quizzes, and Bangla translations.">
+    <meta name="description" content="Improve your English listening skills with real-world scenarios from Bangladesh.">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* (same styles as before) */
         .hub-hero { text-align: center; padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
         .hub-hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
         .hub-hero p { font-size: 1.2rem; color: var(--text-mid); max-width: 600px; margin: 0 auto; }
@@ -45,8 +36,8 @@ html_template = """<!DOCTYPE html>
         .level-btn:hover { border-color: var(--gold); color: var(--gold); }
         .level-btn.active { background: var(--gold); color: #000; border-color: var(--gold); font-weight: bold; }
         .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
-        .lesson-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 8px 25px rgba(230, 184, 74, 0.15); }
+        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
+        .lesson-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 8px 25px rgba(230,184,74,0.15); }
         .card-top { display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; }
         .card-category { font-size: 0.85rem; color: var(--text-mid); font-weight: 600; }
         .card-level { background: var(--teal-dim); color: var(--teal); padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold; }
@@ -61,6 +52,9 @@ html_template = """<!DOCTYPE html>
         .completed-badge { color: var(--green); font-weight: bold; display: flex; align-items: center; gap: 0.3rem; }
         .empty-state { text-align: center; padding: 4rem 0; color: var(--text-mid); }
         .empty-state h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .loader { text-align: center; padding: 4rem 0; color: var(--text-mid); }
+        .loader .spinner { border: 4px solid var(--surface2); border-top: 4px solid var(--gold); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 1rem; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @media (max-width: 640px) {
             .hub-hero h1 { font-size: 2.2rem; }
             .filter-bar { flex-direction: column; }
@@ -97,7 +91,10 @@ html_template = """<!DOCTYPE html>
         </div>
 
         <div id="lesson-grid" class="lesson-grid">
-            <!-- Cards will be rendered by JavaScript -->
+            <div class="loader">
+                <div class="spinner"></div>
+                <p>Loading exercises...</p>
+            </div>
         </div>
 
         <div style="margin-top: 3rem; text-align: center;">
@@ -105,38 +102,23 @@ html_template = """<!DOCTYPE html>
         </div>
     </main>
 
-    <!-- Data injected by Python -->
-    <script id="listening-data" type="application/json">
-    {data_json}
-    </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const rawData = document.getElementById('listening-data').textContent;
-            console.log("Raw data length:", rawData.length);
-            let data;
-            try {
-                data = JSON.parse(rawData);
-                console.log("Parsed data (first item):", data[0]);
-            } catch (e) {
-                console.error("JSON parse error:", e);
-                document.getElementById('lesson-grid').innerHTML = '<div class="empty-state"><h3>⚠️ Data error</h3><p>Could not load exercises. Check console for details.</p></div>';
-                return;
-            }
-
-            if (!data || data.length === 0) {
-                document.getElementById('lesson-grid').innerHTML = '<div class="empty-state"><h3>📭 No exercises</h3><p>Add exercises to listening-exercises.json and regenerate.</p></div>';
-                return;
-            }
-
             const grid = document.getElementById('lesson-grid');
             const searchInput = document.getElementById('search-input');
             const categoryFilter = document.getElementById('category-filter');
             const levelBtns = document.querySelectorAll('.level-btn');
-
             let currentLevel = 'all';
+            let data = [];
 
-            // Load completed exercises from localStorage
+            // Slugify function (same as Python)
+            function slugify(title) {
+                return title.toLowerCase()
+                    .replace(/[^a-z0-9\s-]/g, '')
+                    .replace(/\s+/g, '-');
+            }
+
+            // Load completed from localStorage
             function getCompletedIds() {
                 try {
                     const raw = localStorage.getItem('ovidhan_listening_completed');
@@ -144,6 +126,7 @@ html_template = """<!DOCTYPE html>
                 } catch { return []; }
             }
 
+            // Render cards
             function render() {
                 const search = searchInput.value.toLowerCase().trim();
                 const category = categoryFilter.value;
@@ -166,7 +149,6 @@ html_template = """<!DOCTYPE html>
                     const url = `/listening/${item.category}/${slug}.html`;
                     const icon = category_icons[item.category] || '📄';
                     const isCompleted = completedIds.includes(item.id);
-                    
                     let levelClass = item.level.toLowerCase();
                     if (levelClass === 'b1') levelClass = 'b1';
                     else if (levelClass === 'b2') levelClass = 'b2';
@@ -193,10 +175,28 @@ html_template = """<!DOCTYPE html>
                 }).join('');
             }
 
-            // Event Listeners
+            // Fetch data
+            fetch('/listening-exercises.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to load exercises');
+                    return response.json();
+                })
+                .then(json => {
+                    data = json;
+                    if (data.length === 0) {
+                        grid.innerHTML = `<div class="empty-state"><h3>📭 No exercises</h3><p>Add exercises to listening-exercises.json and reload.</p></div>`;
+                        return;
+                    }
+                    render();
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                    grid.innerHTML = `<div class="empty-state"><h3>⚠️ Error loading data</h3><p>${error.message}</p><p><button onclick="location.reload()" class="btn-primary">Reload</button></p></div>`;
+                });
+
+            // Filter events
             searchInput.addEventListener('input', render);
             categoryFilter.addEventListener('change', render);
-
             levelBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     levelBtns.forEach(b => b.classList.remove('active'));
@@ -205,30 +205,13 @@ html_template = """<!DOCTYPE html>
                     render();
                 });
             });
-
-            // Helper slug function (same as Python)
-            function slugify(title) {
-                return title.toLowerCase()
-                    .replace(/[^a-z0-9\s-]/g, '')
-                    .replace(/\s+/g, '-');
-            }
-
-            // Initial render
-            render();
         });
     </script>
 </body>
 </html>"""
 
-# Prepare data with icon mapping
-category_icons_str = json.dumps(category_icons)
-
-# Generate the final HTML
-html = html_template.replace('{data_json}', json.dumps(exercises))
-
 # Write the file
 with open('listening.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-print("✅ World-Class Listening Hub generated: listening.html")
-print(f"   Contains {len(exercises)} exercises.")
+print("✅ Fetch‑based Listening Hub generated: listening.html")

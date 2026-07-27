@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listening Practice - Ovidhan</title>
-    <meta name="description" content="Improve your English listening skills with 50+ real-world scenarios from Bangladesh. Dictation, quizzes, and Bangla translations.">
+    <meta name="description" content="Improve your English listening skills with real-world scenarios from Bangladesh.">
     <link rel="stylesheet" href="../styles.css" />
     <style>
-        /* (same styles as before) */
         .hub-hero { text-align: center; padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
         .hub-hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
         .hub-hero p { font-size: 1.2rem; color: var(--text-mid); max-width: 600px; margin: 0 auto; }
@@ -19,8 +18,8 @@
         .level-btn:hover { border-color: var(--gold); color: var(--gold); }
         .level-btn.active { background: var(--gold); color: #000; border-color: var(--gold); font-weight: bold; }
         .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
-        .lesson-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 8px 25px rgba(230, 184, 74, 0.15); }
+        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
+        .lesson-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 8px 25px rgba(230,184,74,0.15); }
         .card-top { display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; }
         .card-category { font-size: 0.85rem; color: var(--text-mid); font-weight: 600; }
         .card-level { background: var(--teal-dim); color: var(--teal); padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold; }
@@ -35,6 +34,9 @@
         .completed-badge { color: var(--green); font-weight: bold; display: flex; align-items: center; gap: 0.3rem; }
         .empty-state { text-align: center; padding: 4rem 0; color: var(--text-mid); }
         .empty-state h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .loader { text-align: center; padding: 4rem 0; color: var(--text-mid); }
+        .loader .spinner { border: 4px solid var(--surface2); border-top: 4px solid var(--gold); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 1rem; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @media (max-width: 640px) {
             .hub-hero h1 { font-size: 2.2rem; }
             .filter-bar { flex-direction: column; }
@@ -295,153 +297,164 @@
     }
 </style>
 
-    <main style="max-width: 1100px; margin: 120px auto; padding: 2rem;">
-        <div class="hub-hero">
-            <h1 class="gold-text">🎧 Listening Practice</h1>
-            <p>Boost your listening skills with real-world scenarios from Bangladesh. Listen, fill in the blanks, and test your comprehension.</p>
+
+
+<main style="max-width: 1100px; margin: 120px auto; padding: 2rem;">
+    <div class="hub-hero">
+        <h1 class="gold-text">🎧 Listening Practice</h1>
+        <p>Boost your listening skills with real-world scenarios from Bangladesh. Listen, fill in the blanks, and test your comprehension.</p>
+    </div>
+
+    <div class="filter-bar">
+        <input type="text" id="search-input" placeholder="🔍 Search for a topic...">
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="bangladesh">🇧🇩 Bangladesh</option>
+            <option value="daily">☀️ Daily Life</option>
+            <option value="travel">✈️ Travel</option>
+            <option value="office">💼 Office</option>
+            <option value="student">🎓 Student</option>
+            <option value="confidence">💪 Confidence</option>
+        </select>
+        <div class="level-filters">
+            <button class="level-btn active" data-level="all">All</button>
+            <button class="level-btn" data-level="A1">A1</button>
+            <button class="level-btn" data-level="A2">A2</button>
+            <button class="level-btn" data-level="B1">B1</button>
+            <button class="level-btn" data-level="B2">B2</button>
         </div>
+    </div>
 
-        <div class="filter-bar">
-            <input type="text" id="search-input" placeholder="🔍 Search for a topic...">
-            <select id="category-filter">
-                <option value="all">All Categories</option>
-                <option value="bangladesh">🇧🇩 Bangladesh</option>
-                <option value="daily">☀️ Daily Life</option>
-                <option value="travel">✈️ Travel</option>
-                <option value="office">💼 Office</option>
-                <option value="student">🎓 Student</option>
-                <option value="confidence">💪 Confidence</option>
-            </select>
-            <div class="level-filters">
-                <button class="level-btn active" data-level="all">All</button>
-                <button class="level-btn" data-level="A1">A1</button>
-                <button class="level-btn" data-level="A2">A2</button>
-                <button class="level-btn" data-level="B1">B1</button>
-                <button class="level-btn" data-level="B2">B2</button>
-            </div>
+    <div id="lesson-grid" class="lesson-grid">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Loading exercises...</p>
         </div>
+    </div>
 
-        <div id="lesson-grid" class="lesson-grid">
-            <!-- Cards will be rendered by JavaScript -->
-        </div>
+    <div style="margin-top: 3rem; text-align: center;">
+        <a href="/learn.html" class="btn-primary">📚 Back to Learning Hub</a>
+    </div>
+</main>
 
-        <div style="margin-top: 3rem; text-align: center;">
-            <a href="/learn.html" class="btn-primary">📚 Back to Learning Hub</a>
-        </div>
-    </main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const grid = document.getElementById('lesson-grid');
+        const searchInput = document.getElementById('search-input');
+        const categoryFilter = document.getElementById('category-filter');
+        const levelBtns = document.querySelectorAll('.level-btn');
+        let currentLevel = 'all';
+        let data = [];
 
-    <!-- Data injected by Python -->
-    <script id="listening-data" type="application/json">
-    [{"id": "lst-bank-001", "title": "Listening to a Bank Call Center", "category": "bangladesh", "level": "B1", "duration_minutes": 6, "keywords": "bank listening practice, customer service English, call center English, Bangladesh bank English", "context_bn": "\u0986\u09aa\u09a8\u09bf \u098f\u0995\u099f\u09bf \u09ac\u09cd\u09af\u09be\u0982\u0995\u09c7\u09b0 \u0995\u09b2 \u09b8\u09c7\u09a8\u09cd\u099f\u09be\u09b0\u09c7 \u09ab\u09cb\u09a8 \u0995\u09b0\u099b\u09c7\u09a8\u0964 \u0986\u09aa\u09a8\u09be\u09b0 \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u099c\u09be\u09a8\u09a4\u09c7 \u099a\u09be\u09a8\u0964", "audio_text": "Welcome to ABC Bank. Your account balance is 15,000 taka. To check your balance, dial *123#.", "bangla_translation": "\u098f\u09ac\u09bf\u09b8\u09bf \u09ac\u09cd\u09af\u09be\u0982\u0995\u09c7 \u09b8\u09cd\u09ac\u09be\u0997\u09a4\u09ae\u0964 \u0986\u09aa\u09a8\u09be\u09b0 \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u09e7\u09eb,\u09e6\u09e6\u09e6 \u099f\u09be\u0995\u09be\u0964 \u0986\u09aa\u09a8\u09be\u09b0 \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u099a\u09c7\u0995 \u0995\u09b0\u09a4\u09c7 *\u09e7\u09e8\u09e9# \u09a1\u09be\u09af\u09bc\u09be\u09b2 \u0995\u09b0\u09c1\u09a8\u0964", "dictation_blanks": ["Your account balance is _____ taka.", "To check your balance, dial _____."], "dictation_answers": ["15,000", "*123#"], "comprehension_quiz": [{"question": "How much is the account balance?", "options": ["10,000", "15,000", "20,000"], "correct": 1}, {"question": "What number should you dial to check balance?", "options": ["*123#", "*456#", "#123"], "correct": 0}], "xp": 20, "related_lessons": [{"title": "Opening a Bank Account in Bangladesh", "url": "/speaking/bangladesh/opening-a-bank-account-in-bangladesh.html"}, {"title": "Using Mobile Banking", "url": "/speaking/bangladesh/using-mobile-banking.html"}], "vocab": [{"word": "Balance", "meaning": "\u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8"}, {"word": "Dial", "meaning": "\u09a1\u09be\u09af\u09bc\u09be\u09b2 \u0995\u09b0\u09be"}]}, {"id": "lst-delivery-002", "title": "Listening to a Delivery Rider", "category": "bangladesh", "level": "A2", "duration_minutes": 5, "keywords": "delivery rider English, parcel listening, listening practice Bangladesh, everyday English", "context_bn": "\u098f\u0995\u099f\u09bf \u09a1\u09c7\u09b2\u09bf\u09ad\u09be\u09b0\u09bf \u09b0\u09be\u0987\u09a1\u09be\u09b0 \u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09be\u09b0\u09cd\u09b8\u09c7\u09b2 \u09a8\u09bf\u09af\u09bc\u09c7 \u0995\u09b2 \u0995\u09b0\u099b\u09c7\u0964", "audio_text": "Hello, I have a parcel for you. I am at the gate. Please come and collect it.", "bangla_translation": "\u09b9\u09cd\u09af\u09be\u09b2\u09cb, \u0986\u09aa\u09a8\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u098f\u0995\u099f\u09bf \u09aa\u09be\u09b0\u09cd\u09b8\u09c7\u09b2 \u0986\u099b\u09c7\u0964 \u0986\u09ae\u09bf \u0997\u09c7\u099f\u09c7 \u0986\u099b\u09bf\u0964 \u0985\u09a8\u09c1\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09c7 \u098f\u09b8\u09c7 \u098f\u099f\u09bf \u09a8\u09bf\u09a8\u0964", "dictation_blanks": ["Hello, I have a _____ for you.", "I am at the _____."], "dictation_answers": ["parcel", "gate"], "comprehension_quiz": [{"question": "Where is the rider?", "options": ["At the gate", "At the office", "At the shop"], "correct": 0}], "xp": 15, "related_lessons": [{"title": "Talking to a Delivery Rider", "url": "/speaking/bangladesh/talking-to-a-delivery-rider.html"}], "vocab": [{"word": "Parcel", "meaning": "\u09aa\u09be\u09b0\u09cd\u09b8\u09c7\u09b2"}, {"word": "Gate", "meaning": "\u0997\u09c7\u099f"}]}, {"id": "lst-electricity-003", "title": "Electricity Bill Payment Confirmation", "category": "bangladesh", "level": "B1", "duration_minutes": 5, "keywords": "electricity bill English, payment confirmation listening, Bangladesh utility English", "context_bn": "\u09ac\u09bf\u09a6\u09cd\u09af\u09c1\u09ce \u09ac\u09bf\u09b2 \u09aa\u09b0\u09bf\u09b6\u09cb\u09a7\u09c7\u09b0 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4\u0995\u09b0\u09a3 \u09ac\u09be\u09b0\u09cd\u09a4\u09be \u09b6\u09c1\u09a8\u099b\u09c7\u09a8\u0964", "audio_text": "Your electricity bill of 2,500 taka has been paid successfully. The due date for next month is 30th.", "bangla_translation": "\u0986\u09aa\u09a8\u09be\u09b0 \u09e8,\u09eb\u09e6\u09e6 \u099f\u09be\u0995\u09be\u09b0 \u09ac\u09bf\u09a6\u09cd\u09af\u09c1\u09ce \u09ac\u09bf\u09b2 \u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7 \u09aa\u09b0\u09bf\u09b6\u09cb\u09a7 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7\u0964 \u0986\u0997\u09be\u09ae\u09c0 \u09ae\u09be\u09b8\u09c7\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09bf\u09a4 \u09a4\u09be\u09b0\u09bf\u0996 \u09e9\u09e6\u09b6\u09c7\u0964", "dictation_blanks": ["Your electricity bill of _____ taka has been paid.", "The due date for next month is _____."], "dictation_answers": ["2,500", "30th"], "comprehension_quiz": [{"question": "How much was the bill?", "options": ["1,500", "2,500", "3,500"], "correct": 1}, {"question": "When is the next due date?", "options": ["30th", "15th", "1st"], "correct": 0}], "xp": 20, "related_lessons": [{"title": "Asking About Electricity Bills", "url": "/speaking/bangladesh/asking-about-electricity-bills.html"}], "vocab": [{"word": "Bill", "meaning": "\u09ac\u09bf\u09b2"}, {"word": "Due date", "meaning": "\u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09bf\u09a4 \u09a4\u09be\u09b0\u09bf\u0996"}]}, {"id": "lst-doctor-004", "title": "Doctor's Prescription Instructions", "category": "bangladesh", "level": "B1", "duration_minutes": 6, "keywords": "doctor prescription English, hospital listening practice, Bangladesh health English", "context_bn": "\u09a1\u09be\u0995\u09cd\u09a4\u09be\u09b0 \u0986\u09aa\u09a8\u09be\u0995\u09c7 \u0993\u09b7\u09c1\u09a7 \u09b8\u09c7\u09ac\u09a8\u09c7\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a6\u09c7\u09b6 \u09a6\u09bf\u099a\u09cd\u099b\u09c7\u09a8\u0964", "audio_text": "Take one tablet twice a day after meals. Drink plenty of water. Come back after 5 days for a checkup.", "bangla_translation": "\u0996\u09be\u09ac\u09be\u09b0\u09c7\u09b0 \u09aa\u09b0 \u09a6\u09bf\u09a8\u09c7 \u09a6\u09c1\u09ac\u09be\u09b0 \u098f\u0995\u099f\u09bf \u099f\u09cd\u09af\u09be\u09ac\u09b2\u09c7\u099f \u0996\u09be\u09a8\u0964 \u09aa\u09cd\u09b0\u099a\u09c1\u09b0 \u09aa\u09be\u09a8\u09bf \u09aa\u09be\u09a8 \u0995\u09b0\u09c1\u09a8\u0964 \u09eb \u09a6\u09bf\u09a8 \u09aa\u09b0 \u099a\u09c7\u0995\u0986\u09aa\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u09ab\u09bf\u09b0\u09c7 \u0986\u09b8\u09c1\u09a8\u0964", "dictation_blanks": ["Take one tablet twice a day after _____.", "Come back after _____ days for a checkup."], "dictation_answers": ["meals", "5"], "comprehension_quiz": [{"question": "When should you take the tablet?", "options": ["After meals", "Before meals", "During meals"], "correct": 0}, {"question": "When should you return for a checkup?", "options": ["3 days", "5 days", "7 days"], "correct": 1}], "xp": 20, "related_lessons": [{"title": "Visiting the Doctor", "url": "/speaking/daily/visiting-the-doctor.html"}, {"title": "Admitting a Patient to Hospital", "url": "/speaking/bangladesh/admitting-a-patient-to-hospital.html"}], "vocab": [{"word": "Prescription", "meaning": "\u09aa\u09cd\u09b0\u09c7\u09b8\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8"}, {"word": "Checkup", "meaning": "\u099a\u09c7\u0995\u0986\u09aa"}]}, {"id": "lst-landlord-005", "title": "Landlord's Rent Reminder", "category": "bangladesh", "level": "A2", "duration_minutes": 5, "keywords": "landlord English, rent reminder listening, Bangladesh rental English", "context_bn": "\u0986\u09aa\u09a8\u09be\u09b0 \u09ac\u09be\u09a1\u09bc\u09bf\u0993\u09af\u09bc\u09be\u09b2\u09be \u09ad\u09be\u09a1\u09bc\u09be \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09c7 \u098f\u0995\u099f\u09bf \u09ac\u09be\u09b0\u09cd\u09a4\u09be \u09a6\u09bf\u099a\u09cd\u099b\u09c7\u09a8\u0964", "audio_text": "Hello, the rent for this month is due. Please pay by the 10th. If you need an extension, let me know.", "bangla_translation": "\u09b9\u09cd\u09af\u09be\u09b2\u09cb, \u098f\u0987 \u09ae\u09be\u09b8\u09c7\u09b0 \u09ad\u09be\u09a1\u09bc\u09be \u09a6\u09c7\u09af\u09bc\u09be\u09b0 \u09b8\u09ae\u09af\u09bc \u098f\u09b8\u09c7\u099b\u09c7\u0964 \u0985\u09a8\u09c1\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09c7 \u09e7\u09e6 \u09a4\u09be\u09b0\u09bf\u0996\u09c7\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u09a6\u09bf\u09af\u09bc\u09c7 \u09a6\u09bf\u09a8\u0964 \u09af\u09a6\u09bf \u09ac\u09be\u09a1\u09bc\u09be\u09a8\u09cb\u09b0 \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8 \u09b9\u09af\u09bc, \u0986\u09ae\u09be\u0995\u09c7 \u099c\u09be\u09a8\u09be\u09a8\u0964", "dictation_blanks": ["The rent for this month is _____.", "Please pay by the _____."], "dictation_answers": ["due", "10th"], "comprehension_quiz": [{"question": "When should you pay the rent?", "options": ["By the 10th", "By the 15th", "By the end of month"], "correct": 0}, {"question": "What can you do if you need more time?", "options": ["Let the landlord know", "Ignore it", "Pay later"], "correct": 0}], "xp": 15, "related_lessons": [{"title": "Talking to a Landlord", "url": "/speaking/bangladesh/talking-to-a-landlord.html"}], "vocab": [{"word": "Rent", "meaning": "\u09ad\u09be\u09a1\u09bc\u09be"}, {"word": "Due", "meaning": "\u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09bf\u09a4"}]}, {"id": "lst-bkash-006", "title": "bKash Money Transfer Confirmation", "category": "bangladesh", "level": "A2", "duration_minutes": 5, "keywords": "bKash English, mobile banking listening, money transfer confirmation, Bangladesh digital banking", "context_bn": "\u0986\u09aa\u09a8\u09bf bKash \u098f\u09b0 \u09ae\u09be\u09a7\u09cd\u09af\u09ae\u09c7 \u099f\u09be\u0995\u09be \u09aa\u09be\u09a0\u09be\u09a8\u09cb\u09b0 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4\u0995\u09b0\u09a3 \u09ac\u09be\u09b0\u09cd\u09a4\u09be \u09b6\u09c1\u09a8\u099b\u09c7\u09a8\u0964", "audio_text": "You have sent 500 taka to 017XXXXXXXX. The transaction is successful. Your new balance is 2,000 taka.", "bangla_translation": "\u0986\u09aa\u09a8\u09bf \u09e6\u09e7\u09edXXXXXXXX \u09a8\u09ae\u09cd\u09ac\u09b0\u09c7 \u09eb\u09e6\u09e6 \u099f\u09be\u0995\u09be \u09aa\u09be\u09a0\u09bf\u09af\u09bc\u09c7\u099b\u09c7\u09a8\u0964 \u09b2\u09c7\u09a8\u09a6\u09c7\u09a8 \u09b8\u09ab\u09b2\u0964 \u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09a4\u09c1\u09a8 \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u09e8,\u09e6\u09e6\u09e6 \u099f\u09be\u0995\u09be\u0964", "dictation_blanks": ["You have sent _____ taka to 017XXXXXXXX.", "Your new balance is _____ taka."], "dictation_answers": ["500", "2,000"], "comprehension_quiz": [{"question": "How much did you send?", "options": ["500", "1,000", "2,000"], "correct": 0}, {"question": "What is your new balance?", "options": ["1,500", "2,000", "2,500"], "correct": 1}], "xp": 15, "related_lessons": [{"title": "Sending Money via bKash/Nagad", "url": "/speaking/bangladesh/sending-money-via-bkash-nagad.html"}, {"title": "Using Mobile Banking", "url": "/speaking/bangladesh/using-mobile-banking.html"}], "vocab": [{"word": "Transaction", "meaning": "\u09b2\u09c7\u09a8\u09a6\u09c7\u09a8"}, {"word": "Balance", "meaning": "\u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8"}]}, {"id": "lst-police-007", "title": "Reporting a Lost Item to Police", "category": "bangladesh", "level": "B1", "duration_minutes": 7, "keywords": "police reporting English, lost item listening, Bangladesh police English", "context_bn": "\u0986\u09aa\u09a8\u09bf \u09aa\u09c1\u09b2\u09bf\u09b6\u0995\u09c7 \u098f\u0995\u099f\u09bf \u09b9\u09be\u09b0\u09be\u09a8\u09cb \u099c\u09bf\u09a8\u09bf\u09b8\u09c7\u09b0 \u0995\u09a5\u09be \u099c\u09be\u09a8\u09be\u099a\u09cd\u099b\u09c7\u09a8\u0964", "audio_text": "I lost my wallet at the bus station this morning. It is black and contains my ID cards. I need a report for the insurance.", "bangla_translation": "\u0986\u09ae\u09bf \u0986\u099c \u09b8\u0995\u09be\u09b2\u09c7 \u09ac\u09be\u09b8 \u09b8\u09cd\u099f\u09c7\u09b6\u09a8\u09c7 \u0986\u09ae\u09be\u09b0 \u0993\u09af\u09bc\u09be\u09b2\u09c7\u099f \u09b9\u09be\u09b0\u09bf\u09af\u09bc\u09c7\u099b\u09bf\u0964 \u098f\u099f\u09bf \u0995\u09be\u09b2\u09cb \u098f\u09ac\u0982 \u098f\u09a4\u09c7 \u0986\u09ae\u09be\u09b0 \u0986\u0987\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1 \u0986\u099b\u09c7\u0964 \u09ac\u09c0\u09ae\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u0986\u09ae\u09be\u09b0 \u098f\u0995\u099f\u09bf \u09b0\u09bf\u09aa\u09cb\u09b0\u09cd\u099f \u09a6\u09b0\u0995\u09be\u09b0\u0964", "dictation_blanks": ["I lost my wallet at the _____ this morning.", "It is black and contains my _____."], "dictation_answers": ["bus station", "ID cards"], "comprehension_quiz": [{"question": "Where was the wallet lost?", "options": ["Bus station", "Market", "Office"], "correct": 0}, {"question": "Why does the person need a report?", "options": ["For insurance", "For police", "For work"], "correct": 0}], "xp": 25, "related_lessons": [{"title": "Reporting a Lost Item to Police", "url": "/speaking/bangladesh/reporting-a-lost-item-to-police.html"}], "vocab": [{"word": "Wallet", "meaning": "\u0993\u09af\u09bc\u09be\u09b2\u09c7\u099f"}, {"word": "Report", "meaning": "\u09b0\u09bf\u09aa\u09cb\u09b0\u09cd\u099f"}]}, {"id": "lst-embassy-008", "title": "Visa Interview Appointment", "category": "bangladesh", "level": "B1", "duration_minutes": 6, "keywords": "visa interview English, embassy listening, Bangladesh visa application", "context_bn": "\u0986\u09aa\u09a8\u09bf \u09ad\u09bf\u09b8\u09be \u0987\u09a8\u09cd\u099f\u09be\u09b0\u09ad\u09bf\u0989\u09af\u09bc\u09c7\u09b0 \u0985\u09cd\u09af\u09be\u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f\u09ae\u09c7\u09a8\u09cd\u099f \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0995\u09b0\u099b\u09c7\u09a8\u0964", "audio_text": "Your visa interview is scheduled on August 15th at 10 am. Please bring your passport and two photos. Be on time.", "bangla_translation": "\u0986\u09aa\u09a8\u09be\u09b0 \u09ad\u09bf\u09b8\u09be \u0987\u09a8\u09cd\u099f\u09be\u09b0\u09ad\u09bf\u0989 \u0986\u0997\u09b8\u09cd\u099f \u09e7\u09eb \u09a4\u09be\u09b0\u09bf\u0996 \u09b8\u0995\u09be\u09b2 \u09e7\u09e6\u099f\u09be\u09af\u09bc \u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09bf\u09a4 \u09b9\u09af\u09bc\u09c7\u099b\u09c7\u0964 \u0985\u09a8\u09c1\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09c7 \u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09be\u09b8\u09aa\u09cb\u09b0\u09cd\u099f \u098f\u09ac\u0982 \u09a6\u09c1\u099f\u09bf \u099b\u09ac\u09bf \u09a8\u09bf\u09af\u09bc\u09c7 \u0986\u09b8\u09c1\u09a8\u0964 \u09b8\u09ae\u09af\u09bc\u09ae\u09a4\u09cb \u0989\u09aa\u09b8\u09cd\u09a5\u09bf\u09a4 \u09b9\u09a8\u0964", "dictation_blanks": ["Your visa interview is scheduled on _____ at 10 am.", "Please bring your passport and two _____."], "dictation_answers": ["August 15th", "photos"], "comprehension_quiz": [{"question": "When is the interview?", "options": ["August 15th", "August 20th", "September 1st"], "correct": 0}, {"question": "What should you bring?", "options": ["Passport and photos", "Passport only", "Photos and ID"], "correct": 0}], "xp": 25, "related_lessons": [{"title": "Applying for a Visa at the Embassy", "url": "/speaking/bangladesh/applying-for-a-visa-at-the-embassy.html"}], "vocab": [{"word": "Interview", "meaning": "\u0987\u09a8\u09cd\u099f\u09be\u09b0\u09ad\u09bf\u0989"}, {"word": "Appointment", "meaning": "\u0985\u09cd\u09af\u09be\u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f\u09ae\u09c7\u09a8\u09cd\u099f"}]}, {"id": "lst-hospital-009", "title": "Hospital Admission Instructions", "category": "bangladesh", "level": "B1", "duration_minutes": 7, "keywords": "hospital admission English, patient instructions listening, Bangladesh health care", "context_bn": "\u09b9\u09be\u09b8\u09aa\u09be\u09a4\u09be\u09b2\u09c7 \u09ad\u09b0\u09cd\u09a4\u09bf\u09b0 \u09a8\u09bf\u09b0\u09cd\u09a6\u09c7\u09b6\u09a8\u09be \u09b6\u09c1\u09a8\u099b\u09c7\u09a8\u0964", "audio_text": "Please fill out the admission form and provide the patient's NID. The room will be ready in 30 minutes. You can wait in the lobby.", "bangla_translation": "\u0985\u09a8\u09c1\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09c7 \u09ad\u09b0\u09cd\u09a4\u09bf \u09ab\u09b0\u09cd\u09ae\u099f\u09bf \u09aa\u09c2\u09b0\u09a3 \u0995\u09b0\u09c1\u09a8 \u098f\u09ac\u0982 \u09b0\u09cb\u0997\u09c0\u09b0 \u098f\u09a8\u0986\u0987\u09a1\u09bf \u09aa\u09cd\u09b0\u09a6\u09be\u09a8 \u0995\u09b0\u09c1\u09a8\u0964 \u09b0\u09c1\u09ae \u09e9\u09e6 \u09ae\u09bf\u09a8\u09bf\u099f\u09c7\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u09aa\u09cd\u09b0\u09b8\u09cd\u09a4\u09c1\u09a4 \u09b9\u09ac\u09c7\u0964 \u0986\u09aa\u09a8\u09bf \u09b2\u09ac\u09bf\u09a4\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8\u0964", "dictation_blanks": ["Please fill out the admission form and provide the patient's _____.", "The room will be ready in _____ minutes."], "dictation_answers": ["NID", "30"], "comprehension_quiz": [{"question": "What document is needed?", "options": ["NID", "Passport", "Birth certificate"], "correct": 0}, {"question": "How long until the room is ready?", "options": ["30 minutes", "1 hour", "15 minutes"], "correct": 0}], "xp": 25, "related_lessons": [{"title": "Admitting a Patient to Hospital", "url": "/speaking/bangladesh/admitting-a-patient-to-hospital.html"}], "vocab": [{"word": "Admission", "meaning": "\u09ad\u09b0\u09cd\u09a4\u09bf"}, {"word": "Lobby", "meaning": "\u09b2\u09ac\u09bf"}]}, {"id": "lst-college-010", "title": "College Admission Announcement", "category": "bangladesh", "level": "B1", "duration_minutes": 6, "keywords": "college admission English, university announcement, Bangladesh education listening", "context_bn": "\u098f\u0995\u099f\u09bf \u0995\u09b2\u09c7\u099c\u09c7 \u09ad\u09b0\u09cd\u09a4\u09bf\u09b0 \u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf \u09b6\u09c1\u09a8\u099b\u09c7\u09a8\u0964", "audio_text": "The admission test for the Computer Science program will be held on September 5th. Registration closes on August 25th. Check the website for details.", "bangla_translation": "\u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09be\u09b0 \u09b8\u09be\u09af\u09bc\u09c7\u09a8\u09cd\u09b8 \u09aa\u09cd\u09b0\u09cb\u0997\u09cd\u09b0\u09be\u09ae\u09c7\u09b0 \u09ad\u09b0\u09cd\u09a4\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u09eb \u09b8\u09c7\u09aa\u09cd\u099f\u09c7\u09ae\u09cd\u09ac\u09b0 \u0985\u09a8\u09c1\u09b7\u09cd\u09a0\u09bf\u09a4 \u09b9\u09ac\u09c7\u0964 \u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09a8 \u09e8\u09eb \u0986\u0997\u09b8\u09cd\u099f \u09b6\u09c7\u09b7 \u09b9\u09ac\u09c7\u0964 \u09ac\u09bf\u09b8\u09cd\u09a4\u09be\u09b0\u09bf\u09a4 \u099c\u09be\u09a8\u09a4\u09c7 \u0993\u09af\u09bc\u09c7\u09ac\u09b8\u09be\u0987\u099f \u09a6\u09c7\u0996\u09c1\u09a8\u0964", "dictation_blanks": ["The admission test for the Computer Science program will be held on _____.", "Registration closes on _____."], "dictation_answers": ["September 5th", "August 25th"], "comprehension_quiz": [{"question": "When is the admission test?", "options": ["September 5th", "August 25th", "October 1st"], "correct": 0}, {"question": "When does registration close?", "options": ["August 25th", "September 5th", "August 30th"], "correct": 0}], "xp": 20, "related_lessons": [{"title": "Applying for University Admission", "url": "/speaking/bangladesh/student-english-applying-for-university-admission.html"}], "vocab": [{"word": "Admission test", "meaning": "\u09ad\u09b0\u09cd\u09a4\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be"}, {"word": "Registration", "meaning": "\u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09a8"}]}]
-    </script>
+        // Category icons map
+        const category_icons = {
+            "bangladesh": "🇧🇩",
+            "daily": "☀️",
+            "travel": "✈️",
+            "office": "💼",
+            "student": "🎓",
+            "confidence": "💪"
+        };
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const rawData = document.getElementById('listening-data').textContent;
-            console.log("Raw data length:", rawData.length);
-            let data;
+        // Slugify function (same as Python)
+        function slugify(title) {
+            return title.toLowerCase()
+                .replace(/[^a-z0-9\s-]/g, '')
+                .replace(/\s+/g, '-');
+        }
+
+        // Load completed from localStorage
+        function getCompletedIds() {
             try {
-                data = JSON.parse(rawData);
-                console.log("Parsed data (first item):", data[0]);
-            } catch (e) {
-                console.error("JSON parse error:", e);
-                document.getElementById('lesson-grid').innerHTML = '<div class="empty-state"><h3>⚠️ Data error</h3><p>Could not load exercises. Check console for details.</p></div>';
-                return;
-            }
+                const raw = localStorage.getItem('ovidhan_listening_completed');
+                return raw ? JSON.parse(raw) : [];
+            } catch { return []; }
+        }
 
-            if (!data || data.length === 0) {
-                document.getElementById('lesson-grid').innerHTML = '<div class="empty-state"><h3>📭 No exercises</h3><p>Add exercises to listening-exercises.json and regenerate.</p></div>';
-                return;
-            }
+        // Render cards
+        function render() {
+            const search = searchInput.value.toLowerCase().trim();
+            const category = categoryFilter.value;
+            const completedIds = getCompletedIds();
 
-            const grid = document.getElementById('lesson-grid');
-            const searchInput = document.getElementById('search-input');
-            const categoryFilter = document.getElementById('category-filter');
-            const levelBtns = document.querySelectorAll('.level-btn');
-
-            let currentLevel = 'all';
-
-            // Load completed exercises from localStorage
-            function getCompletedIds() {
-                try {
-                    const raw = localStorage.getItem('ovidhan_listening_completed');
-                    return raw ? JSON.parse(raw) : [];
-                } catch { return []; }
-            }
-
-            function render() {
-                const search = searchInput.value.toLowerCase().trim();
-                const category = categoryFilter.value;
-                const completedIds = getCompletedIds();
-
-                const filtered = data.filter(item => {
-                    const matchesSearch = item.title.toLowerCase().includes(search);
-                    const matchesCategory = category === 'all' || item.category === category;
-                    const matchesLevel = currentLevel === 'all' || item.level === currentLevel;
-                    return matchesSearch && matchesCategory && matchesLevel;
-                });
-
-                if (filtered.length === 0) {
-                    grid.innerHTML = `<div class="empty-state"><h3>😕 No exercises found</h3><p>Try adjusting your search or filters.</p></div>`;
-                    return;
-                }
-
-                grid.innerHTML = filtered.map(item => {
-                    const slug = slugify(item.title);
-                    const url = `/listening/${item.category}/${slug}.html`;
-                    const icon = category_icons[item.category] || '📄';
-                    const isCompleted = completedIds.includes(item.id);
-                    
-                    let levelClass = item.level.toLowerCase();
-                    if (levelClass === 'b1') levelClass = 'b1';
-                    else if (levelClass === 'b2') levelClass = 'b2';
-
-                    return `
-                        <div class="lesson-card">
-                            <div>
-                                <div class="card-top">
-                                    <span class="card-category">${icon} ${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
-                                    <span class="card-level ${levelClass}">${item.level}</span>
-                                </div>
-                                <h3 class="card-title">${item.title}</h3>
-                                <div class="card-meta">
-                                    <span>⏱ ${item.duration_minutes} min</span>
-                                    <span>⭐ ${item.xp} XP</span>
-                                </div>
-                            </div>
-                            <div class="card-actions">
-                                <a href="${url}" class="card-btn">Start Listening →</a>
-                                ${isCompleted ? `<span class="completed-badge">✅ Completed</span>` : ''}
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            }
-
-            // Event Listeners
-            searchInput.addEventListener('input', render);
-            categoryFilter.addEventListener('change', render);
-
-            levelBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    levelBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    currentLevel = this.dataset.level;
-                    render();
-                });
+            const filtered = data.filter(item => {
+                const matchesSearch = item.title.toLowerCase().includes(search);
+                const matchesCategory = category === 'all' || item.category === category;
+                const matchesLevel = currentLevel === 'all' || item.level === currentLevel;
+                return matchesSearch && matchesCategory && matchesLevel;
             });
 
-            // Helper slug function (same as Python)
-            function slugify(title) {
-                return title.toLowerCase()
-                    .replace(/[^a-z0-9\s-]/g, '')
-                    .replace(/\s+/g, '-');
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="empty-state"><h3>😕 No exercises found</h3><p>Try adjusting your search or filters.</p></div>`;
+                return;
             }
 
-            // Initial render
-            render();
+            grid.innerHTML = filtered.map(item => {
+                const slug = slugify(item.title);
+                const url = `/listening/${item.category}/${slug}.html`;
+                const icon = category_icons[item.category] || '📄';
+                const isCompleted = completedIds.includes(item.id);
+                let levelClass = item.level.toLowerCase();
+                if (levelClass === 'b1') levelClass = 'b1';
+                else if (levelClass === 'b2') levelClass = 'b2';
+
+                return `
+                    <div class="lesson-card">
+                        <div>
+                            <div class="card-top">
+                                <span class="card-category">${icon} ${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
+                                <span class="card-level ${levelClass}">${item.level}</span>
+                            </div>
+                            <h3 class="card-title">${item.title}</h3>
+                            <div class="card-meta">
+                                <span>⏱ ${item.duration_minutes} min</span>
+                                <span>⭐ ${item.xp} XP</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="${url}" class="card-btn">Start Listening →</a>
+                            ${isCompleted ? `<span class="completed-badge">✅ Completed</span>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Fetch data
+        fetch('/listening-exercises.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Failed to load exercises');
+                return response.json();
+            })
+            .then(json => {
+                data = json;
+                if (data.length === 0) {
+                    grid.innerHTML = `<div class="empty-state"><h3>📭 No exercises</h3><p>Add exercises to listening-exercises.json and reload.</p></div>`;
+                    return;
+                }
+                render();
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                grid.innerHTML = `<div class="empty-state"><h3>⚠️ Error loading data</h3><p>${error.message}</p><p><button onclick="location.reload()" class="btn-primary">Reload</button></p></div>`;
+            });
+
+        // Filter events
+        searchInput.addEventListener('input', render);
+        categoryFilter.addEventListener('change', render);
+        levelBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                levelBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentLevel = this.dataset.level;
+                render();
+            });
         });
-    </script>
+    });
+</script>
+
+
+
 <footer class="site-footer">
     <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
     <p>
