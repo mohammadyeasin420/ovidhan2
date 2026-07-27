@@ -22,7 +22,7 @@ template = """<!DOCTYPE html>
     <title>{title} - Ovidhan Listening Practice</title>
     <meta name="description" content="{meta_desc}">
     <meta name="keywords" content="{keywords}, listening practice, English listening, Bangladesh English">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../styles.css">
     <script type="application/ld+json">
     {{
         "@context": "https://schema.org",
@@ -87,7 +87,7 @@ template = """<!DOCTYPE html>
             <a href="/learn.html" class="btn-primary">📚 Back to Learning Hub</a>
         </div>
     </main>
-    <script src="../listening-engine.js"></script>
+    <script src="../../listening-engine.js"></script>
 </body>
 </html>"""
 
