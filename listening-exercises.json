@@ -1,0 +1,360 @@
+[
+  {
+    "id": "lst-bank-001",
+    "title": "Listening to a Bank Call Center",
+    "category": "bangladesh",
+    "level": "B1",
+    "duration_minutes": 6,
+    "keywords": "bank listening practice, customer service English, call center English, Bangladesh bank English",
+    "context_bn": "আপনি একটি ব্যাংকের কল সেন্টারে ফোন করছেন। আপনার ব্যালেন্স জানতে চান।",
+    "audio_text": "Welcome to ABC Bank. Your account balance is 15,000 taka. To check your balance, dial *123#.",
+    "bangla_translation": "এবিসি ব্যাংকে স্বাগতম। আপনার অ্যাকাউন্ট ব্যালেন্স ১৫,০০০ টাকা। আপনার ব্যালেন্স চেক করতে *১২৩# ডায়াল করুন।",
+    "dictation_blanks": [
+      "Your account balance is _____ taka.",
+      "To check your balance, dial _____."
+    ],
+    "dictation_answers": ["15,000", "*123#"],
+    "comprehension_quiz": [
+      {
+        "question": "How much is the account balance?",
+        "options": ["10,000", "15,000", "20,000"],
+        "correct": 1
+      },
+      {
+        "question": "What number should you dial to check balance?",
+        "options": ["*123#", "*456#", "#123"],
+        "correct": 0
+      }
+    ],
+    "xp": 20,
+    "related_lessons": [
+      {"title": "Opening a Bank Account in Bangladesh", "url": "/speaking/bangladesh/opening-a-bank-account-in-bangladesh.html"},
+      {"title": "Using Mobile Banking", "url": "/speaking/bangladesh/using-mobile-banking.html"}
+    ],
+    "vocab": [
+      {"word": "Balance", "meaning": "ব্যালেন্স"},
+      {"word": "Dial", "meaning": "ডায়াল করা"}
+    ]
+  },
+  {
+    "id": "lst-delivery-002",
+    "title": "Listening to a Delivery Rider",
+    "category": "bangladesh",
+    "level": "A2",
+    "duration_minutes": 5,
+    "keywords": "delivery rider English, parcel listening, listening practice Bangladesh, everyday English",
+    "context_bn": "একটি ডেলিভারি রাইডার আপনার পার্সেল নিয়ে কল করছে।",
+    "audio_text": "Hello, I have a parcel for you. I am at the gate. Please come and collect it.",
+    "bangla_translation": "হ্যালো, আপনার জন্য একটি পার্সেল আছে। আমি গেটে আছি। অনুগ্রহ করে এসে এটি নিন।",
+    "dictation_blanks": [
+      "Hello, I have a _____ for you.",
+      "I am at the _____."
+    ],
+    "dictation_answers": ["parcel", "gate"],
+    "comprehension_quiz": [
+      {
+        "question": "Where is the rider?",
+        "options": ["At the gate", "At the office", "At the shop"],
+        "correct": 0
+      }
+    ],
+    "xp": 15,
+    "related_lessons": [
+      {"title": "Talking to a Delivery Rider", "url": "/speaking/bangladesh/talking-to-a-delivery-rider.html"}
+    ],
+    "vocab": [
+      {"word": "Parcel", "meaning": "পার্সেল"},
+      {"word": "Gate", "meaning": "গেট"}
+    ]
+  },
+  {
+    "id": "lst-electricity-003",
+    "title": "Electricity Bill Payment Confirmation",
+    "category": "bangladesh",
+    "level": "B1",
+    "duration_minutes": 5,
+    "keywords": "electricity bill English, payment confirmation listening, Bangladesh utility English",
+    "context_bn": "বিদ্যুৎ বিল পরিশোধের নিশ্চিতকরণ বার্তা শুনছেন।",
+    "audio_text": "Your electricity bill of 2,500 taka has been paid successfully. The due date for next month is 30th.",
+    "bangla_translation": "আপনার ২,৫০০ টাকার বিদ্যুৎ বিল সফলভাবে পরিশোধ করা হয়েছে। আগামী মাসের নির্ধারিত তারিখ ৩০শে।",
+    "dictation_blanks": [
+      "Your electricity bill of _____ taka has been paid.",
+      "The due date for next month is _____."
+    ],
+    "dictation_answers": ["2,500", "30th"],
+    "comprehension_quiz": [
+      {
+        "question": "How much was the bill?",
+        "options": ["1,500", "2,500", "3,500"],
+        "correct": 1
+      },
+      {
+        "question": "When is the next due date?",
+        "options": ["30th", "15th", "1st"],
+        "correct": 0
+      }
+    ],
+    "xp": 20,
+    "related_lessons": [
+      {"title": "Asking About Electricity Bills", "url": "/speaking/bangladesh/asking-about-electricity-bills.html"}
+    ],
+    "vocab": [
+      {"word": "Bill", "meaning": "বিল"},
+      {"word": "Due date", "meaning": "নির্ধারিত তারিখ"}
+    ]
+  },
+  {
+    "id": "lst-doctor-004",
+    "title": "Doctor's Prescription Instructions",
+    "category": "bangladesh",
+    "level": "B1",
+    "duration_minutes": 6,
+    "keywords": "doctor prescription English, hospital listening practice, Bangladesh health English",
+    "context_bn": "ডাক্তার আপনাকে ওষুধ সেবনের নির্দেশ দিচ্ছেন।",
+    "audio_text": "Take one tablet twice a day after meals. Drink plenty of water. Come back after 5 days for a checkup.",
+    "bangla_translation": "খাবারের পর দিনে দুবার একটি ট্যাবলেট খান। প্রচুর পানি পান করুন। ৫ দিন পর চেকআপের জন্য ফিরে আসুন।",
+    "dictation_blanks": [
+      "Take one tablet twice a day after _____.",
+      "Come back after _____ days for a checkup."
+    ],
+    "dictation_answers": ["meals", "5"],
+    "comprehension_quiz": [
+      {
+        "question": "When should you take the tablet?",
+        "options": ["After meals", "Before meals", "During meals"],
+        "correct": 0
+      },
+      {
+        "question": "When should you return for a checkup?",
+        "options": ["3 days", "5 days", "7 days"],
+        "correct": 1
+      }
+    ],
+    "xp": 20,
+    "related_lessons": [
+      {"title": "Visiting the Doctor", "url": "/speaking/daily/visiting-the-doctor.html"},
+      {"title": "Admitting a Patient to Hospital", "url": "/speaking/bangladesh/admitting-a-patient-to-hospital.html"}
+    ],
+    "vocab": [
+      {"word": "Prescription", "meaning": "প্রেসক্রিপশন"},
+      {"word": "Checkup", "meaning": "চেকআপ"}
+    ]
+  },
+  {
+    "id": "lst-landlord-005",
+    "title": "Landlord's Rent Reminder",
+    "category": "bangladesh",
+    "level": "A2",
+    "duration_minutes": 5,
+    "keywords": "landlord English, rent reminder listening, Bangladesh rental English",
+    "context_bn": "আপনার বাড়িওয়ালা ভাড়া সম্পর্কে একটি বার্তা দিচ্ছেন।",
+    "audio_text": "Hello, the rent for this month is due. Please pay by the 10th. If you need an extension, let me know.",
+    "bangla_translation": "হ্যালো, এই মাসের ভাড়া দেয়ার সময় এসেছে। অনুগ্রহ করে ১০ তারিখের মধ্যে দিয়ে দিন। যদি বাড়ানোর প্রয়োজন হয়, আমাকে জানান।",
+    "dictation_blanks": [
+      "The rent for this month is _____.",
+      "Please pay by the _____."
+    ],
+    "dictation_answers": ["due", "10th"],
+    "comprehension_quiz": [
+      {
+        "question": "When should you pay the rent?",
+        "options": ["By the 10th", "By the 15th", "By the end of month"],
+        "correct": 0
+      },
+      {
+        "question": "What can you do if you need more time?",
+        "options": ["Let the landlord know", "Ignore it", "Pay later"],
+        "correct": 0
+      }
+    ],
+    "xp": 15,
+    "related_lessons": [
+      {"title": "Talking to a Landlord", "url": "/speaking/bangladesh/talking-to-a-landlord.html"}
+    ],
+    "vocab": [
+      {"word": "Rent", "meaning": "ভাড়া"},
+      {"word": "Due", "meaning": "নির্ধারিত"}
+    ]
+  },
+  {
+    "id": "lst-bkash-006",
+    "title": "bKash Money Transfer Confirmation",
+    "category": "bangladesh",
+    "level": "A2",
+    "duration_minutes": 5,
+    "keywords": "bKash English, mobile banking listening, money transfer confirmation, Bangladesh digital banking",
+    "context_bn": "আপনি bKash এর মাধ্যমে টাকা পাঠানোর নিশ্চিতকরণ বার্তা শুনছেন।",
+    "audio_text": "You have sent 500 taka to 017XXXXXXXX. The transaction is successful. Your new balance is 2,000 taka.",
+    "bangla_translation": "আপনি ০১৭XXXXXXXX নম্বরে ৫০০ টাকা পাঠিয়েছেন। লেনদেন সফল। আপনার নতুন ব্যালেন্স ২,০০০ টাকা।",
+    "dictation_blanks": [
+      "You have sent _____ taka to 017XXXXXXXX.",
+      "Your new balance is _____ taka."
+    ],
+    "dictation_answers": ["500", "2,000"],
+    "comprehension_quiz": [
+      {
+        "question": "How much did you send?",
+        "options": ["500", "1,000", "2,000"],
+        "correct": 0
+      },
+      {
+        "question": "What is your new balance?",
+        "options": ["1,500", "2,000", "2,500"],
+        "correct": 1
+      }
+    ],
+    "xp": 15,
+    "related_lessons": [
+      {"title": "Sending Money via bKash/Nagad", "url": "/speaking/bangladesh/sending-money-via-bkash-nagad.html"},
+      {"title": "Using Mobile Banking", "url": "/speaking/bangladesh/using-mobile-banking.html"}
+    ],
+    "vocab": [
+      {"word": "Transaction", "meaning": "লেনদেন"},
+      {"word": "Balance", "meaning": "ব্যালেন্স"}
+    ]
+  },
+  {
+    "id": "lst-police-007",
+    "title": "Reporting a Lost Item to Police",
+    "category": "bangladesh",
+    "level": "B1",
+    "duration_minutes": 7,
+    "keywords": "police reporting English, lost item listening, Bangladesh police English",
+    "context_bn": "আপনি পুলিশকে একটি হারানো জিনিসের কথা জানাচ্ছেন।",
+    "audio_text": "I lost my wallet at the bus station this morning. It is black and contains my ID cards. I need a report for the insurance.",
+    "bangla_translation": "আমি আজ সকালে বাস স্টেশনে আমার ওয়ালেট হারিয়েছি। এটি কালো এবং এতে আমার আইডি কার্ড আছে। বীমার জন্য আমার একটি রিপোর্ট দরকার।",
+    "dictation_blanks": [
+      "I lost my wallet at the _____ this morning.",
+      "It is black and contains my _____."
+    ],
+    "dictation_answers": ["bus station", "ID cards"],
+    "comprehension_quiz": [
+      {
+        "question": "Where was the wallet lost?",
+        "options": ["Bus station", "Market", "Office"],
+        "correct": 0
+      },
+      {
+        "question": "Why does the person need a report?",
+        "options": ["For insurance", "For police", "For work"],
+        "correct": 0
+      }
+    ],
+    "xp": 25,
+    "related_lessons": [
+      {"title": "Reporting a Lost Item to Police", "url": "/speaking/bangladesh/reporting-a-lost-item-to-police.html"}
+    ],
+    "vocab": [
+      {"word": "Wallet", "meaning": "ওয়ালেট"},
+      {"word": "Report", "meaning": "রিপোর্ট"}
+    ]
+  },
+  {
+    "id": "lst-embassy-008",
+    "title": "Visa Interview Appointment",
+    "category": "bangladesh",
+    "level": "B1",
+    "duration_minutes": 6,
+    "keywords": "visa interview English, embassy listening, Bangladesh visa application",
+    "context_bn": "আপনি ভিসা ইন্টারভিউয়ের অ্যাপয়েন্টমেন্ট নিশ্চিত করছেন।",
+    "audio_text": "Your visa interview is scheduled on August 15th at 10 am. Please bring your passport and two photos. Be on time.",
+    "bangla_translation": "আপনার ভিসা ইন্টারভিউ আগস্ট ১৫ তারিখ সকাল ১০টায় নির্ধারিত হয়েছে। অনুগ্রহ করে আপনার পাসপোর্ট এবং দুটি ছবি নিয়ে আসুন। সময়মতো উপস্থিত হন।",
+    "dictation_blanks": [
+      "Your visa interview is scheduled on _____ at 10 am.",
+      "Please bring your passport and two _____."
+    ],
+    "dictation_answers": ["August 15th", "photos"],
+    "comprehension_quiz": [
+      {
+        "question": "When is the interview?",
+        "options": ["August 15th", "August 20th", "September 1st"],
+        "correct": 0
+      },
+      {
+        "question": "What should you bring?",
+        "options": ["Passport and photos", "Passport only", "Photos and ID"],
+        "correct": 0
+      }
+    ],
+    "xp": 25,
+    "related_lessons": [
+      {"title": "Applying for a Visa at the Embassy", "url": "/speaking/bangladesh/applying-for-a-visa-at-the-embassy.html"}
+    ],
+    "vocab": [
+      {"word": "Interview", "meaning": "ইন্টারভিউ"},
+      {"word": "Appointment", "meaning": "অ্যাপয়েন্টমেন্ট"}
+    ]
+  },
+  {
+    "id": "lst-hospital-009",
+    "title": "Hospital Admission Instructions",
+    "category": "bangladesh",
+    "level": "B1",
+    "duration_minutes": 7,
+    "keywords": "hospital admission English, patient instructions listening, Bangladesh health care",
+    "context_bn": "হাসপাতালে ভর্তির নির্দেশনা শুনছেন।",
+    "audio_text": "Please fill out the admission form and provide the patient's NID. The room will be ready in 30 minutes. You can wait in the lobby.",
+    "bangla_translation": "অনুগ্রহ করে ভর্তি ফর্মটি পূরণ করুন এবং রোগীর এনআইডি প্রদান করুন। রুম ৩০ মিনিটের মধ্যে প্রস্তুত হবে। আপনি লবিতে অপেক্ষা করতে পারেন।",
+    "dictation_blanks": [
+      "Please fill out the admission form and provide the patient's _____.",
+      "The room will be ready in _____ minutes."
+    ],
+    "dictation_answers": ["NID", "30"],
+    "comprehension_quiz": [
+      {
+        "question": "What document is needed?",
+        "options": ["NID", "Passport", "Birth certificate"],
+        "correct": 0
+      },
+      {
+        "question": "How long until the room is ready?",
+        "options": ["30 minutes", "1 hour", "15 minutes"],
+        "correct": 0
+      }
+    ],
+    "xp": 25,
+    "related_lessons": [
+      {"title": "Admitting a Patient to Hospital", "url": "/speaking/bangladesh/admitting-a-patient-to-hospital.html"}
+    ],
+    "vocab": [
+      {"word": "Admission", "meaning": "ভর্তি"},
+      {"word": "Lobby", "meaning": "লবি"}
+    ]
+  },
+  {
+    "id": "lst-college-010",
+    "title": "College Admission Announcement",
+    "category": "bangladesh",
+    "level": "B1",
+    "duration_minutes": 6,
+    "keywords": "college admission English, university announcement, Bangladesh education listening",
+    "context_bn": "একটি কলেজে ভর্তির বিজ্ঞপ্তি শুনছেন।",
+    "audio_text": "The admission test for the Computer Science program will be held on September 5th. Registration closes on August 25th. Check the website for details.",
+    "bangla_translation": "কম্পিউটার সায়েন্স প্রোগ্রামের ভর্তি পরীক্ষা ৫ সেপ্টেম্বর অনুষ্ঠিত হবে। নিবন্ধন ২৫ আগস্ট শেষ হবে। বিস্তারিত জানতে ওয়েবসাইট দেখুন।",
+    "dictation_blanks": [
+      "The admission test for the Computer Science program will be held on _____.",
+      "Registration closes on _____."
+    ],
+    "dictation_answers": ["September 5th", "August 25th"],
+    "comprehension_quiz": [
+      {
+        "question": "When is the admission test?",
+        "options": ["September 5th", "August 25th", "October 1st"],
+        "correct": 0
+      },
+      {
+        "question": "When does registration close?",
+        "options": ["August 25th", "September 5th", "August 30th"],
+        "correct": 0
+      }
+    ],
+    "xp": 20,
+    "related_lessons": [
+      {"title": "Applying for University Admission", "url": "/speaking/bangladesh/student-english-applying-for-university-admission.html"}
+    ],
+    "vocab": [
+      {"word": "Admission test", "meaning": "ভর্তি পরীক্ষা"},
+      {"word": "Registration", "meaning": "নিবন্ধন"}
+    ]
+  }
+]
