@@ -4,39 +4,553 @@
     "category": "travel",
     "title": "Ordering Food in a Restaurant",
     "level": "A2",
-    "objectives": [
-      "Ask for a menu",
-      "Order food politely",
-      "Ask for the bill"
-    ],
+    "objectives": ["Ask for a menu", "Order food politely", "Ask for the bill"],
     "context_bn": "আপনি একটি রেস্টুরেন্টে গেছেন। ওয়েটার আপনার অর্ডার নিচ্ছে।",
     "dialogues": [
-      { "speaker": "Waiter", "en": "Good evening, sir. Are you ready to order?", "bn": "শুভ সন্ধ্যা, স্যার। আপনি কি অর্ডার করতে প্রস্তুত?" },
-      { "speaker": "You", "en": "Yes, I'd like the chicken biryani, please.", "bn": "হ্যাঁ, আমি চিকেন বিরিয়ানি নিতে চাই।" },
-      { "speaker": "Waiter", "en": "Would you like anything to drink?", "bn": "আপনি কি কিছু পান করতে চান?" },
-      { "speaker": "You", "en": "I'll have a lemonade, please.", "bn": "আমি একটি লেমনেড নেব, প্লিজ।" },
-      { "speaker": "Waiter", "en": "Here is your food. Enjoy your meal!", "bn": "এই নিন আপনার খাবার। ভালো করে খান!" },
-      { "speaker": "You", "en": "Thank you. Can I have the bill, please?", "bn": "ধন্যবাদ। আমি কি বিল পেতে পারি, প্লিজ?" }
+      {"speaker": "Waiter", "en": "Good evening, sir. Are you ready to order?", "bn": "শুভ সন্ধ্যা, স্যার। আপনি কি অর্ডার করতে প্রস্তুত?"},
+      {"speaker": "You", "en": "Yes, I'd like the chicken biryani, please.", "bn": "হ্যাঁ, আমি চিকেন বিরিয়ানি নিতে চাই।"},
+      {"speaker": "Waiter", "en": "Would you like anything to drink?", "bn": "আপনি কি কিছু পান করতে চান?"},
+      {"speaker": "You", "en": "I'll have a lemonade, please.", "bn": "আমি একটি লেমনেড নেব, প্লিজ।"},
+      {"speaker": "Waiter", "en": "Here is your food. Enjoy your meal!", "bn": "এই নিন আপনার খাবার। ভালো করে খান!"},
+      {"speaker": "You", "en": "Thank you. Can I have the bill, please?", "bn": "ধন্যবাদ। আমি কি বিল পেতে পারি, প্লিজ?"}
     ],
     "vocab": [
-      { "word": "Order", "meaning": "অর্ডার করা" },
-      { "word": "Would like", "meaning": "চাওয়া/পছন্দ করা" },
-      { "word": "Lemonade", "meaning": "লেমনেড" },
-      { "word": "Bill", "meaning": "বিল" },
-      { "word": "Enjoy", "meaning": "উপভোগ করা" }
+      {"word": "Order", "meaning": "অর্ডার করা"},
+      {"word": "Would like", "meaning": "চাওয়া/পছন্দ করা"},
+      {"word": "Lemonade", "meaning": "লেমনেড"},
+      {"word": "Bill", "meaning": "বিল"},
+      {"word": "Enjoy", "meaning": "উপভোগ করা"}
     ],
     "grammar_tip": "‘Would like’ is a polite way to say ‘want’. Use it with a noun (I would like water) or a verb (I would like to order).",
     "pronunciation_tip": "Say ‘would like’ as /wʊd laɪk/ – the ‘l’ is clear, and the ‘d’ is soft.",
-    "key_phrases": [
-      "Are you ready to order?",
-      "I'd like ...",
-      "Can I have the bill?"
-    ],
+    "key_phrases": ["Are you ready to order?", "I'd like ...", "Can I have the bill?"],
     "quiz": [
-      { "question": "What does the waiter ask first?", "options": ["Are you ready to order?", "Do you want water?", "What is your name?"], "correct": 0 },
-      { "question": "What does the customer order to drink?", "options": ["Coffee", "Lemonade", "Tea"], "correct": 1 },
-      { "question": "What does the customer ask for at the end?", "options": ["The menu", "The bill", "More food"], "correct": 1 }
+      {"question": "What does the waiter ask first?", "options": ["Are you ready to order?", "Do you want water?", "What is your name?"], "correct": 0},
+      {"question": "What does the customer order to drink?", "options": ["Coffee", "Lemonade", "Tea"], "correct": 1},
+      {"question": "What does the customer ask for at the end?", "options": ["The menu", "The bill", "More food"], "correct": 1}
     ],
+    "xp": 20
+  },
+  {
+    "id": "spk-station-002",
+    "category": "travel",
+    "title": "Buying a Ticket at the Station",
+    "level": "A1",
+    "objectives": ["Ask for a ticket", "Understand the price", "Pay politely"],
+    "context_bn": "আপনি রেলওয়ে স্টেশনে টিকিট কিনতে গেছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Excuse me, one ticket to Dhaka, please.", "bn": "এক্সকিউজ মি, ঢাকার জন্য একটা টিকিট প্লিজ।"},
+      {"speaker": "Clerk", "en": "Sure. That will be 350 taka.", "bn": "নিশ্চয়ই। ৩৫০ টাকা হবে।"}
+    ],
+    "vocab": [{"word": "Ticket", "meaning": "টিকিট"}, {"word": "Excuse me", "meaning": "ক্ষমা করবেন (নজর আকর্ষণ করতে)"}],
+    "grammar_tip": "Use ‘Excuse me’ to get someone’s attention politely.",
+    "pronunciation_tip": "Say ‘excuse me’ as /ɪkˈskjuːz miː/ – stress the second syllable.",
+    "key_phrases": ["Excuse me, one ticket to ...", "That will be ..."],
+    "quiz": [{"question": "How much is the ticket?", "options": ["150 taka", "350 taka", "450 taka"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "spk-hotel-003",
+    "category": "travel",
+    "title": "Checking into a Hotel",
+    "level": "A2",
+    "objectives": ["Greet receptionist", "Confirm reservation", "Ask for room details"],
+    "context_bn": "আপনি হোটেলে চেক-ইন করছেন।",
+    "dialogues": [
+      {"speaker": "Receptionist", "en": "Welcome to Hotel Grand. Do you have a reservation?", "bn": "হোটেল গ্র্যান্ডে স্বাগতম। আপনার কি রিজার্ভেশন আছে?"},
+      {"speaker": "You", "en": "Yes, I have a booking under the name Khan.", "bn": "হ্যাঁ, খান নামে আমার বুকিং আছে。"}
+    ],
+    "vocab": [{"word": "Reservation", "meaning": "রিজার্ভেশন"}, {"word": "Booking", "meaning": "বুকিং"}],
+    "grammar_tip": "Use ‘have a booking’ or ‘have a reservation’ interchangeably.",
+    "pronunciation_tip": "Say ‘reservation’ as /ˌrezəˈveɪʃən/ – stress on ‘veɪ’.",
+    "key_phrases": ["Do you have a reservation?", "I have a booking under the name ..."],
+    "quiz": [{"question": "What does the receptionist ask?", "options": ["Do you have a reservation?", "Do you have luggage?", "Do you need a taxi?"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "spk-direction-004",
+    "category": "travel",
+    "title": "Asking for Directions",
+    "level": "A1",
+    "objectives": ["Ask for directions", "Understand simple instructions", "Thank politely"],
+    "context_bn": "আপনি রাস্তায় হারিয়ে গেছেন এবং পথ জিজ্ঞাসা করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Excuse me, how do I get to the central library?", "bn": "এক্সকিউজ মি, সেন্ট্রাল লাইব্রেরিতে কিভাবে যাব?"},
+      {"speaker": "Stranger", "en": "Go straight and turn left at the traffic light.", "bn": "সোজা যান এবং ট্রাফিক লাইটে বামে মোড় নিন।"}
+    ],
+    "vocab": [{"word": "Straight", "meaning": "সোজা"}, {"word": "Turn left", "meaning": "বামে মোড় নেওয়া"}],
+    "grammar_tip": "Imperatives like ‘Go straight’ are used to give directions.",
+    "pronunciation_tip": "Say ‘straight’ as /streɪt/ – the ‘ai’ is a long vowel.",
+    "key_phrases": ["How do I get to ...?", "Go straight and turn left"],
+    "quiz": [{"question": "Where should you turn left?", "options": ["At the bridge", "At the traffic light", "At the school"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "spk-shopping-005",
+    "category": "travel",
+    "title": "Shopping for Clothes",
+    "level": "A2",
+    "objectives": ["Ask to try on clothes", "Ask for size", "Ask price"],
+    "context_bn": "আপনি কাপড়ের দোকানে একটি শার্ট কিনছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Can I try this shirt on?", "bn": "আমি কি এই শার্টটি ট্রাই করতে পারি?"},
+      {"speaker": "Salesperson", "en": "Sure, the fitting room is on the right.", "bn": "নিশ্চয়ই, ফিটিং রুম ডানদিকে।"}
+    ],
+    "vocab": [{"word": "Try on", "meaning": "ট্রাই করা"}, {"word": "Fitting room", "meaning": "ফিটিং রুম"}],
+    "grammar_tip": "Use ‘Can I ...?’ for polite requests.",
+    "pronunciation_tip": "Say ‘try on’ as /traɪ ɒn/ – stress both words.",
+    "key_phrases": ["Can I try this on?", "Where is the fitting room?"],
+    "quiz": [{"question": "Where is the fitting room?", "options": ["On the left", "On the right", "Upstairs"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "spk-doctor-006",
+    "category": "daily",
+    "title": "Visiting the Doctor",
+    "level": "A2",
+    "objectives": ["Describe symptoms", "Answer doctor's questions", "Understand advice"],
+    "context_bn": "আপনি ডাক্তারের চেম্বারে অসুস্থতার কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "Doctor", "en": "What seems to be the problem?", "bn": "কি সমস্যা হচ্ছে?"},
+      {"speaker": "You", "en": "I have a bad headache and fever.", "bn": "আমার খুব মাথা ধরে আছে এবং জ্বর আছে。"}
+    ],
+    "vocab": [{"word": "Headache", "meaning": "মাথাব্যথা"}, {"word": "Fever", "meaning": "জ্বর"}],
+    "grammar_tip": "Use ‘I have a ...’ to describe symptoms.",
+    "pronunciation_tip": "Say ‘headache’ as /ˈhedeɪk/ – stress first syllable.",
+    "key_phrases": ["What seems to be the problem?", "I have a headache and fever."],
+    "quiz": [{"question": "What symptoms does the patient have?", "options": ["Stomach ache", "Headache and fever", "Cough"], "correct": 1}],
+    "xp": 20
+  },
+  {
+    "id": "spk-customer-007",
+    "category": "office",
+    "title": "Calling Customer Service",
+    "level": "B1",
+    "objectives": ["State the problem", "Listen to solutions", "Ask for further help"],
+    "context_bn": "আপনি ইন্টারনেট কানেকশন নিয়ে কাস্টমার সার্ভিসে কল করছেন।",
+    "dialogues": [
+      {"speaker": "Rep", "en": "Thank you for calling. How can I help you?", "bn": "কল করার জন্য ধন্যবাদ। কিভাবে আপনাকে সাহায্য করতে পারি?"},
+      {"speaker": "You", "en": "My internet is not working properly.", "bn": "আমার ইন্টারনেট ঠিকমতো কাজ করছে না。"}
+    ],
+    "vocab": [{"word": "Properly", "meaning": "ঠিকমতো"}, {"word": "Customer service", "meaning": "কাস্টমার সার্ভিস"}],
+    "grammar_tip": "Use ‘not working properly’ for technical issues.",
+    "pronunciation_tip": "Say ‘properly’ as /ˈprɒpəli/ – stress first syllable.",
+    "key_phrases": ["How can I help you?", "My internet is not working properly."],
+    "quiz": [{"question": "Why did the customer call?", "options": ["To complain about internet", "To pay a bill", "To buy a phone"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "spk-intro-008",
+    "category": "daily",
+    "title": "Introducing Yourself",
+    "level": "A1",
+    "objectives": ["Say your name", "Say where you are from", "Greet others"],
+    "context_bn": "আপনি নতুন ক্লাসে নিজেকে পরিচয় দিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Hello, my name is Karim. I am from Chittagong.", "bn": "হ্যালো, আমার নাম করিম। আমি চট্টগ্রাম থেকে এসেছি।"},
+      {"speaker": "Teacher", "en": "Nice to meet you, Karim.", "bn": "দেখে ভালো লাগলো, করিম।"}
+    ],
+    "vocab": [{"word": "Name", "meaning": "নাম"}, {"word": "From", "meaning": "থেকে"}],
+    "grammar_tip": "Use ‘I am from ...’ to tell where you come from.",
+    "pronunciation_tip": "Say ‘Chittagong’ as /ˈtʃɪtəɡɒŋ/.",
+    "key_phrases": ["My name is ...", "I am from ...", "Nice to meet you."],
+    "quiz": [{"question": "Where is Karim from?", "options": ["Dhaka", "Chittagong", "Sylhet"], "correct": 1}],
+    "xp": 10
+  },
+  {
+    "id": "spk-family-009",
+    "category": "daily",
+    "title": "Talking About Your Family",
+    "level": "A1",
+    "objectives": ["Say how many siblings you have", "Talk about family members", "Ask about others"],
+    "context_bn": "আপনি একজন সহকর্মীকে আপনার পরিবার সম্পর্কে বলছেন।",
+    "dialogues": [
+      {"speaker": "Colleague", "en": "Do you have any siblings?", "bn": "আপনার কি ভাইবোন আছে?"},
+      {"speaker": "You", "en": "Yes, I have one brother and one sister.", "bn": "হ্যাঁ, আমার এক ভাই ও এক বোন আছে।"}
+    ],
+    "vocab": [{"word": "Siblings", "meaning": "ভাইবোন"}, {"word": "Brother", "meaning": "ভাই"}],
+    "grammar_tip": "Use ‘I have ...’ to state possessions.",
+    "pronunciation_tip": "Say ‘siblings’ as /ˈsɪblɪŋz/ – stress first syllable.",
+    "key_phrases": ["Do you have any siblings?", "I have one brother and one sister."],
+    "quiz": [{"question": "How many siblings does the person have?", "options": ["Two", "One", "Three"], "correct": 0}],
+    "xp": 10
+  },
+  {
+    "id": "spk-coffee-010",
+    "category": "daily",
+    "title": "Ordering Coffee",
+    "level": "A1",
+    "objectives": ["Order a drink", "Ask for the price", "Pay"],
+    "context_bn": "আপনি একটি কফি শপে কফি অর্ডার করছেন।",
+    "dialogues": [
+      {"speaker": "Barista", "en": "What would you like to drink?", "bn": "আপনি কি পান করতে চান?"},
+      {"speaker": "You", "en": "I'll have a cappuccino, please.", "bn": "আমি একটি ক্যাপুচিনো নেব, প্লিজ।"}
+    ],
+    "vocab": [{"word": "Cappuccino", "meaning": "ক্যাপুচিনো"}, {"word": "Drink", "meaning": "পান করা"}],
+    "grammar_tip": "Use ‘I'll have ...’ to order something.",
+    "pronunciation_tip": "Say ‘cappuccino’ as /ˌkæpʊˈtʃiːnoʊ/ – stress on ‘tʃiː’.",
+    "key_phrases": ["What would you like to drink?", "I'll have a cappuccino."],
+    "quiz": [{"question": "What does the customer order?", "options": ["Tea", "Black coffee", "Cappuccino"], "correct": 2}],
+    "xp": 10
+  },
+  {
+    "id": "spk-taxi-011",
+    "category": "travel",
+    "title": "Taking a Taxi",
+    "level": "A2",
+    "objectives": ["Tell the driver where to go", "Ask the fare", "Pay"],
+    "context_bn": "আপনি ট্যাক্সিতে উঠে গন্তব্যে যেতে বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Can you take me to the airport, please?", "bn": "আপনি কি আমাকে এয়ারপোর্টে নিয়ে যেতে পারবেন, প্লিজ?"},
+      {"speaker": "Driver", "en": "Of course. Please get in.", "bn": "অবশ্যই। অনুগ্রহ করে গাড়িতে উঠুন।"}
+    ],
+    "vocab": [{"word": "Airport", "meaning": "বিমানবন্দর"}, {"word": "Get in", "meaning": "গাড়িতে ওঠা"}],
+    "grammar_tip": "Use ‘Can you ...?’ for polite requests.",
+    "pronunciation_tip": "Say ‘airport’ as /ˈeəpɔːt/ – stress first syllable.",
+    "key_phrases": ["Can you take me to ...?", "Please get in."],
+    "quiz": [{"question": "Where does the passenger want to go?", "options": ["Hotel", "Airport", "Market"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "spk-immigration-012",
+    "category": "travel",
+    "title": "At the Airport Immigration",
+    "level": "B1",
+    "objectives": ["State the purpose of visit", "Answer questions", "Ask for help"],
+    "context_bn": "আপনি বিদেশে যাওয়ার সময় ইমিগ্রেশন অফিসারকে প্রশ্ন করছেন।",
+    "dialogues": [
+      {"speaker": "Officer", "en": "What is the purpose of your visit?", "bn": "আপনার ভ্রমণের উদ্দেশ্য কী?"},
+      {"speaker": "You", "en": "I am here for a business meeting.", "bn": "আমি একটি ব্যবসায়িক মিটিংয়ের জন্য এসেছি।"}
+    ],
+    "vocab": [{"word": "Purpose", "meaning": "উদ্দেশ্য"}, {"word": "Business meeting", "meaning": "ব্যবসায়িক মিটিং"}],
+    "grammar_tip": "Use ‘I am here for ...’ to explain the reason.",
+    "pronunciation_tip": "Say ‘purpose’ as /ˈpɜːpəs/ – stress first syllable.",
+    "key_phrases": ["What is the purpose of your visit?", "I am here for a business meeting."],
+    "quiz": [{"question": "Why is the person visiting?", "options": ["Tourism", "Study", "Business"], "correct": 2}],
+    "xp": 20
+  },
+  {
+    "id": "spk-bank-013",
+    "category": "bangladesh",
+    "title": "At the Bank",
+    "level": "A2",
+    "objectives": ["Ask to open an account", "Fill out a form", "Ask for help"],
+    "context_bn": "আপনি ব্যাংকে একটি অ্যাকাউন্ট খুলতে গেছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I would like to open a savings account.", "bn": "আমি একটি সঞ্চয়ী হিসাব খুলতে চাই।"},
+      {"speaker": "Manager", "en": "Please fill out this form.", "bn": "অনুগ্রহ করে এই ফর্মটি পূরণ করুন।"}
+    ],
+    "vocab": [{"word": "Savings account", "meaning": "সঞ্চয়ী হিসাব"}, {"word": "Fill out", "meaning": "পূরণ করা"}],
+    "grammar_tip": "Use ‘I would like to ...’ for formal requests.",
+    "pronunciation_tip": "Say ‘account’ as /əˈkaʊnt/ – stress on ‘kaʊ’.",
+    "key_phrases": ["I would like to open a savings account.", "Please fill out this form."],
+    "quiz": [{"question": "What does the customer want to do?", "options": ["Open an account", "Withdraw money", "Pay a bill"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "spk-postoffice-014",
+    "category": "bangladesh",
+    "title": "At the Post Office",
+    "level": "A2",
+    "objectives": ["Send a parcel", "Fill in customs form", "Ask about shipping"],
+    "context_bn": "আপনি পোস্ট অফিসে একটি পার্সেল পাঠাচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I want to send this parcel to the UK.", "bn": "আমি এই পার্সেলটি ইউকে পাঠাতে চাই।"},
+      {"speaker": "Clerk", "en": "Please fill in the customs form.", "bn": "অনুগ্রহ করে কাস্টমস ফর্মটি পূরণ করুন।"}
+    ],
+    "vocab": [{"word": "Parcel", "meaning": "পার্সেল"}, {"word": "Customs", "meaning": "কাস্টমস"}],
+    "grammar_tip": "Use ‘I want to ...’ to express intention.",
+    "pronunciation_tip": "Say ‘parcel’ as /ˈpɑːsl/ – stress first syllable.",
+    "key_phrases": ["I want to send this parcel to ...", "Please fill in the customs form."],
+    "quiz": [{"question": "Where does the parcel need to go?", "options": ["USA", "UK", "Australia"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "spk-routine-015",
+    "category": "daily",
+    "title": "Talking About Daily Routine",
+    "level": "A1",
+    "objectives": ["Describe daily activities", "Tell time", "Talk about habits"],
+    "context_bn": "আপনি আপনার প্রতিদিনের রুটিন সম্পর্কে বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I wake up at 6 am every morning.", "bn": "আমি প্রতিদিন সকাল ৬টায় ঘুম থেকে উঠি।"},
+      {"speaker": "Friend", "en": "That's very early!", "bn": "এটা খুব সকাল তো!"}
+    ],
+    "vocab": [{"word": "Wake up", "meaning": "ঘুম থেকে উঠা"}, {"word": "Morning", "meaning": "সকাল"}],
+    "grammar_tip": "Use present simple for daily routines.",
+    "pronunciation_tip": "Say ‘wake up’ as /weɪk ʌp/ – stress both.",
+    "key_phrases": ["I wake up at ...", "That's very early!"],
+    "quiz": [{"question": "What time does the person wake up?", "options": ["7 am", "6 am", "5 am"], "correct": 1}],
+    "xp": 10
+  },
+  {
+    "id": "spk-hobby-016",
+    "category": "daily",
+    "title": "Discussing Your Hobbies",
+    "level": "A1",
+    "objectives": ["Talk about free time activities", "Ask others about hobbies", "Express likes"],
+    "context_bn": "আপনি বন্ধুর সাথে আপনার শখ নিয়ে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "Friend", "en": "What do you do in your free time?", "bn": "আপনি ফ্রি সময়ে কী করেন?"},
+      {"speaker": "You", "en": "I like playing cricket and reading books.", "bn": "আমি ক্রিকেট খেলা এবং বই পড়া পছন্দ করি।"}
+    ],
+    "vocab": [{"word": "Free time", "meaning": "ফ্রি সময়"}, {"word": "Cricket", "meaning": "ক্রিকেট"}],
+    "grammar_tip": "Use ‘I like + verb-ing’ to talk about hobbies.",
+    "pronunciation_tip": "Say ‘cricket’ as /ˈkrɪkɪt/ – stress first syllable.",
+    "key_phrases": ["What do you do in your free time?", "I like playing cricket and reading books."],
+    "quiz": [{"question": "What hobbies does the person have?", "options": ["Cricket and reading", "Swimming and singing", "Painting and cooking"], "correct": 0}],
+    "xp": 10
+  },
+  {
+    "id": "spk-gym-017",
+    "category": "daily",
+    "title": "At the Gym",
+    "level": "B1",
+    "objectives": ["Ask for help using equipment", "Understand instructions", "Express intention"],
+    "context_bn": "আপনি জিমে একজন ট্রেনারের সাথে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Can you show me how to use this machine?", "bn": "আপনি কি আমাকে এই মেশিনটি ব্যবহার করার পদ্ধতি দেখাতে পারবেন?"},
+      {"speaker": "Trainer", "en": "Sure. First, adjust the weight and sit properly.", "bn": "নিশ্চয়ই। প্রথমে ওজন সামঞ্জস্য করুন এবং সঠিকভাবে বসুন।"}
+    ],
+    "vocab": [{"word": "Machine", "meaning": "মেশিন"}, {"word": "Adjust", "meaning": "সামঞ্জস্য করা"}],
+    "grammar_tip": "Use ‘Can you show me how to ...?’ to ask for a demonstration.",
+    "pronunciation_tip": "Say ‘machine’ as /məˈʃiːn/ – stress on ‘ʃiː’.",
+    "key_phrases": ["Can you show me how to use this machine?", "Adjust the weight and sit properly."],
+    "quiz": [{"question": "What does the trainer ask the person to do first?", "options": ["Run", "Adjust the weight", "Drink water"], "correct": 1}],
+    "xp": 20
+  },
+  {
+    "id": "spk-friendhouse-018",
+    "category": "daily",
+    "title": "Visiting a Friend's House",
+    "level": "A2",
+    "objectives": ["Greet politely", "Compliment the house", "Accept hospitality"],
+    "context_bn": "আপনি বন্ধুর বাড়িতে গেস্ট হিসেবে গেছেন।",
+    "dialogues": [
+      {"speaker": "Friend", "en": "Come in! Make yourself at home.", "bn": "ভেতরে আসুন! নিজের বাড়ির মতো স্বাচ্ছন্দ্য বোধ করুন।"},
+      {"speaker": "You", "en": "Thank you. Your house is very beautiful.", "bn": "ধন্যবাদ। আপনার বাড়িটি খুব সুন্দর।"}
+    ],
+    "vocab": [{"word": "Make yourself at home", "meaning": "স্বাচ্ছন্দ্য বোধ করা"}, {"word": "Beautiful", "meaning": "সুন্দর"}],
+    "grammar_tip": "Use imperative ‘Make yourself at home’ to welcome someone.",
+    "pronunciation_tip": "Say ‘beautiful’ as /ˈbjuːtɪfʊl/ – stress first syllable.",
+    "key_phrases": ["Come in! Make yourself at home.", "Your house is very beautiful."],
+    "quiz": [{"question": "How does the person describe the house?", "options": ["Big", "Beautiful", "Small"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "spk-movie-019",
+    "category": "daily",
+    "title": "Going to a Movie Theater",
+    "level": "A2",
+    "objectives": ["Buy tickets", "Ask about showtimes", "Pay"],
+    "context_bn": "আপনি মুভি থিয়েটারে টিকিট কিনছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Two tickets for the 7 pm show, please.", "bn": "রাত ৭টার শো এর জন্য দুটি টিকিট, প্লিজ।"},
+      {"speaker": "Cashier", "en": "That will be 600 taka.", "bn": "৬০০ টাকা হবে।"}
+    ],
+    "vocab": [{"word": "Show", "meaning": "শো"}, {"word": "Taka", "meaning": "টাকা"}],
+    "grammar_tip": "Use ‘Two tickets for ...’ to specify the show.",
+    "pronunciation_tip": "Say ‘ticket’ as /ˈtɪkɪt/ – stress first syllable.",
+    "key_phrases": ["Two tickets for ...", "That will be ... taka."],
+    "quiz": [{"question": "How much do the tickets cost?", "options": ["400", "500", "600"], "correct": 2}],
+    "xp": 15
+  },
+  {
+    "id": "spk-supermarket-020",
+    "category": "daily",
+    "title": "Shopping at a Supermarket",
+    "level": "A1",
+    "objectives": ["Ask where items are", "Ask for help", "Pay at checkout"],
+    "context_bn": "আপনি সুপারমার্কেটে কিছু জিনিস কিনছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Where can I find the milk?", "bn": "আমি দুধ কোথায় পাব?"},
+      {"speaker": "Staff", "en": "It's in the refrigerator aisle.", "bn": "এটা ফ্রিজের aisle-এ আছে。"}
+    ],
+    "vocab": [{"word": "Milk", "meaning": "দুধ"}, {"word": "Refrigerator", "meaning": "ফ্রিজ"}],
+    "grammar_tip": "Use ‘Where can I find ...?’ to ask for location.",
+    "pronunciation_tip": "Say ‘refrigerator’ as /rɪˈfrɪdʒəreɪtər/ – stress on ‘frɪ’.",
+    "key_phrases": ["Where can I find the ...?", "It's in the ... aisle."],
+    "quiz": [{"question": "Where is the milk located?", "options": ["In the refrigerator aisle", "Near the entrance", "On the shelf"], "correct": 0}],
+    "xp": 10
+  },
+  {
+    "id": "spk-weather-021",
+    "category": "daily",
+    "title": "Talking About the Weather",
+    "level": "A1",
+    "objectives": ["Describe weather", "Make small talk", "Predict weather"],
+    "context_bn": "আপনি বন্ধুর সাথে আবহাওয়া নিয়ে কথা বলছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "The weather is so hot today.", "bn": "আজ আবহাওয়া খুব গরম।"},
+      {"speaker": "Friend", "en": "Yes, I think it will rain soon.", "bn": "হ্যাঁ, আমার মনে হয় শীঘ্রই বৃষ্টি হবে।"}
+    ],
+    "vocab": [{"word": "Weather", "meaning": "আবহাওয়া"}, {"word": "Rain", "meaning": "বৃষ্টি"}],
+    "grammar_tip": "Use ‘I think it will ...’ for predictions.",
+    "pronunciation_tip": "Say ‘weather’ as /ˈweðər/ – stress first syllable.",
+    "key_phrases": ["The weather is so hot today.", "I think it will rain soon."],
+    "quiz": [{"question": "What does the friend think will happen soon?", "options": ["Rain", "Snow", "Storm"], "correct": 0}],
+    "xp": 10
+  },
+  {
+    "id": "spk-presentation-022",
+    "category": "office",
+    "title": "Giving a Presentation",
+    "level": "B1",
+    "objectives": ["Open a presentation", "Explain a topic", "Answer questions"],
+    "context_bn": "আপনি অফিসে একটি প্রেজেন্টেশন দিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Good morning everyone. Today I will talk about our new project.", "bn": "সকলকে শুভ সকাল। আজ আমি আমাদের নতুন প্রজেক্ট নিয়ে কথা বলব।"},
+      {"speaker": "Colleague", "en": "Could you show us the budget details?", "bn": "আপনি কি আমাদের বাজেটের বিস্তারিত দেখাতে পারবেন?"}
+    ],
+    "vocab": [{"word": "Project", "meaning": "প্রজেক্ট"}, {"word": "Budget", "meaning": "বাজেট"}],
+    "grammar_tip": "Use ‘Today I will talk about ...’ to introduce a topic.",
+    "pronunciation_tip": "Say ‘project’ as /ˈprɒdʒɛkt/ – stress first syllable.",
+    "key_phrases": ["Good morning everyone.", "Today I will talk about ...", "Could you show us ...?"],
+    "quiz": [{"question": "What does the colleague ask for?", "options": ["Project details", "Budget details", "Schedule details"], "correct": 1}],
+    "xp": 20
+  },
+  {
+    "id": "spk-interview-023",
+    "category": "office",
+    "title": "Attending a Job Interview",
+    "level": "B1",
+    "objectives": ["Talk about experience", "Answer questions", "Express interest"],
+    "context_bn": "আপনি একটি চাকরির ইন্টারভিউ দিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "Manager", "en": "Tell me about your previous experience.", "bn": "আপনার আগের অভিজ্ঞতা সম্পর্কে বলুন।"},
+      {"speaker": "You", "en": "I have worked as a manager for 3 years.", "bn": "আমি ৩ বছর ধরে ম্যানেজার হিসেবে কাজ করেছি।"}
+    ],
+    "vocab": [{"word": "Experience", "meaning": "অভিজ্ঞতা"}, {"word": "Manager", "meaning": "ম্যানেজার"}],
+    "grammar_tip": "Use present perfect ‘I have worked ...’ for experience.",
+    "pronunciation_tip": "Say ‘experience’ as /ɪkˈspɪəriəns/ – stress on ‘spɪə’.",
+    "key_phrases": ["Tell me about your previous experience.", "I have worked as a manager for ... years."],
+    "quiz": [{"question": "How many years has the person worked as a manager?", "options": ["2", "3", "5"], "correct": 1}],
+    "xp": 25
+  },
+  {
+    "id": "spk-callcolleague-024",
+    "category": "office",
+    "title": "Calling a Colleague",
+    "level": "A2",
+    "objectives": ["Greet a colleague", "Ask for a document", "Confirm receipt"],
+    "context_bn": "আপনি অফিসের সহকর্মীকে ফোন করছেন।",
+    "dialogues": [
+      {"speaker": "Colleague", "en": "Hello, how are you?", "bn": "হ্যালো, কেমন আছেন?"},
+      {"speaker": "You", "en": "I am fine. Can you send me the report?", "bn": "আমি ভালো আছি। আপনি কি আমাকে রিপোর্টটি পাঠাতে পারবেন?"}
+    ],
+    "vocab": [{"word": "Report", "meaning": "রিপোর্ট"}, {"word": "Send", "meaning": "পাঠানো"}],
+    "grammar_tip": "Use ‘Can you ...?’ for polite requests.",
+    "pronunciation_tip": "Say ‘report’ as /rɪˈpɔːt/ – stress on ‘pɔːt’.",
+    "key_phrases": ["How are you?", "Can you send me the report?"],
+    "quiz": [{"question": "What does the caller want?", "options": ["The report", "A meeting", "Lunch"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "spk-pharmacy-025",
+    "category": "bangladesh",
+    "title": "At a Pharmacy",
+    "level": "A2",
+    "objectives": ["Ask for medicine", "Describe symptoms", "Understand instructions"],
+    "context_bn": "আপনি ফার্মেসিতে ওষুধ কিনতে গেছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Do you have medicine for a cold?", "bn": "আপনার কাছে সর্দির জন্য ওষুধ আছে?"},
+      {"speaker": "Pharmacist", "en": "Yes, here is a pack of paracetamol.", "bn": "হ্যাঁ, এখানে প্যারাসিটামলের একটা প্যাকেট আছে।"}
+    ],
+    "vocab": [{"word": "Medicine", "meaning": "ওষুধ"}, {"word": "Paracetamol", "meaning": "প্যারাসিটামল"}],
+    "grammar_tip": "Use ‘Do you have ...?’ to ask if something is available.",
+    "pronunciation_tip": "Say ‘paracetamol’ as /ˌpærəˈsiːtəmɒl/ – stress on ‘siː’.",
+    "key_phrases": ["Do you have medicine for a cold?", "Here is a pack of paracetamol."],
+    "quiz": [{"question": "What does the customer buy?", "options": ["Paracetamol", "Antibiotic", "Syrup"], "correct": 0}],
+    "xp": 15
+  },
+  {
+    "id": "spk-meeting-026",
+    "category": "office",
+    "title": "Attending a Meeting",
+    "level": "B1",
+    "objectives": ["Start a meeting", "Discuss agenda", "Suggest ideas"],
+    "context_bn": "আপনি একটি টিম মিটিংয়ে অংশ নিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "Leader", "en": "Let's start the meeting. What is the first agenda?", "bn": "চলুন মিটিং শুরু করি। প্রথম এজেন্ডা কি?"},
+      {"speaker": "You", "en": "I think we need to discuss the sales target.", "bn": "আমার মনে হয় আমাদের সেলস টার্গেট নিয়ে আলোচনা করা দরকার।"}
+    ],
+    "vocab": [{"word": "Agenda", "meaning": "এজেন্ডা"}, {"word": "Target", "meaning": "টার্গেট"}],
+    "grammar_tip": "Use ‘I think we need to ...’ to make a suggestion.",
+    "pronunciation_tip": "Say ‘agenda’ as /əˈdʒɛndə/ – stress on ‘dʒɛn’.",
+    "key_phrases": ["Let's start the meeting.", "I think we need to discuss ..."],
+    "quiz": [{"question": "What does the person suggest discussing?", "options": ["Sales target", "Holiday plan", "Office lunch"], "correct": 0}],
+    "xp": 20
+  },
+  {
+    "id": "spk-bookinghotel-027",
+    "category": "travel",
+    "title": "Booking a Hotel Room Online",
+    "level": "B1",
+    "objectives": ["Specify room type", "Ask about price", "Confirm booking"],
+    "context_bn": "আপনি অনলাইনে হোটেল বুকিং দিচ্ছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I want to book a double room for three nights.", "bn": "আমি তিন রাতের জন্য একটি ডাবল রুম বুক করতে চাই।"},
+      {"speaker": "Clerk", "en": "That will be $120 per night.", "bn": "প্রতি রাতের জন্য $১২০ হবে।"}
+    ],
+    "vocab": [{"word": "Double room", "meaning": "ডাবল রুম"}, {"word": "Per night", "meaning": "প্রতি রাত"}],
+    "grammar_tip": "Use ‘I want to book ...’ to make a reservation.",
+    "pronunciation_tip": "Say ‘double’ as /ˈdʌbəl/ – stress first syllable.",
+    "key_phrases": ["I want to book a double room for ... nights.", "That will be ... per night."],
+    "quiz": [{"question": "How much does the room cost per night?", "options": ["$100", "$120", "$150"], "correct": 1}],
+    "xp": 20
+  },
+  {
+    "id": "spk-help-028",
+    "category": "daily",
+    "title": "Asking for Help",
+    "level": "A1",
+    "objectives": ["Ask a police officer for help", "Explain the problem", "Thank"],
+    "context_bn": "আপনি সড়কে একজন পুলিশ অফিসারের কাছে সাহায্য চাইছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "Excuse me, officer. Can you help me?", "bn": "এক্সকিউজ মি, অফিসার। আপনি কি আমাকে সাহায্য করতে পারেন?"},
+      {"speaker": "Officer", "en": "Yes, tell me what you need.", "bn": "হ্যাঁ, বলুন আপনার কী দরকার।"}
+    ],
+    "vocab": [{"word": "Officer", "meaning": "অফিসার"}, {"word": "Help", "meaning": "সাহায্য"}],
+    "grammar_tip": "Use ‘Can you help me?’ for a direct request.",
+    "pronunciation_tip": "Say ‘officer’ as /ˈɒfɪsər/ – stress first syllable.",
+    "key_phrases": ["Excuse me, officer. Can you help me?", "Tell me what you need."],
+    "quiz": [{"question": "Who does the person ask for help?", "options": ["Policeman", "Teacher", "Doctor"], "correct": 0}],
+    "xp": 10
+  },
+  {
+    "id": "spk-apologize-029",
+    "category": "confidence",
+    "title": "Apologizing and Responding",
+    "level": "A2",
+    "objectives": ["Apologize politely", "Accept an apology", "Respond calmly"],
+    "context_bn": "আপনি দেরি করার জন্য ক্ষমা চাইছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I am so sorry I am late.", "bn": "আমি খুব দুঃখিত যে আমি দেরি করেছি।"},
+      {"speaker": "Friend", "en": "No problem. We just started.", "bn": "কোন সমস্যা নেই। আমরা এইমাত্র শুরু করেছি।"}
+    ],
+    "vocab": [{"word": "Sorry", "meaning": "দুঃখিত"}, {"word": "Late", "meaning": "দেরি"}],
+    "grammar_tip": "Use ‘I am so sorry I ...’ to apologize sincerely.",
+    "pronunciation_tip": "Say ‘sorry’ as /ˈsɒri/ – stress first syllable.",
+    "key_phrases": ["I am so sorry I am late.", "No problem. We just started."],
+    "quiz": [{"question": "How does the friend respond?", "options": ["Angrily", "No problem", "Leave"], "correct": 1}],
+    "xp": 15
+  },
+  {
+    "id": "spk-complaint-030",
+    "category": "confidence",
+    "title": "Making a Complaint",
+    "level": "B1",
+    "objectives": ["State the problem", "Ask for a refund", "Be polite but firm"],
+    "context_bn": "আপনি একটি অনলাইন অর্ডার নিয়ে অভিযোগ করছেন।",
+    "dialogues": [
+      {"speaker": "You", "en": "I received the wrong item. I want a refund.", "bn": "আমি ভুল জিনিস পেয়েছি। আমি রিফান্ড চাই।"},
+      {"speaker": "Rep", "en": "I'm very sorry. We will process your refund immediately.", "bn": "আমি খুব দুঃখিত। আমরা অবিলম্বে আপনার রিফান্ড প্রক্রিয়া করব।"}
+    ],
+    "vocab": [{"word": "Refund", "meaning": "রিফান্ড"}, {"word": "Wrong", "meaning": "ভুল"}],
+    "grammar_tip": "Use ‘I received the wrong ...’ to describe a mistake.",
+    "pronunciation_tip": "Say ‘refund’ as /ˈriːfʌnd/ – stress first syllable.",
+    "key_phrases": ["I received the wrong item.", "I want a refund.", "We will process your refund immediately."],
+    "quiz": [{"question": "What is the customer's complaint about?", "options": ["Wrong item", "Late delivery", "High price"], "correct": 0}],
     "xp": 20
   }
 ]
