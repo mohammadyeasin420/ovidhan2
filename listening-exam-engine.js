@@ -1,3 +1,31 @@
+// Make functions globally accessible so inline onclick works
+window.playSection = function(index) {
+    const text = document.getElementById(`audio-text-${index}`).innerText;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.85;
+    window.speechSynthesis.speak(utterance);
+    // Visual feedback
+    const audioTextEl = document.getElementById(`audio-text-${index}`);
+    audioTextEl.style.background = 'var(--gold-dim)';
+    utterance.onend = () => {
+        audioTextEl.style.background = 'transparent';
+    };
+};
+
+window.toggleTranslation = function(index) {
+    const trans = document.getElementById(`translation-${index}`);
+    const btn = document.querySelector(`#sec-${index} .btn-translate`);
+    if (trans.style.display === 'block') {
+        trans.style.display = 'none';
+        btn.textContent = '🌐 Show Bangla';
+    } else {
+        trans.style.display = 'block';
+        btn.textContent = '🌐 Hide Bangla';
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section-box');
     const prevBtn = document.getElementById('btn-prev');
@@ -5,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const progressFill = document.getElementById('progress-fill');
     const feedback = document.getElementById('exam-feedback');
     let currentSection = 0;
-    let answers = {};
 
     function showSection(index) {
         sections.forEach((el, i) => {
@@ -14,35 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
         prevBtn.disabled = index === 0;
         nextBtn.textContent = index === sections.length - 1 ? '✅ Submit Exam' : 'Next Section ➡';
         progressFill.style.width = ((index + 1) / sections.length) * 100 + '%';
-        // Scroll to top of main area
         document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
     }
-
-    function playSection(index) {
-        const text = document.getElementById(`audio-text-${index}`).innerText;
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'en-US';
-        utterance.rate = 0.85;
-        window.speechSynthesis.speak(utterance);
-        document.getElementById(`audio-text-${index}`).style.background = 'var(--gold-dim)';
-        utterance.onend = () => {
-            document.getElementById(`audio-text-${index}`).style.background = 'transparent';
-        };
-    }
-
-    // Toggle Translation
-    window.toggleTranslation = function(index) {
-        const trans = document.getElementById(`translation-${index}`);
-        const btn = document.querySelector(`#sec-${index} .btn-translate`);
-        if (trans.style.display === 'block') {
-            trans.style.display = 'none';
-            btn.textContent = '🌐 Show Bangla';
-        } else {
-            trans.style.display = 'block';
-            btn.textContent = '🌐 Hide Bangla';
-        }
-    };
 
     function validateSection(index) {
         const mcqs = document.querySelectorAll(`#sec-${index} .mcq-question`);
@@ -64,13 +64,18 @@ document.addEventListener('DOMContentLoaded', function() {
             currentSection++;
             showSection(currentSection);
         } else {
-            // Submit Exam
             if (!validateSection(currentSection)) {
                 feedback.textContent = "⚠️ Please answer all questions in the final section before submitting.";
                 return;
             }
             feedback.textContent = "";
-            calculateScore();
+            // Submit logic (XP, etc.)
+            feedback.innerHTML = "🎉 Exam Submitted! XP granted.";
+            nextBtn.disabled = true;
+            prevBtn.disabled = true;
+            if (typeof window.ovidhan !== 'undefined' && window.ovidhan.trackDailyChallenge) {
+                window.ovidhan.trackDailyChallenge();
+            }
         }
     });
 
@@ -81,21 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    function calculateScore() {
-        let correct = 0, total = 0;
-        // Fetch correct answers from a hidden JSON we can generate, or hardcode here
-        // For simplicity, we just grade based on radio values (0-based index)
-        // We will assume the correct answer index matches the options array order.
-        // In a real generator, we would inject the correct answers. Let's do that now!
-        // Since we didn't inject a data tag, I'll use the MCQs from the screen.
-        // Actually, let's generate a data tag. But to keep this file simple, I'll just calculate from the radio values.
-        // For now, let's prompt the user they finished.
-        feedback.innerHTML = "🎉 Exam Submitted! Check your score in the dashboard soon (XP granted).";
-        nextBtn.disabled = true;
-        prevBtn.disabled = true;
-        // XP Trigger
-        if (typeof window.ovidhan !== 'undefined' && window.ovidhan.trackDailyChallenge) {
-            window.ovidhan.trackDailyChallenge();
-        }
-    }
+    // Show first section
+    showSection(0);
 });
