@@ -15,7 +15,7 @@ category_map = {
     "confidence": "confidence"
 }
 
-# The full HTML template
+# The full HTML template (unchanged)
 template = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,11 +103,20 @@ for lesson in lessons:
     # Create the specific category folder
     os.makedirs(f'speaking/{folder}', exist_ok=True)
     
-    # Generate slug from title
-    slug = lesson['title'].lower().replace(' ', '-').replace(',', '').replace('&', 'and')
+    # Generate slug – replace problematic characters
+    slug = lesson['title'].lower()
+    slug = slug.replace(' ', '-')
+    slug = slug.replace(',', '')
+    slug = slug.replace('&', 'and')
+    slug = slug.replace('/', '-')          # <-- Fix for slashes
+    slug = slug.replace('?', '')
+    slug = slug.replace('!', '')
+    slug = slug.replace("'", '')
+    slug = slug.replace('"', '')
+    
     filepath = os.path.join('speaking', folder, f'{slug}.html')
     
-    # Build HTML components
+    # Build HTML components (same as before)
     objectives_html = ''.join(f'<li>{obj}</li>' for obj in lesson.get('objectives', []))
     dialogues_html = ''.join(
         f'<p><strong>{d["speaker"]}:</strong> {d["en"]}<br><span style="color: var(--text-mid);">({d["bn"]})</span></p>'
