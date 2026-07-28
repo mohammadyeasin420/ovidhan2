@@ -1,4 +1,3 @@
-
 # Past Simple Tense
 
 ## What is the Past Simple Tense?
@@ -6,7 +5,17 @@
 The **Past Simple Tense** is used to talk about actions that started and finished in the past.
 
 **বাংলা:**  
-Past Simple Tense এমন কাজ বোঝায় যা অতীতে ঘটেছিল এবং সম্পূর্ণ শেষ হয়েছে।
+Past Simple Tense এমন কাজ বোঝায় যা অতীতে ঘটেছিল এবং সম্পূর্ণ শেষ হয়েছে。
+
+---
+
+## Learning Outcomes
+
+By the end of this lesson, you will be able to:
+- Understand when to use the Past Simple Tense
+- Make positive, negative, and question sentences
+- Avoid common mistakes
+- Use common past time expressions confidently
 
 ---
 
@@ -47,11 +56,19 @@ Common words used with the Past Simple:
 
 ---
 
-## More Examples
+## More Examples (Bangla Context)
 
-✅ She watched a movie.  
-✅ They played football.  
-✅ We visited Cox's Bazar.
+✅ I visited Cox's Bazar.  
+✅ She travelled to Sylhet.  
+✅ We celebrated Pohela Boishakh.  
+✅ He bought mangoes from Rajshahi.
+
+---
+
+## 💡 Remember
+
+Use **Verb 2** only in positive sentences.  
+After **Did**, always use **Verb 1**.
 
 ---
 
@@ -85,24 +102,49 @@ C. She goes to school yesterday.
 
 ---
 
-## Practice
+## Try It Yourself
 
-Rewrite these sentences in the Past Simple.  
-1. I play cricket.  
-2. They eat rice.  
-3. She visits her grandmother.  
+Change these sentences into the Past Simple.
+
+1. I play cricket every Friday.  
+2. They eat rice every day.  
+3. She visits her grandmother every month.  
+4. We go to school.  
+5. He studies English.
+
+<details>
+<summary>Show Answers</summary>
+
+1. I played cricket.  
+2. They ate rice.  
+3. She visited her grandmother.  
+4. We went to school.  
+5. He studied English.
+
+</details>
+
+---
+
+## Real-Life Conversation
+
+A: What did you do yesterday?  
+B: I visited my grandparents.  
+A: Did you enjoy it?  
+B: Yes, I had a great time.
 
 ---
 
 ## Learn These Words
 
-- Visit
-- Watch
-- Play
-- Travel
-- Study
-- Eat
-- Go
+| Word   | Bangla           |
+| ------ | ---------------- |
+| Visit  | দেখা করতে যাওয়া |
+| Watch  | দেখা             |
+| Play   | খেলা             |
+| Travel | ভ্রমণ করা        |
+| Study  | পড়াশোনা করা     |
+| Eat    | খাওয়া           |
+| Go     | যাওয়া           |
 
 ---
 
@@ -111,3 +153,16 @@ Rewrite these sentences in the Past Simple.
 - [Present Simple Tense](/grammar/present-simple-tense-bangla.html)  
 - [Past Continuous Tense](/grammar/past-continuous-tense-bangla.html)  
 - [Present Perfect Tense](/grammar/present-perfect-tense-bangla.html)
+
+---
+
+## Frequently Asked Questions
+
+**When do we use the Past Simple?**  
+We use it for completed actions that happened at a specific time in the past.
+
+**Can I use "did" with Verb 2?**  
+No. Always use Verb 1 (base form) after "did". Example: 'Did you go?' (Not 'Did you went?').
+
+**Which time words are common?**  
+Yesterday, ago, last week, last month, in 2020, and this morning.

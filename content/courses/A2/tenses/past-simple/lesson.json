@@ -1,6 +1,6 @@
 {
   "id": "gram-past-simple-001",
-  "version": 1,
+  "version": 2,
   "subject": "grammar",
   "language": { "primary": "en", "support": "bn" },
   "status": "published",
@@ -10,20 +10,54 @@
   "title": "Past Simple Tense",
   "slug": "past-simple-tense-bangla",
   "cefr": "A2",
+  "lesson_type": "Grammar",
+  "reading_time": 10,
   "grammar_focus": ["Verb 2 (Past Form)", "Did", "Past Time Expressions"],
   "estimated_time": 20,
-  "reading_time": 8,
   "word_count": 480,
   "difficulty": "beginner",
-  "learning_objectives": [
+  "learning_outcomes": [
     "Understand when to use the Past Simple Tense",
     "Form positive, negative, and question sentences",
-    "Identify common time expressions",
     "Avoid common mistakes",
-    "Complete a short grammar quiz"
+    "Use common past time expressions confidently"
   ],
   "prerequisites": ["gram-present-simple-001"],
-  "vocabulary": ["visit", "watch", "play", "travel", "study", "eat", "go"],
+  "remember_tip": "Use **Verb 2** only in positive sentences. After **Did**, always use **Verb 1**.",
+  "practice": [
+    "I play cricket every Friday.",
+    "They eat rice every day.",
+    "She visits her grandmother every month.",
+    "We go to school.",
+    "He studies English."
+  ],
+  "practice_answers": [
+    "I played cricket.",
+    "They ate rice.",
+    "She visited her grandmother.",
+    "We went to school.",
+    "He studied English."
+  ],
+  "vocabulary": [
+    { "word": "Visit", "bangla": "দেখা করতে যাওয়া" },
+    { "word": "Watch", "bangla": "দেখা" },
+    { "word": "Play", "bangla": "খেলা" },
+    { "word": "Travel", "bangla": "ভ্রমণ করা" },
+    { "word": "Study", "bangla": "পড়াশোনা করা" },
+    { "word": "Eat", "bangla": "খাওয়া" },
+    { "word": "Go", "bangla": "যাওয়া" }
+  ],
+  "conversation": [
+    {"speaker": "A", "text": "What did you do yesterday?"},
+    {"speaker": "B", "text": "I visited my grandparents."},
+    {"speaker": "A", "text": "Did you enjoy it?"},
+    {"speaker": "B", "text": "Yes, I had a great time."}
+  ],
+  "audio_examples": [
+    "I visited Dhaka yesterday.",
+    "She watched a movie.",
+    "They played football."
+  ],
   "search": {
     "priority": 10,
     "keywords": ["past simple tense", "past simple bangla", "english grammar bangla", "verb 2", "past tense examples"]
@@ -45,6 +79,8 @@
     {"title": "Past Continuous Tense", "url": "/grammar/past-continuous-tense-bangla.html"},
     {"title": "Present Perfect Tense", "url": "/grammar/present-perfect-tense-bangla.html"}
   ],
+  "previous_lesson": {"title": "Present Simple Tense", "url": "/grammar/present-simple-tense-bangla.html"},
+  "next_lesson": {"title": "Past Continuous Tense", "url": "/grammar/past-continuous-tense-bangla.html"},
   "seo": {
     "title": "Past Simple Tense – Bangla Explanation with Examples | Ovidhan",
     "description": "Learn Past Simple Tense in Bangla with rules, examples, time expressions, exercises, and quizzes. Perfect for A2 learners.",
