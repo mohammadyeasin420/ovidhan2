@@ -5,7 +5,7 @@
 The **Past Simple Tense** is used to talk about actions that started and finished in the past.
 
 **বাংলা:**  
-Past Simple Tense এমন কাজ বোঝায় যা অতীতে ঘটেছিল এবং সম্পূর্ণ শেষ হয়েছে。
+Past Simple Tense এমন কাজ বোঝায় যা অতীতে ঘটেছিল এবং সম্পূর্ণ শেষ হয়েছে।
 
 ---
 
@@ -125,44 +125,8 @@ Change these sentences into the Past Simple.
 
 ---
 
-## Real-Life Conversation
-
-A: What did you do yesterday?  
-B: I visited my grandparents.  
-A: Did you enjoy it?  
-B: Yes, I had a great time.
-
----
-
-## Learn These Words
-
-| Word   | Bangla           |
-| ------ | ---------------- |
-| Visit  | দেখা করতে যাওয়া |
-| Watch  | দেখা             |
-| Play   | খেলা             |
-| Travel | ভ্রমণ করা        |
-| Study  | পড়াশোনা করা     |
-| Eat    | খাওয়া           |
-| Go     | যাওয়া           |
-
----
-
 ## Related Lessons
 
 - [Present Simple Tense](/grammar/present-simple-tense-bangla.html)  
 - [Past Continuous Tense](/grammar/past-continuous-tense-bangla.html)  
 - [Present Perfect Tense](/grammar/present-perfect-tense-bangla.html)
-
----
-
-## Frequently Asked Questions
-
-**When do we use the Past Simple?**  
-We use it for completed actions that happened at a specific time in the past.
-
-**Can I use "did" with Verb 2?**  
-No. Always use Verb 1 (base form) after "did". Example: 'Did you go?' (Not 'Did you went?').
-
-**Which time words are common?**  
-Yesterday, ago, last week, last month, in 2020, and this morning.
