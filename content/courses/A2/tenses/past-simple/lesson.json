@@ -2,10 +2,7 @@
   "id": "gram-past-simple-001",
   "version": 1,
   "subject": "grammar",
-  "language": {
-    "primary": "en",
-    "support": "bn"
-  },
+  "language": { "primary": "en", "support": "bn" },
   "status": "published",
   "url": "/grammar/past-simple-tense-bangla.html",
   "course_id": "course-a2-grammar",
@@ -13,49 +10,49 @@
   "title": "Past Simple Tense",
   "slug": "past-simple-tense-bangla",
   "cefr": "A2",
-  "estimated_time": 15,
-  "reading_time": 6,
-  "word_count": 320,
+  "grammar_focus": ["Verb 2 (Past Form)", "Did", "Past Time Expressions"],
+  "estimated_time": 20,
+  "reading_time": 8,
+  "word_count": 480,
   "difficulty": "beginner",
   "learning_objectives": [
-    "Understand the usage of Past Simple",
-    "Form regular verbs in the past tense",
-    "Memorize 5 common irregular verbs"
+    "Understand when to use the Past Simple Tense",
+    "Form positive, negative, and question sentences",
+    "Identify common time expressions",
+    "Avoid common mistakes",
+    "Complete a short grammar quiz"
   ],
   "prerequisites": ["gram-present-simple-001"],
+  "vocabulary": ["visit", "watch", "play", "travel", "study", "eat", "go"],
   "search": {
     "priority": 10,
-    "keywords": ["past tense", "past simple", "verb 2", "bangla grammar"]
+    "keywords": ["past simple tense", "past simple bangla", "english grammar bangla", "verb 2", "past tense examples"]
   },
-  "analytics": {
-    "completion_rate": 0,
-    "average_time": 0,
-    "difficulty_score": 0
-  },
-  "hero": {
-    "headline": "Past Simple Tense",
-    "subtitle": "বাংলায় সহজ ব্যাখ্যা",
-    "badge": "A2 Beginner"
-  },
+  "analytics": { "completion_rate": 0, "average_time": 0, "difficulty_score": 0 },
+  "hero": { "headline": "Past Simple Tense", "subtitle": "বাংলায় সহজ ব্যাখ্যা", "badge": "A2 Beginner" },
   "quiz": [
     {
-      "question": "Which is the correct Past Simple form of 'go'?",
-      "options": ["go", "went", "gone", "going"],
+      "question": "Choose the correct sentence.",
+      "options": ["She go to school yesterday.", "She went to school yesterday.", "She goes to school yesterday."],
       "correct": 1,
-      "explanation": "'Went' is the 2nd form of 'go'."
+      "explanation": "'Went' is the past tense of 'go'."
     }
   ],
-  "reward": {
-    "xp": 20,
-    "badge": ""
-  },
+  "reward": { "xp": 20, "badge": "" },
   "tags": ["past-tense", "regular-verbs", "irregular-verbs"],
   "related_lessons": [
-    "gram-present-simple-001",
-    "gram-past-continuous-001"
+    {"title": "Present Simple Tense", "url": "/grammar/present-simple-tense-bangla.html"},
+    {"title": "Past Continuous Tense", "url": "/grammar/past-continuous-tense-bangla.html"},
+    {"title": "Present Perfect Tense", "url": "/grammar/present-perfect-tense-bangla.html"}
   ],
   "seo": {
-    "title": "Past Simple Tense – Bangla Explanation | Ovidhan",
-    "description": "Learn Past Simple Tense with easy Bangla explanations, 10+ examples, and an interactive quiz. Perfect for A2 learners."
-  }
+    "title": "Past Simple Tense – Bangla Explanation with Examples | Ovidhan",
+    "description": "Learn Past Simple Tense in Bangla with rules, examples, time expressions, exercises, and quizzes. Perfect for A2 learners.",
+    "keywords": ["past simple tense", "past simple bangla", "english grammar bangla", "verb 2", "past tense examples"]
+  },
+  "faq": [
+    { "q": "When do we use the Past Simple?", "a": "We use it for completed actions that happened at a specific time in the past." },
+    { "q": "Can I use 'did' with Verb 2?", "a": "No. Always use Verb 1 (base form) after 'did'. Example: 'Did you go?' (Not 'Did you went?')." },
+    { "q": "Which time words are common?", "a": "Yesterday, ago, last week, last month, in 2020, and this morning." }
+  ]
 }
