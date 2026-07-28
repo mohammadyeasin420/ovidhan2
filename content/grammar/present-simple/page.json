@@ -1,0 +1,41 @@
+﻿{
+  "id": "gram-present-simple-001",
+  "content_version": 1,
+  "template": "lesson",
+  "status": "published",
+  "author": "Mohammad Yeasin",
+  "order": 1,
+  "subject": "grammar",
+  "title": "Present Simple Tense",
+  "cefr": "A1",
+  "estimated_time": 15,
+  "reading_time": 8,
+  "difficulty": "beginner",
+  "tags": ["present-tense", "simple-tense", "do-does", "routines"],
+  "course_ids": ["A1", "A2", "IELTS"],
+  "primary_keyword": "present simple tense bangla",
+  "secondary_keywords": ["present simple rules", "do does bangla", "english grammar bangla"],
+  "learning_outcomes": [
+    "Understand when to use the Present Simple Tense",
+    "Form positive, negative, and question sentences",
+    "Use adverbs of frequency correctly"
+  ],
+  "vocabulary": [
+    { "word": "Every day", "bangla": "প্রতিদিন" },
+    { "word": "Usually", "bangla": "সাধারণত" },
+    { "word": "Never", "bangla": "কখনো না" }
+  ],
+  "quiz": [
+    {
+      "question": "Which is the correct sentence?",
+      "options": ["She go to school.", "She goes to school.", "She going to school."],
+      "correct": 1,
+      "explanation": "For He/She/It, add 's' or 'es' to the verb."
+    }
+  ],
+  "faq": [
+    { "q": "When do we use the Present Simple?", "a": "For habits, general facts, and daily routines." },
+    { "q": "When do we add 's' to the verb?", "a": "For He, She, It in positive sentences." }
+  ],
+  "reward": { "xp": 20, "badge": "" }
+}
