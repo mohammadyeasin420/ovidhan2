@@ -1,360 +1,762 @@
 [
   {
-    "id": "lst-bank-001",
-    "title": "Listening to a Bank Call Center",
-    "category": "bangladesh",
-    "level": "B1",
-    "duration_minutes": 6,
-    "keywords": "bank listening practice, customer service English, call center English, Bangladesh bank English",
-    "context_bn": "আপনি একটি ব্যাংকের কল সেন্টারে ফোন করছেন। আপনার ব্যালেন্স জানতে চান।",
-    "audio_text": "Welcome to ABC Bank. Your account balance is 15,000 taka. To check your balance, dial *123#.",
-    "bangla_translation": "এবিসি ব্যাংকে স্বাগতম। আপনার অ্যাকাউন্ট ব্যালেন্স ১৫,০০০ টাকা। আপনার ব্যালেন্স চেক করতে *১২৩# ডায়াল করুন।",
-    "dictation_blanks": [
-      "Your account balance is _____ taka.",
-      "To check your balance, dial _____."
-    ],
-    "dictation_answers": ["15,000", "*123#"],
-    "comprehension_quiz": [
-      {
-        "question": "How much is the account balance?",
-        "options": ["10,000", "15,000", "20,000"],
-        "correct": 1
-      },
-      {
-        "question": "What number should you dial to check balance?",
-        "options": ["*123#", "*456#", "#123"],
-        "correct": 0
-      }
-    ],
-    "xp": 20,
-    "related_lessons": [
-      {"title": "Opening a Bank Account in Bangladesh", "url": "/speaking/bangladesh/opening-a-bank-account-in-bangladesh.html"},
-      {"title": "Using Mobile Banking", "url": "/speaking/bangladesh/using-mobile-banking.html"}
-    ],
-    "vocab": [
-      {"word": "Balance", "meaning": "ব্যালেন্স"},
-      {"word": "Dial", "meaning": "ডায়াল করা"}
-    ]
-  },
-  {
-    "id": "lst-delivery-002",
-    "title": "Listening to a Delivery Rider",
-    "category": "bangladesh",
-    "level": "A2",
-    "duration_minutes": 5,
-    "keywords": "delivery rider English, parcel listening, listening practice Bangladesh, everyday English",
-    "context_bn": "একটি ডেলিভারি রাইডার আপনার পার্সেল নিয়ে কল করছে।",
-    "audio_text": "Hello, I have a parcel for you. I am at the gate. Please come and collect it.",
-    "bangla_translation": "হ্যালো, আপনার জন্য একটি পার্সেল আছে। আমি গেটে আছি। অনুগ্রহ করে এসে এটি নিন।",
-    "dictation_blanks": [
-      "Hello, I have a _____ for you.",
-      "I am at the _____."
-    ],
-    "dictation_answers": ["parcel", "gate"],
-    "comprehension_quiz": [
-      {
-        "question": "Where is the rider?",
-        "options": ["At the gate", "At the office", "At the shop"],
-        "correct": 0
-      }
-    ],
+    "id": "lst-bangla-001",
+    "title": "Buying Vegetables at the Market",
+    "category": "daily",
+    "level": "A1",
+    "duration": 6,
     "xp": 15,
-    "related_lessons": [
-      {"title": "Talking to a Delivery Rider", "url": "/speaking/bangladesh/talking-to-a-delivery-rider.html"}
-    ],
+    "audio_text": "Customer: How much for one kilo of tomatoes? Seller: 60 taka per kilo. Customer: Can you give me a discount? Seller: If you buy two kilos, I'll give you 55 taka per kilo. Customer: Okay, I'll take two kilos. Here is 110 taka.",
+    "bangla_translation": "গ্রাহক: এক কেজি টমেটোর দাম কত? বিক্রেতা: ৬০ টাকা প্রতি কেজি। গ্রাহক: আপনি কি ডিসকাউন্ট দিতে পারেন? বিক্রেতা: আপনি যদি দুই কেজি কেনেন, তাহলে প্রতি কেজি ৫৫ টাকা দেব। গ্রাহক: ঠিক আছে, আমি দুই কেজি নেব। এই নিন ১১০ টাকা।",
     "vocab": [
-      {"word": "Parcel", "meaning": "পার্সেল"},
-      {"word": "Gate", "meaning": "গেট"}
-    ]
+      { "word": "Kilo", "bangla": "কেজি" },
+      { "word": "Discount", "bangla": "ছাড়" },
+      { "word": "Taka", "bangla": "টাকা" }
+    ],
+    "grammar_note": "Use 'How much' to ask price. Use 'Can you...?' to make polite requests.",
+    "quiz": [
+      { "question": "What is the price per kilo if you buy two?", "options": ["60 taka", "55 taka", "50 taka"], "correct": 1 },
+      { "question": "How much did the customer pay?", "options": ["100 taka", "110 taka", "120 taka"], "correct": 1 }
+    ],
+    "shadowing_sentences": [
+      "How much for one kilo of tomatoes?",
+      "Can you give me a discount?",
+      "I'll take two kilos."
+    ],
+    "common_mistakes": [
+      { "wrong": "How much for one kilo tomatoes?", "right": "How much for one kilo of tomatoes?", "explanation": "Use 'of' after 'kilo'." }
+    ],
+    "related_lessons": [
+      { "title": "Shopping for Clothes", "url": "/speaking/travel/shopping-for-clothes.html" }
+    ],
+    "next_lesson_id": "lst-daily-002"
   },
   {
-    "id": "lst-electricity-003",
-    "title": "Electricity Bill Payment Confirmation",
-    "category": "bangladesh",
-    "level": "B1",
-    "duration_minutes": 5,
-    "keywords": "electricity bill English, payment confirmation listening, Bangladesh utility English",
-    "context_bn": "বিদ্যুৎ বিল পরিশোধের নিশ্চিতকরণ বার্তা শুনছেন।",
-    "audio_text": "Your electricity bill of 2,500 taka has been paid successfully. The due date for next month is 30th.",
-    "bangla_translation": "আপনার ২,৫০০ টাকার বিদ্যুৎ বিল সফলভাবে পরিশোধ করা হয়েছে। আগামী মাসের নির্ধারিত তারিখ ৩০শে।",
-    "dictation_blanks": [
-      "Your electricity bill of _____ taka has been paid.",
-      "The due date for next month is _____."
-    ],
-    "dictation_answers": ["2,500", "30th"],
-    "comprehension_quiz": [
-      {
-        "question": "How much was the bill?",
-        "options": ["1,500", "2,500", "3,500"],
-        "correct": 1
-      },
-      {
-        "question": "When is the next due date?",
-        "options": ["30th", "15th", "1st"],
-        "correct": 0
-      }
-    ],
-    "xp": 20,
-    "related_lessons": [
-      {"title": "Asking About Electricity Bills", "url": "/speaking/bangladesh/asking-about-electricity-bills.html"}
-    ],
+    "id": "lst-daily-002",
+    "title": "Greeting a Neighbour",
+    "category": "daily",
+    "level": "A1",
+    "duration": 5,
+    "xp": 10,
+    "audio_text": "A: Good morning, Mrs. Khan! B: Good morning! How are you today? A: I'm fine, thank you. And you? B: I'm well, thanks. How is your family? A: They're all fine, thanks.",
+    "bangla_translation": "ক: শুভ সকাল, মিসেস খান! খ: শুভ সকাল! আপনি আজ কেমন আছেন? ক: আমি ভালো আছি, ধন্যবাদ। আর আপনি? খ: আমি ভালো আছি, ধন্যবাদ। আপনার পরিবার কেমন? ক: তারা সবাই ভালো, ধন্যবাদ।",
     "vocab": [
-      {"word": "Bill", "meaning": "বিল"},
-      {"word": "Due date", "meaning": "নির্ধারিত তারিখ"}
-    ]
+      { "word": "Neighbour", "bangla": "প্রতিবেশী" },
+      { "word": "Family", "bangla": "পরিবার" },
+      { "word": "Well", "bangla": "ভালো" }
+    ],
+    "grammar_note": "Use 'How are you?' to ask about someone's well-being.",
+    "quiz": [
+      { "question": "What is the greeting?", "options": ["Good morning", "Good evening", "Good night"], "correct": 0 },
+      { "question": "What did A ask about?", "options": ["Family", "Work", "Weather"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["Good morning, Mrs. Khan!", "How are you today?"],
+    "common_mistakes": [
+      { "wrong": "Good morning, Mrs. Khan, how are you?", "right": "Good morning, Mrs. Khan! How are you?", "explanation": "Use a separate sentence for the question." }
+    ],
+    "related_lessons": [{"title": "Introducing Yourself", "url": "/speaking/daily/introducing-yourself.html"}],
+    "next_lesson_id": "lst-daily-003"
   },
   {
-    "id": "lst-doctor-004",
-    "title": "Doctor's Prescription Instructions",
-    "category": "bangladesh",
-    "level": "B1",
-    "duration_minutes": 6,
-    "keywords": "doctor prescription English, hospital listening practice, Bangladesh health English",
-    "context_bn": "ডাক্তার আপনাকে ওষুধ সেবনের নির্দেশ দিচ্ছেন।",
-    "audio_text": "Take one tablet twice a day after meals. Drink plenty of water. Come back after 5 days for a checkup.",
-    "bangla_translation": "খাবারের পর দিনে দুবার একটি ট্যাবলেট খান। প্রচুর পানি পান করুন। ৫ দিন পর চেকআপের জন্য ফিরে আসুন।",
-    "dictation_blanks": [
-      "Take one tablet twice a day after _____.",
-      "Come back after _____ days for a checkup."
-    ],
-    "dictation_answers": ["meals", "5"],
-    "comprehension_quiz": [
-      {
-        "question": "When should you take the tablet?",
-        "options": ["After meals", "Before meals", "During meals"],
-        "correct": 0
-      },
-      {
-        "question": "When should you return for a checkup?",
-        "options": ["3 days", "5 days", "7 days"],
-        "correct": 1
-      }
-    ],
-    "xp": 20,
-    "related_lessons": [
-      {"title": "Visiting the Doctor", "url": "/speaking/daily/visiting-the-doctor.html"},
-      {"title": "Admitting a Patient to Hospital", "url": "/speaking/bangladesh/admitting-a-patient-to-hospital.html"}
-    ],
-    "vocab": [
-      {"word": "Prescription", "meaning": "প্রেসক্রিপশন"},
-      {"word": "Checkup", "meaning": "চেকআপ"}
-    ]
-  },
-  {
-    "id": "lst-landlord-005",
-    "title": "Landlord's Rent Reminder",
-    "category": "bangladesh",
-    "level": "A2",
-    "duration_minutes": 5,
-    "keywords": "landlord English, rent reminder listening, Bangladesh rental English",
-    "context_bn": "আপনার বাড়িওয়ালা ভাড়া সম্পর্কে একটি বার্তা দিচ্ছেন।",
-    "audio_text": "Hello, the rent for this month is due. Please pay by the 10th. If you need an extension, let me know.",
-    "bangla_translation": "হ্যালো, এই মাসের ভাড়া দেয়ার সময় এসেছে। অনুগ্রহ করে ১০ তারিখের মধ্যে দিয়ে দিন। যদি বাড়ানোর প্রয়োজন হয়, আমাকে জানান।",
-    "dictation_blanks": [
-      "The rent for this month is _____.",
-      "Please pay by the _____."
-    ],
-    "dictation_answers": ["due", "10th"],
-    "comprehension_quiz": [
-      {
-        "question": "When should you pay the rent?",
-        "options": ["By the 10th", "By the 15th", "By the end of month"],
-        "correct": 0
-      },
-      {
-        "question": "What can you do if you need more time?",
-        "options": ["Let the landlord know", "Ignore it", "Pay later"],
-        "correct": 0
-      }
-    ],
+    "id": "lst-daily-003",
+    "title": "Ordering Coffee",
+    "category": "daily",
+    "level": "A1",
+    "duration": 6,
     "xp": 15,
-    "related_lessons": [
-      {"title": "Talking to a Landlord", "url": "/speaking/bangladesh/talking-to-a-landlord.html"}
-    ],
+    "audio_text": "Barista: Welcome! What would you like to drink? Customer: I'll have a cappuccino, please. Barista: Would you like a small or large? Customer: Large, please. Barista: That'll be 300 taka.",
+    "bangla_translation": "বারিস্তা: স্বাগতম! আপনি কি পান করতে চান? গ্রাহক: আমি একটি ক্যাপুচিনো নেব, প্লিজ। বারিস্তা: আপনি ছোট না বড় চান? গ্রাহক: বড়, প্লিজ। বারিস্তা: ৩০০ টাকা হবে।",
     "vocab": [
-      {"word": "Rent", "meaning": "ভাড়া"},
-      {"word": "Due", "meaning": "নির্ধারিত"}
-    ]
+      { "word": "Cappuccino", "bangla": "ক্যাপুচিনো" },
+      { "word": "Large", "bangla": "বড়" },
+      { "word": "Taka", "bangla": "টাকা" }
+    ],
+    "grammar_note": "Use 'Would you like...?' to offer something politely.",
+    "quiz": [
+      { "question": "What did the customer order?", "options": ["Tea", "Cappuccino", "Coffee"], "correct": 1 },
+      { "question": "How much did it cost?", "options": ["200", "300", "400"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["I'll have a cappuccino, please.", "Would you like a small or large?"],
+    "common_mistakes": [
+      { "wrong": "I have a cappuccino.", "right": "I'll have a cappuccino.", "explanation": "Use 'I'll have' to order." }
+    ],
+    "related_lessons": [{"title": "Ordering Food in a Restaurant", "url": "/speaking/travel/ordering-food-in-a-restaurant.html"}],
+    "next_lesson_id": "lst-daily-004"
   },
   {
-    "id": "lst-bkash-006",
-    "title": "bKash Money Transfer Confirmation",
-    "category": "bangladesh",
-    "level": "A2",
-    "duration_minutes": 5,
-    "keywords": "bKash English, mobile banking listening, money transfer confirmation, Bangladesh digital banking",
-    "context_bn": "আপনি bKash এর মাধ্যমে টাকা পাঠানোর নিশ্চিতকরণ বার্তা শুনছেন।",
-    "audio_text": "You have sent 500 taka to 017XXXXXXXX. The transaction is successful. Your new balance is 2,000 taka.",
-    "bangla_translation": "আপনি ০১৭XXXXXXXX নম্বরে ৫০০ টাকা পাঠিয়েছেন। লেনদেন সফল। আপনার নতুন ব্যালেন্স ২,০০০ টাকা।",
-    "dictation_blanks": [
-      "You have sent _____ taka to 017XXXXXXXX.",
-      "Your new balance is _____ taka."
-    ],
-    "dictation_answers": ["500", "2,000"],
-    "comprehension_quiz": [
-      {
-        "question": "How much did you send?",
-        "options": ["500", "1,000", "2,000"],
-        "correct": 0
-      },
-      {
-        "question": "What is your new balance?",
-        "options": ["1,500", "2,000", "2,500"],
-        "correct": 1
-      }
-    ],
+    "id": "lst-daily-004",
+    "title": "Asking for Directions",
+    "category": "daily",
+    "level": "A1",
+    "duration": 5,
     "xp": 15,
-    "related_lessons": [
-      {"title": "Sending Money via bKash/Nagad", "url": "/speaking/bangladesh/sending-money-via-bkash-nagad.html"},
-      {"title": "Using Mobile Banking", "url": "/speaking/bangladesh/using-mobile-banking.html"}
-    ],
+    "audio_text": "A: Excuse me, could you tell me how to get to the station? B: Sure. Go straight until the traffic light, then turn left. It's on your right. A: Thank you very much.",
+    "bangla_translation": "ক: এক্সকিউজ মি, আপনি কি আমাকে স্টেশনে যাওয়ার পথ বলতে পারেন? খ: অবশ্যই। ট্রাফিক লাইট পর্যন্ত সোজা যান, তারপর বামে মোড় নিন। এটা আপনার ডানদিকে। ক: আপনাকে অনেক ধন্যবাদ।",
     "vocab": [
-      {"word": "Transaction", "meaning": "লেনদেন"},
-      {"word": "Balance", "meaning": "ব্যালেন্স"}
-    ]
+      { "word": "Station", "bangla": "স্টেশন" },
+      { "word": "Traffic light", "bangla": "ট্রাফিক লাইট" },
+      { "word": "Turn left", "bangla": "বামে মোড় নেওয়া" }
+    ],
+    "grammar_note": "Use 'Could you tell me...?' to ask for directions politely.",
+    "quiz": [
+      { "question": "Where does the person want to go?", "options": ["Market", "Station", "Hotel"], "correct": 1 },
+      { "question": "What is the second instruction?", "options": ["Turn left", "Turn right", "Go straight"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["Could you tell me how to get to the station?", "Go straight until the traffic light."],
+    "common_mistakes": [
+      { "wrong": "Excuse me, how I go to the station?", "right": "Excuse me, how do I get to the station?", "explanation": "Use 'how do I get to' to ask for directions." }
+    ],
+    "related_lessons": [{"title": "Asking for Directions", "url": "/speaking/travel/asking-for-directions.html"}],
+    "next_lesson_id": "lst-daily-005"
   },
   {
-    "id": "lst-police-007",
-    "title": "Reporting a Lost Item to Police",
-    "category": "bangladesh",
-    "level": "B1",
-    "duration_minutes": 7,
-    "keywords": "police reporting English, lost item listening, Bangladesh police English",
-    "context_bn": "আপনি পুলিশকে একটি হারানো জিনিসের কথা জানাচ্ছেন।",
-    "audio_text": "I lost my wallet at the bus station this morning. It is black and contains my ID cards. I need a report for the insurance.",
-    "bangla_translation": "আমি আজ সকালে বাস স্টেশনে আমার ওয়ালেট হারিয়েছি। এটি কালো এবং এতে আমার আইডি কার্ড আছে। বীমার জন্য আমার একটি রিপোর্ট দরকার।",
-    "dictation_blanks": [
-      "I lost my wallet at the _____ this morning.",
-      "It is black and contains my _____."
-    ],
-    "dictation_answers": ["bus station", "ID cards"],
-    "comprehension_quiz": [
-      {
-        "question": "Where was the wallet lost?",
-        "options": ["Bus station", "Market", "Office"],
-        "correct": 0
-      },
-      {
-        "question": "Why does the person need a report?",
-        "options": ["For insurance", "For police", "For work"],
-        "correct": 0
-      }
-    ],
-    "xp": 25,
-    "related_lessons": [
-      {"title": "Reporting a Lost Item to Police", "url": "/speaking/bangladesh/reporting-a-lost-item-to-police.html"}
-    ],
+    "id": "lst-daily-005",
+    "title": "Talking About the Weather",
+    "category": "daily",
+    "level": "A1",
+    "duration": 5,
+    "xp": 10,
+    "audio_text": "A: The weather is so hot today! B: Yes, it's really hot. I think it might rain later. A: I hope so. We need some rain. B: Yeah, it's been dry for weeks.",
+    "bangla_translation": "ক: আজ আবহাওয়া খুব গরম! খ: হ্যাঁ, সত্যিই গরম। আমার মনে হয় পরে বৃষ্টি হতে পারে। ক: আশা করি। আমাদের কিছু বৃষ্টি দরকার। খ: হ্যাঁ, সপ্তাহ ধরে শুকনো।",
     "vocab": [
-      {"word": "Wallet", "meaning": "ওয়ালেট"},
-      {"word": "Report", "meaning": "রিপোর্ট"}
-    ]
+      { "word": "Weather", "bangla": "আবহাওয়া" },
+      { "word": "Hot", "bangla": "গরম" },
+      { "word": "Rain", "bangla": "বৃষ্টি" }
+    ],
+    "grammar_note": "Use 'I think it might...' to express possibility.",
+    "quiz": [
+      { "question": "What does A think about the weather?", "options": ["Cold", "Hot", "Rainy"], "correct": 1 },
+      { "question": "What does B think will happen?", "options": ["Rain", "Snow", "Storm"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["The weather is so hot today!", "I think it might rain later."],
+    "common_mistakes": [
+      { "wrong": "The weather is very hot today.", "right": "The weather is so hot today.", "explanation": "Use 'so' for emphasis." }
+    ],
+    "related_lessons": [{"title": "Talking About the Weather", "url": "/speaking/daily/talking-about-the-weather.html"}],
+    "next_lesson_id": "lst-daily-006"
   },
   {
-    "id": "lst-embassy-008",
-    "title": "Visa Interview Appointment",
-    "category": "bangladesh",
-    "level": "B1",
-    "duration_minutes": 6,
-    "keywords": "visa interview English, embassy listening, Bangladesh visa application",
-    "context_bn": "আপনি ভিসা ইন্টারভিউয়ের অ্যাপয়েন্টমেন্ট নিশ্চিত করছেন।",
-    "audio_text": "Your visa interview is scheduled on August 15th at 10 am. Please bring your passport and two photos. Be on time.",
-    "bangla_translation": "আপনার ভিসা ইন্টারভিউ আগস্ট ১৫ তারিখ সকাল ১০টায় নির্ধারিত হয়েছে। অনুগ্রহ করে আপনার পাসপোর্ট এবং দুটি ছবি নিয়ে আসুন। সময়মতো উপস্থিত হন।",
-    "dictation_blanks": [
-      "Your visa interview is scheduled on _____ at 10 am.",
-      "Please bring your passport and two _____."
-    ],
-    "dictation_answers": ["August 15th", "photos"],
-    "comprehension_quiz": [
-      {
-        "question": "When is the interview?",
-        "options": ["August 15th", "August 20th", "September 1st"],
-        "correct": 0
-      },
-      {
-        "question": "What should you bring?",
-        "options": ["Passport and photos", "Passport only", "Photos and ID"],
-        "correct": 0
-      }
-    ],
-    "xp": 25,
-    "related_lessons": [
-      {"title": "Applying for a Visa at the Embassy", "url": "/speaking/bangladesh/applying-for-a-visa-at-the-embassy.html"}
-    ],
+    "id": "lst-daily-006",
+    "title": "Shopping for Clothes",
+    "category": "daily",
+    "level": "A1",
+    "duration": 6,
+    "xp": 15,
+    "audio_text": "Salesperson: Can I help you? Customer: Yes, I'm looking for a shirt. Salesperson: What size do you need? Customer: I think I'm a medium. Salesperson: Here's a nice blue one. Customer: How much is it? Salesperson: 800 taka.",
+    "bangla_translation": "বিক্রেতা: আমি কি আপনাকে সাহায্য করতে পারি? গ্রাহক: হ্যাঁ, আমি একটি শার্ট খুঁজছি। বিক্রেতা: আপনার কী সাইজ দরকার? গ্রাহক: আমি মনে করি আমি মিডিয়াম। বিক্রেতা: এই নিন একটা সুন্দর নীল শার্ট। গ্রাহক: এটার দাম কত? বিক্রেতা: ৮০০ টাকা।",
     "vocab": [
-      {"word": "Interview", "meaning": "ইন্টারভিউ"},
-      {"word": "Appointment", "meaning": "অ্যাপয়েন্টমেন্ট"}
-    ]
+      { "word": "Shirt", "bangla": "শার্ট" },
+      { "word": "Medium", "bangla": "মিডিয়াম" },
+      { "word": "Size", "bangla": "সাইজ" }
+    ],
+    "grammar_note": "Use 'I'm looking for...' to say what you want to buy.",
+    "quiz": [
+      { "question": "What is the customer looking for?", "options": ["Shirt", "Trousers", "Jacket"], "correct": 0 },
+      { "question": "How much is the shirt?", "options": ["600", "700", "800"], "correct": 2 }
+    ],
+    "shadowing_sentences": ["I'm looking for a shirt.", "What size do you need?"],
+    "common_mistakes": [
+      { "wrong": "I looking for a shirt.", "right": "I'm looking for a shirt.", "explanation": "Use 'I'm looking for' (present continuous)." }
+    ],
+    "related_lessons": [{"title": "Shopping for Clothes", "url": "/speaking/travel/shopping-for-clothes.html"}],
+    "next_lesson_id": "lst-daily-007"
   },
   {
-    "id": "lst-hospital-009",
-    "title": "Hospital Admission Instructions",
-    "category": "bangladesh",
-    "level": "B1",
-    "duration_minutes": 7,
-    "keywords": "hospital admission English, patient instructions listening, Bangladesh health care",
-    "context_bn": "হাসপাতালে ভর্তির নির্দেশনা শুনছেন।",
-    "audio_text": "Please fill out the admission form and provide the patient's NID. The room will be ready in 30 minutes. You can wait in the lobby.",
-    "bangla_translation": "অনুগ্রহ করে ভর্তি ফর্মটি পূরণ করুন এবং রোগীর এনআইডি প্রদান করুন। রুম ৩০ মিনিটের মধ্যে প্রস্তুত হবে। আপনি লবিতে অপেক্ষা করতে পারেন।",
-    "dictation_blanks": [
-      "Please fill out the admission form and provide the patient's _____.",
-      "The room will be ready in _____ minutes."
-    ],
-    "dictation_answers": ["NID", "30"],
-    "comprehension_quiz": [
-      {
-        "question": "What document is needed?",
-        "options": ["NID", "Passport", "Birth certificate"],
-        "correct": 0
-      },
-      {
-        "question": "How long until the room is ready?",
-        "options": ["30 minutes", "1 hour", "15 minutes"],
-        "correct": 0
-      }
-    ],
-    "xp": 25,
-    "related_lessons": [
-      {"title": "Admitting a Patient to Hospital", "url": "/speaking/bangladesh/admitting-a-patient-to-hospital.html"}
-    ],
+    "id": "lst-daily-007",
+    "title": "At the Pharmacy",
+    "category": "daily",
+    "level": "A2",
+    "duration": 6,
+    "xp": 15,
+    "audio_text": "Customer: Do you have medicine for a cold? Pharmacist: Yes, here is paracetamol. Take one tablet twice a day. Customer: How long should I take it? Pharmacist: For three days. If you don't feel better, see a doctor.",
+    "bangla_translation": "গ্রাহক: আপনার কাছে সর্দির ওষুধ আছে? ফার্মাসিস্ট: হ্যাঁ, এই নিন প্যারাসিটামল। দিনে দুবার একটি ট্যাবলেট খান। গ্রাহক: কত দিন খাব? ফার্মাসিস্ট: তিন দিন। যদি ভালো না লাগেন, ডাক্তার দেখান।",
     "vocab": [
-      {"word": "Admission", "meaning": "ভর্তি"},
-      {"word": "Lobby", "meaning": "লবি"}
-    ]
+      { "word": "Medicine", "bangla": "ওষুধ" },
+      { "word": "Tablet", "bangla": "ট্যাবলেট" },
+      { "word": "Twice", "bangla": "দুবার" }
+    ],
+    "grammar_note": "Use 'Do you have...?' to ask if something is available.",
+    "quiz": [
+      { "question": "What medicine is recommended?", "options": ["Paracetamol", "Ibuprofen", "Antibiotic"], "correct": 0 },
+      { "question": "How many days should the customer take it?", "options": ["Two", "Three", "Five"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["Do you have medicine for a cold?", "Take one tablet twice a day."],
+    "common_mistakes": [
+      { "wrong": "Take one tablet two times a day.", "right": "Take one tablet twice a day.", "explanation": "Use 'twice' instead of 'two times'." }
+    ],
+    "related_lessons": [{"title": "At a Pharmacy", "url": "/speaking/bangladesh/at-a-pharmacy.html"}],
+    "next_lesson_id": "lst-daily-008"
   },
   {
-    "id": "lst-college-010",
-    "title": "College Admission Announcement",
-    "category": "bangladesh",
+    "id": "lst-daily-008",
+    "title": "Calling a Friend",
+    "category": "daily",
+    "level": "A2",
+    "duration": 5,
+    "xp": 10,
+    "audio_text": "A: Hello, this is Rahim. Is Karim there? B: Sorry, he's not at home. Can I take a message? A: Yes, please tell him I'll call him later. B: Okay, I'll pass on the message. Goodbye.",
+    "bangla_translation": "ক: হ্যালো, আমি রহিম। করিম কি সেখানে আছে? খ: দুঃখিত, তিনি বাড়িতে নেই। আমি কি বার্তা নিতে পারি? ক: হ্যাঁ, তাকে বলবেন আমি পরে কল করব। খ: ঠিক আছে, আমি বার্তা দেব। বিদায়।",
+    "vocab": [
+      { "word": "Message", "bangla": "বার্তা" },
+      { "word": "Pass on", "bangla": "পৌঁছে দেওয়া" },
+      { "word": "Later", "bangla": "পরে" }
+    ],
+    "grammar_note": "Use 'Can I take a message?' to offer help.",
+    "quiz": [
+      { "question": "Who is the caller?", "options": ["Rahim", "Karim", "A friend"], "correct": 0 },
+      { "question": "What does A ask B to do?", "options": ["Call back", "Take a message", "Visit Karim"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["Hello, this is Rahim.", "Can I take a message?"],
+    "common_mistakes": [
+      { "wrong": "I will call him after.", "right": "I'll call him later.", "explanation": "Use 'later' for future time." }
+    ],
+    "related_lessons": [{"title": "Calling a Colleague", "url": "/speaking/office/calling-a-colleague.html"}],
+    "next_lesson_id": "lst-daily-009"
+  },
+  {
+    "id": "lst-daily-009",
+    "title": "Asking for Help",
+    "category": "daily",
+    "level": "A2",
+    "duration": 5,
+    "xp": 10,
+    "audio_text": "A: Excuse me, officer. Can you help me? B: Yes, what's the problem? A: I lost my wallet. I think I left it on the bus. B: Which bus were you on? A: The number 4 bus. B: Let me call the bus depot.",
+    "bangla_translation": "ক: এক্সকিউজ মি, অফিসার। আপনি কি আমাকে সাহায্য করতে পারেন? খ: হ্যাঁ, সমস্যা কী? ক: আমি আমার ওয়ালেট হারিয়েছি। মনে হয় বাসে ফেলে এসেছি। খ: কোন বাসে ছিলেন? ক: ৪ নম্বর বাস। খ: আমি বাস ডিপোতে কল করি।",
+    "vocab": [
+      { "word": "Wallet", "bangla": "ওয়ালেট" },
+      { "word": "Depot", "bangla": "ডিপো" },
+      { "word": "Officer", "bangla": "অফিসার" }
+    ],
+    "grammar_note": "Use 'I think I left it...' to express uncertainty.",
+    "quiz": [
+      { "question": "What did the person lose?", "options": ["Wallet", "Phone", "Keys"], "correct": 0 },
+      { "question": "Which bus was the person on?", "options": ["4", "5", "6"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["Can you help me?", "I lost my wallet."],
+    "common_mistakes": [
+      { "wrong": "I lost my wallet on bus.", "right": "I left my wallet on the bus.", "explanation": "Use 'left' for forgetting something." }
+    ],
+    "related_lessons": [{"title": "Asking for Help", "url": "/speaking/daily/asking-for-help.html"}],
+    "next_lesson_id": "lst-travel-001"
+  },
+  {
+    "id": "lst-travel-001",
+    "title": "At the Airport (Check-in)",
+    "category": "travel",
+    "level": "A2",
+    "duration": 6,
+    "xp": 15,
+    "audio_text": "Agent: Good morning. May I see your passport and ticket? Passenger: Here you are. Agent: Thank you. Do you have any baggage to check in? Passenger: Yes, one suitcase. Agent: Please place it on the scale. Passenger: Sure.",
+    "bangla_translation": "এজেন্ট: শুভ সকাল। আমি কি আপনার পাসপোর্ট এবং টিকিট দেখতে পারি? যাত্রী: এই নিন। এজেন্ট: ধন্যবাদ। আপনার কি চেক ইন করার জন্য কোনো ব্যাগেজ আছে? যাত্রী: হ্যাঁ, একটি স্যুটকেস। এজেন্ট: অনুগ্রহ করে এটি স্কেলে রাখুন। যাত্রী: অবশ্যই।",
+    "vocab": [
+      { "word": "Baggage", "bangla": "ব্যাগেজ" },
+      { "word": "Suitcase", "bangla": "স্যুটকেস" },
+      { "word": "Scale", "bangla": "স্কেল" }
+    ],
+    "grammar_note": "Use 'May I...?' for very polite requests.",
+    "quiz": [
+      { "question": "What document does the agent ask for?", "options": ["Passport", "ID card", "Visa"], "correct": 0 },
+      { "question": "How many bags does the passenger have?", "options": ["One", "Two", "Three"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["May I see your passport?", "Please place it on the scale."],
+    "common_mistakes": [
+      { "wrong": "I have one suitcase.", "right": "Yes, one suitcase.", "explanation": "You can answer with a short phrase." }
+    ],
+    "related_lessons": [{"title": "At the Airport Immigration", "url": "/speaking/travel/at-the-airport-immigration.html"}],
+    "next_lesson_id": "lst-travel-002"
+  },
+  {
+    "id": "lst-travel-002",
+    "title": "Ordering Food in a Restaurant",
+    "category": "travel",
+    "level": "A2",
+    "duration": 6,
+    "xp": 15,
+    "audio_text": "Waiter: Are you ready to order? Customer: Yes, I'd like the chicken biryani, please. Waiter: Would you like anything to drink? Customer: I'll have a lemonade. Waiter: Okay, one chicken biryani and a lemonade. Coming right up.",
+    "bangla_translation": "ওয়েটার: আপনি কি অর্ডার করতে প্রস্তুত? গ্রাহক: হ্যাঁ, আমি চিকেন বিরিয়ানি নিতে চাই। ওয়েটার: আপনি কি কিছু পান করতে চান? গ্রাহক: আমি একটি লেমনেড নেব। ওয়েটার: ঠিক আছে, এক চিকেন বিরিয়ানি ও এক লেমনেড। এখনই আসছে।",
+    "vocab": [
+      { "word": "Biryani", "bangla": "বিরিয়ানি" },
+      { "word": "Lemonade", "bangla": "লেমনেড" },
+      { "word": "Ready", "bangla": "প্রস্তুত" }
+    ],
+    "grammar_note": "Use 'I'd like...' to order politely.",
+    "quiz": [
+      { "question": "What did the customer order?", "options": ["Biryani", "Pasta", "Pizza"], "correct": 0 },
+      { "question": "What drink did the customer order?", "options": ["Coffee", "Lemonade", "Tea"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["I'd like the chicken biryani.", "I'll have a lemonade."],
+    "common_mistakes": [
+      { "wrong": "I want chicken biryani.", "right": "I'd like the chicken biryani.", "explanation": "Use 'I'd like' for polite ordering." }
+    ],
+    "related_lessons": [{"title": "Ordering Food in a Restaurant", "url": "/speaking/travel/ordering-food-in-a-restaurant.html"}],
+    "next_lesson_id": "lst-travel-003"
+  },
+  {
+    "id": "lst-travel-003",
+    "title": "At the Hotel (Check-in)",
+    "category": "travel",
+    "level": "A2",
+    "duration": 6,
+    "xp": 15,
+    "audio_text": "Receptionist: Welcome to Grand Hotel. Do you have a reservation? Guest: Yes, I have a booking under the name Khan. Receptionist: Let me check... Yes, here it is. A double room for three nights. Guest: That's correct. Receptionist: Please fill out this form.",
+    "bangla_translation": "রিসেপশনিস্ট: গ্র্যান্ড হোটেলে স্বাগতম। আপনার কি রিজার্ভেশন আছে? অতিথি: হ্যাঁ, খান নামে আমার বুকিং আছে। রিসেপশনিস্ট: আমি চেক করি... হ্যাঁ, এখানে আছে। তিন রাতের জন্য ডাবল রুম। অতিথি: ঠিক আছে। রিসেপশনিস্ট: অনুগ্রহ করে এই ফর্মটি পূরণ করুন।",
+    "vocab": [
+      { "word": "Reservation", "bangla": "রিজার্ভেশন" },
+      { "word": "Booking", "bangla": "বুকিং" },
+      { "word": "Fill out", "bangla": "পূরণ করা" }
+    ],
+    "grammar_note": "Use 'Do you have...?' to ask about availability.",
+    "quiz": [
+      { "question": "What type of room did the guest book?", "options": ["Single", "Double", "Suite"], "correct": 1 },
+      { "question": "How many nights are booked?", "options": ["Two", "Three", "Four"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["Do you have a reservation?", "Please fill out this form."],
+    "common_mistakes": [
+      { "wrong": "I have booking.", "right": "I have a booking.", "explanation": "Use the article 'a' before 'booking'." }
+    ],
+    "related_lessons": [{"title": "Checking into a Hotel", "url": "/speaking/travel/checking-into-a-hotel.html"}],
+    "next_lesson_id": "lst-travel-004"
+  },
+  {
+    "id": "lst-travel-004",
+    "title": "Taking a Taxi",
+    "category": "travel",
+    "level": "A2",
+    "duration": 5,
+    "xp": 15,
+    "audio_text": "Passenger: Can you take me to the airport, please? Driver: Of course. Please get in. Passenger: How long will it take? Driver: About 30 minutes. Passenger: How much will it cost? Driver: Around 500 taka.",
+    "bangla_translation": "যাত্রী: আপনি কি আমাকে এয়ারপোর্টে নিয়ে যেতে পারবেন, প্লিজ? ড্রাইভার: অবশ্যই। গাড়িতে উঠুন। যাত্রী: কত সময় লাগবে? ড্রাইভার: প্রায় ৩০ মিনিট। যাত্রী: কত খরচ হবে? ড্রাইভার: প্রায় ৫০০ টাকা।",
+    "vocab": [
+      { "word": "Airport", "bangla": "এয়ারপোর্ট" },
+      { "word": "About", "bangla": "প্রায়" },
+      { "word": "Cost", "bangla": "খরচ" }
+    ],
+    "grammar_note": "Use 'Can you...?' for polite requests.",
+    "quiz": [
+      { "question": "Where does the passenger want to go?", "options": ["Hotel", "Airport", "Station"], "correct": 1 },
+      { "question": "How long will the trip take?", "options": ["20", "30", "40"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["Can you take me to the airport?", "About 30 minutes."],
+    "common_mistakes": [
+      { "wrong": "How long it will take?", "right": "How long will it take?", "explanation": "Invert the subject and auxiliary for questions." }
+    ],
+    "related_lessons": [{"title": "Taking a Taxi", "url": "/speaking/travel/taking-a-taxi.html"}],
+    "next_lesson_id": "lst-travel-005"
+  },
+  {
+    "id": "lst-travel-005",
+    "title": "Asking for Directions (Travel)",
+    "category": "travel",
+    "level": "A1",
+    "duration": 5,
+    "xp": 10,
+    "audio_text": "Tourist: Excuse me, how do I get to the museum? Local: Take the number 5 bus. It stops right in front of the museum. Tourist: Thank you. Local: You're welcome.",
+    "bangla_translation": "পর্যটক: এক্সকিউজ মি, আমি কিভাবে জাদুঘরে যাব? স্থানীয়: ৫ নম্বর বাস ধরুন। জাদুঘরের সামনেই থামবে। পর্যটক: ধন্যবাদ। স্থানীয়: আপনাকে স্বাগতম।",
+    "vocab": [
+      { "word": "Museum", "bangla": "জাদুঘর" },
+      { "word": "Take", "bangla": "ধরা" },
+      { "word": "Stop", "bangla": "থামা" }
+    ],
+    "grammar_note": "Use imperative sentences for instructions (e.g., 'Take the number 5 bus').",
+    "quiz": [
+      { "question": "What does the tourist want to find?", "options": ["Museum", "Station", "Hotel"], "correct": 0 },
+      { "question": "Which bus should the tourist take?", "options": ["3", "5", "7"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["How do I get to the museum?", "Take the number 5 bus."],
+    "common_mistakes": [
+      { "wrong": "How I get to museum?", "right": "How do I get to the museum?", "explanation": "Use 'do' in questions and the definite article 'the'." }
+    ],
+    "related_lessons": [{"title": "Asking for Directions", "url": "/speaking/travel/asking-for-directions.html"}],
+    "next_lesson_id": "lst-travel-006"
+  },
+  {
+    "id": "lst-travel-006",
+    "title": "At the Immigration Desk",
+    "category": "travel",
     "level": "B1",
-    "duration_minutes": 6,
-    "keywords": "college admission English, university announcement, Bangladesh education listening",
-    "context_bn": "একটি কলেজে ভর্তির বিজ্ঞপ্তি শুনছেন।",
-    "audio_text": "The admission test for the Computer Science program will be held on September 5th. Registration closes on August 25th. Check the website for details.",
-    "bangla_translation": "কম্পিউটার সায়েন্স প্রোগ্রামের ভর্তি পরীক্ষা ৫ সেপ্টেম্বর অনুষ্ঠিত হবে। নিবন্ধন ২৫ আগস্ট শেষ হবে। বিস্তারিত জানতে ওয়েবসাইট দেখুন।",
-    "dictation_blanks": [
-      "The admission test for the Computer Science program will be held on _____.",
-      "Registration closes on _____."
-    ],
-    "dictation_answers": ["September 5th", "August 25th"],
-    "comprehension_quiz": [
-      {
-        "question": "When is the admission test?",
-        "options": ["September 5th", "August 25th", "October 1st"],
-        "correct": 0
-      },
-      {
-        "question": "When does registration close?",
-        "options": ["August 25th", "September 5th", "August 30th"],
-        "correct": 0
-      }
-    ],
+    "duration": 7,
     "xp": 20,
-    "related_lessons": [
-      {"title": "Applying for University Admission", "url": "/speaking/bangladesh/student-english-applying-for-university-admission.html"}
-    ],
+    "audio_text": "Officer: Good afternoon. What is the purpose of your visit? Traveler: I'm here for tourism. I plan to visit Cox's Bazar and Dhaka. Officer: How long are you staying? Traveler: Two weeks. Officer: Please show me your return ticket.",
+    "bangla_translation": "অফিসার: শুভ বিকাল। আপনার ভ্রমণের উদ্দেশ্য কী? পর্যটক: আমি পর্যটনের জন্য এসেছি। আমি কক্সবাজার ও ঢাকা দেখার পরিকল্পনা করছি। অফিসার: কত দিন থাকবেন? পর্যটক: দুই সপ্তাহ। অফিসার: আপনার রিটার্ন টিকিট দেখান।",
     "vocab": [
-      {"word": "Admission test", "meaning": "ভর্তি পরীক্ষা"},
-      {"word": "Registration", "meaning": "নিবন্ধন"}
-    ]
+      { "word": "Purpose", "bangla": "উদ্দেশ্য" },
+      { "word": "Tourism", "bangla": "পর্যটন" },
+      { "word": "Return ticket", "bangla": "রিটার্ন টিকিট" }
+    ],
+    "grammar_note": "Use 'What is the purpose of your visit?' in formal settings.",
+    "quiz": [
+      { "question": "Why is the traveler visiting?", "options": ["Business", "Tourism", "Study"], "correct": 1 },
+      { "question": "How long is the traveler staying?", "options": ["One week", "Two weeks", "Three weeks"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["What is the purpose of your visit?", "I'm here for tourism."],
+    "common_mistakes": [
+      { "wrong": "I'm here for tourist.", "right": "I'm here for tourism.", "explanation": "Use 'tourism' for the activity, not 'tourist'." }
+    ],
+    "related_lessons": [{"title": "At the Airport Immigration", "url": "/speaking/travel/at-the-airport-immigration.html"}],
+    "next_lesson_id": "lst-travel-007"
+  },
+  {
+    "id": "lst-travel-007",
+    "title": "Booking a Hotel Room Online",
+    "category": "travel",
+    "level": "B1",
+    "duration": 6,
+    "xp": 20,
+    "audio_text": "Customer: I'd like to book a room for three nights. Clerk: What type of room do you need? Customer: A double room with a sea view, please. Clerk: The price is $150 per night. Customer: That's fine. Clerk: I'll send the confirmation email.",
+    "bangla_translation": "গ্রাহক: আমি তিন রাতের জন্য একটি রুম বুক করতে চাই। ক্লার্ক: আপনার কি ধরনের রুম দরকার? গ্রাহক: সমুদ্র দেখার ডাবল রুম, প্লিজ। ক্লার্ক: দাম প্রতি রাতে $১৫০। গ্রাহক: ঠিক আছে। ক্লার্ক: আমি কনফার্মেশন ইমেইল পাঠাচ্ছি।",
+    "vocab": [
+      { "word": "Book", "bangla": "বুক করা" },
+      { "word": "Sea view", "bangla": "সমুদ্র দেখার" },
+      { "word": "Confirmation", "bangla": "নিশ্চিতকরণ" }
+    ],
+    "grammar_note": "Use 'I'd like to book...' to make a reservation.",
+    "quiz": [
+      { "question": "How many nights is the customer booking?", "options": ["Two", "Three", "Four"], "correct": 1 },
+      { "question": "What type of room did the customer ask for?", "options": ["Single", "Double sea view", "Double standard"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["I'd like to book a room.", "What type of room do you need?"],
+    "common_mistakes": [
+      { "wrong": "I'd like to book a double room view sea.", "right": "I'd like a double room with a sea view.", "explanation": "Use 'with a sea view' to describe the room." }
+    ],
+    "related_lessons": [{"title": "Booking a Hotel Room Online", "url": "/speaking/travel/booking-a-hotel-room-online.html"}],
+    "next_lesson_id": "lst-office-001"
+  },
+  {
+    "id": "lst-office-001",
+    "title": "Job Interview Introduction",
+    "category": "office",
+    "level": "B1",
+    "duration": 7,
+    "xp": 20,
+    "audio_text": "Interviewer: Good morning. Please introduce yourself. Candidate: Good morning. My name is Rima. I have a degree in marketing and three years of experience. Interviewer: Why do you want to work here? Candidate: I admire your company's values and I'd like to grow with you.",
+    "bangla_translation": "ইন্টারভিউয়ার: শুভ সকাল। আপনার সম্পর্কে বলুন। প্রার্থী: শুভ সকাল। আমার নাম রিমা। আমার মার্কেটিংয়ের ডিগ্রি এবং তিন বছরের অভিজ্ঞতা আছে। ইন্টারভিউয়ার: আপনি কেন এখানে কাজ করতে চান? প্রার্থী: আমি আপনার কোম্পানির মূল্যবোধের প্রশংসা করি এবং আপনার সাথে বাড়তে চাই।",
+    "vocab": [
+      { "word": "Degree", "bangla": "ডিগ্রি" },
+      { "word": "Experience", "bangla": "অভিজ্ঞতা" },
+      { "word": "Values", "bangla": "মূল্যবোধ" }
+    ],
+    "grammar_note": "Use 'I have...' to state qualifications and experience.",
+    "quiz": [
+      { "question": "What is the candidate's educational background?", "options": ["Engineering", "Marketing", "Finance"], "correct": 1 },
+      { "question": "How many years of experience does the candidate have?", "options": ["Two", "Three", "Four"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["My name is Rima.", "I have a degree in marketing."],
+    "common_mistakes": [
+      { "wrong": "I admire your company's value.", "right": "I admire your company's values.", "explanation": "Use plural 'values' when referring to company principles." }
+    ],
+    "related_lessons": [{"title": "Attending a Job Interview", "url": "/speaking/office/attending-a-job-interview.html"}],
+    "next_lesson_id": "lst-office-002"
+  },
+  {
+    "id": "lst-office-002",
+    "title": "Making a Phone Call (Office)",
+    "category": "office",
+    "level": "A2",
+    "duration": 6,
+    "xp": 15,
+    "audio_text": "Caller: Hello, may I speak to Mr. Rahman? Receptionist: He's in a meeting. Can I take a message? Caller: Yes, please tell him I called and I'll try again later. Receptionist: May I have your name? Caller: It's Sabina.",
+    "bangla_translation": "কলার: হ্যালো, আমি কি মি. রহমানের সাথে কথা বলতে পারি? রিসেপশনিস্ট: তিনি একটি মিটিংয়ে আছেন। আমি কি বার্তা নিতে পারি? কলার: হ্যাঁ, তাকে বলুন আমি কল করেছি এবং পরে আবার চেষ্টা করব। রিসেপশনিস্ট: আপনার নাম কি? কলার: সাবিনা।",
+    "vocab": [
+      { "word": "Message", "bangla": "বার্তা" },
+      { "word": "Meeting", "bangla": "মিটিং" },
+      { "word": "Try again", "bangla": "আবার চেষ্টা করা" }
+    ],
+    "grammar_note": "Use 'may I speak to...?' to ask to talk to someone.",
+    "quiz": [
+      { "question": "Who does the caller want to speak to?", "options": ["Mr. Rahman", "Mr. Ahmed", "Ms. Sabina"], "correct": 0 },
+      { "question": "Why can't the caller speak to him now?", "options": ["He's busy", "He's away", "He's in a meeting"], "correct": 2 }
+    ],
+    "shadowing_sentences": ["May I speak to Mr. Rahman?", "He's in a meeting."],
+    "common_mistakes": [
+      { "wrong": "I speak to Mr. Rahman.", "right": "May I speak to Mr. Rahman?", "explanation": "Use 'May I' to ask permission." }
+    ],
+    "related_lessons": [{"title": "Calling a Colleague", "url": "/speaking/office/calling-a-colleague.html"}],
+    "next_lesson_id": "lst-office-003"
+  },
+  {
+    "id": "lst-office-003",
+    "title": "Scheduling a Meeting",
+    "category": "office",
+    "level": "B1",
+    "duration": 6,
+    "xp": 20,
+    "audio_text": "Manager: We need to schedule a team meeting for next week. Assistant: What day works best for you? Manager: Monday or Tuesday morning. Assistant: How about Monday at 10 AM? Manager: That works. Please send the invitation to everyone.",
+    "bangla_translation": "ম্যানেজার: আমাদের পরের সপ্তাহের জন্য একটি টিম মিটিং নির্ধারণ করতে হবে। সহকারী: আপনার জন্য কোন দিন ভালো? ম্যানেজার: সোমবার বা মঙ্গলবার সকাল। সহকারী: সোমবার সকাল ১০টা কেমন? ম্যানেজার: কাজ করে। অনুগ্রহ করে সবাইকে আমন্ত্রণ পাঠান।",
+    "vocab": [
+      { "word": "Schedule", "bangla": "নির্ধারণ করা" },
+      { "word": "Works", "bangla": "কাজ করে" },
+      { "word": "Invitation", "bangla": "আমন্ত্রণ" }
+    ],
+    "grammar_note": "Use 'How about...?' to make a suggestion.",
+    "quiz": [
+      { "question": "What day was the meeting scheduled?", "options": ["Monday", "Tuesday", "Wednesday"], "correct": 0 },
+      { "question": "What time was the meeting scheduled?", "options": ["9 AM", "10 AM", "11 AM"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["What day works best for you?", "How about Monday at 10 AM?"],
+    "common_mistakes": [
+      { "wrong": "What day work best for you?", "right": "What day works best for you?", "explanation": "Use singular verb 'works' with 'day'." }
+    ],
+    "related_lessons": [{"title": "Attending a Meeting", "url": "/speaking/office/attending-a-meeting.html"}],
+    "next_lesson_id": "lst-office-004"
+  },
+  {
+    "id": "lst-office-004",
+    "title": "Giving a Status Update",
+    "category": "office",
+    "level": "B1",
+    "duration": 6,
+    "xp": 20,
+    "audio_text": "Team Lead: Could you give us an update on the project? Engineer: Yes, we've completed 80% of the development. Team Lead: Any challenges? Engineer: We're facing some integration issues, but we're working on them.",
+    "bangla_translation": "টিম লিড: আপনি কি প্রকল্পের অগ্রগতি জানাতে পারেন? ইঞ্জিনিয়ার: হ্যাঁ, আমরা উন্নয়নের ৮০% সম্পন্ন করেছি। টিম লিড: কোনো চ্যালেঞ্জ আছে? ইঞ্জিনিয়ার: আমরা কিছু ইন্টিগ্রেশন সমস্যার সম্মুখীন হচ্ছি, কিন্তু আমরা সেগুলো নিয়ে কাজ করছি।",
+    "vocab": [
+      { "word": "Update", "bangla": "অগ্রগতি" },
+      { "word": "Challenge", "bangla": "চ্যালেঞ্জ" },
+      { "word": "Integration", "bangla": "ইন্টিগ্রেশন" }
+    ],
+    "grammar_note": "Use 'we've completed' to report progress.",
+    "quiz": [
+      { "question": "How much of the development is completed?", "options": ["60%", "80%", "100%"], "correct": 1 },
+      { "question": "What issue is the team facing?", "options": ["Integration", "Budget", "Timeline"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["We've completed 80% of the development.", "We're working on them."],
+    "common_mistakes": [
+      { "wrong": "We have completed 80% development.", "right": "We've completed 80% of the development.", "explanation": "Use 'of the' before the noun." }
+    ],
+    "related_lessons": [{"title": "Giving a Status Update", "url": "/speaking/office/office-english-giving-a-status-update.html"}],
+    "next_lesson_id": "lst-office-005"
+  },
+  {
+    "id": "lst-office-005",
+    "title": "Negotiating a Deadline",
+    "category": "office",
+    "level": "B1",
+    "duration": 7,
+    "xp": 20,
+    "audio_text": "Manager: The deadline for the report is Friday. Employee: I'm not sure I can finish by then. Could we extend it to Monday? Manager: I'll check with the client. Employee: I'd appreciate that. Manager: I'll let you know by tomorrow.",
+    "bangla_translation": "ম্যানেজার: রিপোর্টের ডেডলাইন শুক্রবার। কর্মচারী: আমি নিশ্চিত নই যে আমি ততদিনে শেষ করতে পারব। আমরা কি তা সোমবার পর্যন্ত বাড়াতে পারি? ম্যানেজার: আমি ক্লায়েন্টের সাথে চেক করি। কর্মচারী: আমি কৃতজ্ঞ হব। ম্যানেজার: আমি আগামীকাল জানাব।",
+    "vocab": [
+      { "word": "Deadline", "bangla": "ডেডলাইন" },
+      { "word": "Extend", "bangla": "বাড়ানো" },
+      { "word": "Appreciate", "bangla": "কৃতজ্ঞ হওয়া" }
+    ],
+    "grammar_note": "Use 'Could we...?' to make a polite request.",
+    "quiz": [
+      { "question": "When is the current deadline?", "options": ["Friday", "Monday", "Wednesday"], "correct": 0 },
+      { "question": "What did the employee ask for?", "options": ["More time", "More budget", "More staff"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["Could we extend it to Monday?", "I'll let you know by tomorrow."],
+    "common_mistakes": [
+      { "wrong": "Could we extend to Monday?", "right": "Could we extend it to Monday?", "explanation": "Add 'it' to refer to the deadline." }
+    ],
+    "related_lessons": [{"title": "Negotiating a Deadline", "url": "/speaking/office/office-english-negotiating-a-deadline.html"}],
+    "next_lesson_id": "lst-academic-001"
+  },
+  {
+    "id": "lst-academic-001",
+    "title": "University Lecture (Introduction)",
+    "category": "academic",
+    "level": "B2",
+    "duration": 8,
+    "xp": 25,
+    "audio_text": "Professor: Good morning, everyone. Today we'll begin our discussion on climate change. We'll look at its causes, effects, and possible solutions. I encourage you to participate and ask questions. Now, let's start with the basics...",
+    "bangla_translation": "অধ্যাপক: শুভ সকাল, সবাই। আজ আমরা জলবায়ু পরিবর্তন নিয়ে আমাদের আলোচনা শুরু করব। আমরা এর কারণ, প্রভাব এবং সম্ভাব্য সমাধান নিয়ে আলোচনা করব। আমি আপনাদের অংশগ্রহণ এবং প্রশ্ন করতে উৎসাহিত করি। এখন, মৌলিক বিষয়গুলো দিয়ে শুরু করা যাক...",
+    "vocab": [
+      { "word": "Climate change", "bangla": "জলবায়ু পরিবর্তন" },
+      { "word": "Solution", "bangla": "সমাধান" },
+      { "word": "Participate", "bangla": "অংশগ্রহণ করা" }
+    ],
+    "grammar_note": "Use 'we'll' to express future plans.",
+    "quiz": [
+      { "question": "What is the topic of the lecture?", "options": ["Climate change", "Economic growth", "Technology"], "correct": 0 },
+      { "question": "What does the professor encourage?", "options": ["Asking questions", "Taking notes", "Leaving early"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["Today we'll begin our discussion.", "I encourage you to participate."],
+    "common_mistakes": [
+      { "wrong": "We will begin discussion.", "right": "We'll begin our discussion.", "explanation": "Use the contraction 'we'll' and the possessive 'our'." }
+    ],
+    "related_lessons": [{"title": "Giving a Presentation", "url": "/speaking/office/giving-a-presentation.html"}],
+    "next_lesson_id": "lst-academic-002"
+  },
+  {
+    "id": "lst-academic-002",
+    "title": "Listening to a Podcast (News)",
+    "category": "academic",
+    "level": "B2",
+    "duration": 8,
+    "xp": 25,
+    "audio_text": "Host: Welcome to the Daily News Podcast. Today's top story: The government announced a new education policy. It aims to improve digital literacy in schools. The plan includes free tablets for students and teacher training programs.",
+    "bangla_translation": "হোস্ট: ডেইলি নিউজ পডকাস্টে স্বাগতম। আজকের শীর্ষ খবর: সরকার একটি নতুন শিক্ষানীতি ঘোষণা করেছে। এর লক্ষ্য স্কুলে ডিজিটাল সাক্ষরতা উন্নত করা। পরিকল্পনায় শিক্ষার্থীদের জন্য ফ্রি ট্যাবলেট এবং শিক্ষক প্রশিক্ষণ কর্মসূচি অন্তর্ভুক্ত রয়েছে।",
+    "vocab": [
+      { "word": "Policy", "bangla": "নীতি" },
+      { "word": "Digital literacy", "bangla": "ডিজিটাল সাক্ষরতা" },
+      { "word": "Tablet", "bangla": "ট্যাবলেট" }
+    ],
+    "grammar_note": "Use 'It aims to...' to state a goal.",
+    "quiz": [
+      { "question": "What is the policy about?", "options": ["Education", "Health", "Economy"], "correct": 0 },
+      { "question": "What does the plan include?", "options": ["Free tablets", "Free laptops", "Free books"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["Welcome to the Daily News Podcast.", "It aims to improve digital literacy."],
+    "common_mistakes": [
+      { "wrong": "The plan includes free tablets for student.", "right": "The plan includes free tablets for students.", "explanation": "Use plural 'students'." }
+    ],
+    "related_lessons": [{"title": "Listening to a Podcast", "url": "/listening/podcast-news.html"}],
+    "next_lesson_id": "lst-academic-003"
+  },
+  {
+    "id": "lst-academic-003",
+    "title": "Academic Discussion (Group Work)",
+    "category": "academic",
+    "level": "B2",
+    "duration": 8,
+    "xp": 25,
+    "audio_text": "Student A: I think the economic model is outdated. Student B: I agree, but we need to consider the cost of implementation. Student C: What about the environmental impact? Student A: Good point. We should include that in our analysis.",
+    "bangla_translation": "শিক্ষার্থী ক: আমি মনে করি অর্থনৈতিক মডেলটি পুরানো। শিক্ষার্থী খ: আমি একমত, তবে আমাদের বাস্তবায়নের খরচ বিবেচনা করতে হবে। শিক্ষার্থী গ: পরিবেশগত প্রভাব সম্পর্কে কী? শিক্ষার্থী ক: ভালো পয়েন্ট। আমাদের বিশ্লেষণে তা অন্তর্ভুক্ত করা উচিত।",
+    "vocab": [
+      { "word": "Model", "bangla": "মডেল" },
+      { "word": "Implementation", "bangla": "বাস্তবায়ন" },
+      { "word": "Analysis", "bangla": "বিশ্লেষণ" }
+    ],
+    "grammar_note": "Use 'I agree, but...' to acknowledge a point and add a counterpoint.",
+    "quiz": [
+      { "question": "What do they think about the economic model?", "options": ["Outdated", "Modern", "Perfect"], "correct": 0 },
+      { "question": "What does Student C bring up?", "options": ["Environmental impact", "Cost", "Time"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["I think the economic model is outdated.", "I agree, but we need to consider the cost."],
+    "common_mistakes": [
+      { "wrong": "What about the environment impact?", "right": "What about the environmental impact?", "explanation": "Use 'environmental' as an adjective." }
+    ],
+    "related_lessons": [{"title": "Participating in a Group Discussion", "url": "/speaking/bangladesh/student-english-participating-in-a-group-discussion.html"}],
+    "next_lesson_id": "lst-academic-004"
+  },
+  {
+    "id": "lst-academic-004",
+    "title": "Business News Report",
+    "category": "academic",
+    "level": "B2",
+    "duration": 8,
+    "xp": 25,
+    "audio_text": "Reporter: The stock market opened higher today. Investors reacted positively to the new trade agreement. The technology sector led the gains, with shares rising by 5%. Analysts expect the trend to continue.",
+    "bangla_translation": "রিপোর্টার: আজ শেয়ারবাজার উচ্চতর খুলেছে। বিনিয়োগকারীরা নতুন বাণিজ্য চুক্তিতে ইতিবাচক প্রতিক্রিয়া জানিয়েছেন। প্রযুক্তি খাত এগিয়ে ছিল, শেয়ার ৫% বেড়েছে। বিশ্লেষকরা ধারা অব্যাহত থাকার আশা করছেন।",
+    "vocab": [
+      { "word": "Stock market", "bangla": "শেয়ারবাজার" },
+      { "word": "Investor", "bangla": "বিনিয়োগকারী" },
+      { "word": "Analyst", "bangla": "বিশ্লেষক" }
+    ],
+    "grammar_note": "Use 'reacted positively to' to describe a response.",
+    "quiz": [
+      { "question": "What sector led the gains?", "options": ["Technology", "Finance", "Energy"], "correct": 0 },
+      { "question": "By how much did shares rise?", "options": ["3%", "5%", "7%"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["The stock market opened higher.", "Analysts expect the trend to continue."],
+    "common_mistakes": [
+      { "wrong": "Investors reacted positive.", "right": "Investors reacted positively.", "explanation": "Use the adverb 'positively' to modify 'reacted'." }
+    ],
+    "related_lessons": [{"title": "Business English News", "url": "/listening/business-news.html"}],
+    "next_lesson_id": "lst-ielts-001"
+  },
+  {
+    "id": "lst-ielts-001",
+    "title": "IELTS Listening Section 1 (Social)",
+    "category": "ielts",
+    "level": "B1",
+    "duration": 8,
+    "xp": 25,
+    "audio_text": "You will hear a conversation between a customer and a salesperson about buying a phone. Customer: I'm looking for a smartphone with a good camera. Salesperson: We have the latest model with 108 MP camera. Customer: How much is it? Salesperson: 50,000 taka. Customer: That's more than I expected. Salesperson: We have a budget model for 25,000 taka.",
+    "bangla_translation": "আপনি একজন গ্রাহক এবং বিক্রেতার মধ্যে ফোন কেনার বিষয়ে একটি কথোপকথন শুনতে পাবেন। গ্রাহক: আমি ভালো ক্যামেরা সহ একটি স্মার্টফোন খুঁজছি। বিক্রেতা: আমাদের ১০৮ এমপি ক্যামেরা সহ সর্বশেষ মডেল আছে। গ্রাহক: এর দাম কত? বিক্রেতা: ৫০,০০০ টাকা। গ্রাহক: এটি আমার ধারণার চেয়ে বেশি। বিক্রেতা: আমাদের ২৫,০০০ টাকায় একটি বাজেট মডেল আছে।",
+    "vocab": [
+      { "word": "Smartphone", "bangla": "স্মার্টফোন" },
+      { "word": "Model", "bangla": "মডেল" },
+      { "word": "Budget", "bangla": "বাজেট" }
+    ],
+    "grammar_note": "Use 'I'm looking for...' to state what you want to buy.",
+    "quiz": [
+      { "question": "What does the customer want?", "options": ["Phone", "Laptop", "Tablet"], "correct": 0 },
+      { "question": "What is the price of the budget model?", "options": ["25,000", "30,000", "35,000"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["I'm looking for a smartphone.", "We have the latest model."],
+    "common_mistakes": [
+      { "wrong": "I want a smartphone camera good.", "right": "I'm looking for a smartphone with a good camera.", "explanation": "Describe the phone using 'with' + feature." }
+    ],
+    "related_lessons": [{"title": "IELTS Listening Section 1", "url": "/listening/ielts-section-1.html"}],
+    "next_lesson_id": "lst-ielts-002"
+  },
+  {
+    "id": "lst-ielts-002",
+    "title": "IELTS Listening Section 2 (Travel)",
+    "category": "ielts",
+    "level": "B1",
+    "duration": 8,
+    "xp": 25,
+    "audio_text": "You will hear a guide giving a tour of a museum. Guide: Welcome to the National Museum. We will start our tour in the main hall. Here you can see artifacts from ancient civilizations. Please don't touch the exhibits. We have a café and gift shop on the ground floor. Our tour will take about two hours.",
+    "bangla_translation": "আপনি একজন গাইডকে একটি জাদুঘরের ট্যুর দিতে শুনতে পাবেন। গাইড: জাতীয় জাদুঘরে স্বাগতম। আমরা আমাদের সফর শুরু করব মূল হলে। এখানে আপনি প্রাচীন সভ্যতার নিদর্শন দেখতে পাবেন। অনুগ্রহ করে প্রদর্শনী স্পর্শ করবেন না। আমাদের নিচ তলায় একটি ক্যাফে এবং উপহারের দোকান আছে। আমাদের সফর প্রায় দুই ঘণ্টা সময় নেবে।",
+    "vocab": [
+      { "word": "Museum", "bangla": "জাদুঘর" },
+      { "word": "Artifact", "bangla": "নিদর্শন" },
+      { "word": "Exhibit", "bangla": "প্রদর্শনী" }
+    ],
+    "grammar_note": "Use 'We will start...' to describe the plan.",
+    "quiz": [
+      { "question": "Where is the café?", "options": ["Ground floor", "First floor", "Second floor"], "correct": 0 },
+      { "question": "How long is the tour?", "options": ["One hour", "Two hours", "Three hours"], "correct": 1 }
+    ],
+    "shadowing_sentences": ["Welcome to the National Museum.", "Please don't touch the exhibits."],
+    "common_mistakes": [
+      { "wrong": "You can see artifact from ancient civilization.", "right": "You can see artifacts from ancient civilizations.", "explanation": "Use plural 'artifacts' and 'civilizations'." }
+    ],
+    "related_lessons": [{"title": "IELTS Listening Section 2", "url": "/listening/ielts-section-2.html"}],
+    "next_lesson_id": "lst-ielts-003"
+  },
+  {
+    "id": "lst-ielts-003",
+    "title": "IELTS Listening Section 3 (Academic)",
+    "category": "ielts",
+    "level": "B2",
+    "duration": 9,
+    "xp": 25,
+    "audio_text": "You will hear two students discussing their research project. Student 1: I think we should focus on renewable energy. Student 2: That's a good topic. But we need to narrow it down. Student 1: How about solar energy in Bangladesh? Student 2: Great idea. We can research its effectiveness and adoption.",
+    "bangla_translation": "আপনি দুই শিক্ষার্থীকে তাদের গবেষণা প্রকল্প নিয়ে আলোচনা করতে শুনতে পাবেন। শিক্ষার্থী ১: আমি মনে করি আমাদের নবায়নযোগ্য শক্তির উপর ফোকাস করা উচিত। শিক্ষার্থী ২: ভালো বিষয়। কিন্তু আমাদের তা সংকীর্ণ করতে হবে। শিক্ষার্থী ১: বাংলাদেশে সৌরশক্তি সম্পর্কে কী? শিক্ষার্থী ২: দারুণ ধারণা। আমরা এর কার্যকারিতা এবং গ্রহণযোগ্যতা নিয়ে গবেষণা করতে পারি।",
+    "vocab": [
+      { "word": "Renewable", "bangla": "নবায়নযোগ্য" },
+      { "word": "Narrow down", "bangla": "সংকীর্ণ করা" },
+      { "word": "Adoption", "bangla": "গ্রহণযোগ্যতা" }
+    ],
+    "grammar_note": "Use 'I think we should...' to give a suggestion.",
+    "quiz": [
+      { "question": "What topic do they choose?", "options": ["Solar energy", "Wind energy", "Hydro energy"], "correct": 0 },
+      { "question": "What will they research?", "options": ["Effectiveness", "Cost", "Safety"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["I think we should focus on renewable energy.", "How about solar energy in Bangladesh?"],
+    "common_mistakes": [
+      { "wrong": "How about solar energy in Bangladesh?", "right": "How about solar energy in Bangladesh?", "explanation": "This is correct; just ensure the intonation is questioning." }
+    ],
+    "related_lessons": [{"title": "IELTS Listening Section 3", "url": "/listening/ielts-section-3.html"}],
+    "next_lesson_id": "lst-ielts-004"
+  },
+  {
+    "id": "lst-ielts-004",
+    "title": "IELTS Listening Section 4 (Lecture)",
+    "category": "ielts",
+    "level": "B2",
+    "duration": 9,
+    "xp": 25,
+    "audio_text": "You will hear a lecture on urban planning. Lecturer: Urban planning is critical for sustainable cities. We must consider transportation, housing, and green spaces. In many cities, congestion and pollution are major issues. We need to promote public transport and cycling infrastructure.",
+    "bangla_translation": "আপনি নগর পরিকল্পনার উপর একটি বক্তৃতা শুনতে পাবেন। বক্তা: নগর পরিকল্পনা টেকসই শহরের জন্য অত্যন্ত গুরুত্বপূর্ণ। আমাদের পরিবহন, আবাসন এবং সবুজ স্থান বিবেচনা করতে হবে। অনেক শহরে, যানজট এবং দূষণ প্রধান সমস্যা। আমাদের গণপরিবহন এবং সাইক্লিং অবকাঠামো প্রচার করতে হবে।",
+    "vocab": [
+      { "word": "Urban", "bangla": "শহুরে" },
+      { "word": "Sustainable", "bangla": "টেকসই" },
+      { "word": "Infrastructure", "bangla": "অবকাঠামো" }
+    ],
+    "grammar_note": "Use 'We must consider...' to state important factors.",
+    "quiz": [
+      { "question": "What is the lecture about?", "options": ["Urban planning", "Climate change", "Economy"], "correct": 0 },
+      { "question": "What is mentioned as a major issue?", "options": ["Pollution", "Poverty", "Education"], "correct": 0 }
+    ],
+    "shadowing_sentences": ["Urban planning is critical.", "We must consider transportation."],
+    "common_mistakes": [
+      { "wrong": "We need to promote public transport and cycling.", "right": "We need to promote public transport and cycling infrastructure.", "explanation": "Add 'infrastructure' to be more specific." }
+    ],
+    "related_lessons": [{"title": "IELTS Listening Section 4", "url": "/listening/ielts-section-4.html"}],
+    "next_lesson_id": null
   }
 ]

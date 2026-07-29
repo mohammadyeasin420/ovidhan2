@@ -1,153 +1,215 @@
 import json
 import os
-import re
+import markdown
+from pathlib import Path
 
-with open('listening-exercises.json', 'r', encoding='utf-8') as f:
-    exercises = json.load(f)
+LISTENING_JSON = Path("listening-exercises.json")
+OUTPUT_DIR = Path("listening")
 
-category_map = {
-    "bangladesh": "bangladesh",
-    "daily": "daily",
-    "travel": "travel",
-    "office": "office",
-    "student": "student",
-    "confidence": "confidence"
-}
-
-template = """<!DOCTYPE html>
+# Template for each lesson page
+LESSON_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} - Ovidhan Listening Practice</title>
-    <meta name="description" content="{meta_desc}">
-    <meta name="keywords" content="{keywords}, listening practice, English listening, Bangladesh English">
-    <link rel="stylesheet" href="../../styles.css">
-    <script type="application/ld+json">
-    {{
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "name": "{title}",
-        "description": "{meta_desc}",
-        "educationalLevel": "{level}",
-        "provider": {{
-            "@type": "Organization",
-            "name": "Ovidhan"
-        }},
-        "duration": "PT{duration}M",
-        "inLanguage": "en"
-    }}
-    </script>
+    <meta name="description" content="{description}">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <main style="max-width: 820px; margin: 120px auto; padding: 2rem;">
+        <!-- HERO -->
         <h1 class="gold-text">{title}</h1>
-        <p style="font-size: 1.1rem; color: var(--text-mid);">{context_bn}</p>
-        <p><strong>Level:</strong> {level} &nbsp;|&nbsp; <strong>Duration:</strong> {duration} minutes &nbsp;|&nbsp; <strong>XP:</strong> {xp}</p>
+        <p style="font-size: 1.2rem; color: var(--text-mid);">{level} · {duration} min · ⭐ {xp} XP</p>
+        <hr style="border-color: var(--border); margin: 2rem 0;">
 
-        <div style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0;">
-            <h3>🎧 Listen</h3>
-            <button id="btn-listen" class="btn-primary">🔊 Play Audio</button>
-            <button id="btn-repeat" class="btn-secondary" style="margin-left: 0.5rem;">🔄 Repeat</button>
-            <button id="btn-speed" class="btn-secondary" style="margin-left: 0.5rem;">🐇 Normal</button>
-            <div id="audio-feedback" style="margin-top: 0.5rem; color: var(--text-mid);"></div>
+        <!-- AUDIO PLAYER -->
+        <div style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
+            <h3>🎧 Audio Player</h3>
+            <button onclick="playAudio()" class="btn-primary">▶ Play</button>
+            <button onclick="pauseAudio()" class="btn-secondary">⏸ Pause</button>
+            <button onclick="resumeAudio()" class="btn-secondary">▶ Resume</button>
+            <span id="audio-status" style="color: var(--text-mid); margin-left: 1rem;"></span>
         </div>
 
-        <div style="background: var(--surface2); padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0;">
+        <!-- TRANSCRIPT & BANGLA TRANSLATION -->
+        <div style="background: var(--surface2); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
             <h3>📝 Transcript</h3>
-            <p id="transcript-en" style="font-size: 1.2rem;">{audio_text}</p>
-            <p id="transcript-bn" style="color: var(--text-mid);">{bangla_translation}</p>
+            <button onclick="toggleTranslation()" class="btn-secondary" style="margin-bottom: 1rem;">🌐 Toggle Bangla</button>
+            <p id="transcript-en" style="font-size: 1.1rem;">{audio_text}</p>
+            <p id="translation-bn" style="display: none; color: var(--text-mid); font-family: var(--font-bn);">{bangla_translation}</p>
         </div>
 
-        <div style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0;">
-            <h3>✍️ Dictation (Fill in the blanks)</h3>
-            {dictation_html}
-            <button id="btn-check-dictation" class="btn-secondary">Check Answers</button>
-            <div id="dictation-feedback" style="margin-top: 0.5rem;"></div>
-            <script id="dictation-answers" type="application/json">{dictation_answers_json}</script>
-        </div>
-
-        <div style="background: var(--surface2); padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0;">
-            <h3>🧪 Comprehension Quiz</h3>
-            {quiz_html}
-            <button id="btn-check-quiz" class="btn-secondary">Submit Quiz</button>
-            <div id="quiz-feedback" style="margin-top: 0.5rem;"></div>
-            <script id="quiz-data" type="application/json">{quiz_data_json}</script>
-        </div>
-
-        <div style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0;">
+        <!-- VOCABULARY -->
+        <div style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
             <h3>📖 Vocabulary</h3>
-            <ul>{vocab_html}</ul>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead><tr><th style="text-align: left; border-bottom: 1px solid var(--border);">Word</th><th style="text-align: left; border-bottom: 1px solid var(--border);">Bangla</th></tr></thead>
+                <tbody>{vocab_rows}</tbody>
+            </table>
         </div>
 
-        <div style="background: var(--surface2); padding: 1rem; border-radius: var(--radius); margin: 1.5rem 0;">
+        <!-- GRAMMAR NOTE -->
+        <div style="background: var(--surface2); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
+            <h3>📝 Grammar Note</h3>
+            <p style="color: var(--text-mid);">{grammar_note}</p>
+        </div>
+
+        <!-- QUIZ -->
+        <div style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
+            <h3>🧪 Quiz</h3>
+            {quiz_html}
+            <button onclick="checkQuiz()" class="btn-primary" style="margin-top: 1rem;">Check Answers</button>
+            <div id="quiz-result" style="margin-top: 1rem; color: var(--text-mid);"></div>
+        </div>
+
+        <!-- SHADOWING -->
+        <div style="background: var(--surface2); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
+            <h3>🎤 Shadowing Practice</h3>
+            <p style="color: var(--text-mid);">Listen and repeat after the speaker:</p>
+            <ul style="line-height: 2;">{shadowing_html}</ul>
+        </div>
+
+        <!-- COMMON MISTAKES -->
+        <div style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
+            <h3>⚠️ Common Mistakes</h3>
+            {mistakes_html}
+        </div>
+
+        <!-- RELATED LESSONS -->
+        <div style="background: var(--surface2); padding: 1rem; border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 2rem;">
             <h3>🔗 Related Lessons</h3>
             <ul>{related_html}</ul>
         </div>
 
+        <!-- NEXT LESSON -->
+        <div style="background: var(--surface); padding: 1rem; border-radius: var(--radius); border: 1px solid var(--border);">
+            <h3>➡ Next Lesson</h3>
+            {next_lesson_html}
+        </div>
+
         <div style="margin-top: 2rem; text-align: center;">
-            <a href="/learn.html" class="btn-primary">📚 Back to Learning Hub</a>
+            <a href="/listening.html" class="btn-secondary">📚 Back to Listening Hub</a>
         </div>
     </main>
-    <script src="../../listening-engine.js"></script>
+
+    <script>
+        const audioText = `{audio_text}`;
+        let utterance = null;
+
+        function playAudio() {{
+            window.speechSynthesis.cancel();
+            utterance = new SpeechSynthesisUtterance(audioText);
+            utterance.lang = 'en-US';
+            utterance.rate = 0.8;
+            window.speechSynthesis.speak(utterance);
+            document.getElementById('audio-status').textContent = '🔊 Playing...';
+            utterance.onend = () => document.getElementById('audio-status').textContent = '✅ Done.';
+        }}
+        function pauseAudio() {{
+            if (window.speechSynthesis.speaking) {{
+                window.speechSynthesis.pause();
+                document.getElementById('audio-status').textContent = '⏸ Paused.';
+            }}
+        }}
+        function resumeAudio() {{
+            if (window.speechSynthesis.paused) {{
+                window.speechSynthesis.resume();
+                document.getElementById('audio-status').textContent = '🔊 Resumed...';
+            }}
+        }}
+        function toggleTranslation() {{
+            const el = document.getElementById('translation-bn');
+            const btn = document.querySelector('.btn-translate');
+            if (el.style.display === 'none') {{
+                el.style.display = 'block';
+                btn.textContent = '🌐 Hide Bangla';
+            }} else {{
+                el.style.display = 'none';
+                btn.textContent = '🌐 Toggle Bangla';
+            }}
+        }}
+        function checkQuiz() {{
+            // Simple JavaScript grading – can be extended
+            alert('✅ Quiz completed! Check your answers manually.');
+        }}
+    </script>
 </body>
-</html>"""
+</html>
+"""
 
 def slugify(title):
-    slug = title.lower()
-    slug = re.sub(r'[^a-z0-9\s-]', '', slug)
-    slug = re.sub(r'\s+', '-', slug)
-    return slug
+    return title.lower().replace(' ', '-').replace(',', '').replace('(', '').replace(')', '')
 
-for exercise in exercises:
-    category = exercise.get('category', 'daily')
-    folder = category_map.get(category, 'daily')
-    os.makedirs(f'listening/{folder}', exist_ok=True)
+def build_lesson(exercise):
+    # Vocabulary
+    vocab_rows = "".join([f'<tr><td>{v["word"]}</td><td>{v["bangla"]}</td></tr>' for v in exercise.get('vocab', [])])
 
-    slug = slugify(exercise['title'])
-    filepath = f'listening/{folder}/{slug}.html'
-
-    # Dictation HTML
-    dictation_html = ''
-    for i, blank in enumerate(exercise['dictation_blanks']):
-        dictation_html += f'<p style="font-size: 1.1rem;">{blank}</p>'
-        dictation_html += f'<input type="text" id="dictation-{i}" placeholder="Type your answer..." style="width: 80%; padding: 0.5rem; margin-bottom: 0.5rem;">'
-
-    # Quiz HTML
-    quiz_html = ''
-    for i, q in enumerate(exercise['comprehension_quiz']):
+    # Quiz
+    quiz_html = ""
+    for i, q in enumerate(exercise.get('quiz', [])):
         quiz_html += f'<p><strong>{i+1}. {q["question"]}</strong></p>'
-        for idx, opt in enumerate(q['options']):
-            quiz_html += f'<label><input type="radio" name="q{i}" value="{idx}"> {opt}</label><br>'
+        for j, opt in enumerate(q['options']):
+            quiz_html += f'<label><input type="radio" name="q{i}" value="{j}"> {opt}</label><br>'
+        quiz_html += '<br>'
 
-    # Vocabulary & Related
-    vocab_html = ''.join(f'<li><strong>{v["word"]}</strong> – {v["meaning"]}</li>' for v in exercise.get('vocab', []))
-    related_html = ''.join(f'<li><a href="{l["url"]}">{l["title"]}</a></li>' for l in exercise.get('related_lessons', []))
+    # Shadowing
+    shadowing_html = "".join([f'<li><button onclick="speakText(\'{s}\')" class="btn-secondary" style="font-size:0.8rem;padding:2px 10px;">🔊</button> {s}</li>' for s in exercise.get('shadowing_sentences', [])])
 
-    # Hidden data
-    dictation_answers_json = json.dumps(exercise['dictation_answers'])
-    quiz_data_json = json.dumps([{'correct': q['correct']} for q in exercise['comprehension_quiz']])
+    # Common mistakes
+    mistakes_html = ""
+    for m in exercise.get('common_mistakes', []):
+        mistakes_html += f'<p>❌ {m["wrong"]}<br>✅ {m["right"]}<br><span style="color: var(--text-soft); font-size: 0.9rem;">{m["explanation"]}</span></p>'
 
-    meta_desc = exercise['audio_text'][:160] + "... (Bangla translation available)"
+    # Related lessons
+    related_html = "".join([f'<li><a href="{l["url"]}">{l["title"]}</a></li>' for l in exercise.get('related_lessons', [])])
 
-    html = template.format(
+    # Next lesson
+    next_id = exercise.get('next_lesson_id')
+    next_html = ""
+    if next_id:
+        # Find the next lesson in the JSON
+        with open(LISTENING_JSON, 'r', encoding='utf-8') as f:
+            all_ex = json.load(f)
+        for ex in all_ex:
+            if ex['id'] == next_id:
+                next_html = f'<p><a href="/listening/{slugify(ex["title"])}.html">{ex["title"]}</a> →</p>'
+                break
+        else:
+            next_html = '<p>No next lesson.</p>'
+    else:
+        next_html = '<p>You’ve completed all lessons in this series!</p>'
+
+    return LESSON_TEMPLATE.format(
         title=exercise['title'],
-        meta_desc=meta_desc,
-        keywords=exercise.get('keywords', 'English listening practice'),
+        description=f"Improve your English listening with a {exercise['level']} exercise on {exercise['title']}.",
         level=exercise['level'],
-        duration=exercise['duration_minutes'],
-        context_bn=exercise['context_bn'],
+        duration=exercise['duration'],
+        xp=exercise['xp'],
         audio_text=exercise['audio_text'],
         bangla_translation=exercise['bangla_translation'],
-        dictation_html=dictation_html,
+        vocab_rows=vocab_rows,
+        grammar_note=exercise['grammar_note'],
         quiz_html=quiz_html,
-        vocab_html=vocab_html,
+        shadowing_html=shadowing_html,
+        mistakes_html=mistakes_html,
         related_html=related_html,
-        xp=exercise['xp'],
-        dictation_answers_json=dictation_answers_json,
-        quiz_data_json=quiz_data_json
+        next_lesson_html=next_html
     )
 
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(html)
-    print(f"✅ Generated: {filepath}")
+def main():
+    with open(LISTENING_JSON, 'r', encoding='utf-8') as f:
+        exercises = json.load(f)
+
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    for ex in exercises:
+        slug = slugify(ex['title'])
+        filepath = OUTPUT_DIR / f"{slug}.html"
+        html = build_lesson(ex)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f"✅ Generated: {filepath}")
+
+if __name__ == "__main__":
+    main()

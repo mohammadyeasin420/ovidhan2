@@ -1,54 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../styles.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listening Practice - Ovidhan</title>
-    <meta name="description" content="Improve your English listening skills with real-world scenarios from Bangladesh.">
+    <title>English Listening Exercises with Bangla | Free Practice</title>
+    <meta name="description" content="Improve your English listening skills with free listening exercises, Bangla explanations, audio practice, vocabulary, quizzes, and daily lessons for beginners.">
     <link rel="stylesheet" href="../styles.css" />
     <style>
-        .hub-hero { text-align: center; padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
-        .hub-hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-        .hub-hero p { font-size: 1.2rem; color: var(--text-mid); max-width: 600px; margin: 0 auto; }
-        .filter-bar { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; padding: 1.5rem; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); }
-        .filter-bar input, .filter-bar select { padding: 0.8rem 1rem; border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg); color: var(--text); flex: 1; min-width: 200px; }
-        .filter-bar input:focus, .filter-bar select:focus { outline: 2px solid var(--gold); }
-        .level-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
-        .level-btn { padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--text-mid); cursor: pointer; transition: all 0.2s; }
-        .level-btn:hover { border-color: var(--gold); color: var(--gold); }
-        .level-btn.active { background: var(--gold); color: #000; border-color: var(--gold); font-weight: bold; }
-        .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; display: flex; flex-direction: column; justify-content: space-between; }
-        .lesson-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 8px 25px rgba(230,184,74,0.15); }
-        .card-top { display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; }
-        .card-category { font-size: 0.85rem; color: var(--text-mid); font-weight: 600; }
-        .card-level { background: var(--teal-dim); color: var(--teal); padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold; }
-        .card-level.b1 { background: var(--gold-dim); color: var(--gold); }
-        .card-level.b2 { background: var(--purple-dim); color: var(--purple); }
-        .card-title { font-size: 1.2rem; font-weight: 600; margin: 0.5rem 0 0.8rem; color: var(--text); line-height: 1.4; }
-        .card-meta { display: flex; gap: 1rem; font-size: 0.9rem; color: var(--text-mid); margin-bottom: 1.2rem; }
-        .card-meta span { display: flex; align-items: center; gap: 0.3rem; }
-        .card-actions { display: flex; align-items: center; justify-content: space-between; }
-        .card-btn { background: var(--gold); color: #000; padding: 0.5rem 1.2rem; border-radius: var(--radius); text-decoration: none; font-weight: 600; transition: background 0.2s; }
-        .card-btn:hover { background: #d4a83a; }
-        .completed-badge { color: var(--green); font-weight: bold; display: flex; align-items: center; gap: 0.3rem; }
-        .empty-state { text-align: center; padding: 4rem 0; color: var(--text-mid); }
-        .empty-state h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .loader { text-align: center; padding: 4rem 0; color: var(--text-mid); }
-        .loader .spinner { border: 4px solid var(--surface2); border-top: 4px solid var(--gold); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 1rem; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        @media (max-width: 640px) {
-            .hub-hero h1 { font-size: 2.2rem; }
-            .filter-bar { flex-direction: column; }
-            .filter-bar input, .filter-bar select { width: 100%; }
-            .lesson-grid { grid-template-columns: 1fr; }
-        }
+        .hub-hero { text-align: center; padding: 3rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+        .hub-hero h1 { font-size: 2.8rem; color: var(--gold); }
+        .hub-hero .cta { margin-top: 1.5rem; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center; }
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .category-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+        .listening-tip { background: var(--surface); padding: 1rem; border-left: 4px solid var(--gold); margin: 1rem 0; }
+        .faq-item { background: var(--surface2); padding: 1rem; border-radius: var(--radius); margin: 0.5rem 0; }
+        .filter-bar { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+        .filter-bar select, .filter-bar input { padding: 0.5rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); }
+        .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+        .lesson-card a { color: var(--text); text-decoration: none; }
+        .lesson-card a:hover { color: var(--gold); }
+        .level-badge { display: inline-block; background: var(--teal-dim); color: var(--teal); padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem; }
+        .level-badge.b1 { background: var(--gold-dim); color: var(--gold); }
+        .level-badge.b2 { background: var(--purple-dim); color: var(--purple); }
     </style>
 </head>
 <body>
 <header class="site-header">
-    <link rel="stylesheet" href="../styles.css" />
     <div class="nav-inner">
         <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
 
@@ -299,290 +279,188 @@
     }
 </style>
 
-
-
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-
-    <!-- ====== HEADER (Included from your site header) ====== -->
-    
-
-    <!-- ====== MAIN CONTENT ====== -->
     <main style="max-width: 1100px; margin: 120px auto; padding: 2rem;">
+        <!-- HERO -->
         <div class="hub-hero">
-            <h1 class="gold-text">🎧 Listening Practice</h1>
-            <p>Boost your listening skills with real-world scenarios from Bangladesh. Listen, fill in the blanks, and test your comprehension.</p>
-        </div>
-
-        <div class="filter-bar">
-            <input type="text" id="search-input" placeholder="🔍 Search for a topic...">
-            <select id="category-filter">
-                <option value="all">All Categories</option>
-                <option value="bangladesh">🇧🇩 Bangladesh</option>
-                <option value="daily">☀️ Daily Life</option>
-                <option value="travel">✈️ Travel</option>
-                <option value="office">💼 Office</option>
-                <option value="student">🎓 Student</option>
-                <option value="confidence">💪 Confidence</option>
-            </select>
-            <div class="level-filters">
-                <button class="level-btn active" data-level="all">All</button>
-                <button class="level-btn" data-level="A1">A1</button>
-                <button class="level-btn" data-level="A2">A2</button>
-                <button class="level-btn" data-level="B1">B1</button>
-                <button class="level-btn" data-level="B2">B2</button>
+            <h1>English Listening Exercises</h1>
+            <p style="font-size: 1.2rem; color: var(--text-mid);">Improve your listening skills step by step with Bangla explanations.</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0;">
+                <span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ Beginner to Advanced</span>
+                <span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ 100% Free</span>
+                <span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ Bangla Support</span>
+                <span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ Daily Practice</span>
+            </div>
+            <div class="cta">
+                <a href="#lessons" class="btn-primary">▶ Start Listening</a>
             </div>
         </div>
 
-        <div id="lesson-grid" class="lesson-grid">
-            <div class="loader">
-                <div class="spinner"></div>
-                <p>Loading exercises...</p>
-            </div>
-        </div>
+        <!-- WHY LISTENING MATTERS -->
+        <section style="margin: 2rem 0;">
+            <h2>Why Listening Matters</h2>
+            <p>Listening is one of the fastest ways to improve English. Good listening helps you:</p>
+            <ul>
+                <li>understand native speakers</li>
+                <li>improve pronunciation</li>
+                <li>learn new vocabulary</li>
+                <li>speak naturally</li>
+                <li>prepare for IELTS</li>
+                <li>prepare for job interviews</li>
+            </ul>
+        </section>
 
-        <div style="margin-top: 3rem; text-align: center;">
-            <a href="/learn.html" class="btn-primary">📚 Back to Learning Hub</a>
+        <!-- FEATURES -->
+        <section>
+            <h2>Every Lesson Includes</h2>
+            <div class="feature-grid">
+                <div class="feature-card">✅ High-quality audio</div>
+                <div class="feature-card">✅ Bangla translation</div>
+                <div class="feature-card">✅ Vocabulary list</div>
+                <div class="feature-card">✅ Pronunciation</div>
+                <div class="feature-card">✅ Grammar notes</div>
+                <div class="feature-card">✅ Interactive quiz</div>
+                <div class="feature-card">✅ Progress tracking</div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section>
+            <h2>Listening Categories</h2>
+            <div class="category-grid">
+                <div class="category-card"><h3>Daily English</h3><p>Real conversations used every day.</p></div>
+                <div class="category-card"><h3>Travel English</h3><p>Airport, hotel, taxi, restaurant, immigration.</p></div>
+                <div class="category-card"><h3>Workplace English</h3><p>Meetings, emails, phone calls, office conversation.</p></div>
+                <div class="category-card"><h3>Academic English</h3><p>Lectures, university, presentations, discussions.</p></div>
+                <div class="category-card"><h3>IELTS Listening</h3><p>Practice all four IELTS listening sections with explanations.</p></div>
+            </div>
+        </section>
+
+        <!-- LISTENING TIPS -->
+        <section style="margin: 2rem 0;">
+            <h2>Listening Tips</h2>
+            <div class="listening-tip"><strong>Listen Every Day</strong><br>Consistency is more important than long study sessions.</div>
+            <div class="listening-tip"><strong>Don't Translate Every Word</strong><br>Focus on understanding the meaning.</div>
+            <div class="listening-tip"><strong>Repeat After the Speaker</strong><br>Shadowing improves pronunciation and fluency.</div>
+            <div class="listening-tip"><strong>Learn Vocabulary</strong><br>Unknown words reduce listening comprehension.</div>
+        </section>
+
+        <!-- LEVELS TABLE -->
+        <section style="margin: 2rem 0;">
+            <h2>Listening Levels</h2>
+            <table style="width:100%; border-collapse: collapse;">
+                <thead><tr><th style="border-bottom:1px solid var(--border); text-align:left;">Level</th><th style="border-bottom:1px solid var(--border); text-align:left;">Description</th></tr></thead>
+                <tbody>
+                    <tr><td>A1</td><td>Complete Beginner</td></tr>
+                    <tr><td>A2</td><td>Elementary</td></tr>
+                    <tr><td>B1</td><td>Intermediate</td></tr>
+                    <tr><td>B2</td><td>Upper Intermediate</td></tr>
+                    <tr><td>C1</td><td>Advanced</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- LESSON GRID WITH FILTER -->
+        <section id="lessons">
+            <h2>Start Listening</h2>
+            <div class="filter-bar">
+                <input type="text" id="search" placeholder="Search topics..." oninput="filterLessons()">
+                <select id="levelFilter" onchange="filterLessons()">
+                    <option value="all">All Levels</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                </select>
+                <select id="categoryFilter" onchange="filterLessons()">
+                    <option value="all">All Categories</option>
+                    <option value="daily">Daily</option>
+                    <option value="travel">Travel</option>
+                    <option value="office">Office</option>
+                    <option value="academic">Academic</option>
+                    <option value="ielts">IELTS</option>
+                </select>
+            </div>
+            <div id="lessonGrid" class="lesson-grid"></div>
+        </section>
+
+        <!-- FAQ -->
+        <section style="margin: 3rem 0;">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><strong>How can I improve English listening?</strong><br>Practice every day using short conversations, vocabulary, and quizzes.</div>
+            <div class="faq-item"><strong>Is this listening course free?</strong><br>Yes, 100% free.</div>
+            <div class="faq-item"><strong>Are Bangla explanations included?</strong><br>Yes. Every lesson includes Bangla support.</div>
+            <div class="faq-item"><strong>Is this useful for IELTS?</strong><br>Yes, it helps improve IELTS Listening skills.</div>
+            <div class="faq-item"><strong>How long should I practice?</strong><br>10–20 minutes every day.</div>
+        </section>
+
+        <!-- INTERNAL LINKS -->
+        <section style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-top: 2rem;">
+            <h3>Continue Learning</h3>
+            <ul style="display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0;">
+                <li><a href="/grammar.html">Grammar Lessons</a></li>
+                <li><a href="/speaking.html">Speaking Course</a></li>
+                <li><a href="/vocabulary-builder.html">Vocabulary Builder</a></li>
+                <li><a href="/dictionary.html">English Dictionary</a></li>
+                <li><a href="/pronunciation-basics.html">Pronunciation Guide</a></li>
+                <li><a href="/ielts-guide.html">IELTS Preparation</a></li>
+            </ul>
+        </section>
+
+        <!-- CTA -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <p style="font-size: 1.2rem; color: var(--text-mid);">Start your English listening journey today.</p>
+            <a href="#lessons" class="btn-primary">Practice Free</a>
+            <span style="display: block; color: var(--text-soft); margin-top: 0.5rem;">Learn with Bangla explanations. Build confidence.</span>
         </div>
     </main>
 
-    <!-- ====== FOOTER ====== -->
-    
-
-    <!-- ====== JAVASCRIPT ====== -->
     <script>
-        // Mobile menu toggle (if not already in your global script)
-        function toggleMenu() {
-            const menu = document.getElementById('megaMenu');
-            const toggle = document.querySelector('.menu-toggle');
-            menu.classList.toggle('open');
-            toggle.classList.toggle('active');
+        let lessons = [];
+
+        // Load lessons from the JSON file
+        fetch('/listening-exercises.json')
+            .then(res => res.json())
+            .then(data => {
+                lessons = data;
+                renderLessons(lessons);
+            })
+            .catch(err => console.error('Error loading lessons:', err));
+
+        function renderLessons(list) {
+            const grid = document.getElementById('lessonGrid');
+            if (!list.length) {
+                grid.innerHTML = '<p style="color: var(--text-mid);">No lessons found.</p>';
+                return;
+            }
+            grid.innerHTML = list.map(ex => `
+                <div class="lesson-card">
+                    <a href="/listening/${slugify(ex.title)}.html">
+                        <h3>${ex.title}</h3>
+                        <p style="color: var(--text-mid);">${ex.duration} min · ⭐ ${ex.xp} XP</p>
+                        <span class="level-badge ${ex.level.toLowerCase()}">${ex.level}</span>
+                        <span style="color: var(--text-soft); margin-left: 0.5rem;">${ex.category}</span>
+                    </a>
+                </div>
+            `).join('');
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const grid = document.getElementById('lesson-grid');
-            const searchInput = document.getElementById('search-input');
-            const categoryFilter = document.getElementById('category-filter');
-            const levelBtns = document.querySelectorAll('.level-btn');
-            let currentLevel = 'all';
-            let data = [];
-
-            // Category icons map – THIS WAS MISSING!
-            const category_icons = {
-                "bangladesh": "🇧🇩",
-                "daily": "☀️",
-                "travel": "✈️",
-                "office": "💼",
-                "student": "🎓",
-                "confidence": "💪"
-            };
-
-            function slugify(title) {
-                return title.toLowerCase()
-                    .replace(/[^a-z0-9\s-]/g, '')
-                    .replace(/\s+/g, '-');
-            }
-
-            function getCompletedIds() {
-                try {
-                    const raw = localStorage.getItem('ovidhan_listening_completed');
-                    return raw ? JSON.parse(raw) : [];
-                } catch { return []; }
-            }
-
-            function render() {
-                const search = searchInput.value.toLowerCase().trim();
-                const category = categoryFilter.value;
-                const completedIds = getCompletedIds();
-
-                const filtered = data.filter(item => {
-                    const matchesSearch = item.title.toLowerCase().includes(search);
-                    const matchesCategory = category === 'all' || item.category === category;
-                    const matchesLevel = currentLevel === 'all' || item.level === currentLevel;
-                    return matchesSearch && matchesCategory && matchesLevel;
-                });
-
-                if (filtered.length === 0) {
-                    grid.innerHTML = `<div class="empty-state"><h3>😕 No exercises found</h3><p>Try adjusting your search or filters.</p></div>`;
-                    return;
-                }
-
-                grid.innerHTML = filtered.map(item => {
-                    const slug = slugify(item.title);
-                    const url = `/listening/${item.category}/${slug}.html`;
-                    const icon = category_icons[item.category] || '📄';
-                    const isCompleted = completedIds.includes(item.id);
-                    let levelClass = item.level.toLowerCase();
-                    if (levelClass === 'b1') levelClass = 'b1';
-                    else if (levelClass === 'b2') levelClass = 'b2';
-
-                    return `
-                        <div class="lesson-card">
-                            <div>
-                                <div class="card-top">
-                                    <span class="card-category">${icon} ${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</span>
-                                    <span class="card-level ${levelClass}">${item.level}</span>
-                                </div>
-                                <h3 class="card-title">${item.title}</h3>
-                                <div class="card-meta">
-                                    <span>⏱ ${item.duration_minutes} min</span>
-                                    <span>⭐ ${item.xp} XP</span>
-                                </div>
-                            </div>
-                            <div class="card-actions">
-                                <a href="${url}" class="card-btn">Start Listening →</a>
-                                ${isCompleted ? `<span class="completed-badge">✅ Completed</span>` : ''}
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            }
-
-            fetch('/listening-exercises.json')
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load exercises');
-                    return response.json();
-                })
-                .then(json => {
-                    data = json;
-                    if (data.length === 0) {
-                        grid.innerHTML = `<div class="empty-state"><h3>📭 No exercises</h3><p>Add exercises to listening-exercises.json and reload.</p></div>`;
-                        return;
-                    }
-                    render();
-                })
-                .catch(error => {
-                    console.error('Fetch error:', error);
-                    grid.innerHTML = `<div class="empty-state"><h3>⚠️ Error loading data</h3><p>${error.message}</p><p><button onclick="location.reload()" class="btn-primary">Reload</button></p></div>`;
-                });
-
-            searchInput.addEventListener('input', render);
-            categoryFilter.addEventListener('change', render);
-            levelBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    levelBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    currentLevel = this.dataset.level;
-                    render();
-                });
+        function filterLessons() {
+            const search = document.getElementById('search').value.toLowerCase();
+            const level = document.getElementById('levelFilter').value;
+            const category = document.getElementById('categoryFilter').value;
+            const filtered = lessons.filter(ex => {
+                const matchesSearch = ex.title.toLowerCase().includes(search);
+                const matchesLevel = level === 'all' || ex.level === level;
+                const matchesCategory = category === 'all' || ex.category === category;
+                return matchesSearch && matchesLevel && matchesCategory;
             });
-        });
+            renderLessons(filtered);
+        }
+
+        function slugify(title) {
+            return title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+        }
     </script>
-
-
 <footer class="site-footer">
     <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
     <p>
