@@ -1,0 +1,114 @@
+﻿{
+  "id": "gram-present-perfect-continuous-001",
+  "content_version": 2,
+  "template": "lesson",
+  "status": "published",
+  "author": "Mohammad Yeasin",
+  "order": 5,
+  "subject": "grammar",
+  "title": "Present Perfect Continuous Tense",
+  "slug": "present-perfect-continuous-tense-bangla",
+  "cefr": "B1",
+  "estimated_time": 20,
+  "reading_time": 10,
+  "difficulty": "intermediate",
+  "tags": ["present-tense", "perfect-continuous", "have-has-been", "duration"],
+  "course_ids": ["B1", "B2", "IELTS"],
+  "primary_keyword": "present perfect continuous tense bangla",
+  "secondary_keywords": ["have has been bangla", "since for bangla", "present perfect continuous rules", "english grammar bangla"],
+  "intro_blurb": "The Present Perfect Continuous Tense is used to describe actions that started in the past and are still continuing in the present, often with a focus on the duration. It is heavily used in IELTS Speaking and Writing to describe experiences and ongoing situations. In this lesson, you will learn the rules, Bangla explanation, examples, common mistakes, and practice exercises.",
+  "learning_outcomes": [
+    "Understand when to use the Present Perfect Continuous",
+    "Form sentences with have/has + been + verb-ing",
+    "Use 'for' and 'since' correctly",
+    "Distinguish between Present Perfect and Present Perfect Continuous"
+  ],
+  "timeline": {
+    "start": "Past",
+    "middle": "Now",
+    "end": "Future",
+    "description": "I have been living in Dhaka for 5 years. (Started in the past, still living now)"
+  },
+  "signal_words": ["for", "since", "how long", "lately", "recently", "all day", "all week"],
+  "comparison": [
+    {
+      "tense": "Present Perfect Continuous",
+      "usage": "Focuses on the duration of the action",
+      "example": "I have been reading for 2 hours."
+    },
+    {
+      "tense": "Present Perfect",
+      "usage": "Focuses on the result or completion of the action",
+      "example": "I have read 50 pages."
+    }
+  ],
+  "common_mistakes": [
+    { "wrong": "I have been know him for years.", "right": "I have known him for years.", "explanation": "Stative verbs (like 'know', 'like', 'belong') cannot be used in continuous tenses." },
+    { "wrong": "She have been working here.", "right": "She has been working here.", "explanation": "Use 'has' for He/She/It." },
+    { "wrong": "I have been work here since 2020.", "right": "I have been working here since 2020.", "explanation": "Always use 'verb-ing' after 'been'." }
+  ],
+  "audio_examples": [
+    "I have been learning English for three years.",
+    "She has been working at the bank since 2020.",
+    "They have been playing cricket all afternoon."
+  ],
+  "vocabulary": [
+    { "word": "Since", "bangla": "থেকে (একটি নির্দিষ্ট সময় থেকে)" },
+    { "word": "For", "bangla": "জন্য (একটি সময়কাল)" },
+    { "word": "Recently", "bangla": "সম্প্রতি" },
+    { "word": "Lately", "bangla": "ইদানীং" },
+    { "word": "Duration", "bangla": "সময়কাল" }
+  ],
+  "speaking_practice": [
+    "I have been living in Dhaka for 10 years.",
+    "She has been studying English since 2022.",
+    "They have been waiting for the bus for 30 minutes.",
+    "Have you been working here long?",
+    "He has not been feeling well lately."
+  ],
+  "quiz": [
+    {
+      "type": "mcq",
+      "question": "Which is the correct sentence?",
+      "options": ["She have been reading.", "She has been reading.", "She has been read."],
+      "correct": 1,
+      "explanation": "Use 'has' for He/She/It, and 'verb-ing' after 'been'."
+    },
+    {
+      "type": "mcq",
+      "question": "Choose the correct time expression for a duration.",
+      "options": ["Since", "For", "Yesterday"],
+      "correct": 1,
+      "explanation": "'For' is used with a duration (e.g., 2 hours, 5 years). 'Since' is used with a starting point."
+    },
+    {
+      "type": "fill",
+      "question": "Fill in the blank: I _____ (wait) for you since 10 am.",
+      "answer": "have been waiting"
+    },
+    {
+      "type": "correction",
+      "question": "Correct the sentence: He have been working here since 2020.",
+      "answer": "He has been working here since 2020.",
+      "explanation": "Use 'has' for He."
+    },
+    {
+      "type": "translation",
+      "question": "Translate to English: আমি তিন বছর ধরে ইংরেজি শিখছি।",
+      "answer": "I have been learning English for three years."
+    }
+  ],
+  "faq": [
+    { "q": "When do we use the Present Perfect Continuous?", "a": "For actions that started in the past and continue to the present, especially when we want to emphasize the duration." },
+    { "q": "What is the difference between 'for' and 'since'?", "a": "'For' is used with a duration (e.g., 3 years, 2 hours). 'Since' is used with a starting point (e.g., 2020, Monday)." },
+    { "q": "What is the difference between Present Perfect and Present Perfect Continuous?", "a": "Present Perfect focuses on the result; Present Perfect Continuous focuses on the duration of the action." },
+    { "q": "Can I use this tense with stative verbs?", "a": "No. Stative verbs (like know, be, have, like) cannot be used in continuous forms. Use Present Perfect instead." }
+  ],
+  "related_links": [
+    { "title": "Present Perfect Tense", "url": "/grammar/present-perfect-tense-bangla.html" },
+    { "title": "Present Continuous Tense", "url": "/grammar/present-continuous-tense-bangla.html" },
+    { "title": "Since vs For", "url": "/since-vs-for-bangla.html" },
+    { "title": "Stative Verbs", "url": "/stative-verbs-bangla.html" }
+  ],
+  "reward": { "xp": 25, "badge": "" }
+}
