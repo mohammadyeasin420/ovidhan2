@@ -1,41 +1,116 @@
 ﻿{
   "id": "gram-past-continuous-001",
-  "content_version": 1,
+  "content_version": 2,
   "template": "lesson",
   "status": "published",
   "author": "Mohammad Yeasin",
   "order": 4,
   "subject": "grammar",
   "title": "Past Continuous Tense",
+  "slug": "past-continuous-tense-bangla",
   "cefr": "A2",
-  "estimated_time": 15,
-  "reading_time": 8,
+  "estimated_time": 20,
+  "reading_time": 10,
   "difficulty": "beginner",
-  "tags": ["past-tense", "continuous-tense", "was-were", "actions-in-progress"],
+  "tags": ["past-tense", "continuous-tense", "was-were", "interrupted-actions"],
   "course_ids": ["A2", "B1", "IELTS"],
   "primary_keyword": "past continuous tense bangla",
   "secondary_keywords": ["was were bangla", "past continuous rules", "english grammar bangla"],
+  "intro_blurb": "The Past Continuous Tense is used to describe actions that were in progress at a specific moment in the past. It is essential for storytelling, describing background scenes, and talking about interrupted actions. In this lesson, you will learn the rules, Bangla explanation, examples, common mistakes, and practice exercises.",
   "learning_outcomes": [
     "Understand when to use the Past Continuous",
     "Form sentences with was/were + verb-ing",
-    "Talk about actions in progress at a specific past time"
+    "Talk about actions in progress at a past time",
+    "Describe interrupted and simultaneous actions",
+    "Avoid common mistakes"
+  ],
+  "timeline": {
+    "start": "Past",
+    "middle": "Now",
+    "end": "Future",
+    "description": "I was sleeping at 10 pm. (action in progress at a specific past moment)"
+  },
+  "signal_words": ["at that time", "while", "when", "as", "at 8 pm", "yesterday at 5 o'clock"],
+  "comparison": [
+    {
+      "tense": "Past Continuous",
+      "usage": "Action in progress at a specific time in the past",
+      "example": "I was reading at 8 pm."
+    },
+    {
+      "tense": "Past Simple",
+      "usage": "Completed action at a specific time in the past",
+      "example": "I read a book yesterday."
+    }
+  ],
+  "common_mistakes": [
+    { "wrong": "She were reading.", "right": "She was reading.", "explanation": "Use 'was' for I/He/She/It." },
+    { "wrong": "I was read a book.", "right": "I was reading a book.", "explanation": "Use 'verb-ing' after was/were, not the past participle." },
+    { "wrong": "He was play football.", "right": "He was playing football.", "explanation": "Always use verb-ing after was/were." }
+  ],
+  "audio_examples": [
+    "She was reading a book at 8 pm.",
+    "They were playing football when it started to rain.",
+    "I was cooking dinner while he was watching TV."
   ],
   "vocabulary": [
+    { "word": "While", "bangla": "যখন (একই সময়ে)" },
+    { "word": "When", "bangla": "যখন (হঠাৎ)" },
     { "word": "At that time", "bangla": "সেই সময়ে" },
-    { "word": "While", "bangla": "যখন" },
-    { "word": "When", "bangla": "যখন" }
+    { "word": "Interrupt", "bangla": "বিঘ্নিত করা" },
+    { "word": "Background", "bangla": "পটভূমি" }
+  ],
+  "speaking_practice": [
+    "I was sleeping at 10 pm.",
+    "She was cooking when the phone rang.",
+    "They were not listening to the teacher.",
+    "Were you watching TV at 8 pm?",
+    "He was reading a newspaper while I was writing."
   ],
   "quiz": [
     {
+      "type": "mcq",
       "question": "Which is the correct sentence?",
       "options": ["She was reading a book.", "She were reading a book.", "She was read a book."],
       "correct": 0,
-      "explanation": "Use 'was' for I/He/She/It, and 'were' for You/We/They."
+      "explanation": "Use 'was' for I/He/She/It, and 'verb-ing' for the action."
+    },
+    {
+      "type": "mcq",
+      "question": "Choose the correct negative form.",
+      "options": ["They were not playing.", "They was not playing.", "They not were playing."],
+      "correct": 0,
+      "explanation": "Use 'were not' for You/We/They."
+    },
+    {
+      "type": "fill",
+      "question": "Fill in the blank: She _____ (read) a book at 8 pm.",
+      "answer": "was reading"
+    },
+    {
+      "type": "correction",
+      "question": "Correct the sentence: I were sleeping when he called.",
+      "answer": "I was sleeping when he called.",
+      "explanation": "Use 'was' for I."
+    },
+    {
+      "type": "translation",
+      "question": "Translate to English: সে রাত ১০টায় ঘুমাচ্ছিল।",
+      "answer": "She was sleeping at 10 pm."
     }
   ],
   "faq": [
-    { "q": "When do we use the Past Continuous?", "a": "For actions that were happening at a specific time in the past." },
-    { "q": "What is the formula?", "a": "Subject + was/were + verb-ing." }
+    { "q": "When do we use the Past Continuous?", "a": "For actions that were in progress at a specific time in the past." },
+    { "q": "What is the difference between Past Continuous and Past Simple?", "a": "Past Continuous describes an ongoing action; Past Simple describes a completed action." },
+    { "q": "When do we use 'was' and 'were'?", "a": "Use 'was' for I/He/She/It, and 'were' for You/We/They." },
+    { "q": "Can I use 'yesterday' with Past Continuous?", "a": "Yes, if you specify a time: 'I was sleeping at 10 pm yesterday.'" },
+    { "q": "What are common signal words?", "a": "While, when, at that time, as, at 8 pm, yesterday at 5 o'clock." }
   ],
-  "reward": { "xp": 20, "badge": "" }
+  "related_links": [
+    { "title": "Past Simple Tense", "url": "/grammar/past-simple-tense-bangla.html" },
+    { "title": "Present Continuous Tense", "url": "/grammar/present-continuous-tense-bangla.html" },
+    { "title": "Past Perfect Tense", "url": "/grammar/past-perfect-tense-bangla.html" },
+    { "title": "Was vs Were", "url": "/was-vs-were-bangla.html" }
+  ],
+  "reward": { "xp": 25, "badge": "" }
 }
