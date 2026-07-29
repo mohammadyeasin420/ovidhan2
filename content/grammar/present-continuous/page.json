@@ -1,0 +1,41 @@
+﻿{
+  "id": "gram-present-continuous-001",
+  "content_version": 1,
+  "template": "lesson",
+  "status": "published",
+  "author": "Mohammad Yeasin",
+  "order": 2,
+  "subject": "grammar",
+  "title": "Present Continuous Tense",
+  "cefr": "A1",
+  "estimated_time": 15,
+  "reading_time": 8,
+  "difficulty": "beginner",
+  "tags": ["present-tense", "continuous-tense", "am-is-are", "actions-now"],
+  "course_ids": ["A1", "A2", "IELTS"],
+  "primary_keyword": "present continuous tense bangla",
+  "secondary_keywords": ["am is are bangla", "present continuous rules", "english grammar bangla"],
+  "learning_outcomes": [
+    "Understand when to use the Present Continuous Tense",
+    "Form sentences with am/is/are + verb-ing",
+    "Talk about actions happening right now"
+  ],
+  "vocabulary": [
+    { "word": "Now", "bangla": "এখন" },
+    { "word": "At the moment", "bangla": "এই মুহূর্তে" },
+    { "word": "Currently", "bangla": "বর্তমানে" }
+  ],
+  "quiz": [
+    {
+      "question": "Which is the correct sentence?",
+      "options": ["She is read a book.", "She is reading a book.", "She reading a book."],
+      "correct": 1,
+      "explanation": "Use 'is' + verb-ing for actions happening now."
+    }
+  ],
+  "faq": [
+    { "q": "When do we use the Present Continuous?", "a": "For actions happening right now or around this time." },
+    { "q": "What is the formula?", "a": "Subject + am/is/are + verb-ing." }
+  ],
+  "reward": { "xp": 20, "badge": "" }
+}
