@@ -1,41 +1,116 @@
-﻿{
+{
   "id": "gram-present-simple-001",
-  "content_version": 1,
+  "content_version": 2,
   "template": "lesson",
   "status": "published",
   "author": "Mohammad Yeasin",
   "order": 1,
   "subject": "grammar",
   "title": "Present Simple Tense",
+  "slug": "present-simple-tense-bangla",
   "cefr": "A1",
-  "estimated_time": 15,
-  "reading_time": 8,
+  "estimated_time": 20,
+  "reading_time": 10,
   "difficulty": "beginner",
   "tags": ["present-tense", "simple-tense", "do-does", "routines"],
   "course_ids": ["A1", "A2", "IELTS"],
   "primary_keyword": "present simple tense bangla",
   "secondary_keywords": ["present simple rules", "do does bangla", "english grammar bangla"],
+  "intro_blurb": "The Present Simple Tense is one of the most important English grammar topics. It is used in IELTS, BCS, bank exams, spoken English, and everyday conversations. In this lesson, you will learn the rules, Bangla explanation, examples, common mistakes, and practice exercises.",
   "learning_outcomes": [
     "Understand when to use the Present Simple Tense",
     "Form positive, negative, and question sentences",
-    "Use adverbs of frequency correctly"
+    "Use adverbs of frequency correctly",
+    "Avoid common mistakes",
+    "Apply the tense in real-life conversations"
+  ],
+  "timeline": {
+    "start": "Past",
+    "middle": "Now",
+    "end": "Future",
+    "description": "I work in Dhaka every day. (habitual action that repeats regularly)"
+  },
+  "signal_words": ["always", "usually", "often", "sometimes", "never", "every day", "on Mondays", "at night"],
+  "comparison": [
+    {
+      "tense": "Present Simple",
+      "usage": "Habits, facts, routines, general truths",
+      "example": "I walk to work."
+    },
+    {
+      "tense": "Past Simple",
+      "usage": "Completed actions at a specific time in the past",
+      "example": "I walked to work yesterday."
+    }
+  ],
+  "common_mistakes": [
+    { "wrong": "She go to school.", "right": "She goes to school.", "explanation": "For He/She/It, add 's' or 'es' to the verb." },
+    { "wrong": "Do he like tea?", "right": "Does he like tea?", "explanation": "Use 'does' for He/She/It in questions." },
+    { "wrong": "I don't have time yesterday.", "right": "I didn't have time yesterday.", "explanation": "Use Past Simple for yesterday, not Present Simple." }
+  ],
+  "audio_examples": [
+    "I get up at 6 am.",
+    "She works in a bank.",
+    "They do not play cricket on Sundays."
   ],
   "vocabulary": [
-    { "word": "Every day", "bangla": "প্রতিদিন" },
-    { "word": "Usually", "bangla": "সাধারণত" },
-    { "word": "Never", "bangla": "কখনো না" }
+    { "word": "Get up", "bangla": "ঘুম থেকে ওঠা" },
+    { "word": "Work", "bangla": "কাজ করা" },
+    { "word": "Play", "bangla": "খেলা" },
+    { "word": "Live", "bangla": "বাস করা" },
+    { "word": "Study", "bangla": "পড়াশোনা করা" }
+  ],
+  "speaking_practice": [
+    "I walk to work every day.",
+    "She reads the newspaper in the morning.",
+    "They visit their grandmother every weekend.",
+    "We don't eat meat.",
+    "Does he play football?"
   ],
   "quiz": [
     {
+      "type": "mcq",
       "question": "Which is the correct sentence?",
       "options": ["She go to school.", "She goes to school.", "She going to school."],
       "correct": 1,
-      "explanation": "For He/She/It, add 's' or 'es' to the verb."
+      "explanation": "For He/She/It, add 's' to the verb."
+    },
+    {
+      "type": "mcq",
+      "question": "Choose the correct negative form.",
+      "options": ["They don't like tea.", "They doesn't like tea.", "They not like tea."],
+      "correct": 0,
+      "explanation": "Use 'don't' for I/You/We/They."
+    },
+    {
+      "type": "fill",
+      "question": "Fill in the blank: He _____ (watch) TV every evening.",
+      "answer": "watches"
+    },
+    {
+      "type": "correction",
+      "question": "Correct the sentence: She always drink tea.",
+      "answer": "She always drinks tea.",
+      "explanation": "Add 's' for He/She/It."
+    },
+    {
+      "type": "translation",
+      "question": "Translate to English: আমি প্রতিদিন সকাল ৬টায় উঠি।",
+      "answer": "I get up at 6 am every day."
     }
   ],
   "faq": [
-    { "q": "When do we use the Present Simple?", "a": "For habits, general facts, and daily routines." },
-    { "q": "When do we add 's' to the verb?", "a": "For He, She, It in positive sentences." }
+    { "q": "Why do we use the Present Simple?", "a": "For habits, general facts, and daily routines." },
+    { "q": "What is the difference between Present Simple and Past Simple?", "a": "Present Simple is for routines and facts; Past Simple is for completed actions in the past." },
+    { "q": "When do we use 'do' and 'does'?", "a": "Use 'do' for I/You/We/They, and 'does' for He/She/It." },
+    { "q": "Can I use 'yesterday' with Present Simple?", "a": "No, 'yesterday' is for Past Simple. Use Present Simple for habits, not for specific past events." },
+    { "q": "What are common signal words for Present Simple?", "a": "Always, usually, often, sometimes, never, every day, on Mondays, etc." }
   ],
-  "reward": { "xp": 20, "badge": "" }
+  "related_links": [
+    { "title": "Past Simple Tense", "url": "/grammar/past-simple-tense-bangla.html" },
+    { "title": "Present Continuous Tense", "url": "/grammar/present-continuous-tense-bangla.html" },
+    { "title": "Irregular Verbs List", "url": "/irregular-verbs-list.html" },
+    { "title": "Do vs Does", "url": "/do-vs-does-bangla.html" }
+  ],
+  "reward": { "xp": 25, "badge": "" }
 }

@@ -1,105 +1,66 @@
-﻿# Present Simple Tense
+\# Present Simple Tense
 
-## What is the Present Simple Tense?
 
-The **Present Simple Tense** is used for habits, facts, and regular routines.
 
-**বাংলা:**  
-Present Simple Tense অভ্যাস, সত্য, এবং নিয়মিত কাজ বোঝাতে ব্যবহৃত হয়。
+\## Introduction
 
----
 
-## Learning Outcomes
 
-- Understand when to use the Present Simple Tense
-- Form positive, negative, and question sentences
-- Use adverbs of frequency correctly
+The Present Simple Tense is one of the most important English grammar topics. It is used in IELTS, BCS, bank exams, spoken English, and everyday conversations. In this lesson, you will learn the rules, Bangla explanation, examples, common mistakes, and practice exercises.
 
----
 
-## When Do We Use It?
+
+\*\*বাংলা:\*\*  
+
+Present Simple Tense অভ্যাস, সত্য, এবং নিয়মিত কাজ বোঝাতে ব্যবহৃত হয়।
+
+
+
+\---
+
+
+
+\## Learning Outcomes
+
+
+
+\- Understand when to use the Present Simple Tense
+
+\- Form positive, negative, and question sentences
+
+\- Use adverbs of frequency correctly
+
+\- Avoid common mistakes
+
+\- Apply the tense in real-life conversations
+
+
+
+\---
+
+
+
+\## When Do We Use It?
+
+
 
 Use the Present Simple to talk about:
-- ✅ Daily routines (e.g., *I wake up at 6 am.*)
-- ✅ General facts (e.g., *The sun rises in the east.*)
-- ✅ Permanent situations (e.g., *She works in a bank.*)
 
----
+\- ✅ Daily routines (e.g., \*I wake up at 6 am.\*)
 
-## Formula
+\- ✅ General facts (e.g., \*The sun rises in the east.\*)
 
-### Positive
-**Subject + Verb 1 (Base Form)** (for I/You/We/They)  
-**Subject + Verb 1 + s/es** (for He/She/It)  
-Example: *She goes to school.*
+\- ✅ Permanent situations (e.g., \*She works in a bank.\*)
 
-### Negative
-**Subject + do/does + not + Verb 1**  
-Example: *They do not play cricket.*
+\- ✅ Scheduled events (e.g., \*The train leaves at 5 pm.\*)
 
-### Question
-**Do/Does + Subject + Verb 1?**  
-Example: *Do you like tea?*
 
----
 
-## Time Expressions
+\---
 
-- always, usually, often, sometimes, never
-- every day / week / month
-- on Mondays / at night
 
----
 
-## 💡 Remember
+\## Timeline Diagram
 
-For **He, She, It**, always add **s** or **es** to the verb.  
-Example: *He plays* (not *He play*).
 
----
 
-## Common Mistakes
-
-❌ **She go to school.**  
-✅ **She goes to school.**  
-
-❌ **Do he like tea?**  
-✅ **Does he like tea?**  
-
----
-
-## Quick Comparison
-
-**Affirmative:** I play cricket.  
-**Negative:** I do not play cricket.  
-**Question:** Do you play cricket?
-
----
-
-## Mini Quiz
-
-Choose the correct sentence.  
-A. She go to school.  
-B. She goes to school.  
-C. She going to school.  
-
-**Correct Answer:** B
-
----
-
-## Try It Yourself
-
-Change these sentences into the Present Simple (use He/She/It).
-
-1. I (go) to school.  
-2. They (not/play) football.  
-3. We (drink) tea every morning.
-
-<details>
-<summary>Show Answers</summary>
-
-1. I go to school.  
-2. They do not play football.  
-3. We drink tea every morning.
-
-</details>

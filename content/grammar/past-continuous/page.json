@@ -1,0 +1,41 @@
+﻿{
+  "id": "gram-past-continuous-001",
+  "content_version": 1,
+  "template": "lesson",
+  "status": "published",
+  "author": "Mohammad Yeasin",
+  "order": 4,
+  "subject": "grammar",
+  "title": "Past Continuous Tense",
+  "cefr": "A2",
+  "estimated_time": 15,
+  "reading_time": 8,
+  "difficulty": "beginner",
+  "tags": ["past-tense", "continuous-tense", "was-were", "actions-in-progress"],
+  "course_ids": ["A2", "B1", "IELTS"],
+  "primary_keyword": "past continuous tense bangla",
+  "secondary_keywords": ["was were bangla", "past continuous rules", "english grammar bangla"],
+  "learning_outcomes": [
+    "Understand when to use the Past Continuous",
+    "Form sentences with was/were + verb-ing",
+    "Talk about actions in progress at a specific past time"
+  ],
+  "vocabulary": [
+    { "word": "At that time", "bangla": "সেই সময়ে" },
+    { "word": "While", "bangla": "যখন" },
+    { "word": "When", "bangla": "যখন" }
+  ],
+  "quiz": [
+    {
+      "question": "Which is the correct sentence?",
+      "options": ["She was reading a book.", "She were reading a book.", "She was read a book."],
+      "correct": 0,
+      "explanation": "Use 'was' for I/He/She/It, and 'were' for You/We/They."
+    }
+  ],
+  "faq": [
+    { "q": "When do we use the Past Continuous?", "a": "For actions that were happening at a specific time in the past." },
+    { "q": "What is the formula?", "a": "Subject + was/were + verb-ing." }
+  ],
+  "reward": { "xp": 20, "badge": "" }
+}
