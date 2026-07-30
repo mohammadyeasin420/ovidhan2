@@ -1,0 +1,25 @@
+﻿{
+  "id": "read-a2-001",
+  "content_version": 1,
+  "template": "reading",
+  "status": "published",
+  "author": "Mohammad Yeasin",
+  "order": 3,
+  "subject": "reading",
+  "title": "A Trip to the Market",
+  "cefr": "A2",
+  "reading_time": 6,
+  "word_count": 150,
+  "difficulty_rating": 1.0,
+  "xp": 25,
+  "tags": ["A2", "reading", "daily life"],
+  "primary_keyword": "english reading practice for A2",
+  "secondary_keywords": ["A2 reading story bangla", "easy english story"],
+  "vocabulary": System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable,
+  "quiz": System.Collections.Hashtable System.Collections.Hashtable,
+  "faq": [
+    { "q": "Why is reading important?", "a": "It improves vocabulary, grammar, and comprehension." },
+    { "q": "How can I improve my reading speed?", "a": "Read daily with short passages and gradually increase length." }
+  ],
+  "reward": { "xp": 25, "badge": "" }
+}

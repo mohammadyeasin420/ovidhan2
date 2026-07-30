@@ -1,0 +1,25 @@
+﻿{
+  "id": "read-a1-001",
+  "content_version": 1,
+  "template": "reading",
+  "status": "published",
+  "author": "Mohammad Yeasin",
+  "order": 1,
+  "subject": "reading",
+  "title": "My First Day at School",
+  "cefr": "A1",
+  "reading_time": 5,
+  "word_count": 120,
+  "difficulty_rating": 1.0,
+  "xp": 20,
+  "tags": ["A1", "reading", "daily life"],
+  "primary_keyword": "english reading practice for A1",
+  "secondary_keywords": ["A1 reading story bangla", "easy english story"],
+  "vocabulary": System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable,
+  "quiz": System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable,
+  "faq": [
+    { "q": "Why is reading important?", "a": "It improves vocabulary, grammar, and comprehension." },
+    { "q": "How can I improve my reading speed?", "a": "Read daily with short passages and gradually increase length." }
+  ],
+  "reward": { "xp": 20, "badge": "" }
+}

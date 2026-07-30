@@ -1,0 +1,25 @@
+﻿{
+  "id": "read-b2-001",
+  "content_version": 1,
+  "template": "reading",
+  "status": "published",
+  "author": "Mohammad Yeasin",
+  "order": 5,
+  "subject": "reading",
+  "title": "The Tech Company",
+  "cefr": "B2",
+  "reading_time": 8,
+  "word_count": 220,
+  "difficulty_rating": 1.0,
+  "xp": 35,
+  "tags": ["B2", "reading", "daily life"],
+  "primary_keyword": "english reading practice for B2",
+  "secondary_keywords": ["B2 reading story bangla", "easy english story"],
+  "vocabulary": System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable,
+  "quiz": System.Collections.Hashtable System.Collections.Hashtable,
+  "faq": [
+    { "q": "Why is reading important?", "a": "It improves vocabulary, grammar, and comprehension." },
+    { "q": "How can I improve my reading speed?", "a": "Read daily with short passages and gradually increase length." }
+  ],
+  "reward": { "xp": 35, "badge": "" }
+}

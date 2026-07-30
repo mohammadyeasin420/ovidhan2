@@ -1,0 +1,25 @@
+﻿{
+  "id": "read-b1-001",
+  "content_version": 1,
+  "template": "reading",
+  "status": "published",
+  "author": "Mohammad Yeasin",
+  "order": 4,
+  "subject": "reading",
+  "title": "The Career Advice",
+  "cefr": "B1",
+  "reading_time": 7,
+  "word_count": 200,
+  "difficulty_rating": 1.0,
+  "xp": 30,
+  "tags": ["B1", "reading", "daily life"],
+  "primary_keyword": "english reading practice for B1",
+  "secondary_keywords": ["B1 reading story bangla", "easy english story"],
+  "vocabulary": System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable System.Collections.Hashtable,
+  "quiz": System.Collections.Hashtable System.Collections.Hashtable,
+  "faq": [
+    { "q": "Why is reading important?", "a": "It improves vocabulary, grammar, and comprehension." },
+    { "q": "How can I improve my reading speed?", "a": "Read daily with short passages and gradually increase length." }
+  ],
+  "reward": { "xp": 30, "badge": "" }
+}

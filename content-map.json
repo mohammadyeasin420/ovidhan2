@@ -983,8 +983,80 @@
   {
     "url": "https://ovidhan.net/listening.html",
     "file_path": "listening.html",
-    "title": "Listening Practice - Ovidhan",
-    "description": "Improve your English listening skills with real-world scenarios from Bangladesh.",
+    "title": "English Listening Exercises with Bangla | Free Practice",
+    "description": "Improve your English listening skills with free listening exercises, Bangla explanations, audio practice, vocabulary, quizzes, and daily lessons for beginners.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/academic-discussion-group-work.html",
+    "file_path": "listening\\academic-discussion-group-work.html",
+    "title": "Academic Discussion (Group Work) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B2 exercise on Academic Discussion (Group Work).",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/asking-for-directions-travel.html",
+    "file_path": "listening\\asking-for-directions-travel.html",
+    "title": "Asking for Directions (Travel) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A1 exercise on Asking for Directions (Travel).",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/asking-for-directions.html",
+    "file_path": "listening\\asking-for-directions.html",
+    "title": "Asking for Directions - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A1 exercise on Asking for Directions.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/asking-for-help.html",
+    "file_path": "listening\\asking-for-help.html",
+    "title": "Asking for Help - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A2 exercise on Asking for Help.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/at-the-airport-check-in.html",
+    "file_path": "listening\\at-the-airport-check-in.html",
+    "title": "At the Airport (Check-in) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A2 exercise on At the Airport (Check-in).",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/at-the-hotel-check-in.html",
+    "file_path": "listening\\at-the-hotel-check-in.html",
+    "title": "At the Hotel (Check-in) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A2 exercise on At the Hotel (Check-in).",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/at-the-immigration-desk.html",
+    "file_path": "listening\\at-the-immigration-desk.html",
+    "title": "At the Immigration Desk - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B1 exercise on At the Immigration Desk.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/at-the-pharmacy.html",
+    "file_path": "listening\\at-the-pharmacy.html",
+    "title": "At the Pharmacy - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A2 exercise on At the Pharmacy.",
     "type": "page",
     "category": null,
     "date_modified": "2026-07-30"
@@ -1077,6 +1149,195 @@
     "description": "Your visa interview is scheduled on August 15th at 10 am. Please bring your passport and two photos. Be on time.... (Bangla translation available)",
     "type": "page",
     "category": "bangladesh",
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/booking-a-hotel-room-online.html",
+    "file_path": "listening\\booking-a-hotel-room-online.html",
+    "title": "Booking a Hotel Room Online - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B1 exercise on Booking a Hotel Room Online.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/business-news-report.html",
+    "file_path": "listening\\business-news-report.html",
+    "title": "Business News Report - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B2 exercise on Business News Report.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/buying-vegetables-at-the-market.html",
+    "file_path": "listening\\buying-vegetables-at-the-market.html",
+    "title": "Buying Vegetables at the Market - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A1 exercise on Buying Vegetables at the Market.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/calling-a-friend.html",
+    "file_path": "listening\\calling-a-friend.html",
+    "title": "Calling a Friend - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A2 exercise on Calling a Friend.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/giving-a-status-update.html",
+    "file_path": "listening\\giving-a-status-update.html",
+    "title": "Giving a Status Update - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B1 exercise on Giving a Status Update.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/greeting-a-neighbour.html",
+    "file_path": "listening\\greeting-a-neighbour.html",
+    "title": "Greeting a Neighbour - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A1 exercise on Greeting a Neighbour.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/ielts-listening-section-1-social.html",
+    "file_path": "listening\\ielts-listening-section-1-social.html",
+    "title": "IELTS Listening Section 1 (Social) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B1 exercise on IELTS Listening Section 1 (Social).",
+    "type": "page",
+    "category": "exam-prep",
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/ielts-listening-section-2-travel.html",
+    "file_path": "listening\\ielts-listening-section-2-travel.html",
+    "title": "IELTS Listening Section 2 (Travel) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B1 exercise on IELTS Listening Section 2 (Travel).",
+    "type": "page",
+    "category": "exam-prep",
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/ielts-listening-section-3-academic.html",
+    "file_path": "listening\\ielts-listening-section-3-academic.html",
+    "title": "IELTS Listening Section 3 (Academic) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B2 exercise on IELTS Listening Section 3 (Academic).",
+    "type": "page",
+    "category": "exam-prep",
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/ielts-listening-section-4-lecture.html",
+    "file_path": "listening\\ielts-listening-section-4-lecture.html",
+    "title": "IELTS Listening Section 4 (Lecture) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B2 exercise on IELTS Listening Section 4 (Lecture).",
+    "type": "page",
+    "category": "exam-prep",
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/job-interview-introduction.html",
+    "file_path": "listening\\job-interview-introduction.html",
+    "title": "Job Interview Introduction - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B1 exercise on Job Interview Introduction.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/listening-to-a-podcast-news.html",
+    "file_path": "listening\\listening-to-a-podcast-news.html",
+    "title": "Listening to a Podcast (News) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B2 exercise on Listening to a Podcast (News).",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/making-a-phone-call-office.html",
+    "file_path": "listening\\making-a-phone-call-office.html",
+    "title": "Making a Phone Call (Office) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A2 exercise on Making a Phone Call (Office).",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/negotiating-a-deadline.html",
+    "file_path": "listening\\negotiating-a-deadline.html",
+    "title": "Negotiating a Deadline - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B1 exercise on Negotiating a Deadline.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/ordering-coffee.html",
+    "file_path": "listening\\ordering-coffee.html",
+    "title": "Ordering Coffee - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A1 exercise on Ordering Coffee.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/ordering-food-in-a-restaurant.html",
+    "file_path": "listening\\ordering-food-in-a-restaurant.html",
+    "title": "Ordering Food in a Restaurant - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A2 exercise on Ordering Food in a Restaurant.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/scheduling-a-meeting.html",
+    "file_path": "listening\\scheduling-a-meeting.html",
+    "title": "Scheduling a Meeting - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B1 exercise on Scheduling a Meeting.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/shopping-for-clothes.html",
+    "file_path": "listening\\shopping-for-clothes.html",
+    "title": "Shopping for Clothes - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A1 exercise on Shopping for Clothes.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/taking-a-taxi.html",
+    "file_path": "listening\\taking-a-taxi.html",
+    "title": "Taking a Taxi - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A2 exercise on Taking a Taxi.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/talking-about-the-weather.html",
+    "file_path": "listening\\talking-about-the-weather.html",
+    "title": "Talking About the Weather - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a A1 exercise on Talking About the Weather.",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/listening/university-lecture-introduction.html",
+    "file_path": "listening\\university-lecture-introduction.html",
+    "title": "University Lecture (Introduction) - Ovidhan Listening Practice",
+    "description": "Improve your English listening with a B2 exercise on University Lecture (Introduction).",
+    "type": "page",
+    "category": null,
     "date_modified": "2026-07-30"
   },
   {

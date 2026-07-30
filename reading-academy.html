@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>English Reading Practice with Bangla Meaning – Free Graded Stories for Bangladeshi Learners</title>
+<meta content="Improve your English reading with graded stories, Bangla translations, vocabulary, and quizzes. Free reading practice for A1–C1 levels." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+        /* Dashboard stats */
+        .stats-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0; padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+        .stat-item { text-align: center; }
+        .stat-item .number { font-size: 2rem; font-weight: 700; color: var(--gold); }
+        .stat-item .label { color: var(--text-mid); font-size: 0.9rem; }
+
+        /* Reading Roadmap */
+        .roadmap { margin: 2rem 0; }
+        .roadmap h2 { color: var(--gold); }
+        .level-group { margin-bottom: 2rem; }
+        .level-title { font-size: 1.3rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+        .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+
+        /* Lesson card – enhanced */
+        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; transition: transform 0.2s; }
+        .lesson-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+        .lesson-card a { color: var(--text); text-decoration: none; display: block; }
+        .lesson-card .meta { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.85rem; color: var(--text-mid); margin: 0.5rem 0; }
+        .lesson-card .vocab-preview { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.5rem 0; }
+        .lesson-card .vocab-preview span { background: var(--surface); padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; color: var(--text-mid); }
+        .level-badge { display: inline-block; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem; background: var(--teal-dim); color: var(--teal); }
+        .level-badge.a1 { background: var(--green-dim); color: var(--green); }
+        .level-badge.a2 { background: var(--teal-dim); color: var(--teal); }
+        .level-badge.b1 { background: var(--gold-dim); color: var(--gold); }
+        .level-badge.b2 { background: var(--purple-dim); color: var(--purple); }
+        .level-badge.c1 { background: var(--red-dim); color: var(--red); }
+        .coming-soon { opacity: 0.6; pointer-events: none; }
+        .coming-soon .lesson-card { border: 1px dashed var(--border); }
+        .xp-badge { background: var(--gold-dim); color: var(--gold); padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; }
+
+        .hub-hero { text-align: center; padding: 2rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+        .hub-hero h1 { font-size: 2.6rem; color: var(--gold); }
+        .cta { margin-top: 1.5rem; }
+
+        .faq-item { background: var(--surface2); padding: 1rem; border-radius: var(--radius); margin: 0.5rem 0; }
+        @media (max-width: 600px) {
+            .hub-hero h1 { font-size: 2rem; }
+            .stats-strip { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body><header class="site-header">
+<div class="nav-inner">
+<a class="logo" href="/">অভিধান <span>| Ovidhan</span></a>
+<div style="display: flex; align-items: center; gap: 12px;">
+<!-- Play Store Download Button -->
+<a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" rel="noopener" style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;" target="_blank">
+                📱 Download App
+            </a>
+<!-- Mobile Toggle Button -->
+<button aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</div>
+<ul class="mega-menu" id="megaMenu">
+<li><a href="/">🏠 Home</a></li>
+<li>
+<a href="/learn.html">📚 Learn</a>
+<div class="dropdown">
+<a href="/learn.html#beginner">Beginner (A1)</a>
+<a href="/learn.html#elementary">Elementary (A2)</a>
+<a href="/learn.html#intermediate">Intermediate (B1)</a>
+<a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+<a href="/learn.html#advanced">Advanced (C1)</a>
+<a href="/dashboard.html">📊 Progress</a>
+</div>
+</li>
+<li>
+<a href="/dictionary.html">📖 Dictionary</a>
+<div class="dropdown">
+<a href="/dictionary.html">Search Words</a>
+<a href="/explorer.html">Word Explorer</a>
+<a href="/word-of-the-day.html">Word of the Day</a>
+<a href="/vocabulary-builder.html">Vocabulary Builder</a>
+</div>
+</li>
+<li>
+<a href="/grammar.html">📝 Grammar</a>
+<div class="dropdown">
+<a href="/grammar.html#beginner">Beginner Grammar</a>
+<a href="/grammar.html#intermediate">Intermediate Grammar</a>
+<a href="/grammar.html#advanced">Advanced Grammar</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/speaking.html">🗣 Speaking</a>
+<div class="dropdown">
+<a href="/speaking.html#daily">Daily Conversation</a>
+<a href="/speaking.html#travel">Travel English</a>
+<a href="/speaking.html#office">Office English</a>
+<a href="/speaking.html#interview">Job Interview</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/listening.html">🎧 Listening</a>
+<div class="dropdown">
+<a href="/listening.html#lessons">All Listening Exercises</a>
+<a href="/listening.html">Daily English</a>
+<a href="/listening.html">Travel English</a>
+<a href="/listening.html">Workplace English</a>
+<a href="/listening.html">Academic English</a>
+<a href="/listening.html">IELTS Listening</a>
+</div>
+</li>
+<li>
+<a href="/writing.html">✍ Writing</a>
+<div class="dropdown">
+<a href="/writing.html#academic">Academic Writing</a>
+<a href="/writing.html#business">Business English</a>
+<a href="/writing.html#daily">Daily Writing</a>
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/practice.html">🎯 Practice</a>
+<div class="dropdown">
+<a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
+<a href="/flashcards.html">Flashcards</a>
+<a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/assessment.html">🧪 Assessment</a>
+<div class="dropdown">
+<a href="/english-level-test.html">CEFR Level Test</a>
+<a href="/grammar-level-test.html">Grammar Test</a>
+<a href="/vocabulary-size-test.html">Vocabulary Size</a>
+<a href="/assessment.html#report">Progress Report</a>
+</div>
+</li>
+<li>
+<a href="/exam-prep.html">🎓 Exam Prep</a>
+<div class="dropdown">
+<a href="/ielts-guide.html">IELTS</a>
+<a href="/bcs-english-mock-test.html">BCS</a>
+<a href="/bank-job-english-preparation-guide.html">Bank Jobs</a>
+<a href="/exam-prep.html#ssc">SSC / HSC</a>
+<a href="/exam-prep.html#university">University Admission</a>
+</div>
+</li>
+<li>
+<a href="/tools.html">🛠 Tools</a>
+<div class="dropdown">
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/tense-identifier.html">Tense Identifier</a>
+<a href="/voice-converter.html">Voice Converter</a>
+<a href="/plural-maker.html">Plural Maker</a>
+<a href="/verb-forms.html">Verb Forms</a>
+</div>
+</li>
+<li>
+<a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+<div class="dropdown">
+<a href="/bangladesh.html#visa">Visa &amp; Immigration</a>
+<a href="/bangladesh.html#job">Job Interview</a>
+<a href="/bangladesh.html#daily">Daily Life English</a>
+<a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+</div>
+</li>
+<li><a href="/blog.html">📰 Blog</a></li>
+</ul>
+</div>
+</header>
+<!-- header/footer injected by inject_layout.py -->
+<main style="max-width: 1100px; margin: 120px auto; padding: 2rem;">
+<!-- HERO -->
+<div class="hub-hero">
+<h1>📖 English Reading Practice with Bangla Meaning</h1>
+<p style="font-size: 1.2rem; color: var(--text-mid);">Free graded stories for Bangladeshi learners – A1 to C1. Learn vocabulary, grammar, and comprehension with Bangla support.</p>
+<div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0;">
+<span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ A1–C1</span>
+<span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ 100% Free</span>
+<span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ Bangla Support</span>
+<span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ Daily Practice</span>
+</div>
+<div class="cta">
+<a class="btn-primary" href="#roadmap">📖 Start Reading</a>
+</div>
+</div>
+<!-- STATS STRIP -->
+<div class="stats-strip">
+<div class="stat-item"><div class="number">500+</div><div class="label">Reading Lessons</div></div>
+<div class="stat-item"><div class="number">5</div><div class="label">Levels (A1–C1)</div></div>
+<div class="stat-item"><div class="number">100%</div><div class="label">Free</div></div>
+<div class="stat-item"><div class="number">5,000+</div><div class="label">Vocabulary Words</div></div>
+<div class="stat-item"><div class="number">200+</div><div class="label">Reading Quizzes</div></div>
+</div>
+<!-- READING ROADMAP (Course Grid) -->
+<section class="roadmap" id="roadmap">
+<h2>📘 Reading Roadmap</h2>
+<p style="color: var(--text-mid);">Progress through levels. Complete each lesson to earn XP.</p>
+<!-- A1 -->
+<div class="level-group">
+<div class="level-title">🌟 A1 – Beginner (5 lessons)</div>
+<div class="lesson-grid">
+<!-- Lesson 1 -->
+<div class="lesson-card">
+<a href="/reading/my-first-day-at-school.html">
+<h3>My First Day at School</h3>
+<div class="meta">
+<span class="level-badge a1">A1</span>
+<span>⏱ 5 min</span>
+<span>📄 120 words</span>
+<span class="xp-badge">+20 XP</span>
+</div>
+<div class="vocab-preview">
+<span>School</span><span>Teacher</span><span>Friend</span><span>Classroom</span>
+</div>
+<p style="color: var(--text-mid); font-size: 0.9rem;">Ahmed’s first day at school.</p>
+</a>
+</div>
+<!-- Lesson 2 -->
+<div class="lesson-card">
+<a href="/reading/the-park.html">
+<h3>The Park</h3>
+<div class="meta">
+<span class="level-badge a1">A1</span>
+<span>⏱ 4 min</span>
+<span>📄 90 words</span>
+<span class="xp-badge">+15 XP</span>
+</div>
+<div class="vocab-preview">
+<span>Park</span><span>Play</span><span>Tree</span><span>Bench</span>
+</div>
+<p style="color: var(--text-mid); font-size: 0.9rem;">A sunny afternoon at the park.</p>
+</a>
+</div>
+<!-- Lesson 3 – Coming Soon -->
+<div class="lesson-card coming-soon">
+<a href="#">
+<h3>My Family</h3>
+<div class="meta">
+<span class="level-badge a1">A1</span>
+<span>⏱ 5 min</span>
+<span>📄 110 words</span>
+<span class="xp-badge">+20 XP</span>
+</div>
+<div class="vocab-preview"><span>Coming soon</span></div>
+<p style="color: var(--text-mid); font-size: 0.9rem;">Lesson in preparation.</p>
+</a>
+</div>
+<!-- More A1 coming soon -->
+</div>
+</div>
+<!-- A2 -->
+<div class="level-group">
+<div class="level-title">📚 A2 – Elementary (4 lessons)</div>
+<div class="lesson-grid">
+<div class="lesson-card">
+<a href="/reading/a-trip-to-the-market.html">
+<h3>A Trip to the Market</h3>
+<div class="meta">
+<span class="level-badge a2">A2</span>
+<span>⏱ 6 min</span>
+<span>📄 150 words</span>
+<span class="xp-badge">+25 XP</span>
+</div>
+<div class="vocab-preview">
+<span>Market</span><span>Vegetable</span><span>Price</span><span>Bargain</span>
+</div>
+<p style="color: var(--text-mid); font-size: 0.9rem;">Shopping with a friend.</p>
+</a>
+</div>
+<!-- More A2 coming soon -->
+</div>
+</div>
+<!-- B1 -->
+<div class="level-group">
+<div class="level-title">📖 B1 – Intermediate (3 lessons)</div>
+<div class="lesson-grid">
+<div class="lesson-card">
+<a href="/reading/the-career-advice.html">
+<h3>The Career Advice</h3>
+<div class="meta">
+<span class="level-badge b1">B1</span>
+<span>⏱ 7 min</span>
+<span>📄 200 words</span>
+<span class="xp-badge">+30 XP</span>
+</div>
+<div class="vocab-preview">
+<span>Career</span><span>Advice</span><span>Opportunity</span><span>Skill</span>
+</div>
+<p style="color: var(--text-mid); font-size: 0.9rem;">A young professional gets guidance.</p>
+</a>
+</div>
+<!-- More B1 coming soon -->
+</div>
+</div>
+<!-- B2 & C1 coming soon placeholder -->
+<div class="level-group">
+<div class="level-title">🚀 B2 – Upper Intermediate &amp; C1 – Advanced</div>
+<div class="lesson-grid">
+<div class="lesson-card coming-soon">
+<a href="#"><h3>More lessons coming soon</h3><p style="color: var(--text-mid); font-size: 0.9rem;">We’re adding B2 and C1 content.</p></a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section style="margin: 3rem 0;">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item"><strong>What are graded readers?</strong><br/>Stories simplified to your level so you can read comfortably while improving vocabulary and grammar.</div>
+<div class="faq-item"><strong>Are Bangla translations included?</strong><br/>Yes – every lesson has a full Bangla translation and a vocabulary list with Bangla meanings.</div>
+<div class="faq-item"><strong>Is this useful for IELTS &amp; BCS?</strong><br/>Absolutely – reading improves speed, comprehension, and vocabulary – all critical for exams.</div>
+<div class="faq-item"><strong>How often should I read?</strong><br/>15–20 minutes daily leads to noticeable improvement in a few weeks.</div>
+</section>
+<!-- INTERNAL LINKS -->
+<section style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-top: 2rem;">
+<h3>Continue Your English Journey</h3>
+<ul style="display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0;">
+<li><a href="/grammar.html">Grammar Lessons</a></li>
+<li><a href="/listening.html">Listening Hub</a></li>
+<li><a href="/speaking.html">Speaking Course</a></li>
+<li><a href="/vocabulary-builder.html">Vocabulary Builder</a></li>
+<li><a href="/dictionary.html">English Dictionary</a></li>
+<li><a href="/ielts-guide.html">IELTS Preparation</a></li>
+</ul>
+</section>
+<!-- CTA -->
+<div style="text-align: center; margin: 3rem 0;">
+<p style="font-size: 1.2rem; color: var(--text-mid);">Start your reading journey today.</p>
+<a class="btn-primary" href="#roadmap">📖 Start Reading</a>
+<span style="display: block; color: var(--text-soft); margin-top: 0.5rem;">Learn with Bangla explanations. Build confidence.</span>
+</div>
+</main>
+<footer class="site-footer">
+<p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+<p>
+<a href="/">Home</a>  • 
+        <a href="/grammar.html">Grammar</a>  • 
+        <a href="/tools.html">Tools</a>  • 
+        <a href="/blog.html">Blog</a>  • 
+        <a href="/dictionary.html">Dictionary</a>  • 
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>  • 
+        <a href="/privacy.html">Privacy Policy</a>
+</p>
+<p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer></body>
+</html>
