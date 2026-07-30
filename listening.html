@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><link href="styles.css" rel="stylesheet"/>
-<link href="../styles.css" rel="stylesheet"/>
-<link href="../styles.css" rel="stylesheet"/>
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>English Listening Exercises with Bangla | Free Practice</title>
 <meta content="Improve your English listening skills with free listening exercises, Bangla explanations, audio practice, vocabulary, quizzes, and daily lessons for beginners." name="description"/>
-<link href="../styles.css" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
 <style>
         .hub-hero { text-align: center; padding: 3rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
         .hub-hero h1 { font-size: 2.8rem; color: var(--gold); }
@@ -84,7 +82,7 @@
 <a href="/speaking.html#interview">Job Interview</a>
 <a href="/speaking-practice.html">Speaking Practice</a>
 </div>
-</li><li><a href="/listening.html">🎧 Listening</a><div class="dropdown"><a href="/listening.html#lessons">All Listening Exercises</a><a href="/listening.html">Daily English</a><a href="/listening.html">Travel English</a><a href="/listening.html">Workplace English</a><a href="/listening.html">Academic English</a><a href="/listening.html">IELTS Listening</a></div></li>
+</li>
 <li>
 <a href="/listening.html">🎧 Listening</a>
 <div class="dropdown">
@@ -158,7 +156,8 @@
 </ul>
 </div>
 </header>
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT + DROPDOWN FIX ═══ -->
 <script>
     function toggleMenu() {
         const menu = document.getElementById('megaMenu');
@@ -167,7 +166,7 @@
         toggle.classList.toggle('active');
     }
 
-    // Close menu when a link is clicked (better UX)
+    // Close menu when a link inside it is clicked (desktop & mobile)
     document.addEventListener('DOMContentLoaded', function() {
         const links = document.querySelectorAll('.mega-menu a');
         links.forEach(link => {
@@ -180,11 +179,48 @@
                 }
             });
         });
+
+        // === FIX: Mobile Dropdown Toggle ===
+        // On mobile, clicking the parent <li> (or its <a>) toggles the dropdown without navigating.
+        const menuItems = document.querySelectorAll('#megaMenu li');
+        menuItems.forEach(item => {
+            const a = item.querySelector('a');
+            const dropdown = item.querySelector('.dropdown');
+            if (dropdown && window.innerWidth <= 900) {
+                // On mobile, tap the parent to toggle dropdown
+                a.addEventListener('click', function(e) {
+                    // If the dropdown is hidden, show it and prevent navigation
+                    if (dropdown.style.display === 'none' || getComputedStyle(dropdown).display === 'none') {
+                        e.preventDefault();
+                        // Close any other open dropdowns
+                        document.querySelectorAll('#megaMenu .dropdown').forEach(d => d.style.display = 'none');
+                        dropdown.style.display = 'block';
+                    } else {
+                        // If already open, allow the link to navigate (or close dropdown)
+                        // We'll let the click go through, but we close the dropdown after navigation.
+                        // However, to keep it simple: we'll close all dropdowns on any click.
+                    }
+                });
+            }
+        });
+
+        // Close all dropdowns when clicking anywhere else on the page
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.mega-menu')) {
+                document.querySelectorAll('#megaMenu .dropdown').forEach(d => d.style.display = 'none');
+            }
+        });
+
+        // On resize, reset dropdowns for desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 900) {
+                document.querySelectorAll('#megaMenu .dropdown').forEach(d => d.style.display = ''); // let CSS handle it
+            }
+        });
     });
 </script>
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<!-- ═══ MOBILE MENU STYLES (fallback) ═══ -->
 <style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
     .menu-toggle {
         display: none;
         flex-direction: column;
@@ -249,240 +285,6 @@
             display: block;
             font-size: 0.9rem;
         }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
-        .mega-menu li a {
-            padding: 12px 0;
-            display: block;
-            width: 100%;
-        }
-        .nav-inner {
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.2rem;
-        }
-        .nav-cta {
-            font-size: 12px !important;
-            padding: 6px 12px !important;
-        }
-    }
-</style>
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('megaMenu');
-        const toggle = document.querySelector('.menu-toggle');
-        menu.classList.toggle('open');
-        toggle.classList.toggle('active');
-    }
-
-    // Close menu when a link is clicked (better UX)
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('.mega-menu a');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                const menu = document.getElementById('megaMenu');
-                const toggle = document.querySelector('.menu-toggle');
-                if (menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    toggle.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
-<style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 101;
-    }
-    .menu-toggle span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: var(--text);
-        border-radius: 3px;
-        transition: 0.3s;
-    }
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    @media (max-width: 900px) {
-        .menu-toggle {
-            display: flex;
-        }
-        .mega-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .mega-menu.open {
-            display: flex;
-        }
-        .mega-menu li {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
-        .mega-menu li:last-child {
-            border-bottom: none;
-        }
-        .mega-menu li .dropdown {
-            display: none;
-            background: var(--surface2);
-            padding: 0.5rem 0;
-        }
-        .mega-menu li .dropdown a {
-            padding: 0.5rem 1rem;
-            display: block;
-            font-size: 0.9rem;
-        }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
         .mega-menu li a {
             padding: 12px 0;
             display: block;
@@ -626,52 +428,53 @@
 </div>
 </main>
 <script>
-        let lessons = [];
+    let lessons = [];
 
-        // Load lessons from the JSON file
-        fetch('/listening-exercises.json')
-            .then(res => res.json())
-            .then(data => {
-                lessons = data;
-                renderLessons(lessons);
-            })
-            .catch(err => console.error('Error loading lessons:', err));
+    // Load lessons from the JSON file
+    fetch('/listening-exercises.json')
+        .then(res => res.json())
+        .then(data => {
+            lessons = data;
+            renderLessons(lessons);
+        })
+        .catch(err => console.error('Error loading lessons:', err));
 
-        function renderLessons(list) {
-            const grid = document.getElementById('lessonGrid');
-            if (!list.length) {
-                grid.innerHTML = '<p style="color: var(--text-mid);">No lessons found.</p>';
-                return;
-            }
-            grid.innerHTML = list.map(ex => `
-                <div class="lesson-card">
-                    <a href="/listening/${slugify(ex.title)}.html">
-                        <h3>${ex.title}</h3>
-                        <p style="color: var(--text-mid);">${ex.duration} min · ⭐ ${ex.xp} XP</p>
-                        <span class="level-badge ${ex.level.toLowerCase()}">${ex.level}</span>
-                        <span style="color: var(--text-soft); margin-left: 0.5rem;">${ex.category}</span>
-                    </a>
-                </div>
-            `).join('');
+    function renderLessons(list) {
+        const grid = document.getElementById('lessonGrid');
+        if (!list.length) {
+            grid.innerHTML = '<p style="color: var(--text-mid);">No lessons found.</p>';
+            return;
         }
+        grid.innerHTML = list.map(ex => `
+            <div class="lesson-card">
+                <a href="/listening/${slugify(ex.title)}.html">
+                    <h3>${ex.title}</h3>
+                    <p style="color: var(--text-mid);">${ex.duration} min · ⭐ ${ex.xp} XP</p>
+                    <span class="level-badge ${ex.level.toLowerCase()}">${ex.level}</span>
+                    <span style="color: var(--text-soft); margin-left: 0.5rem;">${ex.category}</span>
+                </a>
+            </div>
+        `).join('');
+    }
 
-        function filterLessons() {
-            const search = document.getElementById('search').value.toLowerCase();
-            const level = document.getElementById('levelFilter').value;
-            const category = document.getElementById('categoryFilter').value;
-            const filtered = lessons.filter(ex => {
-                const matchesSearch = ex.title.toLowerCase().includes(search);
-                const matchesLevel = level === 'all' || ex.level === level;
-                const matchesCategory = category === 'all' || ex.category === category;
-                return matchesSearch && matchesLevel && matchesCategory;
-            });
-            renderLessons(filtered);
-        }
+    function filterLessons() {
+        const search = document.getElementById('search').value.toLowerCase();
+        const level = document.getElementById('levelFilter').value;
+        const category = document.getElementById('categoryFilter').value;
+        const filtered = lessons.filter(ex => {
+            const matchesSearch = ex.title.toLowerCase().includes(search);
+            const matchesLevel = level === 'all' || ex.level === level;
+            const matchesCategory = category === 'all' || ex.category === category;
+            return matchesSearch && matchesLevel && matchesCategory;
+        });
+        renderLessons(filtered);
+    }
 
-        function slugify(title) {
-            return title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
-        }
-    </script>
+    function slugify(title) {
+        return title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+    }
+</script>
+
 <footer class="site-footer">
 <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
 <p>
