@@ -1,26 +1,15 @@
-// learning-explorer.js – Final version with array support
+// learning-explorer.js – Phase 2 (Verb Forms, Collocations, Mistakes)
 
 let dictionary = null;
 
-// Fetch the dictionary JSON (which is an array of entries)
 fetch('/enriched-dictionary.json')
-    .then(res => {
-        if (!res.ok) throw new Error('Network response was not ok');
-        return res.json();
-    })
+    .then(res => res.json())
     .then(data => {
-        // Convert array to object: { word: entry }
         dictionary = {};
         data.forEach(entry => {
-            // Try to find the word field (common keys)
             const word = entry.english || entry.word || entry.en;
-            if (word) {
-                dictionary[word.toLowerCase()] = entry;
-            }
+            if (word) dictionary[word.toLowerCase()] = entry;
         });
-        console.log(`✅ Dictionary loaded: ${Object.keys(dictionary).length} words`);
-
-        // Auto-search if URL has ?word=...
         const params = new URLSearchParams(window.location.search);
         const wordParam = params.get('word');
         if (wordParam) {
@@ -30,10 +19,7 @@ fetch('/enriched-dictionary.json')
     })
     .catch(err => {
         console.error('Dictionary load error:', err);
-        document.getElementById('resultArea').innerHTML = `
-            <p style="color: var(--red);">❌ Failed to load dictionary. Please refresh or try again later.</p>
-            <p style="color: var(--text-mid); font-size: 0.9rem;">Error: ${err.message}</p>
-        `;
+        document.getElementById('resultArea').innerHTML = '<p style="color: var(--red);">❌ Failed to load dictionary.</p>';
     });
 
 function searchWord() {
@@ -54,39 +40,59 @@ function searchWord() {
         return;
     }
 
-    // --- Update URL bar ---
+    // --- Update URL & canonical ---
     const url = new URL(window.location);
     url.searchParams.set('word', word);
     window.history.pushState({}, '', url);
-
-    // --- Inject canonical tag ---
-    const staticUrl = `https://ovidhan.net/word/${word}.html`;
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute('href', staticUrl);
+    canonicalLink.setAttribute('href', `https://ovidhan.net/word/${word}.html`);
 
-    // --- Build result HTML ---
-    let html = `<div class="result-card" id="resultCard">`;
+    // --- Build HTML ---
+    let html = `<div class="result-card">`;
     html += `<div class="word">${word}</div>`;
     html += `<div class="pronunciation">/ ${entry.pronunciation || '...'} / <button onclick="speak('${word}')" style="background:none; border:none; color:var(--teal); cursor:pointer;">🔊</button></div>`;
     html += `<div class="meaning"><strong>Meaning:</strong> ${entry.meaning || 'Not available'}</div>`;
     html += `<div class="bangla"><strong>বাংলা:</strong> ${entry.bangla || 'Not available'}</div>`;
     html += `<div><strong>Word type:</strong> ${entry.part_of_speech || 'N/A'}</div>`;
 
-    // Examples
+    // --- Verb Forms (if available) ---
+    if (entry.verb_forms && Object.keys(entry.verb_forms).length > 0) {
+        html += `<div class="verb-forms"><strong>🔄 Verb Forms</strong><ul>`;
+        for (const [tense, form] of Object.entries(entry.verb_forms)) {
+            html += `<li><strong>${tense}:</strong> ${form}</li>`;
+        }
+        html += `</ul></div>`;
+    }
+
+    // --- Collocations (if available) ---
+    if (entry.collocations && entry.collocations.length > 0) {
+        html += `<div class="collocations"><strong>🔗 Collocations</strong><ul>`;
+        entry.collocations.forEach(col => html += `<li>${col}</li>`);
+        html += `</ul></div>`;
+    }
+
+    // --- Common Mistakes (if available) ---
+    if (entry.common_mistakes && entry.common_mistakes.length > 0) {
+        html += `<div class="common-mistakes"><strong>⚠️ Common Mistakes</strong><ul>`;
+        entry.common_mistakes.forEach(m => {
+            html += `<li>❌ ${m.wrong} → ✅ ${m.right} <span style="color:var(--text-mid); font-size:0.9rem;">(${m.explanation_bn})</span></li>`;
+        });
+        html += `</ul></div>`;
+    }
+
+    // --- Examples ---
     if (entry.examples && entry.examples.length) {
         html += `<div class="examples"><strong>Examples:</strong><ul>`;
         entry.examples.forEach(ex => html += `<li>${ex}</li>`);
         html += `</ul></div>`;
-    } else if (entry.example) {
-        html += `<div class="examples"><strong>Example:</strong><p>${entry.example}</p></div>`;
     }
 
-    // Related words (synonyms/antonyms)
+    // --- Related words ---
     if (entry.synonyms || entry.antonyms) {
         html += `<div class="related-words"><strong>Related:</strong> `;
         if (entry.synonyms) {
@@ -98,10 +104,10 @@ function searchWord() {
         html += `</div>`;
     }
 
-    // Learn More button (Phase 2+)
+    // --- Learn More (future phases) ---
     html += `<button class="learn-more-btn" onclick="toggleExtra()">▼ Learn More</button>`;
     html += `<div class="extra-sections" id="extraSections">`;
-    html += `<p style="color: var(--text-mid);">More features (verb forms, collocations, common mistakes, quiz, flashcards) coming in Phase 2.</p>`;
+    html += `<p style="color:var(--text-mid);">Quiz, flashcards, story, and daily challenge coming soon.</p>`;
     html += `</div>`;
     html += `</div>`;
 
@@ -123,7 +129,6 @@ function speak(text) {
     window.speechSynthesis.speak(utterance);
 }
 
-// Enter key triggers search
 document.getElementById('wordInput').addEventListener('keydown', e => {
     if (e.key === 'Enter') searchWord();
 });
