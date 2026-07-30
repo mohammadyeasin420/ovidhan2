@@ -1,3 +1,4 @@
+<!-- ═══ HEADER TEMPLATE ═══ -->
 <header class="site-header">
     <div class="nav-inner">
         <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
@@ -63,17 +64,19 @@
                     <a href="/speaking-practice.html">Speaking Practice</a>
                 </div>
             </li>
-<li>
-    <a href="/listening.html">🎧 Listening</a>
-    <div class="dropdown">
-        <a href="/listening.html#lessons">All Listening Exercises</a>
-        <a href="/listening.html">Daily English</a>
-        <a href="/listening.html">Travel English</a>
-        <a href="/listening.html">Workplace English</a>
-        <a href="/listening.html">Academic English</a>
-        <a href="/listening.html">IELTS Listening</a>
-    </div>
-</li>
+
+            <li>
+                <a href="/listening.html">🎧 Listening</a>
+                <div class="dropdown">
+                    <a href="/listening.html#lessons">All Listening Exercises</a>
+                    <a href="/listening.html">Daily English</a>
+                    <a href="/listening.html">Travel English</a>
+                    <a href="/listening.html">Workplace English</a>
+                    <a href="/listening.html">Academic English</a>
+                    <a href="/listening.html">IELTS Listening</a>
+                </div>
+            </li>
+
             <li>
                 <a href="/writing.html">✍ Writing</a>
                 <div class="dropdown">
@@ -143,8 +146,9 @@
     </div>
 </header>
 
-<!-- ═══ MOBILE MENU TOGGLE SCRIPT ═══ -->
+<!-- ═══ MOBILE MENU TOGGLE SCRIPT + DROPDOWN FIX (Combined) ═══ -->
 <script>
+    // Toggle the entire mobile menu (hamburger)
     function toggleMenu() {
         const menu = document.getElementById('megaMenu');
         const toggle = document.querySelector('.menu-toggle');
@@ -152,7 +156,7 @@
         toggle.classList.toggle('active');
     }
 
-    // Close menu when a link is clicked (better UX)
+    // Close menu when a link is clicked (desktop & mobile)
     document.addEventListener('DOMContentLoaded', function() {
         const links = document.querySelectorAll('.mega-menu a');
         links.forEach(link => {
@@ -165,12 +169,47 @@
                 }
             });
         });
+
+        // === FIX: Mobile Dropdown Toggle (one tap) ===
+        const menuItems = document.querySelectorAll('#megaMenu li');
+        menuItems.forEach(item => {
+            const dropdown = item.querySelector('.dropdown');
+            if (!dropdown) return;
+
+            // On mobile, tap the parent to toggle dropdown
+            item.addEventListener('click', function(e) {
+                // Only act on mobile
+                if (window.innerWidth > 900) return;
+
+                const isOpen = dropdown.style.display === 'block' || getComputedStyle(dropdown).display === 'block';
+
+                // Close all other dropdowns
+                document.querySelectorAll('#megaMenu .dropdown').forEach(d => {
+                    d.style.display = 'none';
+                });
+
+                if (!isOpen) {
+                    // Open this dropdown and prevent navigation
+                    dropdown.style.display = 'block';
+                    e.preventDefault();
+                }
+                // If already open, the link will navigate (or we close it above)
+            });
+        });
+
+        // Close dropdowns when clicking anywhere else
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#megaMenu')) {
+                document.querySelectorAll('#megaMenu .dropdown').forEach(d => {
+                    d.style.display = 'none';
+                });
+            }
+        });
     });
 </script>
 
-<!-- ═══ MOBILE MENU STYLES (if not already in style.css) ═══ -->
+<!-- ═══ MOBILE MENU STYLES (fallback) ═══ -->
 <style>
-    /* Ensure these styles are also in style.css, but include here as fallback */
     .menu-toggle {
         display: none;
         flex-direction: column;
@@ -235,12 +274,6 @@
             display: block;
             font-size: 0.9rem;
         }
-        .mega-menu li:hover .dropdown {
-            display: none; /* prevent hover on mobile */
-        }
-        /* On mobile, show dropdown when parent is clicked? */
-        /* For simplicity, we keep dropdown items visible on mobile? We'll rely on the parent link. */
-        /* Better: on mobile, dropdown items can be shown as submenu items without dropdown. */
         .mega-menu li a {
             padding: 12px 0;
             display: block;
