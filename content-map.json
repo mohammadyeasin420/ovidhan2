@@ -587,8 +587,8 @@
   {
     "url": "https://ovidhan.net/explorer.html",
     "file_path": "explorer.html",
-    "title": "Smart Dictionary Explorer – Ovidhan",
-    "description": "Search 5,000+ English words with Bangla meanings, synonyms, and antonyms. Fast fuzzy search tool for Bangladeshi students.",
+    "title": "Learning Explorer – Ovidhan",
+    "description": "Smart dictionary with Bangla meanings, pronunciation, examples, and related words for Bangladeshi learners.",
     "type": "page",
     "category": null,
     "date_modified": "2026-07-30"
@@ -789,7 +789,7 @@
     "description": "",
     "type": "page",
     "category": null,
-    "date_modified": "2026-07-28"
+    "date_modified": "2026-07-30"
   },
   {
     "url": "https://ovidhan.net/hospital-english-bangla.html",
@@ -1543,6 +1543,15 @@
     "file_path": "quiz.html",
     "title": "Unified Quiz Engine – Grammar, Vocabulary, IELTS & BCS Quizzes | Ovidhan",
     "description": "Take free interactive English quizzes on Grammar, Vocabulary, Tenses, BCS, and IELTS. Get instant feedback, explanations, and earn XP. Practice for Bangladeshi exams today!",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/reading-academy.html",
+    "file_path": "reading-academy.html",
+    "title": "English Reading Practice with Bangla Meaning – Free Graded Stories for Bangladeshi Learners",
+    "description": "Improve your English reading with graded stories, Bangla translations, vocabulary, and quizzes. Free reading practice for A1–C1 levels.",
     "type": "page",
     "category": null,
     "date_modified": "2026-07-30"
@@ -2406,6 +2415,15 @@
     "url": "https://ovidhan.net/templates/lesson.html",
     "file_path": "templates\\lesson.html",
     "title": "{title} | Ovidhan",
+    "description": "{primary_keyword}",
+    "type": "page",
+    "category": null,
+    "date_modified": "2026-07-30"
+  },
+  {
+    "url": "https://ovidhan.net/templates/reading.html",
+    "file_path": "templates\\reading.html",
+    "title": "{title} | Ovidhan Reading",
     "description": "{primary_keyword}",
     "type": "page",
     "category": null,

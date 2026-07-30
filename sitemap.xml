@@ -955,6 +955,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ovidhan.net/reading-academy.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ovidhan.net/listening-exams/ielts-listening-mock-test-01.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -1808,6 +1814,12 @@
   </url>
   <url>
     <loc>https://ovidhan.net/templates/lesson.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ovidhan.net/templates/reading.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
