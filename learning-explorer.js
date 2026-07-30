@@ -1,10 +1,26 @@
-// Load dictionary JSON once and cache it
+// learning-explorer.js – Final version with array support
+
 let dictionary = null;
+
+// Fetch the dictionary JSON (which is an array of entries)
 fetch('/enriched-dictionary.json')
-    .then(res => res.json())
+    .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+    })
     .then(data => {
-        dictionary = data;
-        // If URL has a ?word=... parameter, search it automatically
+        // Convert array to object: { word: entry }
+        dictionary = {};
+        data.forEach(entry => {
+            // Try to find the word field (common keys)
+            const word = entry.english || entry.word || entry.en;
+            if (word) {
+                dictionary[word.toLowerCase()] = entry;
+            }
+        });
+        console.log(`✅ Dictionary loaded: ${Object.keys(dictionary).length} words`);
+
+        // Auto-search if URL has ?word=...
         const params = new URLSearchParams(window.location.search);
         const wordParam = params.get('word');
         if (wordParam) {
@@ -12,7 +28,13 @@ fetch('/enriched-dictionary.json')
             searchWord();
         }
     })
-    .catch(err => console.error('Dictionary load error:', err));
+    .catch(err => {
+        console.error('Dictionary load error:', err);
+        document.getElementById('resultArea').innerHTML = `
+            <p style="color: var(--red);">❌ Failed to load dictionary. Please refresh or try again later.</p>
+            <p style="color: var(--text-mid); font-size: 0.9rem;">Error: ${err.message}</p>
+        `;
+    });
 
 function searchWord() {
     const word = document.getElementById('wordInput').value.trim().toLowerCase();
@@ -26,14 +48,18 @@ function searchWord() {
         return;
     }
 
-    // --- 1. UPDATE THE URL BAR ---
+    const entry = dictionary[word];
+    if (!entry) {
+        resultArea.innerHTML = `<p style="color: var(--text-soft);">❌ Word not found. Try another word.</p>`;
+        return;
+    }
+
+    // --- Update URL bar ---
     const url = new URL(window.location);
     url.searchParams.set('word', word);
     window.history.pushState({}, '', url);
 
-    // --- 2. INJECT THE CANONICAL TAG (The SEO Fix) ---
-    // If a user lands on explorer.html?word=kiss, this tag tells Google:
-    // "The authoritative page for this content is /word/kiss.html"
+    // --- Inject canonical tag ---
     const staticUrl = `https://ovidhan.net/word/${word}.html`;
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
@@ -43,14 +69,7 @@ function searchWord() {
     }
     canonicalLink.setAttribute('href', staticUrl);
 
-    // --- 3. RENDER THE RESULTS ---
-    const entry = dictionary[word];
-    if (!entry) {
-        resultArea.innerHTML = `<p style="color: var(--text-soft);">❌ Word not found. Try another word.</p>`;
-        return;
-    }
-
-    // Build the result HTML
+    // --- Build result HTML ---
     let html = `<div class="result-card" id="resultCard">`;
     html += `<div class="word">${word}</div>`;
     html += `<div class="pronunciation">/ ${entry.pronunciation || '...'} / <button onclick="speak('${word}')" style="background:none; border:none; color:var(--teal); cursor:pointer;">🔊</button></div>`;
@@ -58,7 +77,7 @@ function searchWord() {
     html += `<div class="bangla"><strong>বাংলা:</strong> ${entry.bangla || 'Not available'}</div>`;
     html += `<div><strong>Word type:</strong> ${entry.part_of_speech || 'N/A'}</div>`;
 
-    // Examples (with Bangladeshi context)
+    // Examples
     if (entry.examples && entry.examples.length) {
         html += `<div class="examples"><strong>Examples:</strong><ul>`;
         entry.examples.forEach(ex => html += `<li>${ex}</li>`);
@@ -79,7 +98,7 @@ function searchWord() {
         html += `</div>`;
     }
 
-    // "Learn More" button (Phase 2+ features will be added here)
+    // Learn More button (Phase 2+)
     html += `<button class="learn-more-btn" onclick="toggleExtra()">▼ Learn More</button>`;
     html += `<div class="extra-sections" id="extraSections">`;
     html += `<p style="color: var(--text-mid);">More features (verb forms, collocations, common mistakes, quiz, flashcards) coming in Phase 2.</p>`;
@@ -104,7 +123,7 @@ function speak(text) {
     window.speechSynthesis.speak(utterance);
 }
 
-// Allow Enter key to trigger search
+// Enter key triggers search
 document.getElementById('wordInput').addEventListener('keydown', e => {
     if (e.key === 'Enter') searchWord();
 });
