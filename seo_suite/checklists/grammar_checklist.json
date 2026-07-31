@@ -1,0 +1,24 @@
+{
+  "grammar": {
+    "required_sections": [
+      "explanation",
+      "bangla-explanation",
+      "examples",
+      "common-mistakes",
+      "quiz",
+      "flashcards",
+      "faq",
+      "related-vocabulary"
+    ],
+    "weight": {
+      "explanation": 1,
+      "bangla-explanation": 1,
+      "examples": 1,
+      "common-mistakes": 0.8,
+      "quiz": 1,
+      "flashcards": 0.8,
+      "faq": 0.6,
+      "related-vocabulary": 0.5
+    }
+  }
+}
