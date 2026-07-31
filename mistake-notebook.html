@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mistake Notebook – Ovidhan</title>
+<meta content="Track your learned words and review them daily with spaced repetition." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+        .notebook-container { max-width: 880px; margin: 0 auto; padding: 2rem; }
+        .word-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .word-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; text-align: center; }
+        .word-card .word { font-size: 1.2rem; font-weight: 600; color: var(--gold); }
+        .word-card .actions { margin-top: 0.5rem; display: flex; gap: 0.5rem; justify-content: center; }
+        .word-card .actions button { font-size: 0.8rem; padding: 0.3rem 0.8rem; }
+        .stats { display: flex; gap: 2rem; justify-content: center; margin: 1rem 0; padding: 1rem; background: var(--surface2); border-radius: var(--radius); }
+        .stat-item { text-align: center; }
+        .stat-item .number { font-size: 1.8rem; font-weight: 700; color: var(--gold); }
+        .stat-item .label { color: var(--text-mid); font-size: 0.9rem; }
+        .empty-state { text-align: center; color: var(--text-mid); padding: 3rem 0; }
+    </style>
+</head>
+<body><header class="site-header">
+<div class="nav-inner">
+<a class="logo" href="/">অভিধান <span>| Ovidhan</span></a>
+<div style="display: flex; align-items: center; gap: 12px;">
+<!-- Play Store Download Button -->
+<a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" rel="noopener" style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;" target="_blank">
+                📱 Download App
+            </a>
+<!-- Mobile Toggle Button -->
+<button aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</div>
+<ul class="mega-menu" id="megaMenu">
+<li><a href="/">🏠 Home</a></li>
+<li>
+<a href="/learn.html">📚 Learn</a>
+<div class="dropdown">
+<a href="/learn.html#beginner">Beginner (A1)</a>
+<a href="/learn.html#elementary">Elementary (A2)</a>
+<a href="/learn.html#intermediate">Intermediate (B1)</a>
+<a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+<a href="/learn.html#advanced">Advanced (C1)</a>
+<a href="/dashboard.html">📊 Progress</a>
+</div>
+</li>
+<li>
+<a href="/dictionary.html">📖 Dictionary</a>
+<div class="dropdown">
+<a href="/dictionary.html">Search Words</a>
+<a href="/explorer.html">Word Explorer</a>
+<a href="/word-of-the-day.html">Word of the Day</a>
+<a href="/vocabulary-builder.html">Vocabulary Builder</a>
+</div>
+</li>
+<li>
+<a href="/grammar.html">📝 Grammar</a>
+<div class="dropdown">
+<a href="/grammar.html#beginner">Beginner Grammar</a>
+<a href="/grammar.html#intermediate">Intermediate Grammar</a>
+<a href="/grammar.html#advanced">Advanced Grammar</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/speaking.html">🗣 Speaking</a>
+<div class="dropdown">
+<a href="/speaking.html#daily">Daily Conversation</a>
+<a href="/speaking.html#travel">Travel English</a>
+<a href="/speaking.html#office">Office English</a>
+<a href="/speaking.html#interview">Job Interview</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/listening.html">🎧 Listening</a>
+<div class="dropdown">
+<a href="/listening.html#lessons">All Listening Exercises</a>
+<a href="/listening.html">Daily English</a>
+<a href="/listening.html">Travel English</a>
+<a href="/listening.html">Workplace English</a>
+<a href="/listening.html">Academic English</a>
+<a href="/listening.html">IELTS Listening</a>
+</div>
+</li>
+<li>
+<a href="/writing.html">✍ Writing</a>
+<div class="dropdown">
+<a href="/writing.html#academic">Academic Writing</a>
+<a href="/writing.html#business">Business English</a>
+<a href="/writing.html#daily">Daily Writing</a>
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/practice.html">🎯 Practice</a>
+<div class="dropdown">
+<a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
+<a href="/flashcards.html">Flashcards</a>
+<a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/assessment.html">🧪 Assessment</a>
+<div class="dropdown">
+<a href="/english-level-test.html">CEFR Level Test</a>
+<a href="/grammar-level-test.html">Grammar Test</a>
+<a href="/vocabulary-size-test.html">Vocabulary Size</a>
+<a href="/assessment.html#report">Progress Report</a>
+</div>
+</li>
+<li>
+<a href="/exam-prep.html">🎓 Exam Prep</a>
+<div class="dropdown">
+<a href="/ielts-guide.html">IELTS</a>
+<a href="/bcs-english-mock-test.html">BCS</a>
+<a href="/bank-job-english-preparation-guide.html">Bank Jobs</a>
+<a href="/exam-prep.html#ssc">SSC / HSC</a>
+<a href="/exam-prep.html#university">University Admission</a>
+</div>
+</li>
+<li>
+<a href="/tools.html">🛠 Tools</a>
+<div class="dropdown">
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/tense-identifier.html">Tense Identifier</a>
+<a href="/voice-converter.html">Voice Converter</a>
+<a href="/plural-maker.html">Plural Maker</a>
+<a href="/verb-forms.html">Verb Forms</a>
+</div>
+</li>
+<li>
+<a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+<div class="dropdown">
+<a href="/bangladesh.html#visa">Visa &amp; Immigration</a>
+<a href="/bangladesh.html#job">Job Interview</a>
+<a href="/bangladesh.html#daily">Daily Life English</a>
+<a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+</div>
+</li>
+<li><a href="/blog.html">📰 Blog</a></li>
+</ul>
+</div>
+</header>
+<div class="notebook-container">
+<h1>📓 Mistake Notebook</h1>
+<p style="color: var(--text-mid);">Words you've saved are shown here. Review them daily to build your vocabulary.</p>
+<div class="stats" id="stats">
+<div class="stat-item"><div class="number" id="totalWords">0</div><div class="label">Words Saved</div></div>
+<div class="stat-item"><div class="number" id="todayWords">0</div><div class="label">Due for Review</div></div>
+<div class="stat-item"><div class="number" id="streak">0</div><div class="label">Day Streak</div></div>
+</div>
+<div class="word-list" id="wordList"></div>
+<div style="text-align: center; margin-top: 2rem;">
+<a class="btn-secondary" href="/explorer.html">🔍 Back to Learning Explorer</a>
+</div>
+</div>
+<script>
+        // Load saved words
+        function loadWords() {
+            const learned = JSON.parse(localStorage.getItem('ovidhan_learned_words') || '[]');
+            const container = document.getElementById('wordList');
+            
+            if (learned.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No words saved yet</h3>
+                        <p>Search for a word in the Learning Explorer and click "Mark as Learned" to add it here.</p>
+                        <a href="/explorer.html" class="btn-secondary" style="margin-top:1rem;">Start Learning</a>
+                    </div>
+                `;
+                return;
+            }
+
+            // Update stats
+            document.getElementById('totalWords').textContent = learned.length;
+            document.getElementById('todayWords').textContent = learned.length; // For now, all words are due
+
+            // Render words
+            container.innerHTML = learned.map(word => `
+                <div class="word-card">
+                    <div class="word">${word}</div>
+                    <div class="actions">
+                        <button onclick="openWord('${word}')" class="btn-secondary">📖 Study</button>
+                        <button onclick="removeWord('${word}')" class="btn-secondary" style="background:var(--red-dim); color:var(--red);">🗑 Remove</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openWord(word) {
+            window.location.href = `/explorer.html?word=${word}`;
+        }
+
+        function removeWord(word) {
+            if (!confirm(`Remove "${word}" from your Mistake Notebook?`)) return;
+            let learned = JSON.parse(localStorage.getItem('ovidhan_learned_words') || '[]');
+            learned = learned.filter(w => w !== word);
+            localStorage.setItem('ovidhan_learned_words', JSON.stringify(learned));
+            loadWords();
+        }
+
+        // Listen for new words saved from the Learning Explorer
+        window.addEventListener('wordSaved', function(e) {
+            loadWords();
+        });
+
+        // Initial load
+        loadWords();
+    </script>
+<footer class="site-footer">
+<p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+<p>
+<a href="/">Home</a>  • 
+        <a href="/grammar.html">Grammar</a>  • 
+        <a href="/tools.html">Tools</a>  • 
+        <a href="/blog.html">Blog</a>  • 
+        <a href="/dictionary.html">Dictionary</a>  • 
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>  • 
+        <a href="/privacy.html">Privacy Policy</a>
+</p>
+<p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer></body>
+</html>

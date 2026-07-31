@@ -1,7 +1,7 @@
-// learning-explorer.js – Phase 3 (Quiz, Flashcards, Save Word)
+// learning-explorer.js – Phase 4 (Mini Story, Daily Challenge, Mistake Notebook)
 
 let dictionary = null;
-let currentWord = null;  // store the current word for quiz/flashcard
+let currentWord = null;
 
 fetch('/enriched-dictionary.json')
     .then(res => res.json())
@@ -41,7 +41,7 @@ function searchWord() {
         return;
     }
 
-    currentWord = word;  // store for quiz/flashcard
+    currentWord = word;
 
     // --- Update URL & canonical ---
     const url = new URL(window.location);
@@ -55,7 +55,7 @@ function searchWord() {
     }
     canonicalLink.setAttribute('href', `https://ovidhan.net/word/${word}.html`);
 
-    // --- Build HTML ---
+    // --- Build main result ---
     let html = `<div class="result-card">`;
     html += `<div class="word">${word}</div>`;
     html += `<div class="pronunciation">/ ${entry.pronunciation || '...'} / <button onclick="speak('${word}')" style="background:none; border:none; color:var(--teal); cursor:pointer;">🔊</button></div>`;
@@ -107,14 +107,38 @@ function searchWord() {
         html += `</div>`;
     }
 
-    // --- PHASE 3: Quiz, Flashcard, Save Word ---
+    // --- PHASE 4: Mini Story, Daily Challenge, Mistake Notebook ---
+    html += `<div class="phase4" style="margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1rem;">`;
+
+    // Mini Story
+    const story = entry.story || `${word} is a common word in English. It is used every day. Try to use it in your own sentences.`;
+    html += `<div class="mini-story"><strong>📖 Mini Story</strong><p style="color:var(--text-mid); font-style:italic;">${story}</p></div>`;
+
+    // Daily Challenge
+    html += `<div class="daily-challenge" style="margin-top:1rem;">`;
+    html += `<strong>⭐ Daily Challenge</strong>`;
+    html += `<p>Today's challenge: Use the word <strong>"${word}"</strong> in a sentence.</p>`;
+    html += `<input type="text" id="challengeSentence" placeholder="Type your sentence here..." style="width:100%; padding:0.5rem; margin:0.5rem 0; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); color:var(--text);">`;
+    html += `<button onclick="submitChallenge('${word}')" class="btn-secondary">Submit Challenge</button>`;
+    html += `<div id="challengeFeedback" style="margin-top:0.5rem; color:var(--text-mid);"></div>`;
+    html += `</div>`;
+
+    // Mistake Notebook link
+    html += `<div class="mistake-notebook" style="margin-top:1rem;">`;
+    html += `<strong>📓 Mistake Notebook</strong>`;
+    html += `<p>Words you've saved appear in your <a href="/mistake-notebook.html" style="color:var(--gold);">Mistake Notebook</a> for daily revision.</p>`;
+    html += `</div>`;
+
+    html += `</div>`;
+
+    // --- Phase 3 features (Quiz, Flashcard, Save Word) ---
     html += `<div class="phase3" style="margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1rem;">`;
 
-    // Quiz (one MCQ)
+    // Quiz
     const quizQuestion = `What is the meaning of "${word}"?`;
     const options = [
         entry.bangla || entry.meaning || 'Unknown',
-        'Not sure (skip)',
+        'Not sure',
         'I don\'t know'
     ];
     html += `<div class="quiz-block"><strong>🧪 Quick Quiz</strong>`;
@@ -141,10 +165,10 @@ function searchWord() {
 
     html += `</div>`;
 
-    // --- Learn More (future phases) ---
+    // --- Learn More (future) ---
     html += `<button class="learn-more-btn" onclick="toggleExtra()">▼ Learn More</button>`;
     html += `<div class="extra-sections" id="extraSections">`;
-    html += `<p style="color:var(--text-mid);">Story, Daily Challenge, and Mistake Notebook coming soon.</p>`;
+    html += `<p style="color:var(--text-mid);">Next: Full sentences and conversation practice.</p>`;
     html += `</div>`;
     html += `</div>`;
 
@@ -166,8 +190,7 @@ function speak(text) {
     window.speechSynthesis.speak(utterance);
 }
 
-// --- PHASE 3 Functions ---
-
+// --- Quiz ---
 function checkQuiz(word) {
     const selected = document.querySelector('input[name="quiz"]:checked');
     const feedback = document.getElementById('quizFeedback');
@@ -175,8 +198,6 @@ function checkQuiz(word) {
         feedback.innerHTML = 'Please select an answer.';
         return;
     }
-    // For now, we consider the first option (index 0) correct.
-    // In the future you could store correct answers in the JSON.
     const isCorrect = parseInt(selected.value) === 0;
     feedback.innerHTML = isCorrect
         ? '✅ Correct! +5 XP'
@@ -186,13 +207,12 @@ function checkQuiz(word) {
     }
 }
 
+// --- Flashcard ---
 function saveFlashcard(word) {
-    // Use your existing flashcards.js – assuming it has an addFlashcard function
     if (typeof window.ovidhan !== 'undefined' && window.ovidhan.addFlashcard) {
         window.ovidhan.addFlashcard(word);
         document.getElementById('flashcardFeedback').textContent = '✅ Added to flashcards!';
     } else {
-        // Fallback: save to localStorage
         let flashcards = JSON.parse(localStorage.getItem('ovidhan_flashcards') || '[]');
         if (!flashcards.includes(word)) {
             flashcards.push(word);
@@ -204,15 +224,40 @@ function saveFlashcard(word) {
     }
 }
 
+// --- Save Word (Mistake Notebook) ---
 function saveWord(word) {
-    // Track learned words in localStorage – used for Mistake Notebook later
     let learned = JSON.parse(localStorage.getItem('ovidhan_learned_words') || '[]');
     if (!learned.includes(word)) {
         learned.push(word);
         localStorage.setItem('ovidhan_learned_words', JSON.stringify(learned));
         document.getElementById('saveFeedback').textContent = '✅ Saved to Mistake Notebook!';
+        // Trigger a custom event so the Mistake Notebook can update if open
+        window.dispatchEvent(new CustomEvent('wordSaved', { detail: { word } }));
     } else {
         document.getElementById('saveFeedback').textContent = '⚠️ Already saved.';
+    }
+}
+
+// --- Daily Challenge ---
+function submitChallenge(word) {
+    const sentence = document.getElementById('challengeSentence').value.trim();
+    const feedback = document.getElementById('challengeFeedback');
+    if (!sentence) {
+        feedback.innerHTML = 'Please write a sentence using the word.';
+        return;
+    }
+    // Simple validation – check if the word appears in the sentence
+    if (!sentence.toLowerCase().includes(word)) {
+        feedback.innerHTML = `⚠️ Your sentence should contain the word "${word}".`;
+        return;
+    }
+    // Save the submission (can be used for community/leaderboard later)
+    let submissions = JSON.parse(localStorage.getItem('ovidhan_daily_challenges') || '[]');
+    submissions.push({ word, sentence, date: new Date().toISOString() });
+    localStorage.setItem('ovidhan_daily_challenges', JSON.stringify(submissions));
+    feedback.innerHTML = '✅ Challenge submitted! +10 XP';
+    if (typeof window.ovidhan !== 'undefined' && window.ovidhan.addXP) {
+        window.ovidhan.addXP(10);
     }
 }
 
