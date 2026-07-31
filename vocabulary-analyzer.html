@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vocabulary Level Checker – Ovidhan</title>
+<meta content="Analyze any English text and get your vocabulary level (A1-C1), CEFR breakdown, unknown words, and estimated IELTS score. Free for Bangladeshi learners." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+        .analyzer-container { max-width: 880px; margin: 0 auto; padding: 2rem; }
+        .analyzer-hero { text-align: center; padding: 1.5rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+        .analyzer-hero h1 { color: var(--gold); }
+        .input-area { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
+        .input-area textarea { width: 100%; min-height: 200px; padding: 1rem; border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 1rem; line-height: 1.6; resize: vertical; }
+        .input-area button { align-self: flex-start; padding: 0.8rem 2.5rem; }
+        .result-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-top: 1.5rem; display: none; }
+        .result-card .level-breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .result-card .level-box { background: var(--surface2); border-radius: var(--radius); padding: 0.8rem; text-align: center; }
+        .result-card .level-box .level { font-weight: 700; color: var(--gold); }
+        .result-card .level-box .percentage { font-size: 1.5rem; color: var(--text); }
+        .result-card .unknown-words { margin-top: 1rem; }
+        .result-card .unknown-words span { display: inline-block; background: var(--surface2); padding: 0.2rem 0.8rem; border-radius: 12px; margin: 0.2rem; }
+        .result-card .share-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .result-card .share-buttons button { padding: 0.5rem 1.5rem; }
+        .loader { text-align: center; padding: 2rem; color: var(--text-mid); }
+        .stats { display: flex; gap: 2rem; justify-content: center; margin: 1rem 0; padding: 1rem; background: var(--surface2); border-radius: var(--radius); }
+        .stat-item { text-align: center; }
+        .stat-item .number { font-size: 1.8rem; font-weight: 700; color: var(--gold); }
+        .stat-item .label { color: var(--text-mid); font-size: 0.9rem; }
+        @media (max-width: 600px) {
+            .result-card .share-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body><header class="site-header">
+<div class="nav-inner">
+<a class="logo" href="/">অভিধান <span>| Ovidhan</span></a>
+<div style="display: flex; align-items: center; gap: 12px;">
+<!-- Play Store Download Button -->
+<a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" rel="noopener" style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;" target="_blank">
+                📱 Download App
+            </a>
+<!-- Mobile Toggle Button -->
+<button aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</div>
+<ul class="mega-menu" id="megaMenu">
+<li><a href="/">🏠 Home</a></li>
+<li>
+<a href="/learn.html">📚 Learn</a>
+<div class="dropdown">
+<a href="/learn.html#beginner">Beginner (A1)</a>
+<a href="/learn.html#elementary">Elementary (A2)</a>
+<a href="/learn.html#intermediate">Intermediate (B1)</a>
+<a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+<a href="/learn.html#advanced">Advanced (C1)</a>
+<a href="/dashboard.html">📊 Progress</a>
+</div>
+</li>
+<li>
+<a href="/dictionary.html">📖 Dictionary</a>
+<div class="dropdown">
+<a href="/dictionary.html">Search Words</a>
+<a href="/explorer.html">Word Explorer</a>
+<a href="/word-of-the-day.html">Word of the Day</a>
+<a href="/vocabulary-builder.html">Vocabulary Builder</a>
+</div>
+</li>
+<li>
+<a href="/grammar.html">📝 Grammar</a>
+<div class="dropdown">
+<a href="/grammar.html#beginner">Beginner Grammar</a>
+<a href="/grammar.html#intermediate">Intermediate Grammar</a>
+<a href="/grammar.html#advanced">Advanced Grammar</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/speaking.html">🗣 Speaking</a>
+<div class="dropdown">
+<a href="/speaking.html#daily">Daily Conversation</a>
+<a href="/speaking.html#travel">Travel English</a>
+<a href="/speaking.html#office">Office English</a>
+<a href="/speaking.html#interview">Job Interview</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/listening.html">🎧 Listening</a>
+<div class="dropdown">
+<a href="/listening.html#lessons">All Listening Exercises</a>
+<a href="/listening.html">Daily English</a>
+<a href="/listening.html">Travel English</a>
+<a href="/listening.html">Workplace English</a>
+<a href="/listening.html">Academic English</a>
+<a href="/listening.html">IELTS Listening</a>
+</div>
+</li>
+<li>
+<a href="/writing.html">✍ Writing</a>
+<div class="dropdown">
+<a href="/writing.html#academic">Academic Writing</a>
+<a href="/writing.html#business">Business English</a>
+<a href="/writing.html#daily">Daily Writing</a>
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/practice.html">🎯 Practice</a>
+<div class="dropdown">
+<a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
+<a href="/flashcards.html">Flashcards</a>
+<a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/assessment.html">🧪 Assessment</a>
+<div class="dropdown">
+<a href="/english-level-test.html">CEFR Level Test</a>
+<a href="/grammar-level-test.html">Grammar Test</a>
+<a href="/vocabulary-size-test.html">Vocabulary Size</a>
+<a href="/assessment.html#report">Progress Report</a>
+</div>
+</li>
+<li>
+<a href="/exam-prep.html">🎓 Exam Prep</a>
+<div class="dropdown">
+<a href="/ielts-guide.html">IELTS</a>
+<a href="/bcs-english-mock-test.html">BCS</a>
+<a href="/bank-job-english-preparation-guide.html">Bank Jobs</a>
+<a href="/exam-prep.html#ssc">SSC / HSC</a>
+<a href="/exam-prep.html#university">University Admission</a>
+</div>
+</li>
+<li>
+<a href="/tools.html">🛠 Tools</a>
+<div class="dropdown">
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/tense-identifier.html">Tense Identifier</a>
+<a href="/voice-converter.html">Voice Converter</a>
+<a href="/plural-maker.html">Plural Maker</a>
+<a href="/verb-forms.html">Verb Forms</a>
+</div>
+</li>
+<li>
+<a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+<div class="dropdown">
+<a href="/bangladesh.html#visa">Visa &amp; Immigration</a>
+<a href="/bangladesh.html#job">Job Interview</a>
+<a href="/bangladesh.html#daily">Daily Life English</a>
+<a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+</div>
+</li>
+<li><a href="/blog.html">📰 Blog</a></li>
+</ul>
+</div>
+</header>
+<div class="analyzer-container">
+<div class="analyzer-hero">
+<h1>📊 Vocabulary Level Checker</h1>
+<p style="color: var(--text-mid);">Paste any English text and instantly see your vocabulary level (A1–C1), unknown words, and estimated IELTS band.</p>
+</div>
+<!-- Stats (from localStorage) -->
+<div class="stats">
+<div class="stat-item"><div class="number" id="analysisCount">0</div><div class="label">Analyses Done</div></div>
+<div class="stat-item"><div class="number" id="xpEarned">0</div><div class="label">XP Earned</div></div>
+</div>
+<div class="input-area">
+<textarea id="textInput" placeholder="Paste or type an English text here (e.g., an IELTS essay, a newspaper article, or any paragraph)..."></textarea>
+<button class="btn-primary" onclick="analyzeText()">🔍 Analyze Vocabulary</button>
+</div>
+<div class="result-card" id="resultArea"></div>
+</div>
+<script src="vocabulary-analyzer.js"></script>
+<footer class="site-footer">
+<p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+<p>
+<a href="/">Home</a>  • 
+        <a href="/grammar.html">Grammar</a>  • 
+        <a href="/tools.html">Tools</a>  • 
+        <a href="/blog.html">Blog</a>  • 
+        <a href="/dictionary.html">Dictionary</a>  • 
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>  • 
+        <a href="/privacy.html">Privacy Policy</a>
+</p>
+<p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer></body>
+</html>
