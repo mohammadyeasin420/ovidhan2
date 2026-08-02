@@ -4,21 +4,36 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mistake Notebook – Ovidhan</title>
-<meta content="Track your learned words and review them daily with spaced repetition." name="description"/>
+<title>Mistake Notebook – Ovidhan SRS</title>
+<meta content="Track your learned words and review them daily with Spaced Repetition (SRS)." name="description"/>
 <link href="styles.css" rel="stylesheet"/>
 <style>
         .notebook-container { max-width: 880px; margin: 0 auto; padding: 2rem; }
-        .word-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
-        .word-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; text-align: center; }
-        .word-card .word { font-size: 1.2rem; font-weight: 600; color: var(--gold); }
-        .word-card .actions { margin-top: 0.5rem; display: flex; gap: 0.5rem; justify-content: center; }
-        .word-card .actions button { font-size: 0.8rem; padding: 0.3rem 0.8rem; }
-        .stats { display: flex; gap: 2rem; justify-content: center; margin: 1rem 0; padding: 1rem; background: var(--surface2); border-radius: var(--radius); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; background: var(--surface2); padding: 1.5rem; border-radius: var(--radius); }
         .stat-item { text-align: center; }
-        .stat-item .number { font-size: 1.8rem; font-weight: 700; color: var(--gold); }
+        .stat-item .number { font-size: 2rem; font-weight: 700; color: var(--gold); }
         .stat-item .label { color: var(--text-mid); font-size: 0.9rem; }
+        .progress-bar { width: 100%; height: 8px; background: var(--surface); border-radius: 4px; overflow: hidden; margin: 1rem 0; }
+        .progress-fill { height: 100%; background: var(--gold); width: 0%; transition: width 0.3s; }
+        .word-list { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 2rem 0; }
+        .word-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .word-card .word { font-size: 1.2rem; font-weight: 600; color: var(--text); }
+        .word-card .meta { color: var(--text-mid); font-size: 0.85rem; }
+        .word-card .actions { display: flex; gap: 0.5rem; }
+        .word-card .actions button { font-size: 0.8rem; padding: 0.3rem 1rem; }
+        .btn-easy { background: var(--green-dim); color: var(--green); border: 1px solid var(--green); }
+        .btn-easy:hover { background: var(--green); color: #000; }
+        .btn-hard { background: var(--red-dim); color: var(--red); border: 1px solid var(--red); }
+        .btn-hard:hover { background: var(--red); color: #000; }
         .empty-state { text-align: center; color: var(--text-mid); padding: 3rem 0; }
+        .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .tab-btn { background: var(--surface2); border: 1px solid var(--border); padding: 0.5rem 1.5rem; border-radius: var(--radius); color: var(--text-mid); cursor: pointer; }
+        .tab-btn.active { background: var(--gold); color: #000; border-color: var(--gold); }
+        .mastered-badge { color: var(--text-soft); font-size: 0.8rem; }
+        @media (max-width: 600px) {
+            .word-card { flex-direction: column; align-items: stretch; text-align: center; }
+            .word-card .actions { justify-content: center; }
+        }
     </style>
 </head>
 <body><header class="site-header">
@@ -150,12 +165,17 @@
 </div>
 </header>
 <div class="notebook-container">
-<h1>📓 Mistake Notebook</h1>
-<p style="color: var(--text-mid);">Words you've saved are shown here. Review them daily to build your vocabulary.</p>
-<div class="stats" id="stats">
-<div class="stat-item"><div class="number" id="totalWords">0</div><div class="label">Words Saved</div></div>
-<div class="stat-item"><div class="number" id="todayWords">0</div><div class="label">Due for Review</div></div>
-<div class="stat-item"><div class="number" id="streak">0</div><div class="label">Day Streak</div></div>
+<h1>📓 SRS Mistake Notebook</h1>
+<p style="color: var(--text-mid);">Words are reviewed using Spaced Repetition. Review them when they are due to lock them into your memory.</p>
+<div class="stats-grid">
+<div class="stat-item"><div class="number" id="dueCount">0</div><div class="label">Due Today</div></div>
+<div class="stat-item"><div class="number" id="masteredCount">0</div><div class="label">Mastered</div></div>
+<div class="stat-item"><div class="number" id="totalCount">0</div><div class="label">Total Words</div></div>
+</div>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+<div class="tabs">
+<button class="tab-btn active" onclick="switchTab('due')">Due for Review</button>
+<button class="tab-btn" onclick="switchTab('mastered')">Mastered</button>
 </div>
 <div class="word-list" id="wordList"></div>
 <div style="text-align: center; margin-top: 2rem;">
@@ -163,53 +183,127 @@
 </div>
 </div>
 <script>
-        // Load saved words
-        function loadWords() {
-            const learned = JSON.parse(localStorage.getItem('ovidhan_learned_words') || '[]');
+        // SRS Intervals (in days)
+        const INTERVALS = [0, 1, 3, 7, 14, 30]; // index 0 = new, index 5 = mastered
+
+        // Load SRS data
+        function getSRSData() {
+            return JSON.parse(localStorage.getItem('ovidhan_srs') || '[]');
+        }
+
+        function saveSRSData(data) {
+            localStorage.setItem('ovidhan_srs', JSON.stringify(data));
+        }
+
+        function getToday() {
+            return new Date().toISOString().split('T')[0];
+        }
+
+        function addToSRS(word) {
+            let data = getSRSData();
+            // Check if word already exists
+            if (!data.find(item => item.word === word)) {
+                data.push({
+                    word: word,
+                    stage: 0, // new
+                    next_review: getToday(),
+                    last_reviewed: null
+                });
+                saveSRSData(data);
+                loadWords();
+            }
+        }
+
+        function renderWords(list, type) {
             const container = document.getElementById('wordList');
-            
-            if (learned.length === 0) {
+            if (list.length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
-                        <h3>No words saved yet</h3>
-                        <p>Search for a word in the Learning Explorer and click "Mark as Learned" to add it here.</p>
-                        <a href="/explorer.html" class="btn-secondary" style="margin-top:1rem;">Start Learning</a>
+                        <h3>No words ${type === 'due' ? 'due for review' : 'mastered'}.</h3>
+                        <p>${type === 'due' ? 'Great job! Come back tomorrow for more reviews.' : 'Keep learning new words to build your mastery.'}</p>
                     </div>
                 `;
                 return;
             }
-
-            // Update stats
-            document.getElementById('totalWords').textContent = learned.length;
-            document.getElementById('todayWords').textContent = learned.length; // For now, all words are due
-
-            // Render words
-            container.innerHTML = learned.map(word => `
+            container.innerHTML = list.map(item => `
                 <div class="word-card">
-                    <div class="word">${word}</div>
-                    <div class="actions">
-                        <button onclick="openWord('${word}')" class="btn-secondary">📖 Study</button>
-                        <button onclick="removeWord('${word}')" class="btn-secondary" style="background:var(--red-dim); color:var(--red);">🗑 Remove</button>
+                    <div>
+                        <div class="word">${item.word}</div>
+                        <div class="meta">Stage: ${item.stage} / ${INTERVALS.length-1} · Next review: ${item.next_review}</div>
                     </div>
+                    ${type === 'due' ? `
+                        <div class="actions">
+                            <button onclick="reviewWord('${item.word}', 'easy')" class="btn-easy">✅ Easy</button>
+                            <button onclick="reviewWord('${item.word}', 'hard')" class="btn-hard">🔁 Hard</button>
+                        </div>
+                    ` : `
+                        <div class="mastered-badge">🎉 Mastered</div>
+                    `}
                 </div>
             `).join('');
         }
 
-        function openWord(word) {
-            window.location.href = `/explorer.html?word=${word}`;
-        }
+        function reviewWord(word, outcome) {
+            let data = getSRSData();
+            let item = data.find(i => i.word === word);
+            if (!item) return;
 
-        function removeWord(word) {
-            if (!confirm(`Remove "${word}" from your Mistake Notebook?`)) return;
-            let learned = JSON.parse(localStorage.getItem('ovidhan_learned_words') || '[]');
-            learned = learned.filter(w => w !== word);
-            localStorage.setItem('ovidhan_learned_words', JSON.stringify(learned));
+            if (outcome === 'easy') {
+                item.stage = Math.min(item.stage + 1, INTERVALS.length - 1);
+            } else { // hard
+                item.stage = Math.max(item.stage - 1, 0);
+            }
+
+            item.last_reviewed = getToday();
+            // Calculate next review date
+            let days = INTERVALS[item.stage];
+            let nextDate = new Date();
+            nextDate.setDate(nextDate.getDate() + days);
+            item.next_review = nextDate.toISOString().split('T')[0];
+
+            saveSRSData(data);
             loadWords();
         }
 
-        // Listen for new words saved from the Learning Explorer
+        function loadWords() {
+            const data = getSRSData();
+            const today = getToday();
+            
+            const due = data.filter(item => item.next_review <= today && item.stage < INTERVALS.length - 1);
+            const mastered = data.filter(item => item.stage >= INTERVALS.length - 1);
+            
+            // Update stats
+            document.getElementById('dueCount').textContent = due.length;
+            document.getElementById('masteredCount').textContent = mastered.length;
+            document.getElementById('totalCount').textContent = data.length;
+            
+            // Update progress bar
+            const total = due.length + mastered.length;
+            const progress = total > 0 ? (mastered.length / total) * 100 : 0;
+            document.getElementById('progressFill').style.width = progress + '%';
+
+            // Render current tab
+            const activeTab = document.querySelector('.tab-btn.active');
+            if (activeTab.dataset.tab === 'due') {
+                renderWords(due, 'due');
+            } else {
+                renderWords(mastered, 'mastered');
+            }
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.tab-btn[data-tab="${tab}"]`).classList.add('active');
+            loadWords();
+        }
+
+        // Expose the function globally so other pages can call it
+        window.ovidhan = window.ovidhan || {};
+        window.ovidhan.addToSRS = addToSRS;
+
+        // Listen for new words saved from other pages
         window.addEventListener('wordSaved', function(e) {
-            loadWords();
+            addToSRS(e.detail.word);
         });
 
         // Initial load

@@ -1,4 +1,4 @@
-// learning-explorer.js – Phase 4 (Mini Story, Daily Challenge, Mistake Notebook)
+// learning-explorer.js – Phase 4 (Mini Story, Daily Challenge, Mistake Notebook, SRS)
 
 let dictionary = null;
 let currentWord = null;
@@ -157,7 +157,7 @@ function searchWord() {
     html += `<span id="flashcardFeedback" style="margin-left:0.5rem; color:var(--text-mid);"></span>`;
     html += `</div>`;
 
-    // Save Word (Mistake Notebook)
+    // Save Word (Mistake Notebook / SRS)
     html += `<div class="save-word" style="margin-top:1rem;">`;
     html += `<button onclick="saveWord('${word}')" class="btn-secondary">✅ Mark as Learned</button>`;
     html += `<span id="saveFeedback" style="margin-left:0.5rem; color:var(--text-mid);"></span>`;
@@ -224,18 +224,25 @@ function saveFlashcard(word) {
     }
 }
 
-// --- Save Word (Mistake Notebook) ---
+// --- Save Word (SRS Mistake Notebook Integration) ---
 function saveWord(word) {
-    let learned = JSON.parse(localStorage.getItem('ovidhan_learned_words') || '[]');
-    if (!learned.includes(word)) {
-        learned.push(word);
-        localStorage.setItem('ovidhan_learned_words', JSON.stringify(learned));
-        document.getElementById('saveFeedback').textContent = '✅ Saved to Mistake Notebook!';
-        // Trigger a custom event so the Mistake Notebook can update if open
-        window.dispatchEvent(new CustomEvent('wordSaved', { detail: { word } }));
+    // Direct SRS integration (Mistake Notebook)
+    if (typeof window.ovidhan !== 'undefined' && window.ovidhan.addToSRS) {
+        window.ovidhan.addToSRS(word);
+        document.getElementById('saveFeedback').textContent = '✅ Added to SRS Mistake Notebook!';
     } else {
-        document.getElementById('saveFeedback').textContent = '⚠️ Already saved.';
+        // Fallback to simple list
+        let learned = JSON.parse(localStorage.getItem('ovidhan_learned_words') || '[]');
+        if (!learned.includes(word)) {
+            learned.push(word);
+            localStorage.setItem('ovidhan_learned_words', JSON.stringify(learned));
+            document.getElementById('saveFeedback').textContent = '✅ Saved to list!';
+        } else {
+            document.getElementById('saveFeedback').textContent = '⚠️ Already saved.';
+        }
     }
+    // Dispatch event so the notebook can update if open
+    window.dispatchEvent(new CustomEvent('wordSaved', { detail: { word } }));
 }
 
 // --- Daily Challenge ---
@@ -246,12 +253,10 @@ function submitChallenge(word) {
         feedback.innerHTML = 'Please write a sentence using the word.';
         return;
     }
-    // Simple validation – check if the word appears in the sentence
     if (!sentence.toLowerCase().includes(word)) {
         feedback.innerHTML = `⚠️ Your sentence should contain the word "${word}".`;
         return;
     }
-    // Save the submission (can be used for community/leaderboard later)
     let submissions = JSON.parse(localStorage.getItem('ovidhan_daily_challenges') || '[]');
     submissions.push({ word, sentence, date: new Date().toISOString() });
     localStorage.setItem('ovidhan_daily_challenges', JSON.stringify(submissions));
