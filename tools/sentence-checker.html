@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Sentence Checker – Ovidhan</title>
-    <meta name="description" content="Check your English sentences for grammar mistakes and get corrections in Bangla.">
-    <link rel="stylesheet" href="/styles.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Sentence Checker – Ovidhan</title>
+<meta content="Check your English sentences for grammar mistakes and get corrections in Bangla." name="description"/>
+<link href="/styles.css" rel="stylesheet"/>
+<style>
         body { background: var(--bg); color: var(--text); font-family: var(--font-en); }
         .checker-container {
             max-width: 820px;
@@ -38,29 +39,28 @@
         .example-bn { color: var(--text-soft); font-size: 0.9rem; }
         .no-errors { color: var(--teal); font-weight: 500; }
     </style>
-</head>
+<link href="https://ovidhan.net/tools/sentence-checker.html" hreflang="en" rel="alternate"/><link href="https://ovidhan.net/tools/sentence-checker.html" hreflang="bn" rel="alternate"/><link href="https://ovidhan.net/tools/sentence-checker.html" hreflang="x-default" rel="alternate"/></head>
 <body>
-    <div class="checker-container">
-        <h1>🧠 Smart Sentence Checker</h1>
-        <p style="color: var(--text-mid);">Write any English sentence. The checker finds common mistakes and explains them in <strong>Bangla</strong>.</p>
-        <textarea id="userInput" placeholder="e.g., He go to school yesterday..."></textarea>
-        <button class="btn-check" onclick="checkSentence()">Check My Sentence</button>
-        <div class="result-card" id="resultCard">
-            <div id="correctedSentence" class="corrected"></div>
-            <div id="explanations"></div>
-        </div>
-        <div style="margin-top:2rem; border-top:1px solid var(--border); padding-top:1rem;">
-            <h3>Common Mistakes We Catch</h3>
-            <ul style="color: var(--text-mid);">
-                <li>Subject‑verb agreement</li>
-                <li>Tense consistency</li>
-                <li>Banglish errors</li>
-                <li>Missing articles</li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
+<div class="checker-container">
+<h1>🧠 Smart Sentence Checker</h1>
+<p style="color: var(--text-mid);">Write any English sentence. The checker finds common mistakes and explains them in <strong>Bangla</strong>.</p>
+<textarea id="userInput" placeholder="e.g., He go to school yesterday..."></textarea>
+<button class="btn-check" onclick="checkSentence()">Check My Sentence</button>
+<div class="result-card" id="resultCard">
+<div class="corrected" id="correctedSentence"></div>
+<div id="explanations"></div>
+</div>
+<div style="margin-top:2rem; border-top:1px solid var(--border); padding-top:1rem;">
+<h3>Common Mistakes We Catch</h3>
+<ul style="color: var(--text-mid);">
+<li>Subject‑verb agreement</li>
+<li>Tense consistency</li>
+<li>Banglish errors</li>
+<li>Missing articles</li>
+</ul>
+</div>
+</div>
+<script>
         const rules = [
             {
                 name: "subject_verb_agreement",
