@@ -33,6 +33,8 @@ EXCLUDE_DIRS = {
     "word_old_backup",
     "mock-tests_backup",
     "data",
+    # Placeholder lesson/reading shells with {title} tokens — not learner pages
+    "templates",
 }
 
 # Partial/template HTML that should not be indexed as standalone pages
@@ -40,6 +42,11 @@ EXCLUDE_FILES = {
     "header.html",
     "footer.html",
     "word-template.html",
+}
+
+# Explicit non-content / malformed paths that must never enter the sitemap
+EXCLUDE_PATHS = {
+    "word/.html",  # empty-slug anomaly; not a valid dictionary entry
 }
 
 
@@ -86,6 +93,13 @@ def discover_html_pages() -> list[dict]:
                 continue
 
             rel_path = normalize_rel_path(str(full_path.relative_to(ROOT)))
+            if rel_path in EXCLUDE_PATHS:
+                continue
+            # Defense: never index a bare "/word/.html" empty-slug path
+            if rel_path.startswith("word/") and (
+                filename == ".html" or rel_path == "word/.html"
+            ):
+                continue
             if rel_path in seen:
                 continue
             seen.add(rel_path)
@@ -242,6 +256,13 @@ def generate_sitemap() -> None:
         print(f"missing-file count: {len(missing_final)}")
         if "word/con.html" in content or "word/aux.html" in content:
             raise SystemExit("Reserved orphan word URLs unexpectedly present.")
+        for banned in (
+            "/templates/lesson.html",
+            "/templates/reading.html",
+            "/word/.html",
+        ):
+            if any(banned in loc for loc in locs):
+                raise SystemExit(f"Non-content anomaly unexpectedly present: {banned}")
         if len(locs) - len(uniq) != 0 or missing_final or len(locs) >= MAX_URLS_PER_SITEMAP:
             raise SystemExit("Sitemap validation failed.")
         print("Sitemap validation passed.")
