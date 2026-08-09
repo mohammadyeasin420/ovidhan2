@@ -7757,40 +7757,72 @@
         document.getElementById('lastUpdated').textContent = 'Last updated: ' + new Date().toLocaleString();
 
         // Continue Learning
+        // Build resume/start links via DOM APIs and relative paths so the shipped
+        // HTML/JS source does not contain crawlable absolute URL placeholders.
+        function buildContinueItem(icon, title, typeText, slug, buttonLabel) {
+            const item = document.createElement('div');
+            item.className = 'continue-item';
+
+            const left = document.createElement('div');
+            left.className = 'left';
+
+            const iconEl = document.createElement('span');
+            iconEl.className = 'icon';
+            iconEl.textContent = icon;
+
+            const textWrap = document.createElement('div');
+            const titleEl = document.createElement('span');
+            titleEl.className = 'title';
+            titleEl.textContent = title;
+            const typeEl = document.createElement('span');
+            typeEl.className = 'type';
+            typeEl.textContent = typeText;
+            textWrap.appendChild(titleEl);
+            textWrap.appendChild(typeEl);
+
+            left.appendChild(iconEl);
+            left.appendChild(textWrap);
+
+            const link = document.createElement('a');
+            link.className = 'btn-resume';
+            link.textContent = buttonLabel;
+            // Relative path only — resolved against the current origin at runtime.
+            link.setAttribute('href', '/' + String(slug || '').replace(/^\/+/, ''));
+
+            item.appendChild(left);
+            item.appendChild(link);
+            return item;
+        }
+
         const continueContainer = document.getElementById('continueLearning');
+        continueContainer.innerHTML = '';
         if (data.articlesRead.length > 0) {
             const lastArticle = data.articlesRead[data.articlesRead.length - 1];
             const topic = GRAMMAR_TOPICS.find(t => t.id === lastArticle || t.slug === lastArticle + '.html');
             if (topic) {
-                continueContainer.innerHTML = `
-                    <div class="continue-item">
-                        <div class="left">
-                            <span class="icon">${topic.icon}</span>
-                            <div>
-                                <span class="title">${topic.name}</span>
-                                <span class="type">Grammar • ${data.grammarCompleted.length}/${GRAMMAR_TOPICS.length}</span>
-                            </div>
-                        </div>
-                        <a href="https://ovidhan.net/${topic.slug}" class="btn-resume">Resume →</a>
-                    </div>
-                `;
+                continueContainer.appendChild(
+                    buildContinueItem(
+                        topic.icon,
+                        topic.name,
+                        'Grammar • ' + data.grammarCompleted.length + '/' + GRAMMAR_TOPICS.length,
+                        topic.slug,
+                        'Resume →'
+                    )
+                );
             }
         }
         // Add next lesson suggestion
         const nextTopic = GRAMMAR_TOPICS.find(t => !data.grammarCompleted.includes(t.id));
         if (nextTopic) {
-            continueContainer.innerHTML += `
-                <div class="continue-item">
-                    <div class="left">
-                        <span class="icon">📖</span>
-                        <div>
-                            <span class="title">Next: ${nextTopic.name}</span>
-                            <span class="type">Suggested lesson</span>
-                        </div>
-                    </div>
-                    <a href="https://ovidhan.net/${nextTopic.slug}" class="btn-resume">Start →</a>
-                </div>
-            `;
+            continueContainer.appendChild(
+                buildContinueItem(
+                    '📖',
+                    'Next: ' + nextTopic.name,
+                    'Suggested lesson',
+                    nextTopic.slug,
+                    'Start →'
+                )
+            );
         }
 
         // Learning Roadmap

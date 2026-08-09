@@ -1,8 +1,14 @@
 [
   {
     "id": "bcs_grammar_001",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Subject-Verb Agreement",
     "skill": "grammar",
     "subskill": "SVA",
@@ -12,14 +18,28 @@
     "learning_objective": "Identify correct subject-verb agreement in complex sentences.",
     "common_mistake": "Matching verb with the nearest noun instead of the actual subject.",
     "question_text": "The list of items ____ on the table.",
-    "options": ["are", "is", "were", "have"],
+    "options": [
+      "are",
+      "is",
+      "were",
+      "have"
+    ],
     "correct_index": 1,
     "explanation": "The subject is 'The list' (singular), so the verb must be 'is'.",
     "bangla_explanation": "Subject হলো 'The list' (একবচন), তাই verb 'is' হবে।",
-    "distractor_explanations": ["are → Plural verb", "were → Past plural", "have → Incorrect auxiliary"],
+    "distractor_explanations": [
+      "are → Plural verb",
+      "were → Past plural",
+      "have → Incorrect auxiliary"
+    ],
     "related_article": "/subject-verb-agreement-bangla.html",
-    "related_words": ["list", "items"],
-    "learning_links": ["/subject-verb-agreement-bangla.html"],
+    "related_words": [
+      "list",
+      "items"
+    ],
+    "learning_links": [
+      "/subject-verb-agreement-bangla.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -28,8 +48,14 @@
   },
   {
     "id": "bcs_grammar_002",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Tense",
     "skill": "grammar",
     "subskill": "Present Perfect",
@@ -39,14 +65,28 @@
     "learning_objective": "Use Present Perfect tense correctly with 'since' and 'for'.",
     "common_mistake": "Using Past Simple instead of Present Perfect with 'since'.",
     "question_text": "I ____ here since 2010.",
-    "options": ["lived", "have lived", "was living", "had lived"],
+    "options": [
+      "lived",
+      "have lived",
+      "was living",
+      "had lived"
+    ],
     "correct_index": 1,
     "explanation": "'Since' indicates a period from the past to now, so Present Perfect is required.",
     "bangla_explanation": "'Since' অতীত থেকে বর্তমান পর্যন্ত সময় নির্দেশ করে, তাই Present Perfect ব্যবহার করতে হবে।",
-    "distractor_explanations": ["lived → Past Simple (incorrect with since)", "was living → Past Continuous", "had lived → Past Perfect"],
+    "distractor_explanations": [
+      "lived → Past Simple (incorrect with since)",
+      "was living → Past Continuous",
+      "had lived → Past Perfect"
+    ],
     "related_article": "/present-perfect-tense-bangla.html",
-    "related_words": ["live", "since"],
-    "learning_links": ["/present-perfect-tense-bangla.html"],
+    "related_words": [
+      "live",
+      "since"
+    ],
+    "learning_links": [
+      "/present-perfect-tense-bangla.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -55,8 +95,14 @@
   },
   {
     "id": "bcs_grammar_003",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Preposition",
     "skill": "grammar",
     "subskill": "Prepositions of Time",
@@ -66,14 +112,28 @@
     "learning_objective": "Use correct prepositions of time.",
     "common_mistake": "Using 'in' instead of 'on' for specific days.",
     "question_text": "We will meet ____ Monday.",
-    "options": ["in", "on", "at", "by"],
+    "options": [
+      "in",
+      "on",
+      "at",
+      "by"
+    ],
     "correct_index": 1,
     "explanation": "We use 'on' for specific days of the week.",
     "bangla_explanation": "নির্দিষ্ট দিন বোঝাতে 'on' ব্যবহার হয়।",
-    "distractor_explanations": ["in → Months/Years", "at → Specific times", "by → Deadline"],
+    "distractor_explanations": [
+      "in → Months/Years",
+      "at → Specific times",
+      "by → Deadline"
+    ],
     "related_article": "/prepositions-of-time-bangla.html",
-    "related_words": ["Monday", "meet"],
-    "learning_links": ["/prepositions-of-time-bangla.html"],
+    "related_words": [
+      "Monday",
+      "meet"
+    ],
+    "learning_links": [
+      "/prepositions-of-time-bangla.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -82,8 +142,14 @@
   },
   {
     "id": "bcs_grammar_004",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Voice Change",
     "skill": "grammar",
     "subskill": "Passive Voice",
@@ -93,14 +159,28 @@
     "learning_objective": "Transform active voice to passive voice correctly.",
     "common_mistake": "Changing the tense incorrectly in passive voice.",
     "question_text": "The teacher _____ the lesson.",
-    "options": ["has explained", "has been explained", "was explained", "explained"],
+    "options": [
+      "has explained",
+      "has been explained",
+      "was explained",
+      "explained"
+    ],
     "correct_index": 0,
     "explanation": "Active voice: 'The teacher has explained' is correct because the subject performs the action.",
     "bangla_explanation": "Active voice: 'The teacher has explained' সঠিক কারণ subject নিজে কাজটি করে।",
-    "distractor_explanations": ["has been explained → Passive (subject receives action)", "was explained → Past passive", "explained → Simple past (tense mismatch)"],
+    "distractor_explanations": [
+      "has been explained → Passive (subject receives action)",
+      "was explained → Past passive",
+      "explained → Simple past (tense mismatch)"
+    ],
     "related_article": "/voice-change-rules-bangla.html",
-    "related_words": ["teacher", "explain"],
-    "learning_links": ["/voice-change-rules-bangla.html"],
+    "related_words": [
+      "teacher",
+      "explain"
+    ],
+    "learning_links": [
+      "/voice-change-rules-bangla.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -109,8 +189,14 @@
   },
   {
     "id": "bcs_vocab_001",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Synonyms",
     "skill": "vocabulary",
     "subskill": "Synonyms",
@@ -120,14 +206,28 @@
     "learning_objective": "Identify the correct synonym for common words.",
     "common_mistake": "Confusing synonyms with slightly different meanings.",
     "question_text": "What is the meaning of 'ABUNDANT'?",
-    "options": ["Plentiful", "Rare", "Scarce", "Limited"],
+    "options": [
+      "Plentiful",
+      "Rare",
+      "Scarce",
+      "Limited"
+    ],
     "correct_index": 0,
     "explanation": "'Abundant' means plentiful or existing in large quantities.",
     "bangla_explanation": "'Abundant' মানে প্রচুর বা পর্যাপ্ত পরিমাণে বিদ্যমান।",
-    "distractor_explanations": ["Rare → Opposite", "Scarce → Opposite", "Limited → Opposite"],
-    "related_article": "/synonyms-antonyms-bangla.html",
-    "related_words": ["abundant", "plentiful"],
-    "learning_links": ["/word/abundant.html"],
+    "distractor_explanations": [
+      "Rare → Opposite",
+      "Scarce → Opposite",
+      "Limited → Opposite"
+    ],
+    "related_article": "/english-synonyms-bangla.html",
+    "related_words": [
+      "abundant",
+      "plentiful"
+    ],
+    "learning_links": [
+      "/word/abundant.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -136,8 +236,14 @@
   },
   {
     "id": "bcs_vocab_002",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Antonyms",
     "skill": "vocabulary",
     "subskill": "Antonyms",
@@ -147,14 +253,28 @@
     "learning_objective": "Identify the correct antonym for common words.",
     "common_mistake": "Confusing antonyms with synonyms.",
     "question_text": "What is the OPPOSITE of 'GENEROUS'?",
-    "options": ["Kind", "Stingy", "Charitable", "Benevolent"],
+    "options": [
+      "Kind",
+      "Stingy",
+      "Charitable",
+      "Benevolent"
+    ],
     "correct_index": 1,
     "explanation": "'Stingy' means unwilling to give, the opposite of 'generous'.",
     "bangla_explanation": "'Stingy' মানে কৃপণ, যা 'generous'-এর বিপরীত।",
-    "distractor_explanations": ["Kind → Similar", "Charitable → Similar", "Benevolent → Similar"],
-    "related_article": "/synonyms-antonyms-bangla.html",
-    "related_words": ["generous", "stingy"],
-    "learning_links": ["/word/generous.html"],
+    "distractor_explanations": [
+      "Kind → Similar",
+      "Charitable → Similar",
+      "Benevolent → Similar"
+    ],
+    "related_article": "/english-antonyms-bangla.html",
+    "related_words": [
+      "generous",
+      "stingy"
+    ],
+    "learning_links": [
+      "/word/generous.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -163,8 +283,14 @@
   },
   {
     "id": "bcs_idiom_001",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Idioms",
     "skill": "vocabulary",
     "subskill": "Idioms",
@@ -174,14 +300,28 @@
     "learning_objective": "Recognize common English idioms and their meanings.",
     "common_mistake": "Taking idioms literally instead of understanding figurative meaning.",
     "question_text": "What does 'A PIECE OF CAKE' mean?",
-    "options": ["Very difficult", "Very easy", "Delicious", "Expensive"],
+    "options": [
+      "Very difficult",
+      "Very easy",
+      "Delicious",
+      "Expensive"
+    ],
     "correct_index": 1,
     "explanation": "'A piece of cake' means something very easy to do.",
     "bangla_explanation": "'A piece of cake' মানে খুব সহজ কাজ।",
-    "distractor_explanations": ["Very difficult → Opposite", "Delicious → Literal meaning", "Expensive → Unrelated"],
-    "related_article": "/idioms-phrases-bangla.html",
-    "related_words": ["cake", "easy"],
-    "learning_links": ["/idioms-phrases-bangla.html"],
+    "distractor_explanations": [
+      "Very difficult → Opposite",
+      "Delicious → Literal meaning",
+      "Expensive → Unrelated"
+    ],
+    "related_article": "/english-idioms-dictionary-bangla.html",
+    "related_words": [
+      "cake",
+      "easy"
+    ],
+    "learning_links": [
+      "/english-idioms-dictionary-bangla.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -190,8 +330,14 @@
   },
   {
     "id": "bcs_idiom_002",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Idioms",
     "skill": "vocabulary",
     "subskill": "Idioms",
@@ -201,14 +347,28 @@
     "learning_objective": "Recognize common English idioms and their meanings.",
     "common_mistake": "Taking idioms literally instead of understanding figurative meaning.",
     "question_text": "What does 'COST AN ARM AND A LEG' mean?",
-    "options": ["Very cheap", "Very expensive", "Painful", "Tiring"],
+    "options": [
+      "Very cheap",
+      "Very expensive",
+      "Painful",
+      "Tiring"
+    ],
     "correct_index": 1,
     "explanation": "'Cost an arm and a leg' means very expensive.",
     "bangla_explanation": "'Cost an arm and a leg' মানে খুব দামি।",
-    "distractor_explanations": ["Very cheap → Opposite", "Painful → Literal", "Tiring → Unrelated"],
-    "related_article": "/idioms-phrases-bangla.html",
-    "related_words": ["expensive", "cost"],
-    "learning_links": ["/idioms-phrases-bangla.html"],
+    "distractor_explanations": [
+      "Very cheap → Opposite",
+      "Painful → Literal",
+      "Tiring → Unrelated"
+    ],
+    "related_article": "/english-idioms-dictionary-bangla.html",
+    "related_words": [
+      "expensive",
+      "cost"
+    ],
+    "learning_links": [
+      "/english-idioms-dictionary-bangla.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -217,8 +377,14 @@
   },
   {
     "id": "bcs_phrasal_001",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Phrasal Verbs",
     "skill": "vocabulary",
     "subskill": "Phrasal Verbs",
@@ -228,14 +394,28 @@
     "learning_objective": "Recognize common phrasal verbs and their meanings.",
     "common_mistake": "Confusing phrasal verbs with prepositional phrases.",
     "question_text": "What does 'GIVE UP' mean?",
-    "options": ["Continue", "Surrender", "Start", "Increase"],
+    "options": [
+      "Continue",
+      "Surrender",
+      "Start",
+      "Increase"
+    ],
     "correct_index": 1,
     "explanation": "'Give up' means to surrender or stop trying.",
     "bangla_explanation": "'Give up' মানে আত্মসমর্পণ করা বা চেষ্টা বন্ধ করা।",
-    "distractor_explanations": ["Continue → Opposite", "Start → Opposite", "Increase → Unrelated"],
-    "related_article": "/phrasal-verbs-bangla.html",
-    "related_words": ["give", "surrender"],
-    "learning_links": ["/phrasal-verbs-bangla.html"],
+    "distractor_explanations": [
+      "Continue → Opposite",
+      "Start → Opposite",
+      "Increase → Unrelated"
+    ],
+    "related_article": "/english-phrasal-verbs-dictionary-bangla.html",
+    "related_words": [
+      "give",
+      "surrender"
+    ],
+    "learning_links": [
+      "/english-phrasal-verbs-dictionary-bangla.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
@@ -244,8 +424,14 @@
   },
   {
     "id": "bcs_phrasal_002",
-    "exam_tags": ["bcs", "university"],
-    "recommended_for": ["BCS", "University Admission"],
+    "exam_tags": [
+      "bcs",
+      "university"
+    ],
+    "recommended_for": [
+      "BCS",
+      "University Admission"
+    ],
     "topic": "Phrasal Verbs",
     "skill": "vocabulary",
     "subskill": "Phrasal Verbs",
@@ -255,14 +441,28 @@
     "learning_objective": "Recognize common phrasal verbs and their meanings.",
     "common_mistake": "Confusing phrasal verbs with prepositional phrases.",
     "question_text": "What does 'LOOK FORWARD TO' mean?",
-    "options": ["Fear", "Expect with pleasure", "Ignore", "Avoid"],
+    "options": [
+      "Fear",
+      "Expect with pleasure",
+      "Ignore",
+      "Avoid"
+    ],
     "correct_index": 1,
     "explanation": "'Look forward to' means to anticipate with pleasure.",
     "bangla_explanation": "'Look forward to' মানে আনন্দের সাথে প্রতীক্ষা করা।",
-    "distractor_explanations": ["Fear → Opposite", "Ignore → Opposite", "Avoid → Opposite"],
-    "related_article": "/phrasal-verbs-bangla.html",
-    "related_words": ["look", "forward"],
-    "learning_links": ["/phrasal-verbs-bangla.html"],
+    "distractor_explanations": [
+      "Fear → Opposite",
+      "Ignore → Opposite",
+      "Avoid → Opposite"
+    ],
+    "related_article": "/english-phrasal-verbs-dictionary-bangla.html",
+    "related_words": [
+      "look",
+      "forward"
+    ],
+    "learning_links": [
+      "/english-phrasal-verbs-dictionary-bangla.html"
+    ],
     "verified": true,
     "editorial_status": "Verified",
     "version": 1,
