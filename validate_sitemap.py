@@ -14,6 +14,12 @@ SITEMAP_FILE = ROOT / "sitemap.xml"
 BASE = "https://ovidhan.net"
 MAX_URLS = 50000
 FORBIDDEN_IF_MISSING = ("word/con.html", "word/aux.html")
+# Non-content / malformed URLs that must never appear in the sitemap
+FORBIDDEN_ALWAYS = (
+    "templates/lesson.html",
+    "templates/reading.html",
+    "word/.html",
+)
 
 
 def main() -> int:
@@ -74,6 +80,13 @@ def main() -> int:
         exists = (ROOT / forbidden).is_file()
         print(f"{forbidden}: in_sitemap={present} file_exists={exists}")
 
+    banned_present = []
+    for forbidden in FORBIDDEN_ALWAYS:
+        present = any(forbidden in url for url in unique) or forbidden in text
+        print(f"{forbidden}: in_sitemap={present} (must be absent)")
+        if present:
+            banned_present.append(forbidden)
+
     report = ROOT / "sitemap_validation_report.txt"
     with report.open("w", encoding="utf-8") as fh:
         fh.write("SITEMAP VALIDATION REPORT\n")
@@ -89,6 +102,7 @@ def main() -> int:
         and len(locs) < MAX_URLS
         and "word/con.html" not in text
         and "word/aux.html" not in text
+        and not banned_present
     )
     if ok:
         print("✅ Sitemap validation passed.")

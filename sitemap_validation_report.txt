@@ -1,8 +1,8 @@
 SITEMAP VALIDATION REPORT
 ============================================================
 
-total=49945
-unique=49945
+total=49942
+unique=49942
 duplicates=0
 missing=0
 
