@@ -1,42 +1,72 @@
-import os
-import xml.etree.ElementTree as ET
+#!/usr/bin/env python3
+"""
+Add a single new page to the sitemap safely.
+
+Prefer regenerating with the canonical generator when many pages change:
+    python generate_sitemap.py
+
+This helper only appends one URL when:
+- the HTML file exists on disk
+- the URL is not already present
+"""
+
+from __future__ import annotations
+
+import re
 from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 SITEMAP_FILE = ROOT / "sitemap.xml"
 NEW_PAGE = "/learning-path-elementary.html"  # Change this to your new page
+BASE = "https://ovidhan.net"
+MAX_URLS = 50000
 
-def update_sitemap():
-    # If sitemap doesn't exist, create a basic one
+
+def update_sitemap() -> None:
+    rel = NEW_PAGE.lstrip("/")
+    if not (ROOT / rel).is_file():
+        raise SystemExit(
+            f"❌ Refusing to add {NEW_PAGE}: file does not exist ({rel}). "
+            "Fix the path or create the page first."
+        )
+
+    full = BASE + NEW_PAGE
     if not SITEMAP_FILE.exists():
-        root = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
-    else:
-        tree = ET.parse(SITEMAP_FILE)
-        root = tree.getroot()
+        raise SystemExit("❌ sitemap.xml missing. Run: python generate_sitemap.py")
 
-    # Check if the URL already exists
-    for url in root.findall(".//url"):
-        loc = url.find("loc")
-        if loc is not None and loc.text == "https://ovidhan.net" + NEW_PAGE:
-            print(f"✅ {NEW_PAGE} already in sitemap.")
-            return
+    text = SITEMAP_FILE.read_text(encoding="utf-8")
+    if "<sitemapindex" in text:
+        raise SystemExit(
+            "❌ sitemap.xml is currently a sitemap index. "
+            "Use generate_sitemap.py instead of this helper."
+        )
 
-    # Add new entry
-    url_elem = ET.SubElement(root, "url")
-    loc = ET.SubElement(url_elem, "loc")
-    loc.text = "https://ovidhan.net" + NEW_PAGE
-    lastmod = ET.SubElement(url_elem, "lastmod")
-    lastmod.text = datetime.now().strftime("%Y-%m-%d")
-    changefreq = ET.SubElement(url_elem, "changefreq")
-    changefreq.text = "weekly"
-    priority = ET.SubElement(url_elem, "priority")
-    priority.text = "0.8"
+    locs = re.findall(r"<loc>(.*?)</loc>", text)
+    if full in locs:
+        print(f"✅ {NEW_PAGE} already in sitemap.")
+        return
 
-    # Write back
-    tree = ET.ElementTree(root)
-    tree.write(SITEMAP_FILE, encoding="utf-8", xml_declaration=True)
+    if len(locs) + 1 >= MAX_URLS:
+        raise SystemExit(
+            f"❌ Adding this URL would reach/exceed {MAX_URLS} entries. "
+            "Run generate_sitemap.py (split/index mode)."
+        )
+
+    entry = (
+        "  <url>\n"
+        f"    <loc>{full}</loc>\n"
+        f"    <lastmod>{datetime.now().strftime('%Y-%m-%d')}</lastmod>\n"
+        "    <changefreq>weekly</changefreq>\n"
+        "    <priority>0.8</priority>\n"
+        "  </url>\n"
+    )
+    if "</urlset>" not in text:
+        raise SystemExit("❌ sitemap.xml missing </urlset>. Regenerate with generate_sitemap.py")
+
+    SITEMAP_FILE.write_text(text.replace("</urlset>", entry + "</urlset>"), encoding="utf-8")
     print(f"✅ Added {NEW_PAGE} to sitemap.xml")
+
 
 if __name__ == "__main__":
     update_sitemap()
