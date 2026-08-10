@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Context Translator | Bangla to Natural English by Situation – Ovidhan</title>
+<meta name="description" content="Turn Bangla ideas into natural English by situation, intent and tone. Practise office, interview, airport, hospital, customer service, email, casual conversation and university English with Bangla learner notes, pronunciation and useful phrases.">
+<link rel="canonical" href="https://ovidhan.net/tools/context-translator.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B1F1A">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Context Translator | Bangla to Natural English by Situation – Ovidhan">
+<meta property="og:description" content="Choose a real-life situation, your intention and tone, then learn a more natural English way to express the idea.">
+<meta property="og:url" content="https://ovidhan.net/tools/context-translator.html">
+<meta property="og:site_name" content="Ovidhan">
+<meta property="og:image" content="https://ovidhan.net/images/og-tools.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Context Translator | Bangla to Natural English by Situation – Ovidhan">
+<meta name="twitter:description" content="Practise natural English for office, interview, airport, hospital, email and more.">
+<meta name="twitter:image" content="https://ovidhan.net/images/og-tools.jpg">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Ovidhan Context Translator",
+  "url":"https://ovidhan.net/tools/context-translator.html",
+  "applicationCategory":"EducationalApplication",
+  "operatingSystem":"Any",
+  "isAccessibleForFree":true,
+  "inLanguage":["bn-BD","en"],
+  "description":"A context-aware English learning tool for Bangladeshi learners that teaches natural English choices by situation, intent and tone.",
+  "publisher":{"@type":"Organization","name":"Ovidhan","url":"https://ovidhan.net/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://ovidhan.net/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://ovidhan.net/tools.html"},
+    {"@type":"ListItem","position":3,"name":"Context Translator","item":"https://ovidhan.net/tools/context-translator.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"What is the Context Translator?",
+      "acceptedAnswer":{"@type":"Answer","text":"It is an English learning tool for Bangladeshi learners. It helps you practise more natural English by choosing a situation, communication intent and tone."}
+    },
+    {
+      "@type":"Question",
+      "name":"Does this tool use live AI translation?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. This version uses a curated offline phrase and pattern library. When it does not recognise an exact sentence, it suggests useful patterns for the selected context and intent instead of inventing a translation."}
+    },
+    {
+      "@type":"Question",
+      "name":"Which situations are included?",
+      "acceptedAnswer":{"@type":"Answer","text":"Office, job interview, airport and travel, hospital, customer service, formal email, casual conversation and study or university."}
+    },
+    {
+      "@type":"Question",
+      "name":"Is this a certified translation service?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. It is a language-learning tool. For legal, medical or other high-stakes documents, use a qualified professional translator."}
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());gtag('config','G-7PS8PRT4KW');
+</script>
+
+<style>
+:root{
+ --bg:#0B1F1A;--surface:#122820;--surface2:#1A3530;--border:#1E3D38;
+ --gold:#E6B84A;--gold-dim:rgba(230,184,74,.12);--teal:#4ECDC4;--green:#4ade80;
+ --red:#f87171;--purple:#c084fc;--text:#D8EDEB;--mid:#8AADA9;--soft:#5A7D79;
+ --radius:14px;--font-bn:'Hind Siliguri',sans-serif;--font-en:'Inter',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-bn);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+#reading-progress-bar{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--teal));width:0;z-index:9999}
+#scroll-nav{position:fixed;bottom:100px;right:24px;z-index:999;display:flex;flex-direction:column;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:40px;padding:12px 10px;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+#scroll-nav .percent{color:var(--gold);font:700 12px var(--font-en)}
+#scroll-nav button{background:transparent;border:0;color:var(--mid);font-size:20px;cursor:pointer;padding:4px 6px}
+.breadcrumb{max-width:1100px;margin:15px auto 0;padding:0 22px;font:13px var(--font-en);color:var(--soft)}
+.hero{padding:64px 22px 46px;text-align:center;background:linear-gradient(155deg,#08221e,#0F3D3E 58%,#174d49)}
+.hero .eyebrow{display:inline-block;padding:6px 15px;border:1px solid rgba(230,184,74,.35);border-radius:30px;color:var(--gold);font:700 12px var(--font-en);letter-spacing:.6px}
+.hero h1{max-width:900px;margin:16px auto 12px;color:var(--gold);font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.15}
+.hero p{max-width:850px;margin:0 auto;color:#b0cfcb;font-size:1.06rem}
+.hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+.hero-badges span{padding:7px 14px;border-radius:30px;background:rgba(0,0,0,.18);border:1px solid rgba(78,205,196,.26);font-size:.85rem}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 22px 70px}
+.notice{max-width:920px;margin:0 auto 22px;padding:16px 18px;border-radius:12px;background:rgba(230,184,74,.07);border:1px solid rgba(230,184,74,.28);color:var(--mid)}
+.notice strong{color:var(--gold)}
+.tool-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:0 10px 35px rgba(0,0,0,.17)}
+.panel h2{color:var(--gold);margin:0 0 7px;font-size:1.35rem}
+.panel-sub{color:var(--mid);margin:0 0 18px}
+.field-label{display:block;color:var(--gold);font-weight:700;margin:16px 0 7px}
+.context-grid,.intent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.context-btn,.intent-btn{border:1px solid var(--border);background:#0f241e;color:var(--text);border-radius:11px;padding:12px 10px;cursor:pointer;text-align:left;font-family:inherit;transition:.18s}
+.context-btn:hover,.intent-btn:hover{border-color:var(--teal)}
+.context-btn.active,.intent-btn.active{border-color:var(--gold);background:rgba(230,184,74,.08)}
+.context-btn b,.intent-btn b{display:block;color:#fff}
+.context-btn span,.intent-btn span{display:block;color:var(--soft);font-size:.81rem}
+textarea{width:100%;min-height:145px;resize:vertical;background:#0a1a16;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:14px;font:1rem/1.65 var(--font-bn)}
+textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(78,205,196,.08)}
+.inline-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+select{background:#0a1a16;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;font-family:inherit}
+.btn{border:0;border-radius:40px;padding:12px 20px;font:700 14px var(--font-en);cursor:pointer;text-decoration:none;display:inline-block}
+.btn-primary{background:var(--gold);color:#0B1F1A}
+.btn-primary:hover{background:#f0c85a}
+.btn-ghost{background:transparent;color:var(--mid);border:1px solid var(--border)}
+.counter{margin-left:auto;color:var(--soft);font:12px var(--font-en)}
+.result-card{background:var(--surface2);border:1px solid var(--border);border-radius:13px;padding:16px;margin-top:12px}
+.result-card h3{margin:0 0 8px;color:var(--gold);font-size:1.08rem}
+.result-main{font-size:1.15rem;color:#fff;line-height:1.75}
+.result-bn{color:var(--mid);margin-top:6px}
+.tag{display:inline-block;margin:5px 5px 0 0;padding:4px 9px;border-radius:20px;background:#0c211b;border:1px solid var(--border);color:var(--teal);font:700 11px var(--font-en);text-transform:uppercase}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.compare-box{background:#0d211b;border-radius:11px;padding:13px;border:1px solid var(--border)}
+.compare-box .lab{font:700 11px var(--font-en);text-transform:uppercase;color:var(--soft)}
+.compare-box strong{display:block;margin-top:4px;color:#fff}
+.phrase-list,.fallback-patterns{display:grid;gap:8px}
+.phrase,.pattern-card{background:#0d211b;border:1px solid var(--border);border-radius:10px;padding:11px 12px}
+.phrase b,.pattern-card b{color:#fff}
+.phrase span,.pattern-card span{color:var(--mid);display:block;font-size:.88rem}
+.audio-btn,.copy-btn{border:0;border-radius:20px;padding:6px 10px;cursor:pointer;font:700 12px var(--font-en)}
+.audio-btn{background:rgba(78,205,196,.08);color:var(--teal)}
+.copy-btn{background:rgba(230,184,74,.08);color:var(--gold)}
+.empty{text-align:center;padding:46px 20px;color:var(--soft)}
+.empty .big{font-size:2.5rem}
+.fallback{background:rgba(230,184,74,.06);border:1px solid rgba(230,184,74,.22);border-radius:13px;padding:15px}
+.fallback h3{color:var(--gold);margin:0 0 6px}
+.fallback p{color:var(--mid);margin:0 0 12px}
+.section{padding:50px 0 0}
+.section h2{text-align:center;color:var(--gold);font-size:2rem;margin-bottom:8px}
+.section .sub{text-align:center;color:var(--mid);max-width:780px;margin:0 auto 24px}
+.example-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.example-card{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:16px;text-decoration:none;color:var(--text);transition:border-color .2s}
+.example-card:hover{border-color:var(--gold)}
+.example-card h3{margin:0 0 7px;color:var(--gold);font-size:1rem}
+.example-card p{margin:0;color:var(--mid);font-size:.92rem}
+.history{display:grid;gap:9px}
+.history-item{background:#0e231d;border:1px solid var(--border);border-radius:10px;padding:10px 12px;cursor:pointer}
+.history-item:hover{border-color:var(--teal)}
+.history-item b{display:block;color:#fff}
+.history-item span{color:var(--soft);font-size:.84rem}
+.faq-grid{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.faq-question{padding:18px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--text)}
+.faq-question:hover{color:var(--gold)}
+.faq-answer{padding:0 20px 20px;color:var(--mid);display:none}
+.faq-item.open .faq-answer{display:block}
+.cta-banner{background:linear-gradient(135deg,#0F3D3E,#1A5C5A);border:1px solid rgba(230,184,74,.3);border-radius:16px;padding:44px 28px;text-align:center;margin:40px auto;max-width:1000px}
+.cta-banner h2{color:var(--gold);font-size:2rem;margin-bottom:10px}
+.cta-banner p{color:var(--mid);margin-bottom:20px}
+.cta-btn{display:inline-block;background:var(--gold);color:#0B1F1A;font-weight:700;padding:14px 34px;border-radius:50px;text-decoration:none}
+.cta-features{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:18px;color:var(--teal);font-size:13px}
+.hidden{display:none!important}
+@media(max-width:820px){.tool-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.context-grid,.intent-grid,.compare{grid-template-columns:1fr}.panel{padding:18px 15px}#scroll-nav{right:14px;bottom:90px}}
+</style>
+</head>
+<body>
+
+<div id="reading-progress-bar"></div>
+<header class="site-header">
+<div class="nav-inner">
+<a class="logo" href="/">অভিধান <span>| Ovidhan</span></a>
+<div style="display: flex; align-items: center; gap: 12px;">
+<!-- Play Store Download Button -->
+<a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" rel="noopener" style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;" target="_blank">
+                📱 Download App
+            </a>
+<!-- Mobile Toggle Button -->
+<button aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</div>
+<ul class="mega-menu" id="megaMenu">
+<li><a href="/">🏠 Home</a></li>
+<li>
+<a href="/learn.html">📚 Learn</a>
+<div class="dropdown">
+<a href="/learn.html#beginner">Beginner (A1)</a>
+<a href="/learn.html#elementary">Elementary (A2)</a>
+<a href="/learn.html#intermediate">Intermediate (B1)</a>
+<a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+<a href="/learn.html#advanced">Advanced (C1)</a>
+<a href="/dashboard.html">📊 Progress</a>
+</div>
+</li>
+<li>
+<a href="/dictionary.html">📖 Dictionary</a>
+<div class="dropdown">
+<a href="/dictionary.html">Search Words</a>
+<a href="/explorer.html">Word Explorer</a>
+<a href="/word-of-the-day.html">Word of the Day</a>
+<a href="/vocabulary-builder.html">Vocabulary Builder</a>
+</div>
+</li>
+<li>
+<a href="/grammar.html">📝 Grammar</a>
+<div class="dropdown">
+<a href="/grammar.html#beginner">Beginner Grammar</a>
+<a href="/grammar.html#intermediate">Intermediate Grammar</a>
+<a href="/grammar.html#advanced">Advanced Grammar</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/speaking.html">🗣 Speaking</a>
+<div class="dropdown">
+<a href="/speaking.html#daily">Daily Conversation</a>
+<a href="/speaking.html#travel">Travel English</a>
+<a href="/speaking.html#office">Office English</a>
+<a href="/speaking.html#interview">Job Interview</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/listening.html">🎧 Listening</a>
+<div class="dropdown">
+<a href="/listening.html#lessons">All Listening Exercises</a>
+<a href="/listening.html">Daily English</a>
+<a href="/listening.html">Travel English</a>
+<a href="/listening.html">Workplace English</a>
+<a href="/listening.html">Academic English</a>
+<a href="/listening.html">IELTS Listening</a>
+</div>
+</li>
+<li>
+<a href="/writing.html">✍ Writing</a>
+<div class="dropdown">
+<a href="/writing.html#academic">Academic Writing</a>
+<a href="/writing.html#business">Business English</a>
+<a href="/writing.html#daily">Daily Writing</a>
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/grammar-checker.html">Grammar Checker</a>
+</div>
+</li>
+<li>
+<a href="/practice.html">🎯 Practice</a>
+<div class="dropdown">
+<a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
+<a href="/flashcards.html">Flashcards</a>
+<a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+<a href="/grammar-quiz.html">Grammar Quiz</a>
+<a href="/speaking-practice.html">Speaking Practice</a>
+</div>
+</li>
+<li>
+<a href="/assessment.html">🧪 Assessment</a>
+<div class="dropdown">
+<a href="/english-level-test.html">CEFR Level Test</a>
+<a href="/grammar-level-test.html">Grammar Test</a>
+<a href="/vocabulary-size-test.html">Vocabulary Size</a>
+<a href="/assessment.html">Progress Report</a>
+</div>
+</li>
+<li>
+<a href="/exam-prep.html">🎓 Exam Prep</a>
+<div class="dropdown">
+<a href="/ielts-guide.html">IELTS</a>
+<a href="/bcs-english-mock-test.html">BCS</a>
+<a href="/bank-job-english-preparation-guide-2026.html">Bank Jobs</a>
+<a href="/exam-prep.html">SSC / HSC</a>
+<a href="/exam-prep.html">University Admission</a>
+</div>
+</li>
+<li>
+<a href="/tools.html">🛠 Tools</a>
+<div class="dropdown">
+<a href="/sentence-analyzer.html">Sentence Analyzer</a>
+<a href="/tense-identifier.html">Tense Identifier</a>
+<a href="/voice-converter.html">Voice Converter</a>
+<a href="/plural-maker.html">Plural Maker</a>
+<a href="/verb-forms.html">Verb Forms</a>
+</div>
+</li>
+<li>
+<a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+<div class="dropdown">
+<a href="/bangladesh.html#visa">Visa &amp; Immigration</a>
+<a href="/bangladesh.html#job">Job Interview</a>
+<a href="/bangladesh.html#daily">Daily Life English</a>
+<a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+</div>
+</li>
+<li><a href="/blog.html">📰 Blog</a></li>
+</ul>
+</div>
+</header>
+
+<script>
+function toggleMenu(){
+ const menu=document.getElementById('megaMenu');
+ const toggle=document.querySelector('.menu-toggle');
+ if(menu)menu.classList.toggle('open');
+ if(toggle)toggle.classList.toggle('active');
+}
+document.addEventListener('DOMContentLoaded',function(){
+ document.querySelectorAll('.mega-menu a').forEach(function(link){
+  link.addEventListener('click',function(){
+   const menu=document.getElementById('megaMenu');
+   const toggle=document.querySelector('.menu-toggle');
+   if(menu)menu.classList.remove('open');
+   if(toggle)toggle.classList.remove('active');
+  });
+ });
+});
+</script>
+
+<div class="breadcrumb"><a href="/">Home</a> › <a href="/tools.html">Tools</a> › Context Translator</div>
+
+<section class="hero">
+ <span class="eyebrow">🧭 CONTEXT × INTENT × TONE</span>
+ <h1>Context Translator for Bangladeshi Learners</h1>
+ <p>Practise how to express the same Bangla idea naturally in different situations. Choose the context, what you want to do, and the tone you need — then learn the English pattern, not just one sentence.</p>
+ <div class="hero-badges">
+  <span>🇧🇩 Bangla → Natural English</span>
+  <span>🧭 Context + Intent</span>
+  <span>🎭 Formal / Neutral / Casual</span>
+  <span>🔊 Listen & Copy</span>
+  <span>📚 Bangla Learner Notes</span>
+ </div>
+</section>
+
+<main class="wrap">
+ <div class="notice">
+  <strong>Learning tool, not a certified translation service.</strong>
+  This version uses curated offline examples and language patterns. It does not use a live AI translation API. For legal, medical or other high-stakes documents, use a qualified professional translator.
+ </div>
+
+ <div class="tool-grid">
+  <section class="panel">
+   <h2>1. Build the Situation</h2>
+   <p class="panel-sub">Natural English depends on where you are, what you want to do, and how formal you need to sound.</p>
+
+   <label class="field-label">Context</label>
+   <div class="context-grid">
+    <button class="context-btn active" data-context="office"><b>💼 Office</b><span>manager, colleagues, workplace</span></button>
+    <button class="context-btn" data-context="interview"><b>🎯 Job Interview</b><span>professional answers and requests</span></button>
+    <button class="context-btn" data-context="airport"><b>✈️ Airport / Travel</b><span>check-in, directions, immigration</span></button>
+    <button class="context-btn" data-context="hospital"><b>🏥 Hospital</b><span>symptoms and basic communication</span></button>
+    <button class="context-btn" data-context="service"><b>🤝 Customer Service</b><span>requests, problems, polite complaints</span></button>
+    <button class="context-btn" data-context="email"><b>✉️ Formal Email</b><span>professional written English</span></button>
+    <button class="context-btn" data-context="casual"><b>💬 Casual Conversation</b><span>friends and everyday situations</span></button>
+    <button class="context-btn" data-context="study"><b>🎓 Study / University</b><span>teachers, classmates, academic life</span></button>
+   </div>
+
+   <label class="field-label">Intent</label>
+   <div class="intent-grid">
+    <button class="intent-btn active" data-intent="inform"><b>ℹ️ Inform</b><span>give an update or explain</span></button>
+    <button class="intent-btn" data-intent="request"><b>🙏 Request</b><span>ask someone to do something</span></button>
+    <button class="intent-btn" data-intent="permission"><b>🙋 Ask Permission</b><span>ask if something is allowed</span></button>
+    <button class="intent-btn" data-intent="apologise"><b>🤝 Apologise</b><span>say sorry naturally</span></button>
+    <button class="intent-btn" data-intent="complain"><b>📣 Complain Politely</b><span>report a problem without sounding rude</span></button>
+    <button class="intent-btn" data-intent="clarify"><b>❓ Ask / Clarify</b><span>get information or explanation</span></button>
+   </div>
+
+   <label class="field-label" for="sourceText">Write your Bangla idea</label>
+   <textarea id="sourceText" maxlength="300" placeholder="উদাহরণ: স্যার, আমি আজ একটু দেরি করে অফিসে আসব।"></textarea>
+   <div class="inline-row"><span class="counter"><span id="charCount">0</span>/300</span></div>
+
+   <label class="field-label" for="toneSelect">Tone</label>
+   <div class="inline-row">
+    <select id="toneSelect">
+     <option value="natural">Natural / Neutral</option>
+     <option value="formal">More Formal</option>
+     <option value="polite">Extra Polite</option>
+     <option value="casual">Casual</option>
+    </select>
+    <button class="btn btn-primary" id="translateBtn">Create Natural English →</button>
+    <button class="btn btn-ghost" id="exampleBtn" type="button">Try an example</button>
+    <button class="btn btn-ghost" id="resetBtn" type="button">↺ Reset</button>
+   </div>
+
+   <div class="section" style="padding-top:28px">
+    <h2 style="font-size:1.2rem;text-align:left">Recent practice</h2>
+    <div class="history" id="history"></div>
+   </div>
+  </section>
+
+  <section class="panel">
+   <h2>2. Learn From the Result</h2>
+   <p class="panel-sub">When a curated sentence matches, you get the translation plus tone and usage guidance. When it does not, you still get useful sentence patterns for that situation.</p>
+
+   <div id="emptyState" class="empty">
+    <div class="big">🧭</div>
+    <p>Choose a context and intent, write a Bangla idea, then create your learning result.</p>
+   </div>
+
+   <div id="resultArea" class="hidden">
+    <div id="matchedResult">
+     <div class="result-card">
+      <h3>✅ Natural English</h3>
+      <div class="result-main" id="naturalEnglish"></div>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+       <button class="audio-btn" id="listenBtn">🔊 Listen</button>
+       <button class="copy-btn" id="copyBtn">📋 Copy</button>
+      </div>
+     </div>
+
+     <div class="result-card">
+      <h3>🎭 Tone Comparison</h3>
+      <div class="compare">
+       <div class="compare-box"><div class="lab">More formal</div><strong id="formalVersion"></strong></div>
+       <div class="compare-box"><div class="lab">More casual</div><strong id="casualVersion"></strong></div>
+      </div>
+     </div>
+
+     <div class="result-card">
+      <h3>🇧🇩 Bangla Learner Note</h3>
+      <div class="result-bn" id="learnerNote"></div>
+     </div>
+
+     <div class="result-card">
+      <h3>📚 Useful Phrases to Remember</h3>
+      <div class="phrase-list" id="phraseList"></div>
+     </div>
+    </div>
+
+    <div id="fallbackResult" class="fallback hidden">
+     <h3>🧠 We don't have this exact sentence yet</h3>
+     <p>Instead of inventing a translation, here are useful English patterns for your selected context and intent. Try rewriting your idea around one of these patterns.</p>
+     <div class="fallback-patterns" id="fallbackPatterns"></div>
+     <p style="margin-top:12px"><a href="/bangla-to-english-translation-hub.html">Open the Translation Hub →</a></p>
+    </div>
+
+    <div class="result-card">
+     <h3>🏷️ Best Use</h3>
+     <div id="usageTags"></div>
+    </div>
+   </div>
+  </section>
+ </div>
+
+ <section class="section">
+  <h2>Why Context + Intent Matters</h2>
+  <p class="sub">Bangla speakers often know the words but still sound unnatural because the situation and purpose change the English pattern.</p>
+  <div class="example-grid">
+   <div class="example-card"><h3>💼 Office · Inform</h3><p><b>Bangla:</b> স্যার, আমি আজ একটু দেরি করে আসব।<br><b>Natural:</b> I may be a little late to the office today.</p></div>
+   <div class="example-card"><h3>🙏 Office · Request</h3><p><b>Bangla:</b> আপনি কি ফাইলটা পাঠাতে পারবেন?<br><b>Natural:</b> Could you send me the file?</p></div>
+   <div class="example-card"><h3>✈️ Airport · Clarify</h3><p><b>Bangla:</b> আমার গেটটা কোথায়?<br><b>Natural:</b> Could you tell me where my gate is?</p></div>
+   <div class="example-card"><h3>✉️ Email · Formal</h3><p><b>Bangla:</b> আপনার উত্তর অপেক্ষা করছি।<br><b>Natural:</b> I look forward to hearing from you.</p></div>
+  </div>
+ </section>
+
+ <section class="section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-grid">
+   <div class="faq-item open"><div class="faq-question" onclick="toggleFAQ(this)">What makes this different from a normal translator? <span>▾</span></div><div class="faq-answer">The goal is learning. You choose the situation, communication intent and tone, then study natural English patterns, alternative wording and Bangla learner notes.</div></div>
+   <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Does it translate every Bangla sentence? <span>▾</span></div><div class="faq-answer">No. This offline version uses a curated phrase and pattern library. If there is no reliable match, it shows useful patterns rather than inventing an answer.</div></div>
+   <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Can I use it for medical or legal documents? <span>▾</span></div><div class="faq-answer">No. For high-stakes documents or urgent medical communication, use a qualified professional translator or appropriate professional service.</div></div>
+   <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Will more phrases be added? <span>▾</span></div><div class="faq-answer">Yes. The design supports adding more curated examples and pattern families without changing the page URL or learner workflow.</div></div>
+  </div>
+ </section>
+
+ <div class="cta-banner">
+  <h2>📱 Practise Natural English with Dakho</h2>
+  <p>Continue with smart flashcards, quizzes and spaced repetition in the Dakho app.</p>
+  <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" target="_blank" class="cta-btn">📥 Download Dakho Now</a>
+  <div class="cta-features">
+   <span>✅ 100% Free</span><span>✅ Offline Dictionary</span><span>✅ Flashcards & Quizzes</span><span>✅ Goal Journeys</span><span>✅ Spaced Repetition</span>
+  </div>
+ </div>
+
+ <section class="section">
+  <h2>Continue Learning</h2>
+  <p class="sub">Use the translator as a starting point, then practise the language in the most relevant Ovidhan lesson.</p>
+  <div class="example-grid">
+   <a class="example-card" href="/bangla-to-english-translation-hub.html"><h3>🌐 Translation Hub</h3><p>Learn Bangla-to-English patterns and common translation mistakes.</p></a>
+   <a class="example-card" href="/tools.html"><h3>🛠️ All Tools</h3><p>Explore more English learning tools.</p></a>
+   <a class="example-card" href="/speaking.html"><h3>🗣️ Speaking</h3><p>Practise natural everyday and professional English.</p></a>
+   <a class="example-card" href="/business-email-writing-bangla.html"><h3>✉️ Business Email</h3><p>Write clearer professional emails.</p></a>
+   <a class="example-card" href="/job-interview-english-bangla.html"><h3>🎯 Interview English</h3><p>Prepare useful answers and professional phrases.</p></a>
+  </div>
+ </section>
+</main>
+
+<footer class="site-footer">
+<p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+<p>
+<a href="/">Home</a>  • 
+        <a href="/grammar.html">Grammar</a>  • 
+        <a href="/tools.html">Tools</a>  • 
+        <a href="/blog.html">Blog</a>  • 
+        <a href="/dictionary.html">Dictionary</a>  • 
+        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>  • 
+        <a href="/privacy.html">Privacy Policy</a>
+</p>
+<p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
+</footer>
+
+<div id="scroll-nav">
+ <button id="scroll-to-top" title="Go to top">⬆</button>
+ <div class="percent" id="scroll-percent">0%</div>
+ <button id="scroll-to-bottom" title="Go to bottom">⬇</button>
+</div>
+
+<script>
+function toggleFAQ(el){const item=el.closest('.faq-item');if(item)item.classList.toggle('open')}
+
+const CONTEXTS={
+ office:{
+  label:'Office',
+  patterns:{
+   inform:[['I wanted to let you know that…','আপনাকে জানাতে চাই যে…'],['I may be a little late…','আমার একটু দেরি হতে পারে…'],['Just to keep you updated…','আপনাকে আপডেট রাখতে…']],
+   request:[['Could you please…?','আপনি কি অনুগ্রহ করে…?'],['Would you be able to…?','আপনি কি… করতে পারবেন?'],["I'd appreciate it if you could…",'আপনি করলে আমি কৃতজ্ঞ থাকব…']],
+   permission:[['Would it be possible for me to…?','আমি কি… করতে পারি?'],['May I…?','আমি কি…?'],['Would you mind if I…?','আমি যদি… করি আপত্তি আছে?']],
+   apologise:[["I'm sorry for…",'…এর জন্য দুঃখিত'],['I apologise for the inconvenience.','অসুবিধার জন্য দুঃখিত'],['Sorry for the delay.','দেরির জন্য দুঃখিত']],
+   complain:[["I'm afraid there seems to be a problem with…",'দুঃখিত, … নিয়ে সমস্যা আছে'],['Could you please look into this?','আপনি কি বিষয়টি দেখবেন?'],["I'd like to raise an issue regarding…",'… বিষয়ে একটি সমস্যা জানাতে চাই']],
+   clarify:[['Could you clarify…?','আপনি কি পরিষ্কার করে বলবেন…?'],['Could you explain what you mean by…?','আপনি … বলতে কী বোঝাচ্ছেন?'],['Just to confirm…','নিশ্চিত হওয়ার জন্য…']]
+  },
+  examples:[
+   {intent:'inform',bn:'স্যার, আমি আজ একটু দেরি করে অফিসে আসব।',natural:'I may be a little late to the office today.',formal:'I wanted to let you know that I may arrive a little late to the office today.',casual:'I might be a bit late to work today.',note:'Bangla থেকে সরাসরি “I will come late” বললে অর্থ বোঝা যায়, কিন্তু workplace English-এ “I may be a little late” বেশি natural.',phrases:[['may be a little late','একটু দেরি হতে পারে'],['wanted to let you know','আপনাকে জানাতে চাচ্ছিলাম'],['arrive late','দেরিতে পৌঁছানো']]},
+   {intent:'request',bn:'আপনি কি ফাইলটা আজ আমাকে পাঠাতে পারবেন?',natural:'Could you send me the file today?',formal:'Would you be able to send me the file today, please?',casual:'Can you send me the file today?',note:'Professional request-এ “Could you…” বা “Would you be able to…” বেশি polite.',phrases:[['Could you…?','আপনি কি… পারবেন?'],['Would you be able to…?','আপনি কি… করতে পারবেন?'],['send me the file','ফাইলটি আমাকে পাঠানো']]}
+  ]
+ },
+ interview:{
+  label:'Job Interview',
+  patterns:{
+   inform:[["I have experience in…",'আমার … বিষয়ে অভিজ্ঞতা আছে'],["I've been working in… for…",'আমি … ধরে …-এ কাজ করছি'],["My background is in…",'আমার অভিজ্ঞতার ক্ষেত্র…']],
+   request:[['Could you tell me more about…?','আপনি কি … সম্পর্কে আরও বলবেন?'],['May I ask about…?','আমি কি … সম্পর্কে জানতে পারি?'],["I'd be interested to know…",'আমি জানতে আগ্রহী…']],
+   permission:[['Would it be alright if I…?','আমি যদি… করি ঠিক হবে?'],['May I give an example?','আমি কি একটি উদাহরণ দিতে পারি?'],['Could I clarify one point?','আমি কি একটি বিষয় পরিষ্কার করতে পারি?']],
+   apologise:[["I'm sorry, could you repeat the question?",'দুঃখিত, প্রশ্নটি আবার বলবেন?'],['I apologise; I may have misunderstood.','দুঃখিত, আমি হয়তো ভুল বুঝেছি'],['Sorry, let me rephrase that.','দুঃখিত, অন্যভাবে বলি']],
+   complain:[["I'd prefer to focus on…",'আমি বরং …-এ ফোকাস করতে চাই'],['I have some concerns about…','… নিয়ে আমার কিছু উদ্বেগ আছে'],["I'd like to clarify the expectations around…",'… সম্পর্কে প্রত্যাশা পরিষ্কার করতে চাই']],
+   clarify:[['Could you please repeat the question?','প্রশ্নটি আবার বলবেন?'],['Do you mean…?','আপনি কি … বোঝাচ্ছেন?'],['Could you clarify what you mean by…?','আপনি … বলতে কী বোঝাচ্ছেন?']]
+  },
+  examples:[
+   {intent:'inform',bn:'আমি এই কাজের জন্য খুব আগ্রহী।',natural:"I'm very interested in this role.",formal:"I'm particularly interested in this position because it matches my experience and career goals.",casual:"I'm really interested in the job.",note:'Interview-এ “this role/position” সাধারণত “this job” এর চেয়ে বেশি professional.',phrases:[['interested in this role','এই পদের প্রতি আগ্রহী'],['matches my experience','আমার অভিজ্ঞতার সাথে মেলে'],['career goals','ক্যারিয়ার লক্ষ্য']]},
+   {intent:'inform',bn:'আমি সাত বছর ধরে রেস্টুরেন্টে কাজ করছি।',natural:"I've been working in restaurants for seven years.",formal:"I have seven years of experience working in the restaurant industry.",casual:"I've worked in restaurants for seven years.",note:'চলমান অভিজ্ঞতা বোঝাতে Present Perfect Continuous বা “I have X years of experience” natural.',phrases:[['seven years of experience','সাত বছরের অভিজ্ঞতা'],['restaurant industry','রেস্টুরেন্ট খাত'],['I have been working','আমি কাজ করে আসছি']]}
+  ]
+ },
+ airport:{
+  label:'Airport / Travel',
+  patterns:{
+   inform:[["My flight is…",'আমার ফ্লাইট…'],["I have a connecting flight to…",'আমার …-এ connecting flight আছে'],["My luggage hasn't arrived yet.",'আমার লাগেজ এখনো আসেনি']],
+   request:[['Could you help me with…?','আপনি কি …-এ সাহায্য করবেন?'],['Could you tell me where…?','আপনি কি বলবেন কোথায়…?'],['Could I have…?','আমি কি … পেতে পারি?']],
+   permission:[['May I take this bag on board?','আমি কি এই ব্যাগটি সাথে নিতে পারি?'],['Can I go through here?','আমি কি এখান দিয়ে যেতে পারি?'],['Am I allowed to…?','আমি কি … করতে পারি?']],
+   apologise:[["I'm sorry, I didn't understand.",'দুঃখিত, আমি বুঝিনি'],['Sorry, I think I missed the announcement.','দুঃখিত, ঘোষণা মিস করেছি'],['I apologise for the confusion.','বিভ্রান্তির জন্য দুঃখিত']],
+   complain:[["My luggage hasn't arrived yet.",'আমার লাগেজ এখনো আসেনি'],["There seems to be a problem with my booking.",'আমার বুকিংয়ে সমস্যা আছে'],['Could you please check this for me?','আপনি কি এটি দেখে দেবেন?']],
+   clarify:[['Could you tell me where my gate is?','আমার গেট কোথায় বলবেন?'],['Which line should I join?','আমি কোন লাইনে দাঁড়াব?'],['What time does boarding start?','বোর্ডিং কখন শুরু হবে?']]
+  },
+  examples:[
+   {intent:'clarify',bn:'আমার গেটটা কোথায়?',natural:'Could you tell me where my gate is?',formal:'Could you please tell me where I can find my departure gate?',casual:'Do you know where my gate is?',note:'Indirect question-এ “where my gate is” হবে, “where is my gate” নয়.',phrases:[['departure gate','প্রস্থান গেট'],['Could you tell me…?','আপনি কি বলতে পারেন…?'],['where I can find','আমি কোথায় পাব']]},
+   {intent:'complain',bn:'আমার লাগেজ এখনো আসেনি।',natural:"My luggage hasn't arrived yet.",formal:"My luggage has not arrived yet. Could you please help me locate it?",casual:"My bag hasn't come out yet.",note:'“Luggage” uncountable noun, তাই সাধারণত “luggages” বলা হয় না.',phrases:[['has not arrived yet','এখনো আসেনি'],['locate my luggage','লাগেজ খুঁজে বের করা'],['baggage claim','লাগেজ সংগ্রহের স্থান']]}
+  ]
+ },
+ hospital:{
+  label:'Hospital',
+  patterns:{
+   inform:[["I've had… for…",'আমার … ধরে … হচ্ছে'],["I've been experiencing…",'আমি … অনুভব করছি'],['The pain started…','ব্যথা শুরু হয়েছে…']],
+   request:[['Could I speak to a doctor?','আমি কি একজন ডাক্তারের সাথে কথা বলতে পারি?'],['Could you help me, please?','আপনি কি আমাকে সাহায্য করবেন?'],['I need help with…','আমার … বিষয়ে সাহায্য দরকার']],
+   permission:[['Can I take this medicine with food?','আমি কি খাবারের সাথে ওষুধটি নিতে পারি?'],['May I sit here?','আমি কি এখানে বসতে পারি?'],['Is it okay if I…?','আমি যদি … করি ঠিক হবে?']],
+   apologise:[["I'm sorry, I don't understand.",'দুঃখিত, আমি বুঝতে পারছি না'],['Could you say that more slowly, please?','আরও ধীরে বলবেন?'],['Sorry, could you repeat that?','দুঃখিত, আবার বলবেন?']],
+   complain:[["The pain is getting worse.",'ব্যথা বাড়ছে'],["I've been waiting for…",'আমি … ধরে অপেক্ষা করছি'],['I still feel unwell.','আমি এখনো অসুস্থ বোধ করছি']],
+   clarify:[['What does this medicine do?','এই ওষুধ কী করে?'],['How often should I take it?','কতবার নিতে হবে?'],['Could you explain that again?','আবার বুঝিয়ে বলবেন?']]
+  },
+  examples:[
+   {intent:'inform',bn:'আমার তিন দিন ধরে পেট ব্যথা করছে।',natural:"I've had stomach pain for three days.",formal:"I've been experiencing stomach pain for the past three days.",casual:"My stomach has been hurting for three days.",note:'ডাক্তারের কাছে duration স্পষ্ট করুন: “for three days”, “since Monday”. জরুরি উপসর্গে অনলাইন অনুবাদের উপর নির্ভর করবেন না.',phrases:[['stomach pain','পেট ব্যথা'],['for the past three days','গত তিন দিন ধরে'],['I have been experiencing','আমি অনুভব করে আসছি']]},
+   {intent:'inform',bn:'আমার মাথা ঘুরছে।',natural:"I feel dizzy.",formal:"I've been feeling dizzy.",casual:"I'm feeling dizzy.",note:'Bangla “মাথা ঘুরছে” ইংরেজিতে সাধারণত “I feel dizzy” — literal “my head is turning” নয়.',phrases:[['feel dizzy','মাথা ঘোরা অনুভব করা'],['symptoms','উপসর্গ'],['since this morning','আজ সকাল থেকে']]}
+  ]
+ },
+ service:{
+  label:'Customer Service',
+  patterns:{
+   inform:[["I'm contacting you about…",'আমি … সম্পর্কে যোগাযোগ করছি'],["I haven't received… yet.",'আমি এখনো … পাইনি'],['My order number is…','আমার অর্ডার নম্বর…']],
+   request:[["I'd like to…",'আমি … করতে চাই'],['Could you please…?','আপনি কি অনুগ্রহ করে…?'],['Would you be able to…?','আপনি কি … করতে পারবেন?']],
+   permission:[['Can I change…?','আমি কি … পরিবর্তন করতে পারি?'],['Would it be possible to…?','… করা কি সম্ভব?'],['Am I able to…?','আমি কি … করতে পারি?']],
+   apologise:[["I'm sorry for the confusion.",'বিভ্রান্তির জন্য দুঃখিত'],['I apologise for the misunderstanding.','ভুল বোঝাবুঝির জন্য দুঃখিত'],['Sorry, I gave the wrong information.','দুঃখিত, ভুল তথ্য দিয়েছি']],
+   complain:[["I'm afraid there is a problem with…",'দুঃখিত, … নিয়ে সমস্যা আছে'],["I haven't received my refund yet.",'আমি এখনো রিফান্ড পাইনি'],['Could you please resolve this issue?','আপনি কি সমস্যা সমাধান করবেন?']],
+   clarify:[['Could you confirm…?','আপনি কি নিশ্চিত করবেন…?'],['Could you explain the charge?','চার্জটি বুঝিয়ে বলবেন?'],['What happens next?','এরপর কী হবে?']]
+  },
+  examples:[
+   {intent:'request',bn:'আমি এই অর্ডারটা বাতিল করতে চাই।',natural:"I'd like to cancel this order.",formal:"I would like to request the cancellation of this order.",casual:"I want to cancel this order.",note:'Customer service-এ “I’d like to…” polite এবং direct.',phrases:[["I'd like to…",'আমি … করতে চাই (ভদ্রভাবে)'],['cancel this order','এই অর্ডার বাতিল করা'],['request a cancellation','বাতিলের অনুরোধ করা']]},
+   {intent:'complain',bn:'আমি এখনো টাকা ফেরত পাইনি।',natural:"I haven't received my refund yet.",formal:"I have not yet received the refund for my order.",casual:"I still haven't got my refund.",note:'Refund-এর সাথে “receive/get a refund” natural collocation.',phrases:[['receive a refund','টাকা ফেরত পাওয়া'],['for my order','আমার অর্ডারের জন্য'],['not yet','এখনো নয়']]}
+  ]
+ },
+ email:{
+  label:'Formal Email',
+  patterns:{
+   inform:[["I'm writing to let you know that…",'আপনাকে জানাতে লিখছি যে…'],['Please note that…','অনুগ্রহ করে লক্ষ্য করুন…'],["I've attached…",'আমি … সংযুক্ত করেছি']],
+   request:[['Could you please…?','আপনি কি অনুগ্রহ করে…?'],['I would appreciate it if you could…','আপনি করলে কৃতজ্ঞ থাকব…'],['Please could you confirm…?','অনুগ্রহ করে নিশ্চিত করবেন…?']],
+   permission:[['Would it be possible for me to…?','আমি কি … করতে পারি?'],['May I…?','আমি কি…?'],['I would like to request permission to…','আমি … করার অনুমতি চাই']],
+   apologise:[["I apologise for…",'…এর জন্য দুঃখিত'],['Please accept my apologies for…','…এর জন্য ক্ষমা চাইছি'],['I am sorry for the delay.','দেরির জন্য দুঃখিত']],
+   complain:[["I'm writing to raise a concern about…",'… বিষয়ে উদ্বেগ জানাতে লিখছি'],['I would like to report an issue with…','… বিষয়ে সমস্যা জানাতে চাই'],['I would appreciate a prompt resolution.','দ্রুত সমাধান পেলে কৃতজ্ঞ থাকব']],
+   clarify:[['Could you please clarify…?','আপনি কি পরিষ্কার করবেন…?'],['Could you confirm whether…?','আপনি কি নিশ্চিত করবেন…?'],['I would be grateful if you could explain…','আপনি বুঝিয়ে বললে কৃতজ্ঞ থাকব']]
+  },
+  examples:[
+   {intent:'inform',bn:'ফাইলটি সংযুক্ত করলাম।',natural:"I've attached the file.",formal:'Please find the file attached for your reference.',casual:"I've attached the file here.",note:'Everyday professional email-এ “I’ve attached…” natural ও concise.',phrases:[["I've attached…",'আমি সংযুক্ত করেছি'],['for your reference','আপনার রেফারেন্সের জন্য'],['please find attached','সংযুক্ত ফাইলটি দেখুন (formal)']]},
+   {intent:'inform',bn:'আপনার উত্তর অপেক্ষা করছি।',natural:'I look forward to hearing from you.',formal:'I look forward to your response.',casual:'Hope to hear from you soon.',note:'“I am waiting for your reply” অনেক সময় বেশি direct শোনায়; “I look forward to hearing from you” standard professional phrase.',phrases:[['look forward to hearing from you','আপনার উত্তরের অপেক্ষায়'],['your response','আপনার উত্তর'],['please let me know','অনুগ্রহ করে জানান']]}
+  ]
+ },
+ casual:{
+  label:'Casual Conversation',
+  patterns:{
+   inform:[["Just letting you know…",'শুধু জানাচ্ছি…'],["I'll… later.",'আমি পরে … করব'],["I've been…",'আমি … করে আসছি']],
+   request:[['Can you…?','তুমি কি…?'],['Could you…?','তুমি কি…?'],['Do you mind…?','তোমার কি আপত্তি আছে…?']],
+   permission:[['Can I…?','আমি কি…?'],['Is it okay if I…?','আমি যদি … করি ঠিক আছে?'],['Do you mind if I…?','আমি যদি … করি আপত্তি আছে?']],
+   apologise:[["Sorry about that.",'এটার জন্য দুঃখিত'],["My bad.",'আমার ভুল (খুব casual)'],["I'm really sorry.",'আমি সত্যিই দুঃখিত']],
+   complain:[["I'm having a problem with…",'… নিয়ে সমস্যা হচ্ছে'],["This isn't working properly.",'এটি ঠিকমতো কাজ করছে না'],['Can you help me sort this out?','এটি ঠিক করতে সাহায্য করবে?']],
+   clarify:[['What do you mean?','তুমি কী বোঝাতে চাও?'],['Can you say that again?','আবার বলবে?'],['Do you mean…?','তুমি কি … বোঝাচ্ছ?']]
+  },
+  examples:[
+   {intent:'inform',bn:'অনেক দিন তোমার সাথে কথা হয়নি।',natural:"We haven't talked in ages.",formal:"It's been a long time since we last spoke.",casual:"Haven't talked to you in ages!",note:'বন্ধুর সাথে “in ages” খুব natural informal expression.',phrases:[['in ages','অনেক দিন ধরে'],['last spoke','শেষ কথা হয়েছিল'],['good to hear from you','তোমার খবর পেয়ে ভালো লাগল']]},
+   {intent:'inform',bn:'আমি একটু পরে তোমাকে ফোন দিচ্ছি।',natural:"I'll call you a little later.",formal:"I'll give you a call a little later.",casual:"I'll call you later.",note:'Bangla “ফোন দিচ্ছি” literal “I am giving you a phone” নয়; English-এ “call you” / “give you a call”.',phrases:[['call you later','পরে ফোন করা'],['give you a call','ফোন করা'],['a little later','একটু পরে']]}
+  ]
+ },
+ study:{
+  label:'Study / University',
+  patterns:{
+   inform:[["I'm having difficulty with…",'… নিয়ে আমার সমস্যা হচ্ছে'],["I've completed…",'আমি … শেষ করেছি'],["I'm working on…",'আমি … নিয়ে কাজ করছি']],
+   request:[['Could you explain…?','আপনি কি … বুঝিয়ে বলবেন?'],['Could you please send…?','আপনি কি … পাঠাবেন?'],['Would it be possible to…?','… করা কি সম্ভব?']],
+   permission:[['May I submit this later?','আমি কি এটি পরে জমা দিতে পারি?'],['Could I ask a question?','আমি কি একটি প্রশ্ন করতে পারি?'],['Would it be okay if I…?','আমি যদি … করি ঠিক হবে?']],
+   apologise:[["I'm sorry for submitting this late.",'দেরিতে জমা দেওয়ার জন্য দুঃখিত'],['I apologise for missing the class.','ক্লাস মিস করার জন্য দুঃখিত'],['Sorry, I misunderstood the task.','দুঃখিত, কাজটি ভুল বুঝেছি']],
+   complain:[["I'm having difficulty accessing…",'… অ্যাক্সেস করতে সমস্যা হচ্ছে'],['There seems to be an issue with…','… নিয়ে সমস্যা আছে'],['Could you please check this?','আপনি কি এটি দেখবেন?']],
+   clarify:[['When is the assignment due?','অ্যাসাইনমেন্ট কবে জমা?'],['Could you explain this topic?','বিষয়টি বুঝিয়ে বলবেন?'],['What does this mean?','এর মানে কী?']]
+  },
+  examples:[
+   {intent:'clarify',bn:'আমি এই বিষয়টা বুঝতে পারছি না।',natural:"I don't understand this topic.",formal:"I'm having difficulty understanding this topic.",casual:"I don't really get this topic.",note:'Teacher-এর সাথে “I’m having difficulty understanding…” polite ও academic.',phrases:[['having difficulty understanding','বুঝতে সমস্যা হচ্ছে'],['this topic','এই বিষয়'],['Could you explain…?','আপনি কি বুঝিয়ে বলতে পারেন…?']]},
+   {intent:'clarify',bn:'অ্যাসাইনমেন্ট জমা দেওয়ার শেষ তারিখ কবে?',natural:'When is the assignment due?',formal:'Could you please confirm the deadline for the assignment?',casual:"When's the assignment due?",note:'Standard international English-এ “deadline/due date” বেশি natural.',phrases:[['assignment due','অ্যাসাইনমেন্ট জমার সময়'],['deadline','শেষ সময়সীমা'],['due date','জমার নির্ধারিত তারিখ']]}
+  ]
+ }
+};
+
+let activeContext='office';
+let activeIntent='inform';
+let currentResult=null;
+const source=document.getElementById('sourceText');
+const charCount=document.getElementById('charCount');
+const tone=document.getElementById('toneSelect');
+const historyEl=document.getElementById('history');
+
+document.querySelectorAll('.context-btn').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.context-btn').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active');activeContext=btn.dataset.context;
+}));
+document.querySelectorAll('.intent-btn').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.intent-btn').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active');activeIntent=btn.dataset.intent;
+}));
+source.addEventListener('input',()=>charCount.textContent=source.value.length);
+
+function normalise(s){return s.trim().replace(/[।.!?]+$/,'').replace(/\s+/g,' ')}
+function similarity(a,b){
+ a=normalise(a);b=normalise(b);
+ if(!a||!b)return 0;if(a===b)return 1;
+ const aw=new Set(a.split(' ')),bw=new Set(b.split(' '));let common=0;
+ aw.forEach(w=>{if(bw.has(w))common++});
+ return common/Math.max(aw.size,bw.size);
+}
+function findExample(text){
+ const ctx=CONTEXTS[activeContext];let best=null,score=0;
+ ctx.examples.filter(ex=>ex.intent===activeIntent).forEach(ex=>{const s=similarity(text,ex.bn);if(s>score){score=s;best=ex}});
+ return score>=.42?best:null;
+}
+function toneChoice(ex){
+ if(tone.value==='formal'||tone.value==='polite')return ex.formal;
+ if(tone.value==='casual')return ex.casual;
+ return ex.natural;
+}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+
+function showMatch(ex){
+ currentResult=ex;
+ document.getElementById('emptyState').classList.add('hidden');
+ document.getElementById('resultArea').classList.remove('hidden');
+ document.getElementById('matchedResult').classList.remove('hidden');
+ document.getElementById('fallbackResult').classList.add('hidden');
+ document.getElementById('naturalEnglish').textContent=toneChoice(ex);
+ document.getElementById('formalVersion').textContent=ex.formal;
+ document.getElementById('casualVersion').textContent=ex.casual;
+ document.getElementById('learnerNote').textContent=ex.note;
+ document.getElementById('phraseList').innerHTML=ex.phrases.map(p=>`<div class="phrase"><b>${escapeHTML(p[0])}</b><span>${escapeHTML(p[1])}</span></div>`).join('');
+ document.getElementById('usageTags').innerHTML=`<span class="tag">${CONTEXTS[activeContext].label}</span><span class="tag">${activeIntent}</span><span class="tag">${tone.options[tone.selectedIndex].text}</span>`;
+ saveHistory(ex);
+}
+function showFallback(text){
+ currentResult=null;
+ document.getElementById('emptyState').classList.add('hidden');
+ document.getElementById('resultArea').classList.remove('hidden');
+ document.getElementById('matchedResult').classList.add('hidden');
+ document.getElementById('fallbackResult').classList.remove('hidden');
+ const patterns=CONTEXTS[activeContext].patterns[activeIntent]||[];
+ document.getElementById('fallbackPatterns').innerHTML=patterns.map(p=>`<div class="pattern-card"><b>${escapeHTML(p[0])}</b><span>${escapeHTML(p[1])}</span></div>`).join('');
+ document.getElementById('usageTags').innerHTML=`<span class="tag">${CONTEXTS[activeContext].label}</span><span class="tag">${activeIntent}</span><span class="tag">Pattern guidance</span>`;
+ saveFallbackHistory(text);
+}
+
+document.getElementById('translateBtn').addEventListener('click',()=>{
+ const text=source.value.trim();if(!text){source.focus();return}
+ const ex=findExample(text);if(ex)showMatch(ex);else showFallback(text);
+});
+document.getElementById('exampleBtn').addEventListener('click',()=>{
+ const arr=CONTEXTS[activeContext].examples.filter(ex=>ex.intent===activeIntent);
+ const pool=arr.length?arr:CONTEXTS[activeContext].examples;
+ const ex=pool[Math.floor(Math.random()*pool.length)];
+ activeIntent=ex.intent;
+ document.querySelectorAll('.intent-btn').forEach(b=>b.classList.toggle('active',b.dataset.intent===activeIntent));
+ source.value=ex.bn;charCount.textContent=source.value.length;showMatch(ex);
+});
+document.getElementById('resetBtn').addEventListener('click',()=>{
+ source.value='';charCount.textContent='0';currentResult=null;
+ document.getElementById('emptyState').classList.remove('hidden');
+ document.getElementById('resultArea').classList.add('hidden');
+});
+document.getElementById('listenBtn').addEventListener('click',()=>{
+ if(!currentResult||!('speechSynthesis'in window))return;
+ window.speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(toneChoice(currentResult));u.lang='en-GB';u.rate=.92;window.speechSynthesis.speak(u);
+});
+document.getElementById('copyBtn').addEventListener('click',async()=>{
+ if(!currentResult)return;const text=toneChoice(currentResult);const btn=document.getElementById('copyBtn');
+ try{await navigator.clipboard.writeText(text);btn.textContent='✅ Copied!';setTimeout(()=>btn.textContent='📋 Copy',1500)}catch(e){}
+});
+
+function saveHistory(ex){
+ try{
+  let h=JSON.parse(localStorage.getItem('ovidhan_context_history_v2')||'[]');
+  h.unshift({type:'match',context:activeContext,intent:activeIntent,bn:ex.bn,en:toneChoice(ex),ts:Date.now()});
+  h=h.slice(0,6);localStorage.setItem('ovidhan_context_history_v2',JSON.stringify(h));renderHistory();
+ }catch(e){}
+}
+function saveFallbackHistory(text){
+ try{
+  let h=JSON.parse(localStorage.getItem('ovidhan_context_history_v2')||'[]');
+  h.unshift({type:'pattern',context:activeContext,intent:activeIntent,bn:text,en:'Pattern guidance',ts:Date.now()});
+  h=h.slice(0,6);localStorage.setItem('ovidhan_context_history_v2',JSON.stringify(h));renderHistory();
+ }catch(e){}
+}
+function renderHistory(){
+ let h=[];try{h=JSON.parse(localStorage.getItem('ovidhan_context_history_v2')||'[]')}catch(e){}
+ if(!h.length){historyEl.innerHTML='<div style="color:var(--soft)">No recent practice yet.</div>';return}
+ historyEl.innerHTML=h.map((x,i)=>`<div class="history-item" data-i="${i}"><b>${escapeHTML(x.en)}</b><span>${escapeHTML(x.bn)} · ${escapeHTML(CONTEXTS[x.context]?.label||x.context)} · ${escapeHTML(x.intent)}</span></div>`).join('');
+ historyEl.querySelectorAll('.history-item').forEach(el=>el.addEventListener('click',()=>{
+  const x=h[Number(el.dataset.i)];activeContext=x.context;activeIntent=x.intent;
+  document.querySelectorAll('.context-btn').forEach(b=>b.classList.toggle('active',b.dataset.context===activeContext));
+  document.querySelectorAll('.intent-btn').forEach(b=>b.classList.toggle('active',b.dataset.intent===activeIntent));
+  source.value=x.bn;charCount.textContent=source.value.length;
+  const ex=findExample(x.bn);if(ex)showMatch(ex);else showFallback(x.bn);
+ }));
+}
+document.addEventListener('keydown',e=>{
+ if(e.ctrlKey&&e.key==='Enter'){e.preventDefault();document.getElementById('translateBtn').click()}
+ if(e.key==='Escape')document.getElementById('resetBtn').click();
+});
+
+window.addEventListener('scroll',()=>{
+ const y=document.documentElement.scrollTop||document.body.scrollTop;
+ const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+ const p=h>0?(y/h)*100:0;
+ document.getElementById('reading-progress-bar').style.width=p+'%';
+ document.getElementById('scroll-percent').textContent=Math.round(p)+'%';
+});
+document.getElementById('scroll-to-top').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('scroll-to-bottom').addEventListener('click',()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}));
+
+renderHistory();
+</script>
+</body>
+</html>
