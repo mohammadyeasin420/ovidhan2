@@ -1,0 +1,40 @@
+name: Vocabulary Primary Senses QA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply primary-sense overrides and validate
+        run: python generate_5000_vocabulary.py
+
+      - name: Show generated changes
+        run: git diff -- 5000-common-words-data.json
+
+      - name: Commit corrected dataset
+        run: |
+          if git diff --quiet -- 5000-common-words-data.json; then
+            echo "No dataset changes were generated."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add 5000-common-words-data.json
+          git commit -m "fix: apply curated primary senses to 5000-word dataset"
+          git push
