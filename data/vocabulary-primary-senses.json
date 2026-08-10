@@ -43,8 +43,8 @@
   },
   "as": {
     "bangla": "হিসেবে / যেমন",
-    "pos": "conjunction",
-    "definition": "used to describe a role, comparison, manner, or situation",
+    "pos": "preposition",
+    "definition": "used to show a role or function; also used in comparisons and for manner or situations happening at the same time",
     "synonyms": []
   },
   "was": {
@@ -88,5 +88,640 @@
       "concerning",
       "regarding"
     ]
+  },
+  "the": {
+    "bangla": "টি / টা / ওই",
+    "pos": "article",
+    "definition": "used before a noun to refer to a particular person or thing that is already known or identified",
+    "synonyms": []
+  },
+  "of": {
+    "bangla": "এর / এর মধ্যে",
+    "pos": "preposition",
+    "definition": "used to show belonging, relationship, amount, or what something is about",
+    "synonyms": []
+  },
+  "and": {
+    "bangla": "এবং / ও",
+    "pos": "conjunction",
+    "definition": "used to join words or parts of a sentence",
+    "synonyms": []
+  },
+  "to": {
+    "bangla": "প্রতি / দিকে / -তে",
+    "pos": "preposition",
+    "definition": "used to show direction, destination, or the person affected; also used before a verb to form the infinitive",
+    "synonyms": []
+  },
+  "for": {
+    "bangla": "জন্য / জন্যে",
+    "pos": "preposition",
+    "definition": "used to show purpose, benefit, intended recipient, or length of time",
+    "synonyms": []
+  },
+  "on": {
+    "bangla": "উপর / -এ",
+    "pos": "preposition",
+    "definition": "in contact with a surface; also used for dates, devices, and topics",
+    "synonyms": []
+  },
+  "that": {
+    "bangla": "যে / সেই / ওটা",
+    "pos": "conjunction",
+    "definition": "used to introduce a clause; also used as a pronoun or determiner to point to a specific person, thing, or idea",
+    "synonyms": []
+  },
+  "by": {
+    "bangla": "দ্বারা / দিয়ে / পাশে",
+    "pos": "preposition",
+    "definition": "used to show the agent, means, or nearness of something",
+    "synonyms": []
+  },
+  "this": {
+    "bangla": "এই / এটা",
+    "pos": "determiner",
+    "definition": "used to point to a person or thing that is near or has just been mentioned",
+    "synonyms": []
+  },
+  "with": {
+    "bangla": "সঙ্গে / সাথে",
+    "pos": "preposition",
+    "definition": "used to show being together, having something, or using something",
+    "synonyms": []
+  },
+  "you": {
+    "bangla": "তুমি / আপনি / তোমরা",
+    "pos": "pronoun",
+    "definition": "the person or people being spoken or written to",
+    "synonyms": []
+  },
+  "it": {
+    "bangla": "এটা / এটি",
+    "pos": "pronoun",
+    "definition": "used to refer to a thing, animal, situation, or idea already mentioned",
+    "synonyms": []
+  },
+  "from": {
+    "bangla": "থেকে / হতে",
+    "pos": "preposition",
+    "definition": "used to show the starting point, origin, or source of something",
+    "synonyms": []
+  },
+  "your": {
+    "bangla": "তোমার / আপনার",
+    "pos": "determiner",
+    "definition": "belonging to or connected with the person or people being spoken to",
+    "synonyms": []
+  },
+  "have": {
+    "bangla": "আছে / থাকা / করা",
+    "pos": "verb",
+    "definition": "to own, hold, or experience something; also used as an auxiliary verb",
+    "synonyms": [
+      "own",
+      "possess"
+    ]
+  },
+  "will": {
+    "bangla": "হবে / করবে",
+    "pos": "modal",
+    "definition": "used to talk about the future or to show willingness",
+    "synonyms": []
+  },
+  "we": {
+    "bangla": "আমরা",
+    "pos": "pronoun",
+    "definition": "used by a speaker to refer to himself or herself and one or more other people",
+    "synonyms": []
+  },
+  "if": {
+    "bangla": "যদি",
+    "pos": "conjunction",
+    "definition": "used to introduce a condition or possibility",
+    "synonyms": []
+  },
+  "my": {
+    "bangla": "আমার",
+    "pos": "determiner",
+    "definition": "belonging to or connected with the speaker",
+    "synonyms": []
+  },
+  "free": {
+    "bangla": "বিনামূল্যে / মুক্ত",
+    "pos": "adjective",
+    "definition": "costing nothing; also not controlled, limited, or imprisoned",
+    "synonyms": [
+      "complimentary",
+      "unrestricted"
+    ]
+  },
+  "but": {
+    "bangla": "কিন্তু / তবে",
+    "pos": "conjunction",
+    "definition": "used to introduce a contrast or exception",
+    "synonyms": []
+  },
+  "our": {
+    "bangla": "আমাদের",
+    "pos": "determiner",
+    "definition": "belonging to or connected with the speaker and one or more other people",
+    "synonyms": []
+  },
+  "do": {
+    "bangla": "করা",
+    "pos": "verb",
+    "definition": "to perform an action or activity; also used as an auxiliary verb in questions and negatives",
+    "synonyms": [
+      "perform",
+      "carry out"
+    ]
+  },
+  "no": {
+    "bangla": "না / কোনো না",
+    "pos": "determiner",
+    "definition": "used to mean not any, or to give a negative answer",
+    "synonyms": []
+  },
+  "they": {
+    "bangla": "তারা / তাঁরা",
+    "pos": "pronoun",
+    "definition": "used to refer to people, animals, or things already mentioned",
+    "synonyms": []
+  },
+  "he": {
+    "bangla": "সে / তিনি",
+    "pos": "pronoun",
+    "definition": "used to refer to a male person or animal already mentioned",
+    "synonyms": []
+  },
+  "up": {
+    "bangla": "উপরে / ওপরে",
+    "pos": "adverb",
+    "definition": "toward a higher place or position; also used in many everyday phrasal verbs",
+    "synonyms": []
+  },
+  "may": {
+    "bangla": "হতে পারে / পারা",
+    "pos": "modal",
+    "definition": "used to say that something is possible or to ask for or give permission",
+    "synonyms": []
+  },
+  "what": {
+    "bangla": "কী / কি",
+    "pos": "pronoun",
+    "definition": "used to ask for information about something",
+    "synonyms": []
+  },
+  "which": {
+    "bangla": "কোনটি / যা",
+    "pos": "pronoun",
+    "definition": "used to ask about or refer to one or more things from a group",
+    "synonyms": []
+  },
+  "their": {
+    "bangla": "তাদের / তাঁদের",
+    "pos": "determiner",
+    "definition": "belonging to or connected with the people or things already mentioned",
+    "synonyms": []
+  },
+  "out": {
+    "bangla": "বাইরে / বেরিয়ে",
+    "pos": "adverb",
+    "definition": "away from the inside or away from a place; also used in many everyday phrasal verbs",
+    "synonyms": []
+  },
+  "see": {
+    "bangla": "দেখা / দেখা করা",
+    "pos": "verb",
+    "definition": "to notice or become aware of something with your eyes; also to understand",
+    "synonyms": [
+      "view",
+      "notice"
+    ]
+  },
+  "so": {
+    "bangla": "তাই / এত",
+    "pos": "adverb",
+    "definition": "used to show degree, result, or agreement",
+    "synonyms": []
+  },
+  "his": {
+    "bangla": "তার / তাঁর",
+    "pos": "determiner",
+    "definition": "belonging to or connected with a male person or animal already mentioned",
+    "synonyms": []
+  },
+  "when": {
+    "bangla": "যখন / কখন",
+    "pos": "adverb",
+    "definition": "used to ask or talk about the time at which something happens",
+    "synonyms": []
+  },
+  "here": {
+    "bangla": "এখানে",
+    "pos": "adverb",
+    "definition": "in, at, or to this place",
+    "synonyms": []
+  },
+  "now": {
+    "bangla": "এখন",
+    "pos": "adverb",
+    "definition": "at the present time",
+    "synonyms": [
+      "currently",
+      "at present"
+    ]
+  },
+  "get": {
+    "bangla": "পাওয়া / হওয়া",
+    "pos": "verb",
+    "definition": "to receive, obtain, become, or arrive",
+    "synonyms": [
+      "obtain",
+      "receive"
+    ]
+  },
+  "online": {
+    "bangla": "অনলাইন / ইন্টারনেটে",
+    "pos": "adjective",
+    "definition": "connected to or available through the internet",
+    "synonyms": [
+      "on the internet",
+      "web-based"
+    ]
+  },
+  "first": {
+    "bangla": "প্রথম",
+    "pos": "adjective",
+    "definition": "coming before all others in order, time, or importance",
+    "synonyms": [
+      "initial",
+      "earliest"
+    ]
+  },
+  "would": {
+    "bangla": "হত / করত",
+    "pos": "modal",
+    "definition": "used to talk about a possible or imagined situation, or a polite request",
+    "synonyms": []
+  },
+  "how": {
+    "bangla": "কীভাবে / কেমন",
+    "pos": "adverb",
+    "definition": "used to ask or talk about the way or manner in which something happens",
+    "synonyms": []
+  },
+  "me": {
+    "bangla": "আমাকে / আমায়",
+    "pos": "pronoun",
+    "definition": "the object form of 'I', used for the speaker",
+    "synonyms": []
+  },
+  "these": {
+    "bangla": "এইগুলো / এগুলো",
+    "pos": "determiner",
+    "definition": "used to point to people or things that are near or have just been mentioned",
+    "synonyms": []
+  },
+  "click": {
+    "bangla": "ক্লিক",
+    "pos": "verb",
+    "definition": "to press a button on a computer mouse or similar device",
+    "synonyms": [
+      "press",
+      "select"
+    ]
+  },
+  "its": {
+    "bangla": "এর / তার",
+    "pos": "determiner",
+    "definition": "belonging to or connected with a thing, animal, or idea already mentioned",
+    "synonyms": []
+  },
+  "like": {
+    "bangla": "মতো / পছন্দ করা",
+    "pos": "preposition",
+    "definition": "similar to someone or something; also a verb meaning to find someone or something pleasant or enjoyable",
+    "synonyms": [
+      "similar to",
+      "enjoy"
+    ]
+  },
+  "than": {
+    "bangla": "চেয়ে / অপেক্ষা",
+    "pos": "conjunction",
+    "definition": "used after a comparative adjective or adverb to introduce the second part of a comparison",
+    "synonyms": []
+  },
+  "find": {
+    "bangla": "খুঁজে পাওয়া / খোঁজা",
+    "pos": "verb",
+    "definition": "to discover or locate someone or something",
+    "synonyms": [
+      "locate",
+      "discover"
+    ]
+  },
+  "back": {
+    "bangla": "ফিরে / পেছনে",
+    "pos": "adverb",
+    "definition": "in or toward a previous place, position, or time",
+    "synonyms": []
+  },
+  "just": {
+    "bangla": "শুধু / এইমাত্র",
+    "pos": "adverb",
+    "definition": "only; also a very short time ago",
+    "synonyms": [
+      "only",
+      "simply"
+    ]
+  },
+  "over": {
+    "bangla": "উপর দিয়ে / শেষ",
+    "pos": "preposition",
+    "definition": "above or across something; also used to mean finished",
+    "synonyms": []
+  },
+  "into": {
+    "bangla": "মধ্যে / ভিতরে",
+    "pos": "preposition",
+    "definition": "to the inside or inner part of a place, container, or state",
+    "synonyms": []
+  },
+  "re": {
+    "bangla": "সম্পর্কে / বিষয়ে",
+    "pos": "preposition",
+    "definition": "in formal or business writing, used to mean 'about' or 'regarding' a subject (often written as Re:)",
+    "synonyms": [
+      "regarding",
+      "about"
+    ]
+  },
+  "go": {
+    "bangla": "যাওয়া",
+    "pos": "verb",
+    "definition": "to move or travel to a place",
+    "synonyms": [
+      "move",
+      "travel"
+    ]
+  },
+  "buy": {
+    "bangla": "কেনা",
+    "pos": "verb",
+    "definition": "to get something by paying money for it",
+    "synonyms": [
+      "purchase"
+    ]
+  },
+  "make": {
+    "bangla": "তৈরি করা / করা",
+    "pos": "verb",
+    "definition": "to create, produce, or cause something",
+    "synonyms": [
+      "create",
+      "produce"
+    ]
+  },
+  "them": {
+    "bangla": "তাদেরকে / তাদের",
+    "pos": "pronoun",
+    "definition": "the object form of 'they'",
+    "synonyms": []
+  },
+  "should": {
+    "bangla": "উচিত",
+    "pos": "modal",
+    "definition": "used to say what is right, expected, or advisable",
+    "synonyms": []
+  },
+  "post": {
+    "bangla": "পোস্ট / ডাক",
+    "pos": "noun",
+    "definition": "a message published online, or letters and parcels sent by mail",
+    "synonyms": [
+      "message",
+      "mail"
+    ]
+  },
+  "her": {
+    "bangla": "তার / তাঁর / তাকে",
+    "pos": "pronoun",
+    "definition": "used to refer to a female person or animal as an object or to show possession",
+    "synonyms": []
+  },
+  "add": {
+    "bangla": "যোগ করা / যোগ করুন",
+    "pos": "verb",
+    "definition": "to put something together with something else to increase the number, size, or amount",
+    "synonyms": [
+      "include",
+      "append"
+    ]
+  },
+  "please": {
+    "bangla": "দয়া করে / অনুগ্রহ করে",
+    "pos": "adverb",
+    "definition": "used as a polite word when asking for something or accepting an offer",
+    "synonyms": []
+  },
+  "after": {
+    "bangla": "পরে / পর",
+    "pos": "preposition",
+    "definition": "later than a particular time, event, or order",
+    "synonyms": []
+  },
+  "best": {
+    "bangla": "সেরা / সবচেয়ে ভালো",
+    "pos": "adjective",
+    "definition": "of the highest quality; better than all others",
+    "synonyms": [
+      "finest",
+      "greatest"
+    ]
+  },
+  "then": {
+    "bangla": "তারপর / তখন",
+    "pos": "adverb",
+    "definition": "at that time; next in order or result",
+    "synonyms": [
+      "next",
+      "afterward"
+    ]
+  },
+  "good": {
+    "bangla": "ভালো / ভাল",
+    "pos": "adjective",
+    "definition": "of high quality, pleasant, or morally right",
+    "synonyms": [
+      "fine",
+      "excellent"
+    ]
+  },
+  "well": {
+    "bangla": "ভালো / ভালভাবে",
+    "pos": "adverb",
+    "definition": "in a good or satisfactory way",
+    "synonyms": [
+      "nicely",
+      "properly"
+    ]
+  },
+  "where": {
+    "bangla": "কোথায় / যেখানে",
+    "pos": "adverb",
+    "definition": "used to ask or talk about a place or position",
+    "synonyms": []
+  },
+  "high": {
+    "bangla": "উচ্চ / উঁচু",
+    "pos": "adjective",
+    "definition": "great in height, amount, or level",
+    "synonyms": [
+      "tall",
+      "elevated"
+    ]
+  },
+  "through": {
+    "bangla": "মাধ্যমে / দিয়ে",
+    "pos": "preposition",
+    "definition": "from one side or end of something to the other; also by means of",
+    "synonyms": []
+  },
+  "links": {
+    "bangla": "লিঙ্ক / সংযোগ",
+    "pos": "noun",
+    "definition": "connections between web pages or related things",
+    "synonyms": [
+      "hyperlinks",
+      "connections"
+    ]
+  },
+  "she": {
+    "bangla": "সে / তিনি",
+    "pos": "pronoun",
+    "definition": "used to refer to a female person or animal already mentioned",
+    "synonyms": []
+  },
+  "years": {
+    "bangla": "বছরগুলো / বছর",
+    "pos": "noun",
+    "definition": "more than one year; periods of twelve months",
+    "synonyms": []
+  },
+  "very": {
+    "bangla": "খুব / অত্যন্ত",
+    "pos": "adverb",
+    "definition": "used to emphasize an adjective or adverb",
+    "synonyms": [
+      "extremely",
+      "highly"
+    ]
+  },
+  "read": {
+    "bangla": "পড়া",
+    "pos": "verb",
+    "definition": "to look at and understand written words",
+    "synonyms": []
+  },
+  "de": {
+    "bangla": "এর / থেকে",
+    "pos": "preposition",
+    "definition": "a particle used in some names and phrases from French or Spanish, often meaning 'of' or 'from'",
+    "synonyms": []
+  },
+  "does": {
+    "bangla": "করে",
+    "pos": "verb",
+    "definition": "the third-person singular present form of 'do'",
+    "synonyms": []
+  },
+  "under": {
+    "bangla": "নিচে / অধীনে",
+    "pos": "preposition",
+    "definition": "in a lower position than something; also controlled or covered by something",
+    "synonyms": []
+  },
+  "general": {
+    "bangla": "সাধারণ / সার্বিক",
+    "pos": "adjective",
+    "definition": "affecting or involving all or most people, places, or things; not detailed or special",
+    "synonyms": [
+      "common",
+      "overall"
+    ]
+  },
+  "full": {
+    "bangla": "পূর্ণ / ভরা",
+    "pos": "adjective",
+    "definition": "containing or holding as much as possible; complete",
+    "synonyms": [
+      "complete",
+      "filled"
+    ]
+  },
+  "know": {
+    "bangla": "জানা",
+    "pos": "verb",
+    "definition": "to have information or understanding about something in your mind",
+    "synonyms": [
+      "understand",
+      "recognize"
+    ]
+  },
+  "days": {
+    "bangla": "দিনগুলো / দিন",
+    "pos": "noun",
+    "definition": "more than one day",
+    "synonyms": []
+  },
+  "could": {
+    "bangla": "পারত / পারে",
+    "pos": "modal",
+    "definition": "used to talk about ability or possibility in the past, or polite requests",
+    "synonyms": []
+  },
+  "great": {
+    "bangla": "দুর্দান্ত / মহান",
+    "pos": "adjective",
+    "definition": "very good, large, or important",
+    "synonyms": [
+      "excellent",
+      "wonderful"
+    ]
+  },
+  "united": {
+    "bangla": "ঐক্যবদ্ধ / একত্রিত",
+    "pos": "adjective",
+    "definition": "joined together for a common purpose",
+    "synonyms": [
+      "joined",
+      "combined"
+    ]
+  },
+  "real": {
+    "bangla": "আসল / বাস্তব",
+    "pos": "adjective",
+    "definition": "actually existing; not imaginary or false",
+    "synonyms": [
+      "actual",
+      "genuine"
+    ]
+  },
+  "international": {
+    "bangla": "আন্তর্জাতিক",
+    "pos": "adjective",
+    "definition": "involving two or more countries",
+    "synonyms": [
+      "global",
+      "worldwide"
+    ]
+  },
+  "there": {
+    "bangla": "সেখানে",
+    "pos": "adverb",
+    "definition": "in, at, or to that place; also used to introduce a sentence about existence",
+    "synonyms": []
   }
 }
