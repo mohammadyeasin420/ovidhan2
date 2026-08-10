@@ -1,0 +1,92 @@
+{
+  "a": {
+    "bangla": "একটি / এক",
+    "pos": "article",
+    "definition": "used before a singular countable noun when referring to one person or thing that is not specifically identified",
+    "synonyms": []
+  },
+  "an": {
+    "bangla": "একটি / এক",
+    "pos": "article",
+    "definition": "used before a singular countable noun beginning with a vowel sound when the person or thing is not specifically identified",
+    "synonyms": []
+  },
+  "in": {
+    "bangla": "মধ্যে / ভিতরে / -এ",
+    "pos": "preposition",
+    "definition": "inside a place, area, or period of time",
+    "synonyms": []
+  },
+  "or": {
+    "bangla": "অথবা / বা",
+    "pos": "conjunction",
+    "definition": "used to connect alternatives or choices",
+    "synonyms": []
+  },
+  "be": {
+    "bangla": "হওয়া / থাকা",
+    "pos": "verb",
+    "definition": "to exist, occur, or have a particular state or quality",
+    "synonyms": []
+  },
+  "are": {
+    "bangla": "হয় / আছেন / আছ",
+    "pos": "auxiliary",
+    "definition": "a present-tense form of the verb 'be', used with you, we, they, and plural subjects",
+    "synonyms": []
+  },
+  "at": {
+    "bangla": "এ / তে / কাছে",
+    "pos": "preposition",
+    "definition": "used to show a particular place, point, time, or activity",
+    "synonyms": []
+  },
+  "as": {
+    "bangla": "হিসেবে / যেমন",
+    "pos": "conjunction",
+    "definition": "used to describe a role, comparison, manner, or situation",
+    "synonyms": []
+  },
+  "was": {
+    "bangla": "ছিল",
+    "pos": "auxiliary",
+    "definition": "the past-tense form of 'be' used with I, he, she, and it",
+    "synonyms": []
+  },
+  "can": {
+    "bangla": "পারা / পারে",
+    "pos": "modal",
+    "definition": "used to say that someone or something is able to do something",
+    "synonyms": []
+  },
+  "us": {
+    "bangla": "আমাদেরকে / আমাদের",
+    "pos": "pronoun",
+    "definition": "the object form of 'we', used for the speaker and one or more other people",
+    "synonyms": []
+  },
+  "has": {
+    "bangla": "আছে / রয়েছে",
+    "pos": "auxiliary",
+    "definition": "the third-person singular present form of 'have'",
+    "synonyms": []
+  },
+  "more": {
+    "bangla": "আরও / বেশি",
+    "pos": "adverb",
+    "definition": "a greater amount, number, or degree",
+    "synonyms": [
+      "additional",
+      "extra"
+    ]
+  },
+  "about": {
+    "bangla": "সম্পর্কে / প্রায়",
+    "pos": "preposition",
+    "definition": "on the subject of something; also used to mean approximately",
+    "synonyms": [
+      "concerning",
+      "regarding"
+    ]
+  }
+}

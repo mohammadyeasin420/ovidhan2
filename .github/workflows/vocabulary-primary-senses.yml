@@ -45,6 +45,7 @@ jobs:
               )
 
           words = []
+
           for item in data:
               if not isinstance(item, dict):
                   raise SystemExit("FAIL: vocabulary entry is not an object")
