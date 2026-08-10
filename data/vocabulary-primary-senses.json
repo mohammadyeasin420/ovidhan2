@@ -43,8 +43,8 @@
   },
   "as": {
     "bangla": "হিসেবে / যেমন",
-    "pos": "conjunction",
-    "definition": "used to describe a role, comparison, manner, or situation",
+    "pos": "preposition",
+    "definition": "used to show a role or function; also used in comparisons and for manner or situations happening at the same time",
     "synonyms": []
   },
   "was": {
@@ -127,8 +127,8 @@
   },
   "that": {
     "bangla": "যে / সেই / ওটা",
-    "pos": "determiner",
-    "definition": "used to point to a specific person, thing, idea, or clause",
+    "pos": "conjunction",
+    "definition": "used to introduce a clause; also used as a pronoun or determiner to point to a specific person, thing, or idea",
     "synonyms": []
   },
   "by": {
@@ -399,12 +399,12 @@
     "synonyms": []
   },
   "like": {
-    "bangla": "পছন্দ করা / মতো",
-    "pos": "verb",
-    "definition": "to find someone or something pleasant or enjoyable; also used to mean 'similar to'",
+    "bangla": "মতো / পছন্দ করা",
+    "pos": "preposition",
+    "definition": "similar to someone or something; also a verb meaning to find someone or something pleasant or enjoyable",
     "synonyms": [
-      "enjoy",
-      "prefer"
+      "similar to",
+      "enjoy"
     ]
   },
   "than": {
@@ -450,9 +450,9 @@
     "synonyms": []
   },
   "re": {
-    "bangla": "পুনরায় / সম্পর্কে",
+    "bangla": "সম্পর্কে / বিষয়ে",
     "pos": "preposition",
-    "definition": "used especially in writing to mean 'about' or 'regarding'; also used as a prefix meaning 'again'",
+    "definition": "in formal or business writing, used to mean 'about' or 'regarding' a subject (often written as Re:)",
     "synonyms": [
       "regarding",
       "about"
@@ -522,8 +522,8 @@
   },
   "please": {
     "bangla": "দয়া করে / অনুগ্রহ করে",
-    "pos": "interjection",
-    "definition": "used as a polite word when asking for something",
+    "pos": "adverb",
+    "definition": "used as a polite word when asking for something or accepting an offer",
     "synonyms": []
   },
   "after": {
