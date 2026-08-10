@@ -1,0 +1,69 @@
+name: Vocabulary Primary Senses QA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply primary-sense overrides and validate
+        run: |
+          python generate_5000_vocabulary.py
+
+      - name: Validate generated JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("5000-common-words-data.json")
+
+          if not path.exists():
+              raise SystemExit("FAIL: 5000-common-words-data.json was not generated")
+
+          data = json.loads(path.read_text(encoding="utf-8"))
+
+          if not isinstance(data, list):
+              raise SystemExit("FAIL: generated vocabulary data is not a list")
+
+          if len(data) != 5000:
+              raise SystemExit(
+                  f"FAIL: expected exactly 5000 vocabulary entries, got {len(data)}"
+              )
+
+          words = []
+          for item in data:
+              if not isinstance(item, dict):
+                  raise SystemExit("FAIL: vocabulary entry is not an object")
+
+              word = str(item.get("word", "")).strip().lower()
+
+              if not word:
+                  raise SystemExit("FAIL: vocabulary entry has an empty word")
+
+              words.append(word)
+
+          if len(set(words)) != 5000:
+              raise SystemExit(
+                  f"FAIL: expected 5000 unique words, got {len(set(words))}"
+              )
+
+          print("PASS: generated vocabulary JSON contains exactly 5000 unique words")
+          PY
+
+      - name: Show changed files
+        run: |
+          git status --short
