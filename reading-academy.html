@@ -1,372 +1,892 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>English Reading Practice with Bangla Meaning – Free Graded Stories for Bangladeshi Learners</title>
-<meta content="Improve your English reading with graded stories, Bangla translations, vocabulary, and quizzes. Free reading practice for A1–C1 levels." name="description"/>
-<link href="styles.css" rel="stylesheet"/>
-<style>
-        /* Dashboard stats */
-        .stats-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0; padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
-        .stat-item { text-align: center; }
-        .stat-item .number { font-size: 2rem; font-weight: 700; color: var(--gold); }
-        .stat-item .label { color: var(--text-mid); font-size: 0.9rem; }
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-        /* Reading Roadmap */
-        .roadmap { margin: 2rem 0; }
-        .roadmap h2 { color: var(--gold); }
-        .level-group { margin-bottom: 2rem; }
-        .level-title { font-size: 1.3rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
-        .lesson-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>English Reading Practice with Bangla Meaning – Graded Stories | Ovidhan</title>
+    <meta content="Improve your English reading with graded stories, Bangla support, vocabulary, grammar in context and comprehension practice." name="description" />
+    <link href="https://ovidhan.net/reading-academy.html" rel="canonical" />
+    <meta content="index,follow,max-image-preview:large" name="robots" />
+    <meta content="#0B1F1A" name="theme-color" />
 
-        /* Lesson card – enhanced */
-        .lesson-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; transition: transform 0.2s; }
-        .lesson-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+    <link href="/favicon.ico" rel="icon" />
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+
+    <meta content="article" property="og:type" />
+    <meta content="English Reading Practice with Bangla Meaning – Graded Stories | Ovidhan" property="og:title" />
+    <meta content="Improve your English reading with graded stories, Bangla support, vocabulary, grammar in context and comprehension practice." property="og:description" />
+    <meta content="https://ovidhan.net/reading-academy.html" property="og:url" />
+    <meta content="Ovidhan – Reading Academy" property="og:site_name" />
+    <meta content="https://ovidhan.net/images/og-homepage.jpg" property="og:image" />
+    <meta content="1200" property="og:image:width" />
+    <meta content="630" property="og:image:height" />
+
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="English Reading Practice with Bangla Meaning – Graded Stories | Ovidhan" name="twitter:title" />
+    <meta content="Improve your English reading with graded stories, Bangla support, vocabulary, grammar in context and comprehension practice." name="twitter:description" />
+    <meta content="https://ovidhan.net/images/og-homepage.jpg" name="twitter:image" />
+
+    <!-- ═══ SCHEMA.ORG (BREADCRUMB) ═══ -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ovidhan.net"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Reading Academy",
+                "item": "https://ovidhan.net/reading-academy.html"
+            }]
+        }
+    </script>
+
+    <!-- ═══ SCHEMA.ORG (COLLECTION PAGE) ═══ -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "English Reading Practice with Bangla Meaning",
+            "description": "Improve your English reading with graded stories, Bangla support, vocabulary, grammar in context and comprehension practice.",
+            "url": "https://ovidhan.net/reading-academy.html",
+            "inLanguage": "bn-BD",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "Ovidhan",
+                "url": "https://ovidhan.net/"
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PS8PRT4KW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7PS8PRT4KW');
+    </script>
+
+    <style>
+        /* ── Ovidhan Dark Theme (Reading Academy Specifics) ── */
+        :root {
+            --bg: #0B1F1A;
+            --surface: #122820;
+            --surface2: #1A3530;
+            --border: #1E3D38;
+            --gold: #E6B84A;
+            --gold-dim: rgba(230, 184, 74, 0.12);
+            --teal: #4ECDC4;
+            --green: #4ade80;
+            --green-dim: rgba(74, 222, 128, 0.10);
+            --purple: #c084fc;
+            --purple-dim: rgba(192, 132, 252, 0.10);
+            --red: #f87171;
+            --red-dim: rgba(248, 113, 113, 0.10);
+            --text: #D8EDEB;
+            --text-mid: #8AADA9;
+            --text-soft: #5A7D79;
+            --radius: 14px;
+            --font-bn: 'Hind Siliguri', sans-serif;
+            --font-en: 'Inter', sans-serif;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-bn); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        a { color: var(--teal); text-decoration: none; }
+        a:hover { color: var(--gold); }
+
+        #reading-progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--teal)); width: 0%; z-index: 9999; transition: width 0.1s ease-out; }
+
+        #scroll-nav {
+            position: fixed; bottom: 100px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; align-items: center; gap: 6px;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 40px; padding: 12px 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        }
+        #scroll-nav .percent { color: var(--gold); font-size: 12px; font-weight: 700; font-family: var(--font-en); text-align: center; }
+        #scroll-nav button { background: transparent; border: none; color: var(--text-mid); font-size: 20px; cursor: pointer; padding: 4px 6px; border-radius: 30px; transition: background 0.2s, color 0.2s; }
+        #scroll-nav button:hover { background: var(--gold-dim); color: var(--gold); }
+        @media (max-width: 768px) { #scroll-nav { bottom: 90px; right: 16px; padding: 10px 8px; } #scroll-nav .percent { font-size: 10px; } #scroll-nav button { font-size: 16px; } }
+
+        .breadcrumb { max-width: 1160px; margin: 15px auto 0; padding: 0 22px; font: 13px var(--font-en); color: var(--text-soft); }
+        .breadcrumb a { color: var(--teal); text-decoration: none; }
+
+        /* ── HEADER & NAV (Production Standard) ── */
+        .site-header {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(11, 31, 26, 0.93);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+        }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 22px; font-weight: 700; color: var(--gold); text-decoration: none; }
+        .logo span { color: var(--text-mid); font-weight: 400; }
+        .nav-actions { display: flex; align-items: center; gap: 12px; }
+        .nav-cta { background: var(--gold); color: #0B1F1A !important; font-weight: 700 !important; padding: 7px 16px; border-radius: 40px; font-size: 13px; text-decoration: none; white-space: nowrap; }
+        .nav-cta:hover { background: #f0c85a; }
+        .menu-toggle {
+            display: none; flex-direction: column; gap: 5px; background: transparent; border: none; cursor: pointer; padding: 5px; z-index: 101;
+        }
+        .menu-toggle span { display: block; width: 28px; height: 3px; background: var(--text); border-radius: 3px; transition: 0.3s; }
+        .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+        .mega-menu { display: flex; list-style: none; gap: 4px; padding: 0; margin: 0; flex-wrap: wrap; }
+        .mega-menu li { position: relative; }
+        .mega-menu li a { color: var(--text-mid); text-decoration: none; font-size: 14px; font-family: var(--font-en); padding: 8px 12px; display: block; transition: color .2s; }
+        .mega-menu li a:hover { color: var(--gold); }
+        .mega-menu li .dropdown {
+            display: none; position: absolute; top: 100%; left: 0;
+            background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 8px 0; min-width: 190px; z-index: 200;
+        }
+        .mega-menu li:hover .dropdown { display: block; }
+        .mega-menu li .dropdown a { padding: 8px 16px; font-size: 0.85rem; color: var(--text-mid); }
+        .mega-menu li .dropdown a:hover { color: var(--gold); }
+        .mega-menu li:focus-within .dropdown { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: flex; }
+            .mega-menu {
+                display: none; flex-direction: column; width: 100%; padding: 1rem 0;
+                background: var(--bg); border-top: 1px solid var(--border);
+                max-height: 80vh; overflow-y: auto;
+            }
+            .mega-menu.open { display: flex; }
+            .mega-menu li { width: 100%; text-align: center; border-bottom: 1px solid var(--border); }
+            .mega-menu li:last-child { border-bottom: none; }
+            .mega-menu li a { padding: 12px 0; }
+            .mega-menu li .dropdown { position: static; display: none; background: var(--surface2); border: none; padding: 0; min-width: auto; }
+            .mega-menu li.active .dropdown { display: block; }
+            .mega-menu li .dropdown a { padding: 8px 20px; }
+            .logo { font-size: 1.2rem; }
+            .nav-cta { font-size: 12px !important; padding: 6px 12px !important; }
+        }
+
+        .site-footer { background: #060F0D; border-top: 1px solid var(--border); padding: 40px 24px 20px; margin-top: 40px; text-align: center; color: var(--text-soft); font-size: 13px; }
+        .site-footer a { color: var(--teal); text-decoration: none; }
+        .site-footer a:hover { color: var(--gold); }
+
+        .dakho-float { position: fixed; bottom: 24px; right: 24px; background: var(--gold); color: #0B1F1A; padding: 14px 22px; border-radius: 50px; font-weight: 700; z-index: 998; text-decoration: none; box-shadow: 0 8px 30px rgba(0,0,0,0.6); border: 2px solid #0B1F1A; font-family: var(--font-en); transition: transform .2s; }
+        .dakho-float:hover { transform: scale(1.06); }
+
+        /* ── HERO ── */
+        .hero { padding: 62px 22px 44px; text-align: center; background: linear-gradient(155deg, #08221e, #0F3D3E 58%, #174d49); }
+        .hero .eyebrow { display: inline-block; padding: 6px 14px; border: 1px solid rgba(230, 184, 74, 0.35); border-radius: 30px; color: var(--gold); font: 700 12px var(--font-en); letter-spacing: 0.6px; }
+        .hero h1 { max-width: 950px; margin: 16px auto 10px; color: var(--gold); font-size: clamp(2.05rem, 5vw, 3.45rem); line-height: 1.15; }
+        .hero p { max-width: 870px; margin: 0 auto; color: #b0cfcb; font-size: 1.06rem; }
+        .hero .bangla-message { max-width: 700px; margin: 16px auto 0; padding: 12px 20px; background: rgba(0,0,0,0.2); border-radius: 12px; color: var(--gold); font-size: 1.1rem; border: 1px solid rgba(230, 184, 74, 0.2); }
+        .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px; }
+        .hero-badges span { padding: 7px 14px; border-radius: 30px; background: rgba(0,0,0,0.18); border: 1px solid rgba(78,205,196,0.26); font-size: 0.85rem; }
+        .hero-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 18px; }
+
+        .wrap { max-width: 1160px; margin: 0 auto; padding: 34px 22px 70px; }
+        .section { margin-bottom: 50px; }
+        .section-title { font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--gold); font-weight: 700; margin-bottom: 8px; text-align: center; }
+        .section-sub { text-align: center; color: var(--text-mid); max-width: 760px; margin: 0 auto 30px; font-size: 1.05rem; }
+
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 18px 16px; transition: border-color 0.2s; }
+        .card:hover { border-color: var(--gold); }
+        .card .icon { font-size: 2rem; display: block; margin-bottom: 4px; }
+        .card h3 { color: var(--gold); font-size: 1.05rem; margin-bottom: 4px; }
+        .card p { color: var(--text-mid); font-size: 0.95rem; margin-bottom: 8px; }
+        .card .card-link { color: var(--teal); font-weight: 600; font-size: 0.9rem; }
+
+        .btn { border: 0; border-radius: 40px; padding: 12px 28px; font: 700 14px var(--font-en); cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s; }
+        .btn-primary { background: var(--gold); color: #0B1F1A; }
+        .btn-primary:hover { background: #f0c85a; transform: translateY(-2px); }
+        .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+        .btn-secondary:hover { border-color: var(--gold); }
+
+        .lesson-card { background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 18px 16px; transition: border-color 0.2s; }
+        .lesson-card:hover { border-color: var(--gold); }
         .lesson-card a { color: var(--text); text-decoration: none; display: block; }
         .lesson-card .meta { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.85rem; color: var(--text-mid); margin: 0.5rem 0; }
-        .lesson-card .vocab-preview { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.5rem 0; }
-        .lesson-card .vocab-preview span { background: var(--surface); padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; color: var(--text-mid); }
-        .level-badge { display: inline-block; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem; background: var(--teal-dim); color: var(--teal); }
+        .level-badge { display: inline-block; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem; }
         .level-badge.a1 { background: var(--green-dim); color: var(--green); }
         .level-badge.a2 { background: var(--teal-dim); color: var(--teal); }
         .level-badge.b1 { background: var(--gold-dim); color: var(--gold); }
         .level-badge.b2 { background: var(--purple-dim); color: var(--purple); }
         .level-badge.c1 { background: var(--red-dim); color: var(--red); }
-        .coming-soon { opacity: 0.6; pointer-events: none; }
-        .coming-soon .lesson-card { border: 1px dashed var(--border); }
-        .xp-badge { background: var(--gold-dim); color: var(--gold); padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; }
+        .coming-soon-card { background: var(--surface); border: 1px dashed var(--border); border-radius: 13px; padding: 18px 16px; opacity: 0.6; }
 
-        .hub-hero { text-align: center; padding: 2rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
-        .hub-hero h1 { font-size: 2.6rem; color: var(--gold); }
-        .cta { margin-top: 1.5rem; }
+        .quiz-box { background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 20px 24px; margin-top: 16px; }
+        .quiz-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+        .quiz-item:last-child { border-bottom: none; }
+        .quiz-item .q { color: #fff; font-weight: 600; margin-bottom: 8px; }
+        .quiz-item label { display: block; color: var(--text-mid); padding: 4px 0; cursor: pointer; }
+        .quiz-item label:hover { color: #fff; }
+        .quiz-item input[type="radio"] { accent-color: var(--gold); margin-right: 8px; }
+        .quiz-item .feedback { margin-top: 6px; font-size: 0.9rem; display: none; }
+        .quiz-item .feedback.correct { color: var(--green); display: block; }
+        .quiz-item .feedback.incorrect { color: var(--red); display: block; }
 
-        .faq-item { background: var(--surface2); padding: 1rem; border-radius: var(--radius); margin: 0.5rem 0; }
+        .faq-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+        .faq-question { background: transparent; border: none; width: 100%; padding: 18px 20px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); transition: color .2s; font-family: inherit; font-size: 1rem; text-align: left; }
+        .faq-question:hover { color: var(--gold); }
+        .faq-question .arrow { color: var(--gold); font-size: 1.2rem; transition: transform .3s; display: inline-block; }
+        .faq-item.open .faq-question .arrow { transform: rotate(180deg); }
+        .faq-answer { padding: 0 20px 20px; color: var(--text-mid); font-size: 0.95rem; line-height: 1.8; display: none; }
+        .faq-item.open .faq-answer { display: block; }
+
+        .cta-banner { background: linear-gradient(135deg, #0F3D3E 0%, #1A5C5A 100%); border: 1px solid rgba(230, 184, 74, 0.3); border-radius: 16px; padding: 48px 28px; text-align: center; margin: 40px auto; max-width: 1000px; }
+        .cta-banner h2 { color: var(--gold); font-size: 2rem; margin-bottom: 10px; }
+        .cta-banner p { color: var(--text-mid); margin-bottom: 22px; font-size: 1.05rem; }
+        .cta-btn { display: inline-block; background: var(--gold); color: #0B1F1A; font-weight: 700; font-family: var(--font-en); padding: 14px 34px; border-radius: 50px; text-decoration: none; font-size: 1rem; transition: transform .2s, box-shadow .2s; box-shadow: 0 4px 20px rgba(230, 184, 74, 0.3); }
+        .cta-btn:hover { transform: translateY(-3px); }
+
+        .stats-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0; padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+        .stat-item { text-align: center; }
+        .stat-item .number { font-size: 2rem; font-weight: 700; color: var(--gold); }
+        .stat-item .label { color: var(--text-mid); font-size: 0.9rem; }
+
         @media (max-width: 600px) {
-            .hub-hero h1 { font-size: 2rem; }
             .stats-strip { flex-direction: column; gap: 1rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
         }
     </style>
-<link href="https://ovidhan.net/reading-academy.html" hreflang="en" rel="alternate"/><link href="https://ovidhan.net/reading-academy.html" hreflang="bn" rel="alternate"/><link href="https://ovidhan.net/reading-academy.html" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://ovidhan.net"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Reading Academy",
-      "item": "https://ovidhan.net/reading-academy.html"
-    }
-  ]
-}</script></head>
-<body><header class="site-header">
-<div class="nav-inner">
-<a class="logo" href="/">অভিধান <span>| Ovidhan</span></a>
-<div style="display: flex; align-items: center; gap: 12px;">
-<!-- Play Store Download Button -->
-<a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" rel="noopener" style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;" target="_blank">
-                📱 Download App
-            </a>
-<!-- Mobile Toggle Button -->
-<button aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu()">
-<span></span><span></span><span></span>
-</button>
-</div>
-<ul class="mega-menu" id="megaMenu">
-<li><a href="/">🏠 Home</a></li>
-<li>
-<a href="/learn.html">📚 Learn</a>
-<div class="dropdown">
-<a href="/learn.html#beginner">Beginner (A1)</a>
-<a href="/learn.html#elementary">Elementary (A2)</a>
-<a href="/learn.html#intermediate">Intermediate (B1)</a>
-<a href="/learn.html#upper">Upper-Intermediate (B2)</a>
-<a href="/learn.html#advanced">Advanced (C1)</a>
-<a href="/dashboard.html">📊 Progress</a>
-</div>
+</head>
+
+<body>
+
+    <div id="reading-progress-bar"></div>
+
+    <!-- ═══ PRODUCTION HEADER ═══ -->
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" target="_blank" rel="noopener" class="nav-cta" style="background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 18px; border-radius: 40px; font-size: 14px; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    📱 Download App
+                </a>
+                <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-controls="megaMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <ul class="mega-menu" id="megaMenu">
+                <li><a href="/">🏠 Home</a></li>
+                <li>
+                    <a href="/learn.html">📚 Learn</a>
+                    <div class="dropdown">
+                        <a href="/learn.html#beginner">Beginner (A1)</a>
+                        <a href="/learn.html#elementary">Elementary (A2)</a>
+                        <a href="/learn.html#intermediate">Intermediate (B1)</a>
+                        <a href="/learn.html#upper">Upper-Intermediate (B2)</a>
+                        <a href="/learn.html#advanced">Advanced (C1)</a>
+                        <a href="/dashboard.html">📊 Progress</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/dictionary.html">📖 Dictionary</a>
+                    <div class="dropdown">
+                        <a href="/dictionary.html">Search Words</a>
+                        <a href="/explorer.html">Word Explorer</a>
+                        <a href="/word-of-the-day.html">Word of the Day</a>
+                        <a href="/vocabulary-builder.html">Vocabulary Builder</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/grammar.html">📝 Grammar</a>
+                    <div class="dropdown">
+                        <a href="/grammar.html#beginner">Beginner Grammar</a>
+                        <a href="/grammar.html#intermediate">Intermediate Grammar</a>
+                        <a href="/grammar.html#advanced">Advanced Grammar</a>
+                        <a href="/grammar-quiz.html">Grammar Quiz</a>
+                        <a href="/grammar-checker.html">Grammar Checker</a>
+                    </div>
+            <li>
+    <a href="/speaking.html">🗣 Speaking</a>
+    <div class="dropdown">
+        <a href="/speaking.html#daily">Daily Conversation</a>
+        <a href="/speaking.html#travel">Travel English</a>
+        <a href="/office-english-bangla.html">Office English</a>
+        <a href="/speaking.html#interview">Job Interview</a>
+        <a href="/real-life-english.html">Real-Life English</a>
+        <a href="/speaking-practice.html">Speaking Practice</a>
+    </div>
 </li>
-<li>
-<a href="/dictionary.html">📖 Dictionary</a>
-<div class="dropdown">
-<a href="/dictionary.html">Search Words</a>
-<a href="/explorer.html">Word Explorer</a>
-<a href="/word-of-the-day.html">Word of the Day</a>
-<a href="/vocabulary-builder.html">Vocabulary Builder</a>
-</div>
-</li>
-<li>
-<a href="/grammar.html">📝 Grammar</a>
-<div class="dropdown">
-<a href="/grammar.html#beginner">Beginner Grammar</a>
-<a href="/grammar.html#intermediate">Intermediate Grammar</a>
-<a href="/grammar.html#advanced">Advanced Grammar</a>
-<a href="/grammar-quiz.html">Grammar Quiz</a>
-<a href="/grammar-checker.html">Grammar Checker</a>
-</div>
-</li>
-<li>
-<a href="/speaking.html">🗣 Speaking</a>
-<div class="dropdown">
-<a href="/speaking.html#daily">Daily Conversation</a>
-<a href="/speaking.html#travel">Travel English</a>
-<a href="/speaking.html#office">Office English</a>
-<a href="/speaking.html#interview">Job Interview</a>
-<a href="/speaking-practice.html">Speaking Practice</a>
-</div>
-</li>
-<li>
-<a href="/listening.html">🎧 Listening</a>
-<div class="dropdown">
-<a href="/listening.html#lessons">All Listening Exercises</a>
-<a href="/listening.html">Daily English</a>
-<a href="/listening.html">Travel English</a>
-<a href="/listening.html">Workplace English</a>
-<a href="/listening.html">Academic English</a>
-<a href="/listening.html">IELTS Listening</a>
-</div>
-</li>
-<li>
-<a href="/writing.html">✍ Writing</a>
-<div class="dropdown">
-<a href="/writing.html#academic">Academic Writing</a>
-<a href="/writing.html#business">Business English</a>
-<a href="/writing.html#daily">Daily Writing</a>
-<a href="/sentence-analyzer.html">Sentence Analyzer</a>
-<a href="/grammar-checker.html">Grammar Checker</a>
-</div>
-</li>
-<li>
-<a href="/practice.html">🎯 Practice</a>
-<div class="dropdown">
-<a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
-<a href="/flashcards.html">Flashcards</a>
-<a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
-<a href="/grammar-quiz.html">Grammar Quiz</a>
-<a href="/speaking-practice.html">Speaking Practice</a>
-</div>
-</li>
-<li>
-<a href="/assessment.html">🧪 Assessment</a>
-<div class="dropdown">
-<a href="/english-level-test.html">CEFR Level Test</a>
-<a href="/grammar-level-test.html">Grammar Test</a>
-<a href="/vocabulary-size-test.html">Vocabulary Size</a>
-<a href="/assessment.html">Progress Report</a>
-</div>
-</li>
-<li>
-<a href="/exam-prep.html">🎓 Exam Prep</a>
-<div class="dropdown">
-<a href="/ielts-guide.html">IELTS</a>
-<a href="/bcs-english-mock-test.html">BCS</a>
-<a href="/bank-job-english-preparation-guide-2026.html">Bank Jobs</a>
-<a href="/exam-prep.html">SSC / HSC</a>
-<a href="/exam-prep.html">University Admission</a>
-</div>
-</li>
-<li>
-<a href="/tools.html">🛠 Tools</a>
-<div class="dropdown">
-<a href="/sentence-analyzer.html">Sentence Analyzer</a>
-<a href="/tense-identifier.html">Tense Identifier</a>
-<a href="/voice-converter.html">Voice Converter</a>
-<a href="/plural-maker.html">Plural Maker</a>
-<a href="/verb-forms.html">Verb Forms</a>
-</div>
-</li>
-<li>
-<a href="/bangladesh.html">🇧🇩 Bangladesh</a>
-<div class="dropdown">
-<a href="/bangladesh.html#visa">Visa &amp; Immigration</a>
-<a href="/bangladesh.html#job">Job Interview</a>
-<a href="/bangladesh.html#daily">Daily Life English</a>
-<a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
-</div>
-</li>
-<li><a href="/blog.html">📰 Blog</a></li>
-</ul>
-</div>
-</header>
-<!-- header/footer injected by inject_layout.py -->
-<main style="max-width: 1100px; margin: 120px auto; padding: 2rem;">
-<!-- HERO -->
-<div class="hub-hero">
-<h1>📖 English Reading Practice with Bangla Meaning</h1>
-<p style="font-size: 1.2rem; color: var(--text-mid);">Free graded stories for Bangladeshi learners – A1 to C1. Learn vocabulary, grammar, and comprehension with Bangla support.</p>
-<div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0;">
-<span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ A1–C1</span>
-<span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ 100% Free</span>
-<span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ Bangla Support</span>
-<span style="background: var(--surface2); padding: 0.3rem 1rem; border-radius: 20px;">✅ Daily Practice</span>
-</div>
-<div class="cta">
-<a class="btn-primary" href="#roadmap">📖 Start Reading</a>
-</div>
-</div>
-<!-- STATS STRIP -->
-<div class="stats-strip">
-<div class="stat-item"><div class="number">500+</div><div class="label">Reading Lessons</div></div>
-<div class="stat-item"><div class="number">5</div><div class="label">Levels (A1–C1)</div></div>
-<div class="stat-item"><div class="number">100%</div><div class="label">Free</div></div>
-<div class="stat-item"><div class="number">5,000+</div><div class="label">Vocabulary Words</div></div>
-<div class="stat-item"><div class="number">200+</div><div class="label">Reading Quizzes</div></div>
-</div>
-<!-- READING ROADMAP (Course Grid) -->
-<section class="roadmap" id="roadmap">
-<h2>📘 Reading Roadmap</h2>
-<p style="color: var(--text-mid);">Progress through levels. Complete each lesson to earn XP.</p>
-<!-- A1 -->
-<div class="level-group">
-<div class="level-title">🌟 A1 – Beginner (5 lessons)</div>
-<div class="lesson-grid">
-<!-- Lesson 1 -->
-<div class="lesson-card">
-<a href="/reading/my-first-day-at-school.html">
-<h3>My First Day at School</h3>
-<div class="meta">
-<span class="level-badge a1">A1</span>
-<span>⏱ 5 min</span>
-<span>📄 120 words</span>
-<span class="xp-badge">+20 XP</span>
-</div>
-<div class="vocab-preview">
-<span>School</span><span>Teacher</span><span>Friend</span><span>Classroom</span>
-</div>
-<p style="color: var(--text-mid); font-size: 0.9rem;">Ahmed’s first day at school.</p>
-</a>
-</div>
-<!-- Lesson 2 -->
-<div class="lesson-card">
-<a href="/reading/the-park.html">
-<h3>The Park</h3>
-<div class="meta">
-<span class="level-badge a1">A1</span>
-<span>⏱ 4 min</span>
-<span>📄 90 words</span>
-<span class="xp-badge">+15 XP</span>
-</div>
-<div class="vocab-preview">
-<span>Park</span><span>Play</span><span>Tree</span><span>Bench</span>
-</div>
-<p style="color: var(--text-mid); font-size: 0.9rem;">A sunny afternoon at the park.</p>
-</a>
-</div>
-<!-- Lesson 3 – Coming Soon -->
-<div class="lesson-card coming-soon">
-<a href="#">
-<h3>My Family</h3>
-<div class="meta">
-<span class="level-badge a1">A1</span>
-<span>⏱ 5 min</span>
-<span>📄 110 words</span>
-<span class="xp-badge">+20 XP</span>
-</div>
-<div class="vocab-preview"><span>Coming soon</span></div>
-<p style="color: var(--text-mid); font-size: 0.9rem;">Lesson in preparation.</p>
-</a>
-</div>
-<!-- More A1 coming soon -->
-</div>
-</div>
-<!-- A2 -->
-<div class="level-group">
-<div class="level-title">📚 A2 – Elementary (4 lessons)</div>
-<div class="lesson-grid">
-<div class="lesson-card">
-<a href="/reading/a-trip-to-the-market.html">
-<h3>A Trip to the Market</h3>
-<div class="meta">
-<span class="level-badge a2">A2</span>
-<span>⏱ 6 min</span>
-<span>📄 150 words</span>
-<span class="xp-badge">+25 XP</span>
-</div>
-<div class="vocab-preview">
-<span>Market</span><span>Vegetable</span><span>Price</span><span>Bargain</span>
-</div>
-<p style="color: var(--text-mid); font-size: 0.9rem;">Shopping with a friend.</p>
-</a>
-</div>
-<!-- More A2 coming soon -->
-</div>
-</div>
-<!-- B1 -->
-<div class="level-group">
-<div class="level-title">📖 B1 – Intermediate (3 lessons)</div>
-<div class="lesson-grid">
-<div class="lesson-card">
-<a href="/reading/the-career-advice.html">
-<h3>The Career Advice</h3>
-<div class="meta">
-<span class="level-badge b1">B1</span>
-<span>⏱ 7 min</span>
-<span>📄 200 words</span>
-<span class="xp-badge">+30 XP</span>
-</div>
-<div class="vocab-preview">
-<span>Career</span><span>Advice</span><span>Opportunity</span><span>Skill</span>
-</div>
-<p style="color: var(--text-mid); font-size: 0.9rem;">A young professional gets guidance.</p>
-</a>
-</div>
-<!-- More B1 coming soon -->
-</div>
-</div>
-<!-- B2 & C1 coming soon placeholder -->
-<div class="level-group">
-<div class="level-title">🚀 B2 – Upper Intermediate &amp; C1 – Advanced</div>
-<div class="lesson-grid">
-<div class="lesson-card coming-soon">
-<a href="#"><h3>More lessons coming soon</h3><p style="color: var(--text-mid); font-size: 0.9rem;">We’re adding B2 and C1 content.</p></a>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section style="margin: 3rem 0;">
-<h2>Frequently Asked Questions</h2>
-<div class="faq-item"><strong>What are graded readers?</strong><br/>Stories simplified to your level so you can read comfortably while improving vocabulary and grammar.</div>
-<div class="faq-item"><strong>Are Bangla translations included?</strong><br/>Yes – every lesson has a full Bangla translation and a vocabulary list with Bangla meanings.</div>
-<div class="faq-item"><strong>Is this useful for IELTS &amp; BCS?</strong><br/>Absolutely – reading improves speed, comprehension, and vocabulary – all critical for exams.</div>
-<div class="faq-item"><strong>How often should I read?</strong><br/>15–20 minutes daily leads to noticeable improvement in a few weeks.</div>
-</section>
-<!-- INTERNAL LINKS -->
-<section style="background: var(--surface); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); margin-top: 2rem;">
-<h3>Continue Your English Journey</h3>
-<ul style="display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0;">
-<li><a href="/grammar.html">Grammar Lessons</a></li>
-<li><a href="/listening.html">Listening Hub</a></li>
-<li><a href="/speaking.html">Speaking Course</a></li>
-<li><a href="/vocabulary-builder.html">Vocabulary Builder</a></li>
-<li><a href="/dictionary.html">English Dictionary</a></li>
-<li><a href="/ielts-guide.html">IELTS Preparation</a></li>
-</ul>
-</section>
-<!-- CTA -->
-<div style="text-align: center; margin: 3rem 0;">
-<p style="font-size: 1.2rem; color: var(--text-mid);">Start your reading journey today.</p>
-<a class="btn-primary" href="#roadmap">📖 Start Reading</a>
-<span style="display: block; color: var(--text-soft); margin-top: 0.5rem;">Learn with Bangla explanations. Build confidence.</span>
-</div>
-</main>
-<footer class="site-footer">
-<p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
-<p>
-<a href="/">Home</a>  • 
-        <a href="/grammar.html">Grammar</a>  • 
-        <a href="/tools.html">Tools</a>  • 
-        <a href="/blog.html">Blog</a>  • 
-        <a href="/dictionary.html">Dictionary</a>  • 
-        <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a>  • 
-        <a href="/privacy.html">Privacy Policy</a>
-</p>
-<p style="margin-top:12px;">© 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩</p>
-</footer></body>
+                    <a href="/listening.html">🎧 Listening</a>
+                    <div class="dropdown">
+                        <a href="/listening.html#lessons">All Listening Exercises</a>
+                        <a href="/listening.html">Daily English</a>
+                        <a href="/listening.html">Travel English</a>
+                        <a href="/listening.html">Workplace English</a>
+                        <a href="/listening.html">Academic English</a>
+                        <a href="/listening.html">IELTS Listening</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/writing.html">✍ Writing</a>
+                    <div class="dropdown">
+                        <a href="/writing.html#academic">Academic Writing</a>
+                        <a href="/writing.html#business">Business English</a>
+                        <a href="/writing.html#daily">Daily Writing</a>
+                        <a href="/sentence-analyzer.html">Sentence Analyzer</a>
+                        <a href="/grammar-checker.html">Grammar Checker</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/practice.html">🎯 Practice</a>
+                    <div class="dropdown">
+                        <a href="/mock-tests/daily-challenge.html">Daily Challenge</a>
+                        <a href="/flashcards.html">Flashcards</a>
+                        <a href="/vocabulary-quiz.html">Vocabulary Quiz</a>
+                        <a href="/grammar-quiz.html">Grammar Quiz</a>
+                        <a href="/speaking-practice.html">Speaking Practice</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/assessment.html">🧪 Assessment</a>
+                    <div class="dropdown">
+                        <a href="/english-level-test.html">CEFR Level Test</a>
+                        <a href="/grammar-level-test.html">Grammar Test</a>
+                        <a href="/vocabulary-size-test.html">Vocabulary Size</a>
+                        <a href="/assessment.html">Progress Report</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/exam-prep.html">🎓 Exam Prep</a>
+                    <div class="dropdown">
+                        <a href="/ielts-guide.html">IELTS</a>
+                        <a href="/bcs-english-mock-test.html">BCS</a>
+                        <a href="/bank-job-english-preparation-guide-2026.html">Bank Jobs</a>
+                        <a href="/exam-prep.html">SSC / HSC</a>
+                        <a href="/exam-prep.html">University Admission</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/tools.html">🛠 Tools</a>
+                    <div class="dropdown">
+                        <a href="/sentence-analyzer.html">Sentence Analyzer</a>
+                        <a href="/tense-identifier.html">Tense Identifier</a>
+                        <a href="/voice-converter.html">Voice Converter</a>
+                        <a href="/plural-maker.html">Plural Maker</a>
+                        <a href="/verb-forms.html">Verb Forms</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/bangladesh.html">🇧🇩 Bangladesh</a>
+                    <div class="dropdown">
+                        <a href="/bangladesh.html#visa">Visa & Immigration</a>
+                        <a href="/bangladesh.html#job">Job Interview</a>
+                        <a href="/bangladesh.html#daily">Daily Life English</a>
+                        <a href="/bangladesh.html#mistakes">Common Bangla Mistakes</a>
+                    </div>
+                </li>
+                <li><a href="/blog.html">📰 Blog</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="/">Home</a> › Reading Academy
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+        <span class="eyebrow">📖 LEARN ENGLISH THROUGH READING</span>
+        <h1>English Reading Practice with Bangla Meaning</h1>
+        <p>Improve your English reading comprehension, vocabulary, and grammar with graded stories and Bangla explanations. Start at your level and progress.</p>
+        <div class="bangla-message">
+            🇧🇩 বাংলা সহায়তায় ধাপে ধাপে ইংরেজি reading practice — vocabulary, comprehension ও grammar context-এর মধ্যে শিখুন।
+        </div>
+        <div class="hero-badges">
+            <span>📚 Graded Stories</span>
+            <span>🇧🇩 Bangla Support</span>
+            <span>📝 Vocabulary in Context</span>
+            <span>🧪 Comprehension Practice</span>
+        </div>
+        <div class="hero-cta-row">
+            <a href="#roadmap" class="btn btn-primary">📖 Start Reading</a>
+            <a href="/assessment.html" class="btn btn-secondary">📊 Check My English Level</a>
+        </div>
+    </section>
+
+    <main class="wrap">
+
+        <!-- ═══ STATS STRIP (Truthful) ═══ -->
+        <div class="stats-strip">
+            <div class="stat-item"><div class="number">4</div><div class="label">Published Lessons</div></div>
+            <div class="stat-item"><div class="number">3</div><div class="label">Published CEFR Levels</div></div>
+            <div class="stat-item"><div class="number">📘</div><div class="label">Graded Stories</div></div>
+            <div class="stat-item"><div class="number">🇧🇩</div><div class="label">Bangla Support</div></div>
+        </div>
+
+        <!-- ═══ READING ROADMAP ═══ -->
+        <section class="section" id="roadmap">
+            <h2 class="section-title">📘 Reading Roadmap</h2>
+            <p class="section-sub">Progress through levels. Each story builds vocabulary and comprehension.</p>
+
+            <!-- A1 Level -->
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--gold); font-size: 1.3rem;">🌟 A1 – Beginner</h3>
+                <div class="grid-3">
+                    <!-- Lesson 1 -->
+                    <div class="lesson-card">
+                        <a href="/reading/my-first-day-at-school.html">
+                            <h3 style="color:#fff;">My First Day at School</h3>
+                            <div class="meta">
+                                <span class="level-badge a1">A1</span>
+                            </div>
+                            <p style="color: var(--text-mid); font-size: 0.9rem;">Ahmed’s first day at school.</p>
+                            <span class="card-link">Read Story →</span>
+                        </a>
+                    </div>
+                    <!-- Lesson 2 -->
+                    <div class="lesson-card">
+                        <a href="/reading/the-park.html">
+                            <h3 style="color:#fff;">The Park</h3>
+                            <div class="meta">
+                                <span class="level-badge a1">A1</span>
+                            </div>
+                            <p style="color: var(--text-mid); font-size: 0.9rem;">A sunny afternoon at the park.</p>
+                            <span class="card-link">Read Story →</span>
+                        </a>
+                    </div>
+                    <!-- Lesson 3 (Coming Soon - No link) -->
+                    <div class="coming-soon-card">
+                        <h3 style="color:var(--text-soft);">My Family</h3>
+                        <div class="meta">
+                            <span class="level-badge a1">A1</span>
+                            <span>⏳ Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A2 Level -->
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--gold); font-size: 1.3rem;">📚 A2 – Elementary</h3>
+                <div class="grid-3">
+                    <!-- Lesson 1 -->
+                    <div class="lesson-card">
+                        <a href="/reading/a-trip-to-the-market.html">
+                            <h3 style="color:#fff;">A Trip to the Market</h3>
+                            <div class="meta">
+                                <span class="level-badge a2">A2</span>
+                            </div>
+                            <p style="color: var(--text-mid); font-size: 0.9rem;">Shopping with a friend.</p>
+                            <span class="card-link">Read Story →</span>
+                        </a>
+                    </div>
+                    <!-- A2 Coming Soon -->
+                    <div class="coming-soon-card">
+                        <h3 style="color:var(--text-soft);">Daily Routine</h3>
+                        <div class="meta">
+                            <span class="level-badge a2">A2</span>
+                            <span>⏳ Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="coming-soon-card">
+                        <h3 style="color:var(--text-soft);">The Bus Journey</h3>
+                        <div class="meta">
+                            <span class="level-badge a2">A2</span>
+                            <span>⏳ Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- B1 Level -->
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--gold); font-size: 1.3rem;">📖 B1 – Intermediate</h3>
+                <div class="grid-3">
+                    <!-- Lesson 1 -->
+                    <div class="lesson-card">
+                        <a href="/reading/the-career-advice.html">
+                            <h3 style="color:#fff;">The Career Advice</h3>
+                            <div class="meta">
+                                <span class="level-badge b1">B1</span>
+                            </div>
+                            <p style="color: var(--text-mid); font-size: 0.9rem;">A young professional gets guidance.</p>
+                            <span class="card-link">Read Story →</span>
+                        </a>
+                    </div>
+                    <div class="coming-soon-card">
+                        <h3 style="color:var(--text-soft);">A New Neighbour</h3>
+                        <div class="meta">
+                            <span class="level-badge b1">B1</span>
+                            <span>⏳ Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="coming-soon-card">
+                        <h3 style="color:var(--text-soft);">The Job Interview</h3>
+                        <div class="meta">
+                            <span class="level-badge b1">B1</span>
+                            <span>⏳ Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- B2 & C1 -->
+            <div>
+                <h3 style="color: var(--gold); font-size: 1.3rem;">🚀 B2 – Upper Intermediate &amp; C1 – Advanced</h3>
+                <div class="grid-3">
+                    <div class="coming-soon-card">
+                        <h3 style="color:var(--text-soft);">Academic Reading</h3>
+                        <div class="meta"><span class="level-badge b2">B2</span><span>⏳ Coming Soon</span></div>
+                    </div>
+                    <div class="coming-soon-card">
+                        <h3 style="color:var(--text-soft);">Literary Texts</h3>
+                        <div class="meta"><span class="level-badge c1">C1</span><span>⏳ Coming Soon</span></div>
+                    </div>
+                </div>
+                <p style="color: var(--text-mid); font-size: 0.9rem; text-align: center; margin-top: 1rem;">More levels are on the way.</p>
+            </div>
+        </section>
+
+        <!-- ═══ MINI READING CHALLENGE (Interactive) ═══ -->
+        <section class="section" id="challenge">
+            <h2 class="section-title">🧪 Mini Reading Challenge</h2>
+            <p class="section-sub">Try a short sample passage. Learn vocabulary and check your comprehension.</p>
+
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; max-width: 800px; margin: 0 auto;">
+                <h3 style="color: var(--gold);">A Quiet Evening</h3>
+                <p style="color: var(--text); line-height: 1.8;">
+                    Sarah loves to read books. Every evening, she sits in her garden and reads a story. She feels happy and relaxed. She often drinks a cup of tea while reading.
+                </p>
+
+                <div style="background: var(--surface2); border-radius: 12px; padding: 16px; margin: 12px 0;">
+                    <h4 style="color: var(--teal); margin: 0 0 8px 0;">📚 Vocabulary with Bangla</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <li><strong style="color:#fff;">garden</strong> <span style="color:var(--gold);">– বাগান</span></li>
+                        <li><strong style="color:#fff;">relaxed</strong> <span style="color:var(--gold);">– স্বস্তিদায়ক</span></li>
+                        <li><strong style="color:#fff;">often</strong> <span style="color:var(--gold);">– প্রায়ই</span></li>
+                    </ul>
+                </div>
+
+                <!-- Quiz -->
+                <div class="quiz-box" style="margin-top: 0;">
+                    <div id="readingChallenge">
+                        <div class="quiz-item">
+                            <div class="q">1. Where does Sarah read books?</div>
+                            <label><input type="radio" name="rc-q1" value="0"> In her garden</label>
+                            <label><input type="radio" name="rc-q1" value="1"> In her bedroom</label>
+                            <label><input type="radio" name="rc-q1" value="2"> At the library</label>
+                            <div class="feedback" id="rc-fb1"></div>
+                        </div>
+                        <div class="quiz-item">
+                            <div class="q">2. How does Sarah feel while reading?</div>
+                            <label><input type="radio" name="rc-q2" value="0"> Bored</label>
+                            <label><input type="radio" name="rc-q2" value="1"> Happy and relaxed</label>
+                            <label><input type="radio" name="rc-q2" value="2"> Angry</label>
+                            <div class="feedback" id="rc-fb2"></div>
+                        </div>
+                        <div class="quiz-item">
+                            <div class="q">3. What does she drink while reading?</div>
+                            <label><input type="radio" name="rc-q3" value="0"> Coffee</label>
+                            <label><input type="radio" name="rc-q3" value="1"> Tea</label>
+                            <label><input type="radio" name="rc-q3" value="2"> Water</label>
+                            <div class="feedback" id="rc-fb3"></div>
+                        </div>
+                        <button class="btn btn-primary" onclick="checkReadingChallenge()">✅ Check Answers</button>
+                        <div id="rcResult" aria-live="polite" style="margin-top:12px;font-weight:600;color:var(--gold);"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ GRAMMAR IN CONTEXT ═══ -->
+        <section class="section">
+            <h2 class="section-title">📝 Grammar in Context</h2>
+            <p class="section-sub">Reading Academy teaches grammar naturally through real sentences.</p>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Past Simple</h3>
+                    <p style="color:var(--text);"><em>She <strong>read</strong> a book yesterday.</em></p>
+                    <p style="color:var(--text-mid);">"read" is the past form of "read". The spelling is the same, but the pronunciation changes in the past tense (<strong>/red/</strong>). Past Simple is used for completed actions in the past.</p>
+                    <span class="bn" style="color:var(--gold);display:block;">🇧🇩 "read" এর present এবং past spelling একই, তবে past form-এর pronunciation /red/। অতীতের সম্পন্ন কাজ বোঝাতে Past Simple ব্যবহার করা হয়।</span>
+                </div>
+                <div class="card">
+                    <h3>Adverbs of Frequency</h3>
+                    <p style="color:var(--text);"><em>She <strong>often</strong> drinks tea.</em></p>
+                    <p style="color:var(--text-mid);">"often" shows how frequently an action happens. It normally comes before the main verb.</p>
+                    <span class="bn" style="color:var(--gold);display:block;">🇧🇩 "often" একটি কাজ কতবার ঘটে তা বোঝায়। এটি সাধারণত মূল verb-এর আগে বসে।</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ READING STRATEGY ═══ -->
+        <section class="section">
+            <h2 class="section-title">🧠 How to Practice Reading</h2>
+            <div class="grid-3" style="max-width: 800px; margin: 0 auto;">
+                <div class="card"><span class="icon">👁️</span><h3>1. Read First</h3><p>Read the passage once without translating. Try to understand the general meaning.</p></div>
+                <div class="card"><span class="icon">🔍</span><h3>2. Guess from Context</h3><p>Look at surrounding words to guess the meaning of unfamiliar vocabulary.</p></div>
+                <div class="card"><span class="icon">🇧🇩</span><h3>3. Check Bangla Meanings</h3><p>Use the vocabulary list to confirm your guesses and learn new words.</p></div>
+                <div class="card"><span class="icon">🔄</span><h3>4. Read Again</h3><p>Read the passage a second time to see how the new words fit into the context.</p></div>
+                <div class="card"><span class="icon">🧪</span><h3>5. Answer Questions</h3><p>Test your comprehension. Review any mistakes.</p></div>
+                <div class="card"><span class="icon">📝</span><h3>6. Review Mistakes</h3><p>Understand why the correct answer is right and why your choice was wrong.</p></div>
+            </div>
+        </section>
+
+        <!-- ═══ READING + EXAMS ═══ -->
+        <section class="section">
+            <h2 class="section-title">🎓 Reading for Exams</h2>
+            <p class="section-sub">Strong reading skills are essential for IELTS, BCS, and Bank Jobs.</p>
+            <div class="grid-3">
+                <a class="card" href="/ielts-guide.html"><span class="icon">🌍</span><h3>IELTS Reading</h3><p>Practice with exam-style passages and build speed and accuracy.</p></a>
+                <a class="card" href="/bcs-english-mock-test.html"><span class="icon">🇧🇩</span><h3>BCS Reading</h3><p>Bangladesh Civil Service exam preparation with reading practice.</p></a>
+                <a class="card" href="/assessment.html"><span class="icon">📊</span><h3>Check Your Level</h3><p>Take an assessment to understand your current English reading level.</p></a>
+            </div>
+        </section>
+
+        <!-- ═══ FAQ ═══ -->
+        <section class="section">
+            <h2 class="section-title">❓ Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item open">
+                    <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-1" onclick="toggleFAQ(this)">
+                        What are graded readers?
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">Stories simplified to your level so you can read comfortably while improving vocabulary and grammar.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2" onclick="toggleFAQ(this)">
+                        Are Bangla translations included?
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">Reading lessons include Bangla support and vocabulary help where available.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3" onclick="toggleFAQ(this)">
+                        Is this useful for IELTS &amp; BCS?
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">Absolutely – reading improves speed, comprehension, and vocabulary – all critical for exams.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4" onclick="toggleFAQ(this)">
+                        How often should I read?
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4">Regular reading practice can help build comprehension, vocabulary and reading confidence over time.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PLATFORM CONNECTIONS ═══ -->
+        <section class="section">
+            <h2 class="section-title">🔗 Continue Your Learning Journey</h2>
+            <div class="grid-3">
+                <a class="card" href="/grammar.html"><span class="icon">📝</span><h3>Grammar Hub</h3><p>Master English grammar with Bangla explanations.</p></a>
+                <a class="card" href="/listening.html"><span class="icon">🎧</span><h3>Listening Hub</h3><p>Practice listening with real conversations and exercises.</p></a>
+                <a class="card" href="/speaking.html"><span class="icon">🗣️</span><h3>Speaking Hub</h3><p>Improve your spoken English and pronunciation.</p></a>
+                <a class="card" href="/vocabulary-builder.html"><span class="icon">📚</span><h3>Vocabulary Builder</h3><p>Learn words with flashcards, quizzes, and exercises.</p></a>
+                <a class="card" href="/dictionary.html"><span class="icon">📖</span><h3>Dictionary</h3><p>Search English words with Bangla meanings.</p></a>
+                <a class="card" href="/practice.html"><span class="icon">🎯</span><h3>Practice Center</h3><p>Quizzes, challenges, and exam-style questions.</p></a>
+            </div>
+        </section>
+
+        <!-- ═══ DAKHO CTA ═══ -->
+        <div class="cta-banner">
+            <h2>📱 Continue Reading Practice with Dakho</h2>
+            <p>Practice vocabulary, quizzes, flashcards and other English learning activities in the Dakho app — your English learning companion.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" target="_blank" class="cta-btn">📥 Download Dakho</a>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:20px;">
+                <span style="font-size:13px;color:var(--teal);">✅ Learning tools &amp; practice</span>
+                <span style="font-size:13px;color:var(--teal);">✅ Offline Dictionary</span>
+                <span style="font-size:13px;color:var(--teal);">✅ Flashcards &amp; Quizzes</span>
+                <span style="font-size:13px;color:var(--teal);">✅ Spaced Repetition</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ═══ PRODUCTION FOOTER ═══ -->
+    <footer class="site-footer">
+        <p>
+            <strong style="color:var(--gold);">অভিধান</strong>
+            — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation
+        </p>
+        <p>
+            <a href="/">Home</a> &nbsp;•&nbsp;
+            <a href="/grammar.html">Grammar</a> &nbsp;•&nbsp;
+            <a href="/tools.html">Tools</a> &nbsp;•&nbsp;
+            <a href="/blog.html">Blog</a> &nbsp;•&nbsp;
+            <a href="/dictionary.html">Dictionary</a> &nbsp;•&nbsp;
+            <a href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary">Download App</a> &nbsp;•&nbsp;
+            <a href="/privacy.html">Privacy Policy</a>
+        </p>
+        <p style="margin-top:12px;">
+            © 2026 অভিধান • Made with ❤️ for Bangladesh 🇧🇩
+        </p>
+    </footer>
+
+    <div id="scroll-nav">
+        <button id="scroll-to-top" aria-label="Scroll to top">⬆</button>
+        <div class="percent" id="scroll-percent">0%</div>
+        <button id="scroll-to-bottom" aria-label="Scroll to bottom">⬇</button>
+    </div>
+
+    <a class="dakho-float" href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" target="_blank">📱 Get Dakho</a>
+
+    <script>
+        // ─── HEADER: TOGGLE MENU ───
+        function toggleMenu() {
+            const menu = document.getElementById('megaMenu');
+            const toggle = document.querySelector('.menu-toggle');
+            if (!menu || !toggle) return;
+            menu.classList.toggle('open');
+            toggle.classList.toggle('active');
+            const expanded = menu.classList.contains('open');
+            toggle.setAttribute('aria-expanded', expanded);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menu = document.getElementById('megaMenu');
+            const toggle = document.querySelector('.menu-toggle');
+
+            // Mobile submenu toggle (active class)
+            document.querySelectorAll('.mega-menu > li').forEach(function(li) {
+                const link = li.querySelector('a');
+                const dropdown = li.querySelector('.dropdown');
+                if (dropdown && window.innerWidth <= 900) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        li.classList.toggle('active');
+                        const isExpanded = li.classList.contains('active');
+                        link.setAttribute('aria-expanded', isExpanded);
+                    });
+                    link.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Generic click handler for ALL links
+            document.querySelectorAll('.mega-menu a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const li = this.closest('li');
+                    const dropdown = li ? li.querySelector('.dropdown') : null;
+                    if (dropdown && window.innerWidth <= 900) {
+                        return;
+                    }
+                    if (menu && menu.classList.contains('open')) {
+                        menu.classList.remove('open');
+                        if (toggle) {
+                            toggle.classList.remove('active');
+                            toggle.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            });
+
+            // Escape key closes menu and active submenus
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    if (menu && menu.classList.contains('open')) {
+                        menu.classList.remove('open');
+                        if (toggle) {
+                            toggle.classList.remove('active');
+                            toggle.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                    document.querySelectorAll('.mega-menu li.active').forEach(function(li) {
+                        li.classList.remove('active');
+                        const link = li.querySelector('a');
+                        if (link) link.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        });
+
+        // ─── PROGRESS BAR ───
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+            const progressBar = document.getElementById('reading-progress-bar');
+            const percentDisplay = document.getElementById('scroll-percent');
+            if (progressBar) progressBar.style.width = scrolled + '%';
+            if (percentDisplay) percentDisplay.textContent = Math.round(scrolled) + '%';
+        });
+
+        // ─── SCROLL NAV ───
+        document.getElementById('scroll-to-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        document.getElementById('scroll-to-bottom').addEventListener('click', function() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
+
+        // ─── FAQ TOGGLE ───
+        function toggleFAQ(btn) {
+            const item = btn.closest('.faq-item');
+            if (!item) return;
+            const isOpen = item.classList.contains('open');
+            const answer = btn.nextElementSibling;
+            item.classList.toggle('open');
+            const expanded = !isOpen;
+            btn.setAttribute('aria-expanded', expanded);
+            if (answer) {
+                if (expanded) {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            }
+        }
+
+        // ─── INITIAL FAQ STATE ───
+        document.querySelectorAll('.faq-item').forEach(function(item, index) {
+            const btn = item.querySelector('.faq-question');
+            if (!btn) return;
+            const isOpen = item.classList.contains('open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            const answer = btn.nextElementSibling;
+            if (answer) {
+                answer.style.display = isOpen ? 'block' : 'none';
+            }
+        });
+
+        // ─── READING CHALLENGE ───
+        function checkReadingChallenge() {
+            const answers = { 'rc-q1': 0, 'rc-q2': 1, 'rc-q3': 1 };
+            let score = 0;
+            const total = 3;
+            const resultDiv = document.getElementById('rcResult');
+            let resultHtml = '';
+            for (let i = 1; i <= 3; i++) {
+                const fb = document.getElementById('rc-fb' + i);
+                const selected = document.querySelector('input[name="rc-q' + i + '"]:checked');
+                if (selected) {
+                    if (parseInt(selected.value) === answers['rc-q' + i]) {
+                        fb.className = 'feedback correct';
+                        fb.textContent = '✅ Correct!';
+                        score++;
+                    } else {
+                        fb.className = 'feedback incorrect';
+                        fb.textContent = '❌ Incorrect.';
+                    }
+                } else {
+                    fb.className = 'feedback incorrect';
+                    fb.textContent = '⚠️ Please select an answer.';
+                }
+                resultHtml += '<div>Q' + i + ': ' + fb.textContent + '</div>';
+            }
+            resultDiv.innerHTML = '<strong>🎯 Challenge Score: ' + score + ' out of ' + total + '</strong><br>' + resultHtml;
+        }
+    </script>
+
+</body>
 </html>
