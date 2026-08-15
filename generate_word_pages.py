@@ -90,13 +90,12 @@ def example_rejection_reason(example, word, part_of_speech):
         if re.fullmatch(pattern, example, flags=re.IGNORECASE):
             return reason
 
+    # This source template is synthetic rather than a useful usage example. It
+    # also produces obvious article, countability, and part-of-speech errors
+    # (for example, "This is a academic." and "This is a against."). Reject
+    # the exact template instead of attempting to rewrite or grammar-correct it.
     if re.fullmatch(rf"This is a {escaped_word}\.", example, flags=re.IGNORECASE):
-        if part_of_speech == "adjective":
-            return "article before adjective"
-        if word in {"opportunity", "water"}:
-            return "known article/countability error"
-        if part_of_speech == "noun" and word.endswith("s"):
-            return "singular article before likely plural noun"
+        return "synthetic article template"
     return None
 
 
@@ -196,8 +195,8 @@ def render_page(slug, entry, header_html=None, footer_html=None):
         <div id="resultArea"></div>
     </div>
     </main>
-{footer_html}
     <script src="../learning-explorer.js"></script>
+{footer_html}
 </body>
 </html>
 """

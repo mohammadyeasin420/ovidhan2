@@ -9,8 +9,8 @@
   "generated_page_count": 1000,
   "first_word": "a",
   "last_word": "boot",
-  "published_example_count": 75,
-  "rejected_example_count": 453,
+  "published_example_count": 0,
+  "rejected_example_count": 528,
   "rejected_examples": [
     {
       "word": "a",
@@ -68,6 +68,11 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "absolutely",
+      "example": "This is a absolutely.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "abstract",
       "example": "Can you use 'abstract' in a sentence?",
       "reason": "use-in-a-sentence prompt"
@@ -81,6 +86,11 @@
       "word": "ac",
       "example": "'ac' is common in English.",
       "reason": "common-in-English filler"
+    },
+    {
+      "word": "academic",
+      "example": "This is a academic.",
+      "reason": "synthetic article template"
     },
     {
       "word": "academy",
@@ -100,7 +110,7 @@
     {
       "word": "acceptable",
       "example": "This is a acceptable.",
-      "reason": "article before adjective"
+      "reason": "synthetic article template"
     },
     {
       "word": "acceptance",
@@ -133,6 +143,11 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "accessory",
+      "example": "This is a accessory.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "accident",
       "example": "Learning 'accident' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -141,6 +156,11 @@
       "word": "accommodation",
       "example": "'accommodation' is common in English.",
       "reason": "common-in-English filler"
+    },
+    {
+      "word": "accordance",
+      "example": "This is a accordance.",
+      "reason": "synthetic article template"
     },
     {
       "word": "according",
@@ -153,9 +173,19 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "accounting",
+      "example": "This is a accounting.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "accounts",
       "example": "Learning 'accounts' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "accuracy",
+      "example": "This is a accuracy.",
+      "reason": "synthetic article template"
     },
     {
       "word": "accurate",
@@ -193,6 +223,11 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "across",
+      "example": "This is a across.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "act",
       "example": "I know the word 'act'.",
       "reason": "word-knowledge filler"
@@ -201,6 +236,11 @@
       "word": "acting",
       "example": "I know the word 'acting'.",
       "reason": "word-knowledge filler"
+    },
+    {
+      "word": "action",
+      "example": "This is a action.",
+      "reason": "synthetic article template"
     },
     {
       "word": "actions",
@@ -218,6 +258,11 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "activity",
+      "example": "This is a activity.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "actor",
       "example": "Learning 'actor' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -230,7 +275,7 @@
     {
       "word": "actual",
       "example": "This is a actual.",
-      "reason": "article before adjective"
+      "reason": "synthetic article template"
     },
     {
       "word": "actually",
@@ -250,7 +295,12 @@
     {
       "word": "adams",
       "example": "This is a adams.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "adapter",
+      "example": "This is a adapter.",
+      "reason": "synthetic article template"
     },
     {
       "word": "add",
@@ -295,7 +345,7 @@
     {
       "word": "adds",
       "example": "This is a adds.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "adequate",
@@ -333,6 +383,11 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "adopted",
+      "example": "This is a adopted.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "adoption",
       "example": "Learning 'adoption' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -340,7 +395,12 @@
     {
       "word": "ads",
       "example": "This is a ads.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "adult",
+      "example": "This is a adult.",
+      "reason": "synthetic article template"
     },
     {
       "word": "adults",
@@ -370,7 +430,12 @@
     {
       "word": "adventures",
       "example": "This is a adventures.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "advertise",
+      "example": "This is a advertise.",
+      "reason": "synthetic article template"
     },
     {
       "word": "advertisement",
@@ -403,6 +468,11 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "affect",
+      "example": "This is a affect.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "affected",
       "example": "Learning 'affected' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -433,9 +503,14 @@
       "reason": "vocabulary filler"
     },
     {
+      "word": "african",
+      "example": "This is a african.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "after",
       "example": "This is a after.",
-      "reason": "article before adjective"
+      "reason": "synthetic article template"
     },
     {
       "word": "afternoon",
@@ -446,6 +521,16 @@
       "word": "ag",
       "example": "Learning 'ag' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "again",
+      "example": "This is a again.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "against",
+      "example": "This is a against.",
+      "reason": "synthetic article template"
     },
     {
       "word": "age",
@@ -461,6 +546,21 @@
       "word": "agencies",
       "example": "Learning 'agencies' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "agency",
+      "example": "This is a agency.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "agenda",
+      "example": "This is a agenda.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "agent",
+      "example": "This is a agent.",
+      "reason": "synthetic article template"
     },
     {
       "word": "agents",
@@ -525,7 +625,7 @@
     {
       "word": "aids",
       "example": "This is a aids.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "aim",
@@ -543,6 +643,11 @@
       "reason": "vocabulary filler"
     },
     {
+      "word": "airline",
+      "example": "This is a airline.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "airlines",
       "example": "Learning 'airlines' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -556,6 +661,11 @@
       "word": "ak",
       "example": "'ak' is common in English.",
       "reason": "common-in-English filler"
+    },
+    {
+      "word": "al",
+      "example": "This is a al.",
+      "reason": "synthetic article template"
     },
     {
       "word": "alabama",
@@ -608,6 +718,11 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "alex",
+      "example": "This is a alex.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "alexander",
       "example": "'alexander' is common in English.",
       "reason": "common-in-English filler"
@@ -636,6 +751,11 @@
       "word": "alliance",
       "example": "Learning 'alliance' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "allocated",
+      "example": "This is a allocated.",
+      "reason": "synthetic article template"
     },
     {
       "word": "allow",
@@ -693,9 +813,24 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "although",
+      "example": "This is a although.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "aluminum",
+      "example": "This is a aluminum.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "alumni",
       "example": "'alumni' is common in English.",
       "reason": "common-in-English filler"
+    },
+    {
+      "word": "always",
+      "example": "This is a always.",
+      "reason": "synthetic article template"
     },
     {
       "word": "am",
@@ -753,9 +888,19 @@
       "reason": "vocabulary filler"
     },
     {
+      "word": "amount",
+      "example": "This is a amount.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "amounts",
       "example": "This is a amounts.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "amp",
+      "example": "This is a amp.",
+      "reason": "synthetic article template"
     },
     {
       "word": "amsterdam",
@@ -775,7 +920,7 @@
     {
       "word": "analysis",
       "example": "This is a analysis.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "analyst",
@@ -803,6 +948,11 @@
       "reason": "vocabulary filler"
     },
     {
+      "word": "andy",
+      "example": "This is a andy.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "angel",
       "example": "Can you use 'angel' in a sentence?",
       "reason": "use-in-a-sentence prompt"
@@ -816,6 +966,11 @@
       "word": "angels",
       "example": "Learning 'angels' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "angle",
+      "example": "This is a angle.",
+      "reason": "synthetic article template"
     },
     {
       "word": "animal",
@@ -833,9 +988,19 @@
       "reason": "common-in-English filler"
     },
     {
+      "word": "anime",
+      "example": "This is a anime.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "ann",
       "example": "Learning 'ann' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "anna",
+      "example": "This is a anna.",
+      "reason": "synthetic article template"
     },
     {
       "word": "anne",
@@ -846,6 +1011,16 @@
       "word": "anniversary",
       "example": "Learning 'anniversary' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "annotation",
+      "example": "This is a annotation.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "announced",
+      "example": "This is a announced.",
+      "reason": "synthetic article template"
     },
     {
       "word": "announcement",
@@ -865,12 +1040,12 @@
     {
       "word": "anonymous",
       "example": "This is a anonymous.",
-      "reason": "article before adjective"
+      "reason": "synthetic article template"
     },
     {
       "word": "another",
       "example": "This is a another.",
-      "reason": "article before adjective"
+      "reason": "synthetic article template"
     },
     {
       "word": "answer",
@@ -880,7 +1055,7 @@
     {
       "word": "answers",
       "example": "This is a answers.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "anthony",
@@ -926,6 +1101,11 @@
       "word": "anytime",
       "example": "Can you use 'anytime' in a sentence?",
       "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "anyway",
+      "example": "This is a anyway.",
+      "reason": "synthetic article template"
     },
     {
       "word": "anywhere",
@@ -1023,6 +1203,11 @@
       "reason": "common-in-English filler"
     },
     {
+      "word": "applicant",
+      "example": "This is a applicant.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "application",
       "example": "Learning 'application' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -1031,6 +1216,11 @@
       "word": "applications",
       "example": "I know the word 'applications'.",
       "reason": "word-knowledge filler"
+    },
+    {
+      "word": "applied",
+      "example": "This is a applied.",
+      "reason": "synthetic article template"
     },
     {
       "word": "applies",
@@ -1078,6 +1268,11 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "approval",
+      "example": "This is a approval.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "approved",
       "example": "Learning 'approved' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -1088,6 +1283,11 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "apr",
+      "example": "This is a apr.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "april",
       "example": "'april' is common in English.",
       "reason": "common-in-English filler"
@@ -1096,6 +1296,16 @@
       "word": "ar",
       "example": "I know the word 'ar'.",
       "reason": "word-knowledge filler"
+    },
+    {
+      "word": "arab",
+      "example": "This is a arab.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "arcade",
+      "example": "This is a arcade.",
+      "reason": "synthetic article template"
     },
     {
       "word": "architecture",
@@ -1110,7 +1320,12 @@
     {
       "word": "archives",
       "example": "This is a archives.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "are",
+      "example": "This is a are.",
+      "reason": "synthetic article template"
     },
     {
       "word": "area",
@@ -1120,7 +1335,12 @@
     {
       "word": "areas",
       "example": "This is a areas.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "arena",
+      "example": "This is a arena.",
+      "reason": "synthetic article template"
     },
     {
       "word": "argentina",
@@ -1135,7 +1355,7 @@
     {
       "word": "arguments",
       "example": "This is a arguments.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "arizona",
@@ -1153,9 +1373,19 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "armed",
+      "example": "This is a armed.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "arms",
       "example": "This is a arms.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "army",
+      "example": "This is a army.",
+      "reason": "synthetic article template"
     },
     {
       "word": "around",
@@ -1200,7 +1430,7 @@
     {
       "word": "articles",
       "example": "This is a articles.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "artist",
@@ -1233,6 +1463,11 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "ask",
+      "example": "This is a ask.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "asked",
       "example": "Can you use 'asked' in a sentence?",
       "reason": "use-in-a-sentence prompt"
@@ -1243,14 +1478,24 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "asp",
+      "example": "This is a asp.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "aspect",
+      "example": "This is a aspect.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "aspects",
       "example": "This is a aspects.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "ass",
       "example": "This is a ass.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "assembly",
@@ -1320,7 +1565,12 @@
     {
       "word": "associations",
       "example": "This is a associations.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "assume",
+      "example": "This is a assume.",
+      "reason": "synthetic article template"
     },
     {
       "word": "assumes",
@@ -1328,14 +1578,24 @@
       "reason": "common-in-English filler"
     },
     {
+      "word": "at",
+      "example": "This is a at.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "athletic",
       "example": "This is a athletic.",
-      "reason": "article before adjective"
+      "reason": "synthetic article template"
     },
     {
       "word": "atlanta",
       "example": "I know the word 'atlanta'.",
       "reason": "word-knowledge filler"
+    },
+    {
+      "word": "atlantic",
+      "example": "This is a atlantic.",
+      "reason": "synthetic article template"
     },
     {
       "word": "atmosphere",
@@ -1378,6 +1638,16 @@
       "reason": "vocabulary filler"
     },
     {
+      "word": "attendance",
+      "example": "This is a attendance.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "attention",
+      "example": "This is a attention.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "attorney",
       "example": "Can you use 'attorney' in a sentence?",
       "reason": "use-in-a-sentence prompt"
@@ -1400,7 +1670,7 @@
     {
       "word": "attributes",
       "example": "This is a attributes.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "au",
@@ -1415,7 +1685,12 @@
     {
       "word": "auctions",
       "example": "This is a auctions.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "aud",
+      "example": "This is a aud.",
+      "reason": "synthetic article template"
     },
     {
       "word": "audience",
@@ -1493,6 +1768,11 @@
       "reason": "vocabulary filler"
     },
     {
+      "word": "automatic",
+      "example": "This is a automatic.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "automatically",
       "example": "Learning 'automatically' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -1553,6 +1833,11 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "award",
+      "example": "This is a award.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "awarded",
       "example": "Learning 'awarded' helps your vocabulary.",
       "reason": "vocabulary filler"
@@ -1570,7 +1855,7 @@
     {
       "word": "awareness",
       "example": "This is a awareness.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "away",
@@ -1581,6 +1866,11 @@
       "word": "awesome",
       "example": "Learning 'awesome' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "az",
+      "example": "This is a az.",
+      "reason": "synthetic article template"
     },
     {
       "word": "b",
@@ -1600,7 +1890,7 @@
     {
       "word": "babes",
       "example": "This is a babes.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "baby",
@@ -1628,6 +1918,11 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "bag",
+      "example": "This is a bag.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "bags",
       "example": "I know the word 'bags'.",
       "reason": "word-knowledge filler"
@@ -1638,6 +1933,11 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "balance",
+      "example": "This is a balance.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "ball",
       "example": "Can you use 'ball' in a sentence?",
       "reason": "use-in-a-sentence prompt"
@@ -1646,6 +1946,11 @@
       "word": "balls",
       "example": "Learning 'balls' helps your vocabulary.",
       "reason": "vocabulary filler"
+    },
+    {
+      "word": "baltimore",
+      "example": "This is a baltimore.",
+      "reason": "synthetic article template"
     },
     {
       "word": "band",
@@ -1661,6 +1966,11 @@
       "word": "bang",
       "example": "'bang' is common in English.",
       "reason": "common-in-English filler"
+    },
+    {
+      "word": "bank",
+      "example": "This is a bank.",
+      "reason": "synthetic article template"
     },
     {
       "word": "banking",
@@ -1703,6 +2013,11 @@
       "reason": "word-knowledge filler"
     },
     {
+      "word": "base",
+      "example": "This is a base.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "baseball",
       "example": "'baseball' is common in English.",
       "reason": "common-in-English filler"
@@ -1735,7 +2050,12 @@
     {
       "word": "bass",
       "example": "This is a bass.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bath",
+      "example": "This is a bath.",
+      "reason": "synthetic article template"
     },
     {
       "word": "bathroom",
@@ -1753,9 +2073,19 @@
       "reason": "common-in-English filler"
     },
     {
+      "word": "battle",
+      "example": "This is a battle.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "bay",
       "example": "'bay' is common in English.",
       "reason": "common-in-English filler"
+    },
+    {
+      "word": "bb",
+      "example": "This is a bb.",
+      "reason": "synthetic article template"
     },
     {
       "word": "bbc",
@@ -1805,7 +2135,7 @@
     {
       "word": "beautiful",
       "example": "This is a beautiful.",
-      "reason": "article before adjective"
+      "reason": "synthetic article template"
     },
     {
       "word": "beauty",
@@ -1816,6 +2146,11 @@
       "word": "became",
       "example": "Can you use 'became' in a sentence?",
       "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "because",
+      "example": "This is a because.",
+      "reason": "synthetic article template"
     },
     {
       "word": "become",
@@ -1950,12 +2285,17 @@
     {
       "word": "benefits",
       "example": "This is a benefits.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "berlin",
       "example": "'berlin' is common in English.",
       "reason": "common-in-English filler"
+    },
+    {
+      "word": "best",
+      "example": "This is a best.",
+      "reason": "synthetic article template"
     },
     {
       "word": "bestiality",
@@ -2003,9 +2343,14 @@
       "reason": "common-in-English filler"
     },
     {
+      "word": "bidding",
+      "example": "This is a bidding.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "bids",
       "example": "This is a bids.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "big",
@@ -2098,6 +2443,11 @@
       "reason": "common-in-English filler"
     },
     {
+      "word": "bit",
+      "example": "This is a bit.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "bits",
       "example": "I know the word 'bits'.",
       "reason": "word-knowledge filler"
@@ -2150,7 +2500,7 @@
     {
       "word": "blogs",
       "example": "This is a blogs.",
-      "reason": "singular article before likely plural noun"
+      "reason": "synthetic article template"
     },
     {
       "word": "blonde",
@@ -2203,6 +2553,11 @@
       "reason": "use-in-a-sentence prompt"
     },
     {
+      "word": "board",
+      "example": "This is a board.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "boards",
       "example": "Can you use 'boards' in a sentence?",
       "reason": "use-in-a-sentence prompt"
@@ -2218,14 +2573,34 @@
       "reason": "vocabulary filler"
     },
     {
+      "word": "bob",
+      "example": "This is a bob.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "bodies",
       "example": "I know the word 'bodies'.",
       "reason": "word-knowledge filler"
     },
     {
+      "word": "body",
+      "example": "This is a body.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bold",
+      "example": "This is a bold.",
+      "reason": "synthetic article template"
+    },
+    {
       "word": "bond",
       "example": "I know the word 'bond'.",
       "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bondage",
+      "example": "This is a bondage.",
+      "reason": "synthetic article template"
     },
     {
       "word": "bonds",
@@ -3298,7 +3673,7 @@
     },
     "failures": [],
     "warnings": [],
-    "generated_bytes": 14681414,
+    "generated_bytes": 14674745,
     "layout_internal_link_count": 56,
     "missing_layout_destinations": [],
     "qa": {
@@ -3697,8 +4072,8 @@
           "part_of_speech": "noun",
           "definition": "an educator who works at a college or university",
           "pronunciation": null,
-          "published_example": "This is a academic.",
-          "rejected_example_count": 0
+          "published_example": null,
+          "rejected_example_count": 1
         },
         {
           "word": "apple",
@@ -3742,8 +4117,8 @@
           "part_of_speech": "unknown",
           "definition": null,
           "pronunciation": null,
-          "published_example": "This is a against.",
-          "rejected_example_count": 0
+          "published_example": null,
+          "rejected_example_count": 1
         },
         {
           "word": "art",
@@ -3760,8 +4135,8 @@
           "part_of_speech": "noun",
           "definition": "a state of equilibrium",
           "pronunciation": null,
-          "published_example": "This is a balance.",
-          "rejected_example_count": 0
+          "published_example": null,
+          "rejected_example_count": 1
         }
       ]
     }
@@ -3770,5 +4145,466 @@
     "header_source": "header.html",
     "footer_source": "footer.html",
     "integrated_page_count": 1000
+  },
+  "example_quality_audit": {
+    "words_with_source_example": 528,
+    "previously_rejected_count": 453,
+    "newly_rejected_count": 75,
+    "examples_remaining_published": 0,
+    "words_without_published_example": 1000,
+    "newly_rejected_examples": [
+      {
+        "word": "absolutely",
+        "example": "This is a absolutely.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "academic",
+        "example": "This is a academic.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "accessory",
+        "example": "This is a accessory.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "accordance",
+        "example": "This is a accordance.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "accounting",
+        "example": "This is a accounting.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "accuracy",
+        "example": "This is a accuracy.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "across",
+        "example": "This is a across.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "action",
+        "example": "This is a action.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "activity",
+        "example": "This is a activity.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "adapter",
+        "example": "This is a adapter.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "adopted",
+        "example": "This is a adopted.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "adult",
+        "example": "This is a adult.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "advertise",
+        "example": "This is a advertise.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "affect",
+        "example": "This is a affect.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "african",
+        "example": "This is a african.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "again",
+        "example": "This is a again.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "against",
+        "example": "This is a against.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "agency",
+        "example": "This is a agency.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "agenda",
+        "example": "This is a agenda.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "agent",
+        "example": "This is a agent.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "airline",
+        "example": "This is a airline.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "al",
+        "example": "This is a al.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "alex",
+        "example": "This is a alex.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "allocated",
+        "example": "This is a allocated.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "although",
+        "example": "This is a although.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "aluminum",
+        "example": "This is a aluminum.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "always",
+        "example": "This is a always.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "amount",
+        "example": "This is a amount.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "amp",
+        "example": "This is a amp.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "andy",
+        "example": "This is a andy.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "angle",
+        "example": "This is a angle.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "anime",
+        "example": "This is a anime.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "anna",
+        "example": "This is a anna.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "annotation",
+        "example": "This is a annotation.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "announced",
+        "example": "This is a announced.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "anyway",
+        "example": "This is a anyway.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "applicant",
+        "example": "This is a applicant.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "applied",
+        "example": "This is a applied.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "approval",
+        "example": "This is a approval.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "apr",
+        "example": "This is a apr.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "arab",
+        "example": "This is a arab.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "arcade",
+        "example": "This is a arcade.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "are",
+        "example": "This is a are.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "arena",
+        "example": "This is a arena.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "armed",
+        "example": "This is a armed.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "army",
+        "example": "This is a army.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "ask",
+        "example": "This is a ask.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "asp",
+        "example": "This is a asp.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "aspect",
+        "example": "This is a aspect.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "assume",
+        "example": "This is a assume.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "at",
+        "example": "This is a at.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "atlantic",
+        "example": "This is a atlantic.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "attendance",
+        "example": "This is a attendance.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "attention",
+        "example": "This is a attention.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "aud",
+        "example": "This is a aud.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "automatic",
+        "example": "This is a automatic.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "award",
+        "example": "This is a award.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "az",
+        "example": "This is a az.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bag",
+        "example": "This is a bag.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "balance",
+        "example": "This is a balance.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "baltimore",
+        "example": "This is a baltimore.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bank",
+        "example": "This is a bank.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "base",
+        "example": "This is a base.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bath",
+        "example": "This is a bath.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "battle",
+        "example": "This is a battle.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bb",
+        "example": "This is a bb.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "because",
+        "example": "This is a because.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "best",
+        "example": "This is a best.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bidding",
+        "example": "This is a bidding.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bit",
+        "example": "This is a bit.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "board",
+        "example": "This is a board.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bob",
+        "example": "This is a bob.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "body",
+        "example": "This is a body.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bold",
+        "example": "This is a bold.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bondage",
+        "example": "This is a bondage.",
+        "reason": "synthetic article template"
+      }
+    ],
+    "changed_word_pages": [
+      "word/absolutely.html",
+      "word/academic.html",
+      "word/accessory.html",
+      "word/accordance.html",
+      "word/accounting.html",
+      "word/accuracy.html",
+      "word/across.html",
+      "word/action.html",
+      "word/activity.html",
+      "word/adapter.html",
+      "word/adopted.html",
+      "word/adult.html",
+      "word/advertise.html",
+      "word/affect.html",
+      "word/african.html",
+      "word/again.html",
+      "word/against.html",
+      "word/agency.html",
+      "word/agenda.html",
+      "word/agent.html",
+      "word/airline.html",
+      "word/al.html",
+      "word/alex.html",
+      "word/allocated.html",
+      "word/although.html",
+      "word/aluminum.html",
+      "word/always.html",
+      "word/amount.html",
+      "word/amp.html",
+      "word/andy.html",
+      "word/angle.html",
+      "word/anime.html",
+      "word/anna.html",
+      "word/annotation.html",
+      "word/announced.html",
+      "word/anyway.html",
+      "word/applicant.html",
+      "word/applied.html",
+      "word/approval.html",
+      "word/apr.html",
+      "word/arab.html",
+      "word/arcade.html",
+      "word/are.html",
+      "word/arena.html",
+      "word/armed.html",
+      "word/army.html",
+      "word/ask.html",
+      "word/asp.html",
+      "word/aspect.html",
+      "word/assume.html",
+      "word/at.html",
+      "word/atlantic.html",
+      "word/attendance.html",
+      "word/attention.html",
+      "word/aud.html",
+      "word/automatic.html",
+      "word/award.html",
+      "word/az.html",
+      "word/bag.html",
+      "word/balance.html",
+      "word/baltimore.html",
+      "word/bank.html",
+      "word/base.html",
+      "word/bath.html",
+      "word/battle.html",
+      "word/bb.html",
+      "word/because.html",
+      "word/best.html",
+      "word/bidding.html",
+      "word/bit.html",
+      "word/board.html",
+      "word/bob.html",
+      "word/body.html",
+      "word/bold.html",
+      "word/bondage.html"
+    ]
   }
 }
