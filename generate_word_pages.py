@@ -13,6 +13,8 @@ from pathlib import Path
 
 SOURCE_PATH = Path("enriched-dictionary.json")
 OUTPUT_DIR = Path("word")
+HEADER_PATH = Path("header.html")
+FOOTER_PATH = Path("footer.html")
 SLUG_RE = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*\Z")
 
 
@@ -52,6 +54,17 @@ def normalize_records(records):
 def is_publishable(entry):
     """A static dictionary answer needs a real definition or Bangla meaning."""
     return bool(nonempty(entry, "definition") or nonempty(entry, "bangla"))
+
+
+def load_site_layout():
+    """Load the authoritative production header and footer fragments."""
+    header = HEADER_PATH.read_text(encoding="utf-8").strip()
+    footer = FOOTER_PATH.read_text(encoding="utf-8").strip()
+    if header.count('<header class="site-header">') != 1 or header.count('<footer'):
+        raise ValueError(f"Invalid authoritative header fragment: {HEADER_PATH}")
+    if footer.count('<footer class="site-footer">') != 1 or footer.count('<header'):
+        raise ValueError(f"Invalid authoritative footer fragment: {FOOTER_PATH}")
+    return header, footer
 
 
 def example_candidates(entry):
@@ -99,7 +112,9 @@ def select_example(entry, word):
     return None, rejected
 
 
-def render_page(slug, entry):
+def render_page(slug, entry, header_html=None, footer_html=None):
+    if header_html is None or footer_html is None:
+        header_html, footer_html = load_site_layout()
     source_word = nonempty(entry, "english") or nonempty(entry, "word") or nonempty(entry, "en") or slug
     word = source_word.strip().lower()
     bangla = nonempty(entry, "bangla")
@@ -166,6 +181,7 @@ def render_page(slug, entry):
     <script type="application/ld+json">{json.dumps(defined_term, ensure_ascii=False, indent=2)}</script>
 </head>
 <body>
+{header_html}
     <main>
     <article class="dictionary-answer" style="padding:2rem;">
         <h1>{html.escape(word)} meaning in Bangla</h1>
@@ -180,6 +196,7 @@ def render_page(slug, entry):
         <div id="resultArea"></div>
     </div>
     </main>
+{footer_html}
     <script src="../learning-explorer.js"></script>
 </body>
 </html>
@@ -265,13 +282,14 @@ def main():
     publishable_count = sum(is_publishable(entry) for _, entry in normalized)
     mode, selected = select_mode(args, normalized)
     quality = full_quality_stats(records, normalized, duplicates, invalid)
+    header_html, footer_html = load_site_layout()
 
     OUTPUT_DIR.mkdir(exist_ok=True)
     generated_paths = []
     rejected_in_selection = []
     published_examples = 0
     for slug, entry in selected:
-        page, rejected, has_example = render_page(slug, entry)
+        page, rejected, has_example = render_page(slug, entry, header_html, footer_html)
         path = OUTPUT_DIR / f"{slug}.html"
         path.write_text(page, encoding="utf-8")
         generated_paths.append(path.as_posix())

@@ -3298,7 +3298,9 @@
     },
     "failures": [],
     "warnings": [],
-    "generated_bytes": 2215414,
+    "generated_bytes": 14681414,
+    "layout_internal_link_count": 56,
+    "missing_layout_destinations": [],
     "qa": {
       "rich_data": [
         {
@@ -3669,7 +3671,104 @@
           "published_example": null,
           "rejected_example_count": 1
         }
+      ],
+      "site_integration_samples": [
+        {
+          "word": "a",
+          "bangla": "ক",
+          "part_of_speech": "noun",
+          "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "abacus",
+          "bangla": "অ্যাবাকাস",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "academic",
+          "bangla": "একাডেমিক",
+          "part_of_speech": "noun",
+          "definition": "an educator who works at a college or university",
+          "pronunciation": null,
+          "published_example": "This is a academic.",
+          "rejected_example_count": 0
+        },
+        {
+          "word": "apple",
+          "bangla": "আপেল",
+          "part_of_speech": "noun",
+          "definition": "fruit with red or yellow or green skin and sweet to tart crisp whitish flesh",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "beautiful",
+          "bangla": "সুন্দর",
+          "part_of_speech": "adjective",
+          "definition": "delighting the senses or exciting intellectual or emotional admiration",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "boot",
+          "bangla": "বুট",
+          "part_of_speech": "noun",
+          "definition": "footwear that covers the whole foot and lower leg",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "ability",
+          "bangla": "ক্ষমতা",
+          "part_of_speech": "noun",
+          "definition": "the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "against",
+          "bangla": "বিরুদ্ধে",
+          "part_of_speech": "unknown",
+          "definition": null,
+          "pronunciation": null,
+          "published_example": "This is a against.",
+          "rejected_example_count": 0
+        },
+        {
+          "word": "art",
+          "bangla": "শিল্প",
+          "part_of_speech": "noun",
+          "definition": "the products of human creativity; works of art collectively",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "balance",
+          "bangla": "ভারসাম্য",
+          "part_of_speech": "noun",
+          "definition": "a state of equilibrium",
+          "pronunciation": null,
+          "published_example": "This is a balance.",
+          "rejected_example_count": 0
+        }
       ]
     }
+  },
+  "site_integration": {
+    "header_source": "header.html",
+    "footer_source": "footer.html",
+    "integrated_page_count": 1000
   }
 }

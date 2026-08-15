@@ -7,7 +7,7 @@ import re
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from generate_word_pages import example_candidates, example_rejection_reason, nonempty, normalize_records, select_example
+from generate_word_pages import example_candidates, example_rejection_reason, load_site_layout, nonempty, normalize_records, select_example
 
 
 def parse_args():
@@ -28,6 +28,15 @@ def main():
     failures = []
     warnings = []
     seen_canonicals = set()
+    header_html, footer_html = load_site_layout()
+    layout_html = header_html + footer_html
+    internal_hrefs = sorted(set(re.findall(r'href="(/[^"]*)"', layout_html)))
+    missing_layout_destinations = []
+    for href in internal_hrefs:
+        path_only = re.split(r"[?#]", href)[0]
+        local_path = Path("index.html") if path_only == "/" else Path(path_only.lstrip("/"))
+        if not local_path.is_file():
+            missing_layout_destinations.append({"href": href, "path": local_path.as_posix()})
 
     def read_page(path_text):
         path = Path(path_text)
@@ -54,6 +63,22 @@ def main():
         seen_canonicals.add(canonical)
         if f"<h1>{html.escape(word)} meaning in Bangla</h1>" not in page:
             page_failures.append("h1")
+        if page.count('<article class="dictionary-answer"') != 1:
+            page_failures.append("static-answer")
+        if page.count(header_html) != 1 or page.count('<header class="site-header">') != 1:
+            page_failures.append("site-header")
+        if page.count(footer_html) != 1 or page.count('<footer class="site-footer">') != 1:
+            page_failures.append("site-footer")
+        if page.count('id="megaMenu"') != 1 or page.count('<ul class="mega-menu"') != 1:
+            page_failures.append("navigation")
+        if page.count("function toggleMenu()") != 1 or page.count('onclick="toggleMenu()"') != 1:
+            page_failures.append("mobile-menu-script")
+        if page.count("MOBILE MENU STYLES") != 1 or "@media (max-width: 900px)" not in page:
+            page_failures.append("mobile-menu-styles")
+        if page.count('<link rel="stylesheet" href="../styles.css">') != 1:
+            page_failures.append("word-stylesheet")
+        if missing_layout_destinations:
+            page_failures.append("layout-link-destination")
         for field, css_class in (("bangla", "bangla-meaning"), ("definition", "definition"), ("part_of_speech", "part-of-speech"), ("pronunciation", "pronunciation")):
             value = nonempty(entry, field)
             present = f'class="{css_class}"' in page
@@ -67,7 +92,7 @@ def main():
             page_failures.append("banned-placeholder")
         if re.search(r"\{[A-Za-z_][^}]*\}", page):
             page_failures.append("template-placeholder")
-        if "../learning-explorer.js" not in page or "Learning Explorer" not in page:
+        if page.count('<script src="../learning-explorer.js"></script>') != 1 or "Learning Explorer" not in page:
             page_failures.append("learning-explorer")
         if "noindex" in page.lower():
             page_failures.append("noindex")
@@ -112,12 +137,15 @@ def main():
         "rejected_examples": [sample(slug) for slug in rejected_words],
         "first_five": [sample(slug) for slug in slugs[:5]],
         "last_five": [sample(slug) for slug in slugs[-5:]],
+        "site_integration_samples": [sample(slug) for slug in ("a", "abacus", "academic", "apple", "beautiful", "boot", "ability", "against", "art", "balance") if slug in entries and slug in slugs],
     }
     summary = {
         "results": results,
         "failures": failures,
         "warnings": warnings,
         "generated_bytes": sum(Path(path).stat().st_size for path in paths),
+        "layout_internal_link_count": len(internal_hrefs),
+        "missing_layout_destinations": missing_layout_destinations,
         "qa": qa,
     }
     report["validation"] = summary
