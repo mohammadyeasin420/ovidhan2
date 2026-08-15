@@ -58,10 +58,25 @@ function searchWord() {
     // --- Build main result ---
     let html = `<div class="result-card">`;
     html += `<div class="word">${word}</div>`;
-    html += `<div class="pronunciation">/ ${entry.pronunciation || '...'} / <button onclick="speak('${word}')" style="background:none; border:none; color:var(--teal); cursor:pointer;">🔊</button></div>`;
-    html += `<div class="meaning"><strong>Meaning:</strong> ${entry.meaning || 'Not available'}</div>`;
-    html += `<div class="bangla"><strong>বাংলা:</strong> ${entry.bangla || 'Not available'}</div>`;
-    html += `<div><strong>Word type:</strong> ${entry.part_of_speech || 'N/A'}</div>`;
+    const pronunciation = typeof entry.pronunciation === 'string' ? entry.pronunciation.trim() : '';
+    const definition = typeof entry.definition === 'string' ? entry.definition.trim() : '';
+    const bangla = typeof entry.bangla === 'string' ? entry.bangla.trim() : '';
+    const partOfSpeech = typeof entry.part_of_speech === 'string' ? entry.part_of_speech.trim() : '';
+
+    if (pronunciation) {
+        html += `<div class="pronunciation">/ ${pronunciation} / <button onclick="speak('${word}')" aria-label="Hear ${word}" style="background:none; border:none; color:var(--teal); cursor:pointer;">🔊</button></div>`;
+    } else {
+        html += `<div class="word-audio"><button onclick="speak('${word}')" aria-label="Hear ${word}" style="background:none; border:none; color:var(--teal); cursor:pointer;">🔊 Hear word</button></div>`;
+    }
+    if (definition) {
+        html += `<div class="meaning"><strong>Meaning:</strong> ${definition}</div>`;
+    }
+    if (bangla) {
+        html += `<div class="bangla"><strong>বাংলা:</strong> ${bangla}</div>`;
+    }
+    if (partOfSpeech) {
+        html += `<div><strong>Word type:</strong> ${partOfSpeech}</div>`;
+    }
 
     // --- Verb Forms ---
     if (entry.verb_forms && Object.keys(entry.verb_forms).length > 0) {
@@ -111,8 +126,10 @@ function searchWord() {
     html += `<div class="phase4" style="margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1rem;">`;
 
     // Mini Story
-    const story = entry.story || `${word} is a common word in English. It is used every day. Try to use it in your own sentences.`;
-    html += `<div class="mini-story"><strong>📖 Mini Story</strong><p style="color:var(--text-mid); font-style:italic;">${story}</p></div>`;
+    const story = typeof entry.story === 'string' ? entry.story.trim() : '';
+    if (story) {
+        html += `<div class="mini-story"><strong>📖 Mini Story</strong><p style="color:var(--text-mid); font-style:italic;">${story}</p></div>`;
+    }
 
     // Daily Challenge
     html += `<div class="daily-challenge" style="margin-top:1rem;">`;
