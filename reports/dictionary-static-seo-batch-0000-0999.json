@@ -1,0 +1,4610 @@
+{
+  "mode": "batch",
+  "raw_record_count": 50489,
+  "unique_canonical_word_count": 48684,
+  "publishable_canonical_word_count": 9468,
+  "skipped_without_verified_description_count": 39216,
+  "duplicate_count": 3,
+  "invalid_or_unsluggable_count": 1802,
+  "generated_page_count": 1000,
+  "first_word": "a",
+  "last_word": "boot",
+  "published_example_count": 0,
+  "rejected_example_count": 528,
+  "rejected_examples": [
+    {
+      "word": "a",
+      "example": "Learning 'a' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "aa",
+      "example": "'aa' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "ab",
+      "example": "Learning 'ab' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "abc",
+      "example": "I know the word 'abc'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "ability",
+      "example": "'ability' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "able",
+      "example": "Can you use 'able' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "about",
+      "example": "Learning 'about' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "above",
+      "example": "Can you use 'above' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "abroad",
+      "example": "I know the word 'abroad'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "absence",
+      "example": "Can you use 'absence' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "absolute",
+      "example": "Can you use 'absolute' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "absolutely",
+      "example": "This is a absolutely.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "abstract",
+      "example": "Can you use 'abstract' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "abuse",
+      "example": "Can you use 'abuse' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "ac",
+      "example": "'ac' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "academic",
+      "example": "This is a academic.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "academy",
+      "example": "Learning 'academy' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "acc",
+      "example": "I know the word 'acc'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "accept",
+      "example": "'accept' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "acceptable",
+      "example": "This is a acceptable.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "acceptance",
+      "example": "I know the word 'acceptance'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "accepted",
+      "example": "I know the word 'accepted'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "access",
+      "example": "'access' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "accessibility",
+      "example": "'accessibility' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "accessible",
+      "example": "I know the word 'accessible'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "accessories",
+      "example": "Can you use 'accessories' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "accessory",
+      "example": "This is a accessory.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "accident",
+      "example": "Learning 'accident' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "accommodation",
+      "example": "'accommodation' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "accordance",
+      "example": "This is a accordance.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "according",
+      "example": "Can you use 'according' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "account",
+      "example": "I know the word 'account'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "accounting",
+      "example": "This is a accounting.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "accounts",
+      "example": "Learning 'accounts' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "accuracy",
+      "example": "This is a accuracy.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "accurate",
+      "example": "Can you use 'accurate' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "achieve",
+      "example": "'achieve' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "achieved",
+      "example": "Can you use 'achieved' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "acid",
+      "example": "'acid' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "acquisition",
+      "example": "Learning 'acquisition' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "acres",
+      "example": "Can you use 'acres' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "acrobat",
+      "example": "I know the word 'acrobat'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "across",
+      "example": "This is a across.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "act",
+      "example": "I know the word 'act'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "acting",
+      "example": "I know the word 'acting'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "action",
+      "example": "This is a action.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "actions",
+      "example": "'actions' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "active",
+      "example": "I know the word 'active'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "activities",
+      "example": "I know the word 'activities'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "activity",
+      "example": "This is a activity.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "actor",
+      "example": "Learning 'actor' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "acts",
+      "example": "'acts' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "actual",
+      "example": "This is a actual.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "actually",
+      "example": "Can you use 'actually' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "ad",
+      "example": "Learning 'ad' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "adam",
+      "example": "Learning 'adam' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "adams",
+      "example": "This is a adams.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "adapter",
+      "example": "This is a adapter.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "add",
+      "example": "I know the word 'add'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "added",
+      "example": "'added' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "adding",
+      "example": "Can you use 'adding' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "addition",
+      "example": "'addition' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "additional",
+      "example": "Can you use 'additional' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "address",
+      "example": "Learning 'address' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "addressed",
+      "example": "'addressed' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "addresses",
+      "example": "Can you use 'addresses' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "adds",
+      "example": "This is a adds.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "adequate",
+      "example": "'adequate' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "admin",
+      "example": "Can you use 'admin' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "administration",
+      "example": "'administration' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "administrative",
+      "example": "'administrative' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "administrator",
+      "example": "Learning 'administrator' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "admission",
+      "example": "I know the word 'admission'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "adobe",
+      "example": "Can you use 'adobe' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "adopted",
+      "example": "This is a adopted.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "adoption",
+      "example": "Learning 'adoption' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "ads",
+      "example": "This is a ads.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "adult",
+      "example": "This is a adult.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "adults",
+      "example": "Can you use 'adults' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "advance",
+      "example": "Learning 'advance' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "advanced",
+      "example": "I know the word 'advanced'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "advantage",
+      "example": "Can you use 'advantage' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "adventure",
+      "example": "Learning 'adventure' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "adventures",
+      "example": "This is a adventures.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "advertise",
+      "example": "This is a advertise.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "advertisement",
+      "example": "Learning 'advertisement' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "advertising",
+      "example": "Can you use 'advertising' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "advice",
+      "example": "'advice' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "advisor",
+      "example": "I know the word 'advisor'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "advisory",
+      "example": "Can you use 'advisory' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "affairs",
+      "example": "I know the word 'affairs'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "affect",
+      "example": "This is a affect.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "affected",
+      "example": "Learning 'affected' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "affiliate",
+      "example": "I know the word 'affiliate'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "affiliates",
+      "example": "I know the word 'affiliates'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "affordable",
+      "example": "Can you use 'affordable' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "afghanistan",
+      "example": "I know the word 'afghanistan'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "africa",
+      "example": "Learning 'africa' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "african",
+      "example": "This is a african.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "after",
+      "example": "This is a after.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "afternoon",
+      "example": "Can you use 'afternoon' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "ag",
+      "example": "Learning 'ag' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "again",
+      "example": "This is a again.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "against",
+      "example": "This is a against.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "age",
+      "example": "Can you use 'age' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "aged",
+      "example": "Can you use 'aged' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "agencies",
+      "example": "Learning 'agencies' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "agency",
+      "example": "This is a agency.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "agenda",
+      "example": "This is a agenda.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "agent",
+      "example": "This is a agent.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "agents",
+      "example": "Learning 'agents' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "ages",
+      "example": "Can you use 'ages' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "ago",
+      "example": "Can you use 'ago' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "agree",
+      "example": "Learning 'agree' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "agreed",
+      "example": "'agreed' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "agreement",
+      "example": "Learning 'agreement' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "agreements",
+      "example": "Can you use 'agreements' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "agricultural",
+      "example": "I know the word 'agricultural'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "agriculture",
+      "example": "I know the word 'agriculture'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "ah",
+      "example": "I know the word 'ah'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "ahead",
+      "example": "'ahead' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "aid",
+      "example": "Learning 'aid' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "aids",
+      "example": "This is a aids.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "aim",
+      "example": "Can you use 'aim' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "air",
+      "example": "I know the word 'air'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "aircraft",
+      "example": "Learning 'aircraft' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "airline",
+      "example": "This is a airline.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "airlines",
+      "example": "Learning 'airlines' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "airport",
+      "example": "'airport' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "ak",
+      "example": "'ak' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "al",
+      "example": "This is a al.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "alabama",
+      "example": "I know the word 'alabama'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "alan",
+      "example": "Can you use 'alan' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "alarm",
+      "example": "'alarm' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "alaska",
+      "example": "'alaska' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "alberta",
+      "example": "'alberta' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "album",
+      "example": "Learning 'album' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "albums",
+      "example": "'albums' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "alcohol",
+      "example": "Learning 'alcohol' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "alert",
+      "example": "I know the word 'alert'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "alerts",
+      "example": "I know the word 'alerts'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "alex",
+      "example": "This is a alex.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "alexander",
+      "example": "'alexander' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "algorithm",
+      "example": "I know the word 'algorithm'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "alive",
+      "example": "I know the word 'alive'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "all",
+      "example": "I know the word 'all'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "allen",
+      "example": "Learning 'allen' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "alliance",
+      "example": "Learning 'alliance' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "allocated",
+      "example": "This is a allocated.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "allow",
+      "example": "'allow' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "allowed",
+      "example": "Learning 'allowed' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "allowing",
+      "example": "Learning 'allowing' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "allows",
+      "example": "Learning 'allows' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "almost",
+      "example": "Can you use 'almost' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "alone",
+      "example": "'alone' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "along",
+      "example": "Can you use 'along' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "alpha",
+      "example": "Can you use 'alpha' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "already",
+      "example": "Can you use 'already' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "also",
+      "example": "Can you use 'also' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "alternative",
+      "example": "Can you use 'alternative' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "although",
+      "example": "This is a although.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "aluminum",
+      "example": "This is a aluminum.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "alumni",
+      "example": "'alumni' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "always",
+      "example": "This is a always.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "am",
+      "example": "'am' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "amateur",
+      "example": "I know the word 'amateur'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "amazing",
+      "example": "Can you use 'amazing' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "amazon",
+      "example": "Can you use 'amazon' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "amd",
+      "example": "Learning 'amd' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "amended",
+      "example": "I know the word 'amended'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "amendment",
+      "example": "Can you use 'amendment' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "america",
+      "example": "Learning 'america' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "american",
+      "example": "'american' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "americans",
+      "example": "I know the word 'americans'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "among",
+      "example": "Learning 'among' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "amount",
+      "example": "This is a amount.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "amounts",
+      "example": "This is a amounts.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "amp",
+      "example": "This is a amp.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "amsterdam",
+      "example": "'amsterdam' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "an",
+      "example": "'an' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "anal",
+      "example": "Learning 'anal' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "analysis",
+      "example": "This is a analysis.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "analyst",
+      "example": "Learning 'analyst' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "ancient",
+      "example": "I know the word 'ancient'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "and",
+      "example": "I know the word 'and'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "anderson",
+      "example": "Learning 'anderson' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "andrew",
+      "example": "Learning 'andrew' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "andy",
+      "example": "This is a andy.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "angel",
+      "example": "Can you use 'angel' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "angeles",
+      "example": "I know the word 'angeles'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "angels",
+      "example": "Learning 'angels' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "angle",
+      "example": "This is a angle.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "animal",
+      "example": "I know the word 'animal'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "animals",
+      "example": "'animals' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "animation",
+      "example": "'animation' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "anime",
+      "example": "This is a anime.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "ann",
+      "example": "Learning 'ann' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "anna",
+      "example": "This is a anna.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "anne",
+      "example": "Learning 'anne' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "anniversary",
+      "example": "Learning 'anniversary' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "annotation",
+      "example": "This is a annotation.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "announced",
+      "example": "This is a announced.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "announcement",
+      "example": "Can you use 'announcement' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "announcements",
+      "example": "I know the word 'announcements'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "annual",
+      "example": "Learning 'annual' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "anonymous",
+      "example": "This is a anonymous.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "another",
+      "example": "This is a another.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "answer",
+      "example": "I know the word 'answer'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "answers",
+      "example": "This is a answers.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "anthony",
+      "example": "I know the word 'anthony'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "anti",
+      "example": "Can you use 'anti' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "antique",
+      "example": "'antique' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "antiques",
+      "example": "Learning 'antiques' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "antonio",
+      "example": "I know the word 'antonio'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "any",
+      "example": "'any' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "anyone",
+      "example": "Can you use 'anyone' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "anything",
+      "example": "Learning 'anything' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "anytime",
+      "example": "Can you use 'anytime' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "anyway",
+      "example": "This is a anyway.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "anywhere",
+      "example": "Learning 'anywhere' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "aol",
+      "example": "Can you use 'aol' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "ap",
+      "example": "I know the word 'ap'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "apache",
+      "example": "'apache' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "apart",
+      "example": "Can you use 'apart' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "apartment",
+      "example": "Learning 'apartment' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "apartments",
+      "example": "I know the word 'apartments'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "api",
+      "example": "'api' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "apparel",
+      "example": "I know the word 'apparel'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "apparently",
+      "example": "'apparently' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "appeal",
+      "example": "Learning 'appeal' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "appear",
+      "example": "I know the word 'appear'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "appearance",
+      "example": "'appearance' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "appeared",
+      "example": "I know the word 'appeared'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "appears",
+      "example": "I know the word 'appears'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "appendix",
+      "example": "I know the word 'appendix'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "apple",
+      "example": "Learning 'apple' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "appliances",
+      "example": "Can you use 'appliances' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "applicable",
+      "example": "'applicable' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "applicant",
+      "example": "This is a applicant.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "application",
+      "example": "Learning 'application' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "applications",
+      "example": "I know the word 'applications'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "applied",
+      "example": "This is a applied.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "applies",
+      "example": "Learning 'applies' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "apply",
+      "example": "Learning 'apply' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "applying",
+      "example": "I know the word 'applying'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "appointed",
+      "example": "Can you use 'appointed' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "appointment",
+      "example": "Can you use 'appointment' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "appreciate",
+      "example": "Can you use 'appreciate' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "approach",
+      "example": "'approach' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "approaches",
+      "example": "I know the word 'approaches'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "appropriate",
+      "example": "Can you use 'appropriate' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "approval",
+      "example": "This is a approval.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "approved",
+      "example": "Learning 'approved' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "approximately",
+      "example": "I know the word 'approximately'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "apr",
+      "example": "This is a apr.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "april",
+      "example": "'april' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "ar",
+      "example": "I know the word 'ar'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "arab",
+      "example": "This is a arab.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "arcade",
+      "example": "This is a arcade.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "architecture",
+      "example": "'architecture' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "archive",
+      "example": "'archive' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "archives",
+      "example": "This is a archives.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "are",
+      "example": "This is a are.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "area",
+      "example": "Learning 'area' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "areas",
+      "example": "This is a areas.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "arena",
+      "example": "This is a arena.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "argentina",
+      "example": "'argentina' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "argument",
+      "example": "Can you use 'argument' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "arguments",
+      "example": "This is a arguments.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "arizona",
+      "example": "'arizona' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "arkansas",
+      "example": "Learning 'arkansas' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "arm",
+      "example": "Can you use 'arm' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "armed",
+      "example": "This is a armed.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "arms",
+      "example": "This is a arms.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "army",
+      "example": "This is a army.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "around",
+      "example": "Learning 'around' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "arrangements",
+      "example": "I know the word 'arrangements'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "array",
+      "example": "I know the word 'array'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "arrival",
+      "example": "Can you use 'arrival' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "arrived",
+      "example": "I know the word 'arrived'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "art",
+      "example": "Learning 'art' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "arthur",
+      "example": "Can you use 'arthur' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "article",
+      "example": "Learning 'article' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "articles",
+      "example": "This is a articles.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "artist",
+      "example": "Learning 'artist' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "artists",
+      "example": "'artists' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "arts",
+      "example": "Can you use 'arts' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "as",
+      "example": "Can you use 'as' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "asia",
+      "example": "I know the word 'asia'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "asian",
+      "example": "I know the word 'asian'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "ask",
+      "example": "This is a ask.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "asked",
+      "example": "Can you use 'asked' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "asking",
+      "example": "I know the word 'asking'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "asp",
+      "example": "This is a asp.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "aspect",
+      "example": "This is a aspect.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "aspects",
+      "example": "This is a aspects.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "ass",
+      "example": "This is a ass.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "assembly",
+      "example": "Learning 'assembly' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "assessment",
+      "example": "'assessment' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "asset",
+      "example": "I know the word 'asset'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "assets",
+      "example": "Learning 'assets' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "assigned",
+      "example": "'assigned' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "assignment",
+      "example": "'assignment' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "assist",
+      "example": "Can you use 'assist' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "assistance",
+      "example": "I know the word 'assistance'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "assistant",
+      "example": "I know the word 'assistant'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "associate",
+      "example": "I know the word 'associate'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "associated",
+      "example": "I know the word 'associated'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "associates",
+      "example": "'associates' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "association",
+      "example": "Learning 'association' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "associations",
+      "example": "This is a associations.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "assume",
+      "example": "This is a assume.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "assumes",
+      "example": "'assumes' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "at",
+      "example": "This is a at.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "athletic",
+      "example": "This is a athletic.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "atlanta",
+      "example": "I know the word 'atlanta'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "atlantic",
+      "example": "This is a atlantic.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "atmosphere",
+      "example": "'atmosphere' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "atom",
+      "example": "I know the word 'atom'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "attached",
+      "example": "I know the word 'attached'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "attachment",
+      "example": "Can you use 'attachment' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "attack",
+      "example": "I know the word 'attack'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "attacks",
+      "example": "'attacks' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "attempt",
+      "example": "Learning 'attempt' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "attend",
+      "example": "Learning 'attend' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "attendance",
+      "example": "This is a attendance.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "attention",
+      "example": "This is a attention.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "attorney",
+      "example": "Can you use 'attorney' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "attorneys",
+      "example": "I know the word 'attorneys'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "attractions",
+      "example": "Learning 'attractions' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "attribute",
+      "example": "I know the word 'attribute'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "attributes",
+      "example": "This is a attributes.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "au",
+      "example": "I know the word 'au'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "auction",
+      "example": "'auction' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "auctions",
+      "example": "This is a auctions.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "aud",
+      "example": "This is a aud.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "audience",
+      "example": "Learning 'audience' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "audio",
+      "example": "Learning 'audio' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "audit",
+      "example": "I know the word 'audit'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "aug",
+      "example": "Learning 'aug' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "august",
+      "example": "I know the word 'august'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "austin",
+      "example": "I know the word 'austin'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "australia",
+      "example": "Learning 'australia' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "australian",
+      "example": "I know the word 'australian'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "austria",
+      "example": "Can you use 'austria' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "author",
+      "example": "I know the word 'author'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "authorities",
+      "example": "'authorities' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "authority",
+      "example": "'authority' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "authorized",
+      "example": "'authorized' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "authors",
+      "example": "Learning 'authors' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "auto",
+      "example": "Learning 'auto' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "automatic",
+      "example": "This is a automatic.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "automatically",
+      "example": "Learning 'automatically' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "automotive",
+      "example": "Can you use 'automotive' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "av",
+      "example": "Can you use 'av' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "availability",
+      "example": "Can you use 'availability' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "available",
+      "example": "Learning 'available' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "avatar",
+      "example": "Can you use 'avatar' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "ave",
+      "example": "'ave' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "avenue",
+      "example": "'avenue' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "average",
+      "example": "'average' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "avg",
+      "example": "I know the word 'avg'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "aviation",
+      "example": "I know the word 'aviation'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "avoid",
+      "example": "I know the word 'avoid'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "award",
+      "example": "This is a award.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "awarded",
+      "example": "Learning 'awarded' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "awards",
+      "example": "Learning 'awards' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "aware",
+      "example": "Can you use 'aware' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "awareness",
+      "example": "This is a awareness.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "away",
+      "example": "'away' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "awesome",
+      "example": "Learning 'awesome' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "az",
+      "example": "This is a az.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "b",
+      "example": "I know the word 'b'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "ba",
+      "example": "I know the word 'ba'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "babe",
+      "example": "Learning 'babe' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "babes",
+      "example": "This is a babes.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "baby",
+      "example": "'baby' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "back",
+      "example": "Learning 'back' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "background",
+      "example": "Learning 'background' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "backup",
+      "example": "I know the word 'backup'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bad",
+      "example": "Can you use 'bad' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bag",
+      "example": "This is a bag.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bags",
+      "example": "I know the word 'bags'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "baker",
+      "example": "Can you use 'baker' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "balance",
+      "example": "This is a balance.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "ball",
+      "example": "Can you use 'ball' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "balls",
+      "example": "Learning 'balls' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "baltimore",
+      "example": "This is a baltimore.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "band",
+      "example": "'band' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bands",
+      "example": "'bands' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bang",
+      "example": "'bang' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bank",
+      "example": "This is a bank.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "banking",
+      "example": "I know the word 'banking'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bankruptcy",
+      "example": "'bankruptcy' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "banks",
+      "example": "I know the word 'banks'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "banner",
+      "example": "Can you use 'banner' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bar",
+      "example": "I know the word 'bar'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "barbara",
+      "example": "Can you use 'barbara' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bargain",
+      "example": "I know the word 'bargain'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bars",
+      "example": "I know the word 'bars'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "base",
+      "example": "This is a base.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "baseball",
+      "example": "'baseball' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "based",
+      "example": "Learning 'based' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "basic",
+      "example": "I know the word 'basic'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "basis",
+      "example": "Can you use 'basis' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "basket",
+      "example": "Can you use 'basket' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "basketball",
+      "example": "Learning 'basketball' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "bass",
+      "example": "This is a bass.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bath",
+      "example": "This is a bath.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bathroom",
+      "example": "'bathroom' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "batteries",
+      "example": "Learning 'batteries' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "battery",
+      "example": "'battery' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "battle",
+      "example": "This is a battle.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bay",
+      "example": "'bay' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bb",
+      "example": "This is a bb.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bbc",
+      "example": "Learning 'bbc' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "bc",
+      "example": "Learning 'bc' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "be",
+      "example": "I know the word 'be'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "beach",
+      "example": "'beach' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bear",
+      "example": "'bear' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bears",
+      "example": "I know the word 'bears'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "beast",
+      "example": "Learning 'beast' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "beastiality",
+      "example": "'beastiality' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "beat",
+      "example": "I know the word 'beat'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "beautiful",
+      "example": "This is a beautiful.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "beauty",
+      "example": "Learning 'beauty' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "became",
+      "example": "Can you use 'became' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "because",
+      "example": "This is a because.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "become",
+      "example": "I know the word 'become'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "becomes",
+      "example": "I know the word 'becomes'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "becoming",
+      "example": "I know the word 'becoming'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bed",
+      "example": "Can you use 'bed' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bedroom",
+      "example": "Can you use 'bedroom' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bedrooms",
+      "example": "I know the word 'bedrooms'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "beds",
+      "example": "Learning 'beds' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "been",
+      "example": "Learning 'been' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "beer",
+      "example": "'beer' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "before",
+      "example": "Learning 'before' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "began",
+      "example": "'began' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "begin",
+      "example": "Can you use 'begin' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "beginning",
+      "example": "Learning 'beginning' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "begins",
+      "example": "I know the word 'begins'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "behalf",
+      "example": "I know the word 'behalf'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "behavior",
+      "example": "Learning 'behavior' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "behind",
+      "example": "'behind' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "being",
+      "example": "'being' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "belgium",
+      "example": "Can you use 'belgium' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "believe",
+      "example": "'believe' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "believed",
+      "example": "I know the word 'believed'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bell",
+      "example": "Learning 'bell' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "below",
+      "example": "I know the word 'below'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "belt",
+      "example": "Learning 'belt' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "ben",
+      "example": "Can you use 'ben' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "benefit",
+      "example": "'benefit' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "benefits",
+      "example": "This is a benefits.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "berlin",
+      "example": "'berlin' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "best",
+      "example": "This is a best.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bestiality",
+      "example": "Learning 'bestiality' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "bet",
+      "example": "I know the word 'bet'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "beta",
+      "example": "Learning 'beta' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "better",
+      "example": "Can you use 'better' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "betting",
+      "example": "Learning 'betting' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "between",
+      "example": "Learning 'between' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "beyond",
+      "example": "'beyond' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bible",
+      "example": "Can you use 'bible' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bid",
+      "example": "'bid' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bidding",
+      "example": "This is a bidding.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bids",
+      "example": "This is a bids.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "big",
+      "example": "Can you use 'big' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "biggest",
+      "example": "Can you use 'biggest' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bike",
+      "example": "I know the word 'bike'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bill",
+      "example": "Learning 'bill' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "billion",
+      "example": "I know the word 'billion'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bills",
+      "example": "I know the word 'bills'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "billy",
+      "example": "Learning 'billy' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "bin",
+      "example": "Learning 'bin' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "binding",
+      "example": "Can you use 'binding' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bio",
+      "example": "I know the word 'bio'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "biography",
+      "example": "'biography' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "biological",
+      "example": "Learning 'biological' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "biology",
+      "example": "Learning 'biology' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "bird",
+      "example": "Can you use 'bird' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "birds",
+      "example": "'birds' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "birmingham",
+      "example": "'birmingham' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "birth",
+      "example": "I know the word 'birth'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "birthday",
+      "example": "'birthday' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "bit",
+      "example": "This is a bit.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bits",
+      "example": "I know the word 'bits'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "biz",
+      "example": "I know the word 'biz'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "black",
+      "example": "I know the word 'black'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "blackjack",
+      "example": "I know the word 'blackjack'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "blank",
+      "example": "'blank' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "blind",
+      "example": "I know the word 'blind'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "block",
+      "example": "'block' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "blocks",
+      "example": "Can you use 'blocks' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "blog",
+      "example": "Learning 'blog' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "blogger",
+      "example": "Can you use 'blogger' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "blogs",
+      "example": "This is a blogs.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "blonde",
+      "example": "Learning 'blonde' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "blood",
+      "example": "'blood' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "blow",
+      "example": "Can you use 'blow' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "blowjob",
+      "example": "Learning 'blowjob' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "blowjobs",
+      "example": "'blowjobs' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "blue",
+      "example": "Can you use 'blue' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "blues",
+      "example": "Can you use 'blues' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "bluetooth",
+      "example": "Can you use 'bluetooth' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "blvd",
+      "example": "I know the word 'blvd'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bmw",
+      "example": "Can you use 'bmw' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "board",
+      "example": "This is a board.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "boards",
+      "example": "Can you use 'boards' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "boat",
+      "example": "Learning 'boat' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "boats",
+      "example": "Learning 'boats' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "bob",
+      "example": "This is a bob.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bodies",
+      "example": "I know the word 'bodies'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "body",
+      "example": "This is a body.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bold",
+      "example": "This is a bold.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bond",
+      "example": "I know the word 'bond'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bondage",
+      "example": "This is a bondage.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "bonds",
+      "example": "Learning 'bonds' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "bone",
+      "example": "Learning 'bone' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "bonus",
+      "example": "Can you use 'bonus' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "boobs",
+      "example": "I know the word 'boobs'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "book",
+      "example": "Can you use 'book' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "booking",
+      "example": "I know the word 'booking'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "bookmark",
+      "example": "Can you use 'bookmark' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "books",
+      "example": "Learning 'books' helps your vocabulary.",
+      "reason": "vocabulary filler"
+    },
+    {
+      "word": "boost",
+      "example": "I know the word 'boost'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "boot",
+      "example": "I know the word 'boot'.",
+      "reason": "word-knowledge filler"
+    }
+  ],
+  "full_dataset_quality": {
+    "bangla_missing": 41016,
+    "definition_missing": 45806,
+    "pos_missing": 45494,
+    "pronunciation_missing": 50489,
+    "example_missing": 45494,
+    "obvious_bad_examples": 4218,
+    "duplicate_english_records": 3,
+    "invalid_or_unsluggable_records": 1802
+  },
+  "generated_paths": [
+    "word/a.html",
+    "word/aa.html",
+    "word/ab.html",
+    "word/abacus.html",
+    "word/abalone.html",
+    "word/abandon.html",
+    "word/abandonment.html",
+    "word/abate.html",
+    "word/abbey.html",
+    "word/abbreviate.html",
+    "word/abc.html",
+    "word/abdicate.html",
+    "word/abdomen.html",
+    "word/abduction.html",
+    "word/aberrant.html",
+    "word/ability.html",
+    "word/able.html",
+    "word/abode.html",
+    "word/abolish.html",
+    "word/abolition.html",
+    "word/aboriginal.html",
+    "word/abort.html",
+    "word/about.html",
+    "word/above.html",
+    "word/abrasive.html",
+    "word/abreast.html",
+    "word/abridge.html",
+    "word/abroad.html",
+    "word/abrupt.html",
+    "word/abscess.html",
+    "word/abscond.html",
+    "word/absence.html",
+    "word/absent.html",
+    "word/absolute.html",
+    "word/absolutely.html",
+    "word/absolution.html",
+    "word/absolutism.html",
+    "word/absolve.html",
+    "word/absorb.html",
+    "word/absorbent.html",
+    "word/abstain.html",
+    "word/abstinence.html",
+    "word/abstract.html",
+    "word/abstruse.html",
+    "word/absurd.html",
+    "word/abundance.html",
+    "word/abuse.html",
+    "word/abysmal.html",
+    "word/ac.html",
+    "word/academic.html",
+    "word/academy.html",
+    "word/acc.html",
+    "word/accede.html",
+    "word/accelerate.html",
+    "word/accent.html",
+    "word/accentuate.html",
+    "word/accept.html",
+    "word/acceptable.html",
+    "word/acceptance.html",
+    "word/accepted.html",
+    "word/access.html",
+    "word/accessibility.html",
+    "word/accessible.html",
+    "word/accessories.html",
+    "word/accessory.html",
+    "word/accident.html",
+    "word/acclaim.html",
+    "word/acclimate.html",
+    "word/acclimatize.html",
+    "word/accolade.html",
+    "word/accommodate.html",
+    "word/accommodation.html",
+    "word/accompany.html",
+    "word/accomplice.html",
+    "word/accomplish.html",
+    "word/accord.html",
+    "word/accordance.html",
+    "word/according.html",
+    "word/accost.html",
+    "word/account.html",
+    "word/accountable.html",
+    "word/accounting.html",
+    "word/accounts.html",
+    "word/accreditation.html",
+    "word/accredited.html",
+    "word/accrete.html",
+    "word/accrue.html",
+    "word/accumulate.html",
+    "word/accuracy.html",
+    "word/accurate.html",
+    "word/accusation.html",
+    "word/accuse.html",
+    "word/accustom.html",
+    "word/achieve.html",
+    "word/achieved.html",
+    "word/achievement.html",
+    "word/acid.html",
+    "word/acidic.html",
+    "word/acknowledge.html",
+    "word/acoustic.html",
+    "word/acquaint.html",
+    "word/acquaintance.html",
+    "word/acquire.html",
+    "word/acquisition.html",
+    "word/acquit.html",
+    "word/acres.html",
+    "word/acrimony.html",
+    "word/acrobat.html",
+    "word/acronym.html",
+    "word/across.html",
+    "word/act.html",
+    "word/acting.html",
+    "word/action.html",
+    "word/actions.html",
+    "word/activate.html",
+    "word/active.html",
+    "word/activism.html",
+    "word/activities.html",
+    "word/activity.html",
+    "word/actor.html",
+    "word/acts.html",
+    "word/actual.html",
+    "word/actually.html",
+    "word/actuary.html",
+    "word/actuate.html",
+    "word/acuity.html",
+    "word/ad.html",
+    "word/adage.html",
+    "word/adam.html",
+    "word/adams.html",
+    "word/adapt.html",
+    "word/adaptable.html",
+    "word/adapter.html",
+    "word/add.html",
+    "word/added.html",
+    "word/addict.html",
+    "word/addiction.html",
+    "word/adding.html",
+    "word/addition.html",
+    "word/additional.html",
+    "word/address.html",
+    "word/addressed.html",
+    "word/addresses.html",
+    "word/adds.html",
+    "word/adequacy.html",
+    "word/adequate.html",
+    "word/adhere.html",
+    "word/adherent.html",
+    "word/adhesive.html",
+    "word/adjacent.html",
+    "word/adjoin.html",
+    "word/adjudicate.html",
+    "word/adjunct.html",
+    "word/adjust.html",
+    "word/admin.html",
+    "word/administer.html",
+    "word/administration.html",
+    "word/administrative.html",
+    "word/administrator.html",
+    "word/admirable.html",
+    "word/admiral.html",
+    "word/admire.html",
+    "word/admission.html",
+    "word/admonish.html",
+    "word/admonition.html",
+    "word/adobe.html",
+    "word/adolescent.html",
+    "word/adopt.html",
+    "word/adopted.html",
+    "word/adoption.html",
+    "word/adorable.html",
+    "word/adoration.html",
+    "word/adorn.html",
+    "word/adrenaline.html",
+    "word/adrift.html",
+    "word/ads.html",
+    "word/adult.html",
+    "word/adulterate.html",
+    "word/adults.html",
+    "word/advance.html",
+    "word/advanced.html",
+    "word/advantage.html",
+    "word/adventure.html",
+    "word/adventures.html",
+    "word/adversary.html",
+    "word/adverse.html",
+    "word/adversity.html",
+    "word/advertise.html",
+    "word/advertisement.html",
+    "word/advertising.html",
+    "word/advice.html",
+    "word/advisor.html",
+    "word/advisory.html",
+    "word/advocacy.html",
+    "word/advocate.html",
+    "word/aerial.html",
+    "word/aesthetic.html",
+    "word/affable.html",
+    "word/affairs.html",
+    "word/affect.html",
+    "word/affected.html",
+    "word/affection.html",
+    "word/affidavit.html",
+    "word/affiliate.html",
+    "word/affiliates.html",
+    "word/affirm.html",
+    "word/afflict.html",
+    "word/affliction.html",
+    "word/affluent.html",
+    "word/afford.html",
+    "word/affordable.html",
+    "word/affront.html",
+    "word/afghanistan.html",
+    "word/africa.html",
+    "word/african.html",
+    "word/after.html",
+    "word/afternoon.html",
+    "word/ag.html",
+    "word/again.html",
+    "word/against.html",
+    "word/age.html",
+    "word/aged.html",
+    "word/agencies.html",
+    "word/agency.html",
+    "word/agenda.html",
+    "word/agent.html",
+    "word/agents.html",
+    "word/ages.html",
+    "word/aggravate.html",
+    "word/aggregate.html",
+    "word/aggression.html",
+    "word/agile.html",
+    "word/agitate.html",
+    "word/ago.html",
+    "word/agony.html",
+    "word/agree.html",
+    "word/agreeable.html",
+    "word/agreed.html",
+    "word/agreement.html",
+    "word/agreements.html",
+    "word/agricultural.html",
+    "word/agriculture.html",
+    "word/ah.html",
+    "word/ahead.html",
+    "word/aid.html",
+    "word/aide.html",
+    "word/aids.html",
+    "word/ailment.html",
+    "word/aim.html",
+    "word/air.html",
+    "word/aircraft.html",
+    "word/airlift.html",
+    "word/airline.html",
+    "word/airlines.html",
+    "word/airport.html",
+    "word/airtight.html",
+    "word/ak.html",
+    "word/akin.html",
+    "word/al.html",
+    "word/alabama.html",
+    "word/alacrity.html",
+    "word/alan.html",
+    "word/alarm.html",
+    "word/alaska.html",
+    "word/alberta.html",
+    "word/album.html",
+    "word/albums.html",
+    "word/alchemy.html",
+    "word/alcohol.html",
+    "word/alert.html",
+    "word/alerts.html",
+    "word/alex.html",
+    "word/alexander.html",
+    "word/algebra.html",
+    "word/algorithm.html",
+    "word/alien.html",
+    "word/alienate.html",
+    "word/align.html",
+    "word/alike.html",
+    "word/alimony.html",
+    "word/alive.html",
+    "word/all.html",
+    "word/allay.html",
+    "word/allegation.html",
+    "word/allege.html",
+    "word/alleged.html",
+    "word/allegiance.html",
+    "word/allegory.html",
+    "word/allen.html",
+    "word/allergy.html",
+    "word/alleviate.html",
+    "word/alley.html",
+    "word/alliance.html",
+    "word/allocate.html",
+    "word/allocated.html",
+    "word/allot.html",
+    "word/allow.html",
+    "word/allowed.html",
+    "word/allowing.html",
+    "word/allows.html",
+    "word/allude.html",
+    "word/allure.html",
+    "word/ally.html",
+    "word/almighty.html",
+    "word/almost.html",
+    "word/aloft.html",
+    "word/alone.html",
+    "word/along.html",
+    "word/alongside.html",
+    "word/alpha.html",
+    "word/alphabet.html",
+    "word/already.html",
+    "word/also.html",
+    "word/altar.html",
+    "word/alter.html",
+    "word/alternate.html",
+    "word/alternative.html",
+    "word/although.html",
+    "word/altitude.html",
+    "word/altruism.html",
+    "word/aluminum.html",
+    "word/alumni.html",
+    "word/always.html",
+    "word/am.html",
+    "word/amalgamate.html",
+    "word/amass.html",
+    "word/amateur.html",
+    "word/amaze.html",
+    "word/amazing.html",
+    "word/amazon.html",
+    "word/ambassador.html",
+    "word/amber.html",
+    "word/ambiance.html",
+    "word/ambidextrous.html",
+    "word/ambient.html",
+    "word/ambiguous.html",
+    "word/ambition.html",
+    "word/ambitious.html",
+    "word/ambivalent.html",
+    "word/ambulance.html",
+    "word/amd.html",
+    "word/ameliorate.html",
+    "word/amend.html",
+    "word/amended.html",
+    "word/amendment.html",
+    "word/america.html",
+    "word/american.html",
+    "word/americans.html",
+    "word/amiable.html",
+    "word/ammunition.html",
+    "word/amnesty.html",
+    "word/among.html",
+    "word/amorous.html",
+    "word/amortization.html",
+    "word/amount.html",
+    "word/amounts.html",
+    "word/amp.html",
+    "word/amplification.html",
+    "word/amplify.html",
+    "word/amputate.html",
+    "word/amsterdam.html",
+    "word/amulet.html",
+    "word/amuse.html",
+    "word/an.html",
+    "word/anachronism.html",
+    "word/anal.html",
+    "word/analogous.html",
+    "word/analogy.html",
+    "word/analyse.html",
+    "word/analysis.html",
+    "word/analyst.html",
+    "word/analyze.html",
+    "word/anarchy.html",
+    "word/anatomy.html",
+    "word/ancestor.html",
+    "word/anchor.html",
+    "word/ancient.html",
+    "word/and.html",
+    "word/anderson.html",
+    "word/andrew.html",
+    "word/android.html",
+    "word/andy.html",
+    "word/anecdotal.html",
+    "word/anecdote.html",
+    "word/angel.html",
+    "word/angeles.html",
+    "word/angels.html",
+    "word/anger.html",
+    "word/angle.html",
+    "word/angry.html",
+    "word/anguish.html",
+    "word/animal.html",
+    "word/animals.html",
+    "word/animate.html",
+    "word/animation.html",
+    "word/anime.html",
+    "word/animosity.html",
+    "word/ann.html",
+    "word/anna.html",
+    "word/annals.html",
+    "word/anne.html",
+    "word/annex.html",
+    "word/annexure.html",
+    "word/annihilate.html",
+    "word/anniversary.html",
+    "word/annotate.html",
+    "word/annotation.html",
+    "word/announce.html",
+    "word/announced.html",
+    "word/announcement.html",
+    "word/announcements.html",
+    "word/annoy.html",
+    "word/annual.html",
+    "word/annul.html",
+    "word/anomaly.html",
+    "word/anonymous.html",
+    "word/another.html",
+    "word/answer.html",
+    "word/answers.html",
+    "word/antagonist.html",
+    "word/antagonize.html",
+    "word/antarctic.html",
+    "word/antenna.html",
+    "word/anthem.html",
+    "word/anthology.html",
+    "word/anthony.html",
+    "word/anthropology.html",
+    "word/anti.html",
+    "word/anticipate.html",
+    "word/antidote.html",
+    "word/antique.html",
+    "word/antiques.html",
+    "word/antithesis.html",
+    "word/antonio.html",
+    "word/antonym.html",
+    "word/anxiety.html",
+    "word/anxious.html",
+    "word/any.html",
+    "word/anyone.html",
+    "word/anything.html",
+    "word/anytime.html",
+    "word/anyway.html",
+    "word/anywhere.html",
+    "word/aol.html",
+    "word/ap.html",
+    "word/apache.html",
+    "word/apart.html",
+    "word/apartheid.html",
+    "word/apartment.html",
+    "word/apartments.html",
+    "word/apathetic.html",
+    "word/apathy.html",
+    "word/apex.html",
+    "word/api.html",
+    "word/apocalypse.html",
+    "word/apology.html",
+    "word/apostasy.html",
+    "word/apostrophe.html",
+    "word/apparatus.html",
+    "word/apparel.html",
+    "word/apparent.html",
+    "word/apparently.html",
+    "word/apparition.html",
+    "word/appeal.html",
+    "word/appear.html",
+    "word/appearance.html",
+    "word/appeared.html",
+    "word/appears.html",
+    "word/appease.html",
+    "word/appellation.html",
+    "word/append.html",
+    "word/appendix.html",
+    "word/appetite.html",
+    "word/applaud.html",
+    "word/apple.html",
+    "word/appliances.html",
+    "word/applicable.html",
+    "word/applicant.html",
+    "word/application.html",
+    "word/applications.html",
+    "word/applied.html",
+    "word/applies.html",
+    "word/apply.html",
+    "word/applying.html",
+    "word/appoint.html",
+    "word/appointed.html",
+    "word/appointment.html",
+    "word/apportion.html",
+    "word/appraisal.html",
+    "word/appraise.html",
+    "word/appreciate.html",
+    "word/apprehend.html",
+    "word/apprehension.html",
+    "word/apprentice.html",
+    "word/approach.html",
+    "word/approaches.html",
+    "word/approbation.html",
+    "word/appropriate.html",
+    "word/approval.html",
+    "word/approve.html",
+    "word/approved.html",
+    "word/approximately.html",
+    "word/apr.html",
+    "word/april.html",
+    "word/aptitude.html",
+    "word/aquarium.html",
+    "word/ar.html",
+    "word/arab.html",
+    "word/arbitrage.html",
+    "word/arbitrary.html",
+    "word/arc.html",
+    "word/arcade.html",
+    "word/arch.html",
+    "word/archaeology.html",
+    "word/archaic.html",
+    "word/architecture.html",
+    "word/archive.html",
+    "word/archives.html",
+    "word/ardent.html",
+    "word/ardor.html",
+    "word/arduous.html",
+    "word/are.html",
+    "word/area.html",
+    "word/areas.html",
+    "word/arena.html",
+    "word/argentina.html",
+    "word/argue.html",
+    "word/argument.html",
+    "word/arguments.html",
+    "word/arid.html",
+    "word/arise.html",
+    "word/aristocracy.html",
+    "word/arithmetic.html",
+    "word/arizona.html",
+    "word/arkansas.html",
+    "word/arm.html",
+    "word/armada.html",
+    "word/armed.html",
+    "word/armor.html",
+    "word/arms.html",
+    "word/army.html",
+    "word/aroma.html",
+    "word/around.html",
+    "word/arouse.html",
+    "word/arrange.html",
+    "word/arrangements.html",
+    "word/array.html",
+    "word/arrears.html",
+    "word/arrest.html",
+    "word/arrival.html",
+    "word/arrived.html",
+    "word/arrogance.html",
+    "word/arrogant.html",
+    "word/arrow.html",
+    "word/art.html",
+    "word/artery.html",
+    "word/arthur.html",
+    "word/article.html",
+    "word/articles.html",
+    "word/articulate.html",
+    "word/artifice.html",
+    "word/artisan.html",
+    "word/artist.html",
+    "word/artistry.html",
+    "word/artists.html",
+    "word/arts.html",
+    "word/as.html",
+    "word/ascend.html",
+    "word/ascertain.html",
+    "word/ascribe.html",
+    "word/ashamed.html",
+    "word/asia.html",
+    "word/asian.html",
+    "word/ask.html",
+    "word/asked.html",
+    "word/asking.html",
+    "word/asp.html",
+    "word/aspect.html",
+    "word/aspects.html",
+    "word/aspersion.html",
+    "word/asphalt.html",
+    "word/aspiration.html",
+    "word/aspire.html",
+    "word/ass.html",
+    "word/assail.html",
+    "word/assassin.html",
+    "word/assault.html",
+    "word/assemble.html",
+    "word/assembly.html",
+    "word/assert.html",
+    "word/assess.html",
+    "word/assessment.html",
+    "word/asset.html",
+    "word/asset-backed.html",
+    "word/assets.html",
+    "word/assiduous.html",
+    "word/assign.html",
+    "word/assigned.html",
+    "word/assignment.html",
+    "word/assimilate.html",
+    "word/assimilation.html",
+    "word/assist.html",
+    "word/assistance.html",
+    "word/assistant.html",
+    "word/associate.html",
+    "word/associated.html",
+    "word/associates.html",
+    "word/association.html",
+    "word/associations.html",
+    "word/assorted.html",
+    "word/assume.html",
+    "word/assumes.html",
+    "word/assumption.html",
+    "word/assurance.html",
+    "word/asteroid.html",
+    "word/astound.html",
+    "word/astray.html",
+    "word/astronaut.html",
+    "word/astute.html",
+    "word/asylum.html",
+    "word/at.html",
+    "word/athlete.html",
+    "word/athletic.html",
+    "word/atlanta.html",
+    "word/atlantic.html",
+    "word/atlas.html",
+    "word/atmosphere.html",
+    "word/atom.html",
+    "word/atrocity.html",
+    "word/atrophy.html",
+    "word/attach.html",
+    "word/attached.html",
+    "word/attachment.html",
+    "word/attack.html",
+    "word/attacks.html",
+    "word/attain.html",
+    "word/attempt.html",
+    "word/attend.html",
+    "word/attendance.html",
+    "word/attention.html",
+    "word/attenuate.html",
+    "word/attest.html",
+    "word/attitude.html",
+    "word/attorney.html",
+    "word/attorneys.html",
+    "word/attract.html",
+    "word/attractions.html",
+    "word/attribute.html",
+    "word/attributes.html",
+    "word/au.html",
+    "word/auction.html",
+    "word/auctions.html",
+    "word/aud.html",
+    "word/audacious.html",
+    "word/audacity.html",
+    "word/audible.html",
+    "word/audience.html",
+    "word/audio.html",
+    "word/audit.html",
+    "word/auditor.html",
+    "word/aug.html",
+    "word/augment.html",
+    "word/august.html",
+    "word/auspices.html",
+    "word/auspicious.html",
+    "word/austere.html",
+    "word/austin.html",
+    "word/australia.html",
+    "word/australian.html",
+    "word/austria.html",
+    "word/authentic.html",
+    "word/authenticate.html",
+    "word/author.html",
+    "word/authoritarian.html",
+    "word/authoritative.html",
+    "word/authorities.html",
+    "word/authority.html",
+    "word/authorize.html",
+    "word/authorized.html",
+    "word/authors.html",
+    "word/auto.html",
+    "word/autograph.html",
+    "word/automate.html",
+    "word/automatic.html",
+    "word/automatically.html",
+    "word/automation.html",
+    "word/automotive.html",
+    "word/autonomous.html",
+    "word/autonomy.html",
+    "word/av.html",
+    "word/avail.html",
+    "word/availability.html",
+    "word/available.html",
+    "word/avalanche.html",
+    "word/avarice.html",
+    "word/avatar.html",
+    "word/ave.html",
+    "word/avenue.html",
+    "word/average.html",
+    "word/averse.html",
+    "word/aversion.html",
+    "word/avg.html",
+    "word/aviation.html",
+    "word/avid.html",
+    "word/avoid.html",
+    "word/avow.html",
+    "word/await.html",
+    "word/awake.html",
+    "word/award.html",
+    "word/awarded.html",
+    "word/awards.html",
+    "word/aware.html",
+    "word/awareness.html",
+    "word/away.html",
+    "word/awesome.html",
+    "word/awful.html",
+    "word/awkward.html",
+    "word/awry.html",
+    "word/axis.html",
+    "word/axle.html",
+    "word/az.html",
+    "word/b.html",
+    "word/ba.html",
+    "word/babble.html",
+    "word/babe.html",
+    "word/babes.html",
+    "word/baby.html",
+    "word/back.html",
+    "word/backdrop.html",
+    "word/backfire.html",
+    "word/background.html",
+    "word/backlash.html",
+    "word/backlog.html",
+    "word/backup.html",
+    "word/backward.html",
+    "word/bad.html",
+    "word/baffle.html",
+    "word/bag.html",
+    "word/bags.html",
+    "word/bail.html",
+    "word/bait.html",
+    "word/baker.html",
+    "word/balance.html",
+    "word/balcony.html",
+    "word/bald.html",
+    "word/ball.html",
+    "word/ballet.html",
+    "word/ballistic.html",
+    "word/balloon.html",
+    "word/ballot.html",
+    "word/balls.html",
+    "word/baltimore.html",
+    "word/bamboo.html",
+    "word/ban.html",
+    "word/band.html",
+    "word/bands.html",
+    "word/bang.html",
+    "word/banish.html",
+    "word/banister.html",
+    "word/bank.html",
+    "word/banking.html",
+    "word/bankrupt.html",
+    "word/bankruptcy.html",
+    "word/banks.html",
+    "word/banner.html",
+    "word/banquet.html",
+    "word/bar.html",
+    "word/barbara.html",
+    "word/barbaric.html",
+    "word/barbeque.html",
+    "word/bare.html",
+    "word/bargain.html",
+    "word/barge.html",
+    "word/baritone.html",
+    "word/bark.html",
+    "word/barley.html",
+    "word/barn.html",
+    "word/baron.html",
+    "word/barracks.html",
+    "word/barren.html",
+    "word/barricade.html",
+    "word/barrier.html",
+    "word/bars.html",
+    "word/barter.html",
+    "word/base.html",
+    "word/baseball.html",
+    "word/based.html",
+    "word/basement.html",
+    "word/bashful.html",
+    "word/basic.html",
+    "word/basin.html",
+    "word/basis.html",
+    "word/basket.html",
+    "word/basketball.html",
+    "word/bass.html",
+    "word/bastard.html",
+    "word/bat.html",
+    "word/batch.html",
+    "word/bath.html",
+    "word/bathroom.html",
+    "word/batter.html",
+    "word/batteries.html",
+    "word/battery.html",
+    "word/battle.html",
+    "word/bay.html",
+    "word/bazaar.html",
+    "word/bb.html",
+    "word/bbc.html",
+    "word/bc.html",
+    "word/be.html",
+    "word/beach.html",
+    "word/beacon.html",
+    "word/bead.html",
+    "word/beak.html",
+    "word/beam.html",
+    "word/bean.html",
+    "word/bear.html",
+    "word/beard.html",
+    "word/bearing.html",
+    "word/bears.html",
+    "word/beast.html",
+    "word/beastiality.html",
+    "word/beat.html",
+    "word/beatitude.html",
+    "word/beautiful.html",
+    "word/beauty.html",
+    "word/became.html",
+    "word/because.html",
+    "word/beckon.html",
+    "word/become.html",
+    "word/becomes.html",
+    "word/becoming.html",
+    "word/bed.html",
+    "word/bedrock.html",
+    "word/bedroom.html",
+    "word/bedrooms.html",
+    "word/beds.html",
+    "word/beef.html",
+    "word/been.html",
+    "word/beer.html",
+    "word/beetle.html",
+    "word/befit.html",
+    "word/before.html",
+    "word/beforehand.html",
+    "word/began.html",
+    "word/beggar.html",
+    "word/begin.html",
+    "word/beginning.html",
+    "word/begins.html",
+    "word/behalf.html",
+    "word/behavior.html",
+    "word/behind.html",
+    "word/behold.html",
+    "word/being.html",
+    "word/belated.html",
+    "word/belch.html",
+    "word/belgium.html",
+    "word/belief.html",
+    "word/believe.html",
+    "word/believed.html",
+    "word/bell.html",
+    "word/belligerent.html",
+    "word/belly.html",
+    "word/belong.html",
+    "word/beloved.html",
+    "word/below.html",
+    "word/belt.html",
+    "word/ben.html",
+    "word/bench.html",
+    "word/benchmark.html",
+    "word/benefactor.html",
+    "word/beneficial.html",
+    "word/benefit.html",
+    "word/benefits.html",
+    "word/benevolent.html",
+    "word/benign.html",
+    "word/berlin.html",
+    "word/besiege.html",
+    "word/best.html",
+    "word/bestiality.html",
+    "word/bestow.html",
+    "word/bet.html",
+    "word/beta.html",
+    "word/betray.html",
+    "word/better.html",
+    "word/betting.html",
+    "word/between.html",
+    "word/beware.html",
+    "word/bewilder.html",
+    "word/beyond.html",
+    "word/bias.html",
+    "word/bible.html",
+    "word/bicycle.html",
+    "word/bid.html",
+    "word/bidder.html",
+    "word/bidding.html",
+    "word/bids.html",
+    "word/big.html",
+    "word/biggest.html",
+    "word/bike.html",
+    "word/bilateral.html",
+    "word/bilingual.html",
+    "word/bill.html",
+    "word/billion.html",
+    "word/bills.html",
+    "word/billy.html",
+    "word/bin.html",
+    "word/bind.html",
+    "word/binding.html",
+    "word/bio.html",
+    "word/biography.html",
+    "word/biological.html",
+    "word/biology.html",
+    "word/bird.html",
+    "word/birds.html",
+    "word/birmingham.html",
+    "word/birth.html",
+    "word/birthday.html",
+    "word/bishop.html",
+    "word/bit.html",
+    "word/bits.html",
+    "word/biz.html",
+    "word/bizarre.html",
+    "word/black.html",
+    "word/blackjack.html",
+    "word/blackmail.html",
+    "word/blade.html",
+    "word/blame.html",
+    "word/blank.html",
+    "word/blasphemy.html",
+    "word/blast.html",
+    "word/blatant.html",
+    "word/blaze.html",
+    "word/bleach.html",
+    "word/bleed.html",
+    "word/blend.html",
+    "word/bless.html",
+    "word/blight.html",
+    "word/blind.html",
+    "word/blink.html",
+    "word/bliss.html",
+    "word/blister.html",
+    "word/blizzard.html",
+    "word/bloat.html",
+    "word/block.html",
+    "word/blockade.html",
+    "word/blocks.html",
+    "word/blog.html",
+    "word/blogger.html",
+    "word/blogs.html",
+    "word/blond.html",
+    "word/blonde.html",
+    "word/blood.html",
+    "word/bloom.html",
+    "word/blossom.html",
+    "word/blouse.html",
+    "word/blow.html",
+    "word/blowjob.html",
+    "word/blowjobs.html",
+    "word/blue.html",
+    "word/blueprint.html",
+    "word/blues.html",
+    "word/bluetooth.html",
+    "word/bluff.html",
+    "word/blunder.html",
+    "word/blunt.html",
+    "word/blush.html",
+    "word/blvd.html",
+    "word/bmw.html",
+    "word/board.html",
+    "word/boardroom.html",
+    "word/boards.html",
+    "word/boast.html",
+    "word/boat.html",
+    "word/boats.html",
+    "word/bob.html",
+    "word/bodies.html",
+    "word/body.html",
+    "word/bogus.html",
+    "word/boisterous.html",
+    "word/bold.html",
+    "word/bolster.html",
+    "word/bolt.html",
+    "word/bomb.html",
+    "word/bombastic.html",
+    "word/bond.html",
+    "word/bondage.html",
+    "word/bondholder.html",
+    "word/bonds.html",
+    "word/bone.html",
+    "word/bonus.html",
+    "word/boobs.html",
+    "word/book.html",
+    "word/booking.html",
+    "word/bookmark.html",
+    "word/books.html",
+    "word/boon.html",
+    "word/boorish.html",
+    "word/boost.html",
+    "word/boot.html"
+  ],
+  "validation": {
+    "results": {
+      "PASS": 1000,
+      "WARN": 0,
+      "FAIL": 0
+    },
+    "failures": [],
+    "warnings": [],
+    "generated_bytes": 14674745,
+    "layout_internal_link_count": 56,
+    "missing_layout_destinations": [],
+    "qa": {
+      "rich_data": [
+        {
+          "word": "a",
+          "bangla": "ক",
+          "part_of_speech": "noun",
+          "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "aa",
+          "bangla": "এএ",
+          "part_of_speech": "noun",
+          "definition": "a dry form of lava resembling clinkers",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "ab",
+          "bangla": "ab",
+          "part_of_speech": "noun",
+          "definition": "a bachelor's degree in arts and sciences",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "abc",
+          "bangla": "abc",
+          "part_of_speech": "noun",
+          "definition": "the elementary stages of any subject (usually plural)",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "ability",
+          "bangla": "ক্ষমতা",
+          "part_of_speech": "noun",
+          "definition": "the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "able",
+          "bangla": "সক্ষম",
+          "part_of_speech": "adjective",
+          "definition": "(usually followed by `to') having the necessary means or skill or know-how or authority to do something",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "about",
+          "bangla": "সম্পর্কে",
+          "part_of_speech": "adjective",
+          "definition": "on the move",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "above",
+          "bangla": "উপরে",
+          "part_of_speech": "noun",
+          "definition": "an earlier section of a written text",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "abroad",
+          "bangla": "বিদেশে",
+          "part_of_speech": "adjective",
+          "definition": "in a foreign country",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "absence",
+          "bangla": "অনুপস্থিতি",
+          "part_of_speech": "noun",
+          "definition": "the state of being absent",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        }
+      ],
+      "sparse_data": [
+        {
+          "word": "abacus",
+          "bangla": "অ্যাবাকাস",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abalone",
+          "bangla": "abalone",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abandon",
+          "bangla": "পরিত্যাগ করা",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abandonment",
+          "bangla": "পরিত্যাগ",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abate",
+          "bangla": "হ্রাস করা",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abbey",
+          "bangla": "মঠ",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abbreviate",
+          "bangla": "সংক্ষিপ্ত করা",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abdicate",
+          "bangla": "ত্যাগ করা",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abdomen",
+          "bangla": "পেট",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abduction",
+          "bangla": "অপহরণ",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        }
+      ],
+      "rejected_examples": [
+        {
+          "word": "a",
+          "bangla": "ক",
+          "part_of_speech": "noun",
+          "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "aa",
+          "bangla": "এএ",
+          "part_of_speech": "noun",
+          "definition": "a dry form of lava resembling clinkers",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "ab",
+          "bangla": "ab",
+          "part_of_speech": "noun",
+          "definition": "a bachelor's degree in arts and sciences",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "abc",
+          "bangla": "abc",
+          "part_of_speech": "noun",
+          "definition": "the elementary stages of any subject (usually plural)",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "ability",
+          "bangla": "ক্ষমতা",
+          "part_of_speech": "noun",
+          "definition": "the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "able",
+          "bangla": "সক্ষম",
+          "part_of_speech": "adjective",
+          "definition": "(usually followed by `to') having the necessary means or skill or know-how or authority to do something",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "about",
+          "bangla": "সম্পর্কে",
+          "part_of_speech": "adjective",
+          "definition": "on the move",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "above",
+          "bangla": "উপরে",
+          "part_of_speech": "noun",
+          "definition": "an earlier section of a written text",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "abroad",
+          "bangla": "বিদেশে",
+          "part_of_speech": "adjective",
+          "definition": "in a foreign country",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "absence",
+          "bangla": "অনুপস্থিতি",
+          "part_of_speech": "noun",
+          "definition": "the state of being absent",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        }
+      ],
+      "first_five": [
+        {
+          "word": "a",
+          "bangla": "ক",
+          "part_of_speech": "noun",
+          "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "aa",
+          "bangla": "এএ",
+          "part_of_speech": "noun",
+          "definition": "a dry form of lava resembling clinkers",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "ab",
+          "bangla": "ab",
+          "part_of_speech": "noun",
+          "definition": "a bachelor's degree in arts and sciences",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "abacus",
+          "bangla": "অ্যাবাকাস",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "abalone",
+          "bangla": "abalone",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        }
+      ],
+      "last_five": [
+        {
+          "word": "books",
+          "bangla": "বই",
+          "part_of_speech": "noun",
+          "definition": "a written work or composition that has been published (printed on pages bound together)",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "boon",
+          "bangla": "বর",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "boorish",
+          "bangla": "বোরিশ",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "boost",
+          "bangla": "বৃদ্ধি",
+          "part_of_speech": "noun",
+          "definition": "the act of giving hope or support to someone",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "boot",
+          "bangla": "বুট",
+          "part_of_speech": "noun",
+          "definition": "footwear that covers the whole foot and lower leg",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        }
+      ],
+      "site_integration_samples": [
+        {
+          "word": "a",
+          "bangla": "ক",
+          "part_of_speech": "noun",
+          "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "abacus",
+          "bangla": "অ্যাবাকাস",
+          "part_of_speech": null,
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 0
+        },
+        {
+          "word": "academic",
+          "bangla": "একাডেমিক",
+          "part_of_speech": "noun",
+          "definition": "an educator who works at a college or university",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "apple",
+          "bangla": "আপেল",
+          "part_of_speech": "noun",
+          "definition": "fruit with red or yellow or green skin and sweet to tart crisp whitish flesh",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "beautiful",
+          "bangla": "সুন্দর",
+          "part_of_speech": "adjective",
+          "definition": "delighting the senses or exciting intellectual or emotional admiration",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "boot",
+          "bangla": "বুট",
+          "part_of_speech": "noun",
+          "definition": "footwear that covers the whole foot and lower leg",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "ability",
+          "bangla": "ক্ষমতা",
+          "part_of_speech": "noun",
+          "definition": "the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "against",
+          "bangla": "বিরুদ্ধে",
+          "part_of_speech": "unknown",
+          "definition": null,
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "art",
+          "bangla": "শিল্প",
+          "part_of_speech": "noun",
+          "definition": "the products of human creativity; works of art collectively",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        },
+        {
+          "word": "balance",
+          "bangla": "ভারসাম্য",
+          "part_of_speech": "noun",
+          "definition": "a state of equilibrium",
+          "pronunciation": null,
+          "published_example": null,
+          "rejected_example_count": 1
+        }
+      ]
+    }
+  },
+  "site_integration": {
+    "header_source": "header.html",
+    "footer_source": "footer.html",
+    "integrated_page_count": 1000
+  },
+  "example_quality_audit": {
+    "words_with_source_example": 528,
+    "previously_rejected_count": 453,
+    "newly_rejected_count": 75,
+    "examples_remaining_published": 0,
+    "words_without_published_example": 1000,
+    "newly_rejected_examples": [
+      {
+        "word": "absolutely",
+        "example": "This is a absolutely.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "academic",
+        "example": "This is a academic.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "accessory",
+        "example": "This is a accessory.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "accordance",
+        "example": "This is a accordance.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "accounting",
+        "example": "This is a accounting.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "accuracy",
+        "example": "This is a accuracy.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "across",
+        "example": "This is a across.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "action",
+        "example": "This is a action.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "activity",
+        "example": "This is a activity.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "adapter",
+        "example": "This is a adapter.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "adopted",
+        "example": "This is a adopted.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "adult",
+        "example": "This is a adult.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "advertise",
+        "example": "This is a advertise.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "affect",
+        "example": "This is a affect.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "african",
+        "example": "This is a african.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "again",
+        "example": "This is a again.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "against",
+        "example": "This is a against.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "agency",
+        "example": "This is a agency.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "agenda",
+        "example": "This is a agenda.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "agent",
+        "example": "This is a agent.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "airline",
+        "example": "This is a airline.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "al",
+        "example": "This is a al.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "alex",
+        "example": "This is a alex.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "allocated",
+        "example": "This is a allocated.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "although",
+        "example": "This is a although.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "aluminum",
+        "example": "This is a aluminum.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "always",
+        "example": "This is a always.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "amount",
+        "example": "This is a amount.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "amp",
+        "example": "This is a amp.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "andy",
+        "example": "This is a andy.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "angle",
+        "example": "This is a angle.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "anime",
+        "example": "This is a anime.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "anna",
+        "example": "This is a anna.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "annotation",
+        "example": "This is a annotation.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "announced",
+        "example": "This is a announced.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "anyway",
+        "example": "This is a anyway.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "applicant",
+        "example": "This is a applicant.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "applied",
+        "example": "This is a applied.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "approval",
+        "example": "This is a approval.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "apr",
+        "example": "This is a apr.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "arab",
+        "example": "This is a arab.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "arcade",
+        "example": "This is a arcade.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "are",
+        "example": "This is a are.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "arena",
+        "example": "This is a arena.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "armed",
+        "example": "This is a armed.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "army",
+        "example": "This is a army.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "ask",
+        "example": "This is a ask.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "asp",
+        "example": "This is a asp.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "aspect",
+        "example": "This is a aspect.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "assume",
+        "example": "This is a assume.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "at",
+        "example": "This is a at.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "atlantic",
+        "example": "This is a atlantic.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "attendance",
+        "example": "This is a attendance.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "attention",
+        "example": "This is a attention.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "aud",
+        "example": "This is a aud.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "automatic",
+        "example": "This is a automatic.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "award",
+        "example": "This is a award.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "az",
+        "example": "This is a az.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bag",
+        "example": "This is a bag.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "balance",
+        "example": "This is a balance.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "baltimore",
+        "example": "This is a baltimore.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bank",
+        "example": "This is a bank.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "base",
+        "example": "This is a base.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bath",
+        "example": "This is a bath.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "battle",
+        "example": "This is a battle.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bb",
+        "example": "This is a bb.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "because",
+        "example": "This is a because.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "best",
+        "example": "This is a best.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bidding",
+        "example": "This is a bidding.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bit",
+        "example": "This is a bit.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "board",
+        "example": "This is a board.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bob",
+        "example": "This is a bob.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "body",
+        "example": "This is a body.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bold",
+        "example": "This is a bold.",
+        "reason": "synthetic article template"
+      },
+      {
+        "word": "bondage",
+        "example": "This is a bondage.",
+        "reason": "synthetic article template"
+      }
+    ],
+    "changed_word_pages": [
+      "word/absolutely.html",
+      "word/academic.html",
+      "word/accessory.html",
+      "word/accordance.html",
+      "word/accounting.html",
+      "word/accuracy.html",
+      "word/across.html",
+      "word/action.html",
+      "word/activity.html",
+      "word/adapter.html",
+      "word/adopted.html",
+      "word/adult.html",
+      "word/advertise.html",
+      "word/affect.html",
+      "word/african.html",
+      "word/again.html",
+      "word/against.html",
+      "word/agency.html",
+      "word/agenda.html",
+      "word/agent.html",
+      "word/airline.html",
+      "word/al.html",
+      "word/alex.html",
+      "word/allocated.html",
+      "word/although.html",
+      "word/aluminum.html",
+      "word/always.html",
+      "word/amount.html",
+      "word/amp.html",
+      "word/andy.html",
+      "word/angle.html",
+      "word/anime.html",
+      "word/anna.html",
+      "word/annotation.html",
+      "word/announced.html",
+      "word/anyway.html",
+      "word/applicant.html",
+      "word/applied.html",
+      "word/approval.html",
+      "word/apr.html",
+      "word/arab.html",
+      "word/arcade.html",
+      "word/are.html",
+      "word/arena.html",
+      "word/armed.html",
+      "word/army.html",
+      "word/ask.html",
+      "word/asp.html",
+      "word/aspect.html",
+      "word/assume.html",
+      "word/at.html",
+      "word/atlantic.html",
+      "word/attendance.html",
+      "word/attention.html",
+      "word/aud.html",
+      "word/automatic.html",
+      "word/award.html",
+      "word/az.html",
+      "word/bag.html",
+      "word/balance.html",
+      "word/baltimore.html",
+      "word/bank.html",
+      "word/base.html",
+      "word/bath.html",
+      "word/battle.html",
+      "word/bb.html",
+      "word/because.html",
+      "word/best.html",
+      "word/bidding.html",
+      "word/bit.html",
+      "word/board.html",
+      "word/bob.html",
+      "word/body.html",
+      "word/bold.html",
+      "word/bondage.html"
+    ]
+  }
+}
