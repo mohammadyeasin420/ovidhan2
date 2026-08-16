@@ -57,7 +57,7 @@ function test(name, callback) {
 test('new anonymous learner receives versioned state and random first-party ID', () => {
     const { foundation } = createHarness();
     const state = foundation.getState();
-    assert.equal(state.version, 2);
+    assert.equal(state.version, 3);
     assert.match(state.anonymousLearnerId, /^[0-9a-f-]{36}$/);
     assert.equal(state.progress.learningActions, 0);
 });
@@ -78,7 +78,7 @@ test('corrupted state recovers without breaking initialization', () => {
     const localStorage = createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY, '{not-json');
     const { foundation } = createHarness({ localStorage });
-    assert.equal(foundation.getState().version, 2);
+    assert.equal(foundation.getState().version, 3);
     assert.equal(foundation.getState().progress.learningActions, 0);
 });
 
@@ -92,7 +92,7 @@ test('old foundation schema is normalized without losing identifiers', () => {
     }));
     const { foundation } = createHarness({ localStorage });
     const state = foundation.getState();
-    assert.equal(state.version, 2);
+    assert.equal(state.version, 3);
     assert.equal(state.anonymousLearnerId, '11111111-1111-4111-8111-111111111111');
     assert.deepEqual(state.savedWords, ['language']);
     assert.equal(state.progress.learningActions, 2);
@@ -179,7 +179,27 @@ test('mistake signals migrate safely and record only bounded outcome metadata', 
     const signal = foundation.getState().mistakeSignals['mm-agree-verb'];
     assert.equal(signal.attempts, 3);
     assert.equal(signal.masteryStatus, 'secure');
+    assert.equal(signal.initialIncorrect, 1);
+    assert.equal(signal.repairCorrect, 1);
+    assert.equal(signal.retestCorrect, 1);
     assert.equal(foundation.recordMistakeSignal('raw learner sentence', 'initial', 'correct'), false);
+});
+
+test('version-2 mistake signals migrate to bounded evidence counters', () => {
+    const localStorage = createMemoryStorage();
+    localStorage.setItem(constants.STATE_KEY, JSON.stringify({
+        version: 2,
+        anonymousLearnerId: '22222222-2222-4222-8222-222222222222',
+        mistakeSignals: {
+            'mm-agree-verb': { attempts: 3, initialResult: 'incorrect', repairResult: 'correct', retestResult: 'correct' }
+        }
+    }));
+    const { foundation } = createHarness({ localStorage });
+    const state = foundation.getState();
+    assert.equal(state.version, 3);
+    assert.equal(state.mistakeSignals['mm-agree-verb'].initialIncorrect, 1);
+    assert.equal(state.mistakeSignals['mm-agree-verb'].repairCorrect, 1);
+    assert.equal(state.mistakeSignals['mm-agree-verb'].retestCorrect, 1);
 });
 
 test('Mistake Mirror events accept approved IDs and reject learner text', () => {
@@ -221,6 +241,23 @@ test('Dakho CTA funnel remains allowlisted and never infers installation', () =>
     assert.deepEqual(transported.map(item => item.event), ['dakho_cta_view', 'dakho_cta_click']);
     assert.ok(transported.every(item => item.properties.install_status === 'unknown'));
     assert.ok(transported.every(item => !Object.hasOwn(item.properties, 'raw_text')));
+});
+
+test('profile analytics accepts only coarse allowlisted properties', () => {
+    const { foundation, transported } = createHarness();
+    foundation.track('mistake_profile_view', {
+        profile_state: 'EVIDENCE', evidence_band: 'LOW', full_profile: 'private'
+    });
+    foundation.track('next_action_selected', {
+        destination_id: 'mm-article-apple', reason_code: 'WEAK_FAMILY',
+        priority_band: 'MEDIUM', learner_text: 'private'
+    });
+    foundation.track('next_action_started', {
+        destination_id: 'mm-article-apple', reason_code: 'WEAK_FAMILY', priority_band: 'MEDIUM'
+    });
+    assert.deepEqual(transported.map(item => item.event), ['mistake_profile_view', 'next_action_selected', 'next_action_started']);
+    assert.ok(transported.every(item => !Object.hasOwn(item.properties, 'full_profile')));
+    assert.ok(transported.every(item => !Object.hasOwn(item.properties, 'learner_text')));
 });
 
 test('reset creates a new learner without deleting legacy keys', () => {

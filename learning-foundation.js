@@ -16,7 +16,7 @@
 
     const STATE_KEY = 'ovidhan_learning_v1';
     const SESSION_KEY = 'ovidhan_learning_session_v1';
-    const STATE_VERSION = 2;
+    const STATE_VERSION = 3;
     const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
     const MAX_IDENTIFIER_ITEMS = 250;
     const MAX_RECENT_ACTIONS = 50;
@@ -47,6 +47,9 @@
         ,mistake_next_action: ['mistake_id', 'destination_id', 'reason_code', 'score_band']
         ,dakho_cta_view: ['cta_id', 'cta_context', 'trigger', 'install_status']
         ,dakho_cta_click: ['cta_id', 'cta_context', 'trigger', 'install_status']
+        ,mistake_profile_view: ['profile_state', 'evidence_band']
+        ,next_action_selected: ['destination_id', 'reason_code', 'priority_band']
+        ,next_action_started: ['destination_id', 'reason_code', 'priority_band']
     });
 
     const COMMON_PROPERTIES = Object.freeze([
@@ -162,6 +165,12 @@
         };
     }
 
+    function boundedCount(value, legacyMatch) {
+        const numeric = Number(value);
+        if (Number.isFinite(numeric) && numeric >= 0) return Math.min(99, Math.floor(numeric));
+        return legacyMatch ? 1 : 0;
+    }
+
     function normalizeState(candidate, id, nowIso) {
         const source = candidate && typeof candidate === 'object' ? candidate : {};
         const state = defaultState(
@@ -188,7 +197,13 @@
                     repairResult: signal.repairResult === 'correct' ? 'correct' : signal.repairResult === 'incorrect' ? 'incorrect' : null,
                     retestResult: signal.retestResult === 'correct' ? 'correct' : signal.retestResult === 'incorrect' ? 'incorrect' : null,
                     masteryStatus: ['needs-repair', 'improving', 'secure'].includes(signal.masteryStatus) ? signal.masteryStatus : 'needs-repair',
-                    lastSeenAt: typeof signal.lastSeenAt === 'string' ? signal.lastSeenAt : nowIso
+                    lastSeenAt: typeof signal.lastSeenAt === 'string' ? signal.lastSeenAt : nowIso,
+                    initialCorrect: boundedCount(signal.initialCorrect, signal.initialResult === 'correct'),
+                    initialIncorrect: boundedCount(signal.initialIncorrect, signal.initialResult === 'incorrect'),
+                    repairCorrect: boundedCount(signal.repairCorrect, signal.repairResult === 'correct'),
+                    repairIncorrect: boundedCount(signal.repairIncorrect, signal.repairResult === 'incorrect'),
+                    retestCorrect: boundedCount(signal.retestCorrect, signal.retestResult === 'correct'),
+                    retestIncorrect: boundedCount(signal.retestIncorrect, signal.retestResult === 'incorrect')
                 };
             });
         }
@@ -461,10 +476,14 @@
             if (result !== 'correct' && result !== 'incorrect') return false;
             const previous = learnerState.mistakeSignals[mistakeId] || {
                 attempts: 0, initialResult: null, repairResult: null, retestResult: null,
-                masteryStatus: 'needs-repair', lastSeenAt: now().toISOString()
+                masteryStatus: 'needs-repair', lastSeenAt: now().toISOString(),
+                initialCorrect: 0, initialIncorrect: 0, repairCorrect: 0,
+                repairIncorrect: 0, retestCorrect: 0, retestIncorrect: 0
             };
             previous.attempts = Math.min(99, previous.attempts + 1);
             previous[stage + 'Result'] = result;
+            const countKey = stage + (result === 'correct' ? 'Correct' : 'Incorrect');
+            previous[countKey] = Math.min(99, (Number(previous[countKey]) || 0) + 1);
             previous.lastSeenAt = now().toISOString();
             previous.masteryStatus = previous.retestResult === 'correct'
                 ? 'secure'

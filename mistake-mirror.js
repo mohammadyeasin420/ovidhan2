@@ -2,7 +2,7 @@
 (function (root, factory) {
     const api = factory();
     if (typeof module === 'object' && module.exports) module.exports = api;
-    if (root && root.document) api.mount(root);
+    if (root && root.document) { root.OvidhanMistakeMirror = api; api.mount(root); }
 })(typeof window !== 'undefined' ? window : null, function () {
     'use strict';
 
@@ -54,6 +54,10 @@
     }
 
     function chooseNext(current, state) {
+        if (typeof globalThis !== 'undefined' && globalThis.OvidhanMistakeProfile) {
+            const recommendation = globalThis.OvidhanMistakeProfile.recommendNext(items, state, current.id, Date.now());
+            if (recommendation) return recommendation;
+        }
         const signals = state && state.mistakeSignals || {};
         const candidates = items.filter(item => item.id !== current.id).map(item => {
             let score = item.mistake_family === current.mistake_family ? 40 : 0;
@@ -62,7 +66,7 @@
             return { item, score };
         }).sort((a, b) => b.score - a.score || a.item.id.localeCompare(b.item.id));
         const winner = candidates[0];
-        return { item: winner.item, reason_code: winner.item.mistake_family === current.mistake_family ? 'same-family-repair' : 'next-reviewed-item', score_band: winner.score >= 50 ? 'high' : 'medium' };
+        return { item: winner.item, reason_code: winner.item.mistake_family === current.mistake_family ? 'same-family-repair' : 'next-reviewed-item', score_band: winner.score >= 50 ? 'high' : 'medium', priority_band: winner.score >= 50 ? 'MEDIUM' : 'LOW' };
     }
 
     function mount(win) {
@@ -112,6 +116,7 @@
             const result = optionId === (stage === 'initial' ? 'incorrect' : 'correct') ? 'correct' : 'incorrect';
             const api = learning();
             if (api) api.recordMistakeSignal(item.id, stage, result);
+            win.dispatchEvent(new win.CustomEvent('ovidhan:mistake-profile-update'));
             if (stage === 'initial') { initialResult=result; emit('mistake_answer',{mistake_id:item.id,mistake_family:item.mistake_family,result,option_id:optionId,attempt_number:1},item.id); }
             if (stage === 'repair') emit('mistake_repair_result',{mistake_id:item.id,mistake_family:item.mistake_family,result,option_id:optionId,attempt_number:1},item.id);
             if (stage === 'retest') emit('mistake_retest_result',{mistake_id:item.id,mistake_family:item.mistake_family,result,option_id:optionId,attempt_number:1},item.id);
@@ -122,15 +127,23 @@
             if (completed) return; completed=true;
             const api=learning(); const mastery=result==='correct'?'secure':'needs-repair';
             if (api) api.recordLearningAction('mistake-mirror:'+item.id,'mistake-mirror',result);
+            win.dispatchEvent(new win.CustomEvent('ovidhan:mistake-profile-update'));
             emit('mistake_session_complete',{mistake_id:item.id,mistake_family:item.mistake_family,result,mastery_status:mastery},item.id);
             const next=chooseNext(item,api?api.getState():{});
-            emit('mistake_next_action',{mistake_id:item.id,destination_id:next.item.id,reason_code:next.reason_code,score_band:next.score_band},item.id);
+            emit('mistake_next_action',{mistake_id:item.id,destination_id:next.item.id,reason_code:next.reason_code,score_band:next.score_band || next.priority_band.toLowerCase()},item.id);
             const panel=doc.createElement('div'); panel.className='mm-complete';
             const summary=doc.createElement('p'); summary.textContent=(initialResult==='incorrect'&&result==='correct'?'আপনি ভুলটি repair করেছেন। ':'অনুশীলন সম্পন্ন। ')+ 'পরের ধাপ: '+next.item.correct; panel.appendChild(summary);
             const button=doc.createElement('button'); button.type='button'; button.className='btn btn-secondary'; button.textContent='পরের reviewed mistake →'; button.addEventListener('click',()=>{item=next.item;stage='initial';initialResult=null;completed=false;emit('mistake_mirror_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id);render(true);}); panel.appendChild(button);
             host.querySelector('.mm-card').appendChild(panel);
         }
         emit('mistake_mirror_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id);
+        win.addEventListener('ovidhan:start-mistake', event => {
+            const requested = items.find(candidate => candidate.id === (event.detail && event.detail.destination_id));
+            if (!requested) return;
+            item=requested; stage='initial'; initialResult=null; completed=false; render(true);
+            emit('mistake_mirror_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id);
+            host.scrollIntoView({ behavior: 'auto', block: 'start' });
+        });
         render(false);
     }
     return Object.freeze({ items, optionsFor, chooseNext, mount });
