@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "source_policy": {
+    "classifications": ["OFFICIAL_BPSC", "OFFICIAL_GOVERNMENT", "TRUSTED_SECONDARY", "UNVERIFIED_SECONDARY", "UNKNOWN"],
+    "candidate_facing_publishable": ["OFFICIAL_BPSC", "OFFICIAL_GOVERNMENT"],
+    "priority_order": ["OFFICIAL_BPSC", "OFFICIAL_GOVERNMENT", "TRUSTED_SECONDARY", "UNVERIFIED_SECONDARY", "UNKNOWN"]
+  },
+  "journey_stages": [
+    {"stage_id":"CIRCULAR_APPLICATION","label_en":"Circular and application","label_bn":"বিজ্ঞপ্তি ও আবেদন","description":"Review the authoritative circular, eligibility, instructions, and application window.","actions":["Open the official circular","Check official application instructions","Record the followed BCS locally if desired"],"previous_stage_ids":[],"next_stage_ids":["PRELIMINARY_PREPARATION"],"preparation_type":"APPLICATION","learning_cta":null,"provenance_requirement":"OFFICIAL_SOURCE_REQUIRED"},
+    {"stage_id":"PRELIMINARY_PREPARATION","label_en":"Preliminary preparation","label_bn":"প্রিলিমিনারি প্রস্তুতি","description":"Prepare for the preliminary stage using reviewed resources and diagnostics.","actions":["Review syllabus and preparation resources","Take an optional English diagnostic","Practice identified English skills"],"previous_stage_ids":["CIRCULAR_APPLICATION","POST_RESULT_NEXT_STEPS"],"next_stage_ids":["PRELIMINARY_EXAMINATION"],"preparation_type":"PRELIMINARY","learning_cta":{"action_id":"OPEN_ENGLISH_DIAGNOSTIC","href":"/bcs-english-diagnostic.html","optional":true,"reason":"A diagnostic can identify grammar and vocabulary practice needs without predicting exam outcome."},"provenance_requirement":"STRUCTURAL_ONLY"},
+    {"stage_id":"PRELIMINARY_EXAMINATION","label_en":"Preliminary examination","label_bn":"প্রিলিমিনারি পরীক্ষা","description":"Track the official examination notice and attendance stage.","actions":["Verify the date and instructions from BPSC","Keep the official notice available"],"previous_stage_ids":["PRELIMINARY_PREPARATION"],"next_stage_ids":["PRELIMINARY_RESULT","PRELIMINARY_PREPARATION"],"preparation_type":"PRELIMINARY","learning_cta":null,"provenance_requirement":"OFFICIAL_SOURCE_REQUIRED"},
+    {"stage_id":"PRELIMINARY_RESULT","label_en":"Preliminary result","label_bn":"প্রিলিমিনারি ফলাফল","description":"Interpret only the status and wording supplied by the authoritative result notice.","actions":["Open the official result notice","Verify identifiers through the official route","Choose the applicable next stage"],"previous_stage_ids":["PRELIMINARY_EXAMINATION"],"next_stage_ids":["WRITTEN_PREPARATION","PRELIMINARY_PREPARATION","POST_RESULT_NEXT_STEPS"],"preparation_type":"RESULT","learning_cta":null,"provenance_requirement":"OFFICIAL_SOURCE_REQUIRED"},
+    {"stage_id":"WRITTEN_PREPARATION","label_en":"Written preparation","label_bn":"লিখিত প্রস্তুতি","description":"Prepare for written-stage requirements after an authoritative qualification status.","actions":["Review the official written syllabus","Plan subject practice","Use optional English writing resources"],"previous_stage_ids":["PRELIMINARY_RESULT"],"next_stage_ids":["WRITTEN_EXAMINATION"],"preparation_type":"WRITTEN","learning_cta":{"action_id":"OPEN_WRITING_PRACTICE","href":"/writing.html","optional":true,"reason":"Writing practice may support general written-English preparation; it is not an official BCS result service."},"provenance_requirement":"STRUCTURAL_ONLY"},
+    {"stage_id":"WRITTEN_EXAMINATION","label_en":"Written examination","label_bn":"লিখিত পরীক্ষা","description":"Track authoritative written examination schedules and instructions.","actions":["Open the official schedule","Verify venue and instructions through BPSC"],"previous_stage_ids":["WRITTEN_PREPARATION"],"next_stage_ids":["WRITTEN_RESULT","WRITTEN_PREPARATION"],"preparation_type":"WRITTEN","learning_cta":null,"provenance_requirement":"OFFICIAL_SOURCE_REQUIRED"},
+    {"stage_id":"WRITTEN_RESULT","label_en":"Written result","label_bn":"লিখিত ফলাফল","description":"Present the official result meaning without inferring reasons or unreported status.","actions":["Open the official result source","Choose the applicable next stage"],"previous_stage_ids":["WRITTEN_EXAMINATION"],"next_stage_ids":["VIVA_PREPARATION","WRITTEN_PREPARATION","POST_RESULT_NEXT_STEPS"],"preparation_type":"RESULT","learning_cta":null,"provenance_requirement":"OFFICIAL_SOURCE_REQUIRED"},
+    {"stage_id":"VIVA_PREPARATION","label_en":"Viva preparation","label_bn":"ভাইভা প্রস্তুতি","description":"Prepare for the viva stage after authoritative qualification.","actions":["Review official viva instructions","Practice respectful interview communication"],"previous_stage_ids":["WRITTEN_RESULT"],"next_stage_ids":["VIVA"],"preparation_type":"VIVA","learning_cta":{"action_id":"OPEN_INTERVIEW_ENGLISH","href":"/job-interview-english-bangla.html","optional":true,"reason":"Optional interview-English practice can support communication preparation without predicting selection."},"provenance_requirement":"STRUCTURAL_ONLY"},
+    {"stage_id":"VIVA","label_en":"Viva","label_bn":"ভাইভা","description":"Track the official viva schedule and instructions without reinterpreting special statuses.","actions":["Verify schedule and instructions through BPSC","Retain the authoritative notice"],"previous_stage_ids":["VIVA_PREPARATION"],"next_stage_ids":["FINAL_RESULT_RECOMMENDATION","VIVA_PREPARATION"],"preparation_type":"VIVA","learning_cta":null,"provenance_requirement":"OFFICIAL_SOURCE_REQUIRED"},
+    {"stage_id":"FINAL_RESULT_RECOMMENDATION","label_en":"Final result and recommendation","label_bn":"চূড়ান্ত ফলাফল ও সুপারিশ","description":"Explain only the official final result or recommendation status and its published next steps.","actions":["Open the official final result","Follow official instructions for any next process","Do not reinterpret withheld or special wording"],"previous_stage_ids":["VIVA"],"next_stage_ids":["POST_RESULT_NEXT_STEPS"],"preparation_type":"RESULT","learning_cta":null,"provenance_requirement":"OFFICIAL_SOURCE_REQUIRED"},
+    {"stage_id":"POST_RESULT_NEXT_STEPS","label_en":"Post-result next steps","label_bn":"ফলাফলের পরবর্তী করণীয়","description":"Offer neutral next-step choices appropriate to the official status and the candidate's own goal.","actions":["Follow official next-step instructions","Select another preparation stage if relevant","Use optional learning support"],"previous_stage_ids":["PRELIMINARY_RESULT","WRITTEN_RESULT","FINAL_RESULT_RECOMMENDATION"],"next_stage_ids":["PRELIMINARY_PREPARATION","WRITTEN_PREPARATION","VIVA_PREPARATION"],"preparation_type":"POST_RESULT","learning_cta":{"action_id":"OPEN_MISTAKE_MIRROR","href":"/mistake-notebook.html","optional":true,"reason":"Optional English practice is offered without attributing an exam status to English ability."},"provenance_requirement":"STRUCTURAL_ONLY"}
+  ],
+  "exam_records": [],
+  "candidate_state_contract": {
+    "storage":"OPTIONAL_LOCAL_ONLY","account_required":false,"schema_version":1,
+    "allowed_fields":["followed_exam_id","current_stage_id","preliminary_status","written_status","viva_status","english_goal"],
+    "status_values":["NOT_SET","PREPARING","ATTENDED","QUALIFIED","NOT_QUALIFIED","NOT_FOUND","WITHHELD","SPECIAL_STATUS","UNKNOWN"],
+    "forbidden_fields":["name","nid","phone","address","email","registration_number","roll_number","gender","cadre"],
+    "principles":["User-selected state is not an official result","Unknown remains unknown","Clear local state without affecting learner history"]
+  },
+  "analytics_contract": {
+    "events":["bcs_center_view","bcs_exam_selected","bcs_stage_selected","bcs_official_source_open","bcs_learning_cta_view","bcs_learning_cta_click"],
+    "allowed_properties":["exam_id","stage_id","source_type","action_id","surface","anonymous_session_id"],
+    "forbidden_properties":["name","nid","phone","address","email","registration_number","roll_number","raw_answer","result_text"],
+    "high_cardinality_properties_allowed":false
+  },
+  "watcher_contract": {
+    "pipeline":["DISCOVER","FETCH","CLASSIFY","VALIDATE","COMPARE_VERSION","HUMAN_SOURCE_GATE","PUBLISH"],
+    "targets":["NOTICE","EXAMINATION_DATE","RESULT","REVISED_NOTICE","REVISED_RESULT"],
+    "autonomous_publication":false,
+    "publication_gate":"HUMAN_APPROVAL_WITH_PUBLISHABLE_PROVENANCE"
+  }
+}
