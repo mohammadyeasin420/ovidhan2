@@ -1,0 +1,423 @@
+{
+  "report": "Ovidhan Dictionary SEO Phase 2E Top 100 Editorial Gate and Experiment Freeze",
+  "generated_utc": "2026-08-16T12:15:43.195773+00:00",
+  "repository": "mohammadyeasin420/ovidhan2",
+  "starting_sha": "bf292f0087e673bf68475ebd753c33aee0b4d257",
+  "inputs": {
+    "phase2b_present": true,
+    "phase2c_present": true,
+    "phase2d_present": true,
+    "original_top100_rows": 100,
+    "bangladesh_fields_verified": true
+  },
+  "freeze_hashes": {
+    "phase2d_top100_input_sha256": "4f12046dadd14fb99d167b685ac0778e125c5f9ac656e69b9db4744200691da0",
+    "source_dictionary_sha256": "3f3c0323dfc04c6d2130fd05eed5af0bc7e711470fa9df4647739e1cccf3bbd7",
+    "treatment_manifest_sha256": "48649a0157e2d6b206ba8275d5fe774c0d0609cf478aeee59bf8dd2cd3fabc7f",
+    "control_manifest_sha256": "6561f2f1e9ca4f24c0496e8f7d0a92a88c53a4cae0ad0bd3d0fe2913e2dab0c0",
+    "baseline_sha256": "e4259cf0bfb44a9d9a8a3123a8588dce393ea377661e1c028a5c824876ccbd7c"
+  },
+  "editorial_results": {
+    "counts": {
+      "APPROVE_WITH_OMISSIONS": 7,
+      "APPROVE": 65,
+      "REJECT": 10,
+      "HUMAN_REVIEW": 18
+    },
+    "reviewed": 100,
+    "treatment_size": 72,
+    "flagged_size": 28,
+    "dominant_problems": {
+      "synthetic_or_meta_example": 8,
+      "draft_source_record": 92,
+      "definition_missing": 92,
+      "part_of_speech_missing": 92,
+      "incorrect_or_insufficient_primary_answer": 10,
+      "ambiguous_or_questionable_sense": 18
+    }
+  },
+  "treatment": {
+    "size": 72,
+    "manifest": "reports/dictionary-seo-treatment-manifest-2e.csv",
+    "allowlist_is_mandatory_for_phase2f": true,
+    "approved_only": true
+  },
+  "control": {
+    "size": 72,
+    "manifest": "reports/dictionary-seo-control-manifest-2e.csv",
+    "matching_quality": {
+      "WEAK": 50,
+      "EXACT/STRONG": 14,
+      "ACCEPTABLE": 8
+    },
+    "average_match_cost": 20.54,
+    "limitation": "The Phase 2D Top 100 exhausted all Tier A/B legacy URLs with observed Bangladesh demand. Exact same-tier/evidence controls are therefore limited; weak matches are disclosed, not hidden."
+  },
+  "baseline": {
+    "date": "2026-08-16",
+    "gsc_period": "Last 3 months",
+    "country": "Bangladesh",
+    "rows": 144,
+    "treatment": {
+      "BD_IMPRESSIONS": 109,
+      "BD_CLICKS": 0,
+      "BD_POSITION_WEIGHTED": 41.1
+    },
+    "control": {
+      "BD_IMPRESSIONS": 87,
+      "BD_CLICKS": 0,
+      "BD_POSITION_WEIGHTED": 45.57
+    }
+  },
+  "flagged_candidates": [
+    {
+      "word": "sinuous",
+      "url": "https://ovidhan.net/word/sinuous.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 9.0,
+      "source_problem": "Bangla meaning 'পাপপূর্ণ' is incorrect for sinuous; no independent definition is present.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "mayhem",
+      "url": "https://ovidhan.net/word/mayhem.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 11.0,
+      "source_problem": "Bangla 'মারপিট' is narrower than mayhem and may select the wrong primary sense.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "on",
+      "url": "https://ovidhan.net/word/on.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 74.0,
+      "source_problem": "Bangla is only 'অন' and the definition covers a narrow adjective sense of a highly polysemous word.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "proprietary",
+      "url": "https://ovidhan.net/word/proprietary.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 11.0,
+      "source_problem": "Bangla 'মালিকানা' is a noun while proprietary is commonly adjectival; sense/POS review is required.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "tire",
+      "url": "https://ovidhan.net/word/tire.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 19.0,
+      "source_problem": "Bangla 'টায়ার' selects the US noun sense but the unqualified headword is polysemous and has no POS/definition.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "quilt",
+      "url": "https://ovidhan.net/word/quilt.html",
+      "BD_IMPRESSIONS": 2,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 58.0,
+      "source_problem": "Bangla is transliteration-only; confirm whether an explanatory Bangla equivalent is required.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "sanguine",
+      "url": "https://ovidhan.net/word/sanguine.html",
+      "BD_IMPRESSIONS": 2,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 81.5,
+      "source_problem": "Bangla meaning 'স্বচ্ছ' is incorrect for the relevant senses of sanguine.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "militant",
+      "url": "https://ovidhan.net/word/militant.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 27.0,
+      "source_problem": "Bangla 'জঙ্গি' is narrower and more charged than the full adjective/noun meaning.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "terrific",
+      "url": "https://ovidhan.net/word/terrific.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 26.0,
+      "source_problem": "Bangla 'ভয়ঙ্কর' represents an older/literal sense and may mislead for the common modern sense 'excellent'.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "stalk",
+      "url": "https://ovidhan.net/word/stalk.html",
+      "BD_IMPRESSIONS": 2,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 53.0,
+      "source_problem": "Bangla 'ডালপালা' does not clearly identify the intended stem/stalk sense.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "economical",
+      "url": "https://ovidhan.net/word/economical.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 30.0,
+      "source_problem": "Bangla meaning 'অর্থনৈতিক' describes economic, not economical (cost-saving/frugal).",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "monumental",
+      "url": "https://ovidhan.net/word/monumental.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 26.0,
+      "source_problem": "Bangla is an unexplained transliteration and no definition establishes a learner-useful sense.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "nun",
+      "url": "https://ovidhan.net/word/nun.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 33.0,
+      "source_problem": "Bangla meaning uses the masculine/general 'সন্ন্যাসী'; the female sense is not represented accurately.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "swing",
+      "url": "https://ovidhan.net/word/swing.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 45.0,
+      "source_problem": "Transliteration-only answer does not disambiguate the noun and verb senses.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "subside",
+      "url": "https://ovidhan.net/word/subside.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 42.0,
+      "source_problem": "Bangla value 'কম' is not a sufficient or grammatically correct rendering of the verb subside.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "quarry",
+      "url": "https://ovidhan.net/word/quarry.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 37.0,
+      "source_problem": "Bangla 'খনন' describes excavation rather than clearly defining quarry as noun/verb.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "vanish",
+      "url": "https://ovidhan.net/word/vanish.html",
+      "BD_IMPRESSIONS": 2,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 70.0,
+      "source_problem": "Bangla 'অদৃশ্য' is adjectival and does not fully render the verb without editorial confirmation.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "equable",
+      "url": "https://ovidhan.net/word/equable.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 39.0,
+      "source_problem": "Bangla 'সমান' is overly broad and may not convey even-tempered/uniform senses.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "hallmark",
+      "url": "https://ovidhan.net/word/hallmark.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 42.0,
+      "source_problem": "Transliteration-only answer does not establish the characteristic/mark-of-quality sense.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "slobber",
+      "url": "https://ovidhan.net/word/slobber.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 23.0,
+      "source_problem": "Bangla is an unsupported transliteration and no definition establishes the meaning.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "tear",
+      "url": "https://ovidhan.net/word/tear.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 46.0,
+      "source_problem": "Transliteration-only answer does not disambiguate the tear/tear homographs.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "stroke",
+      "url": "https://ovidhan.net/word/stroke.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 54.0,
+      "source_problem": "Transliteration-only answer does not disambiguate medical, movement, mark, and verb senses.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "manipulate",
+      "url": "https://ovidhan.net/word/manipulate.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 53.0,
+      "source_problem": "Bangla is only an unsupported transliteration and no definition establishes the intended sense.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "mess",
+      "url": "https://ovidhan.net/word/mess.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 62.0,
+      "source_problem": "Bangla 'মেস' points to a different loanword sense and does not safely represent the primary headword.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "offset",
+      "url": "https://ovidhan.net/word/offset.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 92.0,
+      "source_problem": "Transliteration-only answer does not identify the intended noun/verb/adjective sense.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "rant",
+      "url": "https://ovidhan.net/word/rant.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 58.0,
+      "source_problem": "Bangla 'রন্ট' is a suspicious/malformed transliteration with no supporting definition.",
+      "classification": "REJECT",
+      "recommended_action": "DATA_REMEDIATION"
+    },
+    {
+      "word": "crunch",
+      "url": "https://ovidhan.net/word/crunch.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 78.0,
+      "source_problem": "Transliteration-only answer does not identify the sound, action, or shortage senses.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    },
+    {
+      "word": "squash",
+      "url": "https://ovidhan.net/word/squash.html",
+      "BD_IMPRESSIONS": 1,
+      "BD_CLICKS": 0,
+      "BD_CTR": 0.0,
+      "BD_POSITION": 69.0,
+      "source_problem": "Transliteration-only answer is ambiguous among verb, sport, and vegetable senses.",
+      "classification": "HUMAN_REVIEW",
+      "recommended_action": "HUMAN_EDITOR_REVIEW"
+    }
+  ],
+  "strategic_answers": {
+    "publishable_count": 72,
+    "dominant_quality_issue": [
+      [
+        "draft_source_record",
+        92
+      ],
+      [
+        "definition_missing",
+        92
+      ],
+      [
+        "part_of_speech_missing",
+        92
+      ],
+      [
+        "ambiguous_or_questionable_sense",
+        18
+      ],
+      [
+        "incorrect_or_insufficient_primary_answer",
+        10
+      ]
+    ],
+    "high_ranking_poor_data": 4,
+    "treatment_size": 72,
+    "control_comparable": "Partially; band-matching is frozen and every weak match is disclosed.",
+    "implementation_ready": "Only after human review accepts the disclosed control limitation and Phase 2F consumes the mandatory treatment allowlist."
+  },
+  "validation": {
+    "original_candidates_100": true,
+    "every_candidate_classified": true,
+    "all_canonical_slugs_valid": true,
+    "treatment_approved_only": true,
+    "treatment_control_overlap": false,
+    "batch1_in_control": false,
+    "invalid_noise_in_control": false,
+    "baseline_rows": 144,
+    "production_changes_performed": false
+  },
+  "verdict": "PASS WITH WARNINGS — HUMAN REVIEW REQUIRED"
+}
