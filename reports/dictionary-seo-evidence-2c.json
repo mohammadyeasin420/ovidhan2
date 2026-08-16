@@ -1,0 +1,502 @@
+{
+  "report": "Ovidhan Dictionary SEO Phase 2C Search Console Evidence Join",
+  "generated_utc": "2026-08-16T11:39:01.171084+00:00",
+  "source": {
+    "workbook": "https___ovidhan.net_-Performance-on-Search-2026-08-16.xlsx",
+    "filters": [
+      {
+        "Filter": "Search type",
+        "Value": "Web"
+      },
+      {
+        "Filter": "Date",
+        "Value": "Last 3 months"
+      }
+    ],
+    "phase2b_commit": "22118bd6531a6c696e436d5e63d0faf3df9d6ac0",
+    "raw_workbook_committed": false
+  },
+  "scope_guardrails": {
+    "analysis_only": true,
+    "page_query_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE",
+    "france_rowwise_subtraction_performed": false,
+    "country_confidence": "Bangladesh-filtered page/query export unavailable; no page/query claim is Bangladesh-attributed"
+  },
+  "workbook_audit": {
+    "sheet_ranges": {
+      "Chart": "A1:E48",
+      "Queries": "A1:E1001",
+      "Pages": "A1:E1001",
+      "Countries": "A1:E84",
+      "Devices": "A1:E4",
+      "Search appearance": "A1:E1",
+      "Filters": "A1:B3"
+    },
+    "page_rows": 1000,
+    "query_rows": 1000,
+    "country_rows": 83,
+    "device_rows": 3,
+    "search_appearance_rows": 0,
+    "chart_date_min": "2026-06-29",
+    "chart_date_max": "2026-08-14",
+    "devices": [
+      {
+        "Device": "Mobile",
+        "Clicks": 138,
+        "Impressions": 1834,
+        "CTR": 0.07519999999999999,
+        "Position": 9.27
+      },
+      {
+        "Device": "Desktop",
+        "Clicks": 27,
+        "Impressions": 3494,
+        "CTR": 0.0077,
+        "Position": 48.4
+      },
+      {
+        "Device": "Tablet",
+        "Clicks": 0,
+        "Impressions": 27,
+        "CTR": 0,
+        "Position": 10.22
+      }
+    ],
+    "search_appearance": []
+  },
+  "totals": {
+    "global_clicks": 165,
+    "global_impressions": 5355,
+    "global_ctr": 0.030812,
+    "global_position_impression_weighted_from_country_rows": 34.8,
+    "page_export": {
+      "clicks": 170,
+      "impressions": 4413
+    },
+    "query_export": {
+      "clicks": 18,
+      "impressions": 2182
+    },
+    "chart_export": {
+      "clicks": 165,
+      "impressions": 5355
+    },
+    "country_device_clicks_reconcile": true,
+    "country_device_impressions_reconcile": true
+  },
+  "france_contamination": {
+    "classification": "OWNER/DEVELOPER TESTING CONTAMINATION",
+    "clicks": 118,
+    "impressions": 178,
+    "ctr": 0.6629,
+    "position": 8.78,
+    "excluded_from_genuine_market_totals": true,
+    "not_subtracted_from_page_or_query_rows": true
+  },
+  "bangladesh": {
+    "clicks": 37,
+    "impressions": 2069,
+    "ctr": 0.0179,
+    "position": 21.26,
+    "rank_by_impressions": 1,
+    "share_of_non_france_impressions": 0.399652,
+    "confidence_limit": "Bangladesh-filtered GSC page/query export required"
+  },
+  "country_groups": {
+    "BANGLADESH": {
+      "clicks": 37,
+      "impressions": 2069
+    },
+    "INDIA": {
+      "clicks": 4,
+      "impressions": 1384
+    },
+    "OTHER_COUNTRIES_EXCLUDING_FRANCE_BANGLADESH_INDIA": {
+      "clicks": 6,
+      "impressions": 1724
+    },
+    "FRANCE_EXCLUDED_DEVELOPER_OWNER_TRAFFIC": {
+      "clicks": 118,
+      "impressions": 178
+    }
+  },
+  "query_categories": {
+    "bank_job": {
+      "rows": 1,
+      "global_clicks": 0,
+      "global_impressions": 1,
+      "global_position": 40.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    "bcs": {
+      "rows": 5,
+      "global_clicks": 0,
+      "global_impressions": 11,
+      "global_position": 14.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    "branded": {
+      "rows": 5,
+      "global_clicks": 13,
+      "global_impressions": 82,
+      "global_position": 5.33,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    "english_to_bangla_meaning": {
+      "rows": 634,
+      "global_clicks": 3,
+      "global_impressions": 1265,
+      "global_position": 29.5,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    "grammar": {
+      "rows": 17,
+      "global_clicks": 2,
+      "global_impressions": 57,
+      "global_position": 35.61,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    "unrelated_or_unclear": {
+      "rows": 338,
+      "global_clicks": 0,
+      "global_impressions": 766,
+      "global_position": 56.97,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    }
+  },
+  "top_global_queries": [
+    {
+      "query": "ovidhan",
+      "category": "branded",
+      "global_clicks": 13,
+      "global_impressions": 73,
+      "global_position": 2.99,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "preposition rules bangla",
+      "category": "grammar",
+      "global_clicks": 1,
+      "global_impressions": 7,
+      "global_position": 10.86,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "walmart meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 1,
+      "global_impressions": 6,
+      "global_position": 6.5,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "plural maker",
+      "category": "grammar",
+      "global_clicks": 1,
+      "global_impressions": 2,
+      "global_position": 4.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "trade off meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 1,
+      "global_impressions": 1,
+      "global_position": 14.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "english to bangla dictionary",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 1,
+      "global_impressions": 1,
+      "global_position": 61.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "unconventional meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 37,
+      "global_position": 10.73,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "parts of speech identifier",
+      "category": "grammar",
+      "global_clicks": 0,
+      "global_impressions": 20,
+      "global_position": 66.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "root words search engine",
+      "category": "unrelated_or_unclear",
+      "global_clicks": 0,
+      "global_impressions": 17,
+      "global_position": 18.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "classifying",
+      "category": "unrelated_or_unclear",
+      "global_clicks": 0,
+      "global_impressions": 15,
+      "global_position": 53.73,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "mayhem meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 14,
+      "global_position": 11.79,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "educalingo bangla",
+      "category": "unrelated_or_unclear",
+      "global_clicks": 0,
+      "global_impressions": 14,
+      "global_position": 12.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "seclusion meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 13,
+      "global_position": 33.92,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "diametrically",
+      "category": "unrelated_or_unclear",
+      "global_clicks": 0,
+      "global_impressions": 12,
+      "global_position": 60.42,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "societe",
+      "category": "unrelated_or_unclear",
+      "global_clicks": 0,
+      "global_impressions": 11,
+      "global_position": 72.09,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "slytherin meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 10,
+      "global_position": 7.3,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "moreno meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 10,
+      "global_position": 10.5,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "shards meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 10,
+      "global_position": 10.5,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "vocation",
+      "category": "unrelated_or_unclear",
+      "global_clicks": 0,
+      "global_impressions": 10,
+      "global_position": 87.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "tafe meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 9,
+      "global_position": 6.44,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "mirth meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 9,
+      "global_position": 22.44,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "overshadow meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 9,
+      "global_position": 37.33,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "trillion meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 9,
+      "global_position": 45.0,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "princeton meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 8,
+      "global_position": 6.88,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    },
+    {
+      "query": "underwhelming meaning in bengali",
+      "category": "english_to_bangla_meaning",
+      "global_clicks": 0,
+      "global_impressions": 8,
+      "global_position": 7.75,
+      "metric_scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+    }
+  ],
+  "url_join": {
+    "gsc_page_rows": 1000,
+    "normalized_page_urls": 997,
+    "duplicate_or_aggregated_input_rows": 3,
+    "duplicate_normalized_urls": [
+      "https://ovidhan.net/flashcards.html"
+    ],
+    "malformed_urls": [],
+    "word_page_rows": 835,
+    "non_word_page_rows": 162,
+    "matched_repository_word_urls": 835,
+    "unmatched_word_urls": [],
+    "joined_csv": "reports/dictionary-seo-gsc-word-page-join.csv"
+  },
+  "phase2b_inventory": {
+    "rows": 49628,
+    "migration_classes": {
+      "INVALID/NOISE": 947,
+      "KEEP-INDEXED": 1006,
+      "THIN-LEGACY": 39412,
+      "REVIEW": 8263
+    },
+    "tiers": {
+      "D": 40161,
+      "A": 4536,
+      "B": 4714,
+      "C": 217
+    },
+    "reported_inventory": {
+      "word_files": 49628,
+      "read_errors": 0,
+      "new_static_seo_pages": 1008,
+      "legacy_pages": 48620,
+      "in_current_sitemap": 49625,
+      "not_in_current_sitemap": 3,
+      "sitemap_word_urls_without_file": 0,
+      "sitemap_word_urls_without_file_examples": [],
+      "word_files_not_in_sitemap_examples": [
+        "https://ovidhan.net/word/.html",
+        "https://ovidhan.net/word/footer.html",
+        "https://ovidhan.net/word/header.html"
+      ],
+      "detailed_inventory": "reports/dictionary-seo-indexability-2b-inventory.jsonl.gz"
+    }
+  },
+  "segments": {
+    "A_HIGH_VALUE_NEEDS_STATIC_UPGRADE": 71,
+    "B_HIGH_VALUE_ALREADY_GOOD": 10,
+    "C_SEO_OPPORTUNITY": 125,
+    "D_LOW_EVIDENCE_THIN_LEGACY": 38795,
+    "E_INVALID_OR_NOISE": 947,
+    "F_OWNER_TRAFFIC_UNCERTAIN": 835
+  },
+  "priorities": {
+    "eligible_legacy_tier_a_b_review": 8261,
+    "method": "Tier and repository quality dominate. Global impressions and position add capped evidence. Global clicks are retained but have zero score weight because France cannot be separated rowwise.",
+    "model_components": {
+      "repository_content_quality": "Phase 2B tier + tier_score, weighted",
+      "global_impressions": "log-capped, weighted",
+      "global_clicks": "reported but zero weight due France uncertainty",
+      "ranking_position": "small capped boost where impressions exist",
+      "bangladesh_relevance": "not scored without Bangladesh-attributed page/query rows",
+      "general_english_learning_usefulness": "proxied conservatively by Phase 2B content tier; no external volume invented",
+      "bcs_bank_ielts_student_relevance": "query patterns reported globally; not attributed to candidate URLs without supporting join data",
+      "internal_link_opportunity": "not scored; no link graph supplied",
+      "rendering_deficiency": "eligibility restricted to legacy REVIEW pages needing static upgrade"
+    },
+    "top_100": "reports/dictionary-seo-priority-top100.csv",
+    "top_500": "reports/dictionary-seo-priority-top500.csv",
+    "top_1000": "reports/dictionary-seo-priority-top1000.csv"
+  },
+  "protected": {
+    "auto_protected_count": 1006,
+    "batch1_count": 1000,
+    "review_country_data_required_count": 5,
+    "manifest_rows": 1011,
+    "manifest": "reports/dictionary-seo-protected-candidates.csv"
+  },
+  "batch1_visibility": {
+    "pages_in_global_export": 5,
+    "global_clicks": 0,
+    "global_impressions": 27,
+    "scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE",
+    "interpretation": "Historical/global visibility signal only; no Bangladesh page attribution and no causal post-upgrade claim."
+  },
+  "word_page_visibility": {
+    "word_urls_in_export": 835,
+    "matched_word_urls": 835,
+    "urls_with_impressions": 835,
+    "urls_with_clicks": 6,
+    "global_impressions": 2710,
+    "global_clicks": 6,
+    "position_distribution": {
+      "1-10": 202,
+      "11-20": 93,
+      "21-50": 329,
+      "51+": 211
+    },
+    "scope": "GLOBAL AGGREGATE — FRANCE CONTAMINATION POSSIBLE"
+  },
+  "legacy_visibility": {
+    "pages_in_global_export": 830,
+    "global_clicks": 6,
+    "global_impressions": 2683,
+    "interpretation": "Legacy pages already have global Google visibility; evidence supports selective static upgrades, not mass removal."
+  },
+  "thin_legacy": {
+    "total": 39412,
+    "meaningful_global_evidence_rows": 617,
+    "zero_or_near_zero_global_evidence_rows": 38795,
+    "near_zero_definition": "No matched global row above 1 impression and no click; absence may reflect export truncation."
+  },
+  "strategic_answers": {
+    "bangladesh_visibility": "Yes, country-level evidence shows organic discovery, but scale remains modest and page/query attribution is unavailable.",
+    "word_pages_visible": "Yes, hundreds of dictionary word URLs have global impressions.",
+    "legacy_upgrade_vs_remove": "Selective evidence-led static upgrades are justified; removal is not justified by this dataset.",
+    "strongest_page_types": "Dictionary meaning pages show broad impression coverage; branded/home traffic drives most clicks. Country-filtered data is needed for Bangladesh-specific page-type ranking.",
+    "evidence_vs_alphabetical": "Use evidence plus repository quality rather than alphabetical order for the next cohort.",
+    "change_indexability_now": "No. Backlinks, index coverage, crawl evidence, and Bangladesh-attributed URL performance are missing.",
+    "best_next_export": "Bangladesh-filtered GSC Pages and Queries for the same date window, followed by a post-deployment comparison window."
+  },
+  "next_data_required": {
+    "bangladesh_filtered_pages": "Would establish URL-level Bangladesh demand and remove France uncertainty.",
+    "bangladesh_filtered_queries": "Would establish Bangladesh learner intent and query-to-page priorities.",
+    "backlinks_referring_domains": "Would prevent harming externally linked legacy URLs.",
+    "google_index_coverage": "Would show which URLs Google actually indexes and why exclusions occur.",
+    "crawl_data": "Would reveal discovery, canonical, status, and rendering problems at scale.",
+    "analytics_engagement": "Would separate useful learner visits from low-quality impressions.",
+    "dakho_conversion": "Would connect organic discovery to product outcomes.",
+    "bangladesh_keyword_volume": "Would add independent market-size evidence without fabricating demand.",
+    "post_deployment_window": "Would distinguish Batch 1 post-upgrade performance from pre-upgrade history."
+  },
+  "verdict": "PASS WITH WARNINGS — BANGLADESH-FILTERED PAGE/QUERY DATA REQUIRED"
+}
