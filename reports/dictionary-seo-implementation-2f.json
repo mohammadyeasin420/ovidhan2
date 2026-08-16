@@ -1,0 +1,3205 @@
+{
+  "mode": "phase2f-treatment-manifest",
+  "raw_record_count": 50489,
+  "unique_canonical_word_count": 48684,
+  "publishable_canonical_word_count": 9468,
+  "skipped_without_verified_description_count": 39216,
+  "duplicate_count": 3,
+  "invalid_or_unsluggable_count": 1802,
+  "generated_page_count": 72,
+  "first_word": "hosted",
+  "last_word": "withdrawal",
+  "published_example_count": 0,
+  "rejected_example_count": 7,
+  "rejected_examples": [
+    {
+      "word": "hosted",
+      "example": "'hosted' is common in English.",
+      "reason": "common-in-English filler"
+    },
+    {
+      "word": "integration",
+      "example": "This is a integration.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "street",
+      "example": "I know the word 'street'.",
+      "reason": "word-knowledge filler"
+    },
+    {
+      "word": "provision",
+      "example": "Can you use 'provision' in a sentence?",
+      "reason": "use-in-a-sentence prompt"
+    },
+    {
+      "word": "wide",
+      "example": "This is a wide.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "saturday",
+      "example": "This is a saturday.",
+      "reason": "synthetic article template"
+    },
+    {
+      "word": "february",
+      "example": "'february' is common in English.",
+      "reason": "common-in-English filler"
+    }
+  ],
+  "full_dataset_quality": {
+    "bangla_missing": 41016,
+    "definition_missing": 45806,
+    "pos_missing": 45494,
+    "pronunciation_missing": 50489,
+    "example_missing": 45494,
+    "obvious_bad_examples": 4995,
+    "duplicate_english_records": 3,
+    "invalid_or_unsluggable_records": 1802
+  },
+  "generated_paths": [
+    "word/hosted.html",
+    "word/integration.html",
+    "word/outright.html",
+    "word/street.html",
+    "word/net-worth.html",
+    "word/tension.html",
+    "word/provision.html",
+    "word/ugly.html",
+    "word/wide.html",
+    "word/saturday.html",
+    "word/stroll.html",
+    "word/quirky.html",
+    "word/mercantile.html",
+    "word/february.html",
+    "word/oversee.html",
+    "word/pose.html",
+    "word/procure.html",
+    "word/weird.html",
+    "word/rod.html",
+    "word/legible.html",
+    "word/tram.html",
+    "word/labour.html",
+    "word/loophole.html",
+    "word/magenta.html",
+    "word/terrible.html",
+    "word/lean.html",
+    "word/sack.html",
+    "word/sink.html",
+    "word/mirth.html",
+    "word/mutiny.html",
+    "word/purge.html",
+    "word/sturdy.html",
+    "word/musk.html",
+    "word/rudimentary.html",
+    "word/tunnel.html",
+    "word/constellation.html",
+    "word/prologue.html",
+    "word/quake.html",
+    "word/spectacular.html",
+    "word/wallet.html",
+    "word/integrity.html",
+    "word/pedestrian.html",
+    "word/shout.html",
+    "word/sympathy.html",
+    "word/torch.html",
+    "word/wagon.html",
+    "word/vocabulary.html",
+    "word/nevertheless.html",
+    "word/spine.html",
+    "word/stab.html",
+    "word/ultimatum.html",
+    "word/quantum.html",
+    "word/moss.html",
+    "word/sneeze.html",
+    "word/sad.html",
+    "word/slant.html",
+    "word/suppose.html",
+    "word/deficit.html",
+    "word/telescope.html",
+    "word/shy.html",
+    "word/friction.html",
+    "word/reckon.html",
+    "word/velocity.html",
+    "word/lash.html",
+    "word/nest.html",
+    "word/opportune.html",
+    "word/phenomenon.html",
+    "word/reassure.html",
+    "word/recital.html",
+    "word/wash.html",
+    "word/wipe.html",
+    "word/withdrawal.html"
+  ],
+  "treatment_manifest_sha256": "48649a0157e2d6b206ba8275d5fe774c0d0609cf478aeee59bf8dd2cd3fabc7f",
+  "publication_decisions": {
+    "hosted": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": true,
+      "publish_part_of_speech": true,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": true,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [
+        "host"
+      ],
+      "classification": "APPROVE_WITH_OMISSIONS",
+      "future_omissions": "example;synonyms"
+    },
+    "integration": {
+      "allowlisted": true,
+      "publish_bangla": false,
+      "publish_definition": true,
+      "publish_part_of_speech": true,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": true,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [
+        "segregation"
+      ],
+      "publish_word_family_values": [],
+      "classification": "APPROVE_WITH_OMISSIONS",
+      "future_omissions": "bangla;example;synonyms;word_family"
+    },
+    "outright": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "street": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": true,
+      "publish_part_of_speech": true,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE_WITH_OMISSIONS",
+      "future_omissions": "example;synonyms"
+    },
+    "net-worth": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "tension": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "provision": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": true,
+      "publish_part_of_speech": true,
+      "publish_example": false,
+      "publish_synonyms": true,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [
+        "proviso"
+      ],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE_WITH_OMISSIONS",
+      "future_omissions": "example;unverified_synonyms;word_family"
+    },
+    "ugly": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "wide": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": true,
+      "publish_part_of_speech": true,
+      "publish_example": false,
+      "publish_synonyms": true,
+      "publish_antonyms": true,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [
+        "broad"
+      ],
+      "publish_antonym_values": [
+        "narrow"
+      ],
+      "publish_word_family_values": [],
+      "classification": "APPROVE_WITH_OMISSIONS",
+      "future_omissions": "example;unverified_synonyms;word_family"
+    },
+    "saturday": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": true,
+      "publish_part_of_speech": true,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE_WITH_OMISSIONS",
+      "future_omissions": "example;synonyms"
+    },
+    "stroll": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "quirky": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "mercantile": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "february": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": true,
+      "publish_part_of_speech": true,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE_WITH_OMISSIONS",
+      "future_omissions": "example;synonyms"
+    },
+    "oversee": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "pose": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "procure": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "weird": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "rod": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "legible": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "tram": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "labour": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "loophole": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "magenta": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "terrible": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "lean": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "sack": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "sink": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "mirth": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "mutiny": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "purge": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "sturdy": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "musk": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "rudimentary": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "tunnel": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "constellation": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "prologue": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "quake": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "spectacular": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "wallet": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "integrity": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "pedestrian": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "shout": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "sympathy": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "torch": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "wagon": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "vocabulary": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "nevertheless": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "spine": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "stab": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "ultimatum": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "quantum": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "moss": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "sneeze": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "sad": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "slant": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "suppose": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "deficit": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "telescope": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "shy": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "friction": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "reckon": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "velocity": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "lash": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "nest": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "opportune": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "phenomenon": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "reassure": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "recital": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "wash": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "wipe": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    },
+    "withdrawal": {
+      "allowlisted": true,
+      "publish_bangla": true,
+      "publish_definition": false,
+      "publish_part_of_speech": false,
+      "publish_example": false,
+      "publish_synonyms": false,
+      "publish_antonyms": false,
+      "publish_word_family": false,
+      "publish_pronunciation": false,
+      "manifest_frozen": true,
+      "publish_synonym_values": [],
+      "publish_antonym_values": [],
+      "publish_word_family_values": [],
+      "classification": "APPROVE",
+      "future_omissions": "none"
+    }
+  },
+  "validation": {
+    "results": {
+      "PASS": 72,
+      "WARN": 0,
+      "FAIL": 0
+    },
+    "failures": [],
+    "warnings": [],
+    "control_unchanged": 72,
+    "control_changed": [],
+    "guard_files_unchanged": {
+      "source": true,
+      "sitemap": true,
+      "robots": true
+    },
+    "generated_bytes": 1046023,
+    "page_results": [
+      {
+        "word": "hosted",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "হোস্ট করা",
+          "definition": "be the host of or for",
+          "part_of_speech": "verb",
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": [
+            "host"
+          ]
+        }
+      },
+      {
+        "word": "integration",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": null,
+          "definition": "the action of incorporating a racial or religious group into a community",
+          "part_of_speech": "noun",
+          "example": null,
+          "synonyms": [],
+          "antonyms": [
+            "segregation"
+          ],
+          "word_family": []
+        }
+      },
+      {
+        "word": "outright",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "সরাসরি",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "street",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "রাস্তা",
+          "definition": "a thoroughfare (usually including sidewalks) that is lined with buildings",
+          "part_of_speech": "noun",
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "net-worth",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "মোট মূল্য",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "tension",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "উত্তেজনা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "provision",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "বিধান",
+          "definition": "a stipulated condition",
+          "part_of_speech": "noun",
+          "example": null,
+          "synonyms": [
+            "proviso"
+          ],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "ugly",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "কুৎসিত",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "wide",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "প্রশস্ত",
+          "definition": "having great (or a certain) extent from one side to the other",
+          "part_of_speech": "adjective",
+          "example": null,
+          "synonyms": [
+            "broad"
+          ],
+          "antonyms": [
+            "narrow"
+          ],
+          "word_family": []
+        }
+      },
+      {
+        "word": "saturday",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "শনিবার",
+          "definition": "the seventh and last day of the week; observed as the Sabbath by Jews and some Christians",
+          "part_of_speech": "noun",
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "stroll",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "হাঁটা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "quirky",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "অদ্ভুত",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "mercantile",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ব্যবসায়িক",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "february",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ফেব্রুয়ারী",
+          "definition": "the month following January and preceding March",
+          "part_of_speech": "noun",
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "oversee",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "তদারকি",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "pose",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ভঙ্গি",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "procure",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "সংগ্রহ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "weird",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "অদ্ভুত",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "rod",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "রড",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "legible",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "পাঠযোগ্য",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "tram",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ট্রাম",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "labour",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "শ্রম",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "loophole",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ফাঁকি",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "magenta",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ম্যাজেন্টা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "terrible",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ভয়ানক",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "lean",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "চর্বিহীন",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "sack",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "বস্তা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "sink",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ডুব",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "mirth",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "আনন্দ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "mutiny",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "বিদ্রোহ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "purge",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "শুদ্ধ করা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "sturdy",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "বলিষ্ঠ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "musk",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "কস্তুরী",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "rudimentary",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "প্রাথমিক",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "tunnel",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "টানেল",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "constellation",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "নক্ষত্রপুঞ্জ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "prologue",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "প্রস্তাবনা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "quake",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ভূমিকম্প",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "spectacular",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "দর্শনীয়",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "wallet",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "মানিব্যাগ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "integrity",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "সততা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "pedestrian",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "পথচারী",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "shout",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "চিৎকার",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "sympathy",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "সহানুভূতি",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "torch",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "টর্চ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "wagon",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ওয়াগন",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "vocabulary",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "শব্দভান্ডার",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "nevertheless",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "তবুও",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "spine",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "মেরুদণ্ড",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "stab",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ছুরিকাঘাত",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "ultimatum",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "আল্টিমেটাম",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "quantum",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "কোয়ান্টাম",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "moss",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "শ্যাওলা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "sneeze",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "হাঁচি",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "sad",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "দুঃখজনক",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "slant",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "তির্যক",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "suppose",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ধরুন",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "deficit",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ঘাটতি",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "telescope",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "টেলিস্কোপ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "shy",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "লাজুক",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "friction",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ঘর্ষণ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "reckon",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "গণনা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "velocity",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "বেগ",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "lash",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "চাবুক",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "nest",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "নীড়",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "opportune",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "সুবিধাজনক",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "phenomenon",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ঘটনা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "reassure",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "আশ্বস্ত করা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "recital",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "আবৃত্তি",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "wash",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "ধোয়া",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "wipe",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "মুছা",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      },
+      {
+        "word": "withdrawal",
+        "status": "PASS",
+        "failures": [],
+        "visible": {
+          "bangla": "প্রত্যাহার",
+          "definition": null,
+          "part_of_speech": null,
+          "example": null,
+          "synonyms": [],
+          "antonyms": [],
+          "word_family": []
+        }
+      }
+    ],
+    "human_readable_qa": {
+      "approve_with_omissions": [
+        {
+          "word": "hosted",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "হোস্ট করা",
+            "definition": "be the host of or for",
+            "part_of_speech": "verb",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": [
+              "host"
+            ]
+          }
+        },
+        {
+          "word": "integration",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": null,
+            "definition": "the action of incorporating a racial or religious group into a community",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [
+              "segregation"
+            ],
+            "word_family": []
+          }
+        },
+        {
+          "word": "street",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "রাস্তা",
+            "definition": "a thoroughfare (usually including sidewalks) that is lined with buildings",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "provision",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "বিধান",
+            "definition": "a stipulated condition",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [
+              "proviso"
+            ],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "wide",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "প্রশস্ত",
+            "definition": "having great (or a certain) extent from one side to the other",
+            "part_of_speech": "adjective",
+            "example": null,
+            "synonyms": [
+              "broad"
+            ],
+            "antonyms": [
+              "narrow"
+            ],
+            "word_family": []
+          }
+        },
+        {
+          "word": "saturday",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "শনিবার",
+            "definition": "the seventh and last day of the week; observed as the Sabbath by Jews and some Christians",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "february",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ফেব্রুয়ারী",
+            "definition": "the month following January and preceding March",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        }
+      ],
+      "strongest_bd_evidence": [
+        {
+          "word": "tension",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "উত্তেজনা",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "outright",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "সরাসরি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "net-worth",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "মোট মূল্য",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "ugly",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "কুৎসিত",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "quirky",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "অদ্ভুত",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "stroll",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "হাঁটা",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "lean",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "চর্বিহীন",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "integration",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": null,
+            "definition": "the action of incorporating a racial or religious group into a community",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [
+              "segregation"
+            ],
+            "word_family": []
+          }
+        },
+        {
+          "word": "legible",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "পাঠযোগ্য",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "street",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "রাস্তা",
+            "definition": "a thoroughfare (usually including sidewalks) that is lined with buildings",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        }
+      ],
+      "high_ranking": [
+        {
+          "word": "hosted",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "হোস্ট করা",
+            "definition": "be the host of or for",
+            "part_of_speech": "verb",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": [
+              "host"
+            ]
+          }
+        },
+        {
+          "word": "mercantile",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ব্যবসায়িক",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "loophole",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ফাঁকি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "integration",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": null,
+            "definition": "the action of incorporating a racial or religious group into a community",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [
+              "segregation"
+            ],
+            "word_family": []
+          }
+        },
+        {
+          "word": "net-worth",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "মোট মূল্য",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "oversee",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "তদারকি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "weird",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "অদ্ভুত",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "rod",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "রড",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "pose",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ভঙ্গি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "procure",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "সংগ্রহ",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        }
+      ],
+      "sparse": [
+        {
+          "word": "mercantile",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ব্যবসায়িক",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "oversee",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "তদারকি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "pose",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ভঙ্গি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "procure",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "সংগ্রহ",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "weird",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "অদ্ভুত",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "rod",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "রড",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "labour",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "শ্রম",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "loophole",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ফাঁকি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "mirth",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "আনন্দ",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "mutiny",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "বিদ্রোহ",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        }
+      ],
+      "tier_a": [
+        {
+          "word": "hosted",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "হোস্ট করা",
+            "definition": "be the host of or for",
+            "part_of_speech": "verb",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": [
+              "host"
+            ]
+          }
+        },
+        {
+          "word": "integration",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": null,
+            "definition": "the action of incorporating a racial or religious group into a community",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [
+              "segregation"
+            ],
+            "word_family": []
+          }
+        },
+        {
+          "word": "street",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "রাস্তা",
+            "definition": "a thoroughfare (usually including sidewalks) that is lined with buildings",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "provision",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "বিধান",
+            "definition": "a stipulated condition",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [
+              "proviso"
+            ],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "wide",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "প্রশস্ত",
+            "definition": "having great (or a certain) extent from one side to the other",
+            "part_of_speech": "adjective",
+            "example": null,
+            "synonyms": [
+              "broad"
+            ],
+            "antonyms": [
+              "narrow"
+            ],
+            "word_family": []
+          }
+        },
+        {
+          "word": "saturday",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "শনিবার",
+            "definition": "the seventh and last day of the week; observed as the Sabbath by Jews and some Christians",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "february",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ফেব্রুয়ারী",
+            "definition": "the month following January and preceding March",
+            "part_of_speech": "noun",
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        }
+      ],
+      "tier_b": [
+        {
+          "word": "outright",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "সরাসরি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "net-worth",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "মোট মূল্য",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "tension",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "উত্তেজনা",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "ugly",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "কুৎসিত",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "stroll",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "হাঁটা",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "quirky",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "অদ্ভুত",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "mercantile",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ব্যবসায়িক",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "oversee",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "তদারকি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "pose",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "ভঙ্গি",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        },
+        {
+          "word": "procure",
+          "status": "PASS",
+          "failures": [],
+          "visible": {
+            "bangla": "সংগ্রহ",
+            "definition": null,
+            "part_of_speech": null,
+            "example": null,
+            "synonyms": [],
+            "antonyms": [],
+            "word_family": []
+          }
+        }
+      ]
+    }
+  }
+}

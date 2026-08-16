@@ -5,6 +5,8 @@ Generation is forbidden unless one explicit mode is supplied: ``--words``,
 """
 
 import argparse
+import csv
+import hashlib
 import html
 import json
 import re
@@ -16,6 +18,13 @@ OUTPUT_DIR = Path("word")
 HEADER_PATH = Path("header.html")
 FOOTER_PATH = Path("footer.html")
 SLUG_RE = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*\Z")
+PHASE2F_MANIFEST_SHA256 = "48649a0157e2d6b206ba8275d5fe774c0d0609cf478aeee59bf8dd2cd3fabc7f"
+PHASE2F_TREATMENT_COUNT = 72
+MANIFEST_BOOLEAN_FIELDS = (
+    "allowlisted", "publish_bangla", "publish_definition", "publish_part_of_speech",
+    "publish_example", "publish_synonyms", "publish_antonyms", "publish_word_family",
+    "publish_pronunciation", "manifest_frozen",
+)
 
 
 def nonempty(entry, field):
@@ -111,16 +120,29 @@ def select_example(entry, word):
     return None, rejected
 
 
-def render_page(slug, entry, header_html=None, footer_html=None):
+def render_page(slug, entry, header_html=None, footer_html=None, publication=None):
     if header_html is None or footer_html is None:
         header_html, footer_html = load_site_layout()
     source_word = nonempty(entry, "english") or nonempty(entry, "word") or nonempty(entry, "en") or slug
     word = source_word.strip().lower()
-    bangla = nonempty(entry, "bangla")
-    part_of_speech = nonempty(entry, "part_of_speech")
-    definition = nonempty(entry, "definition")
-    pronunciation = nonempty(entry, "pronunciation")
-    example, rejected_examples = select_example(entry, slug)
+    source_bangla = nonempty(entry, "bangla")
+    source_part_of_speech = nonempty(entry, "part_of_speech")
+    source_definition = nonempty(entry, "definition")
+    source_pronunciation = nonempty(entry, "pronunciation")
+    source_example, rejected_examples = select_example(entry, slug)
+    if publication is None:
+        bangla, part_of_speech, definition = source_bangla, source_part_of_speech, source_definition
+        pronunciation, example = source_pronunciation, source_example
+        synonyms = antonyms = word_family = []
+    else:
+        bangla = source_bangla if publication["publish_bangla"] else None
+        definition = source_definition if publication["publish_definition"] else None
+        part_of_speech = source_part_of_speech if publication["publish_part_of_speech"] else None
+        pronunciation = source_pronunciation if publication["publish_pronunciation"] else None
+        example = source_example if publication["publish_example"] else None
+        synonyms = publication["publish_synonym_values"] if publication["publish_synonyms"] else []
+        antonyms = publication["publish_antonym_values"] if publication["publish_antonyms"] else []
+        word_family = publication["publish_word_family_values"] if publication["publish_word_family"] else []
 
     canonical = f"https://ovidhan.net/word/{slug}.html"
     title = f"{word} Meaning in Bangla | Ovidhan"
@@ -145,6 +167,16 @@ def render_page(slug, entry, header_html=None, footer_html=None):
             details.append(
                 f'        <p class="{css_class}"><strong>{label}:</strong> '
                 f'<span{language}>{html.escape(value)}</span></p>'
+            )
+    for label, values, css_class in (
+        ("Synonyms", synonyms, "synonyms"),
+        ("Antonyms", antonyms, "antonyms"),
+        ("Word family", word_family, "word-family"),
+    ):
+        if values:
+            details.append(
+                f'        <p class="{css_class}"><strong>{label}:</strong> '
+                f'<span>{html.escape(", ".join(values))}</span></p>'
             )
 
     defined_term = {
@@ -203,21 +235,99 @@ def render_page(slug, entry, header_html=None, footer_html=None):
     return page, rejected_examples, bool(example)
 
 
+def parse_manifest_bool(row, field, row_number):
+    value = str(row.get(field, "")).strip().lower()
+    if value not in {"true", "false"}:
+        raise SystemExit(f"Treatment manifest row {row_number}: {field} must be true or false")
+    return value == "true"
+
+
+def parse_approved_values(row, field):
+    return [item.strip() for item in str(row.get(field, "")).split(";") if item.strip()]
+
+
+def load_phase2f_manifest(path, normalized):
+    manifest_hash = hashlib.sha256(path.read_bytes()).hexdigest()
+    if manifest_hash != PHASE2F_MANIFEST_SHA256:
+        raise SystemExit(
+            f"Phase 2F treatment manifest hash mismatch: {manifest_hash}; expected {PHASE2F_MANIFEST_SHA256}"
+        )
+    with path.open(encoding="utf-8-sig", newline="") as manifest_file:
+        rows = list(csv.DictReader(manifest_file))
+    if len(rows) != PHASE2F_TREATMENT_COUNT:
+        raise SystemExit(f"Phase 2F requires exactly {PHASE2F_TREATMENT_COUNT} manifest rows")
+    available = dict(normalized)
+    selected = []
+    seen = set()
+    source_relation_fields = {
+        "publish_synonym_values": "synonyms",
+        "publish_antonym_values": "antonyms",
+        "publish_word_family_values": "word_family",
+    }
+    for row_number, row in enumerate(rows, 2):
+        parsed = {field: parse_manifest_bool(row, field, row_number) for field in MANIFEST_BOOLEAN_FIELDS}
+        slug = str(row.get("word", "")).strip()
+        expected_url = f"https://ovidhan.net/word/{slug}.html"
+        expected_path = f"word/{slug}.html"
+        if not SLUG_RE.fullmatch(slug) or row.get("url") != expected_url or row.get("path") != expected_path:
+            raise SystemExit(f"Treatment manifest row {row_number}: invalid canonical word/url/path")
+        if slug in seen or slug not in available:
+            raise SystemExit(f"Treatment manifest row {row_number}: duplicate or missing source word {slug!r}")
+        if not parsed["allowlisted"] or not parsed["manifest_frozen"]:
+            raise SystemExit(f"Treatment manifest row {row_number}: row is not frozen and allowlisted")
+        if row.get("classification") not in {"APPROVE", "APPROVE_WITH_OMISSIONS"}:
+            raise SystemExit(f"Treatment manifest row {row_number}: classification is not approved")
+        if parsed["publish_pronunciation"]:
+            raise SystemExit(f"Treatment manifest row {row_number}: pronunciation publication is forbidden")
+        entry = available[slug]
+        for flag, source_field in (("publish_bangla", "bangla"), ("publish_definition", "definition"), ("publish_part_of_speech", "part_of_speech")):
+            if parsed[flag] and not nonempty(entry, source_field):
+                raise SystemExit(f"Treatment manifest row {row_number}: approved {source_field} is missing")
+        if parsed["publish_example"]:
+            example, rejected = select_example(entry, slug)
+            if not example or rejected:
+                raise SystemExit(f"Treatment manifest row {row_number}: approved example is missing or rejected")
+        for values_field, source_field in source_relation_fields.items():
+            values = parse_approved_values(row, values_field)
+            parsed[values_field] = values
+            flag = values_field.replace("_values", "s") if values_field == "publish_synonym_values" else values_field.replace("_values", "")
+            expected_flag = {"publish_synonym_values": "publish_synonyms", "publish_antonym_values": "publish_antonyms", "publish_word_family_values": "publish_word_family"}[values_field]
+            if bool(values) != parsed[expected_flag]:
+                raise SystemExit(f"Treatment manifest row {row_number}: {values_field} does not match its publication flag")
+            source_values = {str(item).strip().casefold() for item in entry.get(source_field, []) if isinstance(item, str)}
+            if any(value.casefold() not in source_values for value in values):
+                raise SystemExit(f"Treatment manifest row {row_number}: approved relation is not present in source")
+        if not (parsed["publish_bangla"] or parsed["publish_definition"]):
+            raise SystemExit(f"Treatment manifest row {row_number}: no approved static answer")
+        parsed.update({"classification": row["classification"], "future_omissions": row.get("future_omissions", "")})
+        selected.append((slug, entry, parsed))
+        seen.add(slug)
+    return selected, manifest_hash
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--words", nargs="+", help="Generate only these explicit canonical words.")
     parser.add_argument("--batch-start", type=int, help="Zero-based start in stable canonical-word order.")
     parser.add_argument("--batch-size", type=int, help="Number of unique pages in the controlled batch.")
     parser.add_argument("--full", action="store_true", help="Explicitly generate every valid unique record.")
+    parser.add_argument(
+        "--phase2f-treatment-manifest", type=Path,
+        help="Generate only the frozen Phase 2F treatment manifest; its approved SHA-256 and 72-row count are mandatory.",
+    )
     parser.add_argument("--report", type=Path, help="Write a JSON generation manifest and statistics report.")
     return parser.parse_args()
 
 
 def select_mode(args, normalized):
     batch_supplied = args.batch_start is not None or args.batch_size is not None
-    mode_count = int(bool(args.words)) + int(batch_supplied) + int(args.full)
+    mode_count = int(bool(args.words)) + int(batch_supplied) + int(args.full) + int(bool(args.phase2f_treatment_manifest))
     if mode_count != 1:
-        raise SystemExit("Supply exactly one mode: --words, --batch-start with --batch-size, or --full.")
+        raise SystemExit("Supply exactly one mode: --words, --batch-start with --batch-size, --full, or --phase2f-treatment-manifest.")
+
+    if args.phase2f_treatment_manifest:
+        selected, manifest_hash = load_phase2f_manifest(args.phase2f_treatment_manifest, normalized)
+        return "phase2f-treatment-manifest", selected, manifest_hash
 
     if args.words:
         requested = []
@@ -232,7 +342,7 @@ def select_mode(args, normalized):
             if slug not in seen:
                 requested.append((slug, available[slug]))
                 seen.add(slug)
-        return "words", requested
+        return "words", [(slug, entry, None) for slug, entry in requested], None
 
     if batch_supplied:
         if args.batch_start is None or args.batch_size is None:
@@ -244,9 +354,9 @@ def select_mode(args, normalized):
         selected = publishable[args.batch_start:end]
         if len(selected) != args.batch_size:
             raise SystemExit(f"Requested {args.batch_size} pages but only {len(selected)} are available in that range.")
-        return "batch", selected
+        return "batch", [(slug, entry, None) for slug, entry in selected], None
 
-    return "full", [(slug, entry) for slug, entry in normalized if is_publishable(entry)]
+    return "full", [(slug, entry, None) for slug, entry in normalized if is_publishable(entry)], None
 
 
 def full_quality_stats(records, normalized, duplicate_records, invalid_records):
@@ -279,7 +389,7 @@ def main():
 
     normalized, duplicates, invalid = normalize_records(records)
     publishable_count = sum(is_publishable(entry) for _, entry in normalized)
-    mode, selected = select_mode(args, normalized)
+    mode, selected, manifest_hash = select_mode(args, normalized)
     quality = full_quality_stats(records, normalized, duplicates, invalid)
     header_html, footer_html = load_site_layout()
 
@@ -287,13 +397,16 @@ def main():
     generated_paths = []
     rejected_in_selection = []
     published_examples = 0
-    for slug, entry in selected:
-        page, rejected, has_example = render_page(slug, entry, header_html, footer_html)
+    publication_decisions = {}
+    for slug, entry, publication in selected:
+        page, rejected, has_example = render_page(slug, entry, header_html, footer_html, publication)
         path = OUTPUT_DIR / f"{slug}.html"
         path.write_text(page, encoding="utf-8")
         generated_paths.append(path.as_posix())
         published_examples += int(has_example)
         rejected_in_selection.extend({"word": slug, **item} for item in rejected)
+        if publication is not None:
+            publication_decisions[slug] = publication
 
     report = {
         "mode": mode,
@@ -311,6 +424,8 @@ def main():
         "rejected_examples": rejected_in_selection,
         "full_dataset_quality": quality,
         "generated_paths": generated_paths,
+        "treatment_manifest_sha256": manifest_hash,
+        "publication_decisions": publication_decisions,
     }
     print(json.dumps({key: value for key, value in report.items() if key not in {"generated_paths", "rejected_examples"}}, ensure_ascii=False, indent=2))
     if args.report:
