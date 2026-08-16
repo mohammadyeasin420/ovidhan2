@@ -43,4 +43,11 @@ test('dataset has no raw learner-input or PII fields', () => {
     const forbidden = /text_input|learner_text|email|name|phone|audio|transcript|query/i;
     items.forEach(item => Object.keys(item).forEach(key => assert.doesNotMatch(key, forbidden)));
 });
+test('fewer/less item states the formal-versus-informal register distinction', () => {
+    const item = items.find(candidate => candidate.id === 'mm-fewer-less');
+    assert.match(item.explanation_en, /formal or edited English/i);
+    assert.match(item.explanation_en, /informally/i);
+    assert.match(item.explanation_bn, /Formal বা edited English/);
+    assert.match(item.explanation_bn, /informal English/);
+});
 console.log('PASS all mistake-mirror tests');
