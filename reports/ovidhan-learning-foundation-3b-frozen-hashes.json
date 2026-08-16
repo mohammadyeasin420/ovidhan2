@@ -1,0 +1,900 @@
+{
+  "schema": "ovidhan-frozen-page-hashes-3b-v1",
+  "capturedAt": "2026-08-16T15:58:50.354Z",
+  "treatmentCount": 72,
+  "controlCount": 72,
+  "uniquePageCount": 144,
+  "aggregateSha256": "202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0",
+  "pages": [
+    {
+      "cohort": "treatment",
+      "word": "hosted",
+      "path": "word/hosted.html",
+      "sha256": "d43347afb7d4e803903a70175618e27c30f24c52f4fb4c557f4ecf17111604aa"
+    },
+    {
+      "cohort": "treatment",
+      "word": "integration",
+      "path": "word/integration.html",
+      "sha256": "27351d92508ba86ad722244d2a759631f93fdd12e157f96376d616d1cb24f478"
+    },
+    {
+      "cohort": "treatment",
+      "word": "outright",
+      "path": "word/outright.html",
+      "sha256": "9467834fc61157ca6ed490191062a9e26a7f1510d440a06b03615e31306f03f3"
+    },
+    {
+      "cohort": "treatment",
+      "word": "street",
+      "path": "word/street.html",
+      "sha256": "42cfe84792798bafb9ce15f5fb163c5be2d0da6dfdfb616b7d1c2645473e0e2a"
+    },
+    {
+      "cohort": "treatment",
+      "word": "net-worth",
+      "path": "word/net-worth.html",
+      "sha256": "a023adb69801c4a8a57aef3466ceb5e524003163a56c7bc625f7b3434a6df470"
+    },
+    {
+      "cohort": "treatment",
+      "word": "tension",
+      "path": "word/tension.html",
+      "sha256": "9c31438ef5ca5c4d8e0bfb55b01bd55c2eb560c1dfa8594500b2c871d700cf80"
+    },
+    {
+      "cohort": "treatment",
+      "word": "provision",
+      "path": "word/provision.html",
+      "sha256": "8ef37f57d9400f834b81be0931d0659a9a1346d8a54dc492364b10a64219918a"
+    },
+    {
+      "cohort": "treatment",
+      "word": "ugly",
+      "path": "word/ugly.html",
+      "sha256": "624ee40fc0af60217eb5dbdeb122f100e26d1a3da3fc9501c787dcb3d459e5ac"
+    },
+    {
+      "cohort": "treatment",
+      "word": "wide",
+      "path": "word/wide.html",
+      "sha256": "8ad4a446be5ee574d15dd6b28f1d5a2ab345b8a27e474eb39f09ae6d779f1b02"
+    },
+    {
+      "cohort": "treatment",
+      "word": "saturday",
+      "path": "word/saturday.html",
+      "sha256": "37a10a6b6df1c93c2163e8aa09be001c8367410b0f56207cf2ad455ca9b28e68"
+    },
+    {
+      "cohort": "treatment",
+      "word": "stroll",
+      "path": "word/stroll.html",
+      "sha256": "194c8d797afe465f2cd962bc567ca0b42e0cde330ceed6507e94886c22d3310d"
+    },
+    {
+      "cohort": "treatment",
+      "word": "quirky",
+      "path": "word/quirky.html",
+      "sha256": "7203fd8d112fa149466b31263b48cbd0b83c740817c59b8ada9afbd1ff7cc320"
+    },
+    {
+      "cohort": "treatment",
+      "word": "mercantile",
+      "path": "word/mercantile.html",
+      "sha256": "5d9e4faa2761225f9484cb2b75f98822769774ccc379677b367fb138f844a55f"
+    },
+    {
+      "cohort": "treatment",
+      "word": "february",
+      "path": "word/february.html",
+      "sha256": "00a7cb7fe33332817bba867ae95bb31c6c34430908aa323f4cfa876e1d56a7bc"
+    },
+    {
+      "cohort": "treatment",
+      "word": "oversee",
+      "path": "word/oversee.html",
+      "sha256": "259f916a8e3aecf3faf0c1bd6603d33c9b45fbc4b022b7458b7d487bb095876b"
+    },
+    {
+      "cohort": "treatment",
+      "word": "pose",
+      "path": "word/pose.html",
+      "sha256": "e0ca9d697e099b1e47f44db38287800a6da24d5938cfd3ff16b6d2b1c7ec97db"
+    },
+    {
+      "cohort": "treatment",
+      "word": "procure",
+      "path": "word/procure.html",
+      "sha256": "9db9b777323067b14cad02e9224e8f02191806153963911b26556013a2a58a90"
+    },
+    {
+      "cohort": "treatment",
+      "word": "weird",
+      "path": "word/weird.html",
+      "sha256": "0b307cebc243c3e7be3198094ab4c59d34289deede743e1fce5e41884dda2134"
+    },
+    {
+      "cohort": "treatment",
+      "word": "rod",
+      "path": "word/rod.html",
+      "sha256": "01b9932a605004166395b305f17b82bdbc8ce9a5c227babc6af848f42960ad4c"
+    },
+    {
+      "cohort": "treatment",
+      "word": "legible",
+      "path": "word/legible.html",
+      "sha256": "5fa2d317554083d5f4e700b4e62698d87c47fa93b064968de92e7be47a095ea4"
+    },
+    {
+      "cohort": "treatment",
+      "word": "tram",
+      "path": "word/tram.html",
+      "sha256": "5b8ad820f0a16ec507ba30672af6146479f031b602a6c13f97ee24ab7209681d"
+    },
+    {
+      "cohort": "treatment",
+      "word": "labour",
+      "path": "word/labour.html",
+      "sha256": "585153b632b07447c872c4208fb5fdd0ea5744860b3163e1e8146f19dc175e81"
+    },
+    {
+      "cohort": "treatment",
+      "word": "loophole",
+      "path": "word/loophole.html",
+      "sha256": "77eeb0ca5d538ead4294b35ae85c4665c90f732b7b747a03521a044e3f7fbd5e"
+    },
+    {
+      "cohort": "treatment",
+      "word": "magenta",
+      "path": "word/magenta.html",
+      "sha256": "c666d39e795bfc4ef31e058c419899b433fae9bcc2f583a933ae0ba866d5fef8"
+    },
+    {
+      "cohort": "treatment",
+      "word": "terrible",
+      "path": "word/terrible.html",
+      "sha256": "8e63f22ba311a31172e03f386d05e63fea39af22fcacde8837470500a9000224"
+    },
+    {
+      "cohort": "treatment",
+      "word": "lean",
+      "path": "word/lean.html",
+      "sha256": "17095a8b07b48a7ec99b5514c83fc569731fefb6d394c76210c9291e4871f783"
+    },
+    {
+      "cohort": "treatment",
+      "word": "sack",
+      "path": "word/sack.html",
+      "sha256": "0e41b1497b1c07e50f386a9a1c1625ecdd217091979d00b97ad10fb3f9a736b4"
+    },
+    {
+      "cohort": "treatment",
+      "word": "sink",
+      "path": "word/sink.html",
+      "sha256": "5c287e1322b9bcf71825ae934cb364bb6088dd2695b7ab188a2467a2a649ed3f"
+    },
+    {
+      "cohort": "treatment",
+      "word": "mirth",
+      "path": "word/mirth.html",
+      "sha256": "f3f5f51742b4278552ba58f8148f54c7da54113c7740e03a28f353fa7646f5ab"
+    },
+    {
+      "cohort": "treatment",
+      "word": "mutiny",
+      "path": "word/mutiny.html",
+      "sha256": "1c43599342227e47326b15917e3f6fc31b5f6c6b0ba88faf12e2141dd78052ef"
+    },
+    {
+      "cohort": "treatment",
+      "word": "purge",
+      "path": "word/purge.html",
+      "sha256": "36a211a0756d510db5be93e49c312f05a28d6a59db32c7cb4f2bf57fb9aa31b3"
+    },
+    {
+      "cohort": "treatment",
+      "word": "sturdy",
+      "path": "word/sturdy.html",
+      "sha256": "8a076c156b990bc830dc57527343a95678a54c9f4d822108615430e02aec720f"
+    },
+    {
+      "cohort": "treatment",
+      "word": "musk",
+      "path": "word/musk.html",
+      "sha256": "4be7a71c61273a5e2eb9666becebbe3fa0ba962119bf71199231014fb63c2e43"
+    },
+    {
+      "cohort": "treatment",
+      "word": "rudimentary",
+      "path": "word/rudimentary.html",
+      "sha256": "cac349f216e084fb43f8e7692d21be16ba2bd5ef93d220d79503c5769d2ebd39"
+    },
+    {
+      "cohort": "treatment",
+      "word": "tunnel",
+      "path": "word/tunnel.html",
+      "sha256": "d6a2afe377ace19c99a360a47de355d503d9dc84c05cf60c3e94790a0aa14246"
+    },
+    {
+      "cohort": "treatment",
+      "word": "constellation",
+      "path": "word/constellation.html",
+      "sha256": "b9939c72378d6f9f66907ef601d39f19ccd2dbde07673b353f48d1afc47b2842"
+    },
+    {
+      "cohort": "treatment",
+      "word": "prologue",
+      "path": "word/prologue.html",
+      "sha256": "9365e0fe7be7b2fa4e0572104b0d1147f164347db402395b43d8746dee04302b"
+    },
+    {
+      "cohort": "treatment",
+      "word": "quake",
+      "path": "word/quake.html",
+      "sha256": "1ca1e088c41aa2e280616af64ab947c2e0b06bd54e2770e2c2d59e8e76b6ac58"
+    },
+    {
+      "cohort": "treatment",
+      "word": "spectacular",
+      "path": "word/spectacular.html",
+      "sha256": "62235d8fb642a9fcf1b357359aca16f180d648ece6d55c4e38b24ade6a3e2adc"
+    },
+    {
+      "cohort": "treatment",
+      "word": "wallet",
+      "path": "word/wallet.html",
+      "sha256": "4d3c656ec1dcafbbcc21b001634f37878cac5f88d1ead59d9e8a27bbe8657bdd"
+    },
+    {
+      "cohort": "treatment",
+      "word": "integrity",
+      "path": "word/integrity.html",
+      "sha256": "a5d023ae0860c35609de0c4256b2c0746694695c0dbbbd11e48e96740c8f75fb"
+    },
+    {
+      "cohort": "treatment",
+      "word": "pedestrian",
+      "path": "word/pedestrian.html",
+      "sha256": "d5f428cecc7ad121f93720b8983376d3ca4d8f09bc83e48d2012e8b3a46cf938"
+    },
+    {
+      "cohort": "treatment",
+      "word": "shout",
+      "path": "word/shout.html",
+      "sha256": "f0b886de0cef8c4b8c6df02cc0efcd1e8d4f6d9a3b1705f7b15b75a3b6404dbc"
+    },
+    {
+      "cohort": "treatment",
+      "word": "sympathy",
+      "path": "word/sympathy.html",
+      "sha256": "66405e3bc30ca1e7932648456d0b0cb80d8f147013b7586a5b3a338498a06a99"
+    },
+    {
+      "cohort": "treatment",
+      "word": "torch",
+      "path": "word/torch.html",
+      "sha256": "511aa11e88a284eb0b2c81fbdfc729a9be744fd9b68550e694640e6debda5a91"
+    },
+    {
+      "cohort": "treatment",
+      "word": "wagon",
+      "path": "word/wagon.html",
+      "sha256": "e0978f343718386bd83ab3a22605b2f8165f2607266718ff80721d0607cc1f11"
+    },
+    {
+      "cohort": "treatment",
+      "word": "vocabulary",
+      "path": "word/vocabulary.html",
+      "sha256": "572f06868dbd3d2b33a9641c53fae260f1e94ee3161ee67b87e36cabc956b8e5"
+    },
+    {
+      "cohort": "treatment",
+      "word": "nevertheless",
+      "path": "word/nevertheless.html",
+      "sha256": "9e07b7d35509bf868e57f0f0ef8940cd5d8dd2e48080d02a7871a97392c97ccd"
+    },
+    {
+      "cohort": "treatment",
+      "word": "spine",
+      "path": "word/spine.html",
+      "sha256": "09ff33120662281cc7fbaa5322fe96fac7ce030b6e3eecdbaa3b1dfe455afc73"
+    },
+    {
+      "cohort": "treatment",
+      "word": "stab",
+      "path": "word/stab.html",
+      "sha256": "e8a78fe104f7c318f58dc115b267dad9ed0c6780d5affe01a0bf330e5eab94fc"
+    },
+    {
+      "cohort": "treatment",
+      "word": "ultimatum",
+      "path": "word/ultimatum.html",
+      "sha256": "ccd6a808714f56054b6d9f1e21448ed3cc87837b20de2c05191b8da4d01111d2"
+    },
+    {
+      "cohort": "treatment",
+      "word": "quantum",
+      "path": "word/quantum.html",
+      "sha256": "1cf4ce9d96597d48ce455d20488c41e493206abd8466bc2ba17fd4dbf1baa599"
+    },
+    {
+      "cohort": "treatment",
+      "word": "moss",
+      "path": "word/moss.html",
+      "sha256": "4ef48f99efe7e0e3705bae2cb21c9deeadc144c9e43e113b23c7659c8df7962d"
+    },
+    {
+      "cohort": "treatment",
+      "word": "sneeze",
+      "path": "word/sneeze.html",
+      "sha256": "00dd2df611f4859044e46d5616261e104499a34f6af820b312f6ab6b33989080"
+    },
+    {
+      "cohort": "treatment",
+      "word": "sad",
+      "path": "word/sad.html",
+      "sha256": "62a718d9043746c51a1dda074bc5b069cf6185247fc33ef2e18fd75519f81cc0"
+    },
+    {
+      "cohort": "treatment",
+      "word": "slant",
+      "path": "word/slant.html",
+      "sha256": "6125102e8aeb8d00c2b8893b354f06a9d42843eabb314c67c57adc45016d2706"
+    },
+    {
+      "cohort": "treatment",
+      "word": "suppose",
+      "path": "word/suppose.html",
+      "sha256": "6933509c696f1d4653d734a3fb1d7dadaa2681b4f9d0221d08d14c91e4b942dc"
+    },
+    {
+      "cohort": "treatment",
+      "word": "deficit",
+      "path": "word/deficit.html",
+      "sha256": "6b32fff62738731ab03d8d7a4f4997bf3df720823988b76f93e18c268a16c334"
+    },
+    {
+      "cohort": "treatment",
+      "word": "telescope",
+      "path": "word/telescope.html",
+      "sha256": "79ce870cc981bfce4900e76da5cf9095067db214c602063a9b75bf09de721208"
+    },
+    {
+      "cohort": "treatment",
+      "word": "shy",
+      "path": "word/shy.html",
+      "sha256": "4a1fc4c69bace479ef4d5680dbba91c5def91f2d8f90b6fc8a968c2f4d666a91"
+    },
+    {
+      "cohort": "treatment",
+      "word": "friction",
+      "path": "word/friction.html",
+      "sha256": "c32fd7ae9708c450687b000e028a67b4a0eb8746eb64a5476296c97223a1f3aa"
+    },
+    {
+      "cohort": "treatment",
+      "word": "reckon",
+      "path": "word/reckon.html",
+      "sha256": "5ba0567210a72af2b77b5a4273e8e3dbaa517abbaeee550e04d265b9820ee752"
+    },
+    {
+      "cohort": "treatment",
+      "word": "velocity",
+      "path": "word/velocity.html",
+      "sha256": "62b0ac452f545e9ac84c73f0d7ef777e93079792549be1866c843d5f6406aac9"
+    },
+    {
+      "cohort": "treatment",
+      "word": "lash",
+      "path": "word/lash.html",
+      "sha256": "5d1356861b3bed1df4848024edbe17c9facf51b8321b0afaf574834a6200cdfd"
+    },
+    {
+      "cohort": "treatment",
+      "word": "nest",
+      "path": "word/nest.html",
+      "sha256": "255a3e43f80be566a75685e3da44f49aede8a4e7c65ce523cf1afafc46edbe5a"
+    },
+    {
+      "cohort": "treatment",
+      "word": "opportune",
+      "path": "word/opportune.html",
+      "sha256": "ef5527087e2d2c3dc9e2d2fba0a02fc6d69a1a8f79685ed329c7d555ac832f36"
+    },
+    {
+      "cohort": "treatment",
+      "word": "phenomenon",
+      "path": "word/phenomenon.html",
+      "sha256": "60f0df168433455835613150fc5b6e486944cccd47459b6a14212b6bcd49e7e5"
+    },
+    {
+      "cohort": "treatment",
+      "word": "reassure",
+      "path": "word/reassure.html",
+      "sha256": "dda15e2eac281aa39cb9357299a95fcd5a6fed8f41b45d563042439be81db4df"
+    },
+    {
+      "cohort": "treatment",
+      "word": "recital",
+      "path": "word/recital.html",
+      "sha256": "2f17b39b4b1289f336fe84fb00f6a1f0a23cd33b66db6da6c16a4ca7530bc119"
+    },
+    {
+      "cohort": "treatment",
+      "word": "wash",
+      "path": "word/wash.html",
+      "sha256": "b46ae5811075fc4fcd3f68740a9a01ad3dc0d9a45ea03a3445edb625e124ef1b"
+    },
+    {
+      "cohort": "treatment",
+      "word": "wipe",
+      "path": "word/wipe.html",
+      "sha256": "0daaad742774d38214e7be979631519b712d51d8315151794d4c5e4ce6f6401e"
+    },
+    {
+      "cohort": "treatment",
+      "word": "withdrawal",
+      "path": "word/withdrawal.html",
+      "sha256": "3809e40ac90317cfd390a730ff2f21d0c2656d0111a8e8285f8533bb506f609f"
+    },
+    {
+      "cohort": "control",
+      "word": "skewed",
+      "path": "word/skewed.html",
+      "sha256": "2552073e762f4011f261285eb6f9351182c3cc08af5ec7fd4564f9c81c3ec4fb"
+    },
+    {
+      "cohort": "control",
+      "word": "outlast",
+      "path": "word/outlast.html",
+      "sha256": "28080ef8519817e261fcd3cd38602ea52c6ca5acb30ca948994602296fb9a9b7"
+    },
+    {
+      "cohort": "control",
+      "word": "tire",
+      "path": "word/tire.html",
+      "sha256": "95ec7e90d7d076eacb71c1662268b8c0095bd759506cdfea3b43984252a62ac8"
+    },
+    {
+      "cohort": "control",
+      "word": "economical",
+      "path": "word/economical.html",
+      "sha256": "fc1622e398297dcb8c76ba9bdbadcb2dbe2e1522f6ea186d11f179cac1c0df3a"
+    },
+    {
+      "cohort": "control",
+      "word": "militant",
+      "path": "word/militant.html",
+      "sha256": "02c6d737124febc367d8a62badc6ac5c849db8b9bbb6ec611fc24ce21f6f73b1"
+    },
+    {
+      "cohort": "control",
+      "word": "monumental",
+      "path": "word/monumental.html",
+      "sha256": "53305cdb239e6b204e3abf2522d03da2172cac6f642804d1af74e3d0e5d3b40d"
+    },
+    {
+      "cohort": "control",
+      "word": "quilt",
+      "path": "word/quilt.html",
+      "sha256": "f005a1c59e98ce0fdb887ccc506292d634d1b12a784558b77e5d9245a9cc05ce"
+    },
+    {
+      "cohort": "control",
+      "word": "on",
+      "path": "word/on.html",
+      "sha256": "4772081477bce7896d9338ad7e3b15b06e2ae902c7d925c9a00f3e841006f3e5"
+    },
+    {
+      "cohort": "control",
+      "word": "nun",
+      "path": "word/nun.html",
+      "sha256": "0f7c7749789f37f7e8d60bf748d6f9a849001df8ac94d16ebcdc6a999a52d53e"
+    },
+    {
+      "cohort": "control",
+      "word": "vanish",
+      "path": "word/vanish.html",
+      "sha256": "380cdc15aa1fbfd57233c030baa44c309a4fe6971fb92a9f38aeb3bb35b2df03"
+    },
+    {
+      "cohort": "control",
+      "word": "swing",
+      "path": "word/swing.html",
+      "sha256": "01f2579ce3afa8fa7b47fcbb6d775e91cf135ca5c01d65bd04fa729ad392c11d"
+    },
+    {
+      "cohort": "control",
+      "word": "terrific",
+      "path": "word/terrific.html",
+      "sha256": "2fc694ef757ad93bb7b263df4dfc9fec0a0173f17b14ae20ee9d77c9699fbf1f"
+    },
+    {
+      "cohort": "control",
+      "word": "equable",
+      "path": "word/equable.html",
+      "sha256": "d94124acfe59307161c92d177f4c71fed40efe3bad1072c694c3fe7c2db349dc"
+    },
+    {
+      "cohort": "control",
+      "word": "hallmark",
+      "path": "word/hallmark.html",
+      "sha256": "9fbba8bb5c01dd34c9bf8c44c7bd3b8faa449dffa708fd7f15dd88bb7f5a5978"
+    },
+    {
+      "cohort": "control",
+      "word": "quarry",
+      "path": "word/quarry.html",
+      "sha256": "dc0770e540db898c6ad9842d35cae3c83dfedcbe22cea17efa220cb905e6321f"
+    },
+    {
+      "cohort": "control",
+      "word": "slobber",
+      "path": "word/slobber.html",
+      "sha256": "b1dd7e41181a2d3c149173af00cc22722bae69a390156c1c605a02fb5914fbbc"
+    },
+    {
+      "cohort": "control",
+      "word": "sanguine",
+      "path": "word/sanguine.html",
+      "sha256": "216c4d65c0ac083e2ee813f8e270991d3881fe0b0f63bfdfff96c43fd4a89940"
+    },
+    {
+      "cohort": "control",
+      "word": "crunch",
+      "path": "word/crunch.html",
+      "sha256": "9430c0a6e402ba4cfd619e94f671f2984d32f45b23e4e6ac9ad83ade3bd882da"
+    },
+    {
+      "cohort": "control",
+      "word": "manipulate",
+      "path": "word/manipulate.html",
+      "sha256": "603cf33b41bb64521cd976cf9309fe8599228583e06cdfa72076671e6bd8760e"
+    },
+    {
+      "cohort": "control",
+      "word": "mess",
+      "path": "word/mess.html",
+      "sha256": "06f1deece5830443135c71b1f1876e2bf73e072d628bdbd0302087d99c487a4a"
+    },
+    {
+      "cohort": "control",
+      "word": "sinuous",
+      "path": "word/sinuous.html",
+      "sha256": "088b8d8686f23c449bd5c6d78dd4cbc3b45fd20cba83af012ac7e06cbd40debc"
+    },
+    {
+      "cohort": "control",
+      "word": "stroke",
+      "path": "word/stroke.html",
+      "sha256": "55a01994f2504e86b0ce430d755f435a08aeefb2865b25ecfb20fa58c9f1c422"
+    },
+    {
+      "cohort": "control",
+      "word": "stalk",
+      "path": "word/stalk.html",
+      "sha256": "e9ddc7f1c0758b38811e5192985001e17276eabe539e1cfa4891a2becacb5e76"
+    },
+    {
+      "cohort": "control",
+      "word": "mayhem",
+      "path": "word/mayhem.html",
+      "sha256": "c4623bb6676af4bf8daf54afc1800842ea3b42f1ef5c95d5cec9fe2b7d415bca"
+    },
+    {
+      "cohort": "control",
+      "word": "offset",
+      "path": "word/offset.html",
+      "sha256": "c95ec2ef8d62abf679e57fd8822a1b824ba1b9400b7b689d14ec8510b3fd307d"
+    },
+    {
+      "cohort": "control",
+      "word": "proprietary",
+      "path": "word/proprietary.html",
+      "sha256": "92219e3f110b400c544512544d5da989ecf5ac5340d21f98b4fbd2cbcabede3c"
+    },
+    {
+      "cohort": "control",
+      "word": "rant",
+      "path": "word/rant.html",
+      "sha256": "3b54221578397d14ffed1d327237f527035f808c10d722312528e0bef307fee0"
+    },
+    {
+      "cohort": "control",
+      "word": "squash",
+      "path": "word/squash.html",
+      "sha256": "4153b6b1b2193732717ffa9d4e5f0559faf66fc1c89f42c7d24dc2e758e8bc31"
+    },
+    {
+      "cohort": "control",
+      "word": "subside",
+      "path": "word/subside.html",
+      "sha256": "fde674d02cb31cc5c2f7b8708d5dd71a689132f24f6cf9b2e6560236030f1734"
+    },
+    {
+      "cohort": "control",
+      "word": "tear",
+      "path": "word/tear.html",
+      "sha256": "f0d95910290a0daf14d084c4bfa3d80c58c59e0ffa0d30d77e5695f6311c339a"
+    },
+    {
+      "cohort": "control",
+      "word": "amt",
+      "path": "word/amt.html",
+      "sha256": "3887cdc53fe78f0e810b65c9f7c223b6c576dcacdd0ce063a7957a7c3775db2c"
+    },
+    {
+      "cohort": "control",
+      "word": "chargers",
+      "path": "word/chargers.html",
+      "sha256": "205f467cce12491f2573dfeb790a69b746e056c8211502e3ceb2ece068870949"
+    },
+    {
+      "cohort": "control",
+      "word": "convicted",
+      "path": "word/convicted.html",
+      "sha256": "58f2ac9434eaa729ef0023759f2a0ba8bfb7a5b49d8c8f6468b18b2b0cf96c49"
+    },
+    {
+      "cohort": "control",
+      "word": "defeated",
+      "path": "word/defeated.html",
+      "sha256": "c90d0fced6b73ae9d15092db979d292e078377ecc83b47756c4a2c792cf36a80"
+    },
+    {
+      "cohort": "control",
+      "word": "dundee",
+      "path": "word/dundee.html",
+      "sha256": "a2d2d3fd406ec017da4c08c0e882865c7f1f26e3ed0b94a9a793755f06de6b5b"
+    },
+    {
+      "cohort": "control",
+      "word": "insurrection",
+      "path": "word/insurrection.html",
+      "sha256": "8d71a78b5fc62ee0ce665a47141dae8cf7d9acbbd245cd61f5e75be42b492a89"
+    },
+    {
+      "cohort": "control",
+      "word": "latex",
+      "path": "word/latex.html",
+      "sha256": "fa6587d0e959169b2b0b2738afb04f7b6497f6b946b574b660dc7eaae745d085"
+    },
+    {
+      "cohort": "control",
+      "word": "ll",
+      "path": "word/ll.html",
+      "sha256": "a7074b8e199e6913ff22e08892a822181f26bf78097096817562bbcfd2687bd6"
+    },
+    {
+      "cohort": "control",
+      "word": "lucifer",
+      "path": "word/lucifer.html",
+      "sha256": "a6718739c6b244d7a4cd2ee529a48b350f324caebe729db4485a72c261560f05"
+    },
+    {
+      "cohort": "control",
+      "word": "manhood",
+      "path": "word/manhood.html",
+      "sha256": "f88f0914260c55bd14b8294a83cfa184452a7098f7a76bcd5d35b9eb8388ea1e"
+    },
+    {
+      "cohort": "control",
+      "word": "meddling",
+      "path": "word/meddling.html",
+      "sha256": "1fab7d18d0ea57a964bb7ad1d72c851b1c0663c7de23396b1542e7ff34399ba8"
+    },
+    {
+      "cohort": "control",
+      "word": "mic",
+      "path": "word/mic.html",
+      "sha256": "e0498af1793abde9c1fd1ce599a2fc1cd7a7c84f63e908a3fd4ed94afe464208"
+    },
+    {
+      "cohort": "control",
+      "word": "mitochondria",
+      "path": "word/mitochondria.html",
+      "sha256": "0777c8c6abc1031bf8d2050c48b150e897528db8ff5cd6805cddb5d75717ef12"
+    },
+    {
+      "cohort": "control",
+      "word": "ninety",
+      "path": "word/ninety.html",
+      "sha256": "4a2cc6068111c972aaaca34c19aa519ebf3d2954ff3a611dc8a65ccc58dda55f"
+    },
+    {
+      "cohort": "control",
+      "word": "nutshell",
+      "path": "word/nutshell.html",
+      "sha256": "b737fbcfd2e15f42cb045fd2236693382e41024ee2a7c258159e73e8615c05c0"
+    },
+    {
+      "cohort": "control",
+      "word": "offended",
+      "path": "word/offended.html",
+      "sha256": "241c6abb57d425a6ddb9d8b53eca4c0cf1ebb1bf71429bdca7b02208da5e2ea7"
+    },
+    {
+      "cohort": "control",
+      "word": "opal",
+      "path": "word/opal.html",
+      "sha256": "c62e71154c2336642e0dc065b90bebdfd4a72c2d22590c49a8acce4145434e02"
+    },
+    {
+      "cohort": "control",
+      "word": "oratory",
+      "path": "word/oratory.html",
+      "sha256": "6adaa06d43469287cc98359800e4885c44c8aea1edf2281f02c02838cf70c4b4"
+    },
+    {
+      "cohort": "control",
+      "word": "otp",
+      "path": "word/otp.html",
+      "sha256": "f2089155f58850ebac57dfd4ff6d15aae3e110a1f865d7d916a10998736381fa"
+    },
+    {
+      "cohort": "control",
+      "word": "climber",
+      "path": "word/climber.html",
+      "sha256": "cb7291b443ba8ac4a43406226fa29ed6bd52803863a38383b3ea1dca0559005b"
+    },
+    {
+      "cohort": "control",
+      "word": "trite",
+      "path": "word/trite.html",
+      "sha256": "a1668e12397dadee9905a3e961af0c274b1399390d2f7edf7e2a51788fbbea90"
+    },
+    {
+      "cohort": "control",
+      "word": "amc",
+      "path": "word/amc.html",
+      "sha256": "8bf76dd67c93e7975195b31b86b6d1dbd4a53b60a2bbe1ddaafd1c227ccf460e"
+    },
+    {
+      "cohort": "control",
+      "word": "aust",
+      "path": "word/aust.html",
+      "sha256": "4ab783a7b1100f58f796f7fcb8fd255a0a0fcf65c51d0754fa1602ec72a29d9b"
+    },
+    {
+      "cohort": "control",
+      "word": "bailout",
+      "path": "word/bailout.html",
+      "sha256": "bf38bd747b49742bf40cae30a16d56edcc59585fcaafca929006713946dfdd00"
+    },
+    {
+      "cohort": "control",
+      "word": "bidet",
+      "path": "word/bidet.html",
+      "sha256": "c2a07a2bb4fdc2adfa4e3c7f4476950ae97f6b90058903998360ed69e9648c87"
+    },
+    {
+      "cohort": "control",
+      "word": "bridesmaid",
+      "path": "word/bridesmaid.html",
+      "sha256": "05c54b214df4a794b4c926911bf2611f4c051465e9c1e67009438828ea4ef2cc"
+    },
+    {
+      "cohort": "control",
+      "word": "carries",
+      "path": "word/carries.html",
+      "sha256": "9271be04451835622af28344b9f7516de308b0ed64318a95bfd7c001e7494ff0"
+    },
+    {
+      "cohort": "control",
+      "word": "excellency",
+      "path": "word/excellency.html",
+      "sha256": "ffbdfb8f5e99c5b2cb9ecc30c9570d47d783e18880af5045c2e66109689939ae"
+    },
+    {
+      "cohort": "control",
+      "word": "parked",
+      "path": "word/parked.html",
+      "sha256": "db176717d3f13b67cb3f5bd080e36f992279e4c182ce6c494fa017f8956fa257"
+    },
+    {
+      "cohort": "control",
+      "word": "snug",
+      "path": "word/snug.html",
+      "sha256": "98608923419e02cb3a36a10a4d4814927ae0a8ec24a9e32ae8f0ad3fa0b70d72"
+    },
+    {
+      "cohort": "control",
+      "word": "activated",
+      "path": "word/activated.html",
+      "sha256": "fa77593a96f4c185f7db2b63b17b0580a6af47094a98abf973fd3b353684478c"
+    },
+    {
+      "cohort": "control",
+      "word": "aladdin",
+      "path": "word/aladdin.html",
+      "sha256": "fca654162c397f4aa73b69ff585d248b61ec154df342b32300e22aa9c7bc7c45"
+    },
+    {
+      "cohort": "control",
+      "word": "calms",
+      "path": "word/calms.html",
+      "sha256": "83b3c96de3e36c91c142e9aaac7200c9790553d2916f6cec5b9dd8b259e2f19e"
+    },
+    {
+      "cohort": "control",
+      "word": "demarcation",
+      "path": "word/demarcation.html",
+      "sha256": "cdaa3a0dbf189123cab6849b634ed057fe01f2380999c715f26777a9ac809ce7"
+    },
+    {
+      "cohort": "control",
+      "word": "demonstrably",
+      "path": "word/demonstrably.html",
+      "sha256": "a14d3f7b1789aa8fdfe5d900ac64b47d24b6a2f2a2f3ffaac13ec7ee56179470"
+    },
+    {
+      "cohort": "control",
+      "word": "dropout",
+      "path": "word/dropout.html",
+      "sha256": "d390d49c73780a05f320e7a103afb17fcade1510a5dac375a3153ea1690af2f4"
+    },
+    {
+      "cohort": "control",
+      "word": "electron",
+      "path": "word/electron.html",
+      "sha256": "2ec9baedb017f456efde539c8ede48f66315fe929c7d4fb96a35557ddf1f6f8e"
+    },
+    {
+      "cohort": "control",
+      "word": "expats",
+      "path": "word/expats.html",
+      "sha256": "4d3756bfdbe27d6add3c6a6c0b0b88b04c304e2a759cb6985572a1bdf3b2f294"
+    },
+    {
+      "cohort": "control",
+      "word": "ful",
+      "path": "word/ful.html",
+      "sha256": "7e5eb0c793deec1e2c9d4e7210735d819907f464e1582880558ee2928b39d803"
+    },
+    {
+      "cohort": "control",
+      "word": "gusting",
+      "path": "word/gusting.html",
+      "sha256": "e5faeb6155731ffc4061c361306b49de2d997bd3d1ce90cd1d572f3de117fa8f"
+    },
+    {
+      "cohort": "control",
+      "word": "landowner",
+      "path": "word/landowner.html",
+      "sha256": "ed8edbe470e75edf6c111e54d0329eb4e3e8d00dff15ac0b7696315106733302"
+    },
+    {
+      "cohort": "control",
+      "word": "layers",
+      "path": "word/layers.html",
+      "sha256": "3783666ac9ab7179312acf5a80e7faf3a66cace55e4bcf617ebc54c3685c6bb5"
+    }
+  ],
+  "guards": [
+    {
+      "path": "sitemap.xml",
+      "sha256": "736378b6bc69a5dc88228545f7e9e695fe1bc3b99595b32b4517ab15ddfb3ea7"
+    },
+    {
+      "path": "robots.txt",
+      "sha256": "84a4f09405bb9539c723636dce666a3640ee3f3d7cfc4512540bf78e74435e61"
+    },
+    {
+      "path": "enriched-dictionary.json",
+      "sha256": "3f3c0323dfc04c6d2130fd05eed5af0bc7e711470fa9df4647739e1cccf3bbd7"
+    },
+    {
+      "path": "reports/dictionary-seo-treatment-manifest-2e.csv",
+      "sha256": "48649a0157e2d6b206ba8275d5fe774c0d0609cf478aeee59bf8dd2cd3fabc7f"
+    },
+    {
+      "path": "reports/dictionary-seo-control-manifest-2e.csv",
+      "sha256": "6561f2f1e9ca4f24c0496e8f7d0a92a88c53a4cae0ad0bd3d0fe2913e2dab0c0"
+    },
+    {
+      "path": "reports/dictionary-seo-experiment-baseline-2e.csv",
+      "sha256": "e4259cf0bfb44a9d9a8a3123a8588dce393ea377661e1c028a5c824876ccbd7c"
+    }
+  ]
+}
