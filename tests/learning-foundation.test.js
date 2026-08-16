@@ -249,15 +249,17 @@ test('profile analytics accepts only coarse allowlisted properties', () => {
         profile_state: 'EVIDENCE', evidence_band: 'LOW', full_profile: 'private'
     });
     foundation.track('next_action_selected', {
-        destination_id: 'mm-article-apple', reason_code: 'WEAK_FAMILY',
+        destination_id: 'mm-article-apple', skill_id: 'indefinite_article_a_an', family_id: 'ARTICLES', reason_code: 'WEAK_FAMILY',
         priority_band: 'MEDIUM', learner_text: 'private'
     });
     foundation.track('next_action_started', {
-        destination_id: 'mm-article-apple', reason_code: 'WEAK_FAMILY', priority_band: 'MEDIUM'
+        destination_id: 'mm-article-apple', skill_id: 'indefinite_article_a_an', family_id: 'ARTICLES', reason_code: 'WEAK_FAMILY', priority_band: 'MEDIUM'
     });
     assert.deepEqual(transported.map(item => item.event), ['mistake_profile_view', 'next_action_selected', 'next_action_started']);
     assert.ok(transported.every(item => !Object.hasOwn(item.properties, 'full_profile')));
     assert.ok(transported.every(item => !Object.hasOwn(item.properties, 'learner_text')));
+    assert.equal(transported[1].properties.skill_id, 'indefinite_article_a_an');
+    assert.equal(transported[1].properties.family_id, 'ARTICLES');
 });
 
 test('reset creates a new learner without deleting legacy keys', () => {

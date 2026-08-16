@@ -48,8 +48,8 @@
         ,dakho_cta_view: ['cta_id', 'cta_context', 'trigger', 'install_status']
         ,dakho_cta_click: ['cta_id', 'cta_context', 'trigger', 'install_status']
         ,mistake_profile_view: ['profile_state', 'evidence_band']
-        ,next_action_selected: ['destination_id', 'reason_code', 'priority_band']
-        ,next_action_started: ['destination_id', 'reason_code', 'priority_band']
+        ,next_action_selected: ['destination_id', 'skill_id', 'family_id', 'reason_code', 'priority_band']
+        ,next_action_started: ['destination_id', 'skill_id', 'family_id', 'reason_code', 'priority_band']
     });
 
     const COMMON_PROPERTIES = Object.freeze([
