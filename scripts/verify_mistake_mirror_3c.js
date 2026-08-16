@@ -10,6 +10,8 @@ assert.match(html, /<h1>Common English Mistakes Bangladeshi Learners Make<\/h1>/
 assert.match(html, /id="mistakeMirror"/);
 assert.match(html, /learning-foundation\.js/);
 assert.match(html, /mistake-mirror\.js/);
+assert.match(html, /mistake-profile\.js/);
+assert.match(html, /id="mistakeProfile"/);
 assert.match(html, /Mistake Mirror: Diagnose, Repair, Retest/);
 assert.doesNotMatch(html, /<meta[^>]+name=["']robots["'][^>]+noindex/i);
 const controller = fs.readFileSync(path.join(root, 'mistake-mirror.js'), 'utf8');
@@ -20,4 +22,8 @@ assert.match(controller, /if \(shouldFocusHeading\) heading\.focus\(\)/);
 assert.match(controller, /box\.focus\(\)/);
 assert.match(styles, /min-height:44px/);
 assert.match(styles, /:focus-visible/);
+const profile = fs.readFileSync(path.join(root, 'mistake-profile.js'), 'utf8');
+assert.match(profile, /NEEDS_PRACTICE/);
+assert.match(profile, /evidence_band/);
+assert.match(profile, /UNRESOLVED_MISTAKE/);
 console.log('PASS Mistake Mirror surface and SEO regression checks');
