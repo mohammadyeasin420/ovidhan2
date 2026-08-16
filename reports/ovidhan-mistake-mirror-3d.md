@@ -150,9 +150,17 @@ Automated total: PASS 22, WARN 0, FAIL 0. Browser scenario total: PASS 3, WARN 0
 
 `git diff --check` passes; only non-failing Git line-ending notices appear on Windows. The pre-commit working tree contains only the seven exact Phase 3D paths listed above.
 
-## P–R. Commit, push, and deployment
+## P. Commit
 
-Recorded after the one Phase 3D commit. Only `codex/mistake-mirror-release-gate-3d` may be pushed. No merge or deployment is authorized.
+Phase 3D implementation commit: `dca05dcd7d894c3ed5580a4fdb03af4ac62ffca6` (`Complete Mistake Mirror release gate`). This report-status update is a subsequent report-only commit on the same branch.
+
+## Q. Push status
+
+The implementation commit was pushed successfully only to `origin/codex/mistake-mirror-release-gate-3d`. The final report-only commit is verified in the task handoff after its push.
+
+## R. Deployment status
+
+Not merged and not deployed. `origin/main` was not modified by Phase 3D.
 
 ## S. Recommended next action
 
