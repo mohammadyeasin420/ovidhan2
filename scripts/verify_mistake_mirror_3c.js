@@ -1,0 +1,15 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.resolve(__dirname, '..');
+const html = fs.readFileSync(path.join(root, 'common-mistakes-bangladeshi-learners.html'), 'utf8');
+assert.match(html, /<title>Common English Mistakes Bangladeshi Learners Make \| Ovidhan<\/title>/);
+assert.match(html, /rel="canonical"/);
+assert.match(html, /<h1>Common English Mistakes Bangladeshi Learners Make<\/h1>/);
+assert.match(html, /id="mistakeMirror"/);
+assert.match(html, /learning-foundation\.js/);
+assert.match(html, /mistake-mirror\.js/);
+assert.match(html, /Mistake Mirror: Diagnose, Repair, Retest/);
+assert.doesNotMatch(html, /<meta[^>]+name=["']robots["'][^>]+noindex/i);
+console.log('PASS Mistake Mirror surface and SEO regression checks');
