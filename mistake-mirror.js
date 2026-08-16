@@ -22,7 +22,7 @@
         ['yesterday-past','I have seen him yesterday.','I saw him yesterday.','past-time-marker','Yesterday-এর মতো শেষ হওয়া অতীত সময়ের সঙ্গে Past Simple হয়।','Use the past simple with a finished past time such as “yesterday”.'],
         ['one-of-plural','One of my friend lives in Dhaka.','One of my friends lives in Dhaka.','one-of-plural','One of-এর পরে plural noun বসে।','Use a plural noun after “one of”.'],
         ['much-many','There are much students here.','There are many students here.','countability','Countable plural noun students-এর সঙ্গে many হয়।','Use “many” with a plural countable noun.'],
-        ['fewer-less','There are less cars today.','There are fewer cars today.','countability','গণনা করা যায় এমন plural noun-এর সঙ্গে fewer হয়।','Use “fewer” with plural countable nouns.'],
+        ['fewer-less','There are less cars today.','There are fewer cars today.','countability','Formal বা edited English-এ গণনা করা যায় এমন plural noun-এর সঙ্গে fewer বেশি উপযুক্ত; informal English-এ less-ও শোনা যায়।','In formal or edited English, prefer “fewer” with plural countable nouns; “less” also occurs informally.'],
         ['since-for','I have lived here since five years.','I have lived here for five years.','since-for','সময়ের দৈর্ঘ্যের আগে for; শুরুর সময়ের আগে since হয়।','Use “for” with a duration and “since” with a starting point.'],
         ['married-to','She is married with a doctor.','She is married to a doctor.','fixed-preposition','Married-এর সঙ্গে to ব্যবহার হয়।','Use “to” after “married”.'],
         ['listen-to','Please listen me.','Please listen to me.','fixed-preposition','Listen-এর পরে ব্যক্তি বা বিষয়ের আগে to লাগে।','Use “to” between “listen” and its object.'],
