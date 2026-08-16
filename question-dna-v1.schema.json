@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ovidhan.net/schemas/question-dna-v1.schema.json",
+  "title": "Ovidhan Question DNA V1",
+  "description": "Canonical, provenance-first exam question record. Learner state stores question_id, not repeated question text.",
+  "x-ovidhan-validation-rules": [
+    "option_id values must be unique and correct_option_id must reference an option",
+    "verification.source_ids must reference provenance.source_id values",
+    "reviewed taxonomy IDs must exist in skill-mistake-graph.json",
+    "question identity exam/subject/question_number must be unique within a dataset",
+    "source content should be hashed at acquisition and corrected records must increment answer_version",
+    "official answer status requires a Level A answer key or correction notice"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "question_id", "exam", "subject", "question_number", "question_text", "options", "answer", "taxonomy", "provenance", "verification", "publication_status"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "question_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "maxLength": 100 },
+    "exam": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["family", "number", "year", "stage"],
+      "properties": {
+        "family": { "const": "BCS" },
+        "number": { "type": "integer", "minimum": 1, "maximum": 999 },
+        "year": { "type": "integer", "minimum": 1972, "maximum": 2200 },
+        "stage": { "enum": ["PRELIMINARY", "WRITTEN", "VIVA"] }
+      }
+    },
+    "subject": { "enum": ["ENGLISH_LANGUAGE", "ENGLISH_LITERATURE", "ENGLISH_WRITTEN"] },
+    "section": { "type": ["string", "null"], "maxLength": 80 },
+    "question_number": { "type": "integer", "minimum": 1, "maximum": 1000 },
+    "question_text": { "type": "string", "minLength": 1, "maxLength": 4000 },
+    "options": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["option_id", "text"],
+        "properties": {
+          "option_id": { "type": "string", "pattern": "^[A-J]$" },
+          "text": { "type": "string", "minLength": 1, "maxLength": 1000 }
+        }
+      }
+    },
+    "answer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["correct_option_id", "status", "dispute_status", "answer_version"],
+      "properties": {
+        "correct_option_id": { "type": ["string", "null"], "pattern": "^[A-J]$" },
+        "status": { "enum": ["OFFICIAL", "VERIFIED", "CORROBORATED", "DISPUTED", "UNVERIFIED"] },
+        "dispute_status": { "enum": ["NONE", "OPEN", "RESOLVED"] },
+        "explanation_en": { "type": ["string", "null"], "maxLength": 5000 },
+        "explanation_bn": { "type": ["string", "null"], "maxLength": 5000 },
+        "answer_version": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "taxonomy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["topic_id", "skill_id", "family_id", "mapping_status", "transfer_pattern_ids"],
+      "properties": {
+        "topic_id": { "type": ["string", "null"], "pattern": "^[a-z0-9_]+$" },
+        "skill_id": { "type": ["string", "null"], "pattern": "^[a-z0-9_]+$" },
+        "family_id": { "type": ["string", "null"], "pattern": "^[A-Z0-9_]+$" },
+        "mapping_status": { "enum": ["REVIEWED", "PROPOSED", "UNMAPPED"] },
+        "transfer_pattern_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 5,
+          "items": { "type": "string", "pattern": "^[A-Z0-9_]+$" }
+        }
+      }
+    },
+    "difficulty": { "enum": ["BEGINNER", "INTERMEDIATE", "ADVANCED", "UNSET"] },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "level", "publisher", "source_type", "reference", "retrieved_date", "format"],
+        "properties": {
+          "source_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "level": { "enum": ["A", "B", "C", "D"] },
+          "publisher": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "source_type": { "enum": ["QUESTION_PAPER", "ANSWER_KEY", "CORRECTION_NOTICE", "SYLLABUS", "SECONDARY_TRANSCRIPTION", "SECONDARY_SOLUTION"] },
+          "reference": { "type": "string", "minLength": 1, "maxLength": 2000 },
+          "publication_date": { "type": ["string", "null"], "format": "date" },
+          "retrieved_date": { "type": "string", "format": "date" },
+          "format": { "enum": ["HTML", "TEXT_PDF", "SCANNED_PDF", "IMAGE", "PRINT", "UNKNOWN"] },
+          "content_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+          "notes": { "type": ["string", "null"], "maxLength": 1000 }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "source_ids", "review_status", "reviewed_by", "review_date"],
+      "properties": {
+        "status": { "enum": ["OFFICIAL", "VERIFIED", "CORROBORATED", "DISPUTED", "UNVERIFIED"] },
+        "source_ids": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+        "review_status": { "enum": ["PENDING", "IN_REVIEW", "APPROVED", "REJECTED"] },
+        "reviewed_by": { "type": ["string", "null"], "maxLength": 100 },
+        "review_date": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "publication_status": { "enum": ["HOLD", "INTERNAL_ONLY", "PUBLISHABLE", "RETIRED"] }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "publication_status": { "const": "PUBLISHABLE" } } },
+      "then": {
+        "properties": {
+          "answer": { "properties": { "status": { "enum": ["OFFICIAL", "VERIFIED", "CORROBORATED"] }, "dispute_status": { "const": "NONE" } } },
+          "verification": { "properties": { "status": { "enum": ["OFFICIAL", "VERIFIED", "CORROBORATED"] }, "review_status": { "const": "APPROVED" } } }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "answer": { "properties": { "status": { "enum": ["DISPUTED", "UNVERIFIED"] } } } } },
+      "then": {
+        "properties": {
+          "answer": { "properties": { "correct_option_id": { "type": "null" } } },
+          "publication_status": { "enum": ["HOLD", "INTERNAL_ONLY"] }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "answer": { "properties": { "status": { "const": "OFFICIAL" } } } } },
+      "then": {
+        "properties": {
+          "provenance": {
+            "contains": {
+              "properties": {
+                "level": { "const": "A" },
+                "source_type": { "enum": ["ANSWER_KEY", "CORRECTION_NOTICE"] }
+              },
+              "required": ["level", "source_type"]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
