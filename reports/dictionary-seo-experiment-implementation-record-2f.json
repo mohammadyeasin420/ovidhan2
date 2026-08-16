@@ -1,0 +1,68 @@
+{
+  "report": "Ovidhan Dictionary SEO Phase 2F Controlled Implementation Record",
+  "repository": "mohammadyeasin420/ovidhan2",
+  "branch": "codex/dictionary-seo-top72-implementation-2f",
+  "origin_main_starting_sha": "bf292f0087e673bf68475ebd753c33aee0b4d257",
+  "implementation_branch_prechange_sha": "0ccfb388b4a6fdc12ec6dcb8da812b916cdbd4f9",
+  "implementation_commit": "860634a542e622a516e4a37e88e46568f9da31f9",
+  "implementation_datetime": "2026-08-16T14:30:07+02:00",
+  "deployment_status": "NOT DEPLOYED",
+  "approved_hashes": {
+    "treatment_manifest_sha256": "48649a0157e2d6b206ba8275d5fe774c0d0609cf478aeee59bf8dd2cd3fabc7f",
+    "control_manifest_sha256": "6561f2f1e9ca4f24c0496e8f7d0a92a88c53a4cae0ad0bd3d0fe2913e2dab0c0",
+    "baseline_sha256": "e4259cf0bfb44a9d9a8a3123a8588dce393ea377661e1c028a5c824876ccbd7c"
+  },
+  "cohorts": {
+    "treatment_count": 72,
+    "control_count": 72,
+    "treatment_control_overlap": 0,
+    "controls_unchanged": 72,
+    "matching_quality": {
+      "strong": 14,
+      "acceptable": 8,
+      "weak": 50
+    },
+    "known_limitation": "CONTROL GROUP IS DIRECTIONAL, NOT A PERFECT CAUSAL MATCH."
+  },
+  "frozen_baseline": {
+    "country": "Bangladesh",
+    "gsc_period": "Last 3 months",
+    "baseline_date": "2026-08-16",
+    "treatment": {
+      "impressions": 109,
+      "clicks": 0,
+      "weighted_position": 41.10
+    },
+    "control": {
+      "impressions": 87,
+      "clicks": 0,
+      "weighted_position": 45.57
+    }
+  },
+  "validation": {
+    "treatment_pass": 72,
+    "warnings": 0,
+    "failures": 0,
+    "controls_byte_unchanged": "72/72",
+    "source_dictionary_unchanged": true,
+    "sitemap_unchanged": true,
+    "robots_unchanged": true,
+    "sitemap_change_required": false
+  },
+  "measurement_plan": {
+    "day_7": "Implementation, crawl, canonical, structured-data, and indexing sanity only.",
+    "day_28": "First directional Bangladesh treatment-versus-control comparison.",
+    "day_56": "Primary scale/no-scale assessment.",
+    "metrics": [
+      "Bangladesh impressions",
+      "Bangladesh clicks",
+      "Bangladesh CTR",
+      "Bangladesh average position",
+      "treatment URLs receiving impressions",
+      "treatment URLs entering Top 20",
+      "treatment URLs entering Top 10",
+      "treatment URLs receiving clicks"
+    ],
+    "interpretation_constraint": "Do not claim statistical certainty from small absolute changes or treatment-only growth. Use directional movement relative to the frozen control while retaining the matching limitation."
+  }
+}
