@@ -16,11 +16,13 @@
 
     const STATE_KEY = 'ovidhan_learning_v1';
     const SESSION_KEY = 'ovidhan_learning_session_v1';
-    const STATE_VERSION = 3;
+    const STATE_VERSION = 4;
     const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
     const MAX_IDENTIFIER_ITEMS = 250;
     const MAX_RECENT_ACTIONS = 50;
     const MAX_DEBUG_EVENTS = 100;
+    const MAX_LEARNING_DAYS = 90;
+    const MAX_RETENTION_COUNT = 9999;
 
     const EVENT_PROPERTIES = Object.freeze({
         seo_landing: ['source_category'],
@@ -50,6 +52,10 @@
         ,mistake_profile_view: ['profile_state', 'evidence_band']
         ,next_action_selected: ['destination_id', 'skill_id', 'family_id', 'reason_code', 'priority_band']
         ,next_action_started: ['destination_id', 'skill_id', 'family_id', 'reason_code', 'priority_band']
+        ,learning_session_start: ['learner_type', 'journey_stage', 'return_bucket']
+        ,learner_return: ['return_bucket', 'journey_stage']
+        ,retention_checkpoint: ['return_bucket', 'journey_stage']
+        ,commercial_readiness_signal: ['signal_code', 'journey_stage']
     });
 
     const COMMON_PROPERTIES = Object.freeze([
@@ -155,6 +161,16 @@
             mistakes: [],
             mistakeSignals: {},
             recentActions: [],
+            retention: {
+                firstSeenAt: nowIso,
+                lastLearningAt: null,
+                learningDays: [],
+                sessionCount: 0,
+                meaningfulActionCount: 0,
+                firstSessionLearningActions: 0,
+                returningLearnerActionCount: 0,
+                lastReturnBucket: null
+            },
             progress: {
                 learningActions: 0,
                 correctActions: 0,
@@ -169,6 +185,47 @@
         const numeric = Number(value);
         if (Number.isFinite(numeric) && numeric >= 0) return Math.min(99, Math.floor(numeric));
         return legacyMatch ? 1 : 0;
+    }
+
+    function boundedRetentionCount(value) {
+        const numeric = Number(value);
+        return Number.isFinite(numeric) && numeric >= 0 ? Math.min(MAX_RETENTION_COUNT, Math.floor(numeric)) : 0;
+    }
+
+    function validIso(value) {
+        return typeof value === 'string' && Number.isFinite(Date.parse(value)) ? value : null;
+    }
+
+    function utcDay(value) {
+        const date = value instanceof Date ? value : new Date(value);
+        return Number.isFinite(date.getTime()) ? date.toISOString().slice(0, 10) : null;
+    }
+
+    function daysBetween(previous, current) {
+        const before = utcDay(previous);
+        const after = utcDay(current);
+        if (!before || !after) return 0;
+        return Math.max(0, Math.floor((Date.parse(after + 'T00:00:00.000Z') - Date.parse(before + 'T00:00:00.000Z')) / 86400000));
+    }
+
+    function retentionBucket(dayGap) {
+        if (dayGap === 1) return 'D1';
+        if (dayGap >= 2 && dayGap <= 7) return 'D7';
+        if (dayGap >= 8 && dayGap <= 30) return 'D30';
+        if (dayGap > 30) return 'LATER';
+        return null;
+    }
+
+    function journeyStage(retention) {
+        retention = retention || {};
+        const actions = boundedRetentionCount(retention.meaningfulActionCount);
+        const days = Array.isArray(retention.learningDays) ? retention.learningDays.length : 0;
+        const sessions = boundedRetentionCount(retention.sessionCount);
+        if (days >= 3 && sessions >= 3 && actions >= 5) return 'DEEP_LEARNER';
+        if (days >= 2 && actions >= 2) return 'RETURNING';
+        if (actions >= 3) return 'ENGAGED';
+        if (actions >= 1) return 'ACTIVATED';
+        return 'DISCOVERED';
     }
 
     function normalizeState(candidate, id, nowIso) {
@@ -215,6 +272,17 @@
                 at: typeof item.at === 'string' ? item.at : nowIso
             }))
             : [];
+
+        const retention = source.retention && typeof source.retention === 'object' ? source.retention : {};
+        state.retention.firstSeenAt = validIso(retention.firstSeenAt) || validIso(state.createdAt) || nowIso;
+        state.retention.lastLearningAt = validIso(retention.lastLearningAt) || null;
+        state.retention.learningDays = Array.from(new Set((Array.isArray(retention.learningDays) ? retention.learningDays : [])
+            .filter(day => /^\d{4}-\d{2}-\d{2}$/.test(day) && utcDay(day + 'T00:00:00.000Z') === day))).sort().slice(-MAX_LEARNING_DAYS);
+        state.retention.sessionCount = boundedRetentionCount(retention.sessionCount);
+        state.retention.meaningfulActionCount = boundedRetentionCount(retention.meaningfulActionCount);
+        state.retention.firstSessionLearningActions = Math.min(99, boundedRetentionCount(retention.firstSessionLearningActions));
+        state.retention.returningLearnerActionCount = boundedRetentionCount(retention.returningLearnerActionCount);
+        state.retention.lastReturnBucket = ['D1', 'D7', 'D30', 'LATER'].includes(retention.lastReturnBucket) ? retention.lastReturnBucket : null;
 
         if (source.progress && typeof source.progress === 'object') {
             ['learningActions', 'correctActions', 'incorrectActions'].forEach(key => {
@@ -423,6 +491,13 @@
 
         function recordLearningAction(actionId, actionType, result) {
             if (typeof actionId !== 'string' || !actionId || learningSession.actionIds.includes(actionId)) return false;
+            const actionTime = now();
+            const actionIso = actionTime.toISOString();
+            const actionDay = utcDay(actionTime);
+            const previousLearningAt = learnerState.retention.lastLearningAt;
+            const gap = previousLearningAt ? daysBetween(previousLearningAt, actionTime) : 0;
+            const returnBucket = retentionBucket(gap);
+            const firstActionInSession = learningSession.actionCount === 0;
             learningSession.actionIds.push(actionId.slice(0, 100));
             learningSession.actionCount += 1;
             saveSession();
@@ -430,14 +505,26 @@
             learnerState.progress.learningActions += 1;
             if (result === 'correct') learnerState.progress.correctActions += 1;
             if (result === 'incorrect') learnerState.progress.incorrectActions += 1;
-            learnerState.progress.lastActionAt = now().toISOString();
+            learnerState.progress.lastActionAt = actionIso;
             learnerState.recentActions.push({
                 id: actionId.slice(0, 100),
                 type: typeof actionType === 'string' ? actionType.slice(0, 40) : 'unknown',
                 result: result === 'correct' || result === 'incorrect' ? result : null,
-                at: now().toISOString()
+                at: actionIso
             });
             learnerState.recentActions = learnerState.recentActions.slice(-MAX_RECENT_ACTIONS);
+            if (firstActionInSession) learnerState.retention.sessionCount = Math.min(MAX_RETENTION_COUNT, learnerState.retention.sessionCount + 1);
+            learnerState.retention.meaningfulActionCount = Math.min(MAX_RETENTION_COUNT, learnerState.retention.meaningfulActionCount + 1);
+            if (learnerState.retention.sessionCount === 1) {
+                learnerState.retention.firstSessionLearningActions = Math.min(99, learnerState.retention.firstSessionLearningActions + 1);
+            }
+            if (gap > 0) learnerState.retention.returningLearnerActionCount = Math.min(MAX_RETENTION_COUNT, learnerState.retention.returningLearnerActionCount + 1);
+            if (actionDay && !learnerState.retention.learningDays.includes(actionDay)) {
+                learnerState.retention.learningDays.push(actionDay);
+                learnerState.retention.learningDays = learnerState.retention.learningDays.sort().slice(-MAX_LEARNING_DAYS);
+            }
+            learnerState.retention.lastLearningAt = actionIso;
+            if (returnBucket) learnerState.retention.lastReturnBucket = returnBucket;
             saveState(learnerState);
             if (debugEnabled && documentObject && documentObject.documentElement) {
                 documentObject.documentElement.dataset.learningSessionActions = String(learningSession.actionCount);
@@ -450,6 +537,21 @@
                     track('learning_session_' + milestone + '_actions', { action_count: milestone }, { dedupeKey: String(milestone) });
                 }
             });
+            const stage = journeyStage(learnerState.retention);
+            if (firstActionInSession) {
+                track('learning_session_start', {
+                    learner_type: returnBucket ? 'RETURNING' : 'NEW_OR_SAME_DAY',
+                    journey_stage: stage,
+                    return_bucket: returnBucket || 'NONE'
+                }, { dedupeKey: learningSession.id });
+            }
+            if (returnBucket) {
+                track('learner_return', { return_bucket: returnBucket, journey_stage: stage }, { dedupeKey: actionDay });
+                track('retention_checkpoint', { return_bucket: returnBucket, journey_stage: stage }, { dedupeKey: returnBucket + ':' + actionDay });
+                track('commercial_readiness_signal', { signal_code: 'MEANINGFUL_RETURN', journey_stage: stage }, { dedupeKey: 'meaningful-return:' + actionDay });
+            } else if (learnerState.retention.meaningfulActionCount === 5) {
+                track('commercial_readiness_signal', { signal_code: 'FIVE_MEANINGFUL_ACTIONS', journey_stage: stage }, { dedupeKey: 'five-actions' });
+            }
             return true;
         }
 
@@ -646,6 +748,7 @@
             reset,
             getState: () => JSON.parse(JSON.stringify(learnerState)),
             getSession: () => JSON.parse(JSON.stringify(learningSession)),
+            getRetention: () => Object.assign(JSON.parse(JSON.stringify(learnerState.retention)), { journeyStage: journeyStage(learnerState.retention) }),
             storagePersistent: local.persistent,
             sessionPersistent: session.persistent,
             initPilotInstrumentation,
@@ -661,11 +764,16 @@
     return {
         createLearningFoundation,
         createMemoryStorage,
+        daysBetween,
+        retentionBucket,
+        journeyStage,
         constants: Object.freeze({
             STATE_KEY,
             SESSION_KEY,
             STATE_VERSION,
             SESSION_TIMEOUT_MS
+            ,MAX_LEARNING_DAYS
+            ,MAX_RETENTION_COUNT
         })
     };
 });
