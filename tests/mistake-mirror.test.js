@@ -15,6 +15,8 @@ test('every item has the required editorial schema and safe stable IDs', () => {
         assert.match(item.id, /^mm-[a-z0-9-]+$/);
         assert.notEqual(item.incorrect, item.correct);
         assert.match(item.explanation_bn, /[\u0980-\u09ff]/);
+        assert.ok(['grammar','usage'].includes(item.category));
+        assert.ok(['beginner','intermediate'].includes(item.difficulty));
     });
 });
 test('diagnose, repair, and retest choices have one deterministic correct route', () => {

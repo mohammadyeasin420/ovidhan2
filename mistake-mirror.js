@@ -79,35 +79,36 @@
             const api = learning();
             if (api) api.track(name, properties, { dedupeKey: key });
         }
-        function render() {
+        function render(shouldFocusHeading) {
             const label = stage === 'initial' ? 'ভুলটি শনাক্ত করুন' : stage === 'repair' ? 'সঠিক বাক্যটি বেছে নিয়ে repair করুন' : 'এবার নতুন করে যাচাই করুন';
             host.innerHTML = '';
             const card = doc.createElement('div'); card.className = 'mm-card';
-            const heading = doc.createElement('h3'); heading.textContent = label; card.appendChild(heading);
+            const heading = doc.createElement('h3'); heading.textContent = label; heading.tabIndex = -1; card.appendChild(heading);
             const progress = doc.createElement('p'); progress.className = 'mm-progress'; progress.textContent = stage === 'initial' ? 'ধাপ ১/৩ · Diagnose' : stage === 'repair' ? 'ধাপ ২/৩ · Repair' : 'ধাপ ৩/৩ · Retest'; card.appendChild(progress);
             const prompt = doc.createElement('p'); prompt.className = 'mm-prompt'; prompt.textContent = stage === 'initial' ? item.incorrect : 'Choose the correct sentence:'; card.appendChild(prompt);
             const group = doc.createElement('div'); group.className = 'mm-options'; group.setAttribute('role','group'); group.setAttribute('aria-label', label);
             const opts = stage === 'initial' ? [{id:'correct',text:'✅ Correct'}, {id:'incorrect',text:'❌ Incorrect'}] : optionsFor(item, stage);
             opts.forEach(option => { const button = doc.createElement('button'); button.type='button'; button.className='mm-option'; button.textContent=option.text; button.addEventListener('click', () => answer(option.id)); group.appendChild(button); });
-            card.appendChild(group); host.appendChild(card);
+            card.appendChild(group); host.appendChild(card); if (shouldFocusHeading) heading.focus();
         }
         function feedback(result) {
-            const box = doc.createElement('div'); box.className = 'mm-feedback ' + result;
+            const box = doc.createElement('div'); box.className = 'mm-feedback ' + result; box.setAttribute('role', 'status'); box.tabIndex = -1;
             const title = doc.createElement('strong'); title.textContent = result === 'correct' ? 'ঠিক ধরেছেন।' : 'এটি আবার দেখুন।'; box.appendChild(title);
             const wrong = doc.createElement('p'); wrong.textContent = '❌ ' + item.incorrect; box.appendChild(wrong);
             const correct = doc.createElement('p'); correct.textContent = '✅ ' + item.correct; box.appendChild(correct);
             const bn = doc.createElement('p'); bn.lang='bn'; bn.textContent = item.explanation_bn; box.appendChild(bn);
             const en = doc.createElement('p'); en.textContent = item.explanation_en; box.appendChild(en);
-            host.querySelector('.mm-card').appendChild(box);
+            host.querySelector('.mm-card').appendChild(box); box.focus();
         }
         function nextButton(nextStage) {
             const button = doc.createElement('button'); button.type='button'; button.className='btn btn-primary mm-next';
             button.textContent = nextStage === 'repair' ? 'Repair করুন →' : 'Retest করুন →';
-            button.addEventListener('click', () => { stage=nextStage; if (stage==='repair') emit('mistake_repair_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id); render(); });
+            button.addEventListener('click', () => { stage=nextStage; if (stage==='repair') emit('mistake_repair_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id); render(true); });
             host.querySelector('.mm-card').appendChild(button);
         }
         function answer(optionId) {
             if (host.querySelector('.mm-feedback')) return;
+            Array.from(host.querySelectorAll('.mm-option')).forEach(button => { button.disabled = true; });
             const result = optionId === (stage === 'initial' ? 'incorrect' : 'correct') ? 'correct' : 'incorrect';
             const api = learning();
             if (api) api.recordMistakeSignal(item.id, stage, result);
@@ -126,11 +127,11 @@
             emit('mistake_next_action',{mistake_id:item.id,destination_id:next.item.id,reason_code:next.reason_code,score_band:next.score_band},item.id);
             const panel=doc.createElement('div'); panel.className='mm-complete';
             const summary=doc.createElement('p'); summary.textContent=(initialResult==='incorrect'&&result==='correct'?'আপনি ভুলটি repair করেছেন। ':'অনুশীলন সম্পন্ন। ')+ 'পরের ধাপ: '+next.item.correct; panel.appendChild(summary);
-            const button=doc.createElement('button'); button.type='button'; button.className='btn btn-secondary'; button.textContent='পরের reviewed mistake →'; button.addEventListener('click',()=>{item=next.item;stage='initial';initialResult=null;completed=false;emit('mistake_mirror_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id);render();}); panel.appendChild(button);
+            const button=doc.createElement('button'); button.type='button'; button.className='btn btn-secondary'; button.textContent='পরের reviewed mistake →'; button.addEventListener('click',()=>{item=next.item;stage='initial';initialResult=null;completed=false;emit('mistake_mirror_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id);render(true);}); panel.appendChild(button);
             host.querySelector('.mm-card').appendChild(panel);
         }
         emit('mistake_mirror_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id);
-        render();
+        render(false);
     }
     return Object.freeze({ items, optionsFor, chooseNext, mount });
 });

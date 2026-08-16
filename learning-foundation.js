@@ -579,6 +579,12 @@
                                 cta_context: id,
                                 install_status: 'unknown'
                             }, { dedupeKey: id });
+                            track('dakho_cta_view', {
+                                cta_id: id,
+                                cta_context: id,
+                                trigger: 'common-mistakes-guide',
+                                install_status: 'unknown'
+                            }, { dedupeKey: id });
                             ctaObserver.unobserve(entry.target);
                         });
                     }, { threshold: 0.5 });
@@ -592,6 +598,12 @@
                     track('app_cta_click', {
                         cta_id: id,
                         cta_context: id,
+                        install_status: 'unknown'
+                    }, { dedupeKey: id });
+                    track('dakho_cta_click', {
+                        cta_id: id,
+                        cta_context: id,
+                        trigger: 'common-mistakes-guide',
                         install_status: 'unknown'
                     }, { dedupeKey: id });
                 });

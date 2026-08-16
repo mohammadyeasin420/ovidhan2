@@ -208,6 +208,21 @@ test('app CTA distinguishes view/click while install remains unknown', () => {
     assert.ok(events.every(event => event.properties.install_status === 'unknown'));
 });
 
+test('Dakho CTA funnel remains allowlisted and never infers installation', () => {
+    const { foundation, transported } = createHarness();
+    foundation.track('dakho_cta_view', {
+        cta_id: 'mistakes-section', cta_context: 'mistakes-section',
+        trigger: 'common-mistakes-guide', install_status: 'unknown', raw_text: 'private'
+    });
+    foundation.track('dakho_cta_click', {
+        cta_id: 'mistakes-section', cta_context: 'mistakes-section',
+        trigger: 'common-mistakes-guide', install_status: 'unknown'
+    });
+    assert.deepEqual(transported.map(item => item.event), ['dakho_cta_view', 'dakho_cta_click']);
+    assert.ok(transported.every(item => item.properties.install_status === 'unknown'));
+    assert.ok(transported.every(item => !Object.hasOwn(item.properties, 'raw_text')));
+});
+
 test('reset creates a new learner without deleting legacy keys', () => {
     const { foundation, localStorage } = createHarness();
     localStorage.setItem('ovidhan_dashboard_data', JSON.stringify({ xp: 100 }));
