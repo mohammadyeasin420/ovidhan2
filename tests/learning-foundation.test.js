@@ -57,7 +57,7 @@ function test(name, callback) {
 test('new anonymous learner receives versioned state and random first-party ID', () => {
     const { foundation } = createHarness();
     const state = foundation.getState();
-    assert.equal(state.version, 1);
+    assert.equal(state.version, 2);
     assert.match(state.anonymousLearnerId, /^[0-9a-f-]{36}$/);
     assert.equal(state.progress.learningActions, 0);
 });
@@ -78,7 +78,7 @@ test('corrupted state recovers without breaking initialization', () => {
     const localStorage = createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY, '{not-json');
     const { foundation } = createHarness({ localStorage });
-    assert.equal(foundation.getState().version, 1);
+    assert.equal(foundation.getState().version, 2);
     assert.equal(foundation.getState().progress.learningActions, 0);
 });
 
@@ -92,7 +92,7 @@ test('old foundation schema is normalized without losing identifiers', () => {
     }));
     const { foundation } = createHarness({ localStorage });
     const state = foundation.getState();
-    assert.equal(state.version, 1);
+    assert.equal(state.version, 2);
     assert.equal(state.anonymousLearnerId, '11111111-1111-4111-8111-111111111111');
     assert.deepEqual(state.savedWords, ['language']);
     assert.equal(state.progress.learningActions, 2);
@@ -171,6 +171,26 @@ test('unsupported future event is not emitted', () => {
     assert.equal(transported.length, 0);
 });
 
+test('mistake signals migrate safely and record only bounded outcome metadata', () => {
+    const { foundation } = createHarness();
+    assert.equal(foundation.recordMistakeSignal('mm-agree-verb', 'initial', 'incorrect'), true);
+    assert.equal(foundation.recordMistakeSignal('mm-agree-verb', 'repair', 'correct'), true);
+    assert.equal(foundation.recordMistakeSignal('mm-agree-verb', 'retest', 'correct'), true);
+    const signal = foundation.getState().mistakeSignals['mm-agree-verb'];
+    assert.equal(signal.attempts, 3);
+    assert.equal(signal.masteryStatus, 'secure');
+    assert.equal(foundation.recordMistakeSignal('raw learner sentence', 'initial', 'correct'), false);
+});
+
+test('Mistake Mirror events accept approved IDs and reject learner text', () => {
+    const { foundation, transported } = createHarness();
+    assert.equal(foundation.track('mistake_answer', {
+        mistake_id: 'mm-agree-verb', mistake_family: 'agree-verb', result: 'incorrect',
+        option_id: 'incorrect', attempt_number: 1, learner_text: 'private text'
+    }), true);
+    assert.equal(Object.hasOwn(transported[0].properties, 'learner_text'), false);
+});
+
 test('app CTA distinguishes view/click while install remains unknown', () => {
     const { foundation } = createHarness();
     foundation.track('app_cta_view', {
@@ -186,6 +206,21 @@ test('app CTA distinguishes view/click while install remains unknown', () => {
     const events = foundation.debug().events;
     assert.equal(events.length, 2);
     assert.ok(events.every(event => event.properties.install_status === 'unknown'));
+});
+
+test('Dakho CTA funnel remains allowlisted and never infers installation', () => {
+    const { foundation, transported } = createHarness();
+    foundation.track('dakho_cta_view', {
+        cta_id: 'mistakes-section', cta_context: 'mistakes-section',
+        trigger: 'common-mistakes-guide', install_status: 'unknown', raw_text: 'private'
+    });
+    foundation.track('dakho_cta_click', {
+        cta_id: 'mistakes-section', cta_context: 'mistakes-section',
+        trigger: 'common-mistakes-guide', install_status: 'unknown'
+    });
+    assert.deepEqual(transported.map(item => item.event), ['dakho_cta_view', 'dakho_cta_click']);
+    assert.ok(transported.every(item => item.properties.install_status === 'unknown'));
+    assert.ok(transported.every(item => !Object.hasOwn(item.properties, 'raw_text')));
 });
 
 test('reset creates a new learner without deleting legacy keys', () => {

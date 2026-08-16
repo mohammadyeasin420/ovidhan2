@@ -16,7 +16,7 @@
 
     const STATE_KEY = 'ovidhan_learning_v1';
     const SESSION_KEY = 'ovidhan_learning_session_v1';
-    const STATE_VERSION = 1;
+    const STATE_VERSION = 2;
     const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
     const MAX_IDENTIFIER_ITEMS = 250;
     const MAX_RECENT_ACTIONS = 50;
@@ -38,6 +38,15 @@
         learning_session_5_actions: ['action_count'],
         app_cta_view: ['cta_id', 'cta_context', 'install_status'],
         app_cta_click: ['cta_id', 'cta_context', 'install_status']
+        ,mistake_mirror_start: ['mistake_id', 'mistake_family']
+        ,mistake_answer: ['mistake_id', 'mistake_family', 'result', 'option_id', 'attempt_number']
+        ,mistake_repair_start: ['mistake_id', 'mistake_family']
+        ,mistake_repair_result: ['mistake_id', 'mistake_family', 'result', 'option_id', 'attempt_number']
+        ,mistake_retest_result: ['mistake_id', 'mistake_family', 'result', 'option_id', 'attempt_number']
+        ,mistake_session_complete: ['mistake_id', 'mistake_family', 'result', 'mastery_status']
+        ,mistake_next_action: ['mistake_id', 'destination_id', 'reason_code', 'score_band']
+        ,dakho_cta_view: ['cta_id', 'cta_context', 'trigger', 'install_status']
+        ,dakho_cta_click: ['cta_id', 'cta_context', 'trigger', 'install_status']
     });
 
     const COMMON_PROPERTIES = Object.freeze([
@@ -141,6 +150,7 @@
             weakWords: [],
             savedWords: [],
             mistakes: [],
+            mistakeSignals: {},
             recentActions: [],
             progress: {
                 learningActions: 0,
@@ -168,6 +178,20 @@
         state.weakWords = uniqueIdentifiers(source.weakWords);
         state.savedWords = uniqueIdentifiers(source.savedWords);
         state.mistakes = uniqueIdentifiers(source.mistakes);
+        if (source.mistakeSignals && typeof source.mistakeSignals === 'object' && !Array.isArray(source.mistakeSignals)) {
+            Object.keys(source.mistakeSignals).slice(-MAX_IDENTIFIER_ITEMS).forEach(identifier => {
+                if (!/^[a-z0-9-]{1,100}$/.test(identifier)) return;
+                const signal = source.mistakeSignals[identifier] || {};
+                state.mistakeSignals[identifier] = {
+                    attempts: Math.max(0, Math.min(99, Math.floor(Number(signal.attempts) || 0))),
+                    initialResult: signal.initialResult === 'correct' ? 'correct' : signal.initialResult === 'incorrect' ? 'incorrect' : null,
+                    repairResult: signal.repairResult === 'correct' ? 'correct' : signal.repairResult === 'incorrect' ? 'incorrect' : null,
+                    retestResult: signal.retestResult === 'correct' ? 'correct' : signal.retestResult === 'incorrect' ? 'incorrect' : null,
+                    masteryStatus: ['needs-repair', 'improving', 'secure'].includes(signal.masteryStatus) ? signal.masteryStatus : 'needs-repair',
+                    lastSeenAt: typeof signal.lastSeenAt === 'string' ? signal.lastSeenAt : nowIso
+                };
+            });
+        }
         state.recentActions = Array.isArray(source.recentActions)
             ? source.recentActions.filter(item => item && typeof item.id === 'string').slice(-MAX_RECENT_ACTIONS).map(item => ({
                 id: item.id.slice(0, 100),
@@ -432,6 +456,24 @@
             return true;
         }
 
+        function recordMistakeSignal(mistakeId, stage, result) {
+            if (!/^[a-z0-9-]{1,100}$/.test(mistakeId) || !['initial', 'repair', 'retest'].includes(stage)) return false;
+            if (result !== 'correct' && result !== 'incorrect') return false;
+            const previous = learnerState.mistakeSignals[mistakeId] || {
+                attempts: 0, initialResult: null, repairResult: null, retestResult: null,
+                masteryStatus: 'needs-repair', lastSeenAt: now().toISOString()
+            };
+            previous.attempts = Math.min(99, previous.attempts + 1);
+            previous[stage + 'Result'] = result;
+            previous.lastSeenAt = now().toISOString();
+            previous.masteryStatus = previous.retestResult === 'correct'
+                ? 'secure'
+                : previous.repairResult === 'correct' ? 'improving' : 'needs-repair';
+            learnerState.mistakeSignals[mistakeId] = previous;
+            saveState(learnerState);
+            return true;
+        }
+
         function setGoal(goal) {
             learnerState.goal = typeof goal === 'string' && goal.length <= 50 ? goal : null;
             saveState(learnerState);
@@ -537,6 +579,12 @@
                                 cta_context: id,
                                 install_status: 'unknown'
                             }, { dedupeKey: id });
+                            track('dakho_cta_view', {
+                                cta_id: id,
+                                cta_context: id,
+                                trigger: 'common-mistakes-guide',
+                                install_status: 'unknown'
+                            }, { dedupeKey: id });
                             ctaObserver.unobserve(entry.target);
                         });
                     }, { threshold: 0.5 });
@@ -550,6 +598,12 @@
                     track('app_cta_click', {
                         cta_id: id,
                         cta_context: id,
+                        install_status: 'unknown'
+                    }, { dedupeKey: id });
+                    track('dakho_cta_click', {
+                        cta_id: id,
+                        cta_context: id,
+                        trigger: 'common-mistakes-guide',
                         install_status: 'unknown'
                     }, { dedupeKey: id });
                 });
@@ -568,6 +622,7 @@
             recordLearningAction,
             saveWord,
             saveMistake,
+            recordMistakeSignal,
             setGoal,
             reset,
             getState: () => JSON.parse(JSON.stringify(learnerState)),
