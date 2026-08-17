@@ -56,6 +56,12 @@
         ,learner_return: ['return_bucket', 'journey_stage']
         ,retention_checkpoint: ['return_bucket', 'journey_stage']
         ,commercial_readiness_signal: ['signal_code', 'journey_stage']
+        ,bcs_center_view: ['surface']
+        ,bcs_exam_selected: ['exam_id', 'surface']
+        ,bcs_stage_selected: ['stage_id', 'surface']
+        ,bcs_official_source_open: ['source_type', 'surface']
+        ,bcs_learning_cta_view: ['stage_id', 'action_id', 'surface']
+        ,bcs_learning_cta_click: ['stage_id', 'action_id', 'surface']
     });
 
     const COMMON_PROPERTIES = Object.freeze([
