@@ -347,4 +347,19 @@ test('reset creates a new learner without deleting legacy keys', () => {
     assert.ok(localStorage.getItem('ovidhan_dashboard_data'));
 });
 
+test('BCS analytics strips candidate identifiers', () => {
+    const { foundation, transported } = createHarness();
+    assert.equal(foundation.track('bcs_stage_selected', {
+        stage_id: 'PRELIMINARY_PREPARATION', surface: 'stage-selector', roll_number: '123456', name: 'Private'
+    }), true);
+    assert.equal(transported[0].properties.stage_id, 'PRELIMINARY_PREPARATION');
+    assert.equal(transported[0].properties.roll_number, undefined);
+    assert.equal(transported[0].properties.name, undefined);
+    assert.equal(foundation.track('bcs_official_source_open', {
+        source_type: 'OFFICIAL_BPSC', surface: 'official-information', registration_number: 'secret'
+    }), true);
+    assert.equal(transported[1].properties.source_type, 'OFFICIAL_BPSC');
+    assert.equal(transported[1].properties.registration_number, undefined);
+});
+
 console.log('PASS all learning-foundation tests');
