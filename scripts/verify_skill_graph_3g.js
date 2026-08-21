@@ -10,10 +10,10 @@ const allowedEdges = new Set(['PREREQUISITE_OF','RELATED_TO','OFTEN_CONFUSED_WIT
 function unique(values, label) { assert.equal(new Set(values).size, values.length, `duplicate ${label}`); }
 function noDuplicates(values, label) { assert.equal(new Set(values).size, values.length, `duplicate relationship in ${label}`); }
 
-assert.equal(graph.graph_version, 1);
+assert.equal(graph.graph_version, 2);
 assert.equal(graph.schema_version, 1);
-assert.equal(graph.families.length, 10);
-assert.equal(graph.skills.length, 50);
+assert.equal(graph.families.length, 11);
+assert.equal(graph.skills.length, 52);
 assert.equal(graph.item_mappings.length, 30);
 unique(graph.families.map(family => family.family_id), 'family ID');
 unique(graph.skills.map(skill => skill.id), 'skill ID');
@@ -55,6 +55,18 @@ graph.edges.forEach(edge => {
     assert.ok(allowedEdges.has(edge.type));
     assert.ok(skillIds.has(edge.from) || transferIds.has(edge.from));
     assert.ok(skillIds.has(edge.to)); assert.notEqual(edge.from, edge.to);
+});
+
+// Node arrays remain the runtime authority in Phase 5A1. Any retained explicit
+// prerequisite/related edge must agree with them, but missing duplicate edges
+// are intentionally not inferred during this compatibility phase.
+graph.edges.filter(edge => edge.type === 'PREREQUISITE_OF').forEach(edge => {
+    assert.ok(graph.skills.find(skill => skill.id === edge.to).prerequisites.includes(edge.from), `contradictory prerequisite edge ${edge.from} -> ${edge.to}`);
+});
+graph.edges.filter(edge => edge.type === 'RELATED_TO').forEach(edge => {
+    const from = graph.skills.find(skill => skill.id === edge.from);
+    const to = graph.skills.find(skill => skill.id === edge.to);
+    assert.ok(from.related_skills.includes(edge.to) || to.related_skills.includes(edge.from), `contradictory related edge ${edge.from} -> ${edge.to}`);
 });
 
 const prerequisiteMap = new Map(graph.skills.map(skill => [skill.id, new Set(skill.prerequisites)]));

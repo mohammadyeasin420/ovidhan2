@@ -17,7 +17,7 @@
     let activeGraph = null;
 
     function setGraph(graph) {
-        if (!graph || graph.graph_version !== 1 || !Array.isArray(graph.families) || !Array.isArray(graph.skills) || !Array.isArray(graph.item_mappings)) return false;
+        if (!graph || ![1, 2].includes(graph.graph_version) || !Array.isArray(graph.families) || !Array.isArray(graph.skills) || !Array.isArray(graph.item_mappings)) return false;
         const familyIds = new Set(graph.families.map(family => family && family.family_id));
         const skillIds = new Set(graph.skills.map(skill => skill && skill.id));
         if (familyIds.has(undefined) || skillIds.has(undefined) || familyIds.size !== graph.families.length || skillIds.size !== graph.skills.length) return false;
