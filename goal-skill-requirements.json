@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "reviewed-foundation",
+  "goal_ids": ["BCS", "IELTS", "BANK", "UNIVERSITY_ADMISSION", "GENERAL_ENGLISH", "SPOKEN_CAREER"],
+  "mappings": [
+    {"goal_id":"BCS","skill_id":"indefinite_article_a_an","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged BCS and has reviewed practice."},
+    {"goal_id":"BCS","skill_id":"adjective_preposition","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged BCS and has reviewed practice."},
+    {"goal_id":"BCS","skill_id":"third_person_s","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged BCS and has reviewed practice."},
+    {"goal_id":"BCS","skill_id":"writing_precis","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"The reviewed official BPSC Written English syllabus directly includes a 20-mark Summary task."},
+    {"goal_id":"BCS","skill_id":"formal_letter_writing","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"The reviewed official BPSC Written English syllabus directly includes a 20-mark Letter to the Editor task related to the passage thematic issue."},
+
+    {"goal_id":"IELTS","skill_id":"present_perfect_time_reference","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged IELTS."},
+    {"goal_id":"IELTS","skill_id":"word_choice_register","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged IELTS and supports reviewed writing/register practice."},
+    {"goal_id":"IELTS","skill_id":"formal_letter_writing","importance":"OPTIONAL","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Reviewed page is qualified as general formal-writing practice, not a universal IELTS format."},
+
+    {"goal_id":"BANK","skill_id":"indefinite_article_a_an","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged BANK and has reviewed practice."},
+    {"goal_id":"BANK","skill_id":"adjective_preposition","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged BANK and has reviewed practice."},
+    {"goal_id":"BANK","skill_id":"writing_precis","importance":"OPTIONAL","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Reviewed page is qualified as useful writing practice where an exam includes similar tasks."},
+
+    {"goal_id":"UNIVERSITY_ADMISSION","skill_id":"indefinite_article_a_an","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"The existing reviewed University learning path names grammar as a preparation area; this is not a complete syllabus claim."},
+    {"goal_id":"UNIVERSITY_ADMISSION","skill_id":"word_choice_register","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"The existing reviewed University learning path names vocabulary and writing skills; mapping remains intentionally sparse."},
+    {"goal_id":"UNIVERSITY_ADMISSION","skill_id":"writing_precis","importance":"OPTIONAL","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"The existing University learning path includes writing skills; no institution-wide requirement is claimed."},
+    {"goal_id":"UNIVERSITY_ADMISSION","skill_id":"formal_letter_writing","importance":"OPTIONAL","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"General reviewed writing practice only; no complete admission syllabus is asserted."},
+
+    {"goal_id":"GENERAL_ENGLISH","skill_id":"indefinite_article_a_an","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical GENERAL_ENGLISH relevance and reviewed practice."},
+    {"goal_id":"GENERAL_ENGLISH","skill_id":"simple_present_form","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical GENERAL_ENGLISH relevance and reviewed practice."},
+    {"goal_id":"GENERAL_ENGLISH","skill_id":"word_choice_register","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical GENERAL_ENGLISH relevance and reviewed practice."},
+    {"goal_id":"GENERAL_ENGLISH","skill_id":"writing_precis","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Reviewed concise-writing destination."},
+    {"goal_id":"GENERAL_ENGLISH","skill_id":"formal_letter_writing","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Reviewed formal-writing destination."},
+
+    {"goal_id":"SPOKEN_CAREER","skill_id":"simple_present_form","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged SPEAKING."},
+    {"goal_id":"SPOKEN_CAREER","skill_id":"word_choice_register","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged WORKPLACE and SPEAKING."},
+    {"goal_id":"SPOKEN_CAREER","skill_id":"formal_letter_writing","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Reviewed formal-writing destination supports professional communication without claiming an exam requirement."}
+  ]
+}

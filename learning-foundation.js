@@ -23,6 +23,7 @@
     const MAX_DEBUG_EVENTS = 100;
     const MAX_LEARNING_DAYS = 90;
     const MAX_RETENTION_COUNT = 9999;
+    const GOAL_IDS = Object.freeze(['BCS', 'IELTS', 'BANK', 'UNIVERSITY_ADMISSION', 'GENERAL_ENGLISH', 'SPOKEN_CAREER']);
 
     const EVENT_PROPERTIES = Object.freeze({
         seo_landing: ['source_category'],
@@ -602,9 +603,15 @@
         }
 
         function setGoal(goal) {
-            learnerState.goal = typeof goal === 'string' && goal.length <= 50 ? goal : null;
+            if (goal === null || goal === '') learnerState.goal = null;
+            else if (GOAL_IDS.includes(goal)) learnerState.goal = goal;
+            else return learnerState.goal;
             saveState(learnerState);
             return learnerState.goal;
+        }
+
+        function getRoutingGoal() {
+            return GOAL_IDS.includes(learnerState.goal) ? learnerState.goal : 'GENERAL_ENGLISH';
         }
 
         function reset() {
@@ -751,6 +758,7 @@
             saveMistake,
             recordMistakeSignal,
             setGoal,
+            getRoutingGoal,
             reset,
             getState: () => JSON.parse(JSON.stringify(learnerState)),
             getSession: () => JSON.parse(JSON.stringify(learningSession)),
@@ -777,7 +785,8 @@
             STATE_KEY,
             SESSION_KEY,
             STATE_VERSION,
-            SESSION_TIMEOUT_MS
+            SESSION_TIMEOUT_MS,
+            GOAL_IDS
             ,MAX_LEARNING_DAYS
             ,MAX_RETENTION_COUNT
         })

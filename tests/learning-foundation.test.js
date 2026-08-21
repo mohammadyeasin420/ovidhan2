@@ -362,4 +362,23 @@ test('BCS analytics strips candidate identifiers', () => {
     assert.equal(transported[1].properties.registration_number, undefined);
 });
 
+test('learner goals use stable IDs while legacy values route safely', () => {
+    const { foundation } = createHarness();
+    assert.equal(foundation.getRoutingGoal(), 'GENERAL_ENGLISH');
+    assert.equal(foundation.setGoal('BCS'), 'BCS');
+    assert.equal(foundation.getRoutingGoal(), 'BCS');
+    assert.equal(foundation.setGoal('free form legacy goal'), 'BCS');
+    assert.equal(foundation.getState().goal, 'BCS');
+    foundation.setGoal(null);
+    assert.equal(foundation.getRoutingGoal(), 'GENERAL_ENGLISH');
+});
+
+test('unknown persisted legacy goal is preserved but receives safe routing fallback', () => {
+    const localStorage = createMemoryStorage();
+    localStorage.setItem(constants.STATE_KEY, JSON.stringify({version:4,anonymousLearnerId:'11111111-1111-4111-8111-111111111111',goal:'legacy-custom-goal'}));
+    const foundation = createLearningFoundation({localStorage});
+    assert.equal(foundation.getState().goal, 'legacy-custom-goal');
+    assert.equal(foundation.getRoutingGoal(), 'GENERAL_ENGLISH');
+});
+
 console.log('PASS all learning-foundation tests');

@@ -39,8 +39,10 @@ assert.equal(model.analytics_contract.high_cardinality_properties_allowed, false
 assert.equal(model.watcher_contract.autonomous_publication, false);
 assert.equal(model.watcher_contract.pipeline.at(-2), 'HUMAN_SOURCE_GATE');
 
-assert.equal(graph.graph_version, 1);
-assert.equal(graph.skills.length, 50);
+assert.equal(graph.graph_version, 2);
+assert.equal(graph.skills.length, 52);
+assert.ok(graph.skills.some(skill => skill.id === 'writing_precis'));
+assert.ok(graph.skills.some(skill => skill.id === 'formal_letter_writing'));
 const ctas = model.journey_stages.filter(stage => stage.learning_cta).map(stage => stage.learning_cta.action_id);
 assert.deepEqual(ctas, ['OPEN_ENGLISH_DIAGNOSTIC','OPEN_WRITING_PRACTICE','OPEN_INTERVIEW_ENGLISH','OPEN_MISTAKE_MIRROR']);
 

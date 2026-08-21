@@ -17,7 +17,7 @@
     let activeGraph = null;
 
     function setGraph(graph) {
-        if (!graph || graph.graph_version !== 1 || !Array.isArray(graph.families) || !Array.isArray(graph.skills) || !Array.isArray(graph.item_mappings)) return false;
+        if (!graph || ![1, 2].includes(graph.graph_version) || !Array.isArray(graph.families) || !Array.isArray(graph.skills) || !Array.isArray(graph.item_mappings)) return false;
         const familyIds = new Set(graph.families.map(family => family && family.family_id));
         const skillIds = new Set(graph.skills.map(skill => skill && skill.id));
         if (familyIds.has(undefined) || skillIds.has(undefined) || familyIds.size !== graph.families.length || skillIds.size !== graph.skills.length) return false;
@@ -130,6 +130,9 @@
         }).sort((a, b) => b.score - a.score || a.item.id.localeCompare(b.item.id));
         return candidates[0] || null;
     }
+    function shouldRenderLegacyNext(win) {
+        return !win.document.getElementById('smartPath');
+    }
     function mount(win) {
         const host = win.document.getElementById('mistakeProfile');
         const mirror = win.OvidhanMistakeMirror;
@@ -159,7 +162,7 @@
             }
             host.appendChild(summary);
             const next = recommendNext(mirror.items, state, null, Date.now());
-            if (next) {
+            if (next && shouldRenderLegacyNext(win)) {
                 const nextBox=win.document.createElement('div'); nextBox.className='mp-next';
                 const copy=win.document.createElement('p'); copy.textContent='Next · পরের অনুশীলন: '+next.item.correct+' ('+next.reason_code.replace(/_/g,' ').toLowerCase()+')'; nextBox.appendChild(copy);
                 const button=win.document.createElement('button'); button.type='button'; button.className='btn btn-secondary'; button.textContent='এই skill অনুশীলন করুন →';
@@ -182,5 +185,5 @@
                 .catch(() => { /* Existing item taxonomy remains the safe fallback. */ });
         }
     }
-    return Object.freeze({ STATUSES, CONFIDENCE, signalCounts, evidenceFor, statusFor, confidenceFor, taxonomyFor, setGraph, aggregate, recommendNext, mount });
+    return Object.freeze({ STATUSES, CONFIDENCE, signalCounts, evidenceFor, statusFor, confidenceFor, taxonomyFor, setGraph, aggregate, recommendNext, shouldRenderLegacyNext, mount });
 });

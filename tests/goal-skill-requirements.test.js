@@ -1,0 +1,20 @@
+'use strict';
+const assert = require('node:assert/strict');
+const graph = require('../skill-mistake-graph.json');
+const goals = require('../goal-skill-requirements.json');
+const skillIds = new Set(graph.skills.map(skill => skill.id));
+const expected = ['BCS','IELTS','BANK','UNIVERSITY_ADMISSION','GENERAL_ENGLISH','SPOKEN_CAREER'];
+assert.deepEqual(goals.goal_ids, expected);
+assert.deepEqual(new Set(goals.mappings.map(mapping => mapping.goal_id)), new Set(expected));
+goals.mappings.forEach(mapping => {
+    assert.ok(skillIds.has(mapping.skill_id));
+    assert.ok(['CORE','SUPPORTING','OPTIONAL'].includes(mapping.importance));
+    assert.equal(mapping.evidence_class, 'CURATED_REPOSITORY_MAPPING');
+    assert.ok(mapping.source_or_rationale);
+});
+const university = goals.mappings.filter(mapping => mapping.goal_id === 'UNIVERSITY_ADMISSION');
+assert.ok(university.length > 0 && university.length < 10, 'University mapping must remain intentionally sparse');
+const bcsWriting = goals.mappings.filter(mapping => mapping.goal_id === 'BCS' && ['writing_precis','formal_letter_writing'].includes(mapping.skill_id));
+assert.equal(bcsWriting.length, 2);
+assert.ok(bcsWriting.every(mapping => mapping.importance === 'CORE'));
+console.log('PASS goal requirements: six stable goals with reviewed explicit mappings');

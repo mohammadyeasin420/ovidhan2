@@ -73,6 +73,7 @@
     <link rel="stylesheet" href="/mistake-mirror.css" />
     <script defer src="/mistake-mirror.js"></script>
     <script defer src="/mistake-profile.js"></script>
+    <script defer src="/smartpath-router.js"></script>
 
     <style>
         :root {
@@ -419,6 +420,25 @@
     </section>
 
     <main class="wrap">
+
+        <section class="smartpath-shell" aria-labelledby="smartpath-title">
+            <h2 id="smartpath-title">🧭 আজ আপনার SmartPath</h2>
+            <p class="mistake-mirror-intro">আপনার অনুশীলনের ফল ও শেখার লক্ষ্য দেখে পরবর্তী উপযোগী ধাপটি বেছে দেওয়া হয়েছে।</p>
+            <div class="smartpath-goal-control">
+                <label for="smartPathGoal">শেখার লক্ষ্য</label>
+                <select id="smartPathGoal" name="smartpath-goal">
+                    <option value="GENERAL_ENGLISH">General English</option>
+                    <option value="BCS">BCS</option>
+                    <option value="IELTS">IELTS</option>
+                    <option value="BANK">Bank Job</option>
+                    <option value="UNIVERSITY_ADMISSION">University Admission</option>
+                    <option value="SPOKEN_CAREER">Spoken / Career English</option>
+                </select>
+            </div>
+            <div id="smartPath" aria-live="polite">
+                <noscript><p class="mp-empty">SmartPath recommendation দেখতে JavaScript প্রয়োজন। নিচের reviewed guide ও Mistake Mirror ব্যবহার করা যাবে।</p></noscript>
+            </div>
+        </section>
 
         <section class="mistake-mirror-shell" aria-labelledby="mistake-mirror-title">
             <h2 id="mistake-mirror-title">🪞 Mistake Mirror: Diagnose, Repair, Retest</h2>

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "reviewed-foundation",
+  "source_language": "bn",
+  "runtime_role": "curated_supporting_factor_only",
+  "edges": [
+    {
+      "edge_id": "transfer:article_absence:indefinite_article_a_an",
+      "source_language": "bn",
+      "source_pattern_id": "ARTICLE_ABSENCE_TRANSFER",
+      "target_skill_id": "indefinite_article_a_an",
+      "relationship_type": "TRANSFER_RISK_FOR",
+      "evidence_class": "CURATED_TRANSFER_HYPOTHESIS",
+      "provenance": [{"source_id":"ovidhan-phase-3g-editorial-review","source_type":"INTERNAL_EDITORIAL_REVIEW","note":"Migrated from the reviewed optional Phase 3G article-absence hypothesis; no prevalence claim."}],
+      "review_status": "REVIEWED_OPTIONAL",
+      "reviewed_at": "2026-08-21",
+      "scope_notes": "A reviewed contrast worth considering when practising English article choice; it is not an explanation of an individual learner's error.",
+      "exclusions": ["Do not infer that Bangla caused a learner response.", "Do not infer prevalence or probability."],
+      "version": 1
+    },
+    {
+      "edge_id": "transfer:postposition_preposition:adjective_preposition",
+      "source_language": "bn",
+      "source_pattern_id": "POSTPOSITION_PREPOSITION_TRANSFER",
+      "target_skill_id": "adjective_preposition",
+      "relationship_type": "TRANSFER_RISK_FOR",
+      "evidence_class": "CURATED_TRANSFER_HYPOTHESIS",
+      "provenance": [{"source_id":"ovidhan-phase-3g-editorial-review","source_type":"INTERNAL_EDITORIAL_REVIEW","note":"Migrated from the reviewed optional Phase 3G postposition/preposition hypothesis; no prevalence claim."}],
+      "review_status": "REVIEWED_OPTIONAL",
+      "reviewed_at": "2026-08-21",
+      "scope_notes": "A small review signal for governed English preposition choices, never a diagnosis of L1 causation.",
+      "exclusions": ["Do not infer that Bangla caused a learner response.", "Do not infer prevalence or probability."],
+      "version": 1
+    },
+    {
+      "edge_id": "transfer:word_order:english_svo_order",
+      "source_language": "bn",
+      "source_pattern_id": "WORD_ORDER_TRANSFER",
+      "target_skill_id": "english_svo_order",
+      "relationship_type": "TRANSFER_RISK_FOR",
+      "evidence_class": "CURATED_TRANSFER_HYPOTHESIS",
+      "provenance": [{"source_id":"ovidhan-phase-3g-editorial-review","source_type":"INTERNAL_EDITORIAL_REVIEW","note":"Migrated from the reviewed optional Phase 3G word-order hypothesis; no prevalence claim."}],
+      "review_status": "REVIEWED_OPTIONAL",
+      "reviewed_at": "2026-08-21",
+      "scope_notes": "A conservative supporting reason to review canonical English constituent order.",
+      "exclusions": ["Do not infer that Bangla caused a learner response.", "Do not infer prevalence or probability."],
+      "version": 1
+    },
+    {
+      "edge_id": "transfer:literal_translation:fixed_expression",
+      "source_language": "bn",
+      "source_pattern_id": "LITERAL_TRANSLATION_TRANSFER",
+      "target_skill_id": "fixed_expression",
+      "relationship_type": "TRANSFER_RISK_FOR",
+      "evidence_class": "CURATED_TRANSFER_HYPOTHESIS",
+      "provenance": [{"source_id":"ovidhan-phase-3g-editorial-review","source_type":"INTERNAL_EDITORIAL_REVIEW","note":"Migrated from the reviewed optional Phase 3G literal-translation hypothesis; no prevalence claim."}],
+      "review_status": "REVIEWED_OPTIONAL",
+      "reviewed_at": "2026-08-21",
+      "scope_notes": "A small supporting signal for reviewing fixed English expressions instead of word-for-word transfer.",
+      "exclusions": ["Do not infer that Bangla caused a learner response.", "Do not infer prevalence or probability."],
+      "version": 1
+    }
+  ]
+}
