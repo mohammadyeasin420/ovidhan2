@@ -14,4 +14,7 @@ goals.mappings.forEach(mapping => {
 });
 const university = goals.mappings.filter(mapping => mapping.goal_id === 'UNIVERSITY_ADMISSION');
 assert.ok(university.length > 0 && university.length < 10, 'University mapping must remain intentionally sparse');
+const bcsWriting = goals.mappings.filter(mapping => mapping.goal_id === 'BCS' && ['writing_precis','formal_letter_writing'].includes(mapping.skill_id));
+assert.equal(bcsWriting.length, 2);
+assert.ok(bcsWriting.every(mapping => mapping.importance === 'CORE'));
 console.log('PASS goal requirements: six stable goals with reviewed explicit mappings');

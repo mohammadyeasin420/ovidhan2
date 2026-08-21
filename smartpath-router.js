@@ -1,4 +1,4 @@
-/* Ovidhan SmartPath V1 — deterministic, explainable, offline-capable routing. */
+/* Ovidhan SmartPath V1 — deterministic routing with static same-origin configuration. */
 (function (root, factory) {
     const api = factory();
     if (typeof module === 'object' && module.exports) module.exports = api;
@@ -252,10 +252,24 @@
         });
         card.appendChild(action); host.appendChild(card);
     }
+    function bindGoalSelector(win, onChange) {
+        const select = win.document.getElementById('smartPathGoal');
+        const learning = win.OvidhanLearning;
+        if (!select || !learning || typeof learning.getRoutingGoal !== 'function' || typeof learning.setGoal !== 'function') return false;
+        select.value = learning.getRoutingGoal();
+        select.addEventListener('change', () => {
+            const goal = learning.setGoal(select.value);
+            select.value = learning.getRoutingGoal();
+            if (typeof onChange === 'function') onChange(goal);
+        });
+        return true;
+    }
     function mount(win) {
         const host = win.document.getElementById('smartPath');
         if (!host) return;
         const renderFallback = () => renderPanel(win, fallbackRecommendation(win));
+        let rebuild = renderFallback;
+        bindGoalSelector(win, () => rebuild());
         if (!win.fetch || !win.OvidhanLearning || !win.OvidhanMistakeMirror || !win.OvidhanMistakeProfile) return renderFallback();
         Promise.all([
             win.fetch('/skill-mistake-graph.json',{credentials:'same-origin'}).then(r => r.ok ? r.json() : Promise.reject()),
@@ -263,16 +277,16 @@
             win.fetch('/goal-skill-requirements.json',{credentials:'same-origin'}).then(r => r.ok ? r.json() : null).catch(() => null),
             win.fetch('/smartpath-destinations.json',{credentials:'same-origin'}).then(r => r.ok ? r.json() : Promise.reject())
         ]).then(([graph, transferGraph, goalGraph, destinationGraph]) => {
-            const build = () => {
+            rebuild = () => {
                 const state = win.OvidhanLearning.getState();
                 const profile = win.OvidhanMistakeProfile.aggregate(win.OvidhanMistakeMirror.items, state, graph);
                 const destinations = mistakeDestinations(win.OvidhanMistakeMirror.items, graph).concat(safeArray(destinationGraph.destinations));
                 const result = recommend({state,profile,graph,transferGraph,goalGraph,destinations,nowMs:Date.now()});
                 if (result) renderPanel(win,result); else renderFallback();
             };
-            win.addEventListener('ovidhan:mistake-profile-update', build); build();
+            win.addEventListener('ovidhan:mistake-profile-update', rebuild); rebuild();
         }).catch(renderFallback);
     }
 
-    return Object.freeze({ GOAL_IDS, REASONS, safeGoal, evidenceIsSufficient, validTransferEdges, validGoalMappings, mistakeDestinations, recommend, mount });
+    return Object.freeze({ GOAL_IDS, REASONS, safeGoal, evidenceIsSufficient, validTransferEdges, validGoalMappings, mistakeDestinations, recommend, fallbackRecommendation, bindGoalSelector, mount });
 });

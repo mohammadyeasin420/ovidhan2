@@ -6,8 +6,8 @@
     {"goal_id":"BCS","skill_id":"indefinite_article_a_an","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged BCS and has reviewed practice."},
     {"goal_id":"BCS","skill_id":"adjective_preposition","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged BCS and has reviewed practice."},
     {"goal_id":"BCS","skill_id":"third_person_s","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged BCS and has reviewed practice."},
-    {"goal_id":"BCS","skill_id":"writing_precis","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Reviewed Précis/Summary page documents BPSC Summary practice without claiming universal applicability."},
-    {"goal_id":"BCS","skill_id":"formal_letter_writing","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Reviewed BCS Candidate Center links to general writing practice for the written stage."},
+    {"goal_id":"BCS","skill_id":"writing_precis","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"The reviewed official BPSC Written English syllabus directly includes a 20-mark Summary task."},
+    {"goal_id":"BCS","skill_id":"formal_letter_writing","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"The reviewed official BPSC Written English syllabus directly includes a 20-mark Letter to the Editor task related to the passage thematic issue."},
 
     {"goal_id":"IELTS","skill_id":"present_perfect_time_reference","importance":"SUPPORTING","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged IELTS."},
     {"goal_id":"IELTS","skill_id":"word_choice_register","importance":"CORE","evidence_class":"CURATED_REPOSITORY_MAPPING","source_or_rationale":"Existing canonical skill is tagged IELTS and supports reviewed writing/register practice."},

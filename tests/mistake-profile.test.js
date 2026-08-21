@@ -62,6 +62,10 @@ test('improving family receives reinforcement', () => {
     assert.equal(next.item.mistake_family,'fixed-preposition');
     assert.equal(next.reason_code,'REINFORCEMENT');
 });
+test('legacy next action is suppressed only when SmartPath is present', () => {
+    assert.equal(profile.shouldRenderLegacyNext({document:{getElementById:id=>id==='smartPath'?{}:null}}),false);
+    assert.equal(profile.shouldRenderLegacyNext({document:{getElementById:()=>null}}),true);
+});
 test('profile schema and analytics vocabulary contain no PII or raw content', () => {
     const forbidden=/name|email|phone|location|school|raw|audio|transcript|message/i;
     ['profile_state','evidence_band','destination_id','reason_code','priority_band'].forEach(key=>assert.doesNotMatch(key,forbidden));

@@ -76,17 +76,34 @@ test('corrupt or missing supporting graphs fall back safely', () => {
     assert.deepEqual(router.validGoalMappings(null,new Set()),[]);
     assert.ok(run({}, {transferGraph:null,goalGraph:null}));
 });
+test('enhanced asset failure retains the existing recommendation fallback', () => {
+    const fallback=router.fallbackRecommendation({
+        OvidhanMistakeMirror:{items},
+        OvidhanMistakeProfile:profileApi,
+        OvidhanLearning:{getState:()=>({goal:null,mistakeSignals:{},recentActions:[]})}
+    });
+    assert.ok(fallback); assert.equal(fallback.fallback,true); assert.match(fallback.destination_id,/^mistake:/);
+});
 test('writing destinations resolve to their canonical pages', () => {
     const bySkill=new Map(destinationGraph.destinations.map(x=>[x.skill_id,x]));
     assert.equal(bySkill.get('writing_precis').url,'/precis-summary-writing-bangla.html');
     assert.equal(bySkill.get('formal_letter_writing').url,'/formal-letter-writing-bangla.html');
 });
-test('router is bounded and contains no random AI or external-network dependency', () => {
+test('router is bounded and contains no random AI or third-party network dependency', () => {
     const source=require('node:fs').readFileSync(require.resolve('../smartpath-router.js'),'utf8');
     assert.doesNotMatch(source,/Math\.random|openai|fetch\(['"]https?:|XMLHttpRequest/i);
     const result=run({});
     assert.ok(router.REASONS.includes(result.primary_reason));
     assert.deepEqual(Object.keys(result.score_breakdown),['learner_weakness','review_urgency','goal_relevance','difficulty_fit','prerequisite_readiness','recent_mistake_relevance','curated_transfer_risk','gateway_value','repetition_penalty','recently_practiced_penalty','new_skill']);
+});
+test('goal selector initializes, persists through learner state, and reroutes immediately', () => {
+    let goal='GENERAL_ENGLISH'; let reroutes=0; let changeHandler;
+    const select={value:'',addEventListener:(type,handler)=>{assert.equal(type,'change');changeHandler=handler;}};
+    const win={document:{getElementById:id=>id==='smartPathGoal'?select:null},OvidhanLearning:{getRoutingGoal:()=>goal,setGoal:value=>(goal=value)}};
+    assert.equal(router.bindGoalSelector(win,()=>{reroutes+=1;}),true);
+    assert.equal(select.value,'GENERAL_ENGLISH');
+    select.value='BCS'; changeHandler();
+    assert.equal(goal,'BCS'); assert.equal(select.value,'BCS'); assert.equal(reroutes,1);
 });
 test('contracts and analytics integration contain no raw learner content fields', () => {
     const contract=JSON.stringify({transferGraph,goalGraph,destinationGraph});

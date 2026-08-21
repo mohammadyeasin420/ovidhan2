@@ -46,7 +46,7 @@ The Précis page now exposes `skill:writing_precis`; the Formal Letter page alre
 
 ## SmartPath V1 scoring
 
-`smartpath-router.js` is framework-free, deterministic, independently testable and offline after static assets load. The timestamp is an explicit input. It returns one primary recommendation, optional ranked diagnostics, bounded score, priority band, primary/supporting reasons, factor breakdown and confidence band.
+`smartpath-router.js` is framework-free, deterministic and independently testable. It uses static same-origin JSON fetches, makes no AI, external API or third-party network request, and falls back safely to the existing Mistake Profile recommendation logic when enhanced resources are unavailable. No service worker or full offline infrastructure is claimed. The timestamp is an explicit input. It returns one primary recommendation, optional ranked diagnostics, bounded score, priority band, primary/supporting reasons, factor breakdown and confidence band.
 
 V1 bounded factors:
 

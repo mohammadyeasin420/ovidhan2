@@ -20,6 +20,9 @@ assert.equal(transfer.edges.length,4); assert.equal(goals.goal_ids.length,6); as
 assert.match(precis,/name="ovidhan:skill"[^>]+skill:writing_precis|content="skill:writing_precis" name="ovidhan:skill"/);
 assert.match(formal,/content="skill:formal_letter_writing" name="ovidhan:skill"/);
 assert.match(surface,/id="smartPath"/); assert.match(surface,/smartpath-router\.js/);
+assert.match(surface,/id="smartPathGoal"/);
+assert.equal(goals.mappings.filter(x=>x.goal_id==='BCS'&&['writing_precis','formal_letter_writing'].includes(x.skill_id)&&x.importance==='CORE').length,2);
+assert.match(read('mistake-profile.js'),/shouldRenderLegacyNext/);
 assert.match(foundation,/getRoutingGoal/); assert.match(foundation,/GENERAL_ENGLISH/);
 assert.doesNotMatch([read('smartpath-router.js'),surface,foundation].join('\n'),/raw_writing|learner_textarea|audio_transcript/i);
 console.log(JSON.stringify({status:'PASS',graph:{families:11,skills:52,itemMappings:30},transferPatterns:4,goals:6,writingDestinations:2},null,2));
