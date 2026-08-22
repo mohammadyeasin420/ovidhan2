@@ -2,7 +2,10 @@
 (function (root, factory) {
     const api = factory();
     if (typeof module === 'object' && module.exports) module.exports = api;
-    if (root && root.document) { root.OvidhanMistakeMirror = api; api.mount(root); }
+    if (root && root.document) {
+        root.OvidhanMistakeMirror = api;
+        root.OvidhanMistakeMirrorReady = api.loadReviewedPack(root).then(() => api.mount(root));
+    }
 })(typeof window !== 'undefined' ? window : null, function () {
     'use strict';
 
@@ -47,7 +50,30 @@
         source_status: 'manually-reviewed', reviewed_at: REVIEW_DATE
     }));
 
+    function normalizeReviewedPack(records) {
+        if (!Array.isArray(records)) return [];
+        return records.map(record => Object.freeze({
+            id: record.id, version: 1, type: 'multiple-choice', question: record.question,
+            options: record.options.map(option => Object.freeze({ id: option.id, text: option.text })),
+            correct_option: record.correct_option, correct: record.correct_answer,
+            category: 'grammar', micro_skill: record.micro_skill, mistake_family: record.family,
+            explanation_bn: record.explanation_bn, explanation_en: record.rule_en,
+            common_wrong_reason_bn: record.common_wrong_reason_bn,
+            difficulty: String(record.difficulty).toLowerCase(), source_status: 'reviewed',
+            source_type: 'OVIDHAN_EDITORIAL', review_status: 'REVIEWED',
+            practice_type: record.practice_type, official_question: record.official_question
+        }));
+    }
+
+    function addReviewedPack(records) {
+        const additions = normalizeReviewedPack(records);
+        const existing = new Set(items.map(item => item.id));
+        additions.forEach(item => { if (!existing.has(item.id)) { items.push(item); existing.add(item.id); } });
+        return items;
+    }
+
     function optionsFor(item, stage) {
+        if (item.type === 'multiple-choice') return item.options;
         return stage === 'repair'
             ? [{ id: 'correct', text: item.correct }, { id: 'incorrect', text: item.incorrect }]
             : [{ id: 'incorrect', text: item.incorrect }, { id: 'correct', text: item.correct }];
@@ -89,16 +115,17 @@
             const card = doc.createElement('div'); card.className = 'mm-card';
             const heading = doc.createElement('h3'); heading.textContent = label; heading.tabIndex = -1; card.appendChild(heading);
             const progress = doc.createElement('p'); progress.className = 'mm-progress'; progress.textContent = stage === 'initial' ? 'ধাপ ১/৩ · Diagnose' : stage === 'repair' ? 'ধাপ ২/৩ · Repair' : 'ধাপ ৩/৩ · Retest'; card.appendChild(progress);
-            const prompt = doc.createElement('p'); prompt.className = 'mm-prompt'; prompt.textContent = stage === 'initial' ? item.incorrect : 'Choose the correct sentence:'; card.appendChild(prompt);
+            const prompt = doc.createElement('p'); prompt.className = 'mm-prompt';
+            prompt.textContent = item.type === 'multiple-choice' ? item.question : stage === 'initial' ? item.incorrect : 'Choose the correct sentence:'; card.appendChild(prompt);
             const group = doc.createElement('div'); group.className = 'mm-options'; group.setAttribute('role','group'); group.setAttribute('aria-label', label);
-            const opts = stage === 'initial' ? [{id:'correct',text:'✅ Correct'}, {id:'incorrect',text:'❌ Incorrect'}] : optionsFor(item, stage);
+            const opts = item.type === 'multiple-choice' ? optionsFor(item, stage) : stage === 'initial' ? [{id:'correct',text:'✅ Correct'}, {id:'incorrect',text:'❌ Incorrect'}] : optionsFor(item, stage);
             opts.forEach(option => { const button = doc.createElement('button'); button.type='button'; button.className='mm-option'; button.textContent=option.text; button.addEventListener('click', () => answer(option.id)); group.appendChild(button); });
             card.appendChild(group); host.appendChild(card); if (shouldFocusHeading) heading.focus();
         }
         function feedback(result) {
             const box = doc.createElement('div'); box.className = 'mm-feedback ' + result; box.setAttribute('role', 'status'); box.tabIndex = -1;
             const title = doc.createElement('strong'); title.textContent = result === 'correct' ? 'ঠিক ধরেছেন।' : 'এটি আবার দেখুন।'; box.appendChild(title);
-            const wrong = doc.createElement('p'); wrong.textContent = '❌ ' + item.incorrect; box.appendChild(wrong);
+            if (item.incorrect) { const wrong = doc.createElement('p'); wrong.textContent = '❌ ' + item.incorrect; box.appendChild(wrong); }
             const correct = doc.createElement('p'); correct.textContent = '✅ ' + item.correct; box.appendChild(correct);
             const bn = doc.createElement('p'); bn.lang='bn'; bn.textContent = item.explanation_bn; box.appendChild(bn);
             const en = doc.createElement('p'); en.textContent = item.explanation_en; box.appendChild(en);
@@ -113,7 +140,8 @@
         function answer(optionId) {
             if (host.querySelector('.mm-feedback')) return;
             Array.from(host.querySelectorAll('.mm-option')).forEach(button => { button.disabled = true; });
-            const result = optionId === (stage === 'initial' ? 'incorrect' : 'correct') ? 'correct' : 'incorrect';
+            const expected = item.type === 'multiple-choice' ? item.correct_option : stage === 'initial' ? 'incorrect' : 'correct';
+            const result = optionId === expected ? 'correct' : 'incorrect';
             const api = learning();
             if (api) api.recordMistakeSignal(item.id, stage, result);
             win.dispatchEvent(new win.CustomEvent('ovidhan:mistake-profile-update'));
@@ -132,7 +160,7 @@
             const next=chooseNext(item,api?api.getState():{});
             emit('mistake_next_action',{mistake_id:item.id,destination_id:next.item.id,reason_code:next.reason_code,score_band:next.score_band || next.priority_band.toLowerCase()},item.id);
             const panel=doc.createElement('div'); panel.className='mm-complete';
-            const summary=doc.createElement('p'); summary.textContent=(initialResult==='incorrect'&&result==='correct'?'আপনি ভুলটি repair করেছেন। ':'অনুশীলন সম্পন্ন। ')+ 'পরের ধাপ: '+next.item.correct; panel.appendChild(summary);
+            const summary=doc.createElement('p'); summary.textContent=(initialResult==='incorrect'&&result==='correct'?'আপনি ভুলটি repair করেছেন। ':'অনুশীলন সম্পন্ন। ')+ 'পরের ধাপ: '+(next.item.question || next.item.correct); panel.appendChild(summary);
             const button=doc.createElement('button'); button.type='button'; button.className='btn btn-secondary'; button.textContent='পরের reviewed mistake →'; button.addEventListener('click',()=>{item=next.item;stage='initial';initialResult=null;completed=false;emit('mistake_mirror_start',{mistake_id:item.id,mistake_family:item.mistake_family},item.id);render(true);}); panel.appendChild(button);
             host.querySelector('.mm-card').appendChild(panel);
         }
@@ -146,5 +174,12 @@
         });
         render(false);
     }
-    return Object.freeze({ items, optionsFor, chooseNext, mount });
+    function loadReviewedPack(win) {
+        if (!win || typeof win.fetch !== 'function') return Promise.resolve(items);
+        return win.fetch('/data/bcs-smartpath-practice-v1.json', { credentials: 'same-origin' })
+            .then(response => response.ok ? response.json() : Promise.reject(new Error('practice pack unavailable')))
+            .then(records => { addReviewedPack(records); win.dispatchEvent(new win.CustomEvent('ovidhan:practice-pack-loaded')); return items; })
+            .catch(() => items);
+    }
+    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, loadReviewedPack, mount });
 });
