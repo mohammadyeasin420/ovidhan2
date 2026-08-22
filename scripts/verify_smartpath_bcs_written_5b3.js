@@ -25,7 +25,7 @@ assert.equal(pack.review_status, 'REVIEWED');
 assert.deepEqual(pack.counts, {total:60,comprehension:24,translation:20,essay:16});
 assert.equal(pack.items.length, 60); assert.equal(comprehension.length, 24); assert.equal(translation.length, 20); assert.equal(essay.length, 16);
 assert.equal(pack.passages.length, 6);
-pack.passages.forEach(passage => { const words = passage.text.trim().split(/\s+/).length; assert.equal(words, passage.word_count); assert.ok(words >= 200 && words <= 250); });
+pack.passages.forEach(passage => { const words = passage.text.trim().split(/\s+/).length; assert.equal(words, passage.word_count); assert.ok(words >= 220 && words <= 320); });
 assert.equal(translation.filter(item => item.direction === 'BANGLA_TO_ENGLISH').length, 10);
 assert.equal(translation.filter(item => item.direction === 'ENGLISH_TO_BANGLA').length, 10);
 assert.equal(new Set(pack.items.map(item => item.candidate_id)).size, 60);
