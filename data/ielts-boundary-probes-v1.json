@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "pilot_id": "ielts-boundary-v1",
+  "anchor_assessment_id": "ielts-diagnostic-v1",
+  "anchor_question_set_sha256": "8885fda5188fe35301cda2ed2bdbeb255c460470b58c6cac544e4b31a9a8455d",
+  "evidence_type": "BOUNDARY_PROBE",
+  "review_status": "REVIEWED",
+  "probes": [
+    {
+      "probe_id": "ielts-boundary-v1-p01",
+      "evidence_id": "ielts-boundary-v1:p01",
+      "anchor_question_id": "ielts-diag-v1-q06",
+      "primary_skill_id": "compound_subject_agreement",
+      "contrast_dimension": "nearest_subject_number",
+      "question": "Neither the teacher nor the students _____ aware of the change.",
+      "options": ["was", "were", "is", "has been"],
+      "correct_index": 1,
+      "explanation_en": "With \"neither...nor\", the verb commonly agrees with the nearer subject. Here \"students\" is plural, so \"were\" is correct.",
+      "explanation_bn": "\"neither...nor\"-এ verb সাধারণত কাছের subject-এর সঙ্গে agree করে। এখানে \"students\" plural, তাই \"were\" সঠিক।",
+      "scored": false,
+      "rationale": "The anchor has singular \"teacher\" as the nearer subject. The probe reverses the order so plural \"students\" becomes nearer while keeping the construction and meaning nearly identical.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "probe_id": "ielts-boundary-v1-p02",
+      "evidence_id": "ielts-boundary-v1:p02",
+      "anchor_question_id": "ielts-diag-v1-q08",
+      "primary_skill_id": "indefinite_article_a_an",
+      "contrast_dimension": "initial_sound_exception",
+      "question": "He is _____ honest person.",
+      "options": ["a", "an", "the", "no article"],
+      "correct_index": 1,
+      "explanation_en": "The \"h\" in \"honest\" is silent, so the word begins with a vowel sound. Use \"an\".",
+      "explanation_bn": "\"honest\" শব্দের \"h\" উচ্চারিত হয় না, তাই শব্দটি vowel sound দিয়ে শুরু হয়। সেজন্য \"an\" ব্যবহার হবে।",
+      "scored": false,
+      "rationale": "The anchor tests \"a\" before \"university\", which begins with a consonant sound. This probe tests transfer to a silent-h word beginning with a vowel sound.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "probe_id": "ielts-boundary-v1-p03",
+      "evidence_id": "ielts-boundary-v1:p03",
+      "anchor_question_id": "ielts-diag-v1-q07",
+      "primary_skill_id": "gerund_after_preposition",
+      "contrast_dimension": "new_preposition_context",
+      "question": "She left without _____ goodbye.",
+      "options": ["say", "saying", "to say", "said"],
+      "correct_index": 1,
+      "explanation_en": "After the preposition \"without\", use the -ing form here: \"saying\".",
+      "explanation_bn": "Preposition \"without\"-এর পরে এখানে -ing form ব্যবহার হবে: \"saying\"।",
+      "scored": false,
+      "rationale": "The anchor uses \"look forward to hearing\", where \"to\" functions as a preposition. This probe tests the same pattern after the ordinary preposition \"without\".",
+      "review_status": "REVIEWED"
+    },
+    {
+      "probe_id": "ielts-boundary-v1-p04",
+      "evidence_id": "ielts-boundary-v1:p04",
+      "anchor_question_id": "ielts-diag-v1-q25",
+      "primary_skill_id": "essay_thesis_focus",
+      "contrast_dimension": "new_topic_same_thesis_structure",
+      "question": "Which thesis statement is the clearest for an opinion essay about remote work?",
+      "options": [
+        "Remote work has many advantages and disadvantages.",
+        "Companies should adopt hybrid work because it preserves flexibility while supporting collaboration.",
+        "Remote work is becoming more popular.",
+        "I think remote work is good."
+      ],
+      "correct_index": 1,
+      "explanation_en": "Option B gives a clear position and focused supporting reasons. The other options are too broad, descriptive, or vague.",
+      "explanation_bn": "B বিকল্পটি একটি স্পষ্ট অবস্থান ও নির্দিষ্ট supporting reason দেয়। অন্য বিকল্পগুলো খুব সাধারণ, বর্ণনামূলক বা অস্পষ্ট।",
+      "scored": false,
+      "rationale": "The anchor asks the learner to identify a focused thesis on another topic. This probe preserves the same recognition task while changing the topic.",
+      "review_status": "REVIEWED"
+    }
+  ]
+}

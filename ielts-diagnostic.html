@@ -99,6 +99,12 @@ a{color:var(--teal)}
 .feedback{display:none;margin-top:18px;padding:14px 16px;border-radius:11px;background:var(--surface2);color:var(--mid)}
 .feedback.show{display:block}
 .feedback strong{color:var(--gold)}
+.boundary-check{margin-top:18px;padding:18px;border:1px solid var(--teal);border-radius:12px;background:var(--surface2)}
+.boundary-check h3{margin:0;color:var(--teal)}
+.boundary-check .options{margin-top:12px}
+.boundary-note{margin:2px 0 12px;color:var(--mid);font-size:.9rem}
+.boundary-result{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);color:var(--mid)}
+.boundary-result strong{color:var(--gold)}
 .nav-row{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
 .btn{border:0;border-radius:40px;padding:12px 22px;font:700 14px var(--font-en);cursor:pointer;text-decoration:none;display:inline-block}
 .btn-primary{background:var(--gold);color:#0B1F1A}
@@ -442,6 +448,12 @@ document.addEventListener('DOMContentLoaded', function() {
    <div class="action-grid" id="canonicalSignalGrid"></div>
   </div>
 
+  <div class="next-actions" id="boundarySignals" hidden>
+   <h3 style="color:var(--gold)">Transfer checks</h3>
+   <p class="small-note">These optional checks test whether a skill held in a nearby context. They do not change your diagnostic score.</p>
+   <div class="action-grid" id="boundarySignalGrid"></div>
+  </div>
+
   <div class="next-actions">
    <h3 style="color:var(--gold)">🎯 Your Recommended Next Steps</h3>
    <div class="action-grid" id="actionGrid"></div>
@@ -492,6 +504,21 @@ let diagnosticSkillMap=[];
 fetch('/data/ielts-diagnostic-skill-map-v1.json',{credentials:'same-origin'})
  .then(response=>response.ok?response.json():Promise.reject())
  .then(manifest=>{diagnosticSkillMap=Array.isArray(manifest.items)?manifest.items:[]})
+ .catch(()=>{});
+const BOUNDARY_PILOT_ID='ielts-boundary-v1';
+const BOUNDARY_ANCHOR_ID='ielts-diagnostic-v1';
+const BOUNDARY_ANCHOR_SHA256='8885fda5188fe35301cda2ed2bdbeb255c460470b58c6cac544e4b31a9a8455d';
+let boundaryProbes=[];
+let boundaryByAnchor=new Map();
+let boundaryRuntime=new Map();
+fetch('/data/ielts-boundary-probes-v1.json',{credentials:'same-origin'})
+ .then(response=>response.ok?response.json():Promise.reject())
+ .then(asset=>{
+   if(asset?.pilot_id!==BOUNDARY_PILOT_ID || asset?.anchor_assessment_id!==BOUNDARY_ANCHOR_ID || asset?.anchor_question_set_sha256!==BOUNDARY_ANCHOR_SHA256 || !Array.isArray(asset.probes))return;
+   boundaryProbes=asset.probes;
+   boundaryByAnchor=new Map(boundaryProbes.map(probe=>[probe.anchor_question_id,probe]));
+   resetBoundaryRuntime();
+ })
  .catch(()=>{});
 let current = 0;
 let answers = new Array(QUESTIONS.length).fill(null);
@@ -571,9 +598,45 @@ document.getElementById('startBtn').addEventListener('click',()=>{
 
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 
+function resetBoundaryRuntime(){
+ boundaryRuntime=new Map(boundaryProbes.map(probe=>[probe.probe_id,{status:'PENDING',selectedIndex:null,correct:null}]));
+}
+function deriveBoundarySignal(anchorCorrect,probeCorrect){
+ if(anchorCorrect&&probeCorrect)return {code:'TRANSFER_OBSERVED',label:'Held in one nearby case'};
+ if(anchorCorrect&&!probeCorrect)return {code:'BOUNDARY_CANDIDATE',label:'Nearby context needs verification'};
+ if(!anchorCorrect&&probeCorrect)return {code:'CONTEXT_SENSITIVE_SIGNAL',label:'Mixed result across nearby cases'};
+ return {code:'REPEATED_GAP_SIGNAL',label:'Repeated gap across nearby cases'};
+}
+function buildBoundaryEvidencePayload(completed,states=boundaryRuntime,probes=boundaryProbes){
+ if(!completed)return [];
+ return probes.flatMap(probe=>{
+   const state=states.get(probe.probe_id);
+   return state?.status==='ANSWERED'?[{evidenceId:probe.evidence_id,skillId:probe.primary_skill_id,evidenceType:'BOUNDARY_PROBE',result:state.correct?'correct':'incorrect',sourceId:BOUNDARY_PILOT_ID}]:[];
+ });
+}
+function boundaryProbeHTML(probe,state,anchorCorrect){
+ const answered=state.status==='ANSWERED';
+ const options=probe.options.map((option,index)=>{
+   let classes='option boundary-option';
+   if(state.selectedIndex===index)classes+=' selected';
+   if(answered){if(index===probe.correct_index)classes+=' correct';else if(index===state.selectedIndex)classes+=' incorrect'}
+   return `<button class="${classes}" data-probe-index="${index}" ${answered?'disabled':''}><strong>${String.fromCharCode(65+index)}.</strong> ${escapeHTML(option)}</button>`;
+ }).join('');
+ let result='';
+ if(answered){
+   const signal=deriveBoundarySignal(anchorCorrect,state.correct);
+   result=`<div class="boundary-result"><strong>${state.correct?'✅ Transfer answer correct':'❌ Transfer answer not quite'}</strong><br>${escapeHTML(probe.explanation_en)}<br><span style="color:var(--gold)">বাংলা:</span> ${escapeHTML(probe.explanation_bn)}<br><strong>${escapeHTML(signal.label)}</strong><br><span class="small-note">One transfer check is not enough to prove mastery or weakness.</span></div>`;
+ }
+ return `<div class="boundary-check"><h3>Quick transfer check</h3><p class="boundary-note">Optional · Not scored<br>This does not change your 40-question readiness score.</p><div class="question">${escapeHTML(probe.question)}</div><div class="options">${options}</div>${answered?'':`<button class="btn btn-secondary" id="skipBoundaryBtn" type="button">Skip transfer check</button>`}${result}</div>`;
+}
+
 function renderQuestion(){
  const item=QUESTIONS[current], meta=SKILLS[item.skill];
  const selected=answers[current];
+ const probe=boundaryByAnchor.get(item.id);
+ const probeState=probe?boundaryRuntime.get(probe.probe_id):null;
+ const probePending=probeState?.status==='PENDING';
+ const revealAnchor=locked[current]&&!probePending;
  document.getElementById('progressText').textContent=`Question ${current+1} of ${QUESTIONS.length}`;
  document.getElementById('progressSkill').textContent=meta.label;
  document.getElementById('progressBar').style.width=((current)/QUESTIONS.length*100)+'%';
@@ -581,26 +644,41 @@ function renderQuestion(){
  let opts=item.options.map((o,i)=>{
    let c='option';
    if(selected===i)c+=' selected';
-   if(locked[current]){ if(i===item.a)c+=' correct'; else if(i===selected)c+=' incorrect'; }
+   if(revealAnchor){ if(i===item.a)c+=' correct'; else if(i===selected)c+=' incorrect'; }
    return `<button class="${c}" data-i="${i}" ${locked[current]?'disabled':''}><strong>${String.fromCharCode(65+i)}.</strong> ${escapeHTML(o)}</button>`
  }).join('');
  let fb='';
- if(locked[current]){
+ if(revealAnchor){
    const ok=selected===item.a;
    fb=`<div class="feedback show"><strong>${ok?'✅ Correct':'❌ Not quite'}</strong><br>${escapeHTML(item.exp)}<br><span style="color:var(--gold)">বাংলা:</span> ${escapeHTML(item.bn)}</div>`
  }
+ const probeBlock=locked[current]&&probe&&probeState?.status!=='SKIPPED'?boundaryProbeHTML(probe,probeState,selected===item.a):'';
+ const canContinue=locked[current]&&!probePending;
  host.innerHTML=`<div class="q-card active">
    <div class="q-head"><span class="q-skill">${meta.icon} ${meta.label}</span><span class="q-num">#${current+1}</span></div>
    ${passage}<div class="question">${escapeHTML(item.q)}</div>
-   <div class="options">${opts}</div>${fb}
+   <div class="options">${opts}</div>${fb}${probeBlock}
    <div class="nav-row">
     <button class="btn btn-secondary" id="prevBtn" ${current===0?'disabled':''}>← Previous</button>
-    <button class="btn btn-primary" id="nextBtn" ${!locked[current]?'disabled':''}>${current===QUESTIONS.length-1?'See My Results':'Next →'}</button>
+    <button class="btn btn-primary" id="nextBtn" ${!canContinue?'disabled':''}>${current===QUESTIONS.length-1?'See My Results':'Next →'}</button>
    </div>
  </div>`;
- host.querySelectorAll('.option').forEach(b=>b.addEventListener('click',()=>selectAnswer(Number(b.dataset.i))));
+ host.querySelectorAll('.option[data-i]').forEach(b=>b.addEventListener('click',()=>selectAnswer(Number(b.dataset.i))));
+ host.querySelectorAll('.boundary-option').forEach(b=>b.addEventListener('click',()=>selectBoundaryAnswer(Number(b.dataset.probeIndex))));
+ document.getElementById('skipBoundaryBtn')?.addEventListener('click',skipBoundaryProbe);
  document.getElementById('prevBtn').addEventListener('click',()=>{current--;renderQuestion();});
  document.getElementById('nextBtn').addEventListener('click',()=>{if(current===QUESTIONS.length-1)showResults();else{current++;renderQuestion();}});
+}
+
+function selectBoundaryAnswer(index){
+ const probe=boundaryByAnchor.get(QUESTIONS[current].id),state=probe&&boundaryRuntime.get(probe.probe_id);
+ if(!probe || state?.status!=='PENDING' || index<0 || index>=probe.options.length)return;
+ state.status='ANSWERED';state.selectedIndex=index;state.correct=index===probe.correct_index;renderQuestion();
+}
+function skipBoundaryProbe(){
+ const probe=boundaryByAnchor.get(QUESTIONS[current].id),state=probe&&boundaryRuntime.get(probe.probe_id);
+ if(!probe || state?.status!=='PENDING')return;
+ state.status='SKIPPED';state.selectedIndex=null;state.correct=null;renderQuestion();
 }
 
 function selectAnswer(i){
@@ -642,6 +720,22 @@ function showResults(){
 
  const sorted=Object.keys(SKILLS).sort((a,b)=>(counts[a]/totals[a])-(counts[b]/totals[b]));
  const sharedEvidenceRecorded=recordCanonicalEvidence();
+ const boundaryEvidence=buildBoundaryEvidencePayload(true);
+ const learning=window.OvidhanLearning;
+ if(learning && typeof learning.recordSkillEvidence==='function')boundaryEvidence.forEach(entry=>learning.recordSkillEvidence(entry.evidenceId,entry.skillId,entry.evidenceType,entry.result,entry.sourceId));
+ const boundarySignals=document.getElementById('boundarySignals');
+ const boundarySignalGrid=document.getElementById('boundarySignalGrid');
+ if(boundarySignals&&boundarySignalGrid){
+   boundarySignalGrid.innerHTML=boundaryProbes.flatMap(probe=>{
+     const state=boundaryRuntime.get(probe.probe_id);
+     if(state?.status!=='ANSWERED')return [];
+     const anchorIndex=QUESTIONS.findIndex(question=>question.id===probe.anchor_question_id);
+     const signal=deriveBoundarySignal(answers[anchorIndex]===QUESTIONS[anchorIndex].a,state.correct);
+     const names={compound_subject_agreement:'Subject–verb agreement',indefinite_article_a_an:'A / an by sound',gerund_after_preposition:'-ing after prepositions',essay_thesis_focus:'Essay thesis and focus'};
+     return [`<div class="action-card"><b>${escapeHTML(names[probe.primary_skill_id]||probe.primary_skill_id)}</b><br>${escapeHTML(signal.label)}<br><span class="small-note">One transfer check is not enough to prove mastery or weakness.</span></div>`];
+   }).join('');
+   boundarySignals.hidden=boundaryEvidence.length===0;
+ }
  if(!sharedEvidenceRecorded || !window.OvidhanLearning?.storagePersistent)saveResult(correct, sorted[0]);
 
  const planTips={
@@ -712,7 +806,9 @@ document.addEventListener('keydown',(e)=>{
   if(e.key==='ArrowLeft' && current>0){
     e.preventDefault(); current--; renderQuestion(); return;
   }
-  if(e.key==='ArrowRight' && locked[current]){
+  const activeProbe=boundaryByAnchor.get(QUESTIONS[current].id);
+  const probePending=activeProbe&&boundaryRuntime.get(activeProbe.probe_id)?.status==='PENDING';
+  if(e.key==='ArrowRight' && locked[current] && !probePending){
     e.preventDefault();
     if(current===QUESTIONS.length-1) showResults();
     else { current++; renderQuestion(); }
@@ -720,7 +816,10 @@ document.addEventListener('keydown',(e)=>{
 });
 
 document.getElementById('retryBtn').addEventListener('click',()=>{
- current=0;answers.fill(null);locked.fill(false);results.style.display='none';quizArea.style.display='block';renderQuestion();
+ current=0;answers.fill(null);locked.fill(false);resetBoundaryRuntime();
+ const boundarySignals=document.getElementById('boundarySignals'),boundarySignalGrid=document.getElementById('boundarySignalGrid');
+ if(boundarySignals)boundarySignals.hidden=true;if(boundarySignalGrid)boundarySignalGrid.innerHTML='';
+ results.style.display='none';quizArea.style.display='block';renderQuestion();
 });
 document.getElementById('ieltsSmartPathBtn').addEventListener('click',()=>{
  const learning=window.OvidhanLearning;
