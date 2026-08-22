@@ -133,6 +133,10 @@
     function shouldRenderLegacyNext(win) {
         return !win.document.getElementById('smartPath');
     }
+    function bindProfileRefresh(win, render) {
+        win.addEventListener('ovidhan:mistake-profile-update', render);
+        win.addEventListener('ovidhan:practice-pack-loaded', render);
+    }
     function mount(win) {
         const host = win.document.getElementById('mistakeProfile');
         const mirror = win.OvidhanMistakeMirror;
@@ -176,7 +180,7 @@
             const confidence = observed.some(item => item.confidence === 'HIGH') ? 'HIGH' : observed.some(item => item.confidence === 'MEDIUM') ? 'MEDIUM' : 'LOW';
             learning.track('mistake_profile_view',{profile_state:observed.length?'EVIDENCE':'NEW',evidence_band:confidence},{dedupeKey:'profile'});
         }
-        win.addEventListener('ovidhan:mistake-profile-update', render);
+        bindProfileRefresh(win, render);
         render();
         if (typeof win.fetch === 'function') {
             win.fetch('/skill-mistake-graph.json', { credentials: 'same-origin' })
@@ -185,5 +189,5 @@
                 .catch(() => { /* Existing item taxonomy remains the safe fallback. */ });
         }
     }
-    return Object.freeze({ STATUSES, CONFIDENCE, signalCounts, evidenceFor, statusFor, confidenceFor, taxonomyFor, setGraph, aggregate, recommendNext, shouldRenderLegacyNext, mount });
+    return Object.freeze({ STATUSES, CONFIDENCE, signalCounts, evidenceFor, statusFor, confidenceFor, taxonomyFor, setGraph, aggregate, recommendNext, shouldRenderLegacyNext, bindProfileRefresh, mount });
 });

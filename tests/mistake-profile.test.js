@@ -66,6 +66,14 @@ test('legacy next action is suppressed only when SmartPath is present', () => {
     assert.equal(profile.shouldRenderLegacyNext({document:{getElementById:id=>id==='smartPath'?{}:null}}),false);
     assert.equal(profile.shouldRenderLegacyNext({document:{getElementById:()=>null}}),true);
 });
+test('profile rerenders for evidence updates and asynchronous practice-pack readiness', () => {
+    const listeners={}; let renders=0;
+    profile.bindProfileRefresh({addEventListener:(name,handler)=>{assert.equal(listeners[name],undefined);listeners[name]=handler;}},()=>{renders+=1;});
+    assert.deepEqual(Object.keys(listeners).sort(),['ovidhan:mistake-profile-update','ovidhan:practice-pack-loaded']);
+    listeners['ovidhan:mistake-profile-update']();
+    listeners['ovidhan:practice-pack-loaded']();
+    assert.equal(renders,2);
+});
 test('profile schema and analytics vocabulary contain no PII or raw content', () => {
     const forbidden=/name|email|phone|location|school|raw|audio|transcript|message/i;
     ['profile_state','evidence_band','destination_id','reason_code','priority_band'].forEach(key=>assert.doesNotMatch(key,forbidden));

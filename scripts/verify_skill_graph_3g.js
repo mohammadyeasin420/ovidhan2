@@ -5,7 +5,11 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const graphPath = path.join(root, 'skill-mistake-graph.json');
 const graph = JSON.parse(fs.readFileSync(graphPath, 'utf8'));
-const { items } = require('../mistake-mirror.js');
+const { items, addReviewedPack } = require('../mistake-mirror.js');
+const reviewedPack = require('../data/bcs-smartpath-practice-v1.json');
+assert.equal(items.length, 30, 'original Mistake Mirror item count');
+assert.equal(reviewedPack.length, 70, 'reviewed practice-pack item count');
+addReviewedPack(reviewedPack);
 const allowedEdges = new Set(['PREREQUISITE_OF','RELATED_TO','OFTEN_CONFUSED_WITH','TRANSFER_PATTERN_FOR','PRACTICED_BY','RELEVANT_TO_EXAM']);
 function unique(values, label) { assert.equal(new Set(values).size, values.length, `duplicate ${label}`); }
 function noDuplicates(values, label) { assert.equal(new Set(values).size, values.length, `duplicate relationship in ${label}`); }
@@ -14,7 +18,8 @@ assert.equal(graph.graph_version, 2);
 assert.equal(graph.schema_version, 1);
 assert.equal(graph.families.length, 11);
 assert.equal(graph.skills.length, 52);
-assert.equal(graph.item_mappings.length, 30);
+assert.equal(items.length, 100);
+assert.equal(graph.item_mappings.length, 100);
 unique(graph.families.map(family => family.family_id), 'family ID');
 unique(graph.skills.map(skill => skill.id), 'skill ID');
 unique(graph.item_mappings.map(mapping => mapping.item_id), 'item mapping');
@@ -24,6 +29,11 @@ const familyIds = new Set(graph.families.map(family => family.family_id));
 const skillIds = new Set(graph.skills.map(skill => skill.id));
 const transferIds = new Set(graph.transfer_patterns.map(pattern => pattern.id));
 const itemIds = new Set(items.map(item => item.id));
+assert.equal(itemIds.size, 100);
+assert.equal(items.filter(item => item.id.startsWith('mm-')).length, 30);
+assert.equal(items.filter(item => item.id.startsWith('bcs-smartpath-')).length, 70);
+const mappingsBySkill = new Map(graph.skills.map(skill => [skill.id, []]));
+graph.item_mappings.forEach(mapping => mappingsBySkill.get(mapping.primary_skill_id).push(mapping.item_id));
 graph.families.forEach(family => {
     assert.match(family.family_id, /^[A-Z0-9_]+$/);
     assert.ok(family.name_en && family.name_bn && family.description);
@@ -41,8 +51,13 @@ graph.skills.forEach(skill => {
     noDuplicates(skill.prerequisites, skill.id + ' prerequisites'); noDuplicates(skill.related_skills, skill.id + ' related');
     skill.prerequisites.forEach(id => assert.ok(skillIds.has(id) && id !== skill.id));
     skill.related_skills.forEach(id => assert.ok(skillIds.has(id) && id !== skill.id));
-    skill.example_item_ids.forEach(id => assert.ok(itemIds.has(id)));
+    skill.example_item_ids.forEach(id => assert.ok(itemIds.has(id), `${skill.id} has unknown example ${id}`));
     assert.ok(skill.example_item_ids.length || skill.orphan_reason, `${skill.id} is undocumented orphan`);
+    if (mappingsBySkill.get(skill.id).length) {
+        assert.equal(skill.status, 'ACTIVE', `${skill.id} has reviewed practice but is not ACTIVE`);
+        assert.ok(skill.example_item_ids.length, `${skill.id} has reviewed practice but no example items`);
+        assert.notEqual(skill.orphan_reason, 'Canonical coverage for future reviewed items.', `${skill.id} retains stale future-review metadata`);
+    }
 });
 graph.item_mappings.forEach(mapping => {
     assert.ok(itemIds.has(mapping.item_id)); assert.ok(skillIds.has(mapping.primary_skill_id)); assert.ok(familyIds.has(mapping.primary_family_id));
