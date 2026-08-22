@@ -5,21 +5,24 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const graphPath = path.join(root, 'skill-mistake-graph.json');
 const graph = JSON.parse(fs.readFileSync(graphPath, 'utf8'));
-const { items, addReviewedPack } = require('../mistake-mirror.js');
+const { items, addReviewedPack, addLiteraturePack } = require('../mistake-mirror.js');
 const reviewedPack = require('../data/bcs-smartpath-practice-v1.json');
+const literaturePack = require('../data/bcs-literature-smartpath-v1.json');
 assert.equal(items.length, 30, 'original Mistake Mirror item count');
 assert.equal(reviewedPack.length, 70, 'reviewed practice-pack item count');
 addReviewedPack(reviewedPack);
+assert.equal(literaturePack.items.length, 80, 'reviewed Literature item count');
+addLiteraturePack(literaturePack);
 const allowedEdges = new Set(['PREREQUISITE_OF','RELATED_TO','OFTEN_CONFUSED_WITH','TRANSFER_PATTERN_FOR','PRACTICED_BY','RELEVANT_TO_EXAM']);
 function unique(values, label) { assert.equal(new Set(values).size, values.length, `duplicate ${label}`); }
 function noDuplicates(values, label) { assert.equal(new Set(values).size, values.length, `duplicate relationship in ${label}`); }
 
-assert.equal(graph.graph_version, 2);
+assert.equal(graph.graph_version, 3);
 assert.equal(graph.schema_version, 1);
-assert.equal(graph.families.length, 11);
-assert.equal(graph.skills.length, 52);
-assert.equal(items.length, 100);
-assert.equal(graph.item_mappings.length, 100);
+assert.equal(graph.families.length, 12);
+assert.equal(graph.skills.length, 56);
+assert.equal(items.length, 180);
+assert.equal(graph.item_mappings.length, 180);
 unique(graph.families.map(family => family.family_id), 'family ID');
 unique(graph.skills.map(skill => skill.id), 'skill ID');
 unique(graph.item_mappings.map(mapping => mapping.item_id), 'item mapping');
@@ -29,9 +32,10 @@ const familyIds = new Set(graph.families.map(family => family.family_id));
 const skillIds = new Set(graph.skills.map(skill => skill.id));
 const transferIds = new Set(graph.transfer_patterns.map(pattern => pattern.id));
 const itemIds = new Set(items.map(item => item.id));
-assert.equal(itemIds.size, 100);
+assert.equal(itemIds.size, 180);
 assert.equal(items.filter(item => item.id.startsWith('mm-')).length, 30);
 assert.equal(items.filter(item => item.id.startsWith('bcs-smartpath-')).length, 70);
+assert.equal(items.filter(item => item.id.startsWith('bcs-lit-candidate-')).length, 80);
 const mappingsBySkill = new Map(graph.skills.map(skill => [skill.id, []]));
 graph.item_mappings.forEach(mapping => mappingsBySkill.get(mapping.primary_skill_id).push(mapping.item_id));
 graph.families.forEach(family => {

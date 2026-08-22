@@ -17,7 +17,7 @@
     let activeGraph = null;
 
     function setGraph(graph) {
-        if (!graph || ![1, 2].includes(graph.graph_version) || !Array.isArray(graph.families) || !Array.isArray(graph.skills) || !Array.isArray(graph.item_mappings)) return false;
+        if (!graph || ![1, 2, 3].includes(graph.graph_version) || !Array.isArray(graph.families) || !Array.isArray(graph.skills) || !Array.isArray(graph.item_mappings)) return false;
         const familyIds = new Set(graph.families.map(family => family && family.family_id));
         const skillIds = new Set(graph.skills.map(skill => skill && skill.id));
         if (familyIds.has(undefined) || skillIds.has(undefined) || familyIds.size !== graph.families.length || skillIds.size !== graph.skills.length) return false;
@@ -105,11 +105,13 @@
         const familyMap = new Map(profile.families.map(family => [family.id, family]));
         const signals = state && state.mistakeSignals || {};
         const recent = new Set(((state && state.recentActions) || []).slice(-2).map(action => String(action.id).replace(/^mistake-mirror:/, '')));
+        const goals = ['BCS','IELTS','BANK','UNIVERSITY_ADMISSION','GENERAL_ENGLISH','SPOKEN_CAREER'];
+        const goal = goals.includes(state && state.goal) ? state.goal : 'GENERAL_ENGLISH';
         const currentItem = items.find(item => item.id === currentId);
         const currentTaxonomy = currentItem ? taxonomyFor(currentItem, graph) : null;
         const currentSkill = currentTaxonomy && graph && graph.skills.find(skill => skill.id === currentTaxonomy.micro_skill);
         const graphRelated = new Set(currentSkill ? [].concat(currentSkill.prerequisites || [], currentSkill.related_skills || []) : []);
-        const candidates = items.filter(item => item.id !== currentId && !recent.has(item.id)).map(item => {
+        const candidates = items.filter(item => item.id !== currentId && !recent.has(item.id) && (!item.goal_ids || !item.goal_ids.length || item.goal_ids.includes(goal))).map(item => {
             const signal = signals[item.id] || {};
             const counts = signalCounts(signal);
             const taxonomy = taxonomyFor(item, graph);

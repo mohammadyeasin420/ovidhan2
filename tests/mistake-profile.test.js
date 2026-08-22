@@ -1,7 +1,7 @@
 'use strict';
 const assert = require('node:assert/strict');
 const profile = require('../mistake-profile.js');
-const { items } = require('../mistake-mirror.js');
+const { items, addLiteraturePack } = require('../mistake-mirror.js');
 function test(name, fn) { try { fn(); console.log('PASS', name); } catch (error) { console.error('FAIL', name); throw error; } }
 function evidence(overrides) {
     return Object.assign({ distinctItems:0,interactions:0,initialCorrect:0,initialIncorrect:0,repairCorrect:0,repairIncorrect:0,retestCorrect:0,retestIncorrect:0,unresolvedItems:0,weaknessScore:0 }, overrides);
@@ -73,6 +73,11 @@ test('profile rerenders for evidence updates and asynchronous practice-pack read
     listeners['ovidhan:mistake-profile-update']();
     listeners['ovidhan:practice-pack-loaded']();
     assert.equal(renders,2);
+});
+test('legacy profile recommendation respects BCS-only Literature eligibility', () => {
+    addLiteraturePack(require('../data/bcs-literature-smartpath-v1.json'));
+    const general=profile.recommendNext(items,{goal:'GENERAL_ENGLISH',mistakeSignals:{},recentActions:[]},null,Date.now());
+    assert.doesNotMatch(general.item.id,/^bcs-lit-candidate-/);
 });
 test('profile schema and analytics vocabulary contain no PII or raw content', () => {
     const forbidden=/name|email|phone|location|school|raw|audio|transcript|message/i;

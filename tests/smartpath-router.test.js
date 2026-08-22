@@ -2,8 +2,9 @@
 const assert = require('node:assert/strict');
 const router = require('../smartpath-router.js');
 const profileApi = require('../mistake-profile.js');
-const { items, addReviewedPack } = require('../mistake-mirror.js');
+const { items, addReviewedPack, addLiteraturePack } = require('../mistake-mirror.js');
 addReviewedPack(require('../data/bcs-smartpath-practice-v1.json'));
+addLiteraturePack(require('../data/bcs-literature-smartpath-v1.json'));
 const graph = require('../skill-mistake-graph.json');
 const transferGraph = require('../bangla-english-transfer-graph.json');
 const goalGraph = require('../goal-skill-requirements.json');
@@ -25,7 +26,15 @@ test('identical state input and time produce identical output', () => {
 });
 test('SmartPath can deterministically select a new reviewed item', () => {
     const result=run({goal:'BCS',mistakeSignals:{},recentActions:[]});
-    assert.match(result.item_id,/^bcs-smartpath-/);
+    assert.match(result.item_id,/^(bcs-smartpath-|bcs-lit-candidate-)/);
+});
+test('Literature is eligible for BCS but excluded from non-BCS unseen routing', () => {
+    const bcs=run({goal:'BCS',mistakeSignals:{'bcs-lit-candidate-001':signal({initialResult:'incorrect',initialIncorrect:1})},recentActions:[]});
+    assert.equal(bcs.item_id,'bcs-lit-candidate-001');
+    assert.equal(bcs.family_id,'LITERATURE');
+    ['GENERAL_ENGLISH','IELTS','BANK','UNIVERSITY_ADMISSION','SPOKEN_CAREER'].forEach(goal => {
+        assert.ok(run({goal}).ranked_diagnostics.every(candidate=>!String(candidate.item_id).startsWith('bcs-lit-candidate-')));
+    });
 });
 test('failed retest outranks every ordinary factor', () => {
     const result=run({goal:'BCS',mistakeSignals:{'mm-listen-to':signal({initialIncorrect:1,retestIncorrect:1,retestResult:'incorrect'})},recentActions:[]});
