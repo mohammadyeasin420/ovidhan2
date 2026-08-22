@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "reviewed-foundation",
   "destinations": [
-    {"destination_id":"content:writing_precis","skill_id":"writing_precis","url":"/precis-summary-writing-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":18,"review_status":"REVIEWED"},
-    {"destination_id":"content:formal_letter_writing","skill_id":"formal_letter_writing","url":"/formal-letter-writing-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":20,"review_status":"REVIEWED"}
+    {"destination_id":"content:writing_precis","skill_id":"writing_precis","url":"/precis-summary-writing-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":18,"review_status":"REVIEWED","goal_ids":["BCS","BANK","UNIVERSITY_ADMISSION","GENERAL_ENGLISH"]},
+    {"destination_id":"content:formal_letter_writing","skill_id":"formal_letter_writing","url":"/formal-letter-writing-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":20,"review_status":"REVIEWED","goal_ids":["BCS","IELTS","UNIVERSITY_ADMISSION","GENERAL_ENGLISH","SPOKEN_CAREER"]}
   ]
 }

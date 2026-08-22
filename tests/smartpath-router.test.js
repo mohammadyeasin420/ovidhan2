@@ -102,6 +102,9 @@ test('writing destinations resolve to their canonical pages', () => {
     const bySkill=new Map(destinationGraph.destinations.map(x=>[x.skill_id,x]));
     assert.equal(bySkill.get('writing_precis').url,'/precis-summary-writing-bangla.html');
     assert.equal(bySkill.get('formal_letter_writing').url,'/formal-letter-writing-bangla.html');
+    assert.deepEqual(bySkill.get('writing_precis').goal_ids,['BCS','BANK','UNIVERSITY_ADMISSION','GENERAL_ENGLISH']);
+    assert.ok(!bySkill.get('writing_precis').goal_ids.includes('IELTS'));
+    assert.deepEqual(bySkill.get('formal_letter_writing').goal_ids,['BCS','IELTS','UNIVERSITY_ADMISSION','GENERAL_ENGLISH','SPOKEN_CAREER']);
 });
 test('router is bounded and contains no random AI or third-party network dependency', () => {
     const source=require('node:fs').readFileSync(require.resolve('../smartpath-router.js'),'utf8');
