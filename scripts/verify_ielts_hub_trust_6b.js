@@ -9,12 +9,17 @@ const redirect = read('ielts-preparation-bangla.html');
 const diagnostic = read('ielts-diagnostic.html');
 const roadmap = read('learning-path-ielts.html');
 const vocabulary = read('ielts-vocabulary-2026-bangla-meaning.html');
+const report = read('reports/ovidhan-ielts-hub-trust-6b.md');
 
 assert.match(hub, /IELTS Preparation Hub/);
 assert.match(hub, /href="\/ielts-diagnostic\.html"/);
 assert.match(hub, /href="\/learning-path-ielts\.html"/);
 assert.match(hub, /Sources reviewed 22 August 2026/);
 assert.equal((hub.match(/https:\/\/ielts\.org\/take-a-test\/test-types\//g) || []).length, 4);
+assert.match(hub, /Academic Writing Task 1 — Visual information/);
+assert.match(hub, /This section is specific to Academic IELTS/);
+assert.match(hub, /General Training:<\/strong> Writing Task 1 is a letter/);
+assert.doesNotMatch(hub, /<h2>[^<]*Writing \(Task 1 – Report\)<\/h2>|<p>Task 1 requires you to describe a chart, graph, or diagram/);
 assert.match(redirect, /rel="canonical" href="https:\/\/ovidhan\.net\/ielts-guide\.html"/);
 assert.match(redirect, /http-equiv="refresh" content="0;url=\/ielts-guide\.html"/);
 assert.match(redirect, /noindex,follow/);
@@ -22,6 +27,7 @@ assert.match(diagnostic, /ovidhan_ielts_diagnostic_v2/);
 assert.match(diagnostic, /href="\/learning-path-ielts\.html"/);
 assert.match(roadmap, /does not estimate an official IELTS band score/);
 assert.doesNotMatch(vocabulary, /800\+|৮০০\+|প্রতিটি শব্দ IELTS পরীক্ষায়/);
+assert.match(report, /Future innovation — Boundary Diagnostic/);
 
 for (const n of [1,2,3,4]) {
   const file = fs.readdirSync(path.join(root, 'listening')).find(name => name.startsWith(`ielts-listening-section-${n}-`));

@@ -40,6 +40,10 @@ Static reviewed destinations now carry explicit `goal_ids` based on existing rev
 
 The diagnostic continues to produce a separate broad readiness summary in `ovidhan_ielts_diagnostic_v2`. A later separately governed phase may map individually reviewed questions to existing canonical Skill Graph IDs and migrate bounded evidence through Learning Foundation, Mistake Profile and SmartPath. That work must define provenance, migration, deduplication, retention, rollback and false-confidence safeguards before changing state. Phase 6B deliberately does none of it.
 
+## Future innovation — Boundary Diagnostic
+
+A future, separately governed Boundary Diagnostic may follow this sequence: clean scored diagnostic answer → canonical skill evidence → optional **NON-SCORED** nearby contrast probe after the answer → boundary evidence → SmartPath repair. It must never hint before the scored diagnostic answer, and the probe must not alter the diagnostic score. It must make no IELTS band prediction and requires no AI for V1. Empirical validation is required before scale, while diagnostics and retests must remain uncontaminated. This functionality is not implemented in Phase 6B.
+
 ## Verification record
 
 Final command results, responsive browser checks, console observations, frozen SEO counts/hash, and commit SHA are recorded in the delivery handoff after the clean final run.
