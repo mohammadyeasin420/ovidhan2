@@ -1,0 +1,2242 @@
+[
+  {
+    "id": "bcs-smartpath-001",
+    "family": "Articles",
+    "micro_skill": "indefinite_article_a_an",
+    "difficulty": "BEGINNER",
+    "question": "She is ___ university student.",
+    "options": [
+      {
+        "id": "A",
+        "text": "a"
+      },
+      {
+        "id": "B",
+        "text": "an"
+      },
+      {
+        "id": "C",
+        "text": "the"
+      },
+      {
+        "id": "D",
+        "text": "no article"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "a",
+    "explanation_bn": "\"University\" শব্দটি \"you\" ধ্বনি দিয়ে শুরু হয়, যা ব্যঞ্জনধ্বনি। তাই \"a\" ব্যবহার হবে।",
+    "rule_en": "Use 'a' before words that begin with a consonant sound, even if the spelling starts with a vowel.",
+    "common_wrong_reason_bn": "অনেকে মনে করেন 'u' vowel বলে 'an' হবে, কিন্তু উচ্চারণটি ব্যঞ্জনধ্বনি (you-niversity)।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-002",
+    "family": "Articles",
+    "micro_skill": "indefinite_article_a_an",
+    "difficulty": "BEGINNER",
+    "question": "He is ___ honest man.",
+    "options": [
+      {
+        "id": "A",
+        "text": "a"
+      },
+      {
+        "id": "B",
+        "text": "an"
+      },
+      {
+        "id": "C",
+        "text": "the"
+      },
+      {
+        "id": "D",
+        "text": "no article"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "an",
+    "explanation_bn": "\"Honest\" শব্দটি \"on\" ধ্বনি দিয়ে শুরু হয় (h নীরব), যা স্বরধ্বনি। তাই \"an\" হবে।",
+    "rule_en": "Use 'an' before words that begin with a vowel sound, not necessarily a vowel letter.",
+    "common_wrong_reason_bn": "'h' অক্ষর দেখে অনেকেই 'a' দেন, কিন্তু উচ্চারণে h উচ্চারিত হয় না।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-003",
+    "family": "Articles",
+    "micro_skill": "definite_article_the",
+    "difficulty": "BEGINNER",
+    "question": "____ sun rises in the east.",
+    "options": [
+      {
+        "id": "A",
+        "text": "A"
+      },
+      {
+        "id": "B",
+        "text": "An"
+      },
+      {
+        "id": "C",
+        "text": "The"
+      },
+      {
+        "id": "D",
+        "text": "No article"
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "The",
+    "explanation_bn": "একমাত্র জিনিস (the sun, the moon, the earth) বোঝাতে 'the' ব্যবহৃত হয়।",
+    "rule_en": "Use 'the' when referring to something unique or previously mentioned.",
+    "common_wrong_reason_bn": "অনেকে 'A sun' বলে ভুল করেন, কিন্তু সূর্য একটাই, তাই নির্দিষ্ট।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-004",
+    "family": "Articles",
+    "micro_skill": "zero_article",
+    "difficulty": "INTERMEDIATE",
+    "question": "___ honesty is the best policy.",
+    "options": [
+      {
+        "id": "A",
+        "text": "A"
+      },
+      {
+        "id": "B",
+        "text": "An"
+      },
+      {
+        "id": "C",
+        "text": "The"
+      },
+      {
+        "id": "D",
+        "text": "No article"
+      }
+    ],
+    "correct_option": "D",
+    "correct_answer": "No article",
+    "explanation_bn": "গুণবাচক বা বিমূর্ত বিশেষ্য (honesty, truth, beauty) সাধারণত 'the' ছাড়া ব্যবহৃত হয়।",
+    "rule_en": "Abstract nouns (honesty, beauty, truth) are used without an article when they are used in a general sense.",
+    "common_wrong_reason_bn": "অনেকে 'The honesty' ব্যবহার করে, কিন্তু এখানে সাধারণ ধারণা বোঝাচ্ছে, তাই article লাগে না।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-005",
+    "family": "Articles",
+    "micro_skill": "article_with_professions",
+    "difficulty": "BEGINNER",
+    "question": "My father is ___ engineer.",
+    "options": [
+      {
+        "id": "A",
+        "text": "a"
+      },
+      {
+        "id": "B",
+        "text": "an"
+      },
+      {
+        "id": "C",
+        "text": "the"
+      },
+      {
+        "id": "D",
+        "text": "no article"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "an",
+    "explanation_bn": "পেশা বোঝাতে অনির্দিষ্ট article ব্যবহার করি। 'Engineer' শব্দটি 'en' ধ্বনি দিয়ে শুরু, তাই 'an'।",
+    "rule_en": "Use 'a' or 'an' to talk about a person's profession.",
+    "common_wrong_reason_bn": "'Engineer' ই অক্ষর দিয়ে শুরু, কিন্তু উচ্চারণ স্বরধ্বনি, তাই 'an' লাগে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-006",
+    "family": "Articles",
+    "micro_skill": "article_with_countability",
+    "difficulty": "INTERMEDIATE",
+    "question": "Can you give me ___ water?",
+    "options": [
+      {
+        "id": "A",
+        "text": "a"
+      },
+      {
+        "id": "B",
+        "text": "an"
+      },
+      {
+        "id": "C",
+        "text": "the"
+      },
+      {
+        "id": "D",
+        "text": "some"
+      }
+    ],
+    "correct_option": "D",
+    "correct_answer": "some",
+    "explanation_bn": "\"Water\" একটি অগণনযোগ্য বিশেষ্য। অনির্দিষ্ট পরিমাণ বোঝাতে 'some' ব্যবহার করি, 'a' নয়।",
+    "rule_en": "Uncountable nouns cannot take 'a/an'. Use 'some' or 'any' for indefinite quantity.",
+    "common_wrong_reason_bn": "অনেকে 'a water' বলে ভুল করেন, কারণ water countable নয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-007",
+    "family": "Articles",
+    "micro_skill": "definite_article_the",
+    "difficulty": "INTERMEDIATE",
+    "question": "I saw ____ movie you recommended.",
+    "options": [
+      {
+        "id": "A",
+        "text": "a"
+      },
+      {
+        "id": "B",
+        "text": "an"
+      },
+      {
+        "id": "C",
+        "text": "the"
+      },
+      {
+        "id": "D",
+        "text": "no article"
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "the",
+    "explanation_bn": "পূর্বে উল্লেখিত বা নির্দিষ্ট কোনো জিনিস বোঝাতে 'the' ব্যবহৃত হয়। এখানে movie টি নির্দিষ্ট (যেটি আপনি recommend করেছিলেন)।",
+    "rule_en": "Use 'the' when the listener knows which thing you mean (e.g., previously mentioned).",
+    "common_wrong_reason_bn": "অনির্দিষ্ট movie বোঝালে 'a' দিতেন, কিন্তু এখানে নির্দিষ্ট, তাই 'the'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-008",
+    "family": "Articles",
+    "micro_skill": "zero_article",
+    "difficulty": "INTERMEDIATE",
+    "question": "Children usually go to ___ school at the age of five.",
+    "options": [
+      {
+        "id": "A",
+        "text": "a"
+      },
+      {
+        "id": "B",
+        "text": "an"
+      },
+      {
+        "id": "C",
+        "text": "the"
+      },
+      {
+        "id": "D",
+        "text": "no article"
+      }
+    ],
+    "correct_option": "D",
+    "correct_answer": "no article",
+    "explanation_bn": "শিক্ষার্থী হিসেবে school-এ যাওয়া বোঝালে সাধারণত article লাগে না: 'go to school'.",
+    "rule_en": "Use zero article with institutions such as school when referring to their normal purpose or function.",
+    "common_wrong_reason_bn": "নির্দিষ্ট school ভবন বোঝালে 'the school' হতে পারে, কিন্তু এখানে সাধারণভাবে শিক্ষার্থী হিসেবে school-এ যাওয়া বোঝানো হয়েছে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-009",
+    "family": "Prepositions",
+    "micro_skill": "preposition_time_at_in_on",
+    "difficulty": "BEGINNER",
+    "question": "I usually wake up ___ 6 AM.",
+    "options": [
+      {
+        "id": "A",
+        "text": "at"
+      },
+      {
+        "id": "B",
+        "text": "in"
+      },
+      {
+        "id": "C",
+        "text": "on"
+      },
+      {
+        "id": "D",
+        "text": "by"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "at",
+    "explanation_bn": "নির্দিষ্ট সময় বোঝাতে 'at' ব্যবহার হয় (at 6 AM, at noon)।",
+    "rule_en": "Use 'at' for specific times (clock time).",
+    "common_wrong_reason_bn": "'In' সাধারণত মাস/বছর বোঝায়, 'on' দিন/তারিখ বোঝায় – সময়ের জন্য 'at'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-010",
+    "family": "Prepositions",
+    "micro_skill": "preposition_time_at_in_on",
+    "difficulty": "BEGINNER",
+    "question": "We will meet ___ Monday.",
+    "options": [
+      {
+        "id": "A",
+        "text": "at"
+      },
+      {
+        "id": "B",
+        "text": "in"
+      },
+      {
+        "id": "C",
+        "text": "on"
+      },
+      {
+        "id": "D",
+        "text": "by"
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "on",
+    "explanation_bn": "সপ্তাহের দিনের নামের আগে 'on' ব্যবহার হয় (on Monday, on Friday)।",
+    "rule_en": "Use 'on' for days and dates.",
+    "common_wrong_reason_bn": "'At' সময়ের জন্য, 'in' মাস/বছরের জন্য – দিনের জন্য 'on'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-011",
+    "family": "Prepositions",
+    "micro_skill": "preposition_place",
+    "difficulty": "BEGINNER",
+    "question": "The book is ___ the table.",
+    "options": [
+      {
+        "id": "A",
+        "text": "at"
+      },
+      {
+        "id": "B",
+        "text": "on"
+      },
+      {
+        "id": "C",
+        "text": "in"
+      },
+      {
+        "id": "D",
+        "text": "under"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "on",
+    "explanation_bn": "পৃষ্ঠের ওপর (surface) বোঝাতে 'on' ব্যবহার হয়।",
+    "rule_en": "Use 'on' when something is resting on a surface.",
+    "common_wrong_reason_bn": "'In' সাধারণত enclosed space বোঝায়, 'at' নির্দিষ্ট স্থান বা পয়েন্ট – এখানে পৃষ্ঠের ওপর, তাই 'on'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-012",
+    "family": "Prepositions",
+    "micro_skill": "adjective_preposition",
+    "difficulty": "INTERMEDIATE",
+    "question": "She is very good ___ mathematics.",
+    "options": [
+      {
+        "id": "A",
+        "text": "in"
+      },
+      {
+        "id": "B",
+        "text": "at"
+      },
+      {
+        "id": "C",
+        "text": "on"
+      },
+      {
+        "id": "D",
+        "text": "with"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "at",
+    "explanation_bn": "কোনো বিষয়ে দক্ষতা বোঝাতে 'good at' ব্যবহৃত হয়।",
+    "rule_en": "The adjective 'good' is followed by the preposition 'at' when referring to a skill or subject.",
+    "common_wrong_reason_bn": "দক্ষতা বা কোনো বিষয়ে পারদর্শিতা বোঝাতে standard collocation হলো 'good at'.",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-013",
+    "family": "Prepositions",
+    "micro_skill": "verb_preposition",
+    "difficulty": "INTERMEDIATE",
+    "question": "He apologized ___ being late.",
+    "options": [
+      {
+        "id": "A",
+        "text": "for"
+      },
+      {
+        "id": "B",
+        "text": "about"
+      },
+      {
+        "id": "C",
+        "text": "at"
+      },
+      {
+        "id": "D",
+        "text": "to"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "for",
+    "explanation_bn": "'Apologize for' ব্যবহার হয় কোনো কাজ বা ঘটনার জন্য দুঃখ প্রকাশ করতে।",
+    "rule_en": "Use 'apologize for' before a noun or gerund that states the reason for the apology.",
+    "common_wrong_reason_bn": "'Apologize to' সাধারণত যার কাছে ক্ষমা চাওয়া হয় সেই ব্যক্তির আগে বসে; কারণের আগে 'for' লাগে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-014",
+    "family": "Prepositions",
+    "micro_skill": "comparative_complement_preposition",
+    "difficulty": "ADVANCED",
+    "question": "This road is superior ___ that one.",
+    "options": [
+      {
+        "id": "A",
+        "text": "than"
+      },
+      {
+        "id": "B",
+        "text": "to"
+      },
+      {
+        "id": "C",
+        "text": "from"
+      },
+      {
+        "id": "D",
+        "text": "over"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "to",
+    "explanation_bn": "'Superior' শব্দটির সঙ্গে তুলনা বোঝাতে 'to' ব্যবহৃত হয়, 'than' নয়।",
+    "rule_en": "The adjective 'superior' is followed by the preposition 'to', not 'than'.",
+    "common_wrong_reason_bn": "অনেকে 'than' ব্যবহার করে কারণ সাধারণ তুলনায় 'than' হয়, কিন্তু 'superior', 'inferior', 'prior' ইত্যাদির সঙ্গে 'to' হয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-015",
+    "family": "Prepositions",
+    "micro_skill": "movement_home_zero_preposition",
+    "difficulty": "BEGINNER",
+    "question": "I'm going ___ home now.",
+    "options": [
+      {
+        "id": "A",
+        "text": "to"
+      },
+      {
+        "id": "B",
+        "text": "at"
+      },
+      {
+        "id": "C",
+        "text": "in"
+      },
+      {
+        "id": "D",
+        "text": "no preposition"
+      }
+    ],
+    "correct_option": "D",
+    "correct_answer": "no preposition",
+    "explanation_bn": "'Go home' এ কোনো preposition নেই। 'Home' adverb হিসেবে কাজ করে।",
+    "rule_en": "With the verb 'go', we do not use a preposition before 'home'.",
+    "common_wrong_reason_bn": "অনেকে 'go to home' বলে ভুল করেন। 'Home' এখানে adverb, তাই preposition লাগে না।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-016",
+    "family": "Prepositions",
+    "micro_skill": "duration_since_for",
+    "difficulty": "INTERMEDIATE",
+    "question": "I have been waiting here ___ two hours.",
+    "options": [
+      {
+        "id": "A",
+        "text": "since"
+      },
+      {
+        "id": "B",
+        "text": "for"
+      },
+      {
+        "id": "C",
+        "text": "from"
+      },
+      {
+        "id": "D",
+        "text": "during"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "for",
+    "explanation_bn": "সময়ের দৈর্ঘ্য (duration) বোঝাতে 'for' ব্যবহৃত হয় (for two hours, for five days)।",
+    "rule_en": "Use 'for' with a period of time (duration).",
+    "common_wrong_reason_bn": "'Since' ব্যবহৃত হয় নির্দিষ্ট সময় বিন্দু থেকে (since 2 PM, since Monday) – এখানে সময়ের দৈর্ঘ্য, তাই 'for'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-017",
+    "family": "Prepositions",
+    "micro_skill": "preposition_place",
+    "difficulty": "BEGINNER",
+    "question": "She lives ___ a small town.",
+    "options": [
+      {
+        "id": "A",
+        "text": "at"
+      },
+      {
+        "id": "B",
+        "text": "in"
+      },
+      {
+        "id": "C",
+        "text": "on"
+      },
+      {
+        "id": "D",
+        "text": "by"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "in",
+    "explanation_bn": "শহর, দেশ, মহাদেশের ভেতরে অবস্থান বোঝাতে 'in' ব্যবহার হয়।",
+    "rule_en": "Use 'in' for cities, countries, and continents (enclosed areas).",
+    "common_wrong_reason_bn": "'At' সাধারণত ছোট স্থান বা পয়েন্টের জন্য, 'on' পৃষ্ঠের জন্য – কিন্তু শহরের জন্য 'in'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-018",
+    "family": "Prepositions",
+    "micro_skill": "verb_preposition",
+    "difficulty": "INTERMEDIATE",
+    "question": "He insisted ___ paying for dinner.",
+    "options": [
+      {
+        "id": "A",
+        "text": "on"
+      },
+      {
+        "id": "B",
+        "text": "in"
+      },
+      {
+        "id": "C",
+        "text": "at"
+      },
+      {
+        "id": "D",
+        "text": "for"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "on",
+    "explanation_bn": "'Insist on' মানে জোর দেওয়া (কোনো কাজ করার ওপর)।",
+    "rule_en": "The verb 'insist' is followed by the preposition 'on' when referring to an action.",
+    "common_wrong_reason_bn": "'Insist for' সাধারণত ভুল, 'insist on' সঠিক।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-019",
+    "family": "Verb/Tense system",
+    "micro_skill": "simple_present_form",
+    "difficulty": "BEGINNER",
+    "question": "She ___ to school every day.",
+    "options": [
+      {
+        "id": "A",
+        "text": "go"
+      },
+      {
+        "id": "B",
+        "text": "goes"
+      },
+      {
+        "id": "C",
+        "text": "going"
+      },
+      {
+        "id": "D",
+        "text": "went"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "goes",
+    "explanation_bn": "তৃতীয় পুরুষ একবচন (she) বর্তমান কালে 's' যোগ হয়।",
+    "rule_en": "In simple present, third person singular (he/she/it) takes -s or -es.",
+    "common_wrong_reason_bn": "অনেকে 'go' দিয়ে ফেলেন, কিন্তু 'she' হলে 'goes' হয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-020",
+    "family": "Verb/Tense system",
+    "micro_skill": "simple_past_form",
+    "difficulty": "BEGINNER",
+    "question": "They ___ to the cinema yesterday.",
+    "options": [
+      {
+        "id": "A",
+        "text": "go"
+      },
+      {
+        "id": "B",
+        "text": "goes"
+      },
+      {
+        "id": "C",
+        "text": "went"
+      },
+      {
+        "id": "D",
+        "text": "have gone"
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "went",
+    "explanation_bn": "'Yesterday' অতীত নির্দেশ করে, তাই simple past 'went'।",
+    "rule_en": "Use simple past for completed actions with a specific past time reference.",
+    "common_wrong_reason_bn": "'Have gone' present perfect, কিন্তু অতীত সময় উল্লেখ থাকলে simple past।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-021",
+    "family": "Verb/Tense system",
+    "micro_skill": "present_perfect_time_reference",
+    "difficulty": "INTERMEDIATE",
+    "question": "I ___ never seen such a beautiful place.",
+    "options": [
+      {
+        "id": "A",
+        "text": "have"
+      },
+      {
+        "id": "B",
+        "text": "had"
+      },
+      {
+        "id": "C",
+        "text": "am"
+      },
+      {
+        "id": "D",
+        "text": "was"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "have",
+    "explanation_bn": "'Never' সহ present perfect tense (have/has + past participle) ব্যবহৃত হয় জীবনে এ পর্যন্ত কখনো নয় বোঝাতে।",
+    "rule_en": "Use present perfect with 'never' to express an experience up to now.",
+    "common_wrong_reason_bn": "'Had' past perfect, কিন্তু এখানে বর্তমান পর্যন্ত অভিজ্ঞতা, তাই 'have'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-022",
+    "family": "Verb/Tense system",
+    "micro_skill": "auxiliary_did_base_form",
+    "difficulty": "INTERMEDIATE",
+    "question": "Did you ___ the letter yesterday?",
+    "options": [
+      {
+        "id": "A",
+        "text": "received"
+      },
+      {
+        "id": "B",
+        "text": "receive"
+      },
+      {
+        "id": "C",
+        "text": "receiving"
+      },
+      {
+        "id": "D",
+        "text": "receives"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "receive",
+    "explanation_bn": "Did + base form of verb (V1) – প্রশ্নবোধক বা নেতিবাচক বাক্যে।",
+    "rule_en": "In questions and negatives with 'did', use the base form of the main verb.",
+    "common_wrong_reason_bn": "অনেকে 'did' দেখে past tense ভেবে 'received' দেন, কিন্তু did এর সাথে base form হয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-023",
+    "family": "Verb/Tense system",
+    "micro_skill": "modal_base_form",
+    "difficulty": "BEGINNER",
+    "question": "You ___ finish your homework before you go out.",
+    "options": [
+      {
+        "id": "A",
+        "text": "must to"
+      },
+      {
+        "id": "B",
+        "text": "must"
+      },
+      {
+        "id": "C",
+        "text": "musting"
+      },
+      {
+        "id": "D",
+        "text": "must have"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "must",
+    "explanation_bn": "Modal verb 'must' এর পরে base form (V1) বসে। 'To' লাগে না।",
+    "rule_en": "Modal verbs (must, can, should) are followed by the base form of the verb without 'to'.",
+    "common_wrong_reason_bn": "'Must to' ভুল; must এর পরে সরাসরি V1।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-024",
+    "family": "Verb/Tense system",
+    "micro_skill": "used_to_base_form",
+    "difficulty": "INTERMEDIATE",
+    "question": "I ___ eat meat, but now I am vegetarian.",
+    "options": [
+      {
+        "id": "A",
+        "text": "used to"
+      },
+      {
+        "id": "B",
+        "text": "use to"
+      },
+      {
+        "id": "C",
+        "text": "was used to"
+      },
+      {
+        "id": "D",
+        "text": "am used to"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "used to",
+    "explanation_bn": "'Used to' অতীতের অভ্যাস বোঝায় যা এখন নেই। এর পরে base form (eat) বসে।",
+    "rule_en": "'Used to' + base form expresses a past habit or state that is no longer true.",
+    "common_wrong_reason_bn": "'Was used to' মানে অভ্যস্ত ছিলাম, যা ভিন্ন অর্থ। এখানে অতীত অভ্যাস, তাই 'used to'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-025",
+    "family": "Verb/Tense system",
+    "micro_skill": "lexical_verb_without_be",
+    "difficulty": "INTERMEDIATE",
+    "question": "He ___ not like coffee.",
+    "options": [
+      {
+        "id": "A",
+        "text": "does"
+      },
+      {
+        "id": "B",
+        "text": "is"
+      },
+      {
+        "id": "C",
+        "text": "has"
+      },
+      {
+        "id": "D",
+        "text": "do"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "does",
+    "explanation_bn": "'Like' একটি lexical verb, তাই negative করতে 'does not' (doesn't) বসে।",
+    "rule_en": "For lexical verbs in present tense, use 'do/does' for negatives and questions.",
+    "common_wrong_reason_bn": "'Is not like' ভুল, কারণ 'like' এখানে ক্রিয়া, বিশেষণ নয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-026",
+    "family": "Verb/Tense system",
+    "micro_skill": "stative_verb_aspect",
+    "difficulty": "ADVANCED",
+    "question": "I ___ the answer right now.",
+    "options": [
+      {
+        "id": "A",
+        "text": "am knowing"
+      },
+      {
+        "id": "B",
+        "text": "know"
+      },
+      {
+        "id": "C",
+        "text": "have known"
+      },
+      {
+        "id": "D",
+        "text": "am known"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "know",
+    "explanation_bn": "'Know' একটি stative verb (অবস্থাবাচক ক্রিয়া), যা continuous tense-এ ব্যবহার করা হয় না।",
+    "rule_en": "Stative verbs (know, believe, hate) are not used in continuous forms.",
+    "common_wrong_reason_bn": "'Am knowing' ভুল, কারণ know অবস্থা বোঝায়, চলমান ক্রিয়া নয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-027",
+    "family": "Verb/Tense system",
+    "micro_skill": "simple_past_form",
+    "difficulty": "INTERMEDIATE",
+    "question": "She ___ a beautiful song at the party last night.",
+    "options": [
+      {
+        "id": "A",
+        "text": "sing"
+      },
+      {
+        "id": "B",
+        "text": "sang"
+      },
+      {
+        "id": "C",
+        "text": "sung"
+      },
+      {
+        "id": "D",
+        "text": "singing"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "sang",
+    "explanation_bn": "'Last night' অতীত সময় নির্দেশ করে, তাই simple past 'sang'।",
+    "rule_en": "Use simple past for actions completed at a specific past time.",
+    "common_wrong_reason_bn": "'Sung' past participle, যা present perfect বা passive-এ হয়; এখানে simple past 'sang'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-028",
+    "family": "Verb/Tense system",
+    "micro_skill": "modal_base_form",
+    "difficulty": "BEGINNER",
+    "question": "___ you help me with this bag?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Could"
+      },
+      {
+        "id": "B",
+        "text": "Could to"
+      },
+      {
+        "id": "C",
+        "text": "Coulding"
+      },
+      {
+        "id": "D",
+        "text": "Could have"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "Could",
+    "explanation_bn": "Modal verb 'could' এর পরে base form (help) বসে।",
+    "rule_en": "Modal verbs are followed by base form, no 'to'.",
+    "common_wrong_reason_bn": "'Could to' ভুল।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-029",
+    "family": "Subject-verb agreement",
+    "micro_skill": "third_person_s",
+    "difficulty": "BEGINNER",
+    "question": "My brother ___ cricket every Sunday.",
+    "options": [
+      {
+        "id": "A",
+        "text": "play"
+      },
+      {
+        "id": "B",
+        "text": "plays"
+      },
+      {
+        "id": "C",
+        "text": "playing"
+      },
+      {
+        "id": "D",
+        "text": "have played"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "plays",
+    "explanation_bn": "Subject 'My brother' তৃতীয় পুরুষ একবচন, তাই verb-এর সাথে 's' যোগ হয়।",
+    "rule_en": "Third person singular subjects take verb with -s/-es in simple present.",
+    "common_wrong_reason_bn": "অনেকে 'play' ব্যবহার করেন, কিন্তু সঠিক 'plays'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-030",
+    "family": "Subject-verb agreement",
+    "micro_skill": "plural_subject_agreement",
+    "difficulty": "BEGINNER",
+    "question": "The children ___ playing in the park.",
+    "options": [
+      {
+        "id": "A",
+        "text": "is"
+      },
+      {
+        "id": "B",
+        "text": "am"
+      },
+      {
+        "id": "C",
+        "text": "are"
+      },
+      {
+        "id": "D",
+        "text": "was"
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "are",
+    "explanation_bn": "'Children' plural subject, তাই plural verb 'are'।",
+    "rule_en": "Plural subjects take plural verbs.",
+    "common_wrong_reason_bn": "'Is' singular; 'children' plural।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-031",
+    "family": "Subject-verb agreement",
+    "micro_skill": "grammatical_number_nouns",
+    "difficulty": "INTERMEDIATE",
+    "question": "The news ___ very shocking.",
+    "options": [
+      {
+        "id": "A",
+        "text": "is"
+      },
+      {
+        "id": "B",
+        "text": "are"
+      },
+      {
+        "id": "C",
+        "text": "were"
+      },
+      {
+        "id": "D",
+        "text": "have been"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "is",
+    "explanation_bn": "'News' দেখতে plural মনে হলেও এটি uncountable singular, তাই singular verb 'is'।",
+    "rule_en": "Some nouns ending in -s (news, mathematics, politics) are singular.",
+    "common_wrong_reason_bn": "অনেকে 'news' দেখে plural ভেবে 'are' ব্যবহার করেন, কিন্তু সঠিক 'is'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-032",
+    "family": "Subject-verb agreement",
+    "micro_skill": "collective_subject_agreement",
+    "difficulty": "INTERMEDIATE",
+    "question": "Which statement about collective nouns such as 'committee' is correct?",
+    "options": [
+      {
+        "id": "A",
+        "text": "They always take a singular verb."
+      },
+      {
+        "id": "B",
+        "text": "They always take a plural verb."
+      },
+      {
+        "id": "C",
+        "text": "Verb choice can depend on whether the group is viewed as one unit or as individual members."
+      },
+      {
+        "id": "D",
+        "text": "They cannot be used as sentence subjects."
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "Verb choice can depend on whether the group is viewed as one unit or as individual members.",
+    "explanation_bn": "Collective noun একক দল হিসেবে ভাবলে singular, আর সদস্যদের আলাদা করে জোর দিলে কিছু standard varieties/context-এ plural verb হতে পারে।",
+    "rule_en": "Agreement with collective nouns can depend on meaning, context, and variety of English; unit readings favor singular agreement, while member readings may allow plural agreement.",
+    "common_wrong_reason_bn": "'Collective noun সবসময় singular' বা 'সবসময় plural'—দুটিই অতিরিক্ত সরলীকরণ।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-033",
+    "family": "Subject-verb agreement",
+    "micro_skill": "compound_subject_agreement",
+    "difficulty": "INTERMEDIATE",
+    "question": "Either the teacher or the students ___ to blame.",
+    "options": [
+      {
+        "id": "A",
+        "text": "is"
+      },
+      {
+        "id": "B",
+        "text": "are"
+      },
+      {
+        "id": "C",
+        "text": "was"
+      },
+      {
+        "id": "D",
+        "text": "am"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "are",
+    "explanation_bn": "Either/or-এর ক্ষেত্রে verb দ্বিতীয় subject (students) অনুযায়ী হয়, যা plural।",
+    "rule_en": "With 'either...or' and 'neither...nor', the verb agrees with the subject closer to it.",
+    "common_wrong_reason_bn": "অনেকে প্রথম subject 'teacher' অনুযায়ী 'is' দেন, কিন্তু verb নিকটবর্তী subject 'students'-এর সাথে agree করে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-034",
+    "family": "Subject-verb agreement",
+    "micro_skill": "plural_subject_agreement",
+    "difficulty": "BEGINNER",
+    "question": "The books ___ on the shelf.",
+    "options": [
+      {
+        "id": "A",
+        "text": "is"
+      },
+      {
+        "id": "B",
+        "text": "am"
+      },
+      {
+        "id": "C",
+        "text": "are"
+      },
+      {
+        "id": "D",
+        "text": "was"
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "are",
+    "explanation_bn": "'Books' plural subject, তাই 'are'।",
+    "rule_en": "Plural subjects take plural verbs.",
+    "common_wrong_reason_bn": "'Is' singular, 'books' plural।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-035",
+    "family": "Subject-verb agreement",
+    "micro_skill": "grammatical_number_nouns",
+    "difficulty": "ADVANCED",
+    "question": "The number of participants ___ increased.",
+    "options": [
+      {
+        "id": "A",
+        "text": "have"
+      },
+      {
+        "id": "B",
+        "text": "are"
+      },
+      {
+        "id": "C",
+        "text": "has"
+      },
+      {
+        "id": "D",
+        "text": "were"
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "has",
+    "explanation_bn": "'The number of' singular subject, তাই singular verb 'has'।",
+    "rule_en": "'The number of' takes a singular verb; 'a number of' takes a plural verb.",
+    "common_wrong_reason_bn": "'A number of' হলে plural হয়, কিন্তু 'the number of' singular।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-036",
+    "family": "Countability/quantifiers",
+    "micro_skill": "countable_uncountable_nouns",
+    "difficulty": "BEGINNER",
+    "question": "How ___ sugar do you need?",
+    "options": [
+      {
+        "id": "A",
+        "text": "many"
+      },
+      {
+        "id": "B",
+        "text": "much"
+      },
+      {
+        "id": "C",
+        "text": "more"
+      },
+      {
+        "id": "D",
+        "text": "few"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "much",
+    "explanation_bn": "'Sugar' অগণনযোগ্য, তাই 'how much' ব্যবহার হয়।",
+    "rule_en": "Use 'much' with uncountable nouns; 'many' with countable plural nouns.",
+    "common_wrong_reason_bn": "'How many' countables এর জন্য, কিন্তু sugar uncountable।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-037",
+    "family": "Countability/quantifiers",
+    "micro_skill": "much_many",
+    "difficulty": "BEGINNER",
+    "question": "There aren't ___ students in the class today.",
+    "options": [
+      {
+        "id": "A",
+        "text": "much"
+      },
+      {
+        "id": "B",
+        "text": "many"
+      },
+      {
+        "id": "C",
+        "text": "more"
+      },
+      {
+        "id": "D",
+        "text": "less"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "many",
+    "explanation_bn": "'Students' countable plural, তাই 'many'।",
+    "rule_en": "Use 'many' with countable plural nouns.",
+    "common_wrong_reason_bn": "'Much' uncountables এর জন্য – students countable।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-038",
+    "family": "Countability/quantifiers",
+    "micro_skill": "fewer_less_register",
+    "difficulty": "INTERMEDIATE",
+    "question": "We should buy ___ apples than we bought last time.",
+    "options": [
+      {
+        "id": "A",
+        "text": "less"
+      },
+      {
+        "id": "B",
+        "text": "fewer"
+      },
+      {
+        "id": "C",
+        "text": "much"
+      },
+      {
+        "id": "D",
+        "text": "little"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "fewer",
+    "explanation_bn": "'Apples' countable plural, তাই 'fewer' (less নয়)।",
+    "rule_en": "Use 'fewer' for countable nouns, 'less' for uncountable nouns.",
+    "common_wrong_reason_bn": "অনেকে 'less' ব্যবহার করেন, কিন্তু countable হলে 'fewer'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-039",
+    "family": "Countability/quantifiers",
+    "micro_skill": "one_of_plural_noun",
+    "difficulty": "INTERMEDIATE",
+    "question": "She is one of the best ___ in the class.",
+    "options": [
+      {
+        "id": "A",
+        "text": "student"
+      },
+      {
+        "id": "B",
+        "text": "students"
+      },
+      {
+        "id": "C",
+        "text": "student's"
+      },
+      {
+        "id": "D",
+        "text": "studying"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "students",
+    "explanation_bn": "'One of' এর পরে যে group থেকে একজনকে বোঝানো হয়, সেই noun সাধারণত plural হয়: one of the students.",
+    "rule_en": "Use a plural count noun after 'one of the' because the phrase selects one member from a group.",
+    "common_wrong_reason_bn": "'One' singular বলে অনেকে 'student' দেন, কিন্তু 'one of the' এর পরে group noun plural হয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-040",
+    "family": "Countability/quantifiers",
+    "micro_skill": "quantifier_agreement",
+    "difficulty": "ADVANCED",
+    "question": "A lot of people ___ been invited.",
+    "options": [
+      {
+        "id": "A",
+        "text": "has"
+      },
+      {
+        "id": "B",
+        "text": "have"
+      },
+      {
+        "id": "C",
+        "text": "is"
+      },
+      {
+        "id": "D",
+        "text": "was"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "have",
+    "explanation_bn": "'A lot of' + plural noun (people) => plural verb 'have'।",
+    "rule_en": "Quantifiers like 'a lot of' take plural verbs when followed by a plural noun.",
+    "common_wrong_reason_bn": "'A lot of' এর পরে noun অনুযায়ী verb হয় – people plural, তাই 'have'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-041",
+    "family": "Countability/quantifiers",
+    "micro_skill": "countable_uncountable_nouns",
+    "difficulty": "BEGINNER",
+    "question": "She gave me ___ advice.",
+    "options": [
+      {
+        "id": "A",
+        "text": "a"
+      },
+      {
+        "id": "B",
+        "text": "an"
+      },
+      {
+        "id": "C",
+        "text": "some"
+      },
+      {
+        "id": "D",
+        "text": "many"
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "some",
+    "explanation_bn": "'Advice' অগণনযোগ্য, তাই 'some' (a/an নয়)।",
+    "rule_en": "Uncountable nouns cannot take 'a/an'; use 'some' for indefinite amount.",
+    "common_wrong_reason_bn": "'An advice' ভুল – advice uncountable।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-042",
+    "family": "Verb patterns",
+    "micro_skill": "transitive_verb_no_preposition",
+    "difficulty": "INTERMEDIATE",
+    "question": "We discussed ___ the project thoroughly.",
+    "options": [
+      {
+        "id": "A",
+        "text": "about"
+      },
+      {
+        "id": "B",
+        "text": "on"
+      },
+      {
+        "id": "C",
+        "text": "off"
+      },
+      {
+        "id": "D",
+        "text": "no preposition"
+      }
+    ],
+    "correct_option": "D",
+    "correct_answer": "no preposition",
+    "explanation_bn": "'Discuss' একটি transitive verb, তাই সরাসরি object নেয়, preposition লাগে না।",
+    "rule_en": "Transitive verbs like 'discuss', 'enter', 'reach' take direct objects without prepositions.",
+    "common_wrong_reason_bn": "'Discuss about' সাধারণ ভুল – discuss এর পরে about না।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-043",
+    "family": "Verb patterns",
+    "micro_skill": "explain_something_to_someone",
+    "difficulty": "INTERMEDIATE",
+    "question": "Please explain the rules ___ the students.",
+    "options": [
+      {
+        "id": "A",
+        "text": "to"
+      },
+      {
+        "id": "B",
+        "text": "for"
+      },
+      {
+        "id": "C",
+        "text": "at"
+      },
+      {
+        "id": "D",
+        "text": "with"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "to",
+    "explanation_bn": "'Explain something to someone' – explain এর পরে indirect object এর আগে 'to' বসে।",
+    "rule_en": "Use the pattern: explain + something + to + someone.",
+    "common_wrong_reason_bn": "'Explain for' ভুল; সঠিক 'explain to'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-044",
+    "family": "Verb patterns",
+    "micro_skill": "gerund_after_preposition",
+    "difficulty": "INTERMEDIATE",
+    "question": "He is good at ___ in public.",
+    "options": [
+      {
+        "id": "A",
+        "text": "speak"
+      },
+      {
+        "id": "B",
+        "text": "speaking"
+      },
+      {
+        "id": "C",
+        "text": "to speak"
+      },
+      {
+        "id": "D",
+        "text": "spoken"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "speaking",
+    "explanation_bn": "Preposition 'at' এর পরে verb এলে gerund (V-ing) বসে: good at speaking.",
+    "rule_en": "When a verb follows a preposition, use the gerund (-ing form).",
+    "common_wrong_reason_bn": "'To speak' infinitive, কিন্তু preposition এর পরে gerund।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-045",
+    "family": "Verb patterns",
+    "micro_skill": "infinitive_complement",
+    "difficulty": "ADVANCED",
+    "question": "I want ___ you something.",
+    "options": [
+      {
+        "id": "A",
+        "text": "tell"
+      },
+      {
+        "id": "B",
+        "text": "to tell"
+      },
+      {
+        "id": "C",
+        "text": "telling"
+      },
+      {
+        "id": "D",
+        "text": "told"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "to tell",
+    "explanation_bn": "'Want' এর পরে infinitive (to + V1) ব্যবহৃত হয়।",
+    "rule_en": "Some verbs (want, need, would like) are followed by the infinitive.",
+    "common_wrong_reason_bn": "'Want tell' ভুল – want to tell।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-046",
+    "family": "Verb patterns",
+    "micro_skill": "ditransitive_verb_pattern",
+    "difficulty": "ADVANCED",
+    "question": "Which sentence correctly uses the double-object pattern with 'give'?",
+    "options": [
+      {
+        "id": "A",
+        "text": "She gave me a present."
+      },
+      {
+        "id": "B",
+        "text": "She gave me to a present."
+      },
+      {
+        "id": "C",
+        "text": "She gave a present me."
+      },
+      {
+        "id": "D",
+        "text": "She gave for me a present."
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "She gave me a present.",
+    "explanation_bn": "'Give' double-object pattern নিতে পারে: give + person + thing → 'gave me a present'.",
+    "rule_en": "A common double-object pattern is give + indirect object + direct object, as in 'She gave me a present.'",
+    "common_wrong_reason_bn": "Person object-এর পরে আলাদা preposition বসিয়ে এই double-object pattern তৈরি করা হয় না।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-047",
+    "family": "Verb patterns",
+    "micro_skill": "transitive_verb_no_preposition",
+    "difficulty": "INTERMEDIATE",
+    "question": "We should contact ___ customer service immediately.",
+    "options": [
+      {
+        "id": "A",
+        "text": "to"
+      },
+      {
+        "id": "B",
+        "text": "with"
+      },
+      {
+        "id": "C",
+        "text": "for"
+      },
+      {
+        "id": "D",
+        "text": "no preposition"
+      }
+    ],
+    "correct_option": "D",
+    "correct_answer": "no preposition",
+    "explanation_bn": "'Contact' transitive verb, সরাসরি object নেয়, preposition লাগে না।",
+    "rule_en": "Contact is a transitive verb: contact someone (without a preposition).",
+    "common_wrong_reason_bn": "'Contact to/with someone' না বলে verb হিসেবে সাধারণত 'contact someone' বলা হয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-048",
+    "family": "Sentence structure",
+    "micro_skill": "standard_negation",
+    "difficulty": "BEGINNER",
+    "question": "She ___ like coffee.",
+    "options": [
+      {
+        "id": "A",
+        "text": "doesn't"
+      },
+      {
+        "id": "B",
+        "text": "don't"
+      },
+      {
+        "id": "C",
+        "text": "isn't"
+      },
+      {
+        "id": "D",
+        "text": "aren't"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "doesn't",
+    "explanation_bn": "Present tense-এ lexical verb 'like'-এর negative করতে 'doesn't' (she) বসে।",
+    "rule_en": "Use 'doesn't' (does not) for third person singular negative.",
+    "common_wrong_reason_bn": "'Don't' I/you/we/they-র জন্য; she-র জন্য doesn't।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-049",
+    "family": "Sentence structure",
+    "micro_skill": "sentence_fragment",
+    "difficulty": "INTERMEDIATE",
+    "question": "Which of the following is a complete sentence?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Because she was tired."
+      },
+      {
+        "id": "B",
+        "text": "She was tired."
+      },
+      {
+        "id": "C",
+        "text": "Being tired."
+      },
+      {
+        "id": "D",
+        "text": "Tired because."
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "She was tired.",
+    "explanation_bn": "শুধু B-তে subject (She) এবং verb (was) আছে, যা পূর্ণ বাক্য।",
+    "rule_en": "A complete sentence must have at least a subject and a verb and express a complete thought.",
+    "common_wrong_reason_bn": "অন্যেরা fragment (অসম্পূর্ণ বাক্য) দিয়ে ভুল করে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-050",
+    "family": "Sentence structure",
+    "micro_skill": "run_on_sentence",
+    "difficulty": "INTERMEDIATE",
+    "question": "Which option correctly joins the two independent clauses with a semicolon?",
+    "options": [
+      {
+        "id": "A",
+        "text": "I went home I ate dinner."
+      },
+      {
+        "id": "B",
+        "text": "I went home, I ate dinner."
+      },
+      {
+        "id": "C",
+        "text": "I went home; I ate dinner."
+      },
+      {
+        "id": "D",
+        "text": "I went home because, I ate dinner."
+      }
+    ],
+    "correct_option": "C",
+    "correct_answer": "I went home; I ate dinner.",
+    "explanation_bn": "দুটি closely related independent clause semicolon দিয়ে যুক্ত করা যায়।",
+    "rule_en": "A semicolon can join two closely related independent clauses without a coordinating conjunction.",
+    "common_wrong_reason_bn": "A run-on sentence; B comma splice; D-তে conjunction-এর পরে ভুল punctuation আছে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-051",
+    "family": "Sentence structure",
+    "micro_skill": "parallel_structure",
+    "difficulty": "ADVANCED",
+    "question": "She enjoys reading, writing, and ___.",
+    "options": [
+      {
+        "id": "A",
+        "text": "to swim"
+      },
+      {
+        "id": "B",
+        "text": "swimming"
+      },
+      {
+        "id": "C",
+        "text": "swim"
+      },
+      {
+        "id": "D",
+        "text": "swam"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "swimming",
+    "explanation_bn": "Parallel structure: reading, writing, swimming – সব gerund।",
+    "rule_en": "In parallel structures, keep the same grammatical form for each item in a list.",
+    "common_wrong_reason_bn": "'To swim' infinitive ভেঙে parallelism নষ্ট করে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-052",
+    "family": "Sentence structure",
+    "micro_skill": "unnecessary_auxiliary",
+    "difficulty": "INTERMEDIATE",
+    "question": "Which sentence avoids an unnecessary auxiliary?",
+    "options": [
+      {
+        "id": "A",
+        "text": "He is knows the answer."
+      },
+      {
+        "id": "B",
+        "text": "He knows the answer."
+      },
+      {
+        "id": "C",
+        "text": "He does knows the answer."
+      },
+      {
+        "id": "D",
+        "text": "He is know the answer."
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "He knows the answer.",
+    "explanation_bn": "Simple present affirmative বাক্যে lexical verb 'know'-এর আগে অতিরিক্ত 'is' বা 'does' লাগে না।",
+    "rule_en": "In an ordinary affirmative simple-present clause, use the finite lexical verb directly unless an auxiliary is grammatically required.",
+    "common_wrong_reason_bn": "অপ্রয়োজনীয় auxiliary যোগ করলে verb form ভুল হয়ে যায়: 'is knows' বা 'does knows' নয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-053",
+    "family": "Sentence structure",
+    "micro_skill": "standard_negation",
+    "difficulty": "BEGINNER",
+    "question": "They ___ going to the market.",
+    "options": [
+      {
+        "id": "A",
+        "text": "isn't"
+      },
+      {
+        "id": "B",
+        "text": "aren't"
+      },
+      {
+        "id": "C",
+        "text": "don't"
+      },
+      {
+        "id": "D",
+        "text": "doesn't"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "aren't",
+    "explanation_bn": "'They' plural subject, present continuous negative-তে 'aren't'।",
+    "rule_en": "Use 'aren't' (are not) for plural subjects in present continuous.",
+    "common_wrong_reason_bn": "'They' এর জন্য 'isn't' ভুল।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-054",
+    "family": "Conjunctions/clauses",
+    "micro_skill": "although_without_but",
+    "difficulty": "INTERMEDIATE",
+    "question": "___ he was tired, he continued working.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Although"
+      },
+      {
+        "id": "B",
+        "text": "But"
+      },
+      {
+        "id": "C",
+        "text": "Because"
+      },
+      {
+        "id": "D",
+        "text": "So"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "Although",
+    "explanation_bn": "বিরোধী ধারণা প্রকাশ করতে 'although' (যদিও) ব্যবহার হয়, 'but' নয়।",
+    "rule_en": "Use 'although' to introduce a contrasting clause; do not use 'but' in the same clause.",
+    "common_wrong_reason_bn": "'But' contrast দেখায়, কিন্তু এখানে blank-টি concessive subordinate clause শুরু করছে; তাই 'Although' উপযুক্ত।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-055",
+    "family": "Conjunctions/clauses",
+    "micro_skill": "because_without_so",
+    "difficulty": "INTERMEDIATE",
+    "question": "___ he was late, he missed the bus.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Because"
+      },
+      {
+        "id": "B",
+        "text": "So"
+      },
+      {
+        "id": "C",
+        "text": "But"
+      },
+      {
+        "id": "D",
+        "text": "Although"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "Because",
+    "explanation_bn": "কারণ বোঝাতে 'because' – so নয় (so ফলে বোঝায়)।",
+    "rule_en": "Use 'because' to give a reason; 'so' indicates a result.",
+    "common_wrong_reason_bn": "'So' দিয়ে শুরু করলে অর্থ হয় 'তাই', কিন্তু এখানে কারণ দেখাতে হবে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-056",
+    "family": "Conjunctions/clauses",
+    "micro_skill": "coordinating_conjunctions",
+    "difficulty": "BEGINNER",
+    "question": "I wanted to go, ___ I was too tired.",
+    "options": [
+      {
+        "id": "A",
+        "text": "and"
+      },
+      {
+        "id": "B",
+        "text": "but"
+      },
+      {
+        "id": "C",
+        "text": "or"
+      },
+      {
+        "id": "D",
+        "text": "so"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "but",
+    "explanation_bn": "বিরোধী ধারণা – 'but' ব্যবহার হয়।",
+    "rule_en": "Use 'but' to show contrast.",
+    "common_wrong_reason_bn": "'And' যোগ করে, 'or' বিকল্প বোঝায় – এখানে contrast, তাই 'but'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-057",
+    "family": "Conjunctions/clauses",
+    "micro_skill": "subordinate_clause_connection",
+    "difficulty": "INTERMEDIATE",
+    "question": "She will call you ___ she arrives.",
+    "options": [
+      {
+        "id": "A",
+        "text": "as soon as"
+      },
+      {
+        "id": "B",
+        "text": "until"
+      },
+      {
+        "id": "C",
+        "text": "although"
+      },
+      {
+        "id": "D",
+        "text": "because"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "as soon as",
+    "explanation_bn": "সময় বোঝাতে 'as soon as' (যত তাড়াতাড়ি) – subordinate clause শুরু করে।",
+    "rule_en": "Use subordinate conjunctions like 'as soon as', 'when', 'after' to link time clauses.",
+    "common_wrong_reason_bn": "'Until' মানে 'যতক্ষণ না' – এখানে উপযুক্ত নয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-058",
+    "family": "Conjunctions/clauses",
+    "micro_skill": "coordinating_conjunctions",
+    "difficulty": "BEGINNER",
+    "question": "He can speak English ___ French.",
+    "options": [
+      {
+        "id": "A",
+        "text": "and"
+      },
+      {
+        "id": "B",
+        "text": "but"
+      },
+      {
+        "id": "C",
+        "text": "or"
+      },
+      {
+        "id": "D",
+        "text": "so"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "and",
+    "explanation_bn": "দুটি বিষয় যোগ করতে 'and'।",
+    "rule_en": "Use 'and' to add similar items.",
+    "common_wrong_reason_bn": "'Or' বিকল্প বোঝায়, কিন্তু এখানে দুটো ভাষা জানেন, তাই 'and'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-059",
+    "family": "Word order",
+    "micro_skill": "english_svo_order",
+    "difficulty": "BEGINNER",
+    "question": "Arrange the words to form a standard sentence:\n\"books / she / reads / every evening\"",
+    "options": [
+      {
+        "id": "A",
+        "text": "She books reads every evening."
+      },
+      {
+        "id": "B",
+        "text": "She reads books every evening."
+      },
+      {
+        "id": "C",
+        "text": "Reads she books every evening."
+      },
+      {
+        "id": "D",
+        "text": "She every evening books reads."
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "She reads books every evening.",
+    "explanation_bn": "Standard order: Subject (She) + Verb (reads) + Object (books) + time expression.",
+    "rule_en": "A common English declarative pattern is Subject + Verb + Object, followed by optional adverbials.",
+    "common_wrong_reason_bn": "Subject, verb ও object-এর স্বাভাবিক ক্রম বদলে দিলে বাক্যটি অস্বাভাবিক বা ভুল হয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-060",
+    "family": "Word order",
+    "micro_skill": "adverb_position",
+    "difficulty": "INTERMEDIATE",
+    "question": "Select the sentence with correct adverb placement.",
+    "options": [
+      {
+        "id": "A",
+        "text": "He quickly ran to the store."
+      },
+      {
+        "id": "B",
+        "text": "He ran quickly to the store."
+      },
+      {
+        "id": "C",
+        "text": "He ran to the store quickly."
+      },
+      {
+        "id": "D",
+        "text": "All are acceptable."
+      }
+    ],
+    "correct_option": "D",
+    "correct_answer": "All are acceptable.",
+    "explanation_bn": "Adverb 'quickly' বিভিন্ন স্থানে বসতে পারে – সবই গ্রহণযোগ্য।",
+    "rule_en": "Manner adverbs can appear in different positions (before verb, after verb, or at the end) with similar meaning.",
+    "common_wrong_reason_bn": "অনেকে মনে করেন শুধু একটি সঠিক, কিন্তু ইংরেজিতে adverb-এর স্থান নমনীয়।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-061",
+    "family": "Word order",
+    "micro_skill": "adjective_order",
+    "difficulty": "ADVANCED",
+    "question": "Choose the correct order of adjectives: \n\"a ___ table\" (wooden, round, large)",
+    "options": [
+      {
+        "id": "A",
+        "text": "large round wooden"
+      },
+      {
+        "id": "B",
+        "text": "round large wooden"
+      },
+      {
+        "id": "C",
+        "text": "wooden large round"
+      },
+      {
+        "id": "D",
+        "text": "large wooden round"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "large round wooden",
+    "explanation_bn": "Adjective order: size (large) → shape (round) → material (wooden)।",
+    "rule_en": "A common adjective order places size before shape and shape before material.",
+    "common_wrong_reason_bn": "অনেকে material-কে আগে দেন, কিন্তু সঠিক ক্রম size→shape→material।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-062",
+    "family": "Word order",
+    "micro_skill": "english_svo_order",
+    "difficulty": "INTERMEDIATE",
+    "question": "Which sentence has standard Subject-Verb-Object order?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The report the officer submitted."
+      },
+      {
+        "id": "B",
+        "text": "The officer submitted the report."
+      },
+      {
+        "id": "C",
+        "text": "Submitted the officer the report."
+      },
+      {
+        "id": "D",
+        "text": "The officer the report submitted."
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "The officer submitted the report.",
+    "explanation_bn": "সঠিক SVO: Subject (The officer) + Verb (submitted) + Object (the report)।",
+    "rule_en": "A common English declarative clause follows Subject + Verb + Object order.",
+    "common_wrong_reason_bn": "অন্য বিকল্পগুলোতে subject, verb ও object-এর standard order ভেঙে গেছে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-063",
+    "family": "Vocabulary/register/confused words",
+    "micro_skill": "commonly_confused_words",
+    "difficulty": "BEGINNER",
+    "question": "The students submitted ___ assignments on time.",
+    "options": [
+      {
+        "id": "A",
+        "text": "their"
+      },
+      {
+        "id": "B",
+        "text": "there"
+      },
+      {
+        "id": "C",
+        "text": "they're"
+      },
+      {
+        "id": "D",
+        "text": "them"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "their",
+    "explanation_bn": "'Their' possessive determiner; assignments-গুলো students-দের।",
+    "rule_en": "'Their' shows possession; 'there' refers to place, and 'they're' means 'they are'.",
+    "common_wrong_reason_bn": "'There' স্থান বোঝায়, আর 'they're' = 'they are'; noun-এর আগে possession বোঝাতে 'their' লাগে।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-064",
+    "family": "Vocabulary/register/confused words",
+    "micro_skill": "commonly_confused_words",
+    "difficulty": "INTERMEDIATE",
+    "question": "The school ___ welcomed the new students.",
+    "options": [
+      {
+        "id": "A",
+        "text": "principal"
+      },
+      {
+        "id": "B",
+        "text": "principle"
+      },
+      {
+        "id": "C",
+        "text": "principally"
+      },
+      {
+        "id": "D",
+        "text": "principal's"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "principal",
+    "explanation_bn": "'Principal' এখানে school-এর প্রধান ব্যক্তিকে বোঝায়।",
+    "rule_en": "'Principal' can mean the head of a school; 'principle' means a rule or fundamental belief.",
+    "common_wrong_reason_bn": "'Principle' নিয়ম বা নীতি; ব্যক্তিকে বোঝাতে এখানে 'principal' সঠিক।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-065",
+    "family": "Vocabulary/register/confused words",
+    "micro_skill": "fixed_expression",
+    "difficulty": "INTERMEDIATE",
+    "question": "He paid ___ the meal.",
+    "options": [
+      {
+        "id": "A",
+        "text": "for"
+      },
+      {
+        "id": "B",
+        "text": "to"
+      },
+      {
+        "id": "C",
+        "text": "on"
+      },
+      {
+        "id": "D",
+        "text": "off"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "for",
+    "explanation_bn": "'Pay for' অর্থ মূল্য দেওয়া (কোনো জিনিসের জন্য)।",
+    "rule_en": "Fixed expression: pay for something.",
+    "common_wrong_reason_bn": "'Pay to' সাধারণত ব্যক্তিকে বোঝায় (pay to the cashier), কিন্তু জিনিসের জন্য 'pay for'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-066",
+    "family": "Vocabulary/register/confused words",
+    "micro_skill": "word_choice_register",
+    "difficulty": "INTERMEDIATE",
+    "question": "Which sentence is most appropriate in a formal request?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Could you please provide the requested information?"
+      },
+      {
+        "id": "B",
+        "text": "Hey, send me the info."
+      },
+      {
+        "id": "C",
+        "text": "Gimme the details."
+      },
+      {
+        "id": "D",
+        "text": "You better send it now."
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "Could you please provide the requested information?",
+    "explanation_bn": "Formal request-এ ভদ্র, পরিষ্কার ও পেশাগত ভাষা ব্যবহার করা হয়।",
+    "rule_en": "Formal register favors polite, complete, neutral wording over slang, contractions, or commands.",
+    "common_wrong_reason_bn": "B–D বিকল্পগুলো casual, slang বা অতিরিক্ত direct; formal correspondence-এ A বেশি উপযুক্ত।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-067",
+    "family": "Vocabulary/register/confused words",
+    "micro_skill": "commonly_confused_words",
+    "difficulty": "INTERMEDIATE",
+    "question": "The new treatment proved ___.",
+    "options": [
+      {
+        "id": "A",
+        "text": "affective"
+      },
+      {
+        "id": "B",
+        "text": "effective"
+      },
+      {
+        "id": "C",
+        "text": "effecting"
+      },
+      {
+        "id": "D",
+        "text": "affection"
+      }
+    ],
+    "correct_option": "B",
+    "correct_answer": "effective",
+    "explanation_bn": "'Effective' মানে কার্যকর (produces the desired result)।",
+    "rule_en": "'Effective' = successful; 'affective' relates to emotions. 'Effect' is a noun, 'affect' is a verb.",
+    "common_wrong_reason_bn": "'Affective' মানে আবেগসংক্রান্ত – এখানে কার্যকারিতা বোঝাতে 'effective'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-068",
+    "family": "Vocabulary/register/confused words",
+    "micro_skill": "fixed_expression",
+    "difficulty": "INTERMEDIATE",
+    "question": "I need to ___ an appointment with the doctor.",
+    "options": [
+      {
+        "id": "A",
+        "text": "make"
+      },
+      {
+        "id": "B",
+        "text": "do"
+      },
+      {
+        "id": "C",
+        "text": "get"
+      },
+      {
+        "id": "D",
+        "text": "take"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "make",
+    "explanation_bn": "'Make an appointment' একটি fixed expression।",
+    "rule_en": "Use 'make' with 'appointment', 'decision', 'mistake'.",
+    "common_wrong_reason_bn": "'Do' সাধারণত কাজ বোঝায়, কিন্তু এখানে fixed phrase 'make an appointment'।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-069",
+    "family": "Vocabulary/register/confused words",
+    "micro_skill": "word_choice_register",
+    "difficulty": "ADVANCED",
+    "question": "Which sentence is most appropriate in a formal complaint letter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "I am writing to request a review of this matter."
+      },
+      {
+        "id": "B",
+        "text": "This is totally annoying!"
+      },
+      {
+        "id": "C",
+        "text": "Fix this ASAP, okay?"
+      },
+      {
+        "id": "D",
+        "text": "You guys messed this up."
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "I am writing to request a review of this matter.",
+    "explanation_bn": "Formal complaint-এ নিরপেক্ষ, ভদ্র ও নির্দিষ্ট ভাষা ব্যবহার করা উচিত।",
+    "rule_en": "Formal complaint writing uses professional, neutral wording and avoids slang, emotional outbursts, and casual commands.",
+    "common_wrong_reason_bn": "B–D অতিরিক্ত informal বা emotional; A পেশাগত ও স্পষ্ট।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  },
+  {
+    "id": "bcs-smartpath-070",
+    "family": "Vocabulary/register/confused words",
+    "micro_skill": "commonly_confused_words",
+    "difficulty": "BEGINNER",
+    "question": "Please ___ your name on the form.",
+    "options": [
+      {
+        "id": "A",
+        "text": "write"
+      },
+      {
+        "id": "B",
+        "text": "right"
+      },
+      {
+        "id": "C",
+        "text": "rite"
+      },
+      {
+        "id": "D",
+        "text": "wright"
+      }
+    ],
+    "correct_option": "A",
+    "correct_answer": "write",
+    "explanation_bn": "'Write' মানে লেখা – সঠিক বানান।",
+    "rule_en": "Write = to form letters; right = correct, rite = ritual, wright = maker.",
+    "common_wrong_reason_bn": "অনেকেই 'right' দিয়ে ভুল করেন, কিন্তু অর্থ ভিন্ন।",
+    "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+    "official_question": false
+  }
+]

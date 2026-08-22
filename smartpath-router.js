@@ -284,7 +284,8 @@
                 const result = recommend({state,profile,graph,transferGraph,goalGraph,destinations,nowMs:Date.now()});
                 if (result) renderPanel(win,result); else renderFallback();
             };
-            win.addEventListener('ovidhan:mistake-profile-update', rebuild); rebuild();
+            win.addEventListener('ovidhan:mistake-profile-update', rebuild);
+            win.addEventListener('ovidhan:practice-pack-loaded', rebuild); rebuild();
         }).catch(renderFallback);
     }
 
