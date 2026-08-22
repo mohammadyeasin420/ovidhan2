@@ -158,7 +158,7 @@
             breakdown.repetition_penalty = -Math.min(20, repetitionCount * 4);
             if (recentActions.slice(-2).some(action => actionMatches(action.id, destination, itemId))) breakdown.recently_practiced_penalty = -35;
 
-            const seen = itemId ? Object.values(counts).some(Boolean) : Boolean(evidence && evidence.evidence && evidence.evidence.interactions);
+            const seen = itemId ? Object.values(counts).some(Boolean) || recentActions.some(action => actionMatches(action.id, destination, itemId)) : Boolean(evidence && evidence.evidence && evidence.evidence.interactions);
             if (!seen) { breakdown.new_skill = 5; reasons.push('NEW_SKILL'); }
             if (!reasons.length) reasons.push('REINFORCEMENT');
 
@@ -194,7 +194,7 @@
             const mapping = mappings.get(item.id);
             return mapping ? {
                 destination_id: 'mistake:' + item.id, item_id: item.id, skill_id: mapping.primary_skill_id,
-                url: '/common-mistakes-bangladeshi-learners.html#mistakeMirror', activity_type: 'MISTAKE_REPAIR', difficulty: normalizedDifficulty(item.difficulty),
+                url: '/common-mistakes-bangladeshi-learners.html#mistakeMirror', activity_type: item.type === 'guided-translation' ? 'GUIDED_TRANSLATION' : item.type === 'guided-essay' ? 'GUIDED_ESSAY' : 'MISTAKE_REPAIR', difficulty: normalizedDifficulty(item.difficulty),
                 estimated_minutes: 4, review_status: 'REVIEWED', goal_ids: safeArray(item.goal_ids)
             } : null;
         }).filter(Boolean);

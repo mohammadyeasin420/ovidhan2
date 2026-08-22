@@ -82,6 +82,30 @@
         }));
     }
 
+    function normalizeWrittenPack(pack) {
+        const passages = new Map(((pack && pack.passages) || []).map(passage => [passage.passage_id, passage]));
+        const records = pack && Array.isArray(pack.items) ? pack.items : [];
+        return records.map(record => {
+            const common = {
+                id: record.candidate_id, version: pack.version, micro_skill: record.skill_id,
+                mistake_family: record.skill_id.startsWith('reading_') ? 'READING_COMPREHENSION' : record.skill_id.startsWith('translation_') ? 'TRANSLATION' : 'WRITING',
+                difficulty: String(record.difficulty).toLowerCase(), source_status: 'reviewed', source_type: 'OVIDHAN_EDITORIAL',
+                review_status: pack.review_status, research_status: record.research_status, practice_type: record.practice_type,
+                official_question: record.official_question, goal_ids: Object.freeze(['BCS'])
+            };
+            if (record.passage_id) {
+                const passage = passages.get(record.passage_id);
+                return Object.freeze(Object.assign(common, {
+                    type: 'multiple-choice', question: record.question, passage: passage && passage.text, passage_title: passage && passage.title,
+                    options: Object.freeze(record.options.map(option => Object.freeze({ id: option.id, text: option.text }))),
+                    correct_option: record.correct_option, correct: record.correct_answer,
+                    explanation_bn: record.explanation_bn, explanation_en: record.learning_note_en
+                }));
+            }
+            return Object.freeze(Object.assign(common, record, { type: record.direction ? 'guided-translation' : 'guided-essay' }));
+        });
+    }
+
     function addReviewedPack(records) {
         const additions = normalizeReviewedPack(records);
         const existing = new Set(items.map(item => item.id));
@@ -91,6 +115,13 @@
 
     function addLiteraturePack(pack) {
         const additions = normalizeLiteraturePack(pack);
+        const existing = new Set(items.map(item => item.id));
+        additions.forEach(item => { if (!existing.has(item.id)) { items.push(item); existing.add(item.id); } });
+        return items;
+    }
+
+    function addWrittenPack(pack) {
+        const additions = normalizeWrittenPack(pack);
         const existing = new Set(items.map(item => item.id));
         additions.forEach(item => { if (!existing.has(item.id)) { items.push(item); existing.add(item.id); } });
         return items;
@@ -125,7 +156,8 @@
         const doc = win.document;
         const host = doc.getElementById('mistakeMirror');
         if (!host) return;
-        let item = items[0];
+        const deepLinkedId = win.location && String(win.location.hash || '').slice(1);
+        let item = items.find(candidate => candidate.id === deepLinkedId) || items[0];
         let stage = 'initial';
         let initialResult = null;
         let completed = false;
@@ -136,17 +168,76 @@
             if (api) api.track(name, properties, { dedupeKey: key });
         }
         function render(shouldFocusHeading) {
+            if (item.type === 'guided-translation' || item.type === 'guided-essay') return renderGuided(shouldFocusHeading);
             const label = stage === 'initial' ? 'ভুলটি শনাক্ত করুন' : stage === 'repair' ? 'সঠিক বাক্যটি বেছে নিয়ে repair করুন' : 'এবার নতুন করে যাচাই করুন';
             host.innerHTML = '';
             const card = doc.createElement('div'); card.className = 'mm-card';
             const heading = doc.createElement('h3'); heading.textContent = label; heading.tabIndex = -1; card.appendChild(heading);
             const progress = doc.createElement('p'); progress.className = 'mm-progress'; progress.textContent = stage === 'initial' ? 'ধাপ ১/৩ · Diagnose' : stage === 'repair' ? 'ধাপ ২/৩ · Repair' : 'ধাপ ৩/৩ · Retest'; card.appendChild(progress);
+            if (item.passage) { const passage = doc.createElement('div'); passage.className = 'mm-passage'; const passageTitle = doc.createElement('h4'); passageTitle.textContent = item.passage_title || 'Passage'; passage.appendChild(passageTitle); const passageText = doc.createElement('p'); passageText.textContent = item.passage; passage.appendChild(passageText); card.appendChild(passage); }
             const prompt = doc.createElement('p'); prompt.className = 'mm-prompt';
             prompt.textContent = item.type === 'multiple-choice' ? item.question : stage === 'initial' ? item.incorrect : 'Choose the correct sentence:'; card.appendChild(prompt);
             const group = doc.createElement('div'); group.className = 'mm-options'; group.setAttribute('role','group'); group.setAttribute('aria-label', label);
             const opts = item.type === 'multiple-choice' ? optionsFor(item, stage) : stage === 'initial' ? [{id:'correct',text:'✅ Correct'}, {id:'incorrect',text:'❌ Incorrect'}] : optionsFor(item, stage);
             opts.forEach(option => { const button = doc.createElement('button'); button.type='button'; button.className='mm-option'; button.textContent=option.text; button.addEventListener('click', () => answer(option.id)); group.appendChild(button); });
             card.appendChild(group); host.appendChild(card); if (shouldFocusHeading) heading.focus();
+        }
+        function appendList(parent, title, values, lang) {
+            if (!Array.isArray(values) || !values.length) return;
+            const heading = doc.createElement('h4'); heading.textContent = title; parent.appendChild(heading);
+            const list = doc.createElement('ul'); if (lang) list.lang = lang;
+            values.forEach(value => { const li = doc.createElement('li'); li.textContent = value; list.appendChild(li); });
+            parent.appendChild(list);
+        }
+        function appendOutline(parent, outline) {
+            const heading = doc.createElement('h4'); heading.textContent = 'Model outline'; parent.appendChild(heading);
+            const list = doc.createElement('ul');
+            Object.entries(outline).forEach(([section, content]) => {
+                const item = doc.createElement('li'); const title = doc.createElement('strong'); title.textContent = section.replaceAll('_',' '); item.appendChild(title);
+                const details = doc.createElement('ul'); Object.entries(content).forEach(([key, value]) => { const detail = doc.createElement('li'); detail.textContent = key.replaceAll('_',' ') + ': ' + value; details.appendChild(detail); });
+                item.appendChild(details); list.appendChild(item);
+            });
+            parent.appendChild(list);
+        }
+        function renderGuided(shouldFocusHeading) {
+            host.innerHTML = '';
+            const card = doc.createElement('div'); card.className = 'mm-card mm-guided';
+            const heading = doc.createElement('h3'); heading.tabIndex = -1;
+            heading.textContent = item.type === 'guided-translation' ? 'Guided translation practice' : 'Guided essay practice'; card.appendChild(heading);
+            const meta = doc.createElement('p'); meta.className = 'mm-progress';
+            meta.textContent = item.type === 'guided-translation' ? (item.direction === 'BANGLA_TO_ENGLISH' ? 'বাংলা → English' : 'English → বাংলা') + ' · ' + item.difficulty : item.difficulty; card.appendChild(meta);
+            const prompt = doc.createElement('p'); prompt.className = 'mm-prompt'; prompt.textContent = item.source_text || item.topic; card.appendChild(prompt);
+            if (item.task) { const task = doc.createElement('p'); task.textContent = item.task; card.appendChild(task); }
+            const label = doc.createElement('label'); label.htmlFor = 'guidedResponse'; label.textContent = 'নিজের খসড়া (ঐচ্ছিক · এই পেজেই অস্থায়ী)'; card.appendChild(label);
+            const textarea = doc.createElement('textarea'); textarea.id = 'guidedResponse'; textarea.className = 'mm-guided-text'; textarea.rows = 7; textarea.autocomplete = 'off'; card.appendChild(textarea);
+            const privacy = doc.createElement('p'); privacy.className = 'mm-privacy'; privacy.textContent = 'এই লেখা save, send বা grade করা হবে না। Activity বদলালে এটি মুছে যাবে।'; card.appendChild(privacy);
+            const reveal = doc.createElement('button'); reveal.type = 'button'; reveal.className = 'btn btn-secondary mm-next'; reveal.textContent = 'উদাহরণ model দেখুন'; card.appendChild(reveal);
+            reveal.addEventListener('click', () => {
+                if (card.querySelector('.mm-model')) return;
+                const model = doc.createElement('div'); model.className = 'mm-feedback mm-model';
+                const note = doc.createElement('strong'); note.textContent = 'এটি একটি উদাহরণ—একমাত্র সঠিক উত্তর নয়।'; model.appendChild(note);
+                const sample = doc.createElement('p'); sample.textContent = item.model_translation || item.model_thesis || ''; model.appendChild(sample);
+                if (item.model_outline && typeof item.model_outline === 'object') appendOutline(model, item.model_outline);
+                appendList(model, 'মূল পয়েন্ট', item.key_points_bn, 'bn'); appendList(model, 'প্রকৃত ভুলের উদাহরণ', item.genuine_errors_bn, 'bn');
+                appendList(model, 'গ্রহণযোগ্য বিকল্প', item.acceptable_alternatives); appendList(model, 'Outline points', item.outline_points); appendList(model, 'Examples', item.examples);
+                if (item.counterpoint) appendList(model, 'Counterpoint', [item.counterpoint]);
+                if (item.conclusion_direction) appendList(model, 'Conclusion direction', [item.conclusion_direction]);
+                appendList(model, 'সাধারণ ভুল', item.common_mistakes_bn, 'bn'); appendList(model, 'Self-check', item.self_check, 'bn');
+                card.appendChild(model); reveal.disabled = true;
+                const completeButton = doc.createElement('button'); completeButton.type = 'button'; completeButton.className = 'btn btn-primary mm-next'; completeButton.textContent = 'Self-review complete'; card.appendChild(completeButton);
+                completeButton.addEventListener('click', () => completeGuided(completeButton));
+            });
+            host.appendChild(card); if (shouldFocusHeading) heading.focus();
+        }
+        function completeGuided(button) {
+            if (completed) return; completed = true; button.disabled = true; button.textContent = 'Self-review completed';
+            const api = learning(); if (api) api.recordLearningAction('mistake-mirror:' + item.id, 'guided-productive-practice', null);
+            win.dispatchEvent(new win.CustomEvent('ovidhan:mistake-profile-update'));
+            const next = chooseNext(item, api ? api.getState() : {}); const panel = doc.createElement('div'); panel.className = 'mm-complete';
+            const summary = doc.createElement('p'); summary.textContent = 'Guided self-review সম্পন্ন। কোনো correct/incorrect বা mastery score তৈরি হয়নি।'; panel.appendChild(summary);
+            const nextButton = doc.createElement('button'); nextButton.type = 'button'; nextButton.className = 'btn btn-secondary'; nextButton.textContent = 'পরের reviewed activity →';
+            nextButton.addEventListener('click', () => { item = next.item; stage = 'initial'; initialResult = null; completed = false; render(true); }); panel.appendChild(nextButton);
+            host.querySelector('.mm-card').appendChild(panel);
         }
         function feedback(result) {
             const box = doc.createElement('div'); box.className = 'mm-feedback ' + result; box.setAttribute('role', 'status'); box.tabIndex = -1;
@@ -206,13 +297,15 @@
             .then(response => response.ok ? response.json() : null).catch(() => null);
         return Promise.all([
             load('/data/bcs-smartpath-practice-v1.json'),
-            load('/data/bcs-literature-smartpath-v1.json')
-        ]).then(([grammarPack, literaturePack]) => {
+            load('/data/bcs-literature-smartpath-v1.json'),
+            load('/data/bcs-written-smartpath-v1.json')
+        ]).then(([grammarPack, literaturePack, writtenPack]) => {
             if (grammarPack) addReviewedPack(grammarPack);
             if (literaturePack) addLiteraturePack(literaturePack);
+            if (writtenPack) addWrittenPack(writtenPack);
             win.dispatchEvent(new win.CustomEvent('ovidhan:practice-pack-loaded'));
             return items;
         });
     }
-    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, loadReviewedPack, mount });
+    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, normalizeWrittenPack, addWrittenPack, loadReviewedPack, mount });
 });

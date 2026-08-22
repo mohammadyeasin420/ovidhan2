@@ -2,299 +2,3540 @@
   "graph_version": 3,
   "schema_version": 1,
   "status": "reviewed-pilot",
-  "edge_types": ["PREREQUISITE_OF", "RELATED_TO", "OFTEN_CONFUSED_WITH", "TRANSFER_PATTERN_FOR", "PRACTICED_BY", "RELEVANT_TO_EXAM"],
+  "edge_types": [
+    "PREREQUISITE_OF",
+    "RELATED_TO",
+    "OFTEN_CONFUSED_WITH",
+    "TRANSFER_PATTERN_FOR",
+    "PRACTICED_BY",
+    "RELEVANT_TO_EXAM"
+  ],
   "families": [
-    {"family_id":"ARTICLES","name_en":"Articles","name_bn":"আর্টিকেল","description":"A, an, the and zero-article choices.","child_skill_ids":["indefinite_article_a_an","definite_article_the","zero_article","article_with_professions","article_with_countability"],"related_family_ids":["COUNTABILITY_QUANTIFIERS"]},
-    {"family_id":"PREPOSITIONS","name_en":"Prepositions","name_bn":"প্রিপজিশন","description":"Time, place and governed preposition choices.","child_skill_ids":["preposition_time_at_in_on","preposition_place","adjective_preposition","verb_preposition","comparative_complement_preposition","movement_home_zero_preposition","duration_since_for"],"related_family_ids":["VERB_PATTERNS","VOCABULARY_REGISTER"]},
-    {"family_id":"VERB_SYSTEM","name_en":"Verb system","name_bn":"ক্রিয়ার রূপ ও কাল","description":"Tense, auxiliaries, modals and lexical verb forms.","child_skill_ids":["simple_present_form","simple_past_form","present_perfect_time_reference","auxiliary_did_base_form","modal_base_form","used_to_base_form","lexical_verb_without_be","stative_verb_aspect"],"related_family_ids":["SUBJECT_VERB_AGREEMENT","VERB_PATTERNS"]},
-    {"family_id":"SUBJECT_VERB_AGREEMENT","name_en":"Subject–verb agreement","name_bn":"কর্তা–ক্রিয়ার মিল","description":"Agreement between subject number/person and finite verb.","child_skill_ids":["third_person_s","plural_subject_agreement","grammatical_number_nouns","collective_subject_agreement","compound_subject_agreement"],"related_family_ids":["VERB_SYSTEM","COUNTABILITY_QUANTIFIERS"]},
-    {"family_id":"COUNTABILITY_QUANTIFIERS","name_en":"Countability and quantifiers","name_bn":"গণনীয়তা ও পরিমাণবাচক শব্দ","description":"Count/mass nouns, plurality and quantifier selection.","child_skill_ids":["countable_uncountable_nouns","much_many","fewer_less_register","one_of_plural_noun","quantifier_agreement"],"related_family_ids":["ARTICLES","SUBJECT_VERB_AGREEMENT"]},
-    {"family_id":"VERB_PATTERNS","name_en":"Verb patterns","name_bn":"ক্রিয়ার গঠন","description":"Complements required or rejected by particular verbs.","child_skill_ids":["transitive_verb_no_preposition","explain_something_to_someone","gerund_after_preposition","infinitive_complement","ditransitive_verb_pattern"],"related_family_ids":["PREPOSITIONS","VERB_SYSTEM"]},
-    {"family_id":"SENTENCE_STRUCTURE","name_en":"Sentence structure","name_bn":"বাক্যের গঠন","description":"Negation, completeness and clause-level grammatical structure.","child_skill_ids":["standard_negation","sentence_fragment","run_on_sentence","parallel_structure","unnecessary_auxiliary"],"related_family_ids":["CONJUNCTIONS_CLAUSES","WORD_ORDER"]},
-    {"family_id":"CONJUNCTIONS_CLAUSES","name_en":"Conjunctions and clauses","name_bn":"সংযোজক ও clause","description":"Connecting cause, contrast and dependent clauses.","child_skill_ids":["although_without_but","because_without_so","coordinating_conjunctions","subordinate_clause_connection"],"related_family_ids":["SENTENCE_STRUCTURE"]},
-    {"family_id":"WORD_ORDER","name_en":"Word order","name_bn":"শব্দের ক্রম","description":"English clause, adverb and modifier ordering.","child_skill_ids":["english_svo_order","adverb_position","adjective_order"],"related_family_ids":["SENTENCE_STRUCTURE"]},
-    {"family_id":"VOCABULARY_REGISTER","name_en":"Vocabulary and register","name_bn":"শব্দচয়ন ও ভাষার ধরন","description":"Collocation, fixed expression and context-appropriate usage.","child_skill_ids":["fixed_expression","word_choice_register","commonly_confused_words"],"related_family_ids":["PREPOSITIONS","WORD_ORDER","WRITING"]},
-    {"family_id":"WRITING","name_en":"Writing","name_bn":"লেখার দক্ষতা","description":"Purposeful written communication, organization and concise expression.","child_skill_ids":["writing_precis","formal_letter_writing"],"related_family_ids":["SENTENCE_STRUCTURE","VOCABULARY_REGISTER"]},
-    {"family_id":"LITERATURE","name_en":"English Literature","name_bn":"ইংরেজি সাহিত্য","description":"Literary periods, writers, works, quotations, genres and forms.","child_skill_ids":["literary_period_identification","author_work_attribution","quotation_attribution","genre_form_identification"],"related_family_ids":[]}
+    {
+      "family_id": "ARTICLES",
+      "name_en": "Articles",
+      "name_bn": "আর্টিকেল",
+      "description": "A, an, the and zero-article choices.",
+      "child_skill_ids": [
+        "indefinite_article_a_an",
+        "definite_article_the",
+        "zero_article",
+        "article_with_professions",
+        "article_with_countability"
+      ],
+      "related_family_ids": [
+        "COUNTABILITY_QUANTIFIERS"
+      ]
+    },
+    {
+      "family_id": "PREPOSITIONS",
+      "name_en": "Prepositions",
+      "name_bn": "প্রিপজিশন",
+      "description": "Time, place and governed preposition choices.",
+      "child_skill_ids": [
+        "preposition_time_at_in_on",
+        "preposition_place",
+        "adjective_preposition",
+        "verb_preposition",
+        "comparative_complement_preposition",
+        "movement_home_zero_preposition",
+        "duration_since_for"
+      ],
+      "related_family_ids": [
+        "VERB_PATTERNS",
+        "VOCABULARY_REGISTER"
+      ]
+    },
+    {
+      "family_id": "VERB_SYSTEM",
+      "name_en": "Verb system",
+      "name_bn": "ক্রিয়ার রূপ ও কাল",
+      "description": "Tense, auxiliaries, modals and lexical verb forms.",
+      "child_skill_ids": [
+        "simple_present_form",
+        "simple_past_form",
+        "present_perfect_time_reference",
+        "auxiliary_did_base_form",
+        "modal_base_form",
+        "used_to_base_form",
+        "lexical_verb_without_be",
+        "stative_verb_aspect"
+      ],
+      "related_family_ids": [
+        "SUBJECT_VERB_AGREEMENT",
+        "VERB_PATTERNS"
+      ]
+    },
+    {
+      "family_id": "SUBJECT_VERB_AGREEMENT",
+      "name_en": "Subject–verb agreement",
+      "name_bn": "কর্তা–ক্রিয়ার মিল",
+      "description": "Agreement between subject number/person and finite verb.",
+      "child_skill_ids": [
+        "third_person_s",
+        "plural_subject_agreement",
+        "grammatical_number_nouns",
+        "collective_subject_agreement",
+        "compound_subject_agreement"
+      ],
+      "related_family_ids": [
+        "VERB_SYSTEM",
+        "COUNTABILITY_QUANTIFIERS"
+      ]
+    },
+    {
+      "family_id": "COUNTABILITY_QUANTIFIERS",
+      "name_en": "Countability and quantifiers",
+      "name_bn": "গণনীয়তা ও পরিমাণবাচক শব্দ",
+      "description": "Count/mass nouns, plurality and quantifier selection.",
+      "child_skill_ids": [
+        "countable_uncountable_nouns",
+        "much_many",
+        "fewer_less_register",
+        "one_of_plural_noun",
+        "quantifier_agreement"
+      ],
+      "related_family_ids": [
+        "ARTICLES",
+        "SUBJECT_VERB_AGREEMENT"
+      ]
+    },
+    {
+      "family_id": "VERB_PATTERNS",
+      "name_en": "Verb patterns",
+      "name_bn": "ক্রিয়ার গঠন",
+      "description": "Complements required or rejected by particular verbs.",
+      "child_skill_ids": [
+        "transitive_verb_no_preposition",
+        "explain_something_to_someone",
+        "gerund_after_preposition",
+        "infinitive_complement",
+        "ditransitive_verb_pattern"
+      ],
+      "related_family_ids": [
+        "PREPOSITIONS",
+        "VERB_SYSTEM"
+      ]
+    },
+    {
+      "family_id": "SENTENCE_STRUCTURE",
+      "name_en": "Sentence structure",
+      "name_bn": "বাক্যের গঠন",
+      "description": "Negation, completeness and clause-level grammatical structure.",
+      "child_skill_ids": [
+        "standard_negation",
+        "sentence_fragment",
+        "run_on_sentence",
+        "parallel_structure",
+        "unnecessary_auxiliary"
+      ],
+      "related_family_ids": [
+        "CONJUNCTIONS_CLAUSES",
+        "WORD_ORDER"
+      ]
+    },
+    {
+      "family_id": "CONJUNCTIONS_CLAUSES",
+      "name_en": "Conjunctions and clauses",
+      "name_bn": "সংযোজক ও clause",
+      "description": "Connecting cause, contrast and dependent clauses.",
+      "child_skill_ids": [
+        "although_without_but",
+        "because_without_so",
+        "coordinating_conjunctions",
+        "subordinate_clause_connection"
+      ],
+      "related_family_ids": [
+        "SENTENCE_STRUCTURE"
+      ]
+    },
+    {
+      "family_id": "WORD_ORDER",
+      "name_en": "Word order",
+      "name_bn": "শব্দের ক্রম",
+      "description": "English clause, adverb and modifier ordering.",
+      "child_skill_ids": [
+        "english_svo_order",
+        "adverb_position",
+        "adjective_order"
+      ],
+      "related_family_ids": [
+        "SENTENCE_STRUCTURE"
+      ]
+    },
+    {
+      "family_id": "VOCABULARY_REGISTER",
+      "name_en": "Vocabulary and register",
+      "name_bn": "শব্দচয়ন ও ভাষার ধরন",
+      "description": "Collocation, fixed expression and context-appropriate usage.",
+      "child_skill_ids": [
+        "fixed_expression",
+        "word_choice_register",
+        "commonly_confused_words"
+      ],
+      "related_family_ids": [
+        "PREPOSITIONS",
+        "WORD_ORDER",
+        "WRITING"
+      ]
+    },
+    {
+      "family_id": "WRITING",
+      "name_en": "Writing",
+      "name_bn": "লেখার দক্ষতা",
+      "description": "Purposeful written communication, organization and concise expression.",
+      "child_skill_ids": [
+        "writing_precis",
+        "formal_letter_writing",
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ],
+      "related_family_ids": [
+        "SENTENCE_STRUCTURE",
+        "VOCABULARY_REGISTER"
+      ]
+    },
+    {
+      "family_id": "LITERATURE",
+      "name_en": "English Literature",
+      "name_bn": "ইংরেজি সাহিত্য",
+      "description": "Literary periods, writers, works, quotations, genres and forms.",
+      "child_skill_ids": [
+        "literary_period_identification",
+        "author_work_attribution",
+        "quotation_attribution",
+        "genre_form_identification"
+      ],
+      "related_family_ids": []
+    },
+    {
+      "family_id": "READING_COMPREHENSION",
+      "name_en": "Reading comprehension",
+      "name_bn": "পাঠ অনুধাবন",
+      "description": "Main ideas, supporting details, inference, tone, purpose and reference.",
+      "child_skill_ids": [
+        "reading_main_idea",
+        "reading_supporting_detail",
+        "reading_inference",
+        "reading_tone_purpose",
+        "reading_reference"
+      ],
+      "related_family_ids": [
+        "WRITING"
+      ]
+    },
+    {
+      "family_id": "TRANSLATION",
+      "name_en": "Translation",
+      "name_bn": "অনুবাদ",
+      "description": "Guided productive translation between Bangla and English.",
+      "child_skill_ids": [
+        "translation_bn_to_en",
+        "translation_en_to_bn"
+      ],
+      "related_family_ids": [
+        "WRITING",
+        "VOCABULARY_REGISTER"
+      ]
+    }
   ],
   "skills": [
-    {"id":"indefinite_article_a_an","name_en":"Indefinite article a/an","name_bn":"a/an-এর ব্যবহার","family_id":"ARTICLES","description":"Choose a or an from the following sound.","prerequisites":[],"related_skills":["article_with_countability"],"common_mistake_families":["articles"],"example_item_ids":["mm-article-apple"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA","SSC","HSC"],"status":"ACTIVE","version":1},
-    {"id":"definite_article_the","name_en":"Definite article the","name_bn":"the-এর ব্যবহার","family_id":"ARTICLES","description":"Use the for identifiable or context-specific nouns.","prerequisites":["indefinite_article_a_an"],"related_skills":["zero_article"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-003","bcs-smartpath-007"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"zero_article","name_en":"Zero article","name_bn":"article না বসার নিয়ম","family_id":"ARTICLES","description":"Recognize contexts where no article is used.","prerequisites":["indefinite_article_a_an"],"related_skills":["definite_article_the"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-004","bcs-smartpath-008"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"article_with_professions","name_en":"Articles with professions","name_bn":"পেশার আগে article","family_id":"ARTICLES","description":"Use an indefinite article with singular profession nouns.","prerequisites":["indefinite_article_a_an"],"related_skills":["article_with_countability"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-005"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","SSC","HSC","SPEAKING"],"status":"ACTIVE","version":1},
-    {"id":"article_with_countability","name_en":"Articles and countability","name_bn":"article ও গণনীয়তা","family_id":"ARTICLES","description":"Connect singular count nouns with article requirements.","prerequisites":["indefinite_article_a_an","countable_uncountable_nouns"],"related_skills":["quantifier_agreement"],"common_mistake_families":["countability"],"example_item_ids":["mm-information-uncountable","mm-advice-uncountable"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-
-    {"id":"preposition_time_at_in_on","name_en":"Time prepositions at/in/on","name_bn":"সময়ের at/in/on","family_id":"PREPOSITIONS","description":"Choose at, in or on for time expressions.","prerequisites":[],"related_skills":["preposition_place","duration_since_for"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-009","bcs-smartpath-010"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC","HSC"],"status":"ACTIVE","version":1},
-    {"id":"preposition_place","name_en":"Place prepositions","name_bn":"স্থানের preposition","family_id":"PREPOSITIONS","description":"Choose prepositions for location and destination.","prerequisites":[],"related_skills":["preposition_time_at_in_on","movement_home_zero_preposition"],"common_mistake_families":["fixed-preposition"],"example_item_ids":["mm-arrive-at"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SPEAKING"],"status":"ACTIVE","version":1},
-    {"id":"adjective_preposition","name_en":"Adjective + preposition","name_bn":"adjective-এর সঙ্গে preposition","family_id":"PREPOSITIONS","description":"Use the preposition governed by an adjective.","prerequisites":[],"related_skills":["verb_preposition","fixed_expression"],"common_mistake_families":["fixed-preposition"],"example_item_ids":["mm-good-at","mm-interested-in","mm-married-to"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"verb_preposition","name_en":"Verb + preposition","name_bn":"verb-এর সঙ্গে preposition","family_id":"PREPOSITIONS","description":"Use the preposition governed by a verb.","prerequisites":[],"related_skills":["adjective_preposition","transitive_verb_no_preposition"],"common_mistake_families":["fixed-preposition"],"example_item_ids":["mm-depend-on","mm-listen-to"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"comparative_complement_preposition","name_en":"Comparative complement prepositions","name_bn":"তুলনামূলক শব্দের preposition","family_id":"PREPOSITIONS","description":"Use fixed complements such as senior to and prefer to.","prerequisites":[],"related_skills":["adjective_preposition","fixed_expression"],"common_mistake_families":["fixed-preposition"],"example_item_ids":["mm-senior-to","mm-prefer-to"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA"],"status":"ACTIVE","version":1},
-    {"id":"movement_home_zero_preposition","name_en":"Movement with home","name_bn":"home-এর আগে preposition","family_id":"PREPOSITIONS","description":"Use home without to after movement verbs.","prerequisites":["preposition_place"],"related_skills":["zero_article"],"common_mistake_families":["unnecessary-preposition"],"example_item_ids":["mm-home-no-to"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","SPEAKING","SSC"],"status":"ACTIVE","version":1},
-    {"id":"duration_since_for","name_en":"Since and for with time","name_bn":"সময় বোঝাতে since/for","family_id":"PREPOSITIONS","description":"Distinguish a starting point from a duration.","prerequisites":["present_perfect_time_reference"],"related_skills":["preposition_time_at_in_on"],"common_mistake_families":["since-for"],"example_item_ids":["mm-since-for"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-
-    {"id":"simple_present_form","name_en":"Simple present form","name_bn":"Simple Present-এর রূপ","family_id":"VERB_SYSTEM","description":"Form present-simple statements with the appropriate base form.","prerequisites":[],"related_skills":["third_person_s"],"common_mistake_families":["subject-verb-agreement"],"example_item_ids":["mm-third-person-s"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","SSC","HSC","SPEAKING"],"status":"ACTIVE","version":1},
-    {"id":"simple_past_form","name_en":"Simple past form","name_bn":"Simple Past-এর রূপ","family_id":"VERB_SYSTEM","description":"Use past forms for completed past events.","prerequisites":[],"related_skills":["auxiliary_did_base_form","present_perfect_time_reference"],"common_mistake_families":["past-time-marker"],"example_item_ids":["mm-yesterday-past"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC","HSC"],"status":"ACTIVE","version":1},
-    {"id":"present_perfect_time_reference","name_en":"Present perfect time reference","name_bn":"Present Perfect ও সময়","family_id":"VERB_SYSTEM","description":"Distinguish unfinished relevance from finished past time.","prerequisites":["simple_past_form"],"related_skills":["duration_since_for"],"common_mistake_families":["past-time-marker","since-for"],"example_item_ids":["mm-yesterday-past","mm-since-for"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"auxiliary_did_base_form","name_en":"Base verb after did","name_bn":"did-এর পরে base verb","family_id":"VERB_SYSTEM","description":"Use the base verb after did or did not.","prerequisites":["simple_past_form"],"related_skills":["modal_base_form"],"common_mistake_families":["past-after-did"],"example_item_ids":["mm-did-base-verb"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC"],"status":"ACTIVE","version":1},
-    {"id":"modal_base_form","name_en":"Base verb after modals","name_bn":"modal-এর পরে base verb","family_id":"VERB_SYSTEM","description":"Use the base verb after can, may, should and other modals.","prerequisites":[],"related_skills":["auxiliary_did_base_form","infinitive_complement"],"common_mistake_families":["modal-base-verb"],"example_item_ids":["mm-modal-base"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC","HSC"],"status":"ACTIVE","version":1},
-    {"id":"used_to_base_form","name_en":"Base verb after used to","name_bn":"used to-এর পরে base verb","family_id":"VERB_SYSTEM","description":"Use a base verb after used to for past habits.","prerequisites":["simple_past_form"],"related_skills":["modal_base_form"],"common_mistake_families":["verb-pattern"],"example_item_ids":["mm-used-to-base"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"lexical_verb_without_be","name_en":"Lexical verb without unnecessary be","name_bn":"মূল verb-এর আগে অপ্রয়োজনীয় be","family_id":"VERB_SYSTEM","description":"Avoid be before a finite lexical verb such as agree.","prerequisites":["simple_present_form"],"related_skills":["unnecessary_auxiliary"],"common_mistake_families":["agree-verb"],"example_item_ids":["mm-agree-verb"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SPEAKING"],"status":"ACTIVE","version":1},
-    {"id":"stative_verb_aspect","name_en":"Stative verbs and continuous aspect","name_bn":"stative verb ও continuous","family_id":"VERB_SYSTEM","description":"Avoid progressive aspect with stative meanings when inappropriate.","prerequisites":["simple_present_form"],"related_skills":["present_perfect_time_reference"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-026"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","IELTS","SPEAKING"],"status":"ACTIVE","version":1},
-
-    {"id":"third_person_s","name_en":"Third-person singular -s","name_bn":"তৃতীয় পুরুষে -s","family_id":"SUBJECT_VERB_AGREEMENT","description":"Add the agreement ending with he, she or it in simple present.","prerequisites":["simple_present_form"],"related_skills":["plural_subject_agreement"],"common_mistake_families":["subject-verb-agreement"],"example_item_ids":["mm-third-person-s"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC","HSC"],"status":"ACTIVE","version":1},
-    {"id":"plural_subject_agreement","name_en":"Plural subject agreement","name_bn":"plural subject-এর agreement","family_id":"SUBJECT_VERB_AGREEMENT","description":"Use plural finite forms with plural subjects.","prerequisites":["simple_present_form"],"related_skills":["third_person_s","compound_subject_agreement"],"common_mistake_families":["subject-verb-agreement"],"example_item_ids":["mm-people-plural"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC"],"status":"ACTIVE","version":1},
-    {"id":"grammatical_number_nouns","name_en":"Grammatical number of nouns","name_bn":"noun-এর grammatical number","family_id":"SUBJECT_VERB_AGREEMENT","description":"Recognize nouns whose grammatical number is not visually obvious.","prerequisites":["plural_subject_agreement"],"related_skills":["countable_uncountable_nouns"],"common_mistake_families":["subject-verb-agreement"],"example_item_ids":["mm-news-singular","mm-people-plural"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA"],"status":"ACTIVE","version":1},
-    {"id":"collective_subject_agreement","name_en":"Collective-subject agreement","name_bn":"collective subject-এর agreement","family_id":"SUBJECT_VERB_AGREEMENT","description":"Choose agreement for collective nouns according to intended variety and meaning.","prerequisites":["plural_subject_agreement"],"related_skills":["grammatical_number_nouns"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-032"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"compound_subject_agreement","name_en":"Compound-subject agreement","name_bn":"যৌগিক subject-এর agreement","family_id":"SUBJECT_VERB_AGREEMENT","description":"Determine number when subjects are joined or coordinated.","prerequisites":["plural_subject_agreement"],"related_skills":["coordinating_conjunctions"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-033"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA"],"status":"ACTIVE","version":1},
-
-    {"id":"countable_uncountable_nouns","name_en":"Countable and uncountable nouns","name_bn":"গণনীয় ও অগণনীয় noun","family_id":"COUNTABILITY_QUANTIFIERS","description":"Distinguish count nouns from mass nouns.","prerequisites":[],"related_skills":["article_with_countability","much_many"],"common_mistake_families":["countability"],"example_item_ids":["mm-information-uncountable","mm-advice-uncountable"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"much_many","name_en":"Much and many","name_bn":"much ও many","family_id":"COUNTABILITY_QUANTIFIERS","description":"Choose much for mass nouns and many for plural count nouns.","prerequisites":["countable_uncountable_nouns"],"related_skills":["fewer_less_register","quantifier_agreement"],"common_mistake_families":["countability"],"example_item_ids":["mm-much-many"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC"],"status":"ACTIVE","version":1},
-    {"id":"fewer_less_register","name_en":"Fewer and less by register","name_bn":"formal/informal-এ fewer ও less","family_id":"COUNTABILITY_QUANTIFIERS","description":"Prefer fewer with plural count nouns in edited English while recognizing informal less.","prerequisites":["countable_uncountable_nouns"],"related_skills":["much_many","word_choice_register"],"common_mistake_families":["countability"],"example_item_ids":["mm-fewer-less"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"one_of_plural_noun","name_en":"Plural noun after one of","name_bn":"one of-এর পরে plural noun","family_id":"COUNTABILITY_QUANTIFIERS","description":"Use a plural set noun after one of.","prerequisites":["countable_uncountable_nouns"],"related_skills":["quantifier_agreement"],"common_mistake_families":["one-of-plural"],"example_item_ids":["mm-one-of-plural"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA"],"status":"ACTIVE","version":1},
-    {"id":"quantifier_agreement","name_en":"Quantifier and noun agreement","name_bn":"quantifier ও noun-এর মিল","family_id":"COUNTABILITY_QUANTIFIERS","description":"Match quantifier form with noun countability and number.","prerequisites":["countable_uncountable_nouns"],"related_skills":["much_many","one_of_plural_noun"],"common_mistake_families":["countability"],"example_item_ids":["mm-much-many","mm-one-of-plural"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-
-    {"id":"transitive_verb_no_preposition","name_en":"Direct object after transitive verb","name_bn":"transitive verb-এর direct object","family_id":"VERB_PATTERNS","description":"Avoid an unnecessary preposition before a direct object.","prerequisites":[],"related_skills":["verb_preposition","ditransitive_verb_pattern"],"common_mistake_families":["unnecessary-preposition"],"example_item_ids":["mm-discuss-object"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA"],"status":"ACTIVE","version":1},
-    {"id":"explain_something_to_someone","name_en":"Explain something to someone","name_bn":"explain something to someone গঠন","family_id":"VERB_PATTERNS","description":"Use the content object before the recipient introduced by to.","prerequisites":["transitive_verb_no_preposition"],"related_skills":["ditransitive_verb_pattern"],"common_mistake_families":["verb-pattern"],"example_item_ids":["mm-explain-to"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SPEAKING"],"status":"ACTIVE","version":1},
-    {"id":"gerund_after_preposition","name_en":"Gerund after a preposition","name_bn":"preposition-এর পরে gerund","family_id":"VERB_PATTERNS","description":"Use an -ing form after a preposition in a verb expression.","prerequisites":[],"related_skills":["infinitive_complement"],"common_mistake_families":["verb-pattern"],"example_item_ids":["mm-look-forward-gerund"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"infinitive_complement","name_en":"Infinitive complements","name_bn":"infinitive-ভিত্তিক পরিপূরক","family_id":"VERB_PATTERNS","description":"Choose a to-infinitive or bare infinitive required by its governor.","prerequisites":[],"related_skills":["gerund_after_preposition","modal_base_form"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-045"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"ditransitive_verb_pattern","name_en":"Ditransitive verb patterns","name_bn":"দুটি object-সহ verb pattern","family_id":"VERB_PATTERNS","description":"Choose the valid order for recipient and theme objects.","prerequisites":["transitive_verb_no_preposition"],"related_skills":["explain_something_to_someone"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-046"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-
-    {"id":"standard_negation","name_en":"Standard clause negation","name_bn":"প্রমিত নেতিবাচক clause","family_id":"SENTENCE_STRUCTURE","description":"Avoid unintended multiple negation in standard English.","prerequisites":[],"related_skills":["unnecessary_auxiliary"],"common_mistake_families":["double-negative"],"example_item_ids":["mm-double-negative"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC"],"status":"ACTIVE","version":1},
-    {"id":"sentence_fragment","name_en":"Complete sentence versus fragment","name_bn":"পূর্ণ বাক্য ও fragment","family_id":"SENTENCE_STRUCTURE","description":"Recognize and repair incomplete clauses.","prerequisites":[],"related_skills":["subordinate_clause_connection"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-049"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","IELTS","HSC"],"status":"ACTIVE","version":1},
-    {"id":"run_on_sentence","name_en":"Run-on sentence control","name_bn":"run-on sentence সংশোধন","family_id":"SENTENCE_STRUCTURE","description":"Separate or correctly connect independent clauses.","prerequisites":["sentence_fragment"],"related_skills":["coordinating_conjunctions"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-050"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","IELTS","HSC"],"status":"ACTIVE","version":1},
-    {"id":"parallel_structure","name_en":"Parallel structure","name_bn":"সমান্তরাল বাক্যগঠন","family_id":"SENTENCE_STRUCTURE","description":"Keep coordinated grammatical forms parallel.","prerequisites":["coordinating_conjunctions"],"related_skills":["run_on_sentence"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-051"],"difficulty_band":"ADVANCED","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"unnecessary_auxiliary","name_en":"Unnecessary auxiliary","name_bn":"অপ্রয়োজনীয় auxiliary","family_id":"SENTENCE_STRUCTURE","description":"Remove an auxiliary that conflicts with the finite lexical verb.","prerequisites":["simple_present_form"],"related_skills":["lexical_verb_without_be"],"common_mistake_families":["agree-verb"],"example_item_ids":["mm-agree-verb"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SPEAKING"],"status":"ACTIVE","version":1},
-
-    {"id":"although_without_but","name_en":"Although without but","name_bn":"although-এর সঙ্গে but নয়","family_id":"CONJUNCTIONS_CLAUSES","description":"Connect contrast with although without redundant but.","prerequisites":[],"related_skills":["subordinate_clause_connection","because_without_so"],"common_mistake_families":["conjunction-pairing"],"example_item_ids":["mm-although-no-but"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC","HSC"],"status":"ACTIVE","version":1},
-    {"id":"because_without_so","name_en":"Because without so","name_bn":"because-এর সঙ্গে so নয়","family_id":"CONJUNCTIONS_CLAUSES","description":"Connect cause and result without redundant so after because.","prerequisites":[],"related_skills":["subordinate_clause_connection","although_without_but"],"common_mistake_families":["conjunction-pairing"],"example_item_ids":["mm-because-no-so"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","SSC","HSC"],"status":"ACTIVE","version":1},
-    {"id":"coordinating_conjunctions","name_en":"Coordinating conjunctions","name_bn":"সমমান clause-এর সংযোজক","family_id":"CONJUNCTIONS_CLAUSES","description":"Coordinate equal words, phrases or clauses.","prerequisites":[],"related_skills":["subordinate_clause_connection","compound_subject_agreement"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-056","bcs-smartpath-058"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","SSC","HSC","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"subordinate_clause_connection","name_en":"Subordinate clause connection","name_bn":"subordinate clause সংযোগ","family_id":"CONJUNCTIONS_CLAUSES","description":"Connect dependent and independent clauses with one appropriate marker.","prerequisites":["coordinating_conjunctions"],"related_skills":["although_without_but","because_without_so","sentence_fragment"],"common_mistake_families":["conjunction-pairing"],"example_item_ids":["mm-although-no-but","mm-because-no-so"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-
-    {"id":"english_svo_order","name_en":"English SVO order","name_bn":"ইংরেজি SVO word order","family_id":"WORD_ORDER","description":"Order core subject, verb and object constituents.","prerequisites":[],"related_skills":["adverb_position"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-059","bcs-smartpath-062"],"difficulty_band":"BEGINNER","exam_relevance":["GENERAL_ENGLISH","SSC","HSC","SPEAKING"],"status":"ACTIVE","version":1},
-    {"id":"adverb_position","name_en":"Adverb position","name_bn":"adverb-এর অবস্থান","family_id":"WORD_ORDER","description":"Place frequency, manner and sentence adverbs naturally.","prerequisites":["english_svo_order"],"related_skills":["adjective_order"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-060"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-    {"id":"adjective_order","name_en":"Adjective order","name_bn":"adjective-এর ক্রম","family_id":"WORD_ORDER","description":"Order multiple attributive adjectives conventionally.","prerequisites":["english_svo_order"],"related_skills":["adverb_position","adjective_preposition"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-061"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","IELTS"],"status":"ACTIVE","version":1},
-
-    {"id":"fixed_expression","name_en":"Fixed expressions","name_bn":"নির্দিষ্ট expression","family_id":"VOCABULARY_REGISTER","description":"Use conventional fixed lexical combinations.","prerequisites":[],"related_skills":["adjective_preposition","comparative_complement_preposition"],"common_mistake_families":["fixed-preposition"],"example_item_ids":["mm-good-at","mm-senior-to","mm-prefer-to"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA","SPEAKING"],"status":"ACTIVE","version":1},
-    {"id":"word_choice_register","name_en":"Word choice and register","name_bn":"প্রসঙ্গ অনুযায়ী শব্দচয়ন","family_id":"VOCABULARY_REGISTER","description":"Choose wording appropriate to formal, informal or professional context.","prerequisites":[],"related_skills":["fewer_less_register","commonly_confused_words"],"common_mistake_families":["countability"],"example_item_ids":["mm-fewer-less"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","IELTS","WORKPLACE","SPEAKING"],"status":"ACTIVE","version":1},
-    {"id":"commonly_confused_words","name_en":"Commonly confused words","name_bn":"সহজে গুলিয়ে ফেলা শব্দ","family_id":"VOCABULARY_REGISTER","description":"Distinguish words that are similar in form or meaning.","prerequisites":[],"related_skills":["word_choice_register"],"common_mistake_families":[],"example_item_ids":["bcs-smartpath-063","bcs-smartpath-064","bcs-smartpath-067","bcs-smartpath-070"],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","NTRCA","IELTS"],"status":"ACTIVE","version":1},
-
-    {"id":"writing_precis","name_en":"Précis and summary writing","name_bn":"প্রেসি ও সারাংশ লেখা","family_id":"WRITING","description":"Identify central ideas and produce an accurate, concise, coherent précis or summary.","prerequisites":[],"related_skills":["formal_letter_writing","word_choice_register","parallel_structure"],"common_mistake_families":[],"example_item_ids":[],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","BANK","UNIVERSITY_ADMISSION"],"status":"ACTIVE","version":1,"orphan_reason":"Reviewed canonical learning destination; no objective-answer Mistake Mirror item yet."},
-    {"id":"formal_letter_writing","name_en":"Formal letter writing","name_bn":"আনুষ্ঠানিক পত্র লেখা","family_id":"WRITING","description":"Write a clear formal letter or letter to the editor with appropriate purpose, organization and register.","prerequisites":[],"related_skills":["writing_precis","word_choice_register","sentence_fragment"],"common_mistake_families":[],"example_item_ids":[],"difficulty_band":"INTERMEDIATE","exam_relevance":["GENERAL_ENGLISH","BCS","IELTS","UNIVERSITY_ADMISSION","WORKPLACE"],"status":"ACTIVE","version":1,"orphan_reason":"Reviewed canonical learning destination; no objective-answer Mistake Mirror item yet."},
-
-    {"id":"literary_period_identification","name_en":"Literary periods","name_bn":"সাহিত্যের যুগ শনাক্তকরণ","family_id":"LITERATURE","description":"Identify major periods and chronological contexts in English literature.","prerequisites":[],"related_skills":["author_work_attribution"],"common_mistake_families":[],"example_item_ids":["bcs-lit-candidate-001"],"difficulty_band":"BEGINNER","exam_relevance":["BCS"],"status":"ACTIVE","version":1},
-    {"id":"author_work_attribution","name_en":"Author and work","name_bn":"লেখক ও রচনা শনাক্তকরণ","family_id":"LITERATURE","description":"Attribute reviewed literary works to their writers.","prerequisites":[],"related_skills":["literary_period_identification","genre_form_identification"],"common_mistake_families":[],"example_item_ids":["bcs-lit-candidate-021"],"difficulty_band":"INTERMEDIATE","exam_relevance":["BCS"],"status":"ACTIVE","version":1},
-    {"id":"quotation_attribution","name_en":"Quotation attribution","name_bn":"উদ্ধৃতির রচয়িতা শনাক্তকরণ","family_id":"LITERATURE","description":"Attribute reviewed quotations from drama and poetry to their writers or works.","prerequisites":[],"related_skills":["author_work_attribution"],"common_mistake_families":[],"example_item_ids":["bcs-lit-candidate-048"],"difficulty_band":"INTERMEDIATE","exam_relevance":["BCS"],"status":"ACTIVE","version":1},
-    {"id":"genre_form_identification","name_en":"Genre and literary form","name_bn":"সাহিত্যের ধারা ও রূপ শনাক্তকরণ","family_id":"LITERATURE","description":"Identify literary genres and forms from reviewed examples.","prerequisites":[],"related_skills":["author_work_attribution"],"common_mistake_families":[],"example_item_ids":["bcs-lit-candidate-078"],"difficulty_band":"INTERMEDIATE","exam_relevance":["BCS"],"status":"ACTIVE","version":1}
+    {
+      "id": "indefinite_article_a_an",
+      "name_en": "Indefinite article a/an",
+      "name_bn": "a/an-এর ব্যবহার",
+      "family_id": "ARTICLES",
+      "description": "Choose a or an from the following sound.",
+      "prerequisites": [],
+      "related_skills": [
+        "article_with_countability"
+      ],
+      "common_mistake_families": [
+        "articles"
+      ],
+      "example_item_ids": [
+        "mm-article-apple"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA",
+        "SSC",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "definite_article_the",
+      "name_en": "Definite article the",
+      "name_bn": "the-এর ব্যবহার",
+      "family_id": "ARTICLES",
+      "description": "Use the for identifiable or context-specific nouns.",
+      "prerequisites": [
+        "indefinite_article_a_an"
+      ],
+      "related_skills": [
+        "zero_article"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-003",
+        "bcs-smartpath-007"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "zero_article",
+      "name_en": "Zero article",
+      "name_bn": "article না বসার নিয়ম",
+      "family_id": "ARTICLES",
+      "description": "Recognize contexts where no article is used.",
+      "prerequisites": [
+        "indefinite_article_a_an"
+      ],
+      "related_skills": [
+        "definite_article_the"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-004",
+        "bcs-smartpath-008"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "article_with_professions",
+      "name_en": "Articles with professions",
+      "name_bn": "পেশার আগে article",
+      "family_id": "ARTICLES",
+      "description": "Use an indefinite article with singular profession nouns.",
+      "prerequisites": [
+        "indefinite_article_a_an"
+      ],
+      "related_skills": [
+        "article_with_countability"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-005"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "SSC",
+        "HSC",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "article_with_countability",
+      "name_en": "Articles and countability",
+      "name_bn": "article ও গণনীয়তা",
+      "family_id": "ARTICLES",
+      "description": "Connect singular count nouns with article requirements.",
+      "prerequisites": [
+        "indefinite_article_a_an",
+        "countable_uncountable_nouns"
+      ],
+      "related_skills": [
+        "quantifier_agreement"
+      ],
+      "common_mistake_families": [
+        "countability"
+      ],
+      "example_item_ids": [
+        "mm-information-uncountable",
+        "mm-advice-uncountable"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "preposition_time_at_in_on",
+      "name_en": "Time prepositions at/in/on",
+      "name_bn": "সময়ের at/in/on",
+      "family_id": "PREPOSITIONS",
+      "description": "Choose at, in or on for time expressions.",
+      "prerequisites": [],
+      "related_skills": [
+        "preposition_place",
+        "duration_since_for"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-009",
+        "bcs-smartpath-010"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "preposition_place",
+      "name_en": "Place prepositions",
+      "name_bn": "স্থানের preposition",
+      "family_id": "PREPOSITIONS",
+      "description": "Choose prepositions for location and destination.",
+      "prerequisites": [],
+      "related_skills": [
+        "preposition_time_at_in_on",
+        "movement_home_zero_preposition"
+      ],
+      "common_mistake_families": [
+        "fixed-preposition"
+      ],
+      "example_item_ids": [
+        "mm-arrive-at"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "adjective_preposition",
+      "name_en": "Adjective + preposition",
+      "name_bn": "adjective-এর সঙ্গে preposition",
+      "family_id": "PREPOSITIONS",
+      "description": "Use the preposition governed by an adjective.",
+      "prerequisites": [],
+      "related_skills": [
+        "verb_preposition",
+        "fixed_expression"
+      ],
+      "common_mistake_families": [
+        "fixed-preposition"
+      ],
+      "example_item_ids": [
+        "mm-good-at",
+        "mm-interested-in",
+        "mm-married-to"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "verb_preposition",
+      "name_en": "Verb + preposition",
+      "name_bn": "verb-এর সঙ্গে preposition",
+      "family_id": "PREPOSITIONS",
+      "description": "Use the preposition governed by a verb.",
+      "prerequisites": [],
+      "related_skills": [
+        "adjective_preposition",
+        "transitive_verb_no_preposition"
+      ],
+      "common_mistake_families": [
+        "fixed-preposition"
+      ],
+      "example_item_ids": [
+        "mm-depend-on",
+        "mm-listen-to"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "comparative_complement_preposition",
+      "name_en": "Comparative complement prepositions",
+      "name_bn": "তুলনামূলক শব্দের preposition",
+      "family_id": "PREPOSITIONS",
+      "description": "Use fixed complements such as senior to and prefer to.",
+      "prerequisites": [],
+      "related_skills": [
+        "adjective_preposition",
+        "fixed_expression"
+      ],
+      "common_mistake_families": [
+        "fixed-preposition"
+      ],
+      "example_item_ids": [
+        "mm-senior-to",
+        "mm-prefer-to"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "movement_home_zero_preposition",
+      "name_en": "Movement with home",
+      "name_bn": "home-এর আগে preposition",
+      "family_id": "PREPOSITIONS",
+      "description": "Use home without to after movement verbs.",
+      "prerequisites": [
+        "preposition_place"
+      ],
+      "related_skills": [
+        "zero_article"
+      ],
+      "common_mistake_families": [
+        "unnecessary-preposition"
+      ],
+      "example_item_ids": [
+        "mm-home-no-to"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "SPEAKING",
+        "SSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "duration_since_for",
+      "name_en": "Since and for with time",
+      "name_bn": "সময় বোঝাতে since/for",
+      "family_id": "PREPOSITIONS",
+      "description": "Distinguish a starting point from a duration.",
+      "prerequisites": [
+        "present_perfect_time_reference"
+      ],
+      "related_skills": [
+        "preposition_time_at_in_on"
+      ],
+      "common_mistake_families": [
+        "since-for"
+      ],
+      "example_item_ids": [
+        "mm-since-for"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "simple_present_form",
+      "name_en": "Simple present form",
+      "name_bn": "Simple Present-এর রূপ",
+      "family_id": "VERB_SYSTEM",
+      "description": "Form present-simple statements with the appropriate base form.",
+      "prerequisites": [],
+      "related_skills": [
+        "third_person_s"
+      ],
+      "common_mistake_families": [
+        "subject-verb-agreement"
+      ],
+      "example_item_ids": [
+        "mm-third-person-s"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "SSC",
+        "HSC",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "simple_past_form",
+      "name_en": "Simple past form",
+      "name_bn": "Simple Past-এর রূপ",
+      "family_id": "VERB_SYSTEM",
+      "description": "Use past forms for completed past events.",
+      "prerequisites": [],
+      "related_skills": [
+        "auxiliary_did_base_form",
+        "present_perfect_time_reference"
+      ],
+      "common_mistake_families": [
+        "past-time-marker"
+      ],
+      "example_item_ids": [
+        "mm-yesterday-past"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "present_perfect_time_reference",
+      "name_en": "Present perfect time reference",
+      "name_bn": "Present Perfect ও সময়",
+      "family_id": "VERB_SYSTEM",
+      "description": "Distinguish unfinished relevance from finished past time.",
+      "prerequisites": [
+        "simple_past_form"
+      ],
+      "related_skills": [
+        "duration_since_for"
+      ],
+      "common_mistake_families": [
+        "past-time-marker",
+        "since-for"
+      ],
+      "example_item_ids": [
+        "mm-yesterday-past",
+        "mm-since-for"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "auxiliary_did_base_form",
+      "name_en": "Base verb after did",
+      "name_bn": "did-এর পরে base verb",
+      "family_id": "VERB_SYSTEM",
+      "description": "Use the base verb after did or did not.",
+      "prerequisites": [
+        "simple_past_form"
+      ],
+      "related_skills": [
+        "modal_base_form"
+      ],
+      "common_mistake_families": [
+        "past-after-did"
+      ],
+      "example_item_ids": [
+        "mm-did-base-verb"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "modal_base_form",
+      "name_en": "Base verb after modals",
+      "name_bn": "modal-এর পরে base verb",
+      "family_id": "VERB_SYSTEM",
+      "description": "Use the base verb after can, may, should and other modals.",
+      "prerequisites": [],
+      "related_skills": [
+        "auxiliary_did_base_form",
+        "infinitive_complement"
+      ],
+      "common_mistake_families": [
+        "modal-base-verb"
+      ],
+      "example_item_ids": [
+        "mm-modal-base"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "used_to_base_form",
+      "name_en": "Base verb after used to",
+      "name_bn": "used to-এর পরে base verb",
+      "family_id": "VERB_SYSTEM",
+      "description": "Use a base verb after used to for past habits.",
+      "prerequisites": [
+        "simple_past_form"
+      ],
+      "related_skills": [
+        "modal_base_form"
+      ],
+      "common_mistake_families": [
+        "verb-pattern"
+      ],
+      "example_item_ids": [
+        "mm-used-to-base"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "lexical_verb_without_be",
+      "name_en": "Lexical verb without unnecessary be",
+      "name_bn": "মূল verb-এর আগে অপ্রয়োজনীয় be",
+      "family_id": "VERB_SYSTEM",
+      "description": "Avoid be before a finite lexical verb such as agree.",
+      "prerequisites": [
+        "simple_present_form"
+      ],
+      "related_skills": [
+        "unnecessary_auxiliary"
+      ],
+      "common_mistake_families": [
+        "agree-verb"
+      ],
+      "example_item_ids": [
+        "mm-agree-verb"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "stative_verb_aspect",
+      "name_en": "Stative verbs and continuous aspect",
+      "name_bn": "stative verb ও continuous",
+      "family_id": "VERB_SYSTEM",
+      "description": "Avoid progressive aspect with stative meanings when inappropriate.",
+      "prerequisites": [
+        "simple_present_form"
+      ],
+      "related_skills": [
+        "present_perfect_time_reference"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-026"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "IELTS",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "third_person_s",
+      "name_en": "Third-person singular -s",
+      "name_bn": "তৃতীয় পুরুষে -s",
+      "family_id": "SUBJECT_VERB_AGREEMENT",
+      "description": "Add the agreement ending with he, she or it in simple present.",
+      "prerequisites": [
+        "simple_present_form"
+      ],
+      "related_skills": [
+        "plural_subject_agreement"
+      ],
+      "common_mistake_families": [
+        "subject-verb-agreement"
+      ],
+      "example_item_ids": [
+        "mm-third-person-s"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "plural_subject_agreement",
+      "name_en": "Plural subject agreement",
+      "name_bn": "plural subject-এর agreement",
+      "family_id": "SUBJECT_VERB_AGREEMENT",
+      "description": "Use plural finite forms with plural subjects.",
+      "prerequisites": [
+        "simple_present_form"
+      ],
+      "related_skills": [
+        "third_person_s",
+        "compound_subject_agreement"
+      ],
+      "common_mistake_families": [
+        "subject-verb-agreement"
+      ],
+      "example_item_ids": [
+        "mm-people-plural"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "grammatical_number_nouns",
+      "name_en": "Grammatical number of nouns",
+      "name_bn": "noun-এর grammatical number",
+      "family_id": "SUBJECT_VERB_AGREEMENT",
+      "description": "Recognize nouns whose grammatical number is not visually obvious.",
+      "prerequisites": [
+        "plural_subject_agreement"
+      ],
+      "related_skills": [
+        "countable_uncountable_nouns"
+      ],
+      "common_mistake_families": [
+        "subject-verb-agreement"
+      ],
+      "example_item_ids": [
+        "mm-news-singular",
+        "mm-people-plural"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "collective_subject_agreement",
+      "name_en": "Collective-subject agreement",
+      "name_bn": "collective subject-এর agreement",
+      "family_id": "SUBJECT_VERB_AGREEMENT",
+      "description": "Choose agreement for collective nouns according to intended variety and meaning.",
+      "prerequisites": [
+        "plural_subject_agreement"
+      ],
+      "related_skills": [
+        "grammatical_number_nouns"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-032"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "compound_subject_agreement",
+      "name_en": "Compound-subject agreement",
+      "name_bn": "যৌগিক subject-এর agreement",
+      "family_id": "SUBJECT_VERB_AGREEMENT",
+      "description": "Determine number when subjects are joined or coordinated.",
+      "prerequisites": [
+        "plural_subject_agreement"
+      ],
+      "related_skills": [
+        "coordinating_conjunctions"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-033"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "countable_uncountable_nouns",
+      "name_en": "Countable and uncountable nouns",
+      "name_bn": "গণনীয় ও অগণনীয় noun",
+      "family_id": "COUNTABILITY_QUANTIFIERS",
+      "description": "Distinguish count nouns from mass nouns.",
+      "prerequisites": [],
+      "related_skills": [
+        "article_with_countability",
+        "much_many"
+      ],
+      "common_mistake_families": [
+        "countability"
+      ],
+      "example_item_ids": [
+        "mm-information-uncountable",
+        "mm-advice-uncountable"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "much_many",
+      "name_en": "Much and many",
+      "name_bn": "much ও many",
+      "family_id": "COUNTABILITY_QUANTIFIERS",
+      "description": "Choose much for mass nouns and many for plural count nouns.",
+      "prerequisites": [
+        "countable_uncountable_nouns"
+      ],
+      "related_skills": [
+        "fewer_less_register",
+        "quantifier_agreement"
+      ],
+      "common_mistake_families": [
+        "countability"
+      ],
+      "example_item_ids": [
+        "mm-much-many"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "fewer_less_register",
+      "name_en": "Fewer and less by register",
+      "name_bn": "formal/informal-এ fewer ও less",
+      "family_id": "COUNTABILITY_QUANTIFIERS",
+      "description": "Prefer fewer with plural count nouns in edited English while recognizing informal less.",
+      "prerequisites": [
+        "countable_uncountable_nouns"
+      ],
+      "related_skills": [
+        "much_many",
+        "word_choice_register"
+      ],
+      "common_mistake_families": [
+        "countability"
+      ],
+      "example_item_ids": [
+        "mm-fewer-less"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "one_of_plural_noun",
+      "name_en": "Plural noun after one of",
+      "name_bn": "one of-এর পরে plural noun",
+      "family_id": "COUNTABILITY_QUANTIFIERS",
+      "description": "Use a plural set noun after one of.",
+      "prerequisites": [
+        "countable_uncountable_nouns"
+      ],
+      "related_skills": [
+        "quantifier_agreement"
+      ],
+      "common_mistake_families": [
+        "one-of-plural"
+      ],
+      "example_item_ids": [
+        "mm-one-of-plural"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "quantifier_agreement",
+      "name_en": "Quantifier and noun agreement",
+      "name_bn": "quantifier ও noun-এর মিল",
+      "family_id": "COUNTABILITY_QUANTIFIERS",
+      "description": "Match quantifier form with noun countability and number.",
+      "prerequisites": [
+        "countable_uncountable_nouns"
+      ],
+      "related_skills": [
+        "much_many",
+        "one_of_plural_noun"
+      ],
+      "common_mistake_families": [
+        "countability"
+      ],
+      "example_item_ids": [
+        "mm-much-many",
+        "mm-one-of-plural"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "transitive_verb_no_preposition",
+      "name_en": "Direct object after transitive verb",
+      "name_bn": "transitive verb-এর direct object",
+      "family_id": "VERB_PATTERNS",
+      "description": "Avoid an unnecessary preposition before a direct object.",
+      "prerequisites": [],
+      "related_skills": [
+        "verb_preposition",
+        "ditransitive_verb_pattern"
+      ],
+      "common_mistake_families": [
+        "unnecessary-preposition"
+      ],
+      "example_item_ids": [
+        "mm-discuss-object"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "explain_something_to_someone",
+      "name_en": "Explain something to someone",
+      "name_bn": "explain something to someone গঠন",
+      "family_id": "VERB_PATTERNS",
+      "description": "Use the content object before the recipient introduced by to.",
+      "prerequisites": [
+        "transitive_verb_no_preposition"
+      ],
+      "related_skills": [
+        "ditransitive_verb_pattern"
+      ],
+      "common_mistake_families": [
+        "verb-pattern"
+      ],
+      "example_item_ids": [
+        "mm-explain-to"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "gerund_after_preposition",
+      "name_en": "Gerund after a preposition",
+      "name_bn": "preposition-এর পরে gerund",
+      "family_id": "VERB_PATTERNS",
+      "description": "Use an -ing form after a preposition in a verb expression.",
+      "prerequisites": [],
+      "related_skills": [
+        "infinitive_complement"
+      ],
+      "common_mistake_families": [
+        "verb-pattern"
+      ],
+      "example_item_ids": [
+        "mm-look-forward-gerund"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "infinitive_complement",
+      "name_en": "Infinitive complements",
+      "name_bn": "infinitive-ভিত্তিক পরিপূরক",
+      "family_id": "VERB_PATTERNS",
+      "description": "Choose a to-infinitive or bare infinitive required by its governor.",
+      "prerequisites": [],
+      "related_skills": [
+        "gerund_after_preposition",
+        "modal_base_form"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-045"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "ditransitive_verb_pattern",
+      "name_en": "Ditransitive verb patterns",
+      "name_bn": "দুটি object-সহ verb pattern",
+      "family_id": "VERB_PATTERNS",
+      "description": "Choose the valid order for recipient and theme objects.",
+      "prerequisites": [
+        "transitive_verb_no_preposition"
+      ],
+      "related_skills": [
+        "explain_something_to_someone"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-046"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "standard_negation",
+      "name_en": "Standard clause negation",
+      "name_bn": "প্রমিত নেতিবাচক clause",
+      "family_id": "SENTENCE_STRUCTURE",
+      "description": "Avoid unintended multiple negation in standard English.",
+      "prerequisites": [],
+      "related_skills": [
+        "unnecessary_auxiliary"
+      ],
+      "common_mistake_families": [
+        "double-negative"
+      ],
+      "example_item_ids": [
+        "mm-double-negative"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "sentence_fragment",
+      "name_en": "Complete sentence versus fragment",
+      "name_bn": "পূর্ণ বাক্য ও fragment",
+      "family_id": "SENTENCE_STRUCTURE",
+      "description": "Recognize and repair incomplete clauses.",
+      "prerequisites": [],
+      "related_skills": [
+        "subordinate_clause_connection"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-049"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "IELTS",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "run_on_sentence",
+      "name_en": "Run-on sentence control",
+      "name_bn": "run-on sentence সংশোধন",
+      "family_id": "SENTENCE_STRUCTURE",
+      "description": "Separate or correctly connect independent clauses.",
+      "prerequisites": [
+        "sentence_fragment"
+      ],
+      "related_skills": [
+        "coordinating_conjunctions"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-050"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "IELTS",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "parallel_structure",
+      "name_en": "Parallel structure",
+      "name_bn": "সমান্তরাল বাক্যগঠন",
+      "family_id": "SENTENCE_STRUCTURE",
+      "description": "Keep coordinated grammatical forms parallel.",
+      "prerequisites": [
+        "coordinating_conjunctions"
+      ],
+      "related_skills": [
+        "run_on_sentence"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-051"
+      ],
+      "difficulty_band": "ADVANCED",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "unnecessary_auxiliary",
+      "name_en": "Unnecessary auxiliary",
+      "name_bn": "অপ্রয়োজনীয় auxiliary",
+      "family_id": "SENTENCE_STRUCTURE",
+      "description": "Remove an auxiliary that conflicts with the finite lexical verb.",
+      "prerequisites": [
+        "simple_present_form"
+      ],
+      "related_skills": [
+        "lexical_verb_without_be"
+      ],
+      "common_mistake_families": [
+        "agree-verb"
+      ],
+      "example_item_ids": [
+        "mm-agree-verb"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "although_without_but",
+      "name_en": "Although without but",
+      "name_bn": "although-এর সঙ্গে but নয়",
+      "family_id": "CONJUNCTIONS_CLAUSES",
+      "description": "Connect contrast with although without redundant but.",
+      "prerequisites": [],
+      "related_skills": [
+        "subordinate_clause_connection",
+        "because_without_so"
+      ],
+      "common_mistake_families": [
+        "conjunction-pairing"
+      ],
+      "example_item_ids": [
+        "mm-although-no-but"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "because_without_so",
+      "name_en": "Because without so",
+      "name_bn": "because-এর সঙ্গে so নয়",
+      "family_id": "CONJUNCTIONS_CLAUSES",
+      "description": "Connect cause and result without redundant so after because.",
+      "prerequisites": [],
+      "related_skills": [
+        "subordinate_clause_connection",
+        "although_without_but"
+      ],
+      "common_mistake_families": [
+        "conjunction-pairing"
+      ],
+      "example_item_ids": [
+        "mm-because-no-so"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "SSC",
+        "HSC"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "coordinating_conjunctions",
+      "name_en": "Coordinating conjunctions",
+      "name_bn": "সমমান clause-এর সংযোজক",
+      "family_id": "CONJUNCTIONS_CLAUSES",
+      "description": "Coordinate equal words, phrases or clauses.",
+      "prerequisites": [],
+      "related_skills": [
+        "subordinate_clause_connection",
+        "compound_subject_agreement"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-056",
+        "bcs-smartpath-058"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "SSC",
+        "HSC",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "subordinate_clause_connection",
+      "name_en": "Subordinate clause connection",
+      "name_bn": "subordinate clause সংযোগ",
+      "family_id": "CONJUNCTIONS_CLAUSES",
+      "description": "Connect dependent and independent clauses with one appropriate marker.",
+      "prerequisites": [
+        "coordinating_conjunctions"
+      ],
+      "related_skills": [
+        "although_without_but",
+        "because_without_so",
+        "sentence_fragment"
+      ],
+      "common_mistake_families": [
+        "conjunction-pairing"
+      ],
+      "example_item_ids": [
+        "mm-although-no-but",
+        "mm-because-no-so"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "english_svo_order",
+      "name_en": "English SVO order",
+      "name_bn": "ইংরেজি SVO word order",
+      "family_id": "WORD_ORDER",
+      "description": "Order core subject, verb and object constituents.",
+      "prerequisites": [],
+      "related_skills": [
+        "adverb_position"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-059",
+        "bcs-smartpath-062"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "SSC",
+        "HSC",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "adverb_position",
+      "name_en": "Adverb position",
+      "name_bn": "adverb-এর অবস্থান",
+      "family_id": "WORD_ORDER",
+      "description": "Place frequency, manner and sentence adverbs naturally.",
+      "prerequisites": [
+        "english_svo_order"
+      ],
+      "related_skills": [
+        "adjective_order"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-060"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "adjective_order",
+      "name_en": "Adjective order",
+      "name_bn": "adjective-এর ক্রম",
+      "family_id": "WORD_ORDER",
+      "description": "Order multiple attributive adjectives conventionally.",
+      "prerequisites": [
+        "english_svo_order"
+      ],
+      "related_skills": [
+        "adverb_position",
+        "adjective_preposition"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-061"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "fixed_expression",
+      "name_en": "Fixed expressions",
+      "name_bn": "নির্দিষ্ট expression",
+      "family_id": "VOCABULARY_REGISTER",
+      "description": "Use conventional fixed lexical combinations.",
+      "prerequisites": [],
+      "related_skills": [
+        "adjective_preposition",
+        "comparative_complement_preposition"
+      ],
+      "common_mistake_families": [
+        "fixed-preposition"
+      ],
+      "example_item_ids": [
+        "mm-good-at",
+        "mm-senior-to",
+        "mm-prefer-to"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "word_choice_register",
+      "name_en": "Word choice and register",
+      "name_bn": "প্রসঙ্গ অনুযায়ী শব্দচয়ন",
+      "family_id": "VOCABULARY_REGISTER",
+      "description": "Choose wording appropriate to formal, informal or professional context.",
+      "prerequisites": [],
+      "related_skills": [
+        "fewer_less_register",
+        "commonly_confused_words"
+      ],
+      "common_mistake_families": [
+        "countability"
+      ],
+      "example_item_ids": [
+        "mm-fewer-less"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "IELTS",
+        "WORKPLACE",
+        "SPEAKING"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "commonly_confused_words",
+      "name_en": "Commonly confused words",
+      "name_bn": "সহজে গুলিয়ে ফেলা শব্দ",
+      "family_id": "VOCABULARY_REGISTER",
+      "description": "Distinguish words that are similar in form or meaning.",
+      "prerequisites": [],
+      "related_skills": [
+        "word_choice_register"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-smartpath-063",
+        "bcs-smartpath-064",
+        "bcs-smartpath-067",
+        "bcs-smartpath-070"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "NTRCA",
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "writing_precis",
+      "name_en": "Précis and summary writing",
+      "name_bn": "প্রেসি ও সারাংশ লেখা",
+      "family_id": "WRITING",
+      "description": "Identify central ideas and produce an accurate, concise, coherent précis or summary.",
+      "prerequisites": [],
+      "related_skills": [
+        "formal_letter_writing",
+        "word_choice_register",
+        "parallel_structure"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "BANK",
+        "UNIVERSITY_ADMISSION"
+      ],
+      "status": "ACTIVE",
+      "version": 1,
+      "orphan_reason": "Reviewed canonical learning destination; no objective-answer Mistake Mirror item yet."
+    },
+    {
+      "id": "formal_letter_writing",
+      "name_en": "Formal letter writing",
+      "name_bn": "আনুষ্ঠানিক পত্র লেখা",
+      "family_id": "WRITING",
+      "description": "Write a clear formal letter or letter to the editor with appropriate purpose, organization and register.",
+      "prerequisites": [],
+      "related_skills": [
+        "writing_precis",
+        "word_choice_register",
+        "sentence_fragment"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "GENERAL_ENGLISH",
+        "BCS",
+        "IELTS",
+        "UNIVERSITY_ADMISSION",
+        "WORKPLACE"
+      ],
+      "status": "ACTIVE",
+      "version": 1,
+      "orphan_reason": "Reviewed canonical learning destination; no objective-answer Mistake Mirror item yet."
+    },
+    {
+      "id": "literary_period_identification",
+      "name_en": "Literary periods",
+      "name_bn": "সাহিত্যের যুগ শনাক্তকরণ",
+      "family_id": "LITERATURE",
+      "description": "Identify major periods and chronological contexts in English literature.",
+      "prerequisites": [],
+      "related_skills": [
+        "author_work_attribution"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-lit-candidate-001"
+      ],
+      "difficulty_band": "BEGINNER",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "author_work_attribution",
+      "name_en": "Author and work",
+      "name_bn": "লেখক ও রচনা শনাক্তকরণ",
+      "family_id": "LITERATURE",
+      "description": "Attribute reviewed literary works to their writers.",
+      "prerequisites": [],
+      "related_skills": [
+        "literary_period_identification",
+        "genre_form_identification"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-lit-candidate-021"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "quotation_attribution",
+      "name_en": "Quotation attribution",
+      "name_bn": "উদ্ধৃতির রচয়িতা শনাক্তকরণ",
+      "family_id": "LITERATURE",
+      "description": "Attribute reviewed quotations from drama and poetry to their writers or works.",
+      "prerequisites": [],
+      "related_skills": [
+        "author_work_attribution"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-lit-candidate-048"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "genre_form_identification",
+      "name_en": "Genre and literary form",
+      "name_bn": "সাহিত্যের ধারা ও রূপ শনাক্তকরণ",
+      "family_id": "LITERATURE",
+      "description": "Identify literary genres and forms from reviewed examples.",
+      "prerequisites": [],
+      "related_skills": [
+        "author_work_attribution"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-lit-candidate-078"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "reading_main_idea",
+      "name_en": "Main idea",
+      "name_bn": "মূল ভাব শনাক্তকরণ",
+      "family_id": "READING_COMPREHENSION",
+      "description": "Identify the central claim or controlling idea of a passage.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-comp-001",
+        "bcs-written-comp-005"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "reading_supporting_detail",
+      "name_en": "Supporting detail",
+      "name_bn": "সহায়ক তথ্য শনাক্তকরণ",
+      "family_id": "READING_COMPREHENSION",
+      "description": "Locate details that directly support a passage claim.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-comp-002",
+        "bcs-written-comp-006"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "reading_inference",
+      "name_en": "Reading inference",
+      "name_bn": "পাঠ থেকে অনুমান",
+      "family_id": "READING_COMPREHENSION",
+      "description": "Draw conclusions supported but not directly stated by a passage.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-comp-003",
+        "bcs-written-comp-007"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "reading_tone_purpose",
+      "name_en": "Tone and purpose",
+      "name_bn": "সুর ও উদ্দেশ্য",
+      "family_id": "READING_COMPREHENSION",
+      "description": "Identify a writer’s tone and communicative purpose.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-comp-004",
+        "bcs-written-comp-012"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "reading_reference",
+      "name_en": "Reference words",
+      "name_bn": "রেফারেন্স শব্দ",
+      "family_id": "READING_COMPREHENSION",
+      "description": "Resolve pronoun and phrase references in context.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-comp-008",
+        "bcs-written-comp-016"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "translation_bn_to_en",
+      "name_en": "Bangla to English translation",
+      "name_bn": "বাংলা থেকে ইংরেজি অনুবাদ",
+      "family_id": "TRANSLATION",
+      "description": "Produce a faithful, natural English translation of Bangla prose.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-trans-001",
+        "bcs-written-trans-002"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "translation_en_to_bn",
+      "name_en": "English to Bangla translation",
+      "name_bn": "ইংরেজি থেকে বাংলা অনুবাদ",
+      "family_id": "TRANSLATION",
+      "description": "Produce a faithful, natural Bangla translation of English prose.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-trans-011",
+        "bcs-written-trans-012"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "essay_thesis_focus",
+      "name_en": "Essay thesis and focus",
+      "name_bn": "প্রবন্ধের থিসিস ও ফোকাস",
+      "family_id": "WRITING",
+      "description": "Form a focused, arguable thesis for an essay task.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-essay-001",
+        "bcs-written-essay-003"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "essay_outline_structure",
+      "name_en": "Essay outline structure",
+      "name_bn": "প্রবন্ধের রূপরেখা",
+      "family_id": "WRITING",
+      "description": "Organize an essay into a coherent structured outline.",
+      "prerequisites": [],
+      "related_skills": [],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "bcs-written-essay-002",
+        "bcs-written-essay-004"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "BCS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    }
   ],
   "item_mappings": [
-    {"item_id":"mm-agree-verb","primary_skill_id":"lexical_verb_without_be","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":["unnecessary_auxiliary"]},
-    {"item_id":"mm-third-person-s","primary_skill_id":"third_person_s","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":["simple_present_form"]},
-    {"item_id":"mm-did-base-verb","primary_skill_id":"auxiliary_did_base_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":["simple_past_form"]},
-    {"item_id":"mm-discuss-object","primary_skill_id":"transitive_verb_no_preposition","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":[]},
-    {"item_id":"mm-article-apple","primary_skill_id":"indefinite_article_a_an","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"mm-modal-base","primary_skill_id":"modal_base_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"mm-double-negative","primary_skill_id":"standard_negation","primary_family_id":"SENTENCE_STRUCTURE","secondary_skill_ids":[]},
-    {"item_id":"mm-good-at","primary_skill_id":"adjective_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":["fixed_expression"]},
-    {"item_id":"mm-senior-to","primary_skill_id":"comparative_complement_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":["fixed_expression"]},
-    {"item_id":"mm-depend-on","primary_skill_id":"verb_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"mm-interested-in","primary_skill_id":"adjective_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"mm-yesterday-past","primary_skill_id":"present_perfect_time_reference","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":["simple_past_form"]},
-    {"item_id":"mm-one-of-plural","primary_skill_id":"one_of_plural_noun","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":["quantifier_agreement"]},
-    {"item_id":"mm-much-many","primary_skill_id":"much_many","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":["quantifier_agreement"]},
-    {"item_id":"mm-fewer-less","primary_skill_id":"fewer_less_register","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":["word_choice_register"]},
-    {"item_id":"mm-since-for","primary_skill_id":"duration_since_for","primary_family_id":"PREPOSITIONS","secondary_skill_ids":["present_perfect_time_reference"]},
-    {"item_id":"mm-married-to","primary_skill_id":"adjective_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"mm-listen-to","primary_skill_id":"verb_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"mm-explain-to","primary_skill_id":"explain_something_to_someone","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":["ditransitive_verb_pattern"]},
-    {"item_id":"mm-arrive-at","primary_skill_id":"preposition_place","primary_family_id":"PREPOSITIONS","secondary_skill_ids":["verb_preposition"]},
-    {"item_id":"mm-home-no-to","primary_skill_id":"movement_home_zero_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"mm-news-singular","primary_skill_id":"grammatical_number_nouns","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":[]},
-    {"item_id":"mm-people-plural","primary_skill_id":"plural_subject_agreement","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":["grammatical_number_nouns"]},
-    {"item_id":"mm-information-uncountable","primary_skill_id":"countable_uncountable_nouns","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":["article_with_countability"]},
-    {"item_id":"mm-advice-uncountable","primary_skill_id":"countable_uncountable_nouns","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":["article_with_countability"]},
-    {"item_id":"mm-look-forward-gerund","primary_skill_id":"gerund_after_preposition","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":[]},
-    {"item_id":"mm-used-to-base","primary_skill_id":"used_to_base_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"mm-prefer-to","primary_skill_id":"comparative_complement_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":["fixed_expression"]},
-    {"item_id":"mm-although-no-but","primary_skill_id":"although_without_but","primary_family_id":"CONJUNCTIONS_CLAUSES","secondary_skill_ids":["subordinate_clause_connection"]},
-    {"item_id":"mm-because-no-so","primary_skill_id":"because_without_so","primary_family_id":"CONJUNCTIONS_CLAUSES","secondary_skill_ids":["subordinate_clause_connection"]},
-    {"item_id":"bcs-smartpath-001","primary_skill_id":"indefinite_article_a_an","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-002","primary_skill_id":"indefinite_article_a_an","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-003","primary_skill_id":"definite_article_the","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-004","primary_skill_id":"zero_article","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-005","primary_skill_id":"article_with_professions","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-006","primary_skill_id":"article_with_countability","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-007","primary_skill_id":"definite_article_the","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-008","primary_skill_id":"zero_article","primary_family_id":"ARTICLES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-009","primary_skill_id":"preposition_time_at_in_on","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-010","primary_skill_id":"preposition_time_at_in_on","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-011","primary_skill_id":"preposition_place","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-012","primary_skill_id":"adjective_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-013","primary_skill_id":"verb_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-014","primary_skill_id":"comparative_complement_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-015","primary_skill_id":"movement_home_zero_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-016","primary_skill_id":"duration_since_for","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-017","primary_skill_id":"preposition_place","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-018","primary_skill_id":"verb_preposition","primary_family_id":"PREPOSITIONS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-019","primary_skill_id":"simple_present_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-020","primary_skill_id":"simple_past_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-021","primary_skill_id":"present_perfect_time_reference","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-022","primary_skill_id":"auxiliary_did_base_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-023","primary_skill_id":"modal_base_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-024","primary_skill_id":"used_to_base_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-025","primary_skill_id":"lexical_verb_without_be","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-026","primary_skill_id":"stative_verb_aspect","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-027","primary_skill_id":"simple_past_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-028","primary_skill_id":"modal_base_form","primary_family_id":"VERB_SYSTEM","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-029","primary_skill_id":"third_person_s","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-030","primary_skill_id":"plural_subject_agreement","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-031","primary_skill_id":"grammatical_number_nouns","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-032","primary_skill_id":"collective_subject_agreement","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-033","primary_skill_id":"compound_subject_agreement","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-034","primary_skill_id":"plural_subject_agreement","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-035","primary_skill_id":"grammatical_number_nouns","primary_family_id":"SUBJECT_VERB_AGREEMENT","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-036","primary_skill_id":"countable_uncountable_nouns","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-037","primary_skill_id":"much_many","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-038","primary_skill_id":"fewer_less_register","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-039","primary_skill_id":"one_of_plural_noun","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-040","primary_skill_id":"quantifier_agreement","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-041","primary_skill_id":"countable_uncountable_nouns","primary_family_id":"COUNTABILITY_QUANTIFIERS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-042","primary_skill_id":"transitive_verb_no_preposition","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-043","primary_skill_id":"explain_something_to_someone","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-044","primary_skill_id":"gerund_after_preposition","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-045","primary_skill_id":"infinitive_complement","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-046","primary_skill_id":"ditransitive_verb_pattern","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-047","primary_skill_id":"transitive_verb_no_preposition","primary_family_id":"VERB_PATTERNS","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-048","primary_skill_id":"standard_negation","primary_family_id":"SENTENCE_STRUCTURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-049","primary_skill_id":"sentence_fragment","primary_family_id":"SENTENCE_STRUCTURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-050","primary_skill_id":"run_on_sentence","primary_family_id":"SENTENCE_STRUCTURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-051","primary_skill_id":"parallel_structure","primary_family_id":"SENTENCE_STRUCTURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-052","primary_skill_id":"unnecessary_auxiliary","primary_family_id":"SENTENCE_STRUCTURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-053","primary_skill_id":"standard_negation","primary_family_id":"SENTENCE_STRUCTURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-054","primary_skill_id":"although_without_but","primary_family_id":"CONJUNCTIONS_CLAUSES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-055","primary_skill_id":"because_without_so","primary_family_id":"CONJUNCTIONS_CLAUSES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-056","primary_skill_id":"coordinating_conjunctions","primary_family_id":"CONJUNCTIONS_CLAUSES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-057","primary_skill_id":"subordinate_clause_connection","primary_family_id":"CONJUNCTIONS_CLAUSES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-058","primary_skill_id":"coordinating_conjunctions","primary_family_id":"CONJUNCTIONS_CLAUSES","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-059","primary_skill_id":"english_svo_order","primary_family_id":"WORD_ORDER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-060","primary_skill_id":"adverb_position","primary_family_id":"WORD_ORDER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-061","primary_skill_id":"adjective_order","primary_family_id":"WORD_ORDER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-062","primary_skill_id":"english_svo_order","primary_family_id":"WORD_ORDER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-063","primary_skill_id":"commonly_confused_words","primary_family_id":"VOCABULARY_REGISTER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-064","primary_skill_id":"commonly_confused_words","primary_family_id":"VOCABULARY_REGISTER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-065","primary_skill_id":"fixed_expression","primary_family_id":"VOCABULARY_REGISTER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-066","primary_skill_id":"word_choice_register","primary_family_id":"VOCABULARY_REGISTER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-067","primary_skill_id":"commonly_confused_words","primary_family_id":"VOCABULARY_REGISTER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-068","primary_skill_id":"fixed_expression","primary_family_id":"VOCABULARY_REGISTER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-069","primary_skill_id":"word_choice_register","primary_family_id":"VOCABULARY_REGISTER","secondary_skill_ids":[]},
-    {"item_id":"bcs-smartpath-070","primary_skill_id":"commonly_confused_words","primary_family_id":"VOCABULARY_REGISTER","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-001","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-002","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-003","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-004","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-006","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-007","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-008","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-010","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-011","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-013","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-014","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-015","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-016","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-018","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-019","primary_skill_id":"literary_period_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-021","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-023","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-025","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-027","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-028","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-029","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-030","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-031","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-032","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-033","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-034","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-036","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-037","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-038","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-040","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-041","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-042","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-043","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-045","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-046","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-049","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-050","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-051","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-052","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-053","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-054","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-055","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-056","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-057","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-059","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-060","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-102","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-103","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-104","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-105","primary_skill_id":"author_work_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-048","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-061","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-062","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-063","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-064","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-065","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-066","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-067","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-068","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-069","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-070","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-071","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-072","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-073","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-074","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-075","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-077","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-079","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-119","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-120","primary_skill_id":"quotation_attribution","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-078","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-082","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-084","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-085","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-086","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-088","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-091","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-092","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-093","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]},
-    {"item_id":"bcs-lit-candidate-098","primary_skill_id":"genre_form_identification","primary_family_id":"LITERATURE","secondary_skill_ids":[]}
+    {
+      "item_id": "mm-agree-verb",
+      "primary_skill_id": "lexical_verb_without_be",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": [
+        "unnecessary_auxiliary"
+      ]
+    },
+    {
+      "item_id": "mm-third-person-s",
+      "primary_skill_id": "third_person_s",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": [
+        "simple_present_form"
+      ]
+    },
+    {
+      "item_id": "mm-did-base-verb",
+      "primary_skill_id": "auxiliary_did_base_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": [
+        "simple_past_form"
+      ]
+    },
+    {
+      "item_id": "mm-discuss-object",
+      "primary_skill_id": "transitive_verb_no_preposition",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-article-apple",
+      "primary_skill_id": "indefinite_article_a_an",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-modal-base",
+      "primary_skill_id": "modal_base_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-double-negative",
+      "primary_skill_id": "standard_negation",
+      "primary_family_id": "SENTENCE_STRUCTURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-good-at",
+      "primary_skill_id": "adjective_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": [
+        "fixed_expression"
+      ]
+    },
+    {
+      "item_id": "mm-senior-to",
+      "primary_skill_id": "comparative_complement_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": [
+        "fixed_expression"
+      ]
+    },
+    {
+      "item_id": "mm-depend-on",
+      "primary_skill_id": "verb_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-interested-in",
+      "primary_skill_id": "adjective_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-yesterday-past",
+      "primary_skill_id": "present_perfect_time_reference",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": [
+        "simple_past_form"
+      ]
+    },
+    {
+      "item_id": "mm-one-of-plural",
+      "primary_skill_id": "one_of_plural_noun",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": [
+        "quantifier_agreement"
+      ]
+    },
+    {
+      "item_id": "mm-much-many",
+      "primary_skill_id": "much_many",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": [
+        "quantifier_agreement"
+      ]
+    },
+    {
+      "item_id": "mm-fewer-less",
+      "primary_skill_id": "fewer_less_register",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "mm-since-for",
+      "primary_skill_id": "duration_since_for",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": [
+        "present_perfect_time_reference"
+      ]
+    },
+    {
+      "item_id": "mm-married-to",
+      "primary_skill_id": "adjective_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-listen-to",
+      "primary_skill_id": "verb_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-explain-to",
+      "primary_skill_id": "explain_something_to_someone",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": [
+        "ditransitive_verb_pattern"
+      ]
+    },
+    {
+      "item_id": "mm-arrive-at",
+      "primary_skill_id": "preposition_place",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": [
+        "verb_preposition"
+      ]
+    },
+    {
+      "item_id": "mm-home-no-to",
+      "primary_skill_id": "movement_home_zero_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-news-singular",
+      "primary_skill_id": "grammatical_number_nouns",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-people-plural",
+      "primary_skill_id": "plural_subject_agreement",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": [
+        "grammatical_number_nouns"
+      ]
+    },
+    {
+      "item_id": "mm-information-uncountable",
+      "primary_skill_id": "countable_uncountable_nouns",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": [
+        "article_with_countability"
+      ]
+    },
+    {
+      "item_id": "mm-advice-uncountable",
+      "primary_skill_id": "countable_uncountable_nouns",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": [
+        "article_with_countability"
+      ]
+    },
+    {
+      "item_id": "mm-look-forward-gerund",
+      "primary_skill_id": "gerund_after_preposition",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-used-to-base",
+      "primary_skill_id": "used_to_base_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "mm-prefer-to",
+      "primary_skill_id": "comparative_complement_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": [
+        "fixed_expression"
+      ]
+    },
+    {
+      "item_id": "mm-although-no-but",
+      "primary_skill_id": "although_without_but",
+      "primary_family_id": "CONJUNCTIONS_CLAUSES",
+      "secondary_skill_ids": [
+        "subordinate_clause_connection"
+      ]
+    },
+    {
+      "item_id": "mm-because-no-so",
+      "primary_skill_id": "because_without_so",
+      "primary_family_id": "CONJUNCTIONS_CLAUSES",
+      "secondary_skill_ids": [
+        "subordinate_clause_connection"
+      ]
+    },
+    {
+      "item_id": "bcs-smartpath-001",
+      "primary_skill_id": "indefinite_article_a_an",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-002",
+      "primary_skill_id": "indefinite_article_a_an",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-003",
+      "primary_skill_id": "definite_article_the",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-004",
+      "primary_skill_id": "zero_article",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-005",
+      "primary_skill_id": "article_with_professions",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-006",
+      "primary_skill_id": "article_with_countability",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-007",
+      "primary_skill_id": "definite_article_the",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-008",
+      "primary_skill_id": "zero_article",
+      "primary_family_id": "ARTICLES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-009",
+      "primary_skill_id": "preposition_time_at_in_on",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-010",
+      "primary_skill_id": "preposition_time_at_in_on",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-011",
+      "primary_skill_id": "preposition_place",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-012",
+      "primary_skill_id": "adjective_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-013",
+      "primary_skill_id": "verb_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-014",
+      "primary_skill_id": "comparative_complement_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-015",
+      "primary_skill_id": "movement_home_zero_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-016",
+      "primary_skill_id": "duration_since_for",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-017",
+      "primary_skill_id": "preposition_place",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-018",
+      "primary_skill_id": "verb_preposition",
+      "primary_family_id": "PREPOSITIONS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-019",
+      "primary_skill_id": "simple_present_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-020",
+      "primary_skill_id": "simple_past_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-021",
+      "primary_skill_id": "present_perfect_time_reference",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-022",
+      "primary_skill_id": "auxiliary_did_base_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-023",
+      "primary_skill_id": "modal_base_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-024",
+      "primary_skill_id": "used_to_base_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-025",
+      "primary_skill_id": "lexical_verb_without_be",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-026",
+      "primary_skill_id": "stative_verb_aspect",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-027",
+      "primary_skill_id": "simple_past_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-028",
+      "primary_skill_id": "modal_base_form",
+      "primary_family_id": "VERB_SYSTEM",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-029",
+      "primary_skill_id": "third_person_s",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-030",
+      "primary_skill_id": "plural_subject_agreement",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-031",
+      "primary_skill_id": "grammatical_number_nouns",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-032",
+      "primary_skill_id": "collective_subject_agreement",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-033",
+      "primary_skill_id": "compound_subject_agreement",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-034",
+      "primary_skill_id": "plural_subject_agreement",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-035",
+      "primary_skill_id": "grammatical_number_nouns",
+      "primary_family_id": "SUBJECT_VERB_AGREEMENT",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-036",
+      "primary_skill_id": "countable_uncountable_nouns",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-037",
+      "primary_skill_id": "much_many",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-038",
+      "primary_skill_id": "fewer_less_register",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-039",
+      "primary_skill_id": "one_of_plural_noun",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-040",
+      "primary_skill_id": "quantifier_agreement",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-041",
+      "primary_skill_id": "countable_uncountable_nouns",
+      "primary_family_id": "COUNTABILITY_QUANTIFIERS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-042",
+      "primary_skill_id": "transitive_verb_no_preposition",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-043",
+      "primary_skill_id": "explain_something_to_someone",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-044",
+      "primary_skill_id": "gerund_after_preposition",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-045",
+      "primary_skill_id": "infinitive_complement",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-046",
+      "primary_skill_id": "ditransitive_verb_pattern",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-047",
+      "primary_skill_id": "transitive_verb_no_preposition",
+      "primary_family_id": "VERB_PATTERNS",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-048",
+      "primary_skill_id": "standard_negation",
+      "primary_family_id": "SENTENCE_STRUCTURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-049",
+      "primary_skill_id": "sentence_fragment",
+      "primary_family_id": "SENTENCE_STRUCTURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-050",
+      "primary_skill_id": "run_on_sentence",
+      "primary_family_id": "SENTENCE_STRUCTURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-051",
+      "primary_skill_id": "parallel_structure",
+      "primary_family_id": "SENTENCE_STRUCTURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-052",
+      "primary_skill_id": "unnecessary_auxiliary",
+      "primary_family_id": "SENTENCE_STRUCTURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-053",
+      "primary_skill_id": "standard_negation",
+      "primary_family_id": "SENTENCE_STRUCTURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-054",
+      "primary_skill_id": "although_without_but",
+      "primary_family_id": "CONJUNCTIONS_CLAUSES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-055",
+      "primary_skill_id": "because_without_so",
+      "primary_family_id": "CONJUNCTIONS_CLAUSES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-056",
+      "primary_skill_id": "coordinating_conjunctions",
+      "primary_family_id": "CONJUNCTIONS_CLAUSES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-057",
+      "primary_skill_id": "subordinate_clause_connection",
+      "primary_family_id": "CONJUNCTIONS_CLAUSES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-058",
+      "primary_skill_id": "coordinating_conjunctions",
+      "primary_family_id": "CONJUNCTIONS_CLAUSES",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-059",
+      "primary_skill_id": "english_svo_order",
+      "primary_family_id": "WORD_ORDER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-060",
+      "primary_skill_id": "adverb_position",
+      "primary_family_id": "WORD_ORDER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-061",
+      "primary_skill_id": "adjective_order",
+      "primary_family_id": "WORD_ORDER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-062",
+      "primary_skill_id": "english_svo_order",
+      "primary_family_id": "WORD_ORDER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-063",
+      "primary_skill_id": "commonly_confused_words",
+      "primary_family_id": "VOCABULARY_REGISTER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-064",
+      "primary_skill_id": "commonly_confused_words",
+      "primary_family_id": "VOCABULARY_REGISTER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-065",
+      "primary_skill_id": "fixed_expression",
+      "primary_family_id": "VOCABULARY_REGISTER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-066",
+      "primary_skill_id": "word_choice_register",
+      "primary_family_id": "VOCABULARY_REGISTER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-067",
+      "primary_skill_id": "commonly_confused_words",
+      "primary_family_id": "VOCABULARY_REGISTER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-068",
+      "primary_skill_id": "fixed_expression",
+      "primary_family_id": "VOCABULARY_REGISTER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-069",
+      "primary_skill_id": "word_choice_register",
+      "primary_family_id": "VOCABULARY_REGISTER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-smartpath-070",
+      "primary_skill_id": "commonly_confused_words",
+      "primary_family_id": "VOCABULARY_REGISTER",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-001",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-002",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-003",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-004",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-006",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-007",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-008",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-010",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-011",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-013",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-014",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-015",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-016",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-018",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-019",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-021",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-023",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-025",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-027",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-028",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-029",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-030",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-031",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-032",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-033",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-034",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-036",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-037",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-038",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-040",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-041",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-042",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-043",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-045",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-046",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-049",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-050",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-051",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-052",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-053",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-054",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-055",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-056",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-057",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-059",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-060",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-102",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-103",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-104",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-105",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-048",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-061",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-062",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-063",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-064",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-065",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-066",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-067",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-068",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-069",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-070",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-071",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-072",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-073",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-074",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-075",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-077",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-079",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-119",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-120",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-078",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-082",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-084",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-085",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-086",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-088",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-091",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-092",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-093",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-098",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-001",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-002",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-003",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-004",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-005",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-006",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-007",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-008",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-009",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-010",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-011",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-012",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-013",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-014",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-015",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-016",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-017",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-018",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-019",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-020",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-021",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-022",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-023",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-comp-024",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-001",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-002",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-003",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-004",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-005",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-006",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-007",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-008",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-009",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-010",
+      "primary_skill_id": "translation_bn_to_en",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-011",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-012",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-013",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-014",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-015",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-016",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-017",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-018",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-019",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-trans-020",
+      "primary_skill_id": "translation_en_to_bn",
+      "primary_family_id": "TRANSLATION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-001",
+      "primary_skill_id": "essay_thesis_focus",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-002",
+      "primary_skill_id": "essay_outline_structure",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-003",
+      "primary_skill_id": "essay_thesis_focus",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-004",
+      "primary_skill_id": "essay_outline_structure",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-005",
+      "primary_skill_id": "essay_thesis_focus",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-006",
+      "primary_skill_id": "essay_outline_structure",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-007",
+      "primary_skill_id": "essay_thesis_focus",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-008",
+      "primary_skill_id": "essay_outline_structure",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-009",
+      "primary_skill_id": "essay_thesis_focus",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-010",
+      "primary_skill_id": "essay_outline_structure",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-011",
+      "primary_skill_id": "essay_thesis_focus",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-012",
+      "primary_skill_id": "essay_outline_structure",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-013",
+      "primary_skill_id": "essay_thesis_focus",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-014",
+      "primary_skill_id": "essay_outline_structure",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-015",
+      "primary_skill_id": "essay_thesis_focus",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-written-essay-016",
+      "primary_skill_id": "essay_outline_structure",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    }
   ],
   "transfer_patterns": [
-    {"id":"ARTICLE_ABSENCE_TRANSFER","name_en":"Possible article-absence transfer","name_bn":"article না থাকার সম্ভাব্য transfer","description":"Optional editorial hypothesis where a source language lacks an equivalent article system.","skill_ids":["indefinite_article_a_an","definite_article_the","zero_article"],"status":"OPTIONAL_REVIEWED"},
-    {"id":"POSTPOSITION_PREPOSITION_TRANSFER","name_en":"Possible postposition/preposition transfer","name_bn":"postposition থেকে preposition transfer","description":"Optional hypothesis for ordering or selection influenced by postpositions.","skill_ids":["preposition_place","adjective_preposition","verb_preposition"],"status":"OPTIONAL_REVIEWED"},
-    {"id":"WORD_ORDER_TRANSFER","name_en":"Possible word-order transfer","name_bn":"word order-এর সম্ভাব্য transfer","description":"Optional hypothesis for constituent-order influence.","skill_ids":["english_svo_order","adverb_position"],"status":"OPTIONAL_REVIEWED"},
-    {"id":"LITERAL_TRANSLATION_TRANSFER","name_en":"Possible literal-translation transfer","name_bn":"আক্ষরিক অনুবাদের সম্ভাব্য transfer","description":"Optional hypothesis for a source-language expression mapped word for word.","skill_ids":["fixed_expression","word_choice_register"],"status":"OPTIONAL_REVIEWED"}
+    {
+      "id": "ARTICLE_ABSENCE_TRANSFER",
+      "name_en": "Possible article-absence transfer",
+      "name_bn": "article না থাকার সম্ভাব্য transfer",
+      "description": "Optional editorial hypothesis where a source language lacks an equivalent article system.",
+      "skill_ids": [
+        "indefinite_article_a_an",
+        "definite_article_the",
+        "zero_article"
+      ],
+      "status": "OPTIONAL_REVIEWED"
+    },
+    {
+      "id": "POSTPOSITION_PREPOSITION_TRANSFER",
+      "name_en": "Possible postposition/preposition transfer",
+      "name_bn": "postposition থেকে preposition transfer",
+      "description": "Optional hypothesis for ordering or selection influenced by postpositions.",
+      "skill_ids": [
+        "preposition_place",
+        "adjective_preposition",
+        "verb_preposition"
+      ],
+      "status": "OPTIONAL_REVIEWED"
+    },
+    {
+      "id": "WORD_ORDER_TRANSFER",
+      "name_en": "Possible word-order transfer",
+      "name_bn": "word order-এর সম্ভাব্য transfer",
+      "description": "Optional hypothesis for constituent-order influence.",
+      "skill_ids": [
+        "english_svo_order",
+        "adverb_position"
+      ],
+      "status": "OPTIONAL_REVIEWED"
+    },
+    {
+      "id": "LITERAL_TRANSLATION_TRANSFER",
+      "name_en": "Possible literal-translation transfer",
+      "name_bn": "আক্ষরিক অনুবাদের সম্ভাব্য transfer",
+      "description": "Optional hypothesis for a source-language expression mapped word for word.",
+      "skill_ids": [
+        "fixed_expression",
+        "word_choice_register"
+      ],
+      "status": "OPTIONAL_REVIEWED"
+    }
   ],
   "edges": [
-    {"from":"indefinite_article_a_an","to":"definite_article_the","type":"PREREQUISITE_OF"},
-    {"from":"countable_uncountable_nouns","to":"article_with_countability","type":"PREREQUISITE_OF"},
-    {"from":"countable_uncountable_nouns","to":"much_many","type":"PREREQUISITE_OF"},
-    {"from":"countable_uncountable_nouns","to":"fewer_less_register","type":"PREREQUISITE_OF"},
-    {"from":"simple_past_form","to":"present_perfect_time_reference","type":"PREREQUISITE_OF"},
-    {"from":"simple_present_form","to":"third_person_s","type":"PREREQUISITE_OF"},
-    {"from":"adjective_preposition","to":"verb_preposition","type":"RELATED_TO"},
-    {"from":"much_many","to":"fewer_less_register","type":"OFTEN_CONFUSED_WITH"},
-    {"from":"gerund_after_preposition","to":"infinitive_complement","type":"OFTEN_CONFUSED_WITH"},
-    {"from":"although_without_but","to":"because_without_so","type":"RELATED_TO"},
-    {"from":"ARTICLE_ABSENCE_TRANSFER","to":"indefinite_article_a_an","type":"TRANSFER_PATTERN_FOR"},
-    {"from":"POSTPOSITION_PREPOSITION_TRANSFER","to":"adjective_preposition","type":"TRANSFER_PATTERN_FOR"},
-    {"from":"WORD_ORDER_TRANSFER","to":"english_svo_order","type":"TRANSFER_PATTERN_FOR"},
-    {"from":"LITERAL_TRANSLATION_TRANSFER","to":"fixed_expression","type":"TRANSFER_PATTERN_FOR"}
+    {
+      "from": "indefinite_article_a_an",
+      "to": "definite_article_the",
+      "type": "PREREQUISITE_OF"
+    },
+    {
+      "from": "countable_uncountable_nouns",
+      "to": "article_with_countability",
+      "type": "PREREQUISITE_OF"
+    },
+    {
+      "from": "countable_uncountable_nouns",
+      "to": "much_many",
+      "type": "PREREQUISITE_OF"
+    },
+    {
+      "from": "countable_uncountable_nouns",
+      "to": "fewer_less_register",
+      "type": "PREREQUISITE_OF"
+    },
+    {
+      "from": "simple_past_form",
+      "to": "present_perfect_time_reference",
+      "type": "PREREQUISITE_OF"
+    },
+    {
+      "from": "simple_present_form",
+      "to": "third_person_s",
+      "type": "PREREQUISITE_OF"
+    },
+    {
+      "from": "adjective_preposition",
+      "to": "verb_preposition",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "much_many",
+      "to": "fewer_less_register",
+      "type": "OFTEN_CONFUSED_WITH"
+    },
+    {
+      "from": "gerund_after_preposition",
+      "to": "infinitive_complement",
+      "type": "OFTEN_CONFUSED_WITH"
+    },
+    {
+      "from": "although_without_but",
+      "to": "because_without_so",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "ARTICLE_ABSENCE_TRANSFER",
+      "to": "indefinite_article_a_an",
+      "type": "TRANSFER_PATTERN_FOR"
+    },
+    {
+      "from": "POSTPOSITION_PREPOSITION_TRANSFER",
+      "to": "adjective_preposition",
+      "type": "TRANSFER_PATTERN_FOR"
+    },
+    {
+      "from": "WORD_ORDER_TRANSFER",
+      "to": "english_svo_order",
+      "type": "TRANSFER_PATTERN_FOR"
+    },
+    {
+      "from": "LITERAL_TRANSLATION_TRANSFER",
+      "to": "fixed_expression",
+      "type": "TRANSFER_PATTERN_FOR"
+    }
   ],
   "versioning_rules": {
-    "add_skill":"Add a new stable ID and increment graph_version; never reuse an old ID.",
-    "rename_label":"Keep the ID; change display labels and increment graph_version.",
-    "deprecate_skill":"Keep the node with status DEPRECATED and a replacement_skill_ids list.",
-    "split_skill":"Deprecate the old node, add new nodes, and document item/state mapping rules before release.",
-    "merge_skill":"Deprecate source nodes, add or select one target node, and retain aliases for state resolution."
+    "add_skill": "Add a new stable ID and increment graph_version; never reuse an old ID.",
+    "rename_label": "Keep the ID; change display labels and increment graph_version.",
+    "deprecate_skill": "Keep the node with status DEPRECATED and a replacement_skill_ids list.",
+    "split_skill": "Deprecate the old node, add new nodes, and document item/state mapping rules before release.",
+    "merge_skill": "Deprecate source nodes, add or select one target node, and retain aliases for state resolution."
   }
 }
