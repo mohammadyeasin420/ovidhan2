@@ -17,4 +17,8 @@ assert.ok(university.length > 0 && university.length < 10, 'University mapping m
 const bcsWriting = goals.mappings.filter(mapping => mapping.goal_id === 'BCS' && ['writing_precis','formal_letter_writing'].includes(mapping.skill_id));
 assert.equal(bcsWriting.length, 2);
 assert.ok(bcsWriting.every(mapping => mapping.importance === 'CORE'));
+const literatureSkills = new Set(graph.skills.filter(skill => skill.family_id === 'LITERATURE').map(skill => skill.id));
+const literatureMappings = goals.mappings.filter(mapping => literatureSkills.has(mapping.skill_id));
+assert.equal(literatureMappings.length, 4);
+assert.ok(literatureMappings.every(mapping => mapping.goal_id === 'BCS' && mapping.importance === 'CORE'));
 console.log('PASS goal requirements: six stable goals with reviewed explicit mappings');

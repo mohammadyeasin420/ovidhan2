@@ -69,10 +69,11 @@
         const id = String(actionId || '').replace(/^mistake-mirror:/, '');
         return id === destination.destination_id || (itemId && id === itemId);
     }
-    function normalizeDestinations(destinations, skillIds) {
+    function normalizeDestinations(destinations, skillIds, goal) {
         return safeArray(destinations).filter(destination => destination && destination.review_status === 'REVIEWED' &&
             typeof destination.destination_id === 'string' && skillIds.has(destination.skill_id) &&
-            typeof destination.url === 'string' && destination.url.startsWith('/'));
+            typeof destination.url === 'string' && destination.url.startsWith('/') &&
+            (!safeArray(destination.goal_ids).length || destination.goal_ids.includes(goal)));
     }
 
     function recommend(input) {
@@ -86,10 +87,10 @@
         const skills = new Map(graph.skills.map(skill => [skill.id, skill]));
         const families = new Map(graph.families.map(family => [family.family_id, family]));
         const skillIds = new Set(skills.keys());
-        const destinations = normalizeDestinations(input.destinations, skillIds);
+        const goal = safeGoal(state.goal);
+        const destinations = normalizeDestinations(input.destinations, skillIds, goal);
         if (!destinations.length) return null;
         const skillEvidence = new Map(safeArray(profile.microSkills).map(entry => [entry.id, entry]));
-        const goal = safeGoal(state.goal);
         const mappings = validGoalMappings(input.goalGraph, skillIds).filter(mapping => mapping.goal_id === goal);
         const goalBySkill = new Map(mappings.map(mapping => [mapping.skill_id, mapping]));
         const transferSkills = new Set(validTransferEdges(input.transferGraph, skillIds).map(edge => edge.target_skill_id));
@@ -194,7 +195,7 @@
             return mapping ? {
                 destination_id: 'mistake:' + item.id, item_id: item.id, skill_id: mapping.primary_skill_id,
                 url: '/common-mistakes-bangladeshi-learners.html#mistakeMirror', activity_type: 'MISTAKE_REPAIR', difficulty: normalizedDifficulty(item.difficulty),
-                estimated_minutes: 4, review_status: 'REVIEWED'
+                estimated_minutes: 4, review_status: 'REVIEWED', goal_ids: safeArray(item.goal_ids)
             } : null;
         }).filter(Boolean);
     }

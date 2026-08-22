@@ -13,7 +13,7 @@ const precis=read('precis-summary-writing-bangla.html');
 const formal=read('formal-letter-writing-bangla.html');
 const surface=read('common-mistakes-bangladeshi-learners.html');
 const foundation=read('learning-foundation.js');
-assert.equal(graph.graph_version,2); assert.equal(graph.families.length,11); assert.equal(graph.skills.length,52); assert.equal(graph.item_mappings.length,100);
+assert.equal(graph.graph_version,3); assert.equal(graph.families.length,12); assert.equal(graph.skills.length,56); assert.equal(graph.item_mappings.length,180);
 assert.ok(graph.families.some(x=>x.family_id==='WRITING'));
 assert.deepEqual(new Set(['writing_precis','formal_letter_writing']),new Set(graph.skills.filter(x=>x.family_id==='WRITING').map(x=>x.id)));
 assert.equal(transfer.edges.length,4); assert.equal(goals.goal_ids.length,6); assert.equal(destinations.destinations.length,2);
@@ -25,4 +25,4 @@ assert.equal(goals.mappings.filter(x=>x.goal_id==='BCS'&&['writing_precis','form
 assert.match(read('mistake-profile.js'),/shouldRenderLegacyNext/);
 assert.match(foundation,/getRoutingGoal/); assert.match(foundation,/GENERAL_ENGLISH/);
 assert.doesNotMatch([read('smartpath-router.js'),surface,foundation].join('\n'),/raw_writing|learner_textarea|audio_transcript/i);
-console.log(JSON.stringify({status:'PASS',graph:{families:11,skills:52,itemMappings:100},transferPatterns:4,goals:6,writingDestinations:2},null,2));
+console.log(JSON.stringify({status:'PASS',graph:{families:12,skills:56,itemMappings:180},transferPatterns:4,goals:6,writingDestinations:2},null,2));

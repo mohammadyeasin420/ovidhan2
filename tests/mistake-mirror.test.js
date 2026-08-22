@@ -1,7 +1,8 @@
 'use strict';
 const assert = require('node:assert/strict');
-const { items, optionsFor, chooseNext, addReviewedPack } = require('../mistake-mirror.js');
+const { items, optionsFor, chooseNext, addReviewedPack, addLiteraturePack } = require('../mistake-mirror.js');
 const reviewedPack = require('../data/bcs-smartpath-practice-v1.json');
+const literaturePack = require('../data/bcs-literature-smartpath-v1.json');
 function test(name, fn) { try { fn(); console.log('PASS', name); } catch (error) { console.error('FAIL', name); throw error; } }
 
 test('dataset contains exactly 30 unique manually reviewed items', () => {
@@ -15,14 +16,20 @@ test('reviewed BCS-style pack extends the same engine to 100 items', () => {
     assert.equal(new Set(items.map(item => item.id)).size, 100);
     assert.equal(items.filter(item => item.practice_type === 'OVIDHAN_CREATED_BCS_STYLE').length, 70);
 });
+test('reviewed Literature pack extends the same engine to 180 items', () => {
+    addLiteraturePack(literaturePack);
+    assert.equal(items.length, 180);
+    assert.equal(new Set(items.map(item => item.id)).size, 180);
+    assert.equal(items.filter(item => item.category === 'literature').length, 80);
+});
 test('every item has the required editorial schema and safe stable IDs', () => {
     const fields = ['id','correct','category','micro_skill','mistake_family','explanation_bn','explanation_en','difficulty','source_status'];
     items.forEach(item => {
         fields.forEach(field => assert.ok(item[field], `${item.id} missing ${field}`));
-        assert.match(item.id, /^(mm-|bcs-smartpath-)[a-z0-9-]+$/);
+        assert.match(item.id, /^(mm-|bcs-smartpath-|bcs-lit-candidate-)[a-z0-9-]+$/);
         if (item.type === 'multiple-choice') assert.ok(item.question); else assert.notEqual(item.incorrect, item.correct);
         assert.doesNotMatch(item.explanation_bn, /\uFFFD/);
-        assert.ok(['grammar','usage'].includes(item.category));
+        assert.ok(['grammar','usage','literature'].includes(item.category));
         assert.ok(['beginner','intermediate','advanced'].includes(item.difficulty));
     });
 });
@@ -67,5 +74,11 @@ test('new multiple-choice items retain four accessible answer choices', () => {
         assert.equal(optionsFor(item, 'initial').length, 4);
         assert.equal(optionsFor(item, 'repair').filter(option => option.id === item.correct_option).length, 1);
     });
+});
+test('legacy next-item fallback keeps Literature BCS-only', () => {
+    const grammar = items.find(item => item.id === 'mm-agree-verb');
+    assert.doesNotMatch(chooseNext(grammar,{goal:'GENERAL_ENGLISH',mistakeSignals:{}}).item.id,/^bcs-lit-candidate-/);
+    const literature = items.find(item => item.id === 'bcs-lit-candidate-069');
+    assert.ok(chooseNext(literature,{goal:'BCS',mistakeSignals:{}}).item);
 });
 console.log('PASS all mistake-mirror tests');

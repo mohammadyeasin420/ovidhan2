@@ -65,8 +65,32 @@
         }));
     }
 
+    function normalizeLiteraturePack(pack) {
+        const records = pack && Array.isArray(pack.items) ? pack.items : [];
+        return records.map(record => Object.freeze({
+            id: record.candidate_id, version: pack.version, type: 'multiple-choice', question: record.question,
+            options: record.options.map(option => Object.freeze({ id: option.id, text: option.text })),
+            correct_option: record.correct_option, correct: record.correct_answer,
+            category: 'literature', micro_skill: record.skill_id, mistake_family: 'LITERATURE',
+            explanation_bn: record.explanation_bn, explanation_en: record.learning_note_en,
+            topic_tags: Object.freeze(record.topic_tags.slice()), period: record.period,
+            source_refs: Object.freeze(record.source_refs.map(source => Object.freeze(Object.assign({}, source)))),
+            difficulty: String(record.difficulty).toLowerCase(), source_status: 'reviewed',
+            source_type: 'OVIDHAN_EDITORIAL', review_status: pack.review_status,
+            research_status: record.research_status, practice_type: record.practice_type,
+            official_question: record.official_question, goal_ids: Object.freeze(['BCS'])
+        }));
+    }
+
     function addReviewedPack(records) {
         const additions = normalizeReviewedPack(records);
+        const existing = new Set(items.map(item => item.id));
+        additions.forEach(item => { if (!existing.has(item.id)) { items.push(item); existing.add(item.id); } });
+        return items;
+    }
+
+    function addLiteraturePack(pack) {
+        const additions = normalizeLiteraturePack(pack);
         const existing = new Set(items.map(item => item.id));
         additions.forEach(item => { if (!existing.has(item.id)) { items.push(item); existing.add(item.id); } });
         return items;
@@ -85,7 +109,9 @@
             if (recommendation) return recommendation;
         }
         const signals = state && state.mistakeSignals || {};
-        const candidates = items.filter(item => item.id !== current.id).map(item => {
+        const goals = ['BCS','IELTS','BANK','UNIVERSITY_ADMISSION','GENERAL_ENGLISH','SPOKEN_CAREER'];
+        const goal = goals.includes(state && state.goal) ? state.goal : 'GENERAL_ENGLISH';
+        const candidates = items.filter(item => item.id !== current.id && (!item.goal_ids || !item.goal_ids.length || item.goal_ids.includes(goal))).map(item => {
             let score = item.mistake_family === current.mistake_family ? 40 : 0;
             if (!signals[item.id]) score += 10;
             if (item.difficulty === current.difficulty) score += 10;
@@ -176,10 +202,17 @@
     }
     function loadReviewedPack(win) {
         if (!win || typeof win.fetch !== 'function') return Promise.resolve(items);
-        return win.fetch('/data/bcs-smartpath-practice-v1.json', { credentials: 'same-origin' })
-            .then(response => response.ok ? response.json() : Promise.reject(new Error('practice pack unavailable')))
-            .then(records => { addReviewedPack(records); win.dispatchEvent(new win.CustomEvent('ovidhan:practice-pack-loaded')); return items; })
-            .catch(() => items);
+        const load = url => win.fetch(url, { credentials: 'same-origin' })
+            .then(response => response.ok ? response.json() : null).catch(() => null);
+        return Promise.all([
+            load('/data/bcs-smartpath-practice-v1.json'),
+            load('/data/bcs-literature-smartpath-v1.json')
+        ]).then(([grammarPack, literaturePack]) => {
+            if (grammarPack) addReviewedPack(grammarPack);
+            if (literaturePack) addLiteraturePack(literaturePack);
+            win.dispatchEvent(new win.CustomEvent('ovidhan:practice-pack-loaded'));
+            return items;
+        });
     }
-    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, loadReviewedPack, mount });
+    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, loadReviewedPack, mount });
 });
