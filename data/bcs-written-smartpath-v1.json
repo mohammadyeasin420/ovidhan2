@@ -1,0 +1,2189 @@
+{
+  "pack_id": "bcs-written-english-comprehension-translation-essay-v1",
+  "version": 1,
+  "review_status": "REVIEWED",
+  "counts": {
+    "total": 60,
+    "comprehension": 24,
+    "translation": 20,
+    "essay": 16
+  },
+  "passages": [
+    {
+      "passage_id": "passage-001",
+      "title": "Digital Literacy and Social Inclusion",
+      "text": "Digital literacy has become an essential pillar of modern citizenship. In today's interconnected world, the ability to use digital tools effectively is not merely an advantage but a prerequisite for accessing information, education, employment, and government services. Young people, who have grown up with technology, often take these skills for granted, yet a substantial portion of the population—particularly older adults and rural communities—remains excluded from the digital revolution. This digital divide perpetuates existing inequalities, limiting opportunities for those without connectivity or basic digital competencies. Addressing this gap requires a multi‑pronged strategy: expanding broadband infrastructure, subsidising devices, and incorporating digital literacy into school curricula and adult education programmes. Moreover, public libraries and community centres can serve as hubs for digital training, offering free access and guidance. Governments must also prioritise user‑friendly design of e‑governance platforms to ensure that even those with limited experience can navigate them. Beyond access, however, lies the challenge of critical digital literacy—the ability to evaluate online information, protect personal data, and engage responsibly in digital spaces. As misinformation spreads rapidly on social media, teaching citizens to distinguish credible sources from unreliable ones is becoming as important as teaching them to read. Ultimately, digital literacy is not a technical skill but a human right, enabling people to participate fully in the democratic and economic life of the twenty‑first century.",
+      "word_count": 221
+    },
+    {
+      "passage_id": "passage-002",
+      "title": "Building Climate Resilience in Coastal Communities",
+      "text": "Bangladesh’s coastal communities are on the front lines of climate change. Rising sea levels, increasingly severe cyclones, and saltwater intrusion into farmland threaten the livelihoods and safety of millions. While national adaptation plans have been developed, their effectiveness depends on the active involvement of local populations. Community‑based adaptation (CBA) initiatives have shown promise: they combine indigenous knowledge with scientific data to design context‑specific solutions, such as floating vegetable gardens, climate‑resilient housing, and early warning systems. For example, in areas where cyclones are frequent, local volunteers operate community radio stations to disseminate real‑time storm alerts, giving families critical hours to evacuate. Local schools can reinforce preparedness by teaching evacuation procedures and basic climate-risk awareness to children and their families. In addition, embankment maintenance, mangrove afforestation, and rainwater harvesting are carried out by community organisations with technical support from government agencies. However, financial constraints and fragmented governance often hinder the scaling of successful pilots. International climate finance mechanisms provide resources, but bureaucratic procedures delay disbursement. A key lesson is that resilience building is not only about infrastructure; it also requires strengthening social capital and local decision‑making power. When communities are empowered to plan and implement their own adaptation measures, they are more likely to sustain them over time. The way forward lies in forging partnerships among government, civil society, and international donors, with a focus on long‑term capacity building rather than short‑term projects.",
+      "word_count": 231
+    },
+    {
+      "passage_id": "passage-003",
+      "title": "Rethinking Urban Transport for Sustainable Cities",
+      "text": "The traffic congestion that chokes many cities in the developing world is more than an inconvenience—it is a major drain on productivity, health, and the environment. In Dhaka, for instance, commuters can spend long periods stuck in traffic every day, a burden that affects both the economy and quality of life. The root causes are manifold: population growth, inadequate road networks, and a heavy reliance on private vehicles. To break this cycle, urban planners increasingly advocate for a shift towards sustainable mobility. Investments in mass rapid transit systems, bus rapid transit corridors, and dedicated cycle lanes can reduce dependence on cars and offer cleaner, more efficient alternatives. The success of such systems, however, hinges on integrated land‑use planning and political commitment. For example, transit‑oriented development—concentrating housing and jobs near transit stations—can encourage ridership and reduce travel distances. Moreover, the adoption of intelligent transport systems (ITS), including real‑time traffic monitoring and adaptive traffic signals, can optimise the use of existing roads. Yet technology alone is insufficient; behavioural change is equally critical. Public awareness campaigns that highlight the personal and environmental benefits of using public transport, car‑pooling, and cycling can shift social norms. Additionally, congestion pricing and parking restrictions can discourage private car use in city centres. A holistic strategy that combines infrastructure, technology, and behaviour is essential for creating liveable, low‑carbon cities.",
+      "word_count": 221
+    },
+    {
+      "passage_id": "passage-004",
+      "title": "The Evolving Role of Education in the 21st Century",
+      "text": "Education is no longer solely about transmitting established knowledge; it must prepare learners to navigate a world of rapid change and uncertainty. The rise of artificial intelligence, automation, and globalisation has transformed the skills that are valued in the workplace. Routine tasks are increasingly automated, while non‑routine cognitive and interpersonal skills—such as creativity, emotional intelligence, and complex problem‑solving—are in high demand. In response, educational systems worldwide are rethinking curricula, pedagogy, and assessment. Project‑based learning, cross‑disciplinary studies, and the integration of technology are becoming more prevalent. However, these innovations are unevenly distributed; schools in disadvantaged communities often lack the resources to implement them, exacerbating educational inequalities. Furthermore, the traditional emphasis on high‑stakes examinations may not adequately measure the competencies that matter most in the modern era. There is a growing call for more formative, continuous assessment that provides feedback on learning processes rather than just final outcomes. Teacher training must also evolve, equipping educators with the skills to facilitate inquiry‑based learning and to use digital tools effectively. Beyond the classroom, lifelong learning has become a necessity, with adults needing to upskill and reskill throughout their careers. Governments and employers share a responsibility to create accessible learning opportunities. Ultimately, the goal of education should be to foster adaptable, resilient, and reflective individuals who can contribute meaningfully to society, irrespective of the specific jobs that may exist in the future.",
+      "word_count": 227
+    },
+    {
+      "passage_id": "passage-005",
+      "title": "Shaping Tomorrow's Workforce: Skills for the Future",
+      "text": "The future of work is being reshaped by technological disruption, demographic shifts, and globalisation. While these forces create new opportunities, they also pose challenges for workers who may find their skills outdated. According to labour market analyses, the demand for purely technical skills is growing, but it is being outpaced by the need for complementary soft skills: communication, teamwork, adaptability, and cultural awareness. Employers consistently report that these attributes are as important as technical qualifications, yet they are often underdeveloped in graduates. This mismatch suggests that education and training systems must adopt a more holistic approach, embedding soft skill development into vocational and academic programmes. Apprenticeships, internships, and project‑based coursework can provide authentic contexts for practising these skills. In addition, career guidance services should help learners understand the evolving landscape and identify growth areas. At the same time, governments should incentivise private‑sector investment in employee training, especially in sectors undergoing rapid change. Lifelong learning accounts or individual training vouchers could empower workers to take charge of their own development. Another critical aspect is the role of entrepreneurship education, which fosters initiative, risk‑taking, and resilience—qualities that are valuable in any career. The transition to a new work order will not be seamless; it requires collaboration among policymakers, educators, employers, and workers themselves. With a shared commitment to continuous learning, the workforce of tomorrow can be both productive and human‑centred.",
+      "word_count": 228
+    },
+    {
+      "passage_id": "passage-006",
+      "title": "Public Health Messaging and Community Engagement",
+      "text": "Effective public health communication is a cornerstone of disease prevention and health promotion. In the wake of the COVID‑19 pandemic, the importance of clear, timely, and trustworthy information has been starkly demonstrated. Yet, simply broadcasting messages is insufficient; engagement with communities is essential to ensure that information is understood, trusted, and acted upon. Different populations have distinct cultural beliefs, languages, and access channels, so health messages must be tailored accordingly. Community health workers—local residents trained to disseminate information and provide basic care—have proven invaluable in bridging the gap between formal health systems and grassroots communities. They can deliver messages in a relatable manner and address misconceptions directly. For example, during outbreaks, community volunteers often conduct door‑to‑door awareness campaigns, distribute protective materials, and refer symptomatic individuals to health facilities. However, the success of such initiatives depends on sustained funding, robust training, and integration into the broader health system. Moreover, the use of digital platforms for health communication has grown, enabling rapid dissemination through social media and messaging apps. Yet, digital channels can also amplify misinformation, necessitating media literacy programmes to help the public discern reliable sources. Ultimately, public health messaging is most effective when it is participatory, involving community leaders and influencers in co‑designing materials. By fostering trust and ownership, such approaches can lead to higher vaccine uptake, better adherence to preventive measures, and healthier behaviours overall.",
+      "word_count": 226
+    }
+  ],
+  "items": [
+    {
+      "candidate_id": "bcs-written-comp-001",
+      "passage_id": "passage-001",
+      "skill_id": "reading_main_idea",
+      "difficulty": "INTERMEDIATE",
+      "question": "What is the main idea of the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Digital literacy is only important for young people."
+        },
+        {
+          "id": "B",
+          "text": "Digital literacy is essential for full participation in modern society and requires both access and critical skills."
+        },
+        {
+          "id": "C",
+          "text": "Digital literacy is less important than traditional literacy."
+        },
+        {
+          "id": "D",
+          "text": "Digital literacy is primarily about using social media."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Digital literacy is essential for full participation in modern society and requires both access and critical skills.",
+      "explanation_bn": "প্যাসেজটি ডিজিটাল সাক্ষরতাকে নাগরিক অধিকার হিসেবে চিহ্নিত করেছে এবং সুযোগ ও সমালোচনামূলক দক্ষতার সমন্বয়ের ওপর জোর দিয়েছে।",
+      "learning_note_en": "The main idea synthesises the central argument about the importance and scope of digital literacy.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-002",
+      "passage_id": "passage-001",
+      "skill_id": "reading_supporting_detail",
+      "difficulty": "BEGINNER",
+      "question": "According to the passage, which groups are most affected by the digital divide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Urban youth and technology professionals"
+        },
+        {
+          "id": "B",
+          "text": "Older adults and rural communities"
+        },
+        {
+          "id": "C",
+          "text": "Government employees"
+        },
+        {
+          "id": "D",
+          "text": "University students"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Older adults and rural communities",
+      "explanation_bn": "প্যাসেজে বলা হয়েছে যে 'older adults and rural communities' ডিজিটাল বিভাজনে সবচেয়ে বেশি ক্ষতিগ্রস্ত।",
+      "learning_note_en": "Supporting details are explicit statements in the text.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-003",
+      "passage_id": "passage-001",
+      "skill_id": "reading_inference",
+      "difficulty": "INTERMEDIATE",
+      "question": "What can be inferred about the likely effectiveness of simply providing internet access without also teaching critical digital skills?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It would be sufficient to close the digital divide."
+        },
+        {
+          "id": "B",
+          "text": "It would fail to address the full problem because users still need to evaluate information and protect privacy."
+        },
+        {
+          "id": "C",
+          "text": "It would be more effective than teaching skills."
+        },
+        {
+          "id": "D",
+          "text": "It would have no impact on digital inclusion."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "It would fail to address the full problem because users still need to evaluate information and protect privacy.",
+      "explanation_bn": "প্যাসেজে বলা হয়েছে যে 'critical digital literacy' (তথ্য মূল্যায়ন ও গোপনীয়তা রক্ষা) অপরিহার্য, যা থেকে বোঝা যায় যে শুধু সংযোগ দেওয়া যথেষ্ট নয়।",
+      "learning_note_en": "The inference is that access alone is insufficient; critical skills are also necessary.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-004",
+      "passage_id": "passage-001",
+      "skill_id": "reading_tone_purpose",
+      "difficulty": "INTERMEDIATE",
+      "question": "What is the author's overall tone in this passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Indifferent"
+        },
+        {
+          "id": "B",
+          "text": "Urgent and advocacy‑oriented"
+        },
+        {
+          "id": "C",
+          "text": "Sceptical"
+        },
+        {
+          "id": "D",
+          "text": "Humorous"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Urgent and advocacy‑oriented",
+      "explanation_bn": "লেখক ডিজিটাল সাক্ষরতাকে মানবাধিকার হিসেবে উপস্থাপন করেছেন এবং ব্যবস্থা নেওয়ার আহ্বান জানিয়েছেন, যা সুরকে জরুরি ও পক্ষে-আন্দোলনমুখী করে তুলেছে।",
+      "learning_note_en": "Tone reflects the author's attitude and urgency.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-005",
+      "passage_id": "passage-002",
+      "skill_id": "reading_main_idea",
+      "difficulty": "INTERMEDIATE",
+      "question": "What is the central argument of the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Climate change adaptation should be led solely by international donors."
+        },
+        {
+          "id": "B",
+          "text": "Building climate resilience requires integrating community participation with government and international support."
+        },
+        {
+          "id": "C",
+          "text": "Community‑based adaptation has failed in practice."
+        },
+        {
+          "id": "D",
+          "text": "Infrastructure projects are the only effective adaptation measure."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Building climate resilience requires integrating community participation with government and international support.",
+      "explanation_bn": "প্যাসেজটি সম্প্রদায়, সরকার এবং আন্তর্জাতিক সহযোগিতার সমন্বয়ের গুরুত্বের ওপর জোর দিয়েছে।",
+      "learning_note_en": "The main idea is the integrated approach to resilience.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-006",
+      "passage_id": "passage-002",
+      "skill_id": "reading_supporting_detail",
+      "difficulty": "BEGINNER",
+      "question": "Which specific measure is mentioned as part of community‑based adaptation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Building large dams"
+        },
+        {
+          "id": "B",
+          "text": "Floating vegetable gardens and early warning systems"
+        },
+        {
+          "id": "C",
+          "text": "Relocating all coastal populations"
+        },
+        {
+          "id": "D",
+          "text": "Banning fishing in coastal areas"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Floating vegetable gardens and early warning systems",
+      "explanation_bn": "প্যাসেজে 'floating vegetable gardens' এবং 'early warning systems' কে সম্প্রদায়-ভিত্তিক উদ্যোগ হিসেবে উল্লেখ করা হয়েছে।",
+      "learning_note_en": "Supporting details are explicit examples from the text.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-007",
+      "passage_id": "passage-002",
+      "skill_id": "reading_inference",
+      "difficulty": "ADVANCED",
+      "question": "Which policy choice would the author most likely support for a new coastal adaptation programme?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Design the programme centrally and limit local participation to implementation."
+        },
+        {
+          "id": "B",
+          "text": "Give communities meaningful decision-making power while combining local knowledge with technical and financial support."
+        },
+        {
+          "id": "C",
+          "text": "Rely only on international donors because local organisations lack useful knowledge."
+        },
+        {
+          "id": "D",
+          "text": "Prioritise short-term construction projects over long-term local capacity building."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Give communities meaningful decision-making power while combining local knowledge with technical and financial support.",
+      "explanation_bn": "প্যাসেজে স্থানীয় সিদ্ধান্ত গ্রহণ, দেশীয় জ্ঞান, প্রযুক্তিগত সহায়তা এবং দীর্ঘমেয়াদি সক্ষমতা বৃদ্ধির ওপর জোর দেওয়া হয়েছে। তাই নতুন কর্মসূচিতে স্থানীয় ক্ষমতায়ন ও বহুপক্ষীয় সহায়তার সমন্বয়ই লেখকের অবস্থানের সঙ্গে সবচেয়ে সামঞ্জস্যপূর্ণ।",
+      "learning_note_en": "The answer requires applying the passage's principles to a new policy scenario rather than recalling one sentence.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-008",
+      "passage_id": "passage-002",
+      "skill_id": "reading_reference",
+      "difficulty": "INTERMEDIATE",
+      "question": "In the sentence 'The way forward lies in forging partnerships among government, civil society, and international donors', what does 'The way forward' refer to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The strategy for scaling up adaptation efforts"
+        },
+        {
+          "id": "B",
+          "text": "The method of constructing embankments"
+        },
+        {
+          "id": "C",
+          "text": "The approach to climate finance"
+        },
+        {
+          "id": "D",
+          "text": "The design of early warning systems"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "The strategy for scaling up adaptation efforts",
+      "explanation_bn": "'The way forward' পূর্ববর্তী বাক্যে বর্ণিত চ্যালেঞ্জ মোকাবেলার জন্য প্রস্তাবিত পদ্ধতিকে নির্দেশ করে।",
+      "learning_note_en": "Reference words point back to previously mentioned ideas.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-009",
+      "passage_id": "passage-003",
+      "skill_id": "reading_main_idea",
+      "difficulty": "INTERMEDIATE",
+      "question": "What is the author's main claim about urban transport?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Private cars should be completely banned in cities."
+        },
+        {
+          "id": "B",
+          "text": "A sustainable urban transport strategy must combine infrastructure, technology, and behavioural change."
+        },
+        {
+          "id": "C",
+          "text": "Public transport is only useful in megacities."
+        },
+        {
+          "id": "D",
+          "text": "Technology alone can solve traffic problems."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "A sustainable urban transport strategy must combine infrastructure, technology, and behavioural change.",
+      "explanation_bn": "প্যাসেজটি অবকাঠামো, প্রযুক্তি ও আচরণগত পরিবর্তনের সমন্বয়ের পক্ষে যুক্তি দেয়।",
+      "learning_note_en": "The main idea is the multi‑faceted solution.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-010",
+      "passage_id": "passage-003",
+      "skill_id": "reading_supporting_detail",
+      "difficulty": "BEGINNER",
+      "question": "According to the passage, what is one benefit of investing in mass rapid transit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases the number of private vehicles."
+        },
+        {
+          "id": "B",
+          "text": "It offers cleaner and more efficient alternatives to cars."
+        },
+        {
+          "id": "C",
+          "text": "It reduces road capacity."
+        },
+        {
+          "id": "D",
+          "text": "It makes parking more difficult."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "It offers cleaner and more efficient alternatives to cars.",
+      "explanation_bn": "প্যাসেজে বলা হয়েছে যে গণপরিবহন বিনিয়োগ 'cleaner, more efficient alternatives' প্রদান করে।",
+      "learning_note_en": "Supporting details are specific advantages mentioned.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-011",
+      "passage_id": "passage-003",
+      "skill_id": "reading_inference",
+      "difficulty": "ADVANCED",
+      "question": "What can be inferred about the author's view on private vehicle use in cities?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is the most efficient mode of transport."
+        },
+        {
+          "id": "B",
+          "text": "It contributes to congestion and pollution and should be discouraged."
+        },
+        {
+          "id": "C",
+          "text": "It should be encouraged for economic reasons."
+        },
+        {
+          "id": "D",
+          "text": "It has no impact on the environment."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "It contributes to congestion and pollution and should be discouraged.",
+      "explanation_bn": "লেখক ব্যক্তিগত যানবাহনের ব্যবহার কমানোর প্রস্তাব দিয়েছেন এবং সেগুলোর পরিবেশগত প্রভাব উল্লেখ করেছেন, যা থেকে এই অনুমান আসে।",
+      "learning_note_en": "Inference from the author's recommendations.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-012",
+      "passage_id": "passage-003",
+      "skill_id": "reading_tone_purpose",
+      "difficulty": "INTERMEDIATE",
+      "question": "What is the primary purpose of this passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To entertain readers with travel stories"
+        },
+        {
+          "id": "B",
+          "text": "To advocate for integrated, sustainable urban transport policies"
+        },
+        {
+          "id": "C",
+          "text": "To describe the history of public transport"
+        },
+        {
+          "id": "D",
+          "text": "To compare different car models"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "To advocate for integrated, sustainable urban transport policies",
+      "explanation_bn": "লেখক বিভিন্ন উপায়ের সমন্বয়ে টেকসই পরিবহনের পক্ষে যুক্তি দিয়েছেন, যা প্ররোচনামূলক উদ্দেশ্য নির্দেশ করে।",
+      "learning_note_en": "Purpose is the intended outcome of the text.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-013",
+      "passage_id": "passage-004",
+      "skill_id": "reading_main_idea",
+      "difficulty": "INTERMEDIATE",
+      "question": "Which statement best expresses the passage's central argument?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Education should focus only on technical skills."
+        },
+        {
+          "id": "B",
+          "text": "Education must evolve to foster adaptability, critical thinking, and lifelong learning."
+        },
+        {
+          "id": "C",
+          "text": "Traditional education methods are still the best."
+        },
+        {
+          "id": "D",
+          "text": "Technology alone will solve all educational challenges."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Education must evolve to foster adaptability, critical thinking, and lifelong learning.",
+      "explanation_bn": "প্যাসেজটি শিক্ষার রূপান্তরের পক্ষে যুক্তি দেয়, যাতে শিক্ষার্থীরা পরিবর্তনশীল বিশ্বের জন্য প্রস্তুত হয়।",
+      "learning_note_en": "The main idea is the need for educational transformation.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-014",
+      "passage_id": "passage-004",
+      "skill_id": "reading_supporting_detail",
+      "difficulty": "BEGINNER",
+      "question": "Which skill does the passage identify as being in high demand due to automation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Memorisation of facts"
+        },
+        {
+          "id": "B",
+          "text": "Creative problem‑solving and emotional intelligence"
+        },
+        {
+          "id": "C",
+          "text": "Handwriting"
+        },
+        {
+          "id": "D",
+          "text": "Reciting poetry"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Creative problem‑solving and emotional intelligence",
+      "explanation_bn": "প্যাসেজে 'creativity, emotional intelligence, and complex problem‑solving' চাহিদা বৃদ্ধির কথা উল্লেখ করা হয়েছে।",
+      "learning_note_en": "Supporting details are specific competencies mentioned.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-015",
+      "passage_id": "passage-004",
+      "skill_id": "reading_inference",
+      "difficulty": "ADVANCED",
+      "question": "Based on the passage, what can be inferred about the relationship between teacher training and the successful adoption of new pedagogical approaches?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Teacher training is irrelevant to pedagogical change."
+        },
+        {
+          "id": "B",
+          "text": "Without adequate teacher training, new approaches are unlikely to succeed."
+        },
+        {
+          "id": "C",
+          "text": "Teachers already possess all necessary skills for modern education."
+        },
+        {
+          "id": "D",
+          "text": "Training is only needed for technology, not for pedagogy."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Without adequate teacher training, new approaches are unlikely to succeed.",
+      "explanation_bn": "প্যাসেজে বলা হয়েছে যে 'Teacher training must also evolve, equipping educators with the skills to facilitate inquiry‑based learning...', যা থেকে বোঝা যায় যে প্রশিক্ষণ ছাড়া নতুন পদ্ধতি কার্যকর হবে না।",
+      "learning_note_en": "Inference about the necessity of teacher training for successful innovation.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-016",
+      "passage_id": "passage-004",
+      "skill_id": "reading_reference",
+      "difficulty": "INTERMEDIATE",
+      "question": "In the sentence 'However, these innovations are unevenly distributed', what does 'these innovations' refer to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Project‑based learning and cross‑disciplinary studies"
+        },
+        {
+          "id": "B",
+          "text": "Traditional teaching methods"
+        },
+        {
+          "id": "C",
+          "text": "High‑stakes examinations"
+        },
+        {
+          "id": "D",
+          "text": "Government regulations"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Project‑based learning and cross‑disciplinary studies",
+      "explanation_bn": "পূর্ববর্তী বাক্যে 'project‑based learning, cross‑disciplinary studies, and the integration of technology' উল্লেখ করা হয়েছিল, যা 'these innovations' দ্বারা নির্দেশিত।",
+      "learning_note_en": "Reference words maintain cohesion.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-017",
+      "passage_id": "passage-005",
+      "skill_id": "reading_main_idea",
+      "difficulty": "INTERMEDIATE",
+      "question": "What is the author's main argument about the future workforce?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Technical skills alone are sufficient for success."
+        },
+        {
+          "id": "B",
+          "text": "Soft skills are more important than technical skills."
+        },
+        {
+          "id": "C",
+          "text": "A combination of technical and soft skills, fostered through lifelong learning, is essential."
+        },
+        {
+          "id": "D",
+          "text": "The future workforce does not need any formal education."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "A combination of technical and soft skills, fostered through lifelong learning, is essential.",
+      "explanation_bn": "প্যাসেজটি প্রযুক্তিগত ও সফট স্কিলের সমন্বয় এবং আজীবন শিক্ষার গুরুত্ব তুলে ধরেছে।",
+      "learning_note_en": "The main idea is the integrated skill set.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-018",
+      "passage_id": "passage-005",
+      "skill_id": "reading_supporting_detail",
+      "difficulty": "BEGINNER",
+      "question": "According to the passage, which soft skill is mentioned as highly valued by employers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Programming"
+        },
+        {
+          "id": "B",
+          "text": "Communication"
+        },
+        {
+          "id": "C",
+          "text": "Accounting"
+        },
+        {
+          "id": "D",
+          "text": "Design"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Communication",
+      "explanation_bn": "প্যাসেজে 'communication, teamwork, adaptability' কে গুরুত্বপূর্ণ সফট স্কিল হিসেবে উল্লেখ করা হয়েছে।",
+      "learning_note_en": "Supporting details are specific examples of soft skills.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-019",
+      "passage_id": "passage-005",
+      "skill_id": "reading_inference",
+      "difficulty": "ADVANCED",
+      "question": "What can be inferred about the current education system's alignment with employer expectations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It aligns perfectly with all employer needs."
+        },
+        {
+          "id": "B",
+          "text": "It may not be adequately developing the soft skills that employers increasingly value."
+        },
+        {
+          "id": "C",
+          "text": "It overemphasises soft skills at the expense of technical knowledge."
+        },
+        {
+          "id": "D",
+          "text": "It has already solved the skills mismatch."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "It may not be adequately developing the soft skills that employers increasingly value.",
+      "explanation_bn": "প্যাসেজে বলা হয়েছে যে soft skills 'are often underdeveloped in graduates', যা থেকে বোঝা যায় শিক্ষাব্যবস্থা ওই দক্ষতা উন্নয়নে যথেষ্ট নয়।",
+      "learning_note_en": "Inference about the gap between education and employer needs.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-020",
+      "passage_id": "passage-005",
+      "skill_id": "reading_tone_purpose",
+      "difficulty": "INTERMEDIATE",
+      "question": "What is the author's likely purpose in writing this passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To criticise employers for demanding too much"
+        },
+        {
+          "id": "B",
+          "text": "To advocate for a balanced approach to skill development and lifelong learning"
+        },
+        {
+          "id": "C",
+          "text": "To promote technical education exclusively"
+        },
+        {
+          "id": "D",
+          "text": "To discourage soft skill training"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "To advocate for a balanced approach to skill development and lifelong learning",
+      "explanation_bn": "লেখক প্রযুক্তিগত ও সফট স্কিলের ভারসাম্য এবং আজীবন শিক্ষার পক্ষে যুক্তি দিয়েছেন।",
+      "learning_note_en": "Purpose is to persuade and inform about balanced skill development.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-021",
+      "passage_id": "passage-006",
+      "skill_id": "reading_main_idea",
+      "difficulty": "INTERMEDIATE",
+      "question": "Which statement best captures the main idea of the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public health campaigns should be delivered only through digital channels."
+        },
+        {
+          "id": "B",
+          "text": "Effective public health messaging requires community engagement, tailored communication, and participatory approaches."
+        },
+        {
+          "id": "C",
+          "text": "Community health workers are unnecessary."
+        },
+        {
+          "id": "D",
+          "text": "Mass media is the most effective way to communicate health messages."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Effective public health messaging requires community engagement, tailored communication, and participatory approaches.",
+      "explanation_bn": "প্যাসেজটি সম্প্রদায়ের সম্পৃক্ততা ও অংশগ্রহণমূলক পদ্ধতির গুরুত্বের ওপর জোর দিয়েছে।",
+      "learning_note_en": "The main idea is the integrated communication strategy.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-022",
+      "passage_id": "passage-006",
+      "skill_id": "reading_supporting_detail",
+      "difficulty": "BEGINNER",
+      "question": "What specific role do community health workers play according to the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They conduct door‑to‑door awareness campaigns and refer symptomatic individuals."
+        },
+        {
+          "id": "B",
+          "text": "They manage hospital budgets."
+        },
+        {
+          "id": "C",
+          "text": "They perform complex surgeries."
+        },
+        {
+          "id": "D",
+          "text": "They design social media algorithms."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "They conduct door‑to‑door awareness campaigns and refer symptomatic individuals.",
+      "explanation_bn": "প্যাসেজে বলা হয়েছে যে community health workers 'conduct door‑to‑door awareness campaigns, distribute protective materials, and refer symptomatic individuals to health facilities'।",
+      "learning_note_en": "Supporting details are explicit duties mentioned.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-023",
+      "passage_id": "passage-006",
+      "skill_id": "reading_inference",
+      "difficulty": "ADVANCED",
+      "question": "Based on the passage, what can be inferred about the role of digital platforms in public health communication during outbreaks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They should be avoided because they always spread misinformation."
+        },
+        {
+          "id": "B",
+          "text": "They can be effective for rapid dissemination but require complementary media literacy efforts."
+        },
+        {
+          "id": "C",
+          "text": "They are less effective than radio broadcasts."
+        },
+        {
+          "id": "D",
+          "text": "They have no role in outbreak communication."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "They can be effective for rapid dissemination but require complementary media literacy efforts.",
+      "explanation_bn": "প্যাসেজে বলা হয়েছে যে digital channels 'can also amplify misinformation, necessitating media literacy programmes', যা থেকে এই অনুমান আসে।",
+      "learning_note_en": "Inference about the double‑edged nature of digital platforms.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-comp-024",
+      "passage_id": "passage-006",
+      "skill_id": "reading_reference",
+      "difficulty": "INTERMEDIATE",
+      "question": "In the sentence 'By fostering trust and ownership, such approaches can lead to higher vaccine uptake', what does 'such approaches' refer to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Participatory, community‑involved message design"
+        },
+        {
+          "id": "B",
+          "text": "Mass media broadcasting"
+        },
+        {
+          "id": "C",
+          "text": "Government mandates"
+        },
+        {
+          "id": "D",
+          "text": "Social media advertising"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Participatory, community‑involved message design",
+      "explanation_bn": "পূর্ববর্তী বাক্যে 'participatory, involving community leaders and influencers in co‑designing materials' উল্লেখ ছিল, যা 'such approaches' নির্দেশ করে।",
+      "learning_note_en": "Reference words point to earlier concepts.",
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-001",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "বাংলাদেশ একটি নদীমাতৃক দেশ এবং আমাদের অর্থনীতি মূলত কৃষিনির্ভর। কিন্তু জলবায়ু পরিবর্তনের কারণে অনেক অঞ্চলে খরা ও বন্যা দেখা দিচ্ছে, যা ফসলের উৎপাদনকে হুমকির মুখে ফেলছে। সরকার বিভিন্ন অভিযোজন কর্মসূচি গ্রহণ করেছে, তবে জনগণের সচেতনতা বাড়ানোও সমান জরুরি।",
+      "model_translation": "Bangladesh is a riverine country, and our economy is primarily agriculture‑based. However, due to climate change, drought and floods are occurring in many regions, threatening crop production. The government has adopted various adaptation programmes, but raising public awareness is equally important.",
+      "key_points_bn": [
+        "নদীমাতৃক → riverine",
+        "কৃষিনির্ভর → agriculture‑based",
+        "জলবায়ু পরিবর্তন → climate change",
+        "অভিযোজন কর্মসূচি → adaptation programmes",
+        "সমান জরুরি → equally important"
+      ],
+      "genuine_errors_bn": [
+        "নদীমাতৃক → 'mother of rivers' লিখলে অর্থ বিকৃত হয়; এখানে 'riverine' বা 'criss-crossed by rivers' উপযুক্ত",
+        "দেখা দিচ্ছে → 'are seeing drought and floods' লিখলে subject-verb অর্থগত সম্পর্ক ভুল হয়",
+        "সমান জরুরি → 'same important' ব্যাকরণগতভাবে ভুল; 'equally important' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "অর্থনীতি কৃষিনির্ভর → 'the economy depends mainly on agriculture' (গ্রহণযোগ্য)",
+        "বিভিন্ন অভিযোজন কর্মসূচি → 'a number of adaptation measures' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-002",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "স্মার্টফোন আমাদের জীবনকে অনেক সহজ করেছে, কিন্তু এর অতিরিক্ত ব্যবহার মানসিক চাপ ও ঘুমের সমস্যা তৈরি করতে পারে। বিশেষ করে তরুণরা দিনের বেশিরভাগ সময় স্ক্রিনের দিকে তাকিয়ে কাটায়, যা তাদের শারীরিক ও মানসিক স্বাস্থ্যের ওপর নেতিবাচক প্রভাব ফেলে।",
+      "model_translation": "Smartphones have made our lives much easier, but excessive use can create mental stress and sleep problems. Young people, in particular, spend most of their time looking at screens, which negatively affects their physical and mental health.",
+      "key_points_bn": [
+        "স্মার্টফোন → smartphones",
+        "অতিরিক্ত ব্যবহার → excessive use",
+        "মানসিক চাপ → mental stress",
+        "শারীরিক ও মানসিক স্বাস্থ্য → physical and mental health",
+        "নেতিবাচক প্রভাব ফেলে → negatively affects"
+      ],
+      "genuine_errors_bn": [
+        "তরুণরা → 'youngers' শব্দটি এই অর্থে ভুল; 'young people' সঠিক",
+        "নেতিবাচক প্রভাব ফেলে → verb হিসেবে 'effects' ব্যবহার ভুল; এখানে 'affects' প্রয়োজন",
+        "স্ক্রিনের দিকে তাকিয়ে কাটায় → 'spend time to look at screens' ভুল; 'spend time looking at screens' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "স্মার্টফোন → 'mobile phones' (গ্রহণযোগ্য)",
+        "মানসিক চাপ → 'psychological stress' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-003",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "বাংলাদেশের গ্রামীণ অর্থনীতির অন্যতম চালিকাশক্তি হলো ক্ষুদ্র উদ্যোগ। মহিলারা এই খাতে গুরুত্বপূর্ণ ভূমিকা পালন করছেন। তারা হস্তশিল্প, পোল্ট্রি ও সবজি চাষের মাধ্যমে পরিবারের আয় বাড়াচ্ছেন। সরকারের উচিত তাদের প্রশিক্ষণ ও ঋণ সুবিধা প্রদান করা, যাতে তারা আরও দক্ষ হয়ে উঠতে পারেন এবং নিজেদের উদ্যোগকে টেকসই করতে পারেন।",
+      "model_translation": "Small enterprises are among the driving forces of Bangladesh's rural economy. Women are playing an important role in this sector. They are increasing family income through handicrafts, poultry farming, and vegetable cultivation. The government should provide them with training and loan facilities so that they can become more skilled and sustain their businesses.",
+      "key_points_bn": [
+        "গ্রামীণ অর্থনীতি → rural economy",
+        "চালিকাশক্তি → driving forces",
+        "ক্ষুদ্র উদ্যোগ → small enterprises",
+        "হস্তশিল্প → handicrafts",
+        "পোল্ট্রি → poultry farming",
+        "ঋণ সুবিধা → loan facilities"
+      ],
+      "genuine_errors_bn": [
+        "চালিকাশক্তি → 'power sources' বললে রূপক অর্থ হারায়; 'driving forces' উপযুক্ত",
+        "ক্ষুদ্র উদ্যোগ → 'small initiative' এখানে enterprise-এর অর্থ দেয় না",
+        "প্রশিক্ষণ ও ঋণ সুবিধা প্রদান → 'provide them training and loan facilities' এর বদলে 'provide them with training and loan facilities' বেশি ব্যাকরণসম্মত"
+      ],
+      "acceptable_alternatives": [
+        "সরকারের উচিত → 'government should' (আরও ভালো), তবে 'ought to' গ্রহণযোগ্য",
+        "টেকসই করতে পারেন → 'make their businesses sustainable' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-004",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "ADVANCED",
+      "source_text": "প্রযুক্তির অগ্রগতি যেমন সুযোগ এনেছে, তেমনি নতুন চ্যালেঞ্জও তৈরি করেছে। কৃত্রিম বুদ্ধিমত্তা ও অটোমেশন অনেক চাকরি বিলুপ্ত করবে বলে আশঙ্কা করা হচ্ছে। অন্যদিকে, এটি নতুন কর্মক্ষেত্রও সৃষ্টি করবে। তাই আমাদের দক্ষতা উন্নয়নে মনোযোগ দেওয়া উচিত, যাতে আমরা পরিবর্তনের সঙ্গে খাপ খাইয়ে চলতে পারি।",
+      "model_translation": "Technological advancement has brought opportunities, but it has also created new challenges. It is feared that artificial intelligence and automation will eliminate many jobs. On the other hand, they will also create new employment opportunities. Therefore, we should focus on skill development so that we can adapt to change.",
+      "key_points_bn": [
+        "অগ্রগতি → advancement (এখানে 'progress' গ্রহণযোগ্য)",
+        "আশঙ্কা করা হচ্ছে → it is feared",
+        "কৃত্রিম বুদ্ধিমত্তা → artificial intelligence",
+        "বিলুপ্ত করবে → will eliminate",
+        "অন্যদিকে → on the other hand",
+        "সুতরাং → therefore"
+      ],
+      "genuine_errors_bn": [
+        "আশঙ্কা করা হচ্ছে → 'it is afraid that' অর্থগতভাবে ভুল; 'it is feared that' সঠিক",
+        "বিলুপ্ত করবে → 'will extinct jobs' ভুল; 'will eliminate jobs' সঠিক",
+        "অন্যদিকে → 'on other side' এই discourse marker-এর সঠিক রূপ নয়; 'on the other hand' ব্যবহার করা উচিত"
+      ],
+      "acceptable_alternatives": [
+        "অগ্রগতি → 'progress' (প্রাকৃতিক)",
+        "মনোযোগ দেওয়া উচিত → 'should pay attention to' (গ্রহণযোগ্য)",
+        "খাপ খাইয়ে চলতে → 'adjust to change' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-005",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "শিক্ষা শুধু বইয়ের পাতা থেকে পাওয়া যায় না; প্রকৃতি, সমাজ ও দৈনন্দিন জীবনও আমাদের অনেক কিছু শেখায়। একজন প্রকৃত শিক্ষিত ব্যক্তি পরিবেশের সাথে খাপ খাইয়ে চলতে পারেন এবং সমাজের উন্নয়নে অবদান রাখতে পারেন। তার মধ্যে শুধু জ্ঞানই নয়, বরং মানবিক গুণাবলীও থাকা আবশ্যক।",
+      "model_translation": "Education cannot be obtained only from the pages of books; nature, society, and everyday life also teach us many things. A truly educated person can adapt to the environment and contribute to social development. Such a person should possess not only knowledge but also human qualities.",
+      "key_points_bn": [
+        "শুধু → only",
+        "পাওয়া যায় না → cannot be obtained",
+        "প্রকৃতি, সমাজ ও দৈনন্দিন জীবন → nature, society, and everyday life",
+        "খাপ খাইয়ে চলতে → adapt to",
+        "অবদান রাখতে → contribute to"
+      ],
+      "genuine_errors_bn": [
+        "খাপ খাইয়ে চলতে → 'adjust with the environment' preposition ভুল; 'adapt to the environment' উপযুক্ত",
+        "অবদান রাখতে → 'give contribution' অপ্রাকৃতিক/ভুল collocation; 'contribute to' সঠিক",
+        "বইয়ের পাতা → 'pages of book' article/number-এর কারণে ভুল; 'pages of books' বা 'book pages' ব্যবহার করা যায়"
+      ],
+      "acceptable_alternatives": [
+        "পাওয়া যায় না → 'cannot get' (সক্রিয়, গ্রহণযোগ্য)",
+        "মানবিক গুণাবলী → 'human qualities' (ঠিক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-006",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "বাংলাদেশের নারীদের মধ্যে শিক্ষার হার দিন দিন বাড়ছে। তারা এখন বিভিন্ন পেশায় অংশগ্রহণ করছেন, যা আগে সম্ভব ছিল না। এই পরিবর্তন সমাজে ইতিবাচক প্রভাব ফেলছে। তবে এখনও অনেক বাধা রয়ে গেছে যা দূর করা প্রয়োজন, যেমন সামাজিক কুসংস্কার ও অর্থনৈতিক সীমাবদ্ধতা।",
+      "model_translation": "The literacy rate among women in Bangladesh is increasing day by day. They are now entering a wider range of professions, which was far less common in the past. This change is having a positive impact on society. However, many obstacles remain, including social prejudice and economic constraints.",
+      "key_points_bn": [
+        "শিক্ষার হার → literacy rate",
+        "দিন দিন বাড়ছে → increasing day by day",
+        "পেশায় অংশগ্রহণ → participating in professions",
+        "ইতিবাচক প্রভাব → positive impact",
+        "বাধা দূর করা → obstacles removed",
+        "সামাজিক কুসংস্কার → social prejudice"
+      ],
+      "genuine_errors_bn": [
+        "পেশায় অংশগ্রহণ → 'participate at professions' preposition ভুল; 'participate in professions' সঠিক",
+        "বাধা রয়ে গেছে → 'obstacles are remaining' অপ্রাকৃতিক; 'obstacles remain' সঠিক",
+        "নারীদের মধ্যে শিক্ষার হার → 'the education rate of Bangladesh women' অর্থ ও গঠন দুর্বল; 'the literacy rate among women in Bangladesh' উপযুক্ত"
+      ],
+      "acceptable_alternatives": [
+        "ইতিবাচক প্রভাব → 'positive effect' (গ্রহণযোগ্য)",
+        "অর্থনৈতিক সীমাবদ্ধতা → 'economic limitations' (ঠিক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-007",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "ADVANCED",
+      "source_text": "গবেষণায় দেখা গেছে যে ধূমপান স্বাস্থ্যের জন্য অত্যন্ত ক্ষতিকর, তবুও অনেক মানুষ এই অভ্যাস ত্যাগ করতে পারেন না, কারণ নিকোটিন অত্যন্ত আসক্তিকর এবং দীর্ঘমেয়াদে শারীরিক ও মানসিক নির্ভরতা সৃষ্টি করে। ধূমপান ছাড়তে ইচ্ছুক ব্যক্তিদের জন্য কাউন্সেলিং ও সহায়ক ব্যবস্থা গ্রহণ করা জরুরি।",
+      "model_translation": "Research has shown that smoking is extremely harmful to health, yet many people cannot give up this habit because nicotine is highly addictive and can cause long‑term physical and psychological dependence. It is essential to provide counselling and support measures for those who wish to quit smoking.",
+      "key_points_bn": [
+        "গবেষণায় দেখা গেছে → Research has shown",
+        "ক্ষতিকর → harmful",
+        "অভ্যাস ত্যাগ → give up this habit",
+        "আসক্তিকর → addictive",
+        "নির্ভরতা → dependence",
+        "কাউন্সেলিং → counselling"
+      ],
+      "genuine_errors_bn": [
+        "নিকোটিন → 'nicotine is an addiction' বললে পদার্থ ও আসক্তিকে এক করে ফেলা হয়; 'nicotine is highly addictive' সঠিক",
+        "ধূমপান ছাড়তে → 'give up from smoking' preposition ভুল; 'quit smoking' বা 'give up smoking' সঠিক",
+        "ইচ্ছুক ব্যক্তিদের জন্য → 'people who wish quit smoking' অসম্পূর্ণ; 'people who wish to quit smoking' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "শারীরিক ও মানসিক নির্ভরতা → 'physical and mental dependence' (ঠিক)",
+        "সহায়ক ব্যবস্থা → 'support systems' (ঠিক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-008",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "বাংলাদেশের মুক্তিযুদ্ধ ১৯৭১ সালে সংঘটিত হয়। এটি ছিল আমাদের জাতীয় জীবনের এক গৌরবময় অধ্যায়। এই যুদ্ধে নারী-পুরুষ নির্বিশেষে সবাই অংশগ্রহণ করেছিলেন। তাদের আত্মত্যাগের বিনিময়ে আমরা স্বাধীনতা অর্জন করেছি, যা আমাদের ইতিহাসের সবচেয়ে গুরুত্বপূর্ণ ঘটনাগুলোর একটি।",
+      "model_translation": "Bangladesh's Liberation War took place in 1971. It was a glorious chapter in our national life. Everyone, regardless of gender, participated in the war. We achieved independence through their sacrifices, making it one of the most important events in our history.",
+      "key_points_bn": [
+        "মুক্তিযুদ্ধ → Liberation War",
+        "সংঘটিত হয় → took place",
+        "গৌরবময় অধ্যায় → glorious chapter",
+        "নির্বিশেষে → regardless of",
+        "আত্মত্যাগ → sacrifice",
+        "বিনিময়ে → in exchange for"
+      ],
+      "genuine_errors_bn": [
+        "নারী-পুরুষ নির্বিশেষে → 'regardless men and women' ভুল; 'regardless of gender' সঠিক",
+        "এই যুদ্ধে অংশগ্রহণ → 'participated to this war' preposition ভুল; 'participated in this war' সঠিক",
+        "বিনিময়ে → 'in return of their sacrifice' ভুল; 'in exchange for their sacrifice' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "গৌরবময় অধ্যায় → 'proud chapter' (গ্রহণযোগ্য)",
+        "আত্মত্যাগ → 'sacrifices' (ঠিক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-009",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "ADVANCED",
+      "source_text": "জলবায়ু পরিবর্তনের প্রভাব আমাদের দেশে স্পষ্ট দেখা যাচ্ছে। সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধি, ঘূর্ণিঝড় ও বন্যার প্রকোপ বাড়ছে, যা কৃষি ও জনজীবনকে ব্যাহত করছে। এই পরিস্থিতিতে দীর্ঘমেয়াদি পরিকল্পনা গ্রহণ করা সময়ের দাবি। জনগণকে সচেতন করতে গণমাধ্যমের ভূমিকা অপরিসীম, তাই তাদের সঠিক তথ্য প্রদান নিশ্চিত করা প্রয়োজন।",
+      "model_translation": "The impact of climate change is clearly visible in our country. Sea levels are rising, while cyclones and floods are becoming more frequent and severe, disrupting agriculture and people's lives. In this situation, adopting long-term planning is the need of the hour. The media have a vital role in raising public awareness, so it is essential to ensure the provision of accurate information.",
+      "key_points_bn": [
+        "প্রভাব → impact",
+        "স্পষ্ট দেখা যাচ্ছে → clearly visible",
+        "সমুদ্রপৃষ্ঠের উচ্চতা → sea‑level rise",
+        "প্রকোপ → frequency",
+        "দীর্ঘমেয়াদি পরিকল্পনা → long‑term planning",
+        "অপরিসীম → immense"
+      ],
+      "genuine_errors_bn": [
+        "প্রকোপ → flood-এর ক্ষেত্রে 'outbreak' ব্যবহার অর্থগতভাবে ভুল; 'frequency' বা 'severity' প্রসঙ্গভেদে উপযুক্ত",
+        "সময়ের দাবি → 'demand of time' অপ্রাকৃতিক literal translation; 'the need of the hour' উপযুক্ত",
+        "জনগণকে সচেতন করতে → 'to aware people' ভুল; 'to make people aware' বা 'to raise public awareness' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "জনগণকে সচেতন করতে → 'to make people aware' (ঠিক)",
+        "সঠিক তথ্য প্রদান → 'provide correct information' (ঠিক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-010",
+      "skill_id": "translation_bn_to_en",
+      "direction": "BANGLA_TO_ENGLISH",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "বাংলাদেশের তরুণরা আজ নতুন দক্ষতা অর্জনের মাধ্যমে নিজেদের কর্মসংস্থানের সুযোগ তৈরি করছে। তথ্যপ্রযুক্তি ও উদ্যোক্তা মনোভাব তাদের সাফল্যের মূল চাবিকাঠি। সরকার ও বেসরকারি খাতের উচিত তাদের এই যাত্রায় সহায়তা করা, যাতে তারা বিশ্ববাজারে প্রতিযোগিতামূলক হতে পারে এবং দেশের অর্থনীতিতে অবদান রাখতে পারে।",
+      "model_translation": "Young people in Bangladesh are creating employment opportunities for themselves by acquiring new skills. Information technology and an entrepreneurial mindset are key to their success. The government and the private sector should support them on this journey so that they can compete in the global market and contribute to the country's economy.",
+      "key_points_bn": [
+        "তরুণরা → the youth",
+        "নতুন দক্ষতা অর্জন → acquiring new skills",
+        "কর্মসংস্থানের সুযোগ → employment opportunities",
+        "উদ্যোক্তা মনোভাব → entrepreneurial mindset",
+        "চাবিকাঠি → keys",
+        "সহায়তা করা → support"
+      ],
+      "genuine_errors_bn": [
+        "প্রতিযোগিতামূলক → 'competitionable' ইংরেজি শব্দ নয়; 'competitive' সঠিক",
+        "উদ্যোক্তা মনোভাব → 'entrepreneur mind' অপ্রাকৃতিক; 'entrepreneurial mindset' উপযুক্ত",
+        "দেশের অর্থনীতিতে অবদান → 'contribute in the country's economy' preposition ভুল; 'contribute to the country's economy' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "কর্মসংস্থানের সুযোগ → 'job opportunities' (ঠিক)",
+        "বিশ্ববাজারে → 'in the global market' (ঠিক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "tense ঠিক আছে?",
+        "subject‑verb agreement ঠিক আছে?",
+        "article/preposition ঠিক আছে?",
+        "unnatural word‑for‑word translation এড়ানো হয়েছে?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-011",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "Reading books is one of the best habits a person can develop. It not only increases knowledge but also improves vocabulary and concentration. In today's digital age, however, many people spend more time on screens than with books. This trend may have long‑term consequences for attention spans and critical thinking.",
+      "model_translation": "বই পড়া একজন ব্যক্তির সর্বোত্তম অভ্যাসগুলোর মধ্যে একটি। এটি শুধু জ্ঞান বৃদ্ধি করে না, বরং শব্দভাণ্ডার ও মনোযোগ উন্নত করে। তবে বর্তমান ডিজিটাল যুগে অনেক মানুষ বইয়ের চেয়ে স্ক্রিনে বেশি সময় ব্যয় করে। এই প্রবণতা মনোযোগের স্থায়িত্ব ও সমালোচনামূলক চিন্তার ওপর দীর্ঘমেয়াদি প্রভাব ফেলতে পারে।",
+      "key_points_bn": [
+        "সর্বোত্তম অভ্যাস → best habits",
+        "শুধু ... না বরং → not only ... but also",
+        "শব্দভাণ্ডার → vocabulary",
+        "মনোযোগ → concentration",
+        "ডিজিটাল যুগ → digital age",
+        "ব্যয় করে → spend"
+      ],
+      "genuine_errors_bn": [
+        "vocabulary → 'শব্দ স্টোর' অর্থগতভাবে ভুল; 'শব্দভাণ্ডার' সঠিক",
+        "digital age → 'ডিজিটাল সময়' লিখলে ধারণাটি দুর্বল হয়; 'ডিজিটাল যুগ' সঠিক",
+        "spend more time on screens → 'স্ক্রিনের সঙ্গে বেশি সময় ব্যয় করে' অপ্রাকৃতিক; 'স্ক্রিনে বেশি সময় ব্যয় করে' উপযুক্ত"
+      ],
+      "acceptable_alternatives": [
+        "সর্বোত্তম → 'সবচেয়ে ভালো' (গ্রহণযোগ্য)",
+        "প্রবণতা → 'ধারা' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-012",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "Bangladesh has made remarkable progress in information technology over the last decade. Many young people are now working in the IT sector, both locally and internationally. The government is also supporting this growth through various policies and infrastructure projects.",
+      "model_translation": "গত এক দশকে তথ্যপ্রযুক্তি খাতে বাংলাদেশ অসাধারণ অগ্রগতি অর্জন করেছে। অনেক তরুণ এখন দেশে ও বিদেশে আইটি খাতে কাজ করছেন। সরকারও বিভিন্ন নীতি ও অবকাঠামো প্রকল্পের মাধ্যমে এই প্রবৃদ্ধিকে সমর্থন করছে।",
+      "key_points_bn": [
+        "অসাধারণ অগ্রগতি → remarkable progress",
+        "তথ্যপ্রযুক্তি → information technology",
+        "দেশে ও বিদেশে → locally and internationally",
+        "নীতি → policies",
+        "প্রবৃদ্ধি → growth"
+      ],
+      "genuine_errors_bn": [
+        "remarkable progress → 'উল্লেখযোগ্য সমস্যা' লিখলে অর্থ উল্টে যায়; 'অসাধারণ/উল্লেখযোগ্য অগ্রগতি' সঠিক",
+        "locally and internationally → 'স্থানীয়ভাবে ও আন্তর্জালিকভাবে' ভুল; 'দেশে ও বিদেশে' বা 'স্থানীয় ও আন্তর্জাতিকভাবে' সঠিক",
+        "supporting this growth → 'এই প্রবৃদ্ধি থামাচ্ছে' লিখলে বিপরীত অর্থ হয়; 'এই প্রবৃদ্ধিকে সহায়তা করছে' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "অগ্রগতি → 'উন্নতি' (গ্রহণযোগ্য)",
+        "সমর্থন করছে → 'সহায়তা করছে' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-013",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "A healthy diet and regular exercise are crucial for maintaining good health. However, many people ignore these basic habits due to busy lifestyles. Small changes in daily routine can make a significant difference to overall well‑being and prevent many chronic diseases.",
+      "model_translation": "স্বাস্থ্য ভালো রাখার জন্য স্বাস্থ্যকর খাদ্য ও নিয়মিত ব্যায়াম অত্যন্ত গুরুত্বপূর্ণ। তবে ব্যস্ত জীবনের কারণে অনেক মানুষ এই মৌলিক অভ্যাসগুলো উপেক্ষা করেন। দৈনন্দিন রুটিনে ছোটোখাটো পরিবর্তন সামগ্রিক সুস্থতার জন্য বড় পার্থক্য তৈরি করতে পারে এবং অনেক দীর্ঘমেয়াদি রোগ প্রতিরোধ করতে পারে।",
+      "key_points_bn": [
+        "স্বাস্থ্যকর খাদ্য → healthy diet",
+        "নিয়মিত ব্যায়াম → regular exercise",
+        "মৌলিক অভ্যাস → basic habits",
+        "ব্যস্ত জীবন → busy lifestyles",
+        "ছোটোখাটো পরিবর্তন → small changes",
+        "সুস্থতা → well‑being"
+      ],
+      "genuine_errors_bn": [
+        "balanced diet → 'সমান খাদ্য' অর্থগতভাবে ভুল; 'সুষম খাদ্য' সঠিক",
+        "ignore these habits → 'এই অভ্যাসগুলো মানে' লিখলে বিপরীত অর্থ হয়; 'উপেক্ষা করে' সঠিক",
+        "significant difference → 'তুচ্ছ পার্থক্য' লিখলে অর্থ বদলে যায়; 'উল্লেখযোগ্য/বড় পার্থক্য' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "significant difference → 'বড় পার্থক্য' বা 'উল্লেখযোগ্য পার্থক্য' (উভয়ই গ্রহণযোগ্য)",
+        "busy lifestyles → 'ব্যস্ত জীবনযাপন' বা 'ব্যস্ত জীবনধারা' (উভয়ই গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-014",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "ADVANCED",
+      "source_text": "Rapid urbanisation in Bangladesh has brought both opportunities and challenges. While cities offer better employment and education, they also face problems such as overcrowding, pollution, and inadequate infrastructure. Sustainable planning is essential to balance these forces and improve quality of life.",
+      "model_translation": "বাংলাদেশে দ্রুত নগরায়ণ যেমন সুযোগ সৃষ্টি করেছে, তেমনি নতুন চ্যালেঞ্জও এনেছে। শহরগুলো উন্নত কর্মসংস্থান ও শিক্ষার সুযোগ দিলেও অতিরিক্ত জনঘনত্ব, দূষণ এবং অপর্যাপ্ত অবকাঠামোর মতো সমস্যার মুখোমুখি হয়। এই সুযোগ ও চ্যালেঞ্জের মধ্যে ভারসাম্য রক্ষা এবং জীবনমান উন্নয়নে টেকসই পরিকল্পনা অপরিহার্য।",
+      "key_points_bn": [
+        "দ্রুত নগরায়ণ → rapid urbanisation",
+        "সুযোগ ও চ্যালেঞ্জ → opportunities and challenges",
+        "অতিরিক্ত জনসংখ্যা → overcrowding",
+        "অপর্যাপ্ত অবকাঠামো → inadequate infrastructure",
+        "টেকসই → sustainable",
+        "জীবনমান → quality of life"
+      ],
+      "genuine_errors_bn": [
+        "rapid urbanisation → 'দ্রুত নগর ধ্বংস' অর্থগতভাবে ভুল; 'দ্রুত নগরায়ণ' সঠিক",
+        "inadequate infrastructure → 'পর্যাপ্ত অবকাঠামো' লিখলে বিপরীত অর্থ হয়; 'অপর্যাপ্ত অবকাঠামো' সঠিক",
+        "sustainable planning → 'অস্থায়ী পরিকল্পনা' লিখলে অর্থ বদলে যায়; 'টেকসই পরিকল্পনা' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "যেমন ... তেমন কাঠামো → 'যেমন সুযোগ এনেছে, তেমন চ্যালেঞ্জও' (ঠিক)",
+        "ভারসাম্য রক্ষা → 'balance' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-015",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "The use of renewable energy is increasing in many countries. Solar and wind power are becoming cheaper and more efficient. This shift helps reduce greenhouse gas emissions and combat climate change. Governments are encouraging investment in clean technologies.",
+      "model_translation": "অনেক দেশে নবায়নযোগ্য শক্তির ব্যবহার বাড়ছে। সৌরশক্তি ও বায়ুশক্তি ক্রমে সস্তা এবং আরও কার্যকর হয়ে উঠছে। এই পরিবর্তন গ্রিনহাউস গ্যাস নিঃসরণ কমাতে এবং জলবায়ু পরিবর্তন মোকাবেলায় সহায়তা করে। সরকারগুলো পরিচ্ছন্ন প্রযুক্তিতে বিনিয়োগে উৎসাহ দিচ্ছে।",
+      "key_points_bn": [
+        "নবায়নযোগ্য জ্বালানি → renewable energy",
+        "সৌর ও বায়ু শক্তি → solar and wind power",
+        "সস্তা → cheaper",
+        "কার্যকর → efficient",
+        "গ্রিনহাউস গ্যাস নিঃসরণ → greenhouse gas emissions",
+        "পরিচ্ছন্ন প্রযুক্তি → clean technologies"
+      ],
+      "genuine_errors_bn": [
+        "renewable energy → 'পুনঃব্যবহারযোগ্য জ্বালানি' ধারণাগতভাবে ভুল; 'নবায়নযোগ্য জ্বালানি/শক্তি' সঠিক",
+        "greenhouse gas emissions → 'গ্রিনহাউস গ্যাস গ্রহণ' অর্থগতভাবে ভুল; 'গ্রিনহাউস গ্যাস নিঃসরণ' সঠিক",
+        "combat climate change → 'জলবায়ু পরিবর্তন সৃষ্টি করা' বিপরীত অর্থ; 'জলবায়ু পরিবর্তন মোকাবেলা করা' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "সহায়তা করে → 'সাহায্য করে' (গ্রহণযোগ্য)",
+        "উৎসাহিত করছে → 'প্রোত্সাহিত করছে' (ঠিক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-016",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "ADVANCED",
+      "source_text": "Despite significant progress in poverty reduction, income inequality remains a pressing issue in Bangladesh. The wealth gap between urban and rural areas, as well as between different social groups, continues to widen. Addressing this requires targeted policies and inclusive growth strategies.",
+      "model_translation": "দারিদ্র্য হ্রাসে উল্লেখযোগ্য অগ্রগতি সত্ত্বেও আয় বৈষম্য বাংলাদেশে একটি গুরুতর সমস্যা হিসেবে রয়ে গেছে। শহর ও গ্রামাঞ্চলের মধ্যে, পাশাপাশি বিভিন্ন সামাজিক গোষ্ঠীর মধ্যে সম্পদের ব্যবধান ক্রমে বাড়ছে। এই সমস্যা মোকাবেলায় লক্ষ্যভিত্তিক নীতি এবং অন্তর্ভুক্তিমূলক প্রবৃদ্ধির কৌশল প্রয়োজন।",
+      "key_points_bn": [
+        "দারিদ্র্য বিমোচন → poverty reduction",
+        "আয় বৈষম্য → income inequality",
+        "তীব্র → pressing",
+        "সম্পদের ব্যবধান → wealth gap",
+        "সুনির্দিষ্ট নীতি → targeted policies",
+        "অন্তর্ভুক্তিমূলক প্রবৃদ্ধি → inclusive growth"
+      ],
+      "genuine_errors_bn": [
+        "income inequality → 'আয় সমতা' বিপরীত অর্থ; 'আয় বৈষম্য' সঠিক",
+        "wealth gap → 'সম্পদের সমতা' বিপরীত অর্থ; 'সম্পদের ব্যবধান' সঠিক",
+        "targeted policies → 'এলোমেলো নীতি' অর্থগতভাবে ভুল; 'সুনির্দিষ্ট/লক্ষ্যভিত্তিক নীতি' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "সুনির্দিষ্ট নীতি → 'লক্ষ্যভিত্তিক নীতি' (গ্রহণযোগ্য)",
+        "প্রবৃদ্ধি → 'অর্থনৈতিক উন্নয়ন' (প্রায় সমার্থক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-017",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "ADVANCED",
+      "source_text": "Artificial intelligence is transforming various industries. In healthcare, it assists in diagnosing diseases. In education, it personalises learning. However, ethical concerns about data privacy and job displacement need to be addressed through strong regulations, transparent safeguards, and careful human oversight.",
+      "model_translation": "কৃত্রিম বুদ্ধিমত্তা বিভিন্ন শিল্পে পরিবর্তন আনছে। স্বাস্থ্যসেবায় এটি রোগ নির্ণয়ে সহায়তা করে এবং শিক্ষায় ব্যক্তিকেন্দ্রিক শেখার সুযোগ তৈরি করে। তবে তথ্যের গোপনীয়তা ও চাকরি হারানোর মতো নৈতিক উদ্বেগ মোকাবেলায় শক্তিশালী বিধিবিধান, স্বচ্ছ সুরক্ষা ব্যবস্থা এবং সতর্ক মানবীয় তদারকি প্রয়োজন।",
+      "key_points_bn": [
+        "artificial intelligence → কৃত্রিম বুদ্ধিমত্তা",
+        "diagnosing diseases → রোগ নির্ণয়",
+        "personalises learning → ব্যক্তিকেন্দ্রিক শেখার সুযোগ তৈরি করে",
+        "data privacy → তথ্যের গোপনীয়তা",
+        "job displacement → চাকরি হারানো / কর্মসংস্থানচ্যুতি",
+        "human oversight → মানবীয় তদারকি"
+      ],
+      "genuine_errors_bn": [
+        "data privacy → 'ডেটা ব্যক্তিগত' অর্থগতভাবে ভুল; 'তথ্যের/ডেটার গোপনীয়তা' সঠিক",
+        "job displacement → 'চাকরি স্থানান্তর' literal translation এখানে ভুল; 'চাকরি হারানো' বা 'কর্মসংস্থানচ্যুতি' উপযুক্ত",
+        "personalises learning → শুধু 'ব্যক্তিগত শিক্ষা' লিখলে ধারণাটি অসম্পূর্ণ; 'ব্যক্তিকেন্দ্রিক/ব্যক্তিগত প্রয়োজনভিত্তিক শেখা' উপযুক্ত"
+      ],
+      "acceptable_alternatives": [
+        "industries → 'খাতগুলো' বা 'শিল্পখাতগুলো' (গ্রহণযোগ্য)",
+        "job displacement → 'কর্মসংস্থানচ্যুতি' (গ্রহণযোগ্য)",
+        "strong regulations → 'কঠোর বিধিবিধান' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-018",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "The COVID-19 pandemic has highlighted the importance of digital infrastructure. Remote work and online education became possible only because of existing digital networks. However, the digital divide remains a major barrier for many in developing countries, limiting their access to opportunities.",
+      "model_translation": "কোভিড-১৯ মহামারী ডিজিটাল অবকাঠামোর গুরুত্বকে স্পষ্ট করেছে। বিদ্যমান ডিজিটাল নেটওয়ার্কের কারণেই দূরবর্তী কাজ ও অনলাইন শিক্ষা সম্ভব হয়েছিল। তবে উন্নয়নশীল দেশগুলোর অনেক মানুষের জন্য ডিজিটাল বিভাজন এখনও একটি বড় বাধা, যা তাদের নানা সুযোগ লাভের পথ সীমিত করে।",
+      "key_points_bn": [
+        "মহামারী → pandemic",
+        "ডিজিটাল অবকাঠামো → digital infrastructure",
+        "দূরবর্তী কাজ → remote work",
+        "অনলাইন শিক্ষা → online education",
+        "ডিজিটাল বিভাজন → digital divide",
+        "প্রবেশাধিকার → access"
+      ],
+      "genuine_errors_bn": [
+        "digital divide → 'ডিজিটাল সংযোগ' লিখলে বিপরীত/ভিন্ন ধারণা হয়; 'ডিজিটাল বিভাজন' সঠিক",
+        "remote work → 'দূরবর্তী শিক্ষা' ভুল; 'দূরবর্তী কাজ' সঠিক",
+        "major barrier → 'প্রধান সুযোগ' লিখলে বিপরীত অর্থ হয়; 'প্রধান বাধা' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "প্রধান বাধা → 'প্রতিবন্ধকতা' (ঠিক)",
+        "সীমিত করছে → 'সংকুচিত করছে' (গ্রহণযোগ্য)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-019",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "Social media has revolutionised communication, but it also poses risks. Misinformation spreads quickly, and privacy is often compromised. Users must be aware of these dangers and take steps to protect themselves, including using strong passwords and being critical of sources.",
+      "model_translation": "সোশ্যাল মিডিয়া যোগাযোগে বিপ্লব এনেছে, কিন্তু এটি ঝুঁকিও তৈরি করে। ভুল তথ্য দ্রুত ছড়িয়ে পড়ে এবং গোপনীয়তা প্রায়ই লঙ্ঘিত হয়। ব্যবহারকারীদের এই বিপদ সম্পর্কে সচেতন হওয়া উচিত এবং নিজেদের রক্ষায় পদক্ষেপ নেওয়া উচিত, যেমন শক্তিশালী পাসওয়ার্ড ব্যবহার এবং উৎস সম্পর্কে সমালোচনামূলক দৃষ্টিভঙ্গি রাখা।",
+      "key_points_bn": [
+        "বিপ্লব এনেছে → revolutionised",
+        "ঝুঁকি → risks",
+        "ভুল তথ্য → misinformation",
+        "ছড়িয়ে পড়ে → spreads",
+        "গোপনীয়তা → privacy",
+        "লঙ্ঘিত হয় → compromised",
+        "পাসওয়ার্ড → passwords"
+      ],
+      "genuine_errors_bn": [
+        "misinformation → 'সঠিক তথ্য' বিপরীত অর্থ; 'ভুল তথ্য/ভুয়া তথ্য' সঠিক",
+        "privacy is compromised → 'গোপনীয়তা নিশ্চিত হয়' বিপরীত অর্থ; 'গোপনীয়তা লঙ্ঘিত/ক্ষুণ্ন হয়' সঠিক",
+        "protect themselves → 'নিজেদের ঝুঁকিতে ফেলা' বিপরীত অর্থ; 'নিজেদের রক্ষা করা' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "ঝুঁকি → 'বিপদ' (প্রায় সমার্থক)",
+        "সমালোচনামূলক দৃষ্টিভঙ্গি → 'সতর্ক দৃষ্টিভঙ্গি' (ঠিক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-trans-020",
+      "skill_id": "translation_en_to_bn",
+      "direction": "ENGLISH_TO_BANGLA",
+      "difficulty": "INTERMEDIATE",
+      "source_text": "Good health is a valuable asset that should be protected. To stay healthy, we should eat a balanced diet and exercise regularly. We should also avoid harmful habits like smoking and excessive drinking, and ensure we get enough sleep and manage stress.",
+      "model_translation": "সুস্বাস্থ্য একটি মূল্যবান সম্পদ, যা রক্ষা করা উচিত। সুস্থ থাকতে আমাদের সুষম খাদ্য গ্রহণ এবং নিয়মিত ব্যায়াম করা দরকার। ধূমপান ও অতিরিক্ত মদ্যপানের মতো ক্ষতিকর অভ্যাস এড়িয়ে চলার পাশাপাশি পর্যাপ্ত ঘুম নিশ্চিত করা এবং মানসিক চাপ নিয়ন্ত্রণ করাও জরুরি।",
+      "key_points_bn": [
+        "সুস্বাস্থ্য → good health",
+        "মূল্যবান সম্পদ → valuable asset",
+        "সুষম খাদ্য → balanced diet",
+        "নিয়মিত ব্যায়াম → regular exercise",
+        "ক্ষতিকর অভ্যাস → harmful habits",
+        "মানসিক চাপ ব্যবস্থাপনা → stress management"
+      ],
+      "genuine_errors_bn": [
+        "balanced diet → 'ভারী খাদ্য' অর্থগতভাবে ভুল; 'সুষম খাদ্য' সঠিক",
+        "harmful habits → 'উপকারী অভ্যাস' বিপরীত অর্থ; 'ক্ষতিকর অভ্যাস' সঠিক",
+        "manage stress → 'মানসিক চাপ বাড়ানো' বিপরীত অর্থ; 'মানসিক চাপ নিয়ন্ত্রণ/ব্যবস্থাপনা করা' সঠিক"
+      ],
+      "acceptable_alternatives": [
+        "নিশ্চিত করা → 'সুনিশ্চিত করা' (ঠিক)",
+        "ব্যায়াম → 'শারীরিক কসরত' (প্রায় সমার্থক)"
+      ],
+      "self_check": [
+        "মূল অর্থ ঠিক আছে?",
+        "স্বাভাবিক বাংলা বাক্য গঠন?",
+        "গুরুত্বপূর্ণ তথ্য বাদ যায়নি?",
+        "tense ও sentence structure ঠিক আছে?",
+        "উপযুক্ত শব্দচয়ন হয়েছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-001",
+      "skill_id": "essay_thesis_focus",
+      "topic": "Responsible use of Artificial Intelligence",
+      "difficulty": "ADVANCED",
+      "task": "Write a thesis statement for an essay that argues for responsible AI development.",
+      "model_thesis": "Artificial intelligence has immense potential to benefit humanity, but its development must be guided by ethical principles to prevent misuse and safeguard human rights.",
+      "outline_points": [
+        "Introduction: AI's role in modern society",
+        "Potential benefits: healthcare, efficiency, innovation",
+        "Risks: bias, job displacement, privacy",
+        "Need for regulation and transparency",
+        "Conclusion: balanced approach"
+      ],
+      "examples": [
+        "AI in medical diagnosis",
+        "Automation in manufacturing",
+        "Facial recognition debates"
+      ],
+      "counterpoint": "Some argue that regulation stifles innovation.",
+      "conclusion_direction": "Emphasise that ethical AI is not only possible but necessary for a sustainable future.",
+      "common_mistakes_bn": [
+        "থিসিস খুব সাধারণ; শুধু সুবিধা বা শুধু ঝুঁকি নিয়ে আলোচনা",
+        "পাল্টা যুক্তি উপস্থাপন না করা"
+      ],
+      "self_check": [
+        "থিসিস কি স্পষ্ট এবং যুক্তিযুক্ত?",
+        "বিষয়বস্তু সংকীর্ণ?",
+        "পাল্টা যুক্তি বিবেচনা করা হয়েছে?",
+        "বক্তব্য সমর্থনের জন্য প্রমাণ প্রস্তুত আছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-002",
+      "skill_id": "essay_outline_structure",
+      "topic": "Responsible use of Artificial Intelligence",
+      "difficulty": "ADVANCED",
+      "task": "Develop a detailed outline for an essay on responsible AI use, including at least three main arguments with supporting points.",
+      "model_outline": {
+        "Introduction": {
+          "hook": "AI is reshaping our world at an unprecedented pace.",
+          "background": "Brief history and current applications.",
+          "thesis": "Responsible AI requires a multi‑stakeholder approach addressing ethics, transparency, and accountability."
+        },
+        "Body_1": {
+          "point": "Ethical guidelines must be established and enforced.",
+          "evidence": "Examples of biased algorithms; need for fairness.",
+          "example": "AI in hiring decisions."
+        },
+        "Body_2": {
+          "point": "Transparency is crucial for building trust.",
+          "evidence": "Explainability of AI decisions; open‑source initiatives.",
+          "example": "AI in healthcare diagnoses."
+        },
+        "Body_3": {
+          "point": "Accountability frameworks must be in place.",
+          "evidence": "Who is responsible when AI makes mistakes?",
+          "example": "Autonomous vehicles accidents."
+        },
+        "Counterargument": {
+          "point": "Some believe regulation could slow innovation.",
+          "rebuttal": "However, sustainable progress requires guardrails."
+        },
+        "Conclusion": {
+          "restatement": "Summarise thesis and main points.",
+          "final_thought": "The future of AI is bright only if we act responsibly today."
+        }
+      },
+      "self_check": [
+        "আউটলাইন কি যৌক্তিক?",
+        "প্রতিটি পয়েন্ট কি সমর্থিত?",
+        "পাল্টা যুক্তি অন্তর্ভুক্ত?",
+        "উপসংহার সবকিছুকে একত্রিত করে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-003",
+      "skill_id": "essay_thesis_focus",
+      "topic": "Climate adaptation strategies for Bangladesh",
+      "difficulty": "INTERMEDIATE",
+      "task": "Write a thesis statement for an essay on climate adaptation in Bangladesh.",
+      "model_thesis": "Bangladesh can effectively address climate change through a combination of infrastructure investment, community‑based adaptation, and international cooperation.",
+      "outline_points": [
+        "Introduction: vulnerability of Bangladesh",
+        "Infrastructure: embankments, cyclone shelters",
+        "Community: local knowledge, early warning systems",
+        "International: financing and technology transfer",
+        "Conclusion: integrated approach"
+      ],
+      "examples": [
+        "Coastal embankment rehabilitation",
+        "Climate‑resilient farming methods",
+        "Multilateral climate finance mechanisms"
+      ],
+      "counterpoint": "Some argue local efforts are insufficient without global emissions reduction.",
+      "conclusion_direction": "Conclude that while global action is vital, local adaptation saves lives now.",
+      "common_mistakes_bn": [
+        "থিসিস অত্যন্ত বিস্তৃত বা খুব সংকীর্ণ",
+        "শুধু সরকারি উদ্যোগ উল্লেখ",
+        "সুনির্দিষ্ট প্রমাণের অভাব"
+      ],
+      "self_check": [
+        "থিসিস কি স্পষ্ট এবং যুক্তিযুক্ত?",
+        "বিষয়বস্তু সংকীর্ণ?",
+        "পাল্টা যুক্তি বিবেচনা করা হয়েছে?",
+        "বক্তব্য সমর্থনের জন্য প্রমাণ প্রস্তুত আছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-004",
+      "skill_id": "essay_outline_structure",
+      "topic": "Climate adaptation strategies for Bangladesh",
+      "difficulty": "INTERMEDIATE",
+      "task": "Create a detailed outline for an essay on climate adaptation in Bangladesh.",
+      "model_outline": {
+        "Introduction": {
+          "hook": "Bangladesh is one of the most climate‑vulnerable countries.",
+          "background": "Geographical and social context.",
+          "thesis": "A multi‑pronged strategy involving government, communities, and international partners is essential."
+        },
+        "Body_1": {
+          "point": "Government‑led infrastructure projects",
+          "evidence": "Building resilient roads, embankments, and shelters.",
+          "example": "Coastal embankment rehabilitation."
+        },
+        "Body_2": {
+          "point": "Community‑based adaptation measures",
+          "evidence": "Local knowledge and practices.",
+          "example": "Floating agriculture in wetland areas."
+        },
+        "Body_3": {
+          "point": "International cooperation and funding",
+          "evidence": "Climate finance and technology transfer.",
+          "example": "Multilateral climate finance mechanisms."
+        },
+        "Counterargument": {
+          "point": "Critics say adaptation alone is not enough.",
+          "rebuttal": "But it buys time and saves lives while mitigation efforts continue."
+        },
+        "Conclusion": {
+          "restatement": "Reiterate the need for a holistic approach.",
+          "final_thought": "Bangladesh can serve as a model for climate adaptation."
+        }
+      },
+      "self_check": [
+        "আউটলাইন কি যৌক্তিক?",
+        "প্রতিটি পয়েন্ট কি সমর্থিত?",
+        "পাল্টা যুক্তি অন্তর্ভুক্ত?",
+        "উপসংহার সবকিছুকে একত্রিত করে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-005",
+      "skill_id": "essay_thesis_focus",
+      "topic": "Quality education for all",
+      "difficulty": "INTERMEDIATE",
+      "task": "Write a thesis statement for an essay on achieving quality education for all.",
+      "model_thesis": "Universal quality education is achievable through increased public investment, teacher training, and digital access, but must address socio‑economic barriers.",
+      "outline_points": [
+        "Introduction: education as a fundamental right",
+        "Public investment: infrastructure and resources",
+        "Teacher training: improving pedagogy",
+        "Digital access: bridging the digital divide",
+        "Socio‑economic barriers: poverty, gender, disability",
+        "Conclusion: equity is key"
+      ],
+      "examples": [
+        "Public funding for schools",
+        "Continuous professional development for teachers",
+        "Remote learning initiatives"
+      ],
+      "counterpoint": "Some argue that quality education is too expensive.",
+      "conclusion_direction": "Conclude that investment in education pays back multiple times over.",
+      "common_mistakes_bn": [
+        "থিসিস খুব সাধারণ",
+        "সুবিধা‑অসুবিধার ভারসাম্য না থাকা",
+        "প্রাসঙ্গিক উদাহরণের অভাব"
+      ],
+      "self_check": [
+        "থিসিস কি স্পষ্ট এবং যুক্তিযুক্ত?",
+        "বিষয়বস্তু সংকীর্ণ?",
+        "পাল্টা যুক্তি বিবেচনা করা হয়েছে?",
+        "বক্তব্য সমর্থনের জন্য প্রমাণ প্রস্তুত আছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-006",
+      "skill_id": "essay_outline_structure",
+      "topic": "Quality education for all",
+      "difficulty": "INTERMEDIATE",
+      "task": "Develop a detailed outline for an essay on achieving quality education for all.",
+      "model_outline": {
+        "Introduction": {
+          "hook": "Education is the bedrock of a just society.",
+          "background": "Current state of education globally.",
+          "thesis": "To achieve quality education for all, we must tackle funding, pedagogy, and equity simultaneously."
+        },
+        "Body_1": {
+          "point": "Increased public investment",
+          "evidence": "Funding for schools, libraries, and technology.",
+          "example": "National education budgets."
+        },
+        "Body_2": {
+          "point": "Teacher training and support",
+          "evidence": "Well‑trained teachers improve student outcomes.",
+          "example": "Professional development programmes."
+        },
+        "Body_3": {
+          "point": "Bridging digital and socio‑economic gaps",
+          "evidence": "Access to technology and resources for marginalised groups.",
+          "example": "Equitable distribution of digital devices."
+        },
+        "Counterargument": {
+          "point": "Critics worry about cost.",
+          "rebuttal": "But the long‑term benefits outweigh the costs."
+        },
+        "Conclusion": {
+          "restatement": "Summarise the three pillars.",
+          "final_thought": "Quality education is a shared responsibility."
+        }
+      },
+      "self_check": [
+        "আউটলাইন কি যৌক্তিক?",
+        "প্রতিটি পয়েন্ট কি সমর্থিত?",
+        "পাল্টা যুক্তি অন্তর্ভুক্ত?",
+        "উপসংহার সবকিছুকে একত্রিত করে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-007",
+      "skill_id": "essay_thesis_focus",
+      "topic": "Youth employment in Bangladesh",
+      "difficulty": "INTERMEDIATE",
+      "task": "Write a thesis statement for an essay on creating more youth employment opportunities in Bangladesh.",
+      "model_thesis": "Solving youth unemployment in Bangladesh requires a multi‑sectoral approach, including skills training, entrepreneurship support, and private‑sector engagement.",
+      "outline_points": [
+        "Introduction: the youth demographic opportunity",
+        "Skills training: aligning education with market needs",
+        "Entrepreneurship: promoting startups and SMEs",
+        "Private sector: job creation and partnerships",
+        "Government role: policy and incentives",
+        "Conclusion: collaborative effort"
+      ],
+      "examples": [
+        "Vocational training programmes",
+        "Startup incubation initiatives",
+        "Public‑private partnerships"
+      ],
+      "counterpoint": "Some believe that economic growth alone will solve unemployment.",
+      "conclusion_direction": "Conclude that targeted strategies are necessary.",
+      "common_mistakes_bn": [
+        "থিসিস খুব বিস্তৃত",
+        "শুধু সরবরাহ‑পক্ষের বিষয়",
+        "সুনির্দিষ্ট প্রমাণের অভাব"
+      ],
+      "self_check": [
+        "থিসিস কি স্পষ্ট এবং যুক্তিযুক্ত?",
+        "বিষয়বস্তু সংকীর্ণ?",
+        "পাল্টা যুক্তি বিবেচনা করা হয়েছে?",
+        "বক্তব্য সমর্থনের জন্য প্রমাণ প্রস্তুত আছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-008",
+      "skill_id": "essay_outline_structure",
+      "topic": "Youth employment in Bangladesh",
+      "difficulty": "INTERMEDIATE",
+      "task": "Develop a detailed outline for an essay on youth employment in Bangladesh.",
+      "model_outline": {
+        "Introduction": {
+          "hook": "Bangladesh has a young and growing workforce.",
+          "background": "Challenges of unemployment and underemployment.",
+          "thesis": "Tackling youth unemployment demands a comprehensive strategy involving education reform, entrepreneurship, and industrial growth."
+        },
+        "Body_1": {
+          "point": "Skills training and education reform",
+          "evidence": "Curriculum changes to include practical skills.",
+          "example": "Technical and vocational education."
+        },
+        "Body_2": {
+          "point": "Entrepreneurship and innovation",
+          "evidence": "Support for startups and small businesses.",
+          "example": "Access to microfinance and mentorship."
+        },
+        "Body_3": {
+          "point": "Private sector partnerships",
+          "evidence": "Collaborations to create job opportunities.",
+          "example": "Industry‑academia linkages."
+        },
+        "Counterargument": {
+          "point": "Some argue that creating jobs is primarily the government's duty.",
+          "rebuttal": "But a multi‑stakeholder effort is more effective."
+        },
+        "Conclusion": {
+          "restatement": "Reiterate the need for integration.",
+          "final_thought": "Empowering youth is investing in the nation's future."
+        }
+      },
+      "self_check": [
+        "আউটলাইন কি যৌক্তিক?",
+        "প্রতিটি পয়েন্ট কি সমর্থিত?",
+        "পাল্টা যুক্তি অন্তর্ভুক্ত?",
+        "উপসংহার সবকিছুকে একত্রিত করে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-009",
+      "skill_id": "essay_thesis_focus",
+      "topic": "Urban transportation challenges",
+      "difficulty": "INTERMEDIATE",
+      "task": "Write a thesis statement for an essay on urban transportation challenges in major cities.",
+      "model_thesis": "Urban transportation problems can be alleviated through a combination of public transit investment, smart technology, and behavioural change.",
+      "outline_points": [
+        "Introduction: congestion and pollution",
+        "Public transit: expansion and improvement",
+        "Technology: intelligent transport systems",
+        "Behavioural change: carpooling, cycling",
+        "Policy: parking and emission regulations",
+        "Conclusion: sustainable mobility"
+      ],
+      "examples": [
+        "Mass rapid transit systems",
+        "Real‑time traffic management apps",
+        "Dedicated cycling infrastructure"
+      ],
+      "counterpoint": "Some argue that technology alone can solve traffic.",
+      "conclusion_direction": "Conclude that a holistic strategy is required.",
+      "common_mistakes_bn": [
+        "থিসিস খুব সাধারণ",
+        "শুধু অবকাঠামোর কথা",
+        "জনগণের অংশগ্রহণের কথা না বলা"
+      ],
+      "self_check": [
+        "থিসিস কি স্পষ্ট এবং যুক্তিযুক্ত?",
+        "বিষয়বস্তু সংকীর্ণ?",
+        "পাল্টা যুক্তি বিবেচনা করা হয়েছে?",
+        "বক্তব্য সমর্থনের জন্য প্রমাণ প্রস্তুত আছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-010",
+      "skill_id": "essay_outline_structure",
+      "topic": "Urban transportation challenges",
+      "difficulty": "INTERMEDIATE",
+      "task": "Develop a detailed outline for an essay on urban transportation challenges.",
+      "model_outline": {
+        "Introduction": {
+          "hook": "City dwellers face daily commuting nightmares.",
+          "background": "Root causes: population growth, poor planning.",
+          "thesis": "A sustainable urban transport solution requires better infrastructure, technology, and public awareness."
+        },
+        "Body_1": {
+          "point": "Improving public transport",
+          "evidence": "More buses, trains, and dedicated lanes.",
+          "example": "Bus rapid transit corridors."
+        },
+        "Body_2": {
+          "point": "Integrating smart technology",
+          "evidence": "Real‑time tracking, adaptive signals.",
+          "example": "Intelligent traffic management."
+        },
+        "Body_3": {
+          "point": "Encouraging greener habits",
+          "evidence": "Incentives for electric vehicles and cycling.",
+          "example": "Bike‑sharing programmes."
+        },
+        "Counterargument": {
+          "point": "Some say technology is too expensive.",
+          "rebuttal": "But long‑term savings justify the cost."
+        },
+        "Conclusion": {
+          "restatement": "Summarise the integrated approach.",
+          "final_thought": "Livable cities depend on smart and clean mobility."
+        }
+      },
+      "self_check": [
+        "আউটলাইন কি যৌক্তিক?",
+        "প্রতিটি পয়েন্ট কি সমর্থিত?",
+        "পাল্টা যুক্তি অন্তর্ভুক্ত?",
+        "উপসংহার সবকিছুকে একত্রিত করে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-011",
+      "skill_id": "essay_thesis_focus",
+      "topic": "Digital public services",
+      "difficulty": "INTERMEDIATE",
+      "task": "Write a thesis statement for an essay on the role of digital public services in Bangladesh.",
+      "model_thesis": "Digital public services can enhance government efficiency and citizen convenience, but must be accessible to all to avoid exacerbating inequality.",
+      "outline_points": [
+        "Introduction: digitalisation of government",
+        "Efficiency: reduced bureaucracy, faster services",
+        "Convenience: online applications, payments",
+        "Accessibility: digital divide, rural challenges",
+        "Security: data privacy, cyber threats",
+        "Conclusion: inclusive digitalisation"
+      ],
+      "examples": [
+        "Online application portals",
+        "Digital land record systems",
+        "Mobile payment for government fees"
+      ],
+      "counterpoint": "Critics worry about digital exclusion.",
+      "conclusion_direction": "Conclude that digitalisation must be accompanied by digital literacy and infrastructure.",
+      "common_mistakes_bn": [
+        "থিসিস খুব বিস্তৃত",
+        "শুধু সুবিধার কথা",
+        "ঝুঁকি উপেক্ষা করা"
+      ],
+      "self_check": [
+        "থিসিস কি স্পষ্ট এবং যুক্তিযুক্ত?",
+        "বিষয়বস্তু সংকীর্ণ?",
+        "পাল্টা যুক্তি বিবেচনা করা হয়েছে?",
+        "বক্তব্য সমর্থনের জন্য প্রমাণ প্রস্তুত আছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-012",
+      "skill_id": "essay_outline_structure",
+      "topic": "Digital public services",
+      "difficulty": "INTERMEDIATE",
+      "task": "Develop a detailed outline for an essay on digital public services in Bangladesh.",
+      "model_outline": {
+        "Introduction": {
+          "hook": "Bangladesh is rapidly digitising public services.",
+          "background": "Government initiatives for digital transformation.",
+          "thesis": "While digital services offer great potential, their success depends on universal access and cybersecurity."
+        },
+        "Body_1": {
+          "point": "Efficiency gains",
+          "evidence": "Reduced time and cost for citizens.",
+          "example": "e‑Government platforms."
+        },
+        "Body_2": {
+          "point": "Challenges of accessibility",
+          "evidence": "Rural areas lack internet and digital literacy.",
+          "example": "Community digital centres."
+        },
+        "Body_3": {
+          "point": "Privacy and security",
+          "evidence": "Need for robust data protection laws.",
+          "example": "Data protection frameworks."
+        },
+        "Counterargument": {
+          "point": "Some argue for slower transition.",
+          "rebuttal": "But phased implementation with safeguards can work."
+        },
+        "Conclusion": {
+          "restatement": "Summarise the balance.",
+          "final_thought": "Digital inclusion is the key to success."
+        }
+      },
+      "self_check": [
+        "আউটলাইন কি যৌক্তিক?",
+        "প্রতিটি পয়েন্ট কি সমর্থিত?",
+        "পাল্টা যুক্তি অন্তর্ভুক্ত?",
+        "উপসংহার সবকিছুকে একত্রিত করে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-013",
+      "skill_id": "essay_thesis_focus",
+      "topic": "Renewable energy for sustainable development",
+      "difficulty": "ADVANCED",
+      "task": "Write a thesis statement for an essay on renewable energy in Bangladesh.",
+      "model_thesis": "Expanding renewable energy is crucial for Bangladesh's sustainable development, yet it requires overcoming technical, financial, and policy barriers.",
+      "outline_points": [
+        "Introduction: energy demand and climate goals",
+        "Technical: solar, wind, biomass potential",
+        "Financial: investment and cost",
+        "Policy: incentives and regulation",
+        "Social: acceptance and job creation",
+        "Conclusion: committed action needed"
+      ],
+      "examples": [
+        "Solar home systems",
+        "Wind energy projects",
+        "Biogas plants"
+      ],
+      "counterpoint": "Some argue fossil fuels are still cheaper.",
+      "conclusion_direction": "Conclude that renewable energy is a long‑term investment.",
+      "common_mistakes_bn": [
+        "থিসিস খুব সাধারণ",
+        "বাস্তবায়ন বাধাগুলো না বলা",
+        "অর্থনৈতিক দিক উপেক্ষা"
+      ],
+      "self_check": [
+        "থিসিস কি স্পষ্ট এবং যুক্তিযুক্ত?",
+        "বিষয়বস্তু সংকীর্ণ?",
+        "পাল্টা যুক্তি বিবেচনা করা হয়েছে?",
+        "বক্তব্য সমর্থনের জন্য প্রমাণ প্রস্তুত আছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-014",
+      "skill_id": "essay_outline_structure",
+      "topic": "Renewable energy for sustainable development",
+      "difficulty": "ADVANCED",
+      "task": "Develop a detailed outline for an essay on renewable energy in Bangladesh.",
+      "model_outline": {
+        "Introduction": {
+          "hook": "Energy is the backbone of development.",
+          "background": "Bangladesh's reliance on natural gas and imports.",
+          "thesis": "A shift to renewable energy is essential for environmental sustainability and energy security."
+        },
+        "Body_1": {
+          "point": "Technical feasibility",
+          "evidence": "Solar, wind, and hydro resources are abundant.",
+          "example": "Solar irrigation systems."
+        },
+        "Body_2": {
+          "point": "Economic and policy challenges",
+          "evidence": "High upfront costs; need for subsidies.",
+          "example": "Feed‑in tariffs and tax incentives."
+        },
+        "Body_3": {
+          "point": "Social and environmental benefits",
+          "evidence": "Job creation, reduced emissions.",
+          "example": "Green jobs in renewable energy."
+        },
+        "Counterargument": {
+          "point": "Critics point to intermittency.",
+          "rebuttal": "But battery storage and hybrid systems can mitigate."
+        },
+        "Conclusion": {
+          "restatement": "Reinforce the strategic importance.",
+          "final_thought": "Renewables are not optional but imperative."
+        }
+      },
+      "self_check": [
+        "আউটলাইন কি যৌক্তিক?",
+        "প্রতিটি পয়েন্ট কি সমর্থিত?",
+        "পাল্টা যুক্তি অন্তর্ভুক্ত?",
+        "উপসংহার সবকিছুকে একত্রিত করে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-015",
+      "skill_id": "essay_thesis_focus",
+      "topic": "Social media and responsibility",
+      "difficulty": "INTERMEDIATE",
+      "task": "Write a thesis statement for an essay on the responsible use of social media.",
+      "model_thesis": "Social media can be a force for good if users practise critical thinking, digital etiquette, and personal accountability.",
+      "outline_points": [
+        "Introduction: social media's ubiquity",
+        "Positive: connection, information, mobilisation",
+        "Negative: misinformation, cyberbullying",
+        "Responsibility: users, platforms, governments",
+        "Education: digital literacy",
+        "Conclusion: empowering users"
+      ],
+      "examples": [
+        "Public health campaigns on social media",
+        "Digital literacy programmes",
+        "Content moderation challenges"
+      ],
+      "counterpoint": "Some believe that platforms themselves should bear most responsibility.",
+      "conclusion_direction": "Conclude that shared responsibility is key.",
+      "common_mistakes_bn": [
+        "থিসিস খুব সাধারণ",
+        "শুধু নেতিবাচক দিক বা শুধু ইতিবাচক",
+        "সমাধান স্পষ্ট না করা"
+      ],
+      "self_check": [
+        "থিসিস কি স্পষ্ট এবং যুক্তিযুক্ত?",
+        "বিষয়বস্তু সংকীর্ণ?",
+        "পাল্টা যুক্তি বিবেচনা করা হয়েছে?",
+        "বক্তব্য সমর্থনের জন্য প্রমাণ প্রস্তুত আছে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-written-essay-016",
+      "skill_id": "essay_outline_structure",
+      "topic": "Social media and responsibility",
+      "difficulty": "INTERMEDIATE",
+      "task": "Develop a detailed outline for an essay on responsible social media use.",
+      "model_outline": {
+        "Introduction": {
+          "hook": "Social media connects billions, but at what cost?",
+          "background": "Rise of platforms and their impact.",
+          "thesis": "Responsible use of social media requires individual awareness, platform accountability, and government regulation."
+        },
+        "Body_1": {
+          "point": "Individual responsibility",
+          "evidence": "Users must verify information and respect others.",
+          "example": "Fact‑checking before sharing."
+        },
+        "Body_2": {
+          "point": "Platform accountability",
+          "evidence": "Algorithms that promote harmful content.",
+          "example": "Content moderation policies."
+        },
+        "Body_3": {
+          "point": "Government regulation",
+          "evidence": "Laws to protect privacy and prevent misuse.",
+          "example": "Data protection acts."
+        },
+        "Counterargument": {
+          "point": "Some fear censorship.",
+          "rebuttal": "But balanced regulation can protect both rights and safety."
+        },
+        "Conclusion": {
+          "restatement": "Summarise the three pillars.",
+          "final_thought": "A healthy digital society is a collaborative effort."
+        }
+      },
+      "self_check": [
+        "আউটলাইন কি যৌক্তিক?",
+        "প্রতিটি পয়েন্ট কি সমর্থিত?",
+        "পাল্টা যুক্তি অন্তর্ভুক্ত?",
+        "উপসংহার সবকিছুকে একত্রিত করে?"
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    }
+  ]
+}
