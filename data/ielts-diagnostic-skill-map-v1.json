@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "assessment_id": "ielts-diagnostic-v1",
+  "question_set_sha256": "8885fda5188fe35301cda2ed2bdbeb255c460470b58c6cac544e4b31a9a8455d",
   "review_status": "REVIEWED",
   "practice_type": "OVIDHAN_CREATED_DIAGNOSTIC",
   "official_question": false,
@@ -107,10 +108,10 @@
     {
       "question_id": "ielts-diag-v1-q12",
       "broad_category": "vocabulary",
-      "mapping_status": "MAPPED_OBJECTIVE",
-      "primary_skill_id": "word_choice_register",
-      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
-      "rationale": "Directly tests lexical meaning in an academic phrase.",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "The current graph has no precise contextual-vocabulary-meaning skill.",
       "review_status": "REVIEWED"
     },
     {
@@ -125,10 +126,10 @@
     {
       "question_id": "ielts-diag-v1-q14",
       "broad_category": "vocabulary",
-      "mapping_status": "MAPPED_OBJECTIVE",
-      "primary_skill_id": "word_choice_register",
-      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
-      "rationale": "Directly tests precise lexical meaning in context.",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "The current graph has no precise contextual-vocabulary-meaning skill.",
       "review_status": "REVIEWED"
     },
     {
@@ -162,18 +163,18 @@
       "question_id": "ielts-diag-v1-q18",
       "broad_category": "reading",
       "mapping_status": "MAPPED_OBJECTIVE",
-      "primary_skill_id": "reading_tone_purpose",
+      "primary_skill_id": "reading_main_idea",
       "evidence_type": "DIAGNOSTIC_OBJECTIVE",
-      "rationale": "Directly asks for the writer's balanced position.",
+      "rationale": "Directly asks the learner to identify the passage's central balanced position.",
       "review_status": "REVIEWED"
     },
     {
       "question_id": "ielts-diag-v1-q19",
       "broad_category": "reading",
-      "mapping_status": "MAPPED_OBJECTIVE",
-      "primary_skill_id": "word_choice_register",
-      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
-      "rationale": "Directly tests contextual lexical meaning.",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "The current graph has no precise contextual-vocabulary-meaning skill.",
       "review_status": "REVIEWED"
     },
     {
@@ -233,10 +234,10 @@
     {
       "question_id": "ielts-diag-v1-q26",
       "broad_category": "writing",
-      "mapping_status": "MAPPED_OBJECTIVE",
-      "primary_skill_id": "subordinate_clause_connection",
-      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
-      "rationale": "Directly tests a logical contrast connector.",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "The discourse connector does not directly test subordinate-clause connection.",
       "review_status": "REVIEWED"
     },
     {
@@ -269,10 +270,10 @@
     {
       "question_id": "ielts-diag-v1-q30",
       "broad_category": "writing",
-      "mapping_status": "MAPPED_OBJECTIVE",
-      "primary_skill_id": "essay_outline_structure",
-      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
-      "rationale": "Directly tests a paragraph opener that signals a cause.",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Choosing one paragraph opener does not directly demonstrate coherent essay outlining.",
       "review_status": "REVIEWED"
     },
     {

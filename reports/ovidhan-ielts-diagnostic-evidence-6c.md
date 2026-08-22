@@ -11,16 +11,19 @@
 
 The manifest `data/ielts-diagnostic-skill-map-v1.json` contains every stable ID from `ielts-diag-v1-q01` through `ielts-diag-v1-q40` exactly once. All records and the assessment are `REVIEWED`; the practice type is `OVIDHAN_CREATED_DIAGNOSTIC` and `official_question` is false.
 
-- Mapped objective items: **24**
-- Unmapped items: **16**
-- Exact canonical skills used: `compound_subject_agreement`, `essay_outline_structure`, `essay_thesis_focus`, `fixed_expression`, `gerund_after_preposition`, `grammatical_number_nouns`, `indefinite_article_a_an`, `reading_inference`, `reading_main_idea`, `reading_reference`, `reading_supporting_detail`, `reading_tone_purpose`, `subordinate_clause_connection`, `word_choice_register`.
+- Mapped objective items: **19**
+- Unmapped items: **21**
+- Exact canonical skills used: `compound_subject_agreement`, `essay_thesis_focus`, `fixed_expression`, `gerund_after_preposition`, `grammatical_number_nouns`, `indefinite_article_a_an`, `reading_inference`, `reading_main_idea`, `reading_reference`, `reading_supporting_detail`, `subordinate_clause_connection`, `word_choice_register`.
 
 Unmapped groups:
 
 - Questions 1, 2 and 5: second conditional, past perfect sequencing, and future passive have no precise current canonical skill.
+- Questions 12, 14 and 19: contextual vocabulary meaning has no precise current canonical skill; these do not directly measure register.
 - Question 16: word-family derivation has no precise current canonical skill.
 - Question 24: passage organisation has no precise current canonical reading skill.
+- Question 26: a discourse connector does not directly measure subordinate-clause connection.
 - Question 28: cohesive relative-clause rewriting has no precise current canonical skill.
+- Question 30: selecting a paragraph opener does not directly demonstrate coherent essay outlining.
 - Questions 31–35: listening-strategy/text proxies are not listening-performance evidence.
 - Questions 36–40: speaking strategy/language-choice proxies are not speaking-performance evidence.
 
@@ -31,6 +34,10 @@ Learning Foundation state advances safely from version 4 to version 5 and adds g
 The same evidence ID is updated on retake, so attempts and recency change without inflating distinct evidence. The schema admits `BOUNDARY_PROBE` as a future generic evidence type, but Phase 6C neither records nor infers boundary evidence.
 
 No question text, passage, option, selected-answer text, learner-written text, audio, transcript, identity, PII, repair result, retest result, mastery status, or band estimate is stored.
+
+## Evidence identity contract
+
+`ielts-diagnostic-v1` is an evidence-versioned assessment. Manifest `question_set_sha256` (`8885fda5188fe35301cda2ed2bdbeb255c460470b58c6cac544e4b31a9a8455d`) is calculated over `JSON.stringify` of the exact parsed 40-question array before runtime IDs are attached. It binds the reviewed mappings to the V1 category, passage, question, options, answer, explanations, content and order. Persisted evidence IDs must not silently change semantic meaning. A future semantic question-set change normally requires deliberate assessment/evidence version governance rather than reusing V1 IDs; the verifier fails until that contract is reviewed.
 
 ## Completion and legacy behavior
 
@@ -56,6 +63,6 @@ The generic ledger can later store a separately governed `BOUNDARY_PROBE` observ
 
 ## Verification and delivery
 
-Browser QA executed the real 40-answer completion path at 390×844: the result screen and 14 canonical-skill signal cards rendered, only the 24 mapped items were eligible to write evidence, the mobile menu opened without overflow, and the console was clean. A second full retake retained the same 14 observed skill cards while unit/verifier inspection confirmed one bounded record per stable evidence ID with incremented attempts. Explicit CTA activation navigated to the existing SmartPath surface, selected the shared `IELTS` goal, and exposed no précis route. At 1440×900, start, answer feedback and layout passed without overflow or console warnings/errors. Storage-unavailable behavior is covered by the existing and extended Learning Foundation harness: the diagnostic remains functional using the in-memory fallback.
+The original Phase 6C browser QA executed the real 40-answer completion path at 390×844 and 1440×900, including results, retake, explicit IELTS SmartPath activation, menu, overflow and console checks. This governance-only correction changes no learner-facing runtime. Its focused deterministic completion harness confirms 19 eligible evidence records, 21 unmapped questions, 12 rendered skill groups, 19 distinct IDs after a full retake with attempts incremented to two, zero `mistakeSignals`, goal unchanged before explicit activation, shared goal set to `IELTS` after activation, and no précis eligibility. Storage-unavailable behavior remains covered by the Learning Foundation harness.
 
 Required unit, regression, privacy, graph, routing, frozen SEO and diff gates are run before delivery. The final containing commit SHA and clean status are reported in the handoff. Compare/PR URL: `https://github.com/mohammadyeasin420/ovidhan2/compare/main...codex/ielts-diagnostic-evidence-6c`.
