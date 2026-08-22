@@ -58,7 +58,7 @@ function test(name, callback) {
 test('new anonymous learner receives versioned state and random first-party ID', () => {
     const { foundation } = createHarness();
     const state = foundation.getState();
-    assert.equal(state.version, 4);
+    assert.equal(state.version, 5);
     assert.match(state.anonymousLearnerId, /^[0-9a-f-]{36}$/);
     assert.equal(state.progress.learningActions, 0);
 });
@@ -79,7 +79,7 @@ test('corrupted state recovers without breaking initialization', () => {
     const localStorage = createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY, '{not-json');
     const { foundation } = createHarness({ localStorage });
-    assert.equal(foundation.getState().version, 4);
+    assert.equal(foundation.getState().version, 5);
     assert.equal(foundation.getState().progress.learningActions, 0);
 });
 
@@ -93,7 +93,7 @@ test('old foundation schema is normalized without losing identifiers', () => {
     }));
     const { foundation } = createHarness({ localStorage });
     const state = foundation.getState();
-    assert.equal(state.version, 4);
+    assert.equal(state.version, 5);
     assert.equal(state.anonymousLearnerId, '11111111-1111-4111-8111-111111111111');
     assert.deepEqual(state.savedWords, ['language']);
     assert.equal(state.progress.learningActions, 2);
@@ -272,7 +272,7 @@ test('version-2 mistake signals migrate to bounded evidence counters', () => {
     }));
     const { foundation } = createHarness({ localStorage });
     const state = foundation.getState();
-    assert.equal(state.version, 4);
+    assert.equal(state.version, 5);
     assert.equal(state.mistakeSignals['mm-agree-verb'].initialIncorrect, 1);
     assert.equal(state.mistakeSignals['mm-agree-verb'].repairCorrect, 1);
     assert.equal(state.mistakeSignals['mm-agree-verb'].retestCorrect, 1);
@@ -379,6 +379,28 @@ test('unknown persisted legacy goal is preserved but receives safe routing fallb
     const foundation = createLearningFoundation({localStorage});
     assert.equal(foundation.getState().goal, 'legacy-custom-goal');
     assert.equal(foundation.getRoutingGoal(), 'GENERAL_ENGLISH');
+});
+
+test('canonical skill evidence is bounded, validated, and deduplicated by evidence ID', () => {
+    const { foundation } = createHarness();
+    assert.equal(foundation.recordSkillEvidence('ielts-diagnostic-v1:q01','essay_thesis_focus','DIAGNOSTIC_OBJECTIVE','incorrect','ielts-diagnostic-v1'),true);
+    assert.equal(foundation.recordSkillEvidence('ielts-diagnostic-v1:q01','essay_thesis_focus','DIAGNOSTIC_OBJECTIVE','correct','ielts-diagnostic-v1'),true);
+    const state=foundation.getState();
+    assert.equal(Object.keys(state.skillEvidence).length,1);
+    assert.equal(state.skillEvidence['ielts-diagnostic-v1:q01'].attempts,2);
+    assert.equal(state.skillEvidence['ielts-diagnostic-v1:q01'].result,'correct');
+    assert.equal(state.skillEvidence['ielts-diagnostic-v1:q01'].repairResult,undefined);
+    assert.equal(state.skillEvidence['ielts-diagnostic-v1:q01'].retestResult,undefined);
+    assert.equal(state.skillEvidence['ielts-diagnostic-v1:q01'].masteryStatus,undefined);
+    assert.equal(foundation.recordSkillEvidence('bad text','skill','DIAGNOSTIC_OBJECTIVE','incorrect','source'),false);
+});
+
+test('version-4 state migrates without manufacturing diagnostic evidence', () => {
+    const localStorage=createMemoryStorage();
+    localStorage.setItem(constants.STATE_KEY,JSON.stringify({version:4,anonymousLearnerId:'11111111-1111-4111-8111-111111111111',mistakeSignals:{}}));
+    const { foundation }=createHarness({localStorage});
+    assert.equal(foundation.getState().version,5);
+    assert.deepEqual(foundation.getState().skillEvidence,{});
 });
 
 console.log('PASS all learning-foundation tests');

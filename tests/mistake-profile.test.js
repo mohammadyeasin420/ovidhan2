@@ -85,4 +85,15 @@ test('profile schema and analytics vocabulary contain no PII or raw content', ()
     assert.deepEqual(profile.STATUSES,['NEW','NEEDS_PRACTICE','IMPROVING','STABLE','STRONG']);
     assert.deepEqual(profile.CONFIDENCE,['LOW','MEDIUM','HIGH']);
 });
+test('diagnostic evidence is separate and never creates mastery status', () => {
+    const skillId=items[0].micro_skill;
+    const state={mistakeSignals:{},skillEvidence:{
+        'ielts-diagnostic-v1:q01':{skill_id:skillId,evidence_type:'DIAGNOSTIC_OBJECTIVE',result:'incorrect',attempts:1}
+    }};
+    const skill=profile.aggregate(items,state).microSkills.find(entry=>entry.id===skillId);
+    assert.equal(skill.status,'NEW');
+    assert.equal(skill.diagnosticGap,true);
+    assert.deepEqual(skill.diagnosticEvidence,{distinctItems:1,attempts:1,correct:0,incorrect:1});
+    assert.equal(skill.evidence.retestIncorrect,0);
+});
 console.log('PASS all mistake-profile tests');

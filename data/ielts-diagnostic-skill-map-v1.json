@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "assessment_id": "ielts-diagnostic-v1",
+  "question_set_sha256": "8885fda5188fe35301cda2ed2bdbeb255c460470b58c6cac544e4b31a9a8455d",
+  "review_status": "REVIEWED",
+  "practice_type": "OVIDHAN_CREATED_DIAGNOSTIC",
+  "official_question": false,
+  "items": [
+    {
+      "question_id": "ielts-diag-v1-q01",
+      "broad_category": "grammar",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Second conditional is not represented by a current canonical skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q02",
+      "broad_category": "grammar",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Past perfect sequencing is not represented by a current canonical skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q03",
+      "broad_category": "grammar",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "grammatical_number_nouns",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests singular agreement with the grammatical head in 'the number of'.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q04",
+      "broad_category": "grammar",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "subordinate_clause_connection",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests the clause complement required after although versus despite.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q05",
+      "broad_category": "grammar",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Future passive formation is not represented by a current canonical skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q06",
+      "broad_category": "grammar",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "compound_subject_agreement",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests agreement in a neither-nor compound subject.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q07",
+      "broad_category": "grammar",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "gerund_after_preposition",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests a gerund after the preposition in 'look forward to'.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q08",
+      "broad_category": "grammar",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "indefinite_article_a_an",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests a/an selection by initial sound.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q09",
+      "broad_category": "vocabulary",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "fixed_expression",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests the fixed collocation 'consistent with'.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q10",
+      "broad_category": "vocabulary",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "word_choice_register",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests precise lexical choice in context.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q11",
+      "broad_category": "vocabulary",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "word_choice_register",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests formal academic lexical choice.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q12",
+      "broad_category": "vocabulary",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "The current graph has no precise contextual-vocabulary-meaning skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q13",
+      "broad_category": "vocabulary",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "fixed_expression",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests the fixed collocation 'make a decision'.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q14",
+      "broad_category": "vocabulary",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "The current graph has no precise contextual-vocabulary-meaning skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q15",
+      "broad_category": "vocabulary",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "word_choice_register",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests formal versus informal register.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q16",
+      "broad_category": "vocabulary",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Word-family derivation is not represented by a current canonical skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q17",
+      "broad_category": "reading",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "reading_main_idea",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly asks for the passage's main idea.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q18",
+      "broad_category": "reading",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "reading_main_idea",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly asks the learner to identify the passage's central balanced position.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q19",
+      "broad_category": "reading",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "The current graph has no precise contextual-vocabulary-meaning skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q20",
+      "broad_category": "reading",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "reading_supporting_detail",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly asks for a stated chronological detail.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q21",
+      "broad_category": "reading",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "reading_reference",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests reference resolution.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q22",
+      "broad_category": "reading",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "reading_inference",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly asks for a cautious inference from sampling limits.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q23",
+      "broad_category": "reading",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "reading_inference",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly asks for the conclusion supported by evidence.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q24",
+      "broad_category": "reading",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Passage organisation is not represented by a current canonical reading skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q25",
+      "broad_category": "writing",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "essay_thesis_focus",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests a focused thesis with position and reasons.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q26",
+      "broad_category": "writing",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "The discourse connector does not directly test subordinate-clause connection.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q27",
+      "broad_category": "writing",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "word_choice_register",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests formal academic register.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q28",
+      "broad_category": "writing",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Cohesive relative-clause rewriting is not represented by a current canonical skill.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q29",
+      "broad_category": "writing",
+      "mapping_status": "MAPPED_OBJECTIVE",
+      "primary_skill_id": "word_choice_register",
+      "evidence_type": "DIAGNOSTIC_OBJECTIVE",
+      "rationale": "Directly tests cautious academic register.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q30",
+      "broad_category": "writing",
+      "mapping_status": "UNMAPPED_NO_CANONICAL_SKILL",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Choosing one paragraph opener does not directly demonstrate coherent essay outlining.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q31",
+      "broad_category": "listening",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy MCQ does not measure listening performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q32",
+      "broad_category": "listening",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy MCQ does not measure listening performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q33",
+      "broad_category": "listening",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy MCQ does not measure listening performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q34",
+      "broad_category": "listening",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy MCQ does not measure listening performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q35",
+      "broad_category": "listening",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy MCQ does not measure listening performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q36",
+      "broad_category": "speaking",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy/language-choice MCQ does not measure speaking performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q37",
+      "broad_category": "speaking",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy/language-choice MCQ does not measure speaking performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q38",
+      "broad_category": "speaking",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy/language-choice MCQ does not measure speaking performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q39",
+      "broad_category": "speaking",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy/language-choice MCQ does not measure speaking performance.",
+      "review_status": "REVIEWED"
+    },
+    {
+      "question_id": "ielts-diag-v1-q40",
+      "broad_category": "speaking",
+      "mapping_status": "UNMAPPED_PROXY",
+      "primary_skill_id": null,
+      "evidence_type": null,
+      "rationale": "Strategy/language-choice MCQ does not measure speaking performance.",
+      "review_status": "REVIEWED"
+    }
+  ]
+}

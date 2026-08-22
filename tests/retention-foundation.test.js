@@ -80,11 +80,11 @@ scenario('return after improvement remains deterministic', () => {
     assert.notEqual(first.item.id, 'mm-good-at');
 });
 
-scenario('corrupt storage recovers to bounded version-4 retention', () => {
+scenario('corrupt storage recovers to bounded current-version retention', () => {
     const localStorage = createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY, '{broken');
     const learner = create({ localStorage });
-    assert.equal(learner.getState().version, 4);
+    assert.equal(learner.getState().version, 5);
     assert.equal(learner.getRetention().meaningfulActionCount, 0);
 });
 

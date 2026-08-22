@@ -48,6 +48,17 @@ test('direct learner weakness outranks a transfer-only hypothesis', () => {
     const result=run({mistakeSignals:{'mm-much-many':signal({initialIncorrect:2,repairIncorrect:1,retestIncorrect:1,retestResult:'incorrect'})},recentActions:[]});
     assert.equal(result.item_id,'mm-much-many'); assert.notEqual(result.primary_reason,'TRANSFER_RISK');
 });
+test('diagnostic gap is a modest signal below failed retest and unresolved mistake', () => {
+    const gap={'ielts-diagnostic-v1:q01':{skill_id:'indefinite_article_a_an',evidence_type:'DIAGNOSTIC_OBJECTIVE',result:'incorrect',attempts:1}};
+    const diagnostic=run({goal:'IELTS',skillEvidence:gap,mistakeSignals:{},recentActions:[]});
+    const gapCandidate=diagnostic.ranked_diagnostics.find(candidate=>candidate.skill_id==='indefinite_article_a_an');
+    assert.equal(gapCandidate.primary_reason,'DIAGNOSTIC_GAP');
+    assert.equal(gapCandidate.score_breakdown.diagnostic_gap,24);
+    const failed=run({goal:'IELTS',skillEvidence:gap,mistakeSignals:{'mm-listen-to':signal({retestResult:'incorrect',retestIncorrect:1})},recentActions:[]});
+    assert.equal(failed.primary_reason,'FAILED_RETEST');
+    const unresolved=run({goal:'IELTS',skillEvidence:gap,mistakeSignals:{'mm-depend-on':signal({initialResult:'incorrect',initialIncorrect:1})},recentActions:[]});
+    assert.equal(unresolved.primary_reason,'UNRESOLVED_MISTAKE');
+});
 test('a recently practised item receives bounded penalties', () => {
     const base=run({recentActions:[]});
     const repeated=run({recentActions:[{id:'mistake-mirror:'+base.item_id,type:'mistake-mirror',result:'correct',at:'2026-08-21T11:00:00.000Z'}]});
@@ -111,7 +122,7 @@ test('router is bounded and contains no random AI or third-party network depende
     assert.doesNotMatch(source,/Math\.random|openai|fetch\(['"]https?:|XMLHttpRequest/i);
     const result=run({});
     assert.ok(router.REASONS.includes(result.primary_reason));
-    assert.deepEqual(Object.keys(result.score_breakdown),['learner_weakness','review_urgency','goal_relevance','difficulty_fit','prerequisite_readiness','recent_mistake_relevance','curated_transfer_risk','gateway_value','repetition_penalty','recently_practiced_penalty','new_skill']);
+    assert.deepEqual(Object.keys(result.score_breakdown),['learner_weakness','diagnostic_gap','review_urgency','goal_relevance','difficulty_fit','prerequisite_readiness','recent_mistake_relevance','curated_transfer_risk','gateway_value','repetition_penalty','recently_practiced_penalty','new_skill']);
 });
 test('goal selector initializes, persists through learner state, and reroutes immediately', () => {
     let goal='GENERAL_ENGLISH'; let reroutes=0; let changeHandler;
