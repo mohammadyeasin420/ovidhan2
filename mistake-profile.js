@@ -76,6 +76,16 @@
     function aggregate(items, state, graph) {
         graph = graph || activeGraph;
         const signals = state && state.mistakeSignals || {};
+        const canonicalDiagnostic = state && state.skillEvidence && typeof state.skillEvidence === 'object' ? state.skillEvidence : {};
+        function diagnosticFor(skillId) {
+            const entries = Object.values(canonicalDiagnostic).filter(entry => entry && entry.skill_id === skillId && entry.evidence_type === 'DIAGNOSTIC_OBJECTIVE');
+            return {
+                distinctItems: entries.length,
+                attempts: entries.reduce((sum, entry) => sum + count(entry.attempts), 0),
+                correct: entries.filter(entry => entry.result === 'correct').length,
+                incorrect: entries.filter(entry => entry.result === 'incorrect').length
+            };
+        }
         function group(field) {
             const grouped = new Map();
             items.forEach(item => {
@@ -88,7 +98,8 @@
                 const metadata = graph && (field === 'micro_skill'
                     ? graph.skills.find(node => node.id === id)
                     : graph.families.find(node => node.family_id === id));
-                return { id, name_en: metadata && metadata.name_en || id.replace(/[_-]/g, ' '), name_bn: metadata && metadata.name_bn || '', status: statusFor(evidence), confidence: confidenceFor(evidence), evidence, itemIds: entries.map(entry => entry.item.id) };
+                const diagnosticEvidence = field === 'micro_skill' ? diagnosticFor(id) : { distinctItems: 0, attempts: 0, correct: 0, incorrect: 0 };
+                return { id, name_en: metadata && metadata.name_en || id.replace(/[_-]/g, ' '), name_bn: metadata && metadata.name_bn || '', status: statusFor(evidence), confidence: confidenceFor(evidence), evidence, diagnosticEvidence, diagnosticGap: diagnosticEvidence.incorrect > 0, itemIds: entries.map(entry => entry.item.id) };
             }).sort((a, b) => a.id.localeCompare(b.id));
         }
         const microSkills = group('micro_skill');

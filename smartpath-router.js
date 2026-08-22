@@ -12,9 +12,9 @@
     'use strict';
 
     const GOAL_IDS = Object.freeze(['BCS','IELTS','BANK','UNIVERSITY_ADMISSION','GENERAL_ENGLISH','SPOKEN_CAREER']);
-    const REASONS = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','WEAK_SKILL','REVIEW_DUE','GOAL_CORE_SKILL','PREREQUISITE_NEEDED','TRANSFER_RISK','GATEWAY_SKILL','NEW_SKILL','REINFORCEMENT']);
+    const REASONS = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','WEAK_SKILL','DIAGNOSTIC_GAP','REVIEW_DUE','GOAL_CORE_SKILL','PREREQUISITE_NEEDED','TRANSFER_RISK','GATEWAY_SKILL','NEW_SKILL','REINFORCEMENT']);
     const IMPORTANCE_SCORE = Object.freeze({ CORE: 16, SUPPORTING: 9, OPTIONAL: 4 });
-    const REASON_ORDER = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','WEAK_SKILL','PREREQUISITE_NEEDED','REVIEW_DUE','GOAL_CORE_SKILL','GATEWAY_SKILL','TRANSFER_RISK','NEW_SKILL','REINFORCEMENT']);
+    const REASON_ORDER = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','WEAK_SKILL','DIAGNOSTIC_GAP','PREREQUISITE_NEEDED','REVIEW_DUE','GOAL_CORE_SKILL','GATEWAY_SKILL','TRANSFER_RISK','NEW_SKILL','REINFORCEMENT']);
 
     function safeArray(value) { return Array.isArray(value) ? value : []; }
     function safeGoal(value) { return GOAL_IDS.includes(value) ? value : 'GENERAL_ENGLISH'; }
@@ -116,7 +116,7 @@
             const signal = itemId ? signals[itemId] || {} : {};
             const counts = signalCounts(signal);
             const breakdown = {
-                learner_weakness: 0, review_urgency: 0, goal_relevance: 0, difficulty_fit: 0,
+                learner_weakness: 0, diagnostic_gap: 0, review_urgency: 0, goal_relevance: 0, difficulty_fit: 0,
                 prerequisite_readiness: 0, recent_mistake_relevance: 0, curated_transfer_risk: 0,
                 gateway_value: 0, repetition_penalty: 0, recently_practiced_penalty: 0, new_skill: 0
             };
@@ -131,6 +131,7 @@
 
             if (evidence && evidence.status === 'NEEDS_PRACTICE') { breakdown.learner_weakness = 35; reasons.push('WEAK_SKILL'); }
             else if (evidence && evidence.status === 'IMPROVING') { breakdown.learner_weakness = 16; reasons.push('REINFORCEMENT'); }
+            if (evidence && evidence.diagnosticGap) { breakdown.diagnostic_gap = 24; reasons.push('DIAGNOSTIC_GAP'); }
 
             if (signal.initialResult === 'incorrect' || signal.repairResult === 'incorrect' || counts.retestIncorrect) {
                 breakdown.recent_mistake_relevance = 18;
@@ -204,6 +205,7 @@
             FAILED_RETEST: 'আগের retest-এ ভুল হওয়ায় এই skill-টি এখন আবার দেখা সবচেয়ে জরুরি।',
             UNRESOLVED_MISTAKE: 'এই skill-এ একটি ভুল এখনও পুরোপুরি resolve হয়নি।',
             WEAK_SKILL: 'আপনার সাম্প্রতিক evidence এই skill-এ আরও অনুশীলনের প্রয়োজন দেখায়।',
+            DIAGNOSTIC_GAP: 'Diagnostic signal অনুযায়ী এই skill-টি practice করে যাচাই করা উপযোগী।',
             REVIEW_DUE: 'আগের evidence-এর পর সময় কেটেছে, তাই এখন সংক্ষিপ্ত review উপযোগী।',
             GOAL_CORE_SKILL: 'এটি আপনার নির্বাচিত goal-এর একটি reviewed core skill।',
             PREREQUISITE_NEEDED: 'পরের skill-এ যাওয়ার আগে এই ভিত্তিটি শক্ত করা দরকার।',

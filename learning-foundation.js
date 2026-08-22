@@ -16,13 +16,15 @@
 
     const STATE_KEY = 'ovidhan_learning_v1';
     const SESSION_KEY = 'ovidhan_learning_session_v1';
-    const STATE_VERSION = 4;
+    const STATE_VERSION = 5;
     const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
     const MAX_IDENTIFIER_ITEMS = 250;
     const MAX_RECENT_ACTIONS = 50;
     const MAX_DEBUG_EVENTS = 100;
     const MAX_LEARNING_DAYS = 90;
     const MAX_RETENTION_COUNT = 9999;
+    const MAX_SKILL_EVIDENCE = 250;
+    const SKILL_EVIDENCE_TYPES = Object.freeze(['DIAGNOSTIC_OBJECTIVE', 'BOUNDARY_PROBE']);
     const GOAL_IDS = Object.freeze(['BCS', 'IELTS', 'BANK', 'UNIVERSITY_ADMISSION', 'GENERAL_ENGLISH', 'SPOKEN_CAREER']);
 
     const EVENT_PROPERTIES = Object.freeze({
@@ -167,6 +169,7 @@
             savedWords: [],
             mistakes: [],
             mistakeSignals: {},
+            skillEvidence: {},
             recentActions: [],
             retention: {
                 firstSeenAt: nowIso,
@@ -268,6 +271,24 @@
                     repairIncorrect: boundedCount(signal.repairIncorrect, signal.repairResult === 'incorrect'),
                     retestCorrect: boundedCount(signal.retestCorrect, signal.retestResult === 'correct'),
                     retestIncorrect: boundedCount(signal.retestIncorrect, signal.retestResult === 'incorrect')
+                };
+            });
+        }
+        if (source.skillEvidence && typeof source.skillEvidence === 'object' && !Array.isArray(source.skillEvidence)) {
+            Object.keys(source.skillEvidence).slice(-MAX_SKILL_EVIDENCE).forEach(evidenceId => {
+                if (!/^[a-z0-9:_-]{1,100}$/.test(evidenceId)) return;
+                const entry = source.skillEvidence[evidenceId] || {};
+                if (!/^[a-z0-9_-]{1,100}$/.test(entry.skill_id || '') || !SKILL_EVIDENCE_TYPES.includes(entry.evidence_type) ||
+                    !/^[a-z0-9:_-]{1,100}$/.test(entry.source_id || '') || !['correct', 'incorrect'].includes(entry.result)) return;
+                state.skillEvidence[evidenceId] = {
+                    evidence_id: evidenceId,
+                    skill_id: entry.skill_id,
+                    evidence_type: entry.evidence_type,
+                    source_id: entry.source_id,
+                    result: entry.result,
+                    first_seen_at: validIso(entry.first_seen_at) || nowIso,
+                    last_seen_at: validIso(entry.last_seen_at) || nowIso,
+                    attempts: Math.max(1, Math.min(99, Math.floor(Number(entry.attempts) || 1)))
                 };
             });
         }
@@ -602,6 +623,28 @@
             return true;
         }
 
+        function recordSkillEvidence(evidenceId, skillId, evidenceType, result, sourceId) {
+            if (!/^[a-z0-9:_-]{1,100}$/.test(evidenceId || '') || !/^[a-z0-9_-]{1,100}$/.test(skillId || '') ||
+                !SKILL_EVIDENCE_TYPES.includes(evidenceType) || !['correct', 'incorrect'].includes(result) ||
+                !/^[a-z0-9:_-]{1,100}$/.test(sourceId || '')) return false;
+            const timestamp = now().toISOString();
+            const previous = learnerState.skillEvidence[evidenceId];
+            learnerState.skillEvidence[evidenceId] = {
+                evidence_id: evidenceId,
+                skill_id: skillId,
+                evidence_type: evidenceType,
+                source_id: sourceId,
+                result,
+                first_seen_at: previous && previous.first_seen_at || timestamp,
+                last_seen_at: timestamp,
+                attempts: Math.min(99, (previous && Number(previous.attempts) || 0) + 1)
+            };
+            const keys = Object.keys(learnerState.skillEvidence);
+            if (keys.length > MAX_SKILL_EVIDENCE) delete learnerState.skillEvidence[keys[0]];
+            saveState(learnerState);
+            return true;
+        }
+
         function setGoal(goal) {
             if (goal === null || goal === '') learnerState.goal = null;
             else if (GOAL_IDS.includes(goal)) learnerState.goal = goal;
@@ -757,6 +800,7 @@
             saveWord,
             saveMistake,
             recordMistakeSignal,
+            recordSkillEvidence,
             setGoal,
             getRoutingGoal,
             reset,
@@ -788,6 +832,8 @@
             SESSION_TIMEOUT_MS,
             GOAL_IDS
             ,MAX_LEARNING_DAYS
+            ,MAX_SKILL_EVIDENCE
+            ,SKILL_EVIDENCE_TYPES
             ,MAX_RETENTION_COUNT
         })
     };
