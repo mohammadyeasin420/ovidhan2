@@ -176,12 +176,18 @@
         return { item: winner.item, reason_code: winner.item.mistake_family === current.mistake_family ? 'same-family-repair' : 'next-reviewed-item', score_band: winner.score >= 50 ? 'high' : 'medium', priority_band: winner.score >= 50 ? 'MEDIUM' : 'LOW' };
     }
 
+    function initialItemFor(host, location) {
+        const deepLinkedId = location && String(location.hash || '').slice(1);
+        const configuredDefaultId = host && host.dataset ? String(host.dataset.defaultItem || '') : '';
+        return items.find(candidate => candidate.id === deepLinkedId) ||
+            items.find(candidate => candidate.id === configuredDefaultId) ||
+            items[0];
+    }
     function mount(win) {
         const doc = win.document;
         const host = doc.getElementById('mistakeMirror');
         if (!host) return;
-        const deepLinkedId = win.location && String(win.location.hash || '').slice(1);
-        let item = items.find(candidate => candidate.id === deepLinkedId) || items[0];
+        let item = initialItemFor(host, win.location);
         let stage = 'initial';
         let initialResult = null;
         let completed = false;
@@ -333,5 +339,5 @@
             return items;
         });
     }
-    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, normalizeWrittenPack, addWrittenPack, normalizeCoherencePack, addCoherencePack, loadReviewedPack, mount });
+    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, normalizeWrittenPack, addWrittenPack, normalizeCoherencePack, addCoherencePack, initialItemFor, loadReviewedPack, mount });
 });

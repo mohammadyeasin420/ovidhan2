@@ -10,6 +10,7 @@ const requirements = require('../data/ielts-goal-requirement-map-v1.json');
 const destinations = require('../smartpath-destinations.json');
 const mirror = require('../mistake-mirror.js');
 const frozen = require('../reports/ovidhan-learning-foundation-3b-frozen-hashes.json');
+const page = fs.readFileSync(path.join(__dirname,'..','ielts-writing-coherence-cohesion-bangla.html'),'utf8');
 const ids = Array.from({length:40},(_,i)=>`ielts-coherence-${String(i+1).padStart(3,'0')}`);
 const focus = new Set(['logical_sequence','contrast_relation','cause_effect_relation','addition_relation','example_relation','topic_support_alignment','paragraph_unity','reference_clarity','repetition_control','connector_overuse','cohesion_repair']);
 assert.equal(pack.items.length,40); assert.equal(new Set(pack.items.map(x=>x.id)).size,40); assert.deepEqual(pack.items.map(x=>x.id),ids);
@@ -20,8 +21,16 @@ const ielts=goals.mappings.filter(x=>x.goal_id==='IELTS');assert.equal(ielts.fin
 for(const id of ['writing_academic_coherence_cohesion','writing_gt_coherence_cohesion']){const r=requirements.mapped_relations.find(x=>x.requirement_id===id&&x.skill_id===skill.id);assert.ok(r);assert.deepEqual([r.coverage_status,r.diagnostic_evidence,r.boundary_evidence],['EVIDENCE_GAP',false,false]);}
 assert.ok(destinations.destinations.some(x=>x.skill_id===skill.id&&x.goal_ids.includes('IELTS')));assert.ok(!destinations.destinations.find(x=>x.skill_id==='writing_precis').goal_ids.includes('IELTS'));
 const baseCount=mirror.items.length;mirror.addCoherencePack(pack);assert.equal(mirror.items.length,baseCount+40);assert.equal(mirror.items.filter(x=>x.micro_skill===skill.id).length,40);
+const configuredHost={dataset:{defaultItem:'ielts-coherence-001'}};
+assert.equal(mirror.initialItemFor(configuredHost,{hash:''}).id,'ielts-coherence-001');
+assert.equal(mirror.initialItemFor({dataset:{}},{hash:''}).id,'mm-agree-verb');
+assert.equal(mirror.initialItemFor(configuredHost,{hash:'#ielts-coherence-012'}).id,'ielts-coherence-012');
+assert.match(page,/id="mistakeMirror"[^>]*data-default-item="ielts-coherence-001"/);
+assert.match(page,/class="btn" href="#practice"/);assert.doesNotMatch(page,/ovidhan:start-mistake/);
+assert.match(page,/class="mega-menu" id="megaMenu"/);assert.ok((page.match(/class="dropdown"/g)||[]).length>=10);assert.match(page,/e\.key==='Escape'/);assert.match(page,/aria-expanded="false"/);
+assert.doesNotMatch(JSON.stringify(pack),/28%/);assert.equal(pack.items.find(x=>x.id==='ielts-coherence-012').correct_answer,'After evening hours were added, visits by employed students increased substantially.');
 mirror.addReviewedPack(require('../data/bcs-smartpath-practice-v1.json'));mirror.addLiteraturePack(require('../data/bcs-literature-smartpath-v1.json'));mirror.addWrittenPack(require('../data/bcs-written-smartpath-v1.json'));assert.equal(mirror.items.filter(x=>/^bcs-|^mm-/.test(x.id)).length,240);
 const current=mirror.items.find(x=>x.id==='mm-agree-verb');assert.ok(!mirror.chooseNext(current,{goal:'GENERAL_ENGLISH',mistakeSignals:{}}).item.id.startsWith('ielts-coherence-'));
 const forbidden=/learner_text|raw_answer|writing_submission|email|phone/i;mirror.items.filter(x=>x.id.startsWith('ielts-coherence-')).forEach(item=>Object.keys(item).forEach(key=>assert.doesNotMatch(key,forbidden)));
 const root=path.join(__dirname,'..');for(const item of [...frozen.pages,...frozen.guards])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,item.path))).digest('hex'),item.sha256);assert.equal(frozen.aggregateSha256,'202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
-console.log(JSON.stringify({status:'PASS',tests:20,items:40,difficulty},null,2));
+console.log(JSON.stringify({status:'PASS',tests:31,items:40,difficulty},null,2));

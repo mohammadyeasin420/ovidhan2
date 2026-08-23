@@ -25,7 +25,7 @@ The official IELTS Writing Coherence and Cohesion criterion maps directly to `wr
 | ielts-coherence-009 | logical sequence | A | REVIEWED | Finding → action → evaluation. |
 | ielts-coherence-010 | contrast relation | A | REVIEWED | Cost concession precedes possible saving. |
 | ielts-coherence-011 | cohesion repair | A | REVIEWED | Preserves access benefit and laboratory limitation. |
-| ielts-coherence-012 | topic/support | A | REVIEWED | Evidence matches policy, group and outcome. |
+| ielts-coherence-012 | topic/support | A | REVIEWED | Qualitative hypothetical evidence matches policy, group and outcome; no invented precise statistic. |
 | ielts-coherence-013 | reference clarity | A | REVIEWED | Rewritten context fixes intended referents; direct speech removes both pronoun ambiguities. |
 | ielts-coherence-014 | reference clarity | A | REVIEWED | Uses two plural groups; only naming nurses preserves the intended referent. |
 | ielts-coherence-015 | repetition control | A | REVIEWED | Shared subject combines two outcomes. |
@@ -59,7 +59,7 @@ Material editorial repair IDs: `001`, `013`, `014`, `016`, `023`, `024`, `025`, 
 
 ## Runtime and privacy
 
-Mistake Mirror adds `normalizeCoherencePack` and `addCoherencePack`, fetches the same-origin static JSON in `loadReviewedPack`, and renders bounded English/Bangla context for multiple-choice items. Existing BCS normalizers and loaders remain intact. Items are IELTS-only for goal filtering. No new storage key or free-text input exists; generic objective loop outcomes are not exposed as productive Writing evidence.
+Mistake Mirror adds `normalizeCoherencePack` and `addCoherencePack`, fetches the same-origin static JSON in `loadReviewedPack`, and renders bounded English/Bangla context for multiple-choice items. Its reusable page-configured default selects a valid URL deep link first, then a valid `data-default-item`, then the legacy first-item fallback. The coherence page therefore opens on item 001 after pack loading without an early custom-event race. Existing BCS normalizers and loaders remain intact. Items are IELTS-only for goal filtering. No new storage key or free-text input exists; generic objective loop outcomes are not exposed as productive Writing evidence.
 
 ## Learner page QA
 
