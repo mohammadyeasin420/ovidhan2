@@ -123,6 +123,13 @@
       "source_or_rationale": "Supports organisation relevant to Writing Coherence and Cohesion, without claiming complete criterion coverage."
     },
     {
+      "goal_id": "IELTS",
+      "skill_id": "writing_coherence_cohesion",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Directly aligns with the official IELTS Writing Coherence and Cohesion assessment criterion; current practice is objective and does not establish productive-writing performance."
+    },
+    {
       "goal_id": "BANK",
       "skill_id": "indefinite_article_a_an",
       "importance": "CORE",

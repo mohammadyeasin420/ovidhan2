@@ -47,8 +47,8 @@ assert.equal(new Set(literaturePack.items.map(item => item.question.trim())).siz
 
 assert.equal(graph.graph_version, 3);
 assert.equal(graph.families.length, 14);
-assert.equal(graph.skills.length, 65);
-assert.equal(graph.skills.filter(skill => skill.status === 'ACTIVE').length, 65);
+assert.equal(graph.skills.length, 66);
+assert.equal(graph.skills.filter(skill => skill.status === 'ACTIVE').length, 66);
 assert.equal(graph.skills.filter(skill => skill.status === 'PLANNED').length, 0);
 const family = graph.families.find(entry => entry.family_id === 'LITERATURE');
 assert.ok(family);
@@ -59,8 +59,8 @@ assert.deepEqual(new Set(graphLiteratureSkills.map(skill => skill.id)), literatu
 assert.ok(graphLiteratureSkills.every(skill => skill.status === 'ACTIVE'));
 graphLiteratureSkills.forEach(skill => skill.example_item_ids.forEach(id => assert.equal(literaturePack.items.find(item => item.candidate_id === id).skill_id, skill.id)));
 assert.equal(graph.skills.filter(skill => /^bcs_/.test(skill.id) && /liter|author|quotation|genre/.test(skill.id)).length, 0);
-assert.equal(graph.item_mappings.length, 240);
-assert.equal(new Set(graph.item_mappings.map(mapping => mapping.item_id)).size, 240);
+assert.equal(graph.item_mappings.length, 280);
+assert.equal(new Set(graph.item_mappings.map(mapping => mapping.item_id)).size, 280);
 assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('mm-')).length, 30);
 assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('bcs-smartpath-')).length, 70);
 assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('bcs-lit-candidate-')).length, 80);
@@ -122,4 +122,4 @@ assert.equal((read('mistake-mirror.js').match(/\/data\/bcs-smartpath-practice-v1
 assert.doesNotMatch([read('mistake-mirror.js'),read('mistake-profile.js')].join('\n'), /literature_(state|profile)|bcs_literature_(state|profile)/i);
 assert.doesNotMatch(read('smartpath-router.js'), /Math\.random|fetch\(['"]https?:|XMLHttpRequest|api\.openai|openai\.com/i);
 
-console.log(JSON.stringify({status:'PASS',literatureItems:80,counts,practiceItems:mirror.items.length,graph:{families:14,skills:65,active:65,planned:0,itemMappings:240},goals:goals.goal_ids.length,literatureGoalMappings:literatureGoalMappings.length}, null, 2));
+console.log(JSON.stringify({status:'PASS',literatureItems:80,counts,practiceItems:mirror.items.length,graph:{families:14,skills:66,active:66,planned:0,itemMappings:280},goals:goals.goal_ids.length,literatureGoalMappings:literatureGoalMappings.length}, null, 2));
