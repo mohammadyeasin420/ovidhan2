@@ -41,5 +41,5 @@ assert.ok(asset.sources.every(source => source.access_date === '2026-08-23'));
 assert.ok(asset.sources.every(source => approvedSourceUrls.has(source.url)));
 assert.equal(new Set(asset.sources.map(source => source.url)).size, asset.sources.length);
 assert.ok(asset.requirements.every(requirement => requirement.source_ids.length && requirement.source_ids.every(id => sources.has(id))));
-assert.deepEqual([graph.families.length, active.size, graph.item_mappings.length], [14, 67, 320]);
+assert.deepEqual([graph.families.length, active.size, graph.item_mappings.length], [14, 67, 360]);
 console.log(JSON.stringify({status:'PASS', tests:13, requirements:asset.requirements.length, mappings:asset.mapped_relations.length, unmapped:asset.unmapped_requirements.length}, null, 2));

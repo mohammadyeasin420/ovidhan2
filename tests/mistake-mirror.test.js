@@ -16,11 +16,11 @@ test('reviewed BCS-style pack extends the same engine to 100 items', () => {
     assert.equal(new Set(items.map(item => item.id)).size, 100);
     assert.equal(items.filter(item => item.practice_type === 'OVIDHAN_CREATED_BCS_STYLE').length, 70);
 });
-test('reviewed Literature pack extends the same engine to 180 items', () => {
+test('reviewed Literature pack extends the same engine to 220 items', () => {
     addLiteraturePack(literaturePack);
-    assert.equal(items.length, 180);
-    assert.equal(new Set(items.map(item => item.id)).size, 180);
-    assert.equal(items.filter(item => item.category === 'literature').length, 80);
+    assert.equal(items.length, 220);
+    assert.equal(new Set(items.map(item => item.id)).size, 220);
+    assert.equal(items.filter(item => item.category === 'literature').length, 120);
 });
 test('every item has the required editorial schema and safe stable IDs', () => {
     const fields = ['id','correct','category','micro_skill','mistake_family','explanation_bn','explanation_en','difficulty','source_status'];

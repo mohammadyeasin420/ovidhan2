@@ -1,13 +1,13 @@
 {
   "pack_id": "bcs-literature-smartpath-v1",
-  "version": 1,
+  "version": 2,
   "review_status": "REVIEWED",
   "counts": {
-    "total": 80,
-    "period": 15,
-    "author_work": 35,
-    "quotation": 20,
-    "genre_form": 10
+    "total": 120,
+    "period": 20,
+    "author_work": 50,
+    "quotation": 30,
+    "genre_form": 20
   },
   "items": [
     {
@@ -191,6 +191,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-005",
+      "skill_id": "literary_period_identification",
+      "topic_tags": [
+        "RENAISSANCE",
+        "PERIOD"
+      ],
+      "period": "Renaissance",
+      "difficulty": "BEGINNER",
+      "question": "The Renaissance period in England is associated with which royal dynasty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tudor"
+        },
+        {
+          "id": "B",
+          "text": "Stuart"
+        },
+        {
+          "id": "C",
+          "text": "Hanover"
+        },
+        {
+          "id": "D",
+          "text": "Norman"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Tudor",
+      "explanation_bn": "ইংল্যান্ডে রেনেসাঁ (Renaissance) টিউডর রাজবংশের (Tudor) সময়ে বিকাশ লাভ করে।",
+      "learning_note_en": "The English Renaissance flourished under the Tudor dynasty.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "English Renaissance",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/art/English-Renaissance",
+          "supports": "Dynastic association"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-006",
       "skill_id": "literary_period_identification",
       "topic_tags": [
@@ -326,6 +371,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-009",
+      "skill_id": "literary_period_identification",
+      "topic_tags": [
+        "VICTORIAN",
+        "PERIOD"
+      ],
+      "period": "Victorian",
+      "difficulty": "INTERMEDIATE",
+      "question": "The Victorian Period is often called the great age of which literary form?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drama"
+        },
+        {
+          "id": "B",
+          "text": "Poetry"
+        },
+        {
+          "id": "C",
+          "text": "The Novel"
+        },
+        {
+          "id": "D",
+          "text": "Essay"
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "The Novel",
+      "explanation_bn": "ভিক্টোরিয়ান যুগকে ইংরেজি উপন্যাসের স্বর্ণযুগ (Great Age of the English Novel) বলা হয়।",
+      "learning_note_en": "The Victorian Period is considered the great age of the English novel.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Victorian literature",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/art/Victorian-literature",
+          "supports": "Novel as dominant form"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-010",
       "skill_id": "literary_period_identification",
       "topic_tags": [
@@ -409,6 +499,51 @@
           "publisher_or_institution": "Encyclopædia Britannica",
           "url": "https://www.britannica.com/art/stream-of-consciousness",
           "supports": "Modernist technique"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-012",
+      "skill_id": "literary_period_identification",
+      "topic_tags": [
+        "POSTMODERN",
+        "PERIOD"
+      ],
+      "period": "Postmodern",
+      "difficulty": "ADVANCED",
+      "question": "Postmodern literature is generally considered to have emerged after which major period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Renaissance"
+        },
+        {
+          "id": "B",
+          "text": "The Victorian Period"
+        },
+        {
+          "id": "C",
+          "text": "Modernism"
+        },
+        {
+          "id": "D",
+          "text": "The Romantic Period"
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Modernism",
+      "explanation_bn": "উত্তর-আধুনিক সাহিত্য (Postmodern literature) আধুনিকতাবাদের (Modernism) পরবর্তী পর্যায়ে বিকশিত হয়।",
+      "learning_note_en": "Postmodern literature emerged after Modernism.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Postmodern literature",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/art/postmodernism-literature",
+          "supports": "Emergence after Modernism"
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -580,14 +715,59 @@
       ],
       "correct_option": "C",
       "correct_answer": "Edward VII",
-      "explanation_bn": "এডওয়ার্ডিয়ান যুগ (Edwardian Period) রাজা সপ্তম এডওয়ার্ডের (Edward VII) নামে নামকরণ করা হয়েছে; তাঁর শাসনকাল ছিল 1901–1910।",
-      "learning_note_en": "The Edwardian Period is named after King Edward VII, who reigned from 1901 to 1910.",
+      "explanation_bn": "এডওয়ার্ডিয়ান যুগ (Edwardian Period) রাজা সপ্তম এডওয়ার্ডের (Edward VII, 1901–1910) শাসনামলকে বোঝায়।",
+      "learning_note_en": "The Edwardian Period is named after King Edward VII (1901–1910).",
       "source_refs": [
         {
           "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
           "title": "Edwardian literature",
           "publisher_or_institution": "Encyclopædia Britannica",
           "url": "https://www.britannica.com/art/Edwardian-literature",
+          "supports": "Period definition"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-017",
+      "skill_id": "literary_period_identification",
+      "topic_tags": [
+        "GEORGIAN",
+        "PERIOD"
+      ],
+      "period": "Georgian",
+      "difficulty": "ADVANCED",
+      "question": "The Georgian Period in English literature refers to the reigns of which kings?",
+      "options": [
+        {
+          "id": "A",
+          "text": "George I to George IV"
+        },
+        {
+          "id": "B",
+          "text": "George III to George V"
+        },
+        {
+          "id": "C",
+          "text": "George I to George III"
+        },
+        {
+          "id": "D",
+          "text": "George IV to George VI"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "George I to George IV",
+      "explanation_bn": "জর্জিয়ান যুগ (Georgian Period) সাধারণত ১৭১৪ থেকে ১৮৩০ সাল পর্যন্ত রাজা প্রথম জর্জ থেকে চতুর্থ জর্জের রাজত্বকালকে বোঝায়।",
+      "learning_note_en": "The Georgian Period typically covers 1714–1830, from George I to George IV.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Georgian literature",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/art/Georgian-literature",
           "supports": "Period definition"
         }
       ],
@@ -687,6 +867,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-020",
+      "skill_id": "literary_period_identification",
+      "topic_tags": [
+        "POSTMODERN",
+        "PERIOD"
+      ],
+      "period": "Postmodern",
+      "difficulty": "ADVANCED",
+      "question": "Which of the following is a characteristic of postmodern literature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Linear narrative"
+        },
+        {
+          "id": "B",
+          "text": "Metafiction and self-reference"
+        },
+        {
+          "id": "C",
+          "text": "Romantic idealism"
+        },
+        {
+          "id": "D",
+          "text": "Victorian moralising"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Metafiction and self-reference",
+      "explanation_bn": "উত্তর-আধুনিক সাহিত্য (Postmodern) মেটাফিকশন (metafiction) এবং আত্ম-প্রসঙ্গের জন্য পরিচিত।",
+      "learning_note_en": "Postmodern literature often uses metafiction and self-reference.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Postmodern literature",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/art/postmodernism-literature",
+          "supports": "Characteristics"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-021",
       "skill_id": "author_work_attribution",
       "topic_tags": [
@@ -725,6 +950,51 @@
           "publisher_or_institution": "Folger Shakespeare Library",
           "url": "https://www.folger.edu/explore/shakespeares-works/hamlet/",
           "supports": "Attribution to Shakespeare"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-022",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "SHAKESPEARE",
+        "DRAMA"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "BEGINNER",
+      "question": "Which Shakespeare play features the character Hamlet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Macbeth"
+        },
+        {
+          "id": "B",
+          "text": "Hamlet"
+        },
+        {
+          "id": "C",
+          "text": "Othello"
+        },
+        {
+          "id": "D",
+          "text": "King Lear"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Hamlet",
+      "explanation_bn": "হ্যামলেট (Hamlet) শেক্সপিয়রের ট্র্যাজেডি নাটকের প্রধান চরিত্র।",
+      "learning_note_en": "Hamlet is the title character of Shakespeare's play.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Hamlet",
+          "publisher_or_institution": "Folger Shakespeare Library",
+          "url": "https://www.folger.edu/explore/shakespeares-works/hamlet/",
+          "supports": "Character attribution"
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -777,6 +1047,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-024",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "SHAKESPEARE",
+        "DRAMA"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "BEGINNER",
+      "question": "Which of the following is a comedy by William Shakespeare?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hamlet"
+        },
+        {
+          "id": "B",
+          "text": "Macbeth"
+        },
+        {
+          "id": "C",
+          "text": "A Midsummer Night's Dream"
+        },
+        {
+          "id": "D",
+          "text": "King Lear"
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "A Midsummer Night's Dream",
+      "explanation_bn": "'এ মিডসামার নাইটস ড্রিম' (A Midsummer Night's Dream) শেক্সপিয়রের কমেডি নাটক।",
+      "learning_note_en": "A Midsummer Night's Dream is one of Shakespeare's comedies.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "A Midsummer Night's Dream",
+          "publisher_or_institution": "Folger Shakespeare Library",
+          "url": "https://www.folger.edu/explore/shakespeares-works/a-midsummer-nights-dream/",
+          "supports": "Comedy classification"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-025",
       "skill_id": "author_work_attribution",
       "topic_tags": [
@@ -815,6 +1130,51 @@
           "publisher_or_institution": "Folger Shakespeare Library",
           "url": "https://www.folger.edu/explore/shakespeares-works/romeo-and-juliet/",
           "supports": "Attribution to Shakespeare"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-026",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "SHAKESPEARE",
+        "DRAMA"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "INTERMEDIATE",
+      "question": "Which Shakespeare play is set in Venice and features the character Shylock?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Othello"
+        },
+        {
+          "id": "B",
+          "text": "The Merchant of Venice"
+        },
+        {
+          "id": "C",
+          "text": "The Tempest"
+        },
+        {
+          "id": "D",
+          "text": "Twelfth Night"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "The Merchant of Venice",
+      "explanation_bn": "'দ্যা মার্চেন্ট অফ ভেনিস' (The Merchant of Venice) শেক্সপিয়রের নাটক, যার চরিত্র শাইলক (Shylock) একজন ইহুদি ঋণদাতা।",
+      "learning_note_en": "The Merchant of Venice features the character Shylock.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "The Merchant of Venice",
+          "publisher_or_institution": "Folger Shakespeare Library",
+          "url": "https://www.folger.edu/explore/shakespeares-works/the-merchant-of-venice/",
+          "supports": "Setting and characters"
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -1182,6 +1542,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-035",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "KEATS",
+        "QUOTATION"
+      ],
+      "period": "Romantic",
+      "difficulty": "INTERMEDIATE",
+      "question": "\"Beauty is truth, truth beauty\" – this line is from which poem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ode to a Nightingale"
+        },
+        {
+          "id": "B",
+          "text": "Ode on a Grecian Urn"
+        },
+        {
+          "id": "C",
+          "text": "Endymion"
+        },
+        {
+          "id": "D",
+          "text": "Hyperion"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Ode on a Grecian Urn",
+      "explanation_bn": "\"Beauty is truth, truth beauty\" – এই লাইনটি জন কিটসের 'Ode on a Grecian Urn' কবিতা থেকে।",
+      "learning_note_en": "This famous line is from Keats's 'Ode on a Grecian Urn'.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "Ode on a Grecian Urn",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-036",
       "skill_id": "author_work_attribution",
       "topic_tags": [
@@ -1211,8 +1616,8 @@
       ],
       "correct_option": "C",
       "correct_answer": "Lord Byron",
-      "explanation_bn": "'চাইল্ড হ্যারল্ডস পিলগ্রিমেজ' (Childe Harold's Pilgrimage) লর্ড বায়রনের (Lord Byron) একটি দীর্ঘ narrative poem; এতে তাঁর ভ্রমণ-অভিজ্ঞতার প্রভাব রয়েছে।",
-      "learning_note_en": "Childe Harold's Pilgrimage is a long narrative poem by Lord Byron, with elements influenced by his travels.",
+      "explanation_bn": "'চাইল্ড হ্যারল্ডস পিলগ্রিমেজ' (Childe Harold's Pilgrimage) লর্ড বায়রনের আত্মজীবনীমূলক কাব্য।",
+      "learning_note_en": "Childe Harold's Pilgrimage is a poem by Lord Byron.",
       "source_refs": [
         {
           "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
@@ -1310,6 +1715,51 @@
           "publisher_or_institution": "Encyclopædia Britannica",
           "url": "https://www.britannica.com/topic/Great-Expectations",
           "supports": "Attribution to Dickens"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-039",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "SHAKESPEARE",
+        "QUOTATION"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "INTERMEDIATE",
+      "question": "\"Brevity is the soul of wit\" – from which Shakespeare play is this quote?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hamlet"
+        },
+        {
+          "id": "B",
+          "text": "Macbeth"
+        },
+        {
+          "id": "C",
+          "text": "King Lear"
+        },
+        {
+          "id": "D",
+          "text": "Othello"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Hamlet",
+      "explanation_bn": "\"Brevity is the soul of wit\" – এই উক্তিটি শেক্সপিয়রের 'হ্যামলেট' (Hamlet) নাটকের।",
+      "learning_note_en": "This quote is from Shakespeare's Hamlet, Act 2, Scene 2.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "Hamlet, Act 2, Scene 2",
+          "publisher_or_institution": "Folger Shakespeare Library",
+          "url": "https://www.folger.edu/explore/shakespeares-works/hamlet/read/2/2/",
+          "supports": "Quote attribution"
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -1497,6 +1947,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-044",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "YEATS",
+        "QUOTATION"
+      ],
+      "period": "Modern",
+      "difficulty": "INTERMEDIATE",
+      "question": "\"A terrible beauty is born\" – from which poem is this line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Easter 1916"
+        },
+        {
+          "id": "B",
+          "text": "The Second Coming"
+        },
+        {
+          "id": "C",
+          "text": "Sailing to Byzantium"
+        },
+        {
+          "id": "D",
+          "text": "The Lake Isle of Innisfree"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Easter 1916",
+      "explanation_bn": "\"A terrible beauty is born\" – এই লাইনটি ডব্লিউ.বি. ইয়েটসের 'Easter 1916' কবিতা থেকে।",
+      "learning_note_en": "This line is from Yeats's 'Easter 1916'.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "Easter 1916",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/43289/easter-1916",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-045",
       "skill_id": "author_work_attribution",
       "topic_tags": [
@@ -1580,6 +2075,96 @@
           "publisher_or_institution": "Poetry Foundation",
           "url": "https://www.poetryfoundation.org/poems/43768/my-last-duchess",
           "supports": "Attribution to Browning"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-047",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "TENNYSON",
+        "QUOTATION"
+      ],
+      "period": "Victorian",
+      "difficulty": "INTERMEDIATE",
+      "question": "\"To strive, to seek, to find, and not to yield\" – from which poem is this line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ulysses"
+        },
+        {
+          "id": "B",
+          "text": "The Lady of Shalott"
+        },
+        {
+          "id": "C",
+          "text": "In Memoriam"
+        },
+        {
+          "id": "D",
+          "text": "The Charge of the Light Brigade"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Ulysses",
+      "explanation_bn": "\"To strive, to seek, to find, and not to yield\" – এই লাইনটি টেনিসনের 'Ulysses' কবিতা থেকে।",
+      "learning_note_en": "This line is from Tennyson's 'Ulysses'.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "Ulysses",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/45339/ulysses",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-048",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "SHAKESPEARE",
+        "QUOTATION"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "BEGINNER",
+      "question": "\"To be, or not to be: that is the question\" — from which play is this quote?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Macbeth"
+        },
+        {
+          "id": "B",
+          "text": "Hamlet"
+        },
+        {
+          "id": "C",
+          "text": "King Lear"
+        },
+        {
+          "id": "D",
+          "text": "Othello"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Hamlet",
+      "explanation_bn": "\"To be, or not to be\" — এই উক্তিটি শেক্সপিয়রের 'হ্যামলেট' (Hamlet) নাটকের।",
+      "learning_note_en": "This soliloquy is from Shakespeare's Hamlet.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "Hamlet, Act 3, Scene 1",
+          "publisher_or_institution": "Folger Shakespeare Library",
+          "url": "https://www.folger.edu/explore/shakespeares-works/hamlet/read/3/1/",
+          "supports": "Quote attribution"
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -1992,6 +2577,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-058",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "ISHIGURO",
+        "NOVEL"
+      ],
+      "period": "21st Century",
+      "difficulty": "ADVANCED",
+      "question": "Who wrote the novel 'Never Let Me Go'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kazuo Ishiguro"
+        },
+        {
+          "id": "B",
+          "text": "Ian McEwan"
+        },
+        {
+          "id": "C",
+          "text": "Julian Barnes"
+        },
+        {
+          "id": "D",
+          "text": "Martin Amis"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Kazuo Ishiguro",
+      "explanation_bn": "'নেভার লেট মি গো' (Never Let Me Go) কাজুও ইশিগুরোর উপন্যাস, যা ২০০৫ সালে প্রকাশিত।",
+      "learning_note_en": "Never Let Me Go is a novel by Kazuo Ishiguro, published in 2005.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Never Let Me Go",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Never-Let-Me-Go",
+          "supports": "Attribution to Ishiguro"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-059",
       "skill_id": "author_work_attribution",
       "topic_tags": [
@@ -2075,231 +2705,6 @@
           "publisher_or_institution": "Encyclopædia Britannica",
           "url": "https://www.britannica.com/topic/Wolf-Hall",
           "supports": "Attribution to Mantel"
-        }
-      ],
-      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
-      "official_question": false,
-      "research_status": "REVIEWED"
-    },
-    {
-      "candidate_id": "bcs-lit-candidate-102",
-      "skill_id": "author_work_attribution",
-      "topic_tags": [
-        "CONRAD",
-        "NOVEL"
-      ],
-      "period": "Modern",
-      "difficulty": "INTERMEDIATE",
-      "question": "Who wrote the novella 'Heart of Darkness'?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Joseph Conrad"
-        },
-        {
-          "id": "B",
-          "text": "E.M. Forster"
-        },
-        {
-          "id": "C",
-          "text": "D.H. Lawrence"
-        },
-        {
-          "id": "D",
-          "text": "James Joyce"
-        }
-      ],
-      "correct_option": "A",
-      "correct_answer": "Joseph Conrad",
-      "explanation_bn": "'হার্ট অফ ডার্কনেস' (Heart of Darkness) জোসেফ কনরাডের বিখ্যাত উপন্যাসিকা।",
-      "learning_note_en": "Heart of Darkness is a novella by Joseph Conrad.",
-      "source_refs": [
-        {
-          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
-          "title": "Heart of Darkness",
-          "publisher_or_institution": "Encyclopædia Britannica",
-          "url": "https://www.britannica.com/topic/Heart-of-Darkness",
-          "supports": "Attribution to Conrad"
-        }
-      ],
-      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
-      "official_question": false,
-      "research_status": "REVIEWED"
-    },
-    {
-      "candidate_id": "bcs-lit-candidate-103",
-      "skill_id": "author_work_attribution",
-      "topic_tags": [
-        "FIELDING",
-        "NOVEL"
-      ],
-      "period": "18th Century",
-      "difficulty": "ADVANCED",
-      "question": "Who wrote the novel 'Tom Jones'?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Henry Fielding"
-        },
-        {
-          "id": "B",
-          "text": "Samuel Richardson"
-        },
-        {
-          "id": "C",
-          "text": "Laurence Sterne"
-        },
-        {
-          "id": "D",
-          "text": "Daniel Defoe"
-        }
-      ],
-      "correct_option": "A",
-      "correct_answer": "Henry Fielding",
-      "explanation_bn": "'টম জোন্স' (Tom Jones) হেনরি ফিল্ডিংয়ের উপন্যাস।",
-      "learning_note_en": "Tom Jones is a novel by Henry Fielding.",
-      "source_refs": [
-        {
-          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
-          "title": "The History of Tom Jones, a Foundling",
-          "publisher_or_institution": "Encyclopædia Britannica",
-          "url": "https://www.britannica.com/topic/Tom-Jones-novel",
-          "supports": "Attribution to Fielding"
-        }
-      ],
-      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
-      "official_question": false,
-      "research_status": "REVIEWED"
-    },
-    {
-      "candidate_id": "bcs-lit-candidate-104",
-      "skill_id": "author_work_attribution",
-      "topic_tags": [
-        "SWIFT",
-        "NOVEL"
-      ],
-      "period": "18th Century",
-      "difficulty": "INTERMEDIATE",
-      "question": "Who wrote 'Gulliver's Travels'?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Daniel Defoe"
-        },
-        {
-          "id": "B",
-          "text": "Jonathan Swift"
-        },
-        {
-          "id": "C",
-          "text": "Henry Fielding"
-        },
-        {
-          "id": "D",
-          "text": "Samuel Richardson"
-        }
-      ],
-      "correct_option": "B",
-      "correct_answer": "Jonathan Swift",
-      "explanation_bn": "'গুলিভারস ট্রাভেলস' (Gulliver's Travels) জোনাথন সুইফটের ব্যঙ্গাত্মক উপন্যাস।",
-      "learning_note_en": "Gulliver's Travels is a satirical work by Jonathan Swift.",
-      "source_refs": [
-        {
-          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
-          "title": "Gulliver's Travels",
-          "publisher_or_institution": "Encyclopædia Britannica",
-          "url": "https://www.britannica.com/topic/Gullivers-Travels",
-          "supports": "Attribution to Swift"
-        }
-      ],
-      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
-      "official_question": false,
-      "research_status": "REVIEWED"
-    },
-    {
-      "candidate_id": "bcs-lit-candidate-105",
-      "skill_id": "author_work_attribution",
-      "topic_tags": [
-        "DEFOE",
-        "NOVEL"
-      ],
-      "period": "18th Century",
-      "difficulty": "INTERMEDIATE",
-      "question": "Who wrote the novel 'Robinson Crusoe'?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Daniel Defoe"
-        },
-        {
-          "id": "B",
-          "text": "Jonathan Swift"
-        },
-        {
-          "id": "C",
-          "text": "Henry Fielding"
-        },
-        {
-          "id": "D",
-          "text": "Samuel Richardson"
-        }
-      ],
-      "correct_option": "A",
-      "correct_answer": "Daniel Defoe",
-      "explanation_bn": "'রবিনসন ক্রুসো' (Robinson Crusoe) ড্যানিয়েল ডিফোর উপন্যাস।",
-      "learning_note_en": "Robinson Crusoe is a novel by Daniel Defoe.",
-      "source_refs": [
-        {
-          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
-          "title": "Robinson Crusoe",
-          "publisher_or_institution": "Encyclopædia Britannica",
-          "url": "https://www.britannica.com/topic/Robinson-Crusoe",
-          "supports": "Attribution to Defoe"
-        }
-      ],
-      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
-      "official_question": false,
-      "research_status": "REVIEWED"
-    },
-    {
-      "candidate_id": "bcs-lit-candidate-048",
-      "skill_id": "quotation_attribution",
-      "topic_tags": [
-        "SHAKESPEARE",
-        "QUOTATION"
-      ],
-      "period": "Elizabethan",
-      "difficulty": "BEGINNER",
-      "question": "\"To be, or not to be: that is the question\" — from which play is this quote?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Macbeth"
-        },
-        {
-          "id": "B",
-          "text": "Hamlet"
-        },
-        {
-          "id": "C",
-          "text": "King Lear"
-        },
-        {
-          "id": "D",
-          "text": "Othello"
-        }
-      ],
-      "correct_option": "B",
-      "correct_answer": "Hamlet",
-      "explanation_bn": "\"To be, or not to be\" — এই উক্তিটি শেক্সপিয়রের 'হ্যামলেট' (Hamlet) নাটকের।",
-      "learning_note_en": "This soliloquy is from Shakespeare's Hamlet.",
-      "source_refs": [
-        {
-          "source_class": "PRIMARY_TEXT",
-          "title": "Hamlet, Act 3, Scene 1",
-          "publisher_or_institution": "Folger Shakespeare Library",
-          "url": "https://www.folger.edu/explore/shakespeares-works/hamlet/read/3/1/",
-          "supports": "Quote attribution"
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -2982,6 +3387,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-076",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "BECKETT",
+        "QUOTATION"
+      ],
+      "period": "Modern",
+      "difficulty": "ADVANCED",
+      "question": "\"Nothing to be done\" – from which play is this famous opening line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Waiting for Godot"
+        },
+        {
+          "id": "B",
+          "text": "The Caretaker"
+        },
+        {
+          "id": "C",
+          "text": "The Bald Soprano"
+        },
+        {
+          "id": "D",
+          "text": "The Birthday Party"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Waiting for Godot",
+      "explanation_bn": "\"Nothing to be done\" – এই লাইনটি বেকেটের 'ওয়েটিং ফর গডো' (Waiting for Godot) নাটকের প্রথম লাইন।",
+      "learning_note_en": "This is the opening line of Samuel Beckett's 'Waiting for Godot'.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Waiting for Godot in Relation to Rosencrantz and Guildenstern Are Dead",
+          "publisher_or_institution": "MIT OpenCourseWare",
+          "url": "https://ocw.mit.edu/courses/21l-703-studies-in-drama-stoppard-and-company-spring-2014/10e556f1755e30df28fc7aeb556ff301_MIT21L_703S14_RnG_Roe.pdf",
+          "supports": "Explicitly identifies the opening line as ESTRAGON: Nothing to be done"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-077",
       "skill_id": "quotation_attribution",
       "topic_tags": [
@@ -3018,143 +3468,8 @@
           "source_class": "PRIMARY_TEXT",
           "title": "Devotions upon Emergent Occasions",
           "publisher_or_institution": "Project Gutenberg",
-          "url": "https://www.gutenberg.org/ebooks/23772",
-          "supports": "Quote attribution; Meditation XVII contains the 'No man is an island' passage"
-        }
-      ],
-      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
-      "official_question": false,
-      "research_status": "REVIEWED"
-    },
-    {
-      "candidate_id": "bcs-lit-candidate-079",
-      "skill_id": "quotation_attribution",
-      "topic_tags": [
-        "MILTON",
-        "QUOTATION"
-      ],
-      "period": "17th Century",
-      "difficulty": "ADVANCED",
-      "question": "\"They also serve who only stand and wait\" — from which poem is this line?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Paradise Lost"
-        },
-        {
-          "id": "B",
-          "text": "On His Blindness"
-        },
-        {
-          "id": "C",
-          "text": "Lycidas"
-        },
-        {
-          "id": "D",
-          "text": "Samson Agonistes"
-        }
-      ],
-      "correct_option": "B",
-      "correct_answer": "On His Blindness",
-      "explanation_bn": "\"They also serve who only stand and wait\" — এই লাইনটি মিল্টনের 'অন হিজ ব্লাইন্ডনেস' (On His Blindness) সনেট থেকে।",
-      "learning_note_en": "This line is from Milton's sonnet 'On His Blindness'.",
-      "source_refs": [
-        {
-          "source_class": "PRIMARY_TEXT",
-          "title": "On His Blindness",
-          "publisher_or_institution": "Poetry Foundation",
-          "url": "https://www.poetryfoundation.org/poems/44750/on-his-blindness",
-          "supports": "Quote attribution"
-        }
-      ],
-      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
-      "official_question": false,
-      "research_status": "REVIEWED"
-    },
-    {
-      "candidate_id": "bcs-lit-candidate-119",
-      "skill_id": "quotation_attribution",
-      "topic_tags": [
-        "SHAKESPEARE",
-        "QUOTATION"
-      ],
-      "period": "Elizabethan",
-      "difficulty": "BEGINNER",
-      "question": "\"The fault, dear Brutus, is not in our stars, but in ourselves\" — from which play is this quote?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Julius Caesar"
-        },
-        {
-          "id": "B",
-          "text": "Hamlet"
-        },
-        {
-          "id": "C",
-          "text": "Macbeth"
-        },
-        {
-          "id": "D",
-          "text": "Othello"
-        }
-      ],
-      "correct_option": "A",
-      "correct_answer": "Julius Caesar",
-      "explanation_bn": "\"The fault, dear Brutus\" — এই উক্তিটি শেক্সপিয়রের 'জুলিয়াস সিজার' (Julius Caesar) নাটকের।",
-      "learning_note_en": "This quote is from Shakespeare's Julius Caesar.",
-      "source_refs": [
-        {
-          "source_class": "PRIMARY_TEXT",
-          "title": "Julius Caesar, Act 1, Scene 2",
-          "publisher_or_institution": "Folger Shakespeare Library",
-          "url": "https://www.folger.edu/explore/shakespeares-works/julius-caesar/read/1/2/",
-          "supports": "Quote attribution"
-        }
-      ],
-      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
-      "official_question": false,
-      "research_status": "REVIEWED"
-    },
-    {
-      "candidate_id": "bcs-lit-candidate-120",
-      "skill_id": "quotation_attribution",
-      "topic_tags": [
-        "WORDSWORTH",
-        "QUOTATION"
-      ],
-      "period": "Romantic",
-      "difficulty": "INTERMEDIATE",
-      "question": "\"Bliss was it in that dawn to be alive, but to be young was very heaven!\" — from which poem is this line?",
-      "options": [
-        {
-          "id": "A",
-          "text": "The Prelude"
-        },
-        {
-          "id": "B",
-          "text": "Daffodils"
-        },
-        {
-          "id": "C",
-          "text": "Tintern Abbey"
-        },
-        {
-          "id": "D",
-          "text": "My Heart Leaps Up"
-        }
-      ],
-      "correct_option": "A",
-      "correct_answer": "The Prelude",
-      "explanation_bn": "\"Bliss was it in that dawn\" — এই লাইনটি ওয়ার্ডসওয়ার্থের 'দ্যা প্রেলিউড' (The Prelude) থেকে।",
-      "learning_note_en": "This line is from Wordsworth's 'The Prelude'.",
-      "source_refs": [
-        {
-          "source_class": "PRIMARY_TEXT",
-          "title": "Wordsworth's Poetical Works, Volume 3 — French Revolution",
-          "publisher_or_institution": "Project Gutenberg",
-          "url": "https://www.gutenberg.org/files/12383/12383-h/12383-h.htm",
-          "supports": "Quote attribution; editorial note identifies the passage as The Prelude, Book XI"
+          "url": "https://www.gutenberg.org/cache/epub/23772/pg23772-images.html",
+          "supports": "The text contains 'No man is an island entire of itself' in Meditation XVII."
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -3207,7 +3522,187 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-079",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "MILTON",
+        "QUOTATION"
+      ],
+      "period": "17th Century",
+      "difficulty": "ADVANCED",
+      "question": "\"They also serve who only stand and wait\" — from which poem is this line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Paradise Lost"
+        },
+        {
+          "id": "B",
+          "text": "On His Blindness"
+        },
+        {
+          "id": "C",
+          "text": "Lycidas"
+        },
+        {
+          "id": "D",
+          "text": "Samson Agonistes"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "On His Blindness",
+      "explanation_bn": "\"They also serve who only stand and wait\" — এই লাইনটি মিল্টনের 'অন হিজ ব্লাইন্ডনেস' (On His Blindness) সনেট থেকে।",
+      "learning_note_en": "This line is from Milton's sonnet 'On His Blindness'.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "On His Blindness",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/44750/on-his-blindness",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-080",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "SHELLEY",
+        "QUOTATION"
+      ],
+      "period": "Romantic",
+      "difficulty": "BEGINNER",
+      "question": "\"If Winter comes, can Spring be far behind?\" – from which poem is this line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ozymandias"
+        },
+        {
+          "id": "B",
+          "text": "Ode to the West Wind"
+        },
+        {
+          "id": "C",
+          "text": "Prometheus Unbound"
+        },
+        {
+          "id": "D",
+          "text": "Adonais"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Ode to the West Wind",
+      "explanation_bn": "\"If Winter comes, can Spring be far behind?\" – এই লাইনটি শেলির 'Ode to the West Wind' কবিতা থেকে।",
+      "learning_note_en": "This famous line is from Shelley's 'Ode to the West Wind'.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "Ode to the West Wind",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-081",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "POETRY",
+        "GENRE"
+      ],
+      "period": "Romantic",
+      "difficulty": "INTERMEDIATE",
+      "question": "The poem 'The Prelude' by William Wordsworth is best described as which of the following?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Epic"
+        },
+        {
+          "id": "B",
+          "text": "Autobiographical poem"
+        },
+        {
+          "id": "C",
+          "text": "Lyric"
+        },
+        {
+          "id": "D",
+          "text": "Elegy"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Autobiographical poem",
+      "explanation_bn": "'দ্যা প্রেলিউড' (The Prelude) ওয়ার্ডসওয়ার্থের আত্মজীবনীমূলক কাব্য।",
+      "learning_note_en": "The Prelude is an autobiographical poem.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "The Prelude",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/The-Prelude",
+          "supports": "Autobiographical poem"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-082",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "TENNYSON",
+        "QUOTATION"
+      ],
+      "period": "Victorian",
+      "difficulty": "INTERMEDIATE",
+      "question": "\"Theirs not to reason why, theirs but to do and die\" – from which poem is this line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Lady of Shalott"
+        },
+        {
+          "id": "B",
+          "text": "Ulysses"
+        },
+        {
+          "id": "C",
+          "text": "The Charge of the Light Brigade"
+        },
+        {
+          "id": "D",
+          "text": "In Memoriam"
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "The Charge of the Light Brigade",
+      "explanation_bn": "\"Theirs not to reason why\" – এই লাইনটি টেনিসনের 'The Charge of the Light Brigade' কবিতা থেকে।",
+      "learning_note_en": "This line is from Tennyson's 'The Charge of the Light Brigade'.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "The Charge of the Light Brigade",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/45319/the-charge-of-the-light-brigade",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-083",
       "skill_id": "genre_form_identification",
       "topic_tags": [
         "DRAMA",
@@ -3215,36 +3710,36 @@
       ],
       "period": "Elizabethan",
       "difficulty": "INTERMEDIATE",
-      "question": "Which of the following is a history play by Shakespeare?",
+      "question": "The play 'Doctor Faustus' is an example of which genre?",
       "options": [
         {
           "id": "A",
-          "text": "Macbeth"
+          "text": "Comedy"
         },
         {
           "id": "B",
-          "text": "Henry V"
+          "text": "Tragedy"
         },
         {
           "id": "C",
-          "text": "Hamlet"
+          "text": "History play"
         },
         {
           "id": "D",
-          "text": "Othello"
+          "text": "Morality play"
         }
       ],
       "correct_option": "B",
-      "correct_answer": "Henry V",
-      "explanation_bn": "'হেনরি ভি' (Henry V) শেক্সপিয়রের ঐতিহাসিক নাটক (history play)। বাকি তিনটি ট্র্যাজেডি।",
-      "learning_note_en": "Henry V is a history play.",
+      "correct_answer": "Tragedy",
+      "explanation_bn": "'ডক্টর ফস্টাস' (Doctor Faustus) একটি ট্র্যাজেডি, যা মানবের উচ্চাকাঙ্ক্ষা ও পতনের কাহিনী।",
+      "learning_note_en": "Doctor Faustus is a tragedy.",
       "source_refs": [
         {
           "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
-          "title": "Henry V (play)",
-          "publisher_or_institution": "Folger Shakespeare Library",
-          "url": "https://www.folger.edu/explore/shakespeares-works/henry-v/",
-          "supports": "History play classification"
+          "title": "Doctor Faustus (play)",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Doctor-Faustus-play",
+          "supports": "Tragedy classification"
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -3387,6 +3882,51 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-087",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "NOVEL",
+        "GENRE"
+      ],
+      "period": "21st Century",
+      "difficulty": "ADVANCED",
+      "question": "The novel 'Wolf Hall' is an example of which subgenre?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Science fiction"
+        },
+        {
+          "id": "B",
+          "text": "Historical fiction"
+        },
+        {
+          "id": "C",
+          "text": "Romance"
+        },
+        {
+          "id": "D",
+          "text": "Mystery"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Historical fiction",
+      "explanation_bn": "'উলফ হল' (Wolf Hall) একটি ঐতিহাসিক উপন্যাস (historical fiction), যা টিউডর যুগের পটভূমিতে রচিত।",
+      "learning_note_en": "Wolf Hall is historical fiction.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Wolf Hall",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Wolf-Hall",
+          "supports": "Historical fiction"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-088",
       "skill_id": "genre_form_identification",
       "topic_tags": [
@@ -3425,6 +3965,96 @@
           "publisher_or_institution": "Encyclopædia Britannica",
           "url": "https://www.britannica.com/art/Theatre-of-the-Absurd",
           "supports": "Movement association"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-089",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "POETRY",
+        "GENRE"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "INTERMEDIATE",
+      "question": "The 'Spenserian sonnet' is named after which poet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "William Shakespeare"
+        },
+        {
+          "id": "B",
+          "text": "Edmund Spenser"
+        },
+        {
+          "id": "C",
+          "text": "Philip Sidney"
+        },
+        {
+          "id": "D",
+          "text": "John Donne"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Edmund Spenser",
+      "explanation_bn": "স্পেন্সারিয়ান সনেট (Spenserian sonnet) এডমান্ড স্পেন্সারের (Edmund Spenser) নামে নামকরণ; এটি তার সনেট ফর্ম।",
+      "learning_note_en": "The Spenserian sonnet is named after Edmund Spenser.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Spenserian sonnet",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/art/Spenserian-sonnet",
+          "supports": "Naming origin"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-090",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "NOVEL",
+        "GENRE"
+      ],
+      "period": "Victorian",
+      "difficulty": "INTERMEDIATE",
+      "question": "The novel 'Middlemarch' is considered a masterpiece of which literary genre?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Romance"
+        },
+        {
+          "id": "B",
+          "text": "Realism"
+        },
+        {
+          "id": "C",
+          "text": "Gothic fiction"
+        },
+        {
+          "id": "D",
+          "text": "Science fiction"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Realism",
+      "explanation_bn": "'মিডলমার্চ' (Middlemarch) এলিয়টের বাস্তববাদী (realism) উপন্যাস।",
+      "learning_note_en": "Middlemarch is a masterpiece of realism.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Middlemarch",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Middlemarch",
+          "supports": "Realism classification"
         }
       ],
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
@@ -3567,6 +4197,186 @@
       "research_status": "REVIEWED"
     },
     {
+      "candidate_id": "bcs-lit-candidate-094",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "NOVEL",
+        "GENRE"
+      ],
+      "period": "Victorian",
+      "difficulty": "INTERMEDIATE",
+      "question": "'The Mayor of Casterbridge' by Thomas Hardy is best described as which kind of novel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Detective novel"
+        },
+        {
+          "id": "B",
+          "text": "Tragic novel"
+        },
+        {
+          "id": "C",
+          "text": "Science-fiction novel"
+        },
+        {
+          "id": "D",
+          "text": "Epistolary novel"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Tragic novel",
+      "explanation_bn": "'দ্যা মেয়র অফ ক্যাস্টারব্রিজ' (The Mayor of Casterbridge) একটি ট্র্যাজিক নভেল, যেখানে প্রধান চরিত্রের পতন কেন্দ্রীয়।",
+      "learning_note_en": "The Mayor of Casterbridge is commonly described as a tragic novel.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "The Mayor of Casterbridge",
+          "publisher_or_institution": "Canongate Books",
+          "url": "https://canongate.co.uk/books/1789-the-mayor-of-casterbridge/",
+          "supports": "Describes the work as a tragic novel"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-095",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "DRAMA",
+        "GENRE"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "INTERMEDIATE",
+      "question": "Which of Shakespeare's plays is considered a 'problem play'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hamlet"
+        },
+        {
+          "id": "B",
+          "text": "Measure for Measure"
+        },
+        {
+          "id": "C",
+          "text": "Macbeth"
+        },
+        {
+          "id": "D",
+          "text": "Othello"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Measure for Measure",
+      "explanation_bn": "'মেজার ফর মেজার' (Measure for Measure) শেক্সপিয়রের একটি 'প্রবলেম প্লে' (problem play)।",
+      "learning_note_en": "Measure for Measure is one of Shakespeare's problem plays.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Measure for Measure",
+          "publisher_or_institution": "Folger Shakespeare Library",
+          "url": "https://www.folger.edu/explore/shakespeares-works/measure-for-measure/",
+          "supports": "Problem play classification"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-096",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "POETRY",
+        "GENRE"
+      ],
+      "period": "Victorian",
+      "difficulty": "ADVANCED",
+      "question": "The poem 'In Memoriam A.H.H.' is an example of which poetic genre?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ode"
+        },
+        {
+          "id": "B",
+          "text": "Elegy"
+        },
+        {
+          "id": "C",
+          "text": "Epic"
+        },
+        {
+          "id": "D",
+          "text": "Ballad"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Elegy",
+      "explanation_bn": "'ইন মেমোরিয়াম' (In Memoriam) টেনিসনের একটি এলিজি (elegy) — বন্ধুর মৃত্যুতে লেখা শোকগাথা।",
+      "learning_note_en": "In Memoriam is an elegy.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "In Memoriam A.H.H.",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/45336/in-memoriam-a-h-h",
+          "supports": "Elegy classification"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-097",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "NOVEL",
+        "GENRE"
+      ],
+      "period": "Modern",
+      "difficulty": "ADVANCED",
+      "question": "Which of the following novels uses the 'stream of consciousness' technique?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Passage to India"
+        },
+        {
+          "id": "B",
+          "text": "Mrs Dalloway"
+        },
+        {
+          "id": "C",
+          "text": "Sons and Lovers"
+        },
+        {
+          "id": "D",
+          "text": "Animal Farm"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Mrs Dalloway",
+      "explanation_bn": "'মিসেস ড্যালোওয়ে' (Mrs Dalloway) উলফের স্ট্রিম অফ কনশাসনেস (stream of consciousness) কৌশলের জন্য বিখ্যাত।",
+      "learning_note_en": "Mrs Dalloway is famous for its stream of consciousness.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Mrs Dalloway",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Mrs-Dalloway",
+          "supports": "Stream of consciousness technique"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
       "candidate_id": "bcs-lit-candidate-098",
       "skill_id": "genre_form_identification",
       "topic_tags": [
@@ -3610,7 +4420,996 @@
       "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
       "official_question": false,
       "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-099",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "DRAMA",
+        "GENRE"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "BEGINNER",
+      "question": "A play that typically ends with the death or downfall of the main character is called a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comedy"
+        },
+        {
+          "id": "B",
+          "text": "Tragedy"
+        },
+        {
+          "id": "C",
+          "text": "History"
+        },
+        {
+          "id": "D",
+          "text": "Romance"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Tragedy",
+      "explanation_bn": "ট্র্যাজেডি (tragedy) নাটক সাধারণত প্রধান চরিত্রের মৃত্যু বা পতনের মাধ্যমে শেষ হয়।",
+      "learning_note_en": "A tragedy typically ends with the death or downfall of the protagonist.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Tragedy",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/art/tragedy-literature",
+          "supports": "Genre definition"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-100",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "POPE",
+        "QUOTATION"
+      ],
+      "period": "Augustan",
+      "difficulty": "INTERMEDIATE",
+      "question": "\"To err is human; to forgive, divine\" – from which work is this line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An Essay on Criticism"
+        },
+        {
+          "id": "B",
+          "text": "The Rape of the Lock"
+        },
+        {
+          "id": "C",
+          "text": "The Dunciad"
+        },
+        {
+          "id": "D",
+          "text": "Essay on Man"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "An Essay on Criticism",
+      "explanation_bn": "\"To err is human; to forgive, divine\" – এই লাইনটি আলেকজান্ডার পোপের 'An Essay on Criticism' থেকে।",
+      "learning_note_en": "This line is from Alexander Pope's 'An Essay on Criticism'.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "An Essay on Criticism",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/44897/an-essay-on-criticism-part-2",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-101",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "DONNE",
+        "POETRY"
+      ],
+      "period": "17th Century",
+      "difficulty": "ADVANCED",
+      "question": "Who is known as the leading Metaphysical poet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "John Donne"
+        },
+        {
+          "id": "B",
+          "text": "George Herbert"
+        },
+        {
+          "id": "C",
+          "text": "Andrew Marvell"
+        },
+        {
+          "id": "D",
+          "text": "Henry Vaughan"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "John Donne",
+      "explanation_bn": "জন ডন (John Donne) মেটাফিজিক্যাল কবিতার (Metaphysical poetry) প্রধান কবি।",
+      "learning_note_en": "John Donne is the foremost Metaphysical poet.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Metaphysical poets",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/art/Metaphysical-poets",
+          "supports": "Donne as leading figure"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-102",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "CONRAD",
+        "NOVEL"
+      ],
+      "period": "Modern",
+      "difficulty": "INTERMEDIATE",
+      "question": "Who wrote the novella 'Heart of Darkness'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Joseph Conrad"
+        },
+        {
+          "id": "B",
+          "text": "E.M. Forster"
+        },
+        {
+          "id": "C",
+          "text": "D.H. Lawrence"
+        },
+        {
+          "id": "D",
+          "text": "James Joyce"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Joseph Conrad",
+      "explanation_bn": "'হার্ট অফ ডার্কনেস' (Heart of Darkness) জোসেফ কনরাডের বিখ্যাত উপন্যাসিকা।",
+      "learning_note_en": "Heart of Darkness is a novella by Joseph Conrad.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Heart of Darkness",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Heart-of-Darkness",
+          "supports": "Attribution to Conrad"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-103",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "FIELDING",
+        "NOVEL"
+      ],
+      "period": "18th Century",
+      "difficulty": "ADVANCED",
+      "question": "Who wrote the novel 'Tom Jones'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Henry Fielding"
+        },
+        {
+          "id": "B",
+          "text": "Samuel Richardson"
+        },
+        {
+          "id": "C",
+          "text": "Laurence Sterne"
+        },
+        {
+          "id": "D",
+          "text": "Daniel Defoe"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Henry Fielding",
+      "explanation_bn": "'টম জোন্স' (Tom Jones) হেনরি ফিল্ডিংয়ের উপন্যাস।",
+      "learning_note_en": "Tom Jones is a novel by Henry Fielding.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "The History of Tom Jones, a Foundling",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Tom-Jones-novel",
+          "supports": "Attribution to Fielding"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-104",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "SWIFT",
+        "NOVEL"
+      ],
+      "period": "18th Century",
+      "difficulty": "INTERMEDIATE",
+      "question": "Who wrote 'Gulliver's Travels'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel Defoe"
+        },
+        {
+          "id": "B",
+          "text": "Jonathan Swift"
+        },
+        {
+          "id": "C",
+          "text": "Henry Fielding"
+        },
+        {
+          "id": "D",
+          "text": "Samuel Richardson"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Jonathan Swift",
+      "explanation_bn": "'গুলিভারস ট্রাভেলস' (Gulliver's Travels) জোনাথন সুইফটের ব্যঙ্গাত্মক উপন্যাস।",
+      "learning_note_en": "Gulliver's Travels is a satirical work by Jonathan Swift.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Gulliver's Travels",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Gullivers-Travels",
+          "supports": "Attribution to Swift"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-105",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "DEFOE",
+        "NOVEL"
+      ],
+      "period": "18th Century",
+      "difficulty": "INTERMEDIATE",
+      "question": "Who wrote the novel 'Robinson Crusoe'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel Defoe"
+        },
+        {
+          "id": "B",
+          "text": "Jonathan Swift"
+        },
+        {
+          "id": "C",
+          "text": "Henry Fielding"
+        },
+        {
+          "id": "D",
+          "text": "Samuel Richardson"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Daniel Defoe",
+      "explanation_bn": "'রবিনসন ক্রুসো' (Robinson Crusoe) ড্যানিয়েল ডিফোর উপন্যাস।",
+      "learning_note_en": "Robinson Crusoe is a novel by Daniel Defoe.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Robinson Crusoe",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Robinson-Crusoe",
+          "supports": "Attribution to Defoe"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-106",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "POPE",
+        "POETRY"
+      ],
+      "period": "Augustan",
+      "difficulty": "ADVANCED",
+      "question": "Who wrote the mock-epic poem 'The Rape of the Lock'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alexander Pope"
+        },
+        {
+          "id": "B",
+          "text": "John Dryden"
+        },
+        {
+          "id": "C",
+          "text": "Jonathan Swift"
+        },
+        {
+          "id": "D",
+          "text": "Samuel Johnson"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Alexander Pope",
+      "explanation_bn": "'দ্যা রেপ অফ দ্যা লক' (The Rape of the Lock) আলেকজান্ডার পোপের মক-এপিক কবিতা।",
+      "learning_note_en": "The Rape of the Lock is a mock-epic by Alexander Pope.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "The Rape of the Lock",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/The-Rape-of-the-Lock",
+          "supports": "Attribution to Pope"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-107",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "DRYDEN",
+        "POETRY"
+      ],
+      "period": "Restoration",
+      "difficulty": "ADVANCED",
+      "question": "Who was the first official Poet Laureate of England?",
+      "options": [
+        {
+          "id": "A",
+          "text": "John Dryden"
+        },
+        {
+          "id": "B",
+          "text": "William Wordsworth"
+        },
+        {
+          "id": "C",
+          "text": "Alfred Lord Tennyson"
+        },
+        {
+          "id": "D",
+          "text": "Ben Jonson"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "John Dryden",
+      "explanation_bn": "জন ড্রাইডেন (John Dryden) ১৬৬৮ সালে ইংল্যান্ডের প্রথম Poet Laureate নিযুক্ত হন।",
+      "learning_note_en": "John Dryden was the first official Poet Laureate of England.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Poet Laureate",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/poet-laureate",
+          "supports": "Dryden as first laureate"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-108",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "SIDNEY",
+        "POETRY"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "ADVANCED",
+      "question": "Who wrote the sonnet sequence 'Astrophel and Stella'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Edmund Spenser"
+        },
+        {
+          "id": "B",
+          "text": "Philip Sidney"
+        },
+        {
+          "id": "C",
+          "text": "William Shakespeare"
+        },
+        {
+          "id": "D",
+          "text": "John Donne"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Philip Sidney",
+      "explanation_bn": "'অ্যাস্ট্রোফেল অ্যান্ড স্টেলা' (Astrophel and Stella) ফিলিপ সিডনির সনেট সিকোয়েন্স।",
+      "learning_note_en": "Astrophel and Stella is a sonnet sequence by Sir Philip Sidney.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Astrophel and Stella",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Astrophel-and-Stella",
+          "supports": "Attribution to Sidney"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-109",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "DONNE",
+        "QUOTATION"
+      ],
+      "period": "17th Century",
+      "difficulty": "ADVANCED",
+      "question": "\"Death, be not proud\" – from which poem is this opening line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Holy Sonnet 10"
+        },
+        {
+          "id": "B",
+          "text": "The Flea"
+        },
+        {
+          "id": "C",
+          "text": "The Good-Morrow"
+        },
+        {
+          "id": "D",
+          "text": "A Valediction: Forbidding Mourning"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Holy Sonnet 10",
+      "explanation_bn": "\"Death, be not proud\" – এই লাইনটি জন ডনের Holy Sonnet 10-এর শুরু।",
+      "learning_note_en": "'Death, be not proud' opens John Donne's Holy Sonnet 10.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "Death, be not proud (Holy Sonnet 10)",
+          "publisher_or_institution": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/poems/44107/holy-sonnets-death-be-not-proud",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-110",
+      "skill_id": "genre_form_identification",
+      "topic_tags": [
+        "WOOLF",
+        "ESSAY"
+      ],
+      "period": "Modern",
+      "difficulty": "ADVANCED",
+      "question": "Virginia Woolf's 'A Room of One's Own' is an example of which genre?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Novel"
+        },
+        {
+          "id": "B",
+          "text": "Essay"
+        },
+        {
+          "id": "C",
+          "text": "Poem"
+        },
+        {
+          "id": "D",
+          "text": "Play"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Essay",
+      "explanation_bn": "'আ রুম অফ ওয়ান্স ওন' (A Room of One's Own) উলফের একটি প্রবন্ধ (essay), যা নারী ও সাহিত্য নিয়ে আলোচনা করে।",
+      "learning_note_en": "A Room of One's Own is an extended essay by Virginia Woolf.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "A Room of One's Own",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/A-Room-of-Ones-Own",
+          "supports": "Essay classification"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-111",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "AUSTEN",
+        "NOVEL"
+      ],
+      "period": "Romantic",
+      "difficulty": "INTERMEDIATE",
+      "question": "Which of the following novels is NOT by Jane Austen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Emma"
+        },
+        {
+          "id": "B",
+          "text": "Sense and Sensibility"
+        },
+        {
+          "id": "C",
+          "text": "Northanger Abbey"
+        },
+        {
+          "id": "D",
+          "text": "Jane Eyre"
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Jane Eyre",
+      "explanation_bn": "'জেন আইয়ার' (Jane Eyre) শার্লট ব্রন্টের উপন্যাস, জেন অস্টেনের নয়।",
+      "learning_note_en": "Jane Eyre is by Charlotte Brontë, not Jane Austen.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Jane Austen",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/biography/Jane-Austen",
+          "supports": "List of Austen works"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-112",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "DICKENS",
+        "NOVEL"
+      ],
+      "period": "Victorian",
+      "difficulty": "INTERMEDIATE",
+      "question": "Charles Dickens' novel 'Bleak House' is a critique of which institution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Church"
+        },
+        {
+          "id": "B",
+          "text": "The Court of Chancery"
+        },
+        {
+          "id": "C",
+          "text": "The Monarchy"
+        },
+        {
+          "id": "D",
+          "text": "The Army"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "The Court of Chancery",
+      "explanation_bn": "'ব্লিক হাউস' (Bleak House) ডিকেন্সের উপন্যাস, যা চ্যান্সারি কোর্টের (Court of Chancery) জটিলতা ও দুর্নীতির বিরুদ্ধে ব্যঙ্গ।",
+      "learning_note_en": "Bleak House is a critique of the Court of Chancery.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Bleak House",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Bleak-House",
+          "supports": "Critique of Chancery"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-113",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "DICKENS",
+        "QUOTATION"
+      ],
+      "period": "Victorian",
+      "difficulty": "BEGINNER",
+      "question": "\"It was the best of times, it was the worst of times\" – from which novel is this opening?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Tale of Two Cities"
+        },
+        {
+          "id": "B",
+          "text": "Great Expectations"
+        },
+        {
+          "id": "C",
+          "text": "Oliver Twist"
+        },
+        {
+          "id": "D",
+          "text": "Bleak House"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "A Tale of Two Cities",
+      "explanation_bn": "\"It was the best of times, it was the worst of times\" – এই বিখ্যাত সূচনাটি চার্লস ডিকেন্সের 'A Tale of Two Cities' থেকে।",
+      "learning_note_en": "This famous opening is from Charles Dickens's 'A Tale of Two Cities'.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "A Tale of Two Cities",
+          "publisher_or_institution": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/files/98/98-h/98-h.htm",
+          "supports": "Opening line attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-114",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "SHELLEY",
+        "NOVEL"
+      ],
+      "period": "Romantic",
+      "difficulty": "ADVANCED",
+      "question": "Who wrote the novel 'Frankenstein'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Percy Bysshe Shelley"
+        },
+        {
+          "id": "B",
+          "text": "Mary Shelley"
+        },
+        {
+          "id": "C",
+          "text": "John Keats"
+        },
+        {
+          "id": "D",
+          "text": "Lord Byron"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Mary Shelley",
+      "explanation_bn": "'ফ্রাঙ্কেনস্টাইন' (Frankenstein) মেরি শেলির গথিক উপন্যাস।",
+      "learning_note_en": "Frankenstein is a novel by Mary Shelley.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Frankenstein",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Frankenstein",
+          "supports": "Attribution to Mary Shelley"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-115",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "THACKERAY",
+        "NOVEL"
+      ],
+      "period": "Victorian",
+      "difficulty": "ADVANCED",
+      "question": "Who wrote the novel 'Vanity Fair'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Charles Dickens"
+        },
+        {
+          "id": "B",
+          "text": "William Makepeace Thackeray"
+        },
+        {
+          "id": "C",
+          "text": "George Eliot"
+        },
+        {
+          "id": "D",
+          "text": "Thomas Hardy"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "William Makepeace Thackeray",
+      "explanation_bn": "'ভ্যানিটি ফেয়ার' (Vanity Fair) উইলিয়াম মেকপিস থ্যাকারের উপন্যাস।",
+      "learning_note_en": "Vanity Fair is a novel by William Makepeace Thackeray.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Vanity Fair (novel)",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Vanity-Fair-novel",
+          "supports": "Attribution to Thackeray"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-116",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "RUSHDIE",
+        "NOVEL"
+      ],
+      "period": "20th Century",
+      "difficulty": "ADVANCED",
+      "question": "Who wrote the novel 'Midnight's Children'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Salman Rushdie"
+        },
+        {
+          "id": "B",
+          "text": "Arundhati Roy"
+        },
+        {
+          "id": "C",
+          "text": "Vikram Seth"
+        },
+        {
+          "id": "D",
+          "text": "Rohinton Mistry"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Salman Rushdie",
+      "explanation_bn": "'মিডনাইটস চিলড্রেন' (Midnight's Children) সালমান রুশদির উপন্যাস, যা ১৯৮১ সালে প্রকাশিত।",
+      "learning_note_en": "Midnight's Children is a novel by Salman Rushdie (1981).",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Midnight's Children",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Midnights-Children",
+          "supports": "Attribution to Rushdie"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-117",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "CHRISTIE",
+        "NOVEL"
+      ],
+      "period": "Modern",
+      "difficulty": "INTERMEDIATE",
+      "question": "Who wrote the detective novel 'Murder on the Orient Express'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agatha Christie"
+        },
+        {
+          "id": "B",
+          "text": "Arthur Conan Doyle"
+        },
+        {
+          "id": "C",
+          "text": "Dorothy L. Sayers"
+        },
+        {
+          "id": "D",
+          "text": "G.K. Chesterton"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Agatha Christie",
+      "explanation_bn": "'মার্ডার অন দ্যা ওরিয়েন্ট এক্সপ্রেস' (Murder on the Orient Express) আগাথা ক্রিস্টির জনপ্রিয় ডিটেকটিভ উপন্যাস।",
+      "learning_note_en": "Murder on the Orient Express is a detective novel by Agatha Christie.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "Murder on the Orient Express",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/Murder-on-the-Orient-Express",
+          "supports": "Attribution to Christie"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-118",
+      "skill_id": "author_work_attribution",
+      "topic_tags": [
+        "KYD",
+        "DRAMA"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "ADVANCED",
+      "question": "Who wrote the play 'The Spanish Tragedy'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thomas Kyd"
+        },
+        {
+          "id": "B",
+          "text": "Christopher Marlowe"
+        },
+        {
+          "id": "C",
+          "text": "William Shakespeare"
+        },
+        {
+          "id": "D",
+          "text": "Ben Jonson"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Thomas Kyd",
+      "explanation_bn": "'দ্যা স্প্যানিশ ট্র্যাজেডি' (The Spanish Tragedy) টমাস কিডের নাটক।",
+      "learning_note_en": "The Spanish Tragedy is a play by Thomas Kyd.",
+      "source_refs": [
+        {
+          "source_class": "AUTHORITATIVE_LITERARY_REFERENCE",
+          "title": "The Spanish Tragedy",
+          "publisher_or_institution": "Encyclopædia Britannica",
+          "url": "https://www.britannica.com/topic/The-Spanish-Tragedy",
+          "supports": "Attribution to Kyd"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-119",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "SHAKESPEARE",
+        "QUOTATION"
+      ],
+      "period": "Elizabethan",
+      "difficulty": "BEGINNER",
+      "question": "\"The fault, dear Brutus, is not in our stars, but in ourselves\" — from which play is this quote?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Julius Caesar"
+        },
+        {
+          "id": "B",
+          "text": "Hamlet"
+        },
+        {
+          "id": "C",
+          "text": "Macbeth"
+        },
+        {
+          "id": "D",
+          "text": "Othello"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Julius Caesar",
+      "explanation_bn": "\"The fault, dear Brutus\" — এই উক্তিটি শেক্সপিয়রের 'জুলিয়াস সিজার' (Julius Caesar) নাটকের।",
+      "learning_note_en": "This quote is from Shakespeare's Julius Caesar.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "Julius Caesar, Act 1, Scene 2",
+          "publisher_or_institution": "Folger Shakespeare Library",
+          "url": "https://www.folger.edu/explore/shakespeares-works/julius-caesar/read/1/2/",
+          "supports": "Quote attribution"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
+    },
+    {
+      "candidate_id": "bcs-lit-candidate-120",
+      "skill_id": "quotation_attribution",
+      "topic_tags": [
+        "WORDSWORTH",
+        "QUOTATION"
+      ],
+      "period": "Romantic",
+      "difficulty": "INTERMEDIATE",
+      "question": "\"Bliss was it in that dawn to be alive, but to be young was very heaven!\" — from which poem is this line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Prelude"
+        },
+        {
+          "id": "B",
+          "text": "Daffodils"
+        },
+        {
+          "id": "C",
+          "text": "Tintern Abbey"
+        },
+        {
+          "id": "D",
+          "text": "My Heart Leaps Up"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "The Prelude",
+      "explanation_bn": "\"Bliss was it in that dawn\" – এই লাইনটি ওয়ার্ডসওয়ার্থের 'দ্যা প্রেলিউড' (The Prelude) এর Book XI থেকে নেওয়া।",
+      "learning_note_en": "This line is from Wordsworth's 'The Prelude', Book XI.",
+      "source_refs": [
+        {
+          "source_class": "PRIMARY_TEXT",
+          "title": "The Prelude (1850), Book XI",
+          "publisher_or_institution": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/files/12383/12383-h/12383-h.htm",
+          "supports": "The quoted passage appears in Book XI of the poem."
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_BCS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED"
     }
   ]
 }
-

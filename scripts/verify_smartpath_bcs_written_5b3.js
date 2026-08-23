@@ -40,9 +40,9 @@ assert.equal(translation.filter(item => Object.hasOwn(item, 'common_errors_bn'))
 assert.equal(graph.families.length, 14); assert.equal(graph.skills.length, 67);
 assert.equal(graph.skills.filter(skill => skill.status === 'ACTIVE').length, 67);
 assert.equal(graph.skills.filter(skill => skill.status === 'PLANNED').length, 0);
-assert.equal(graph.item_mappings.length, 320);
+assert.equal(graph.item_mappings.length, 360);
 const oldMappings = graph.item_mappings.filter(mapping => !mapping.item_id.startsWith('bcs-written-') && !mapping.item_id.startsWith('ielts-coherence-') && !mapping.item_id.startsWith('ielts-task1-visual-'));
-assert.equal(oldMappings.length, 180); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('mm-')).length,30); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('bcs-smartpath-')).length,70); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('bcs-lit-candidate-')).length,80);
+assert.equal(oldMappings.length, 220); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('mm-')).length,30); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('bcs-smartpath-')).length,70); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('bcs-lit-candidate-')).length,120);
 const newMappings = graph.item_mappings.filter(mapping => mapping.item_id.startsWith('bcs-written-'));
 assert.equal(newMappings.length, 60); assert.equal(new Set(newMappings.map(mapping => mapping.item_id)).size, 60);
 assert.ok(newMappings.every(mapping => allowed.has(mapping.primary_skill_id) && pack.items.some(item => item.candidate_id === mapping.item_id && item.skill_id === mapping.primary_skill_id)));
@@ -57,7 +57,7 @@ assert.ok(bcsWrittenGoalMappings.every(mapping => mapping.importance === 'CORE')
 assert.deepEqual(new Set(bcsWrittenGoalMappings.map(mapping => mapping.skill_id)), allowed);
 
 mirror.addReviewedPack(grammarPack); mirror.addLiteraturePack(literaturePack); mirror.addWrittenPack(pack);
-assert.equal(mirror.items.length, 240);
+assert.equal(mirror.items.length, 280);
 const writtenItems = mirror.items.filter(item => item.id.startsWith('bcs-written-'));
 const productive = writtenItems.filter(item => item.type === 'guided-translation' || item.type === 'guided-essay');
 assert.equal(productive.length, 36); assert.ok(productive.every(item => !Object.hasOwn(item,'correct') && !Object.hasOwn(item,'correct_option')));
@@ -84,4 +84,4 @@ assert.doesNotMatch(runtime, /written_(learner_)?(store|profile|router)|secondLe
 assert.equal((read('mistake-mirror.js').match(/\/data\/bcs-written-smartpath-v1\.json/g)||[]).length,1);
 assert.equal(JSON.stringify(pack).includes('common_errors_bn'),false);
 
-console.log(JSON.stringify({status:'PASS',activities:{total:60,comprehension:24,translation:20,essay:16},directions:{bnToEn:10,enToBn:10},passages:6,graph:{families:14,skills:67,active:67,planned:0,mappings:320,preservedMappings:180},bcsCoreMappings:9,productiveUngraded:36},null,2));
+console.log(JSON.stringify({status:'PASS',activities:{total:60,comprehension:24,translation:20,essay:16},directions:{bnToEn:10,enToBn:10},passages:6,graph:{families:14,skills:67,active:67,planned:0,mappings:360,preservedMappings:220},bcsCoreMappings:9,productiveUngraded:36},null,2));

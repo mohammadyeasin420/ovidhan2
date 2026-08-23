@@ -122,7 +122,7 @@ assert.equal(new Set(diagnostic.items.filter(item => item.mapping_status === 'MA
 assert.deepEqual(new Set(boundary.probes.map(probe => probe.primary_skill_id)), new Set(['compound_subject_agreement', 'indefinite_article_a_an', 'gerund_after_preposition', 'essay_thesis_focus']));
 assert.equal(graph.families.length, 14);
 assert.equal(activeSkills.size, 67);
-assert.equal(graph.item_mappings.length, 320);
+assert.equal(graph.item_mappings.length, 360);
 
 assert.equal(frozen.aggregateSha256, '202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
 for (const item of [...frozen.pages, ...frozen.guards]) assert.equal(sha256(item.path), item.sha256, `frozen file changed ${item.path}`);
@@ -137,7 +137,7 @@ const result = {
   unmapped: asset.unmapped_requirements.length,
   ieltsCoarseMappings: ieltsGoals.map(mapping => ({skill_id: mapping.skill_id, importance: mapping.importance})),
   diagnostic: {questions: 40, mapped: 19, unmapped: 21, uniqueSkills: 12},
-  graph: {families: 14, activeSkills: 67, itemMappings: 320},
+  graph: {families: 14, activeSkills: 67, itemMappings: 360},
   frozenAggregateSha256: frozen.aggregateSha256
 };
 console.log(JSON.stringify(result, null, 2));
