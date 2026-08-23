@@ -190,7 +190,8 @@
         "essay_thesis_focus",
         "essay_outline_structure",
         "writing_coherence_cohesion",
-        "writing_visual_information_description"
+        "writing_visual_information_description",
+        "writing_argument_development"
       ],
       "related_family_ids": [
         "SENTENCE_STRUCTURE",
@@ -1983,6 +1984,33 @@
       "difficulty_band": "INTERMEDIATE",
       "exam_relevance": [
         "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "writing_argument_development",
+      "name_en": "Writing Argument Development",
+      "name_bn": "লিখিত যুক্তি বিকাশ",
+      "family_id": "WRITING",
+      "description": "Develop a relevant written argument by connecting claims with reasons, supporting examples and logical development while avoiding irrelevant or insufficient support.",
+      "prerequisites": [],
+      "related_skills": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_coherence_cohesion",
+        "word_choice_register"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "ielts-task2-argument-001",
+        "ielts-task2-argument-020",
+        "ielts-task2-argument-040"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS",
+        "GENERAL_ENGLISH"
       ],
       "status": "ACTIVE",
       "version": 1
@@ -3784,7 +3812,47 @@
     {"item_id":"ielts-task1-visual-037","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
     {"item_id":"ielts-task1-visual-038","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
     {"item_id":"ielts-task1-visual-039","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-040","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]}
+    {"item_id":"ielts-task1-visual-040","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-001","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-002","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-003","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-004","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-005","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-006","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-007","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-008","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-009","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-010","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-011","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-012","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-013","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-014","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-015","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-016","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-017","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-018","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-019","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-020","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-021","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-022","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-023","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-024","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-025","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-026","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-027","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-028","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-029","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-030","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-031","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-032","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-033","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-034","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-035","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-036","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-037","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-038","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-039","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task2-argument-040","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]}
   ],
   "transfer_patterns": [
     {
