@@ -200,6 +200,34 @@
         return items;
     }
 
+    function normalizeIeltsReadingPack(pack) {
+        const passages = new Map(((pack && pack.passages) || []).map(passage => [passage.passage_id, passage]));
+        const records = pack && Array.isArray(pack.items) ? pack.items : [];
+        return records.map(record => {
+            const passage = passages.get(record.passage_id);
+            return Object.freeze({
+                id: record.id, version: pack.schema_version, type: 'multiple-choice', question: record.question_en,
+                question_bn: record.question_bn, passage: passage && passage.text_en, passage_title: passage && passage.title_en,
+                options: Object.freeze(record.options.map(option => Object.freeze({ id: option.id, text: option.text }))),
+                correct_option: record.correct_option, correct: record.correct_answer,
+                category: 'reading', micro_skill: record.skill_id, mistake_family: 'READING_COMPREHENSION',
+                explanation_bn: record.explanation_bn, explanation_en: record.explanation_en,
+                common_wrong_reason_bn: record.common_wrong_reason_bn, evidence_locator_en: record.evidence_locator_en,
+                difficulty: String(record.difficulty).toLowerCase(), test_type: record.test_type,
+                source_status: 'reviewed', source_type: 'OVIDHAN_EDITORIAL', review_status: pack.review_status,
+                research_status: record.research_status, practice_type: record.practice_type,
+                official_question: record.official_question, goal_ids: Object.freeze(['IELTS'])
+            });
+        });
+    }
+
+    function addIeltsReadingPack(pack) {
+        const additions = normalizeIeltsReadingPack(pack);
+        const existing = new Set(items.map(item => item.id));
+        additions.forEach(item => { if (!existing.has(item.id)) { items.push(item); existing.add(item.id); } });
+        return items;
+    }
+
     function renderVisualPayload(doc, payload) {
         if (!doc || !payload) return null;
         const figure = doc.createElement('figure'); figure.className = 'mm-visual';
@@ -371,6 +399,7 @@
             const correct = doc.createElement('p'); correct.textContent = '✅ ' + item.correct; box.appendChild(correct);
             const bn = doc.createElement('p'); bn.lang='bn'; bn.textContent = item.explanation_bn; box.appendChild(bn);
             const en = doc.createElement('p'); en.textContent = item.explanation_en; box.appendChild(en);
+            if (item.evidence_locator_en) { const evidence = doc.createElement('p'); evidence.className='mm-evidence'; evidence.textContent='Evidence: ' + item.evidence_locator_en; box.appendChild(evidence); }
             host.querySelector('.mm-card').appendChild(box); box.focus();
         }
         function nextButton(nextStage) {
@@ -426,17 +455,19 @@
             load('/data/bcs-written-smartpath-v1.json'),
             load('/data/ielts-writing-coherence-practice-v1.json'),
             load('/data/ielts-academic-task1-visual-practice-v1.json'),
-            load('/data/ielts-task2-argument-practice-v1.json')
-        ]).then(([grammarPack, literaturePack, writtenPack, coherencePack, visualPack, argumentPack]) => {
+            load('/data/ielts-task2-argument-practice-v1.json'),
+            load('/data/ielts-reading-practice-v1.json')
+        ]).then(([grammarPack, literaturePack, writtenPack, coherencePack, visualPack, argumentPack, readingPack]) => {
             if (grammarPack) addReviewedPack(grammarPack);
             if (literaturePack) addLiteraturePack(literaturePack);
             if (writtenPack) addWrittenPack(writtenPack);
             if (coherencePack) addCoherencePack(coherencePack);
             if (visualPack) addAcademicTask1VisualPack(visualPack);
             if (argumentPack) addTask2ArgumentPack(argumentPack);
+            if (readingPack) addIeltsReadingPack(readingPack);
             win.dispatchEvent(new win.CustomEvent('ovidhan:practice-pack-loaded'));
             return items;
         });
     }
-    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, normalizeWrittenPack, addWrittenPack, normalizeCoherencePack, addCoherencePack, normalizeAcademicTask1VisualPack, addAcademicTask1VisualPack, normalizeTask2ArgumentPack, addTask2ArgumentPack, renderVisualPayload, initialItemFor, loadReviewedPack, mount });
+    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, normalizeWrittenPack, addWrittenPack, normalizeCoherencePack, addCoherencePack, normalizeAcademicTask1VisualPack, addAcademicTask1VisualPack, normalizeTask2ArgumentPack, addTask2ArgumentPack, normalizeIeltsReadingPack, addIeltsReadingPack, renderVisualPayload, initialItemFor, loadReviewedPack, mount });
 });
