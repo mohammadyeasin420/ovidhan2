@@ -1,0 +1,100 @@
+'use strict';
+const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.join(__dirname, '..');
+const read = file => fs.readFileSync(path.join(root, file), 'utf8');
+const pack = require('../data/ielts-writing-coherence-practice-v1.json');
+const graph = require('../skill-mistake-graph.json');
+const goals = require('../goal-skill-requirements.json');
+const requirements = require('../data/ielts-goal-requirement-map-v1.json');
+const destinations = require('../smartpath-destinations.json');
+const mirror = require('../mistake-mirror.js');
+const frozen = require('../reports/ovidhan-learning-foundation-3b-frozen-hashes.json');
+const page = read('ielts-writing-coherence-cohesion-bangla.html');
+const runtime = read('mistake-mirror.js');
+const expectedIds = Array.from({length:40}, (_, index) => `ielts-coherence-${String(index + 1).padStart(3, '0')}`);
+const allowedSubtypes = new Set(['SEQUENCE','RELATION','UNITY','REFERENCE','REPETITION','CONNECTOR_USE','COHESION_REPAIR']);
+const allowedFocus = new Set(['logical_sequence','contrast_relation','cause_effect_relation','addition_relation','example_relation','topic_support_alignment','paragraph_unity','reference_clarity','repetition_control','connector_overuse','cohesion_repair']);
+const allowedDifficulty = new Set(['FOUNDATION','INTERMEDIATE','ADVANCED']);
+const countBy = (records, field) => Object.fromEntries([...new Set(records.map(record => record[field]))].sort().map(value => [value, records.filter(record => record[field] === value).length]));
+const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex');
+
+assert.equal(pack.schema_version, 1);
+assert.equal(pack.pack_id, 'ielts-writing-coherence-practice-v1');
+assert.equal(pack.review_status, 'REVIEWED');
+assert.equal(pack.skill_id, 'writing_coherence_cohesion');
+assert.equal(pack.family, 'WRITING');
+assert.equal(pack.items.length, 40);
+assert.deepEqual(pack.items.map(item => item.id), expectedIds);
+assert.equal(new Set(pack.items.map(item => item.id)).size, 40);
+for (const item of pack.items) {
+  assert.deepEqual(item.options.map(option => option.id), ['A','B','C','D'], `${item.id} option IDs`);
+  assert.equal(new Set(item.options.map(option => option.id)).size, 4);
+  assert.equal(new Set(item.options.map(option => option.text)).size, 4, `${item.id} duplicate option text`);
+  assert.ok(['A','B','C','D'].includes(item.correct_option));
+  assert.equal(item.options.filter(option => option.id === item.correct_option).length, 1);
+  assert.equal(item.correct_answer, item.options.find(option => option.id === item.correct_option).text);
+  assert.ok(item.question_en && item.question_bn && item.explanation_en && item.explanation_bn && item.common_wrong_reason_bn);
+  assert.ok(allowedSubtypes.has(item.item_subtype), `${item.id} invalid subtype`);
+  assert.ok(allowedFocus.has(item.micro_focus), `${item.id} invalid focus`);
+  assert.ok(allowedDifficulty.has(item.difficulty), `${item.id} invalid difficulty`);
+  assert.equal(item.official_question, false);
+  assert.equal(item.practice_type, 'OVIDHAN_CREATED_IELTS_STYLE');
+  assert.equal(item.research_status, 'REVIEWED');
+  assert.equal(item.skill_id, 'writing_coherence_cohesion');
+  assert.equal(item.family, 'WRITING');
+  assert.deepEqual(item.goal_ids, ['IELTS']);
+}
+const difficulty = countBy(pack.items, 'difficulty');
+assert.deepEqual(difficulty, {ADVANCED:10,FOUNDATION:12,INTERMEDIATE:18});
+assert.deepEqual(pack.difficulty_distribution, {FOUNDATION:12,INTERMEDIATE:18,ADVANCED:10});
+
+const skill = graph.skills.find(candidate => candidate.id === 'writing_coherence_cohesion');
+assert.ok(skill && skill.status === 'ACTIVE');
+assert.ok(graph.families.find(family => family.family_id === 'WRITING').child_skill_ids.includes(skill.id));
+assert.deepEqual([graph.families.length, graph.skills.filter(candidate => candidate.status === 'ACTIVE').length, graph.item_mappings.length], [14,66,280]);
+const newMappings = graph.item_mappings.filter(mapping => mapping.item_id.startsWith('ielts-coherence-'));
+assert.equal(newMappings.length, 40);
+assert.deepEqual(newMappings.map(mapping => mapping.item_id), expectedIds);
+assert.ok(newMappings.every(mapping => mapping.primary_skill_id === skill.id && mapping.primary_family_id === 'WRITING'));
+
+const ieltsGoals = goals.mappings.filter(mapping => mapping.goal_id === 'IELTS');
+assert.equal(ieltsGoals.length, 8);
+assert.equal(ieltsGoals.find(mapping => mapping.skill_id === skill.id).importance, 'CORE');
+assert.equal(ieltsGoals.find(mapping => mapping.skill_id === 'essay_outline_structure').importance, 'SUPPORTING');
+for (const id of ['writing_academic_coherence_cohesion','writing_gt_coherence_cohesion']) {
+  const relation = requirements.mapped_relations.find(candidate => candidate.requirement_id === id && candidate.skill_id === skill.id);
+  assert.ok(relation, `missing relation ${id}`);
+  assert.equal(relation.mapping_class, 'ASSESSMENT_CRITERION_ALIGNMENT');
+  assert.equal(relation.coverage_status, 'EVIDENCE_GAP');
+  assert.equal(relation.diagnostic_evidence, false);
+  assert.equal(relation.boundary_evidence, false);
+  assert.equal(relation.static_destination, true);
+  assert.match(relation.coverage_note, /no productive Writing performance evidence/i);
+}
+const ieltsDestinations = destinations.destinations.filter(destination => destination.goal_ids.includes('IELTS')).map(destination => destination.skill_id);
+assert.deepEqual(ieltsDestinations, ['formal_letter_writing','writing_coherence_cohesion']);
+const destination = destinations.destinations.find(candidate => candidate.skill_id === skill.id);
+assert.ok(destination && destination.url === '/ielts-writing-coherence-cohesion-bangla.html' && destination.review_status === 'REVIEWED');
+assert.ok(!destinations.destinations.find(candidate => candidate.skill_id === 'writing_precis').goal_ids.includes('IELTS'));
+
+const normalized = mirror.normalizeCoherencePack(pack);
+assert.equal(normalized.length, 40);
+assert.ok(normalized.every(item => item.type === 'multiple-choice' && item.goal_ids.length === 1 && item.goal_ids[0] === 'IELTS'));
+assert.match(runtime, /function normalizeCoherencePack/);
+assert.match(runtime, /load\('\/data\/ielts-writing-coherence-practice-v1\.json'\)/);
+assert.doesNotMatch(runtime, /fetch\(['"]https?:|XMLHttpRequest|api\.openai|openai\.com/i);
+assert.doesNotMatch(runtime + page, /localStorage\.setItem|sessionStorage\.setItem|learner_text|raw_learner|writing_submission/i);
+assert.doesNotMatch(page, /Get Band\s*7|increase your score|predict your band/i);
+assert.match(page, /Objective answer practice[\s\S]*productive writing performance/i);
+assert.match(page, /rel="canonical" href="https:\/\/ovidhan\.net\/ielts-writing-coherence-cohesion-bangla\.html"/);
+assert.match(page, /id="mistakeMirror"/);
+
+assert.equal(frozen.aggregateSha256, '202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
+for (const item of [...frozen.pages, ...frozen.guards]) assert.equal(sha256(item.path), item.sha256, `frozen file changed ${item.path}`);
+const aggregate = crypto.createHash('sha256').update(frozen.pages.map(item => `${item.path}\0${sha256(item.path)}\n`).sort().join('')).digest('hex');
+assert.equal(aggregate, frozen.aggregateSha256);
+
+console.log(JSON.stringify({status:'PASS',items:40,difficulty,itemSubtype:countBy(pack.items,'item_subtype'),microFocus:countBy(pack.items,'micro_focus'),graph:{families:14,activeSkills:66,itemMappings:280},ieltsCoarseMappings:8,ieltsStaticDestinations:ieltsDestinations,productiveEvidence:false,frozenAggregateSha256:frozen.aggregateSha256}, null, 2));

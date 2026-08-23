@@ -127,6 +127,30 @@
         return items;
     }
 
+    function normalizeCoherencePack(pack) {
+        const records = pack && Array.isArray(pack.items) ? pack.items : [];
+        return records.map(record => Object.freeze({
+            id: record.id, version: pack.schema_version, type: 'multiple-choice', question: record.question_en,
+            context: record.context_en, context_bn: record.context_bn,
+            options: Object.freeze(record.options.map(option => Object.freeze({ id: option.id, text: option.text }))),
+            correct_option: record.correct_option, correct: record.correct_answer,
+            category: 'writing', micro_skill: 'writing_coherence_cohesion', mistake_family: 'WRITING',
+            explanation_bn: record.explanation_bn, explanation_en: record.explanation_en,
+            common_wrong_reason_bn: record.common_wrong_reason_bn,
+            difficulty: String(record.difficulty).toLowerCase(), source_status: 'reviewed',
+            source_type: 'OVIDHAN_EDITORIAL', review_status: pack.review_status,
+            research_status: record.research_status, practice_type: record.practice_type,
+            official_question: record.official_question, goal_ids: Object.freeze(['IELTS'])
+        }));
+    }
+
+    function addCoherencePack(pack) {
+        const additions = normalizeCoherencePack(pack);
+        const existing = new Set(items.map(item => item.id));
+        additions.forEach(item => { if (!existing.has(item.id)) { items.push(item); existing.add(item.id); } });
+        return items;
+    }
+
     function optionsFor(item, stage) {
         if (item.type === 'multiple-choice') return item.options;
         return stage === 'repair'
@@ -174,7 +198,7 @@
             const card = doc.createElement('div'); card.className = 'mm-card';
             const heading = doc.createElement('h3'); heading.textContent = label; heading.tabIndex = -1; card.appendChild(heading);
             const progress = doc.createElement('p'); progress.className = 'mm-progress'; progress.textContent = stage === 'initial' ? 'ধাপ ১/৩ · Diagnose' : stage === 'repair' ? 'ধাপ ২/৩ · Repair' : 'ধাপ ৩/৩ · Retest'; card.appendChild(progress);
-            if (item.passage) { const passage = doc.createElement('div'); passage.className = 'mm-passage'; const passageTitle = doc.createElement('h4'); passageTitle.textContent = item.passage_title || 'Passage'; passage.appendChild(passageTitle); const passageText = doc.createElement('p'); passageText.textContent = item.passage; passage.appendChild(passageText); card.appendChild(passage); }
+            if (item.passage || item.context) { const passage = doc.createElement('div'); passage.className = 'mm-passage'; const passageTitle = doc.createElement('h4'); passageTitle.textContent = item.passage_title || 'Context'; passage.appendChild(passageTitle); const passageText = doc.createElement('p'); passageText.textContent = item.passage || item.context; passage.appendChild(passageText); if (item.context_bn) { const contextBn = doc.createElement('p'); contextBn.lang = 'bn'; contextBn.textContent = item.context_bn; passage.appendChild(contextBn); } card.appendChild(passage); }
             const prompt = doc.createElement('p'); prompt.className = 'mm-prompt';
             prompt.textContent = item.type === 'multiple-choice' ? item.question : stage === 'initial' ? item.incorrect : 'Choose the correct sentence:'; card.appendChild(prompt);
             const group = doc.createElement('div'); group.className = 'mm-options'; group.setAttribute('role','group'); group.setAttribute('aria-label', label);
@@ -298,14 +322,16 @@
         return Promise.all([
             load('/data/bcs-smartpath-practice-v1.json'),
             load('/data/bcs-literature-smartpath-v1.json'),
-            load('/data/bcs-written-smartpath-v1.json')
-        ]).then(([grammarPack, literaturePack, writtenPack]) => {
+            load('/data/bcs-written-smartpath-v1.json'),
+            load('/data/ielts-writing-coherence-practice-v1.json')
+        ]).then(([grammarPack, literaturePack, writtenPack, coherencePack]) => {
             if (grammarPack) addReviewedPack(grammarPack);
             if (literaturePack) addLiteraturePack(literaturePack);
             if (writtenPack) addWrittenPack(writtenPack);
+            if (coherencePack) addCoherencePack(coherencePack);
             win.dispatchEvent(new win.CustomEvent('ovidhan:practice-pack-loaded'));
             return items;
         });
     }
-    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, normalizeWrittenPack, addWrittenPack, loadReviewedPack, mount });
+    return Object.freeze({ items, optionsFor, chooseNext, normalizeReviewedPack, addReviewedPack, normalizeLiteraturePack, addLiteraturePack, normalizeWrittenPack, addWrittenPack, normalizeCoherencePack, addCoherencePack, loadReviewedPack, mount });
 });

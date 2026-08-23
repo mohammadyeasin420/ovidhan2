@@ -188,7 +188,8 @@
         "writing_precis",
         "formal_letter_writing",
         "essay_thesis_focus",
-        "essay_outline_structure"
+        "essay_outline_structure",
+        "writing_coherence_cohesion"
       ],
       "related_family_ids": [
         "SENTENCE_STRUCTURE",
@@ -1931,6 +1932,34 @@
       ],
       "status": "ACTIVE",
       "version": 1
+    },
+    {
+      "id": "writing_coherence_cohesion",
+      "name_en": "Writing Coherence and Cohesion",
+      "name_bn": "লেখার সুসংগততা ও সংযোগ",
+      "family_id": "WRITING",
+      "description": "Ability to organise ideas logically and use cohesive devices appropriately so relationships between sentences and paragraphs are easy to follow.",
+      "prerequisites": [],
+      "related_skills": [
+        "essay_outline_structure",
+        "word_choice_register",
+        "coordinating_conjunctions",
+        "subordinate_clause_connection"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "ielts-coherence-001",
+        "ielts-coherence-013",
+        "ielts-coherence-040"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS",
+        "BCS",
+        "GENERAL_ENGLISH"
+      ],
+      "status": "ACTIVE",
+      "version": 1
     }
   ],
   "item_mappings": [
@@ -3409,7 +3438,47 @@
       "primary_skill_id": "essay_outline_structure",
       "primary_family_id": "WRITING",
       "secondary_skill_ids": []
-    }
+    },
+    {"item_id":"ielts-coherence-001","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-002","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-003","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-004","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-005","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-006","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-007","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-008","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-009","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-010","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-011","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-012","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-013","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-014","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-015","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-016","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-017","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-018","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-019","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-020","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-021","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-022","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-023","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-024","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-025","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-026","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-027","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-028","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-029","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-030","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-031","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-032","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-033","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-034","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-035","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-036","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-037","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-038","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-039","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-coherence-040","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]}
   ],
   "transfer_patterns": [
     {
