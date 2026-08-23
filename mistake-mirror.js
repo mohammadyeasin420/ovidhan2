@@ -155,6 +155,7 @@
         const records = pack && Array.isArray(pack.items) ? pack.items : [];
         return records.map(record => Object.freeze({
             id: record.id, version: pack.schema_version, type: 'multiple-choice', question: record.question_en,
+            question_bn: record.question_bn,
             visual_payload: record.visual_payload,
             options: Object.freeze(record.options.map(option => Object.freeze({ id: option.id, text: option.text }))),
             correct_option: record.correct_option, correct: record.correct_answer,
@@ -183,6 +184,28 @@
             const list = doc.createElement('ol'); list.className = 'mm-process';
             payload.stages.forEach(stage => { const li=doc.createElement('li'); li.textContent=`${stage.label_en} · ${stage.label_bn}`; li.dataset.stageId=stage.id; list.appendChild(li); });
             figure.appendChild(list); return figure;
+        }
+        if (payload.visual_type === 'LINE_CHART' || payload.visual_type === 'BAR_CHART') {
+            const svgNode = tag => doc.createElementNS ? doc.createElementNS('http://www.w3.org/2000/svg',tag) : doc.createElement(tag);
+            const svg=svgNode('svg'), title=svgNode('title');
+            svg.className = payload.visual_type === 'LINE_CHART' ? 'mm-line-chart' : 'mm-bar-chart';
+            svg.setAttribute('viewBox','0 0 640 260'); svg.setAttribute('role','img'); svg.setAttribute('aria-label',`${payload.title}. ${payload.unit || 'values'}.`);
+            title.textContent = `${payload.title}. Labelled ${payload.visual_type === 'LINE_CHART' ? 'data points' : 'bars'}; full values are in the table below.`; svg.appendChild(title);
+            const values=payload.series.flatMap(series=>series.values), max=Math.max(...values,0), min=payload.visual_type === 'LINE_CHART' ? Math.min(...values,0) : 0;
+            const scaleY=value=>220-((value-min)/(max-min||1))*170;
+            if (payload.visual_type === 'LINE_CHART') {
+                const colors=['#0f766e','#b7791f','#7c3aed','#be123c'];
+                payload.series.forEach((series,seriesIndex)=>{
+                    const points=series.values.map((value,index)=>`${50+(index*(540/Math.max(1,payload.categories.length-1)))},${scaleY(value)}`).join(' ');
+                    const line=svgNode('polyline'); line.setAttribute('points',points); line.setAttribute('fill','none'); line.setAttribute('stroke',colors[seriesIndex%colors.length]); line.setAttribute('stroke-width','4'); svg.appendChild(line);
+                    series.values.forEach((value,index)=>{const x=50+(index*(540/Math.max(1,payload.categories.length-1))),y=scaleY(value),point=svgNode('circle'),label=svgNode('text');point.setAttribute('cx',x);point.setAttribute('cy',y);point.setAttribute('r','5');point.setAttribute('fill',colors[seriesIndex%colors.length]);point.setAttribute('aria-label',`${series.name}, ${payload.categories[index]}: ${value} ${payload.unit||''}`);label.setAttribute('x',x);label.setAttribute('y',y-9);label.setAttribute('text-anchor','middle');label.textContent=String(value);svg.appendChild(point);svg.appendChild(label);});
+                });
+                payload.categories.forEach((category,index)=>{const label=svgNode('text');label.setAttribute('x',50+(index*(540/Math.max(1,payload.categories.length-1))));label.setAttribute('y','245');label.setAttribute('text-anchor','middle');label.textContent=category;svg.appendChild(label);});
+            } else {
+                const groupWidth=540/payload.categories.length, barWidth=Math.max(10,(groupWidth-16)/payload.series.length),colors=['#0f766e','#d69e2e','#7c3aed','#be123c'];
+                payload.categories.forEach((category,categoryIndex)=>{payload.series.forEach((series,seriesIndex)=>{const value=series.values[categoryIndex],x=50+categoryIndex*groupWidth+8+seriesIndex*barWidth,y=scaleY(value),bar=svgNode('rect'),valueLabel=svgNode('text');bar.setAttribute('x',x);bar.setAttribute('y',y);bar.setAttribute('width',Math.max(8,barWidth-3));bar.setAttribute('height',220-y);bar.setAttribute('fill',colors[seriesIndex%colors.length]);bar.setAttribute('aria-label',`${series.name}, ${category}: ${value} ${payload.unit||''}`);valueLabel.setAttribute('x',x+(barWidth-3)/2);valueLabel.setAttribute('y',y-6);valueLabel.setAttribute('text-anchor','middle');valueLabel.textContent=String(value);svg.appendChild(bar);svg.appendChild(valueLabel);});const label=svgNode('text');label.setAttribute('x',50+categoryIndex*groupWidth+groupWidth/2);label.setAttribute('y','245');label.setAttribute('text-anchor','middle');label.textContent=category;svg.appendChild(label);});
+            }
+            figure.appendChild(svg);
         }
         const table = doc.createElement('table'); table.className = 'mm-visual-table';
         const thead=doc.createElement('thead'), header=doc.createElement('tr'), tbody=doc.createElement('tbody');
@@ -254,6 +277,7 @@
             if (item.visual_payload) card.appendChild(renderVisualPayload(doc, item.visual_payload));
             const prompt = doc.createElement('p'); prompt.className = 'mm-prompt';
             prompt.textContent = item.type === 'multiple-choice' ? item.question : stage === 'initial' ? item.incorrect : 'Choose the correct sentence:'; card.appendChild(prompt);
+            if (item.question_bn) { const promptBn=doc.createElement('p'); promptBn.className='mm-prompt-bn'; promptBn.lang='bn'; promptBn.textContent=item.question_bn; card.appendChild(promptBn); }
             const group = doc.createElement('div'); group.className = 'mm-options'; group.setAttribute('role','group'); group.setAttribute('aria-label', label);
             const opts = item.type === 'multiple-choice' ? optionsFor(item, stage) : stage === 'initial' ? [{id:'correct',text:'✅ Correct'}, {id:'incorrect',text:'❌ Incorrect'}] : optionsFor(item, stage);
             opts.forEach(option => { const button = doc.createElement('button'); button.type='button'; button.className='mm-option'; button.textContent=option.text; button.addEventListener('click', () => answer(option.id)); group.appendChild(button); });
