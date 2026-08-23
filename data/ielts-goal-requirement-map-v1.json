@@ -4,14 +4,15 @@
   "review_status": "REVIEWED",
   "official_source_policy": "IELTS_OFFICIAL_ONLY",
   "sources": [
-    {"source_id":"IELTS_TEST_FORMAT","title":"IELTS test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format","host":"ielts.org"},
-    {"source_id":"IELTS_READING_FORMAT","title":"IELTS Academic Reading test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format-in-detail/ielts-academic-reading","host":"ielts.org"},
-    {"source_id":"IELTS_GT_READING_FORMAT","title":"IELTS General Training Reading test format","url":"https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-test-format-in-detail/ielts-general-training-reading","host":"ielts.org"},
-    {"source_id":"IELTS_LISTENING_FORMAT","title":"IELTS Listening test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format-in-detail/ielts-listening","host":"ielts.org"},
-    {"source_id":"IELTS_ACADEMIC_WRITING","title":"IELTS Academic Writing test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format-in-detail/ielts-academic-writing","host":"ielts.org"},
-    {"source_id":"IELTS_GT_WRITING","title":"IELTS General Training Writing test format","url":"https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-test-format-in-detail/ielts-general-training-writing","host":"ielts.org"},
-    {"source_id":"IELTS_SPEAKING_FORMAT","title":"IELTS Speaking test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format-in-detail/ielts-speaking","host":"ielts.org"},
-    {"source_id":"IELTS_SCORING","title":"IELTS scoring in detail","url":"https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail","host":"ielts.org"}
+    {"source_id":"IELTS_TEST_FORMAT","title":"IELTS Academic test format and sections","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test","host":"ielts.org","access_date":"2026-08-23"},
+    {"source_id":"IELTS_GT_TEST_FORMAT","title":"IELTS General Training test format and sections","url":"https://ielts.org/take-a-test/test-types/ielts-general-training-test","host":"ielts.org","access_date":"2026-08-23"},
+    {"source_id":"IELTS_READING_FORMAT","title":"IELTS Academic Reading test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading","host":"ielts.org","access_date":"2026-08-23"},
+    {"source_id":"IELTS_GT_READING_FORMAT","title":"IELTS General Training Reading test format","url":"https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading","host":"ielts.org","access_date":"2026-08-23"},
+    {"source_id":"IELTS_LISTENING_FORMAT","title":"IELTS Listening test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening","host":"ielts.org","access_date":"2026-08-23"},
+    {"source_id":"IELTS_ACADEMIC_WRITING","title":"IELTS Academic Writing test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing","host":"ielts.org","access_date":"2026-08-23"},
+    {"source_id":"IELTS_GT_WRITING","title":"IELTS General Training Writing test format","url":"https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing","host":"ielts.org","access_date":"2026-08-23"},
+    {"source_id":"IELTS_SPEAKING_FORMAT","title":"IELTS Speaking test format","url":"https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking","host":"ielts.org","access_date":"2026-08-23"},
+    {"source_id":"IELTS_SCORING","title":"IELTS scoring in detail","url":"https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail","host":"ielts.org","access_date":"2026-08-23"}
   ],
   "requirements": [
     {"requirement_id":"reading_academic_main_idea","test_type":"ACADEMIC","section":"READING","official_requirement":"Identify main ideas","source_ids":["IELTS_READING_FORMAT"]},
@@ -20,7 +21,7 @@
     {"requirement_id":"reading_gt_detail","test_type":"GENERAL_TRAINING","section":"READING","official_requirement":"Identify specific information and detail","source_ids":["IELTS_GT_READING_FORMAT"]},
     {"requirement_id":"reading_academic_writer_views_claims","test_type":"ACADEMIC","section":"READING","official_requirement":"Identify a writer's views or claims","source_ids":["IELTS_READING_FORMAT"]},
     {"requirement_id":"reading_gt_writer_views_claims","test_type":"GENERAL_TRAINING","section":"READING","official_requirement":"Identify a writer's views or claims","source_ids":["IELTS_GT_READING_FORMAT"]},
-    {"requirement_id":"listening_main_points","test_type":"SHARED","section":"LISTENING","official_requirement":"Understand the main points","source_ids":["IELTS_TEST_FORMAT","IELTS_LISTENING_FORMAT"]},
+    {"requirement_id":"listening_main_points","test_type":"SHARED","section":"LISTENING","official_requirement":"Understand the main points","source_ids":["IELTS_TEST_FORMAT","IELTS_GT_TEST_FORMAT","IELTS_LISTENING_FORMAT"]},
     {"requirement_id":"listening_detailed_information","test_type":"SHARED","section":"LISTENING","official_requirement":"Listen for detailed information","source_ids":["IELTS_LISTENING_FORMAT"]},
     {"requirement_id":"listening_follow_conversation","test_type":"SHARED","section":"LISTENING","official_requirement":"Follow a conversation between two people","source_ids":["IELTS_LISTENING_FORMAT"]},
     {"requirement_id":"listening_connect_facts","test_type":"SHARED","section":"LISTENING","official_requirement":"Recognise how facts are connected","source_ids":["IELTS_LISTENING_FORMAT"]},

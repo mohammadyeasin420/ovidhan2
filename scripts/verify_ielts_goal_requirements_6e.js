@@ -19,14 +19,31 @@ assert.equal(asset.map_id, 'ielts-goal-requirements-v1');
 assert.equal(asset.review_status, 'REVIEWED');
 assert.equal(asset.official_source_policy, 'IELTS_OFFICIAL_ONLY');
 assert.ok(asset.sources.length > 0, 'source registry empty');
+const approvedSourceUrls = new Map([
+  ['IELTS_TEST_FORMAT', 'https://ielts.org/take-a-test/test-types/ielts-academic-test'],
+  ['IELTS_GT_TEST_FORMAT', 'https://ielts.org/take-a-test/test-types/ielts-general-training-test'],
+  ['IELTS_READING_FORMAT', 'https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading'],
+  ['IELTS_GT_READING_FORMAT', 'https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading'],
+  ['IELTS_LISTENING_FORMAT', 'https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening'],
+  ['IELTS_ACADEMIC_WRITING', 'https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing'],
+  ['IELTS_GT_WRITING', 'https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing'],
+  ['IELTS_SPEAKING_FORMAT', 'https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking'],
+  ['IELTS_SCORING', 'https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail']
+]);
 const sourceIds = new Set();
+const sourceUrls = new Set();
 for (const source of asset.sources) {
   assert.ok(!sourceIds.has(source.source_id), `duplicate source ID ${source.source_id}`);
   sourceIds.add(source.source_id);
   const url = new URL(source.url);
   assert.ok(url.hostname === 'ielts.org' || url.hostname.endsWith('.ielts.org'), `non-official source host ${url.hostname}`);
   assert.equal(source.host, 'ielts.org');
+  assert.equal(source.access_date, '2026-08-23', `missing or incorrect access_date ${source.source_id}`);
+  assert.equal(source.url, approvedSourceUrls.get(source.source_id), `unapproved source URL ${source.source_id}`);
+  assert.ok(!sourceUrls.has(source.url), `duplicate source URL ${source.url}`);
+  sourceUrls.add(source.url);
 }
+assert.equal(asset.sources.length, approvedSourceUrls.size, 'official source registry size');
 
 const testTypes = new Set(['SHARED', 'ACADEMIC', 'GENERAL_TRAINING']);
 const sections = new Set(['LISTENING', 'READING', 'WRITING', 'SPEAKING']);

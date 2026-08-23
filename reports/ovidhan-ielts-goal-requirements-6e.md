@@ -15,15 +15,16 @@ Counts above are derived from the final asset and are asserted by `scripts/verif
 
 ## Official source registry
 
-Only IELTS.org is admitted:
+Only IELTS.org is admitted. All sources were accessed on **2026-08-23**:
 
-- [IELTS test format](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format)
-- [Academic Reading](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format-in-detail/ielts-academic-reading)
-- [General Training Reading](https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-test-format-in-detail/ielts-general-training-reading)
-- [Listening](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format-in-detail/ielts-listening)
-- [Academic Writing](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format-in-detail/ielts-academic-writing)
-- [General Training Writing](https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-test-format-in-detail/ielts-general-training-writing)
-- [Speaking](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-test-format-in-detail/ielts-speaking)
+- [IELTS Academic test format and sections](https://ielts.org/take-a-test/test-types/ielts-academic-test)
+- [IELTS General Training test format and sections](https://ielts.org/take-a-test/test-types/ielts-general-training-test)
+- [Academic Reading](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading)
+- [General Training Reading](https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading)
+- [Listening](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-listening)
+- [Academic Writing](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing)
+- [General Training Writing](https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-writing)
+- [Speaking](https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-speaking)
 - [IELTS scoring in detail](https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail)
 
 The verifier rejects an empty registry, unresolved source IDs and hosts outside `ielts.org`.
@@ -142,6 +143,7 @@ Official GT Task 1 may require a personal, semi-formal or formal letter. The cur
 - Frozen SEO aggregate unchanged: `202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0`.
 - Every frozen page and guard file is independently rehashed, and the page aggregate is recomputed.
 - No diagnostic, Boundary, Learning Foundation, Mistake Profile, routing, destination, graph or frozen SEO file is modified.
+- The Phase 5B3 verifier was updated only to scope its nine-mapping assertion to BCS. Canonical skills are intentionally reusable across goals; the original nine BCS `CORE` mappings, BCS-only routing/leakage checks, content and graph remain unchanged.
 
 ## Limitations
 
