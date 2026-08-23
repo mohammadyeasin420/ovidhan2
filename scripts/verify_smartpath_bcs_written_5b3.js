@@ -51,8 +51,10 @@ assert.equal(graph.families.find(f=>f.family_id==='READING_COMPREHENSION').child
 assert.equal(graph.families.find(f=>f.family_id==='TRANSLATION').child_skill_ids.length,2);
 assert.ok(graph.families.find(f=>f.family_id==='WRITING').child_skill_ids.includes('essay_thesis_focus'));
 assert.ok(graph.families.find(f=>f.family_id==='WRITING').child_skill_ids.includes('essay_outline_structure'));
-const newGoalMappings = goals.mappings.filter(mapping => allowed.has(mapping.skill_id));
-assert.equal(newGoalMappings.length, 9); assert.ok(newGoalMappings.every(mapping => mapping.goal_id === 'BCS' && mapping.importance === 'CORE'));
+const bcsWrittenGoalMappings = goals.mappings.filter(mapping => mapping.goal_id === 'BCS' && allowed.has(mapping.skill_id));
+assert.equal(bcsWrittenGoalMappings.length, 9);
+assert.ok(bcsWrittenGoalMappings.every(mapping => mapping.importance === 'CORE'));
+assert.deepEqual(new Set(bcsWrittenGoalMappings.map(mapping => mapping.skill_id)), allowed);
 
 mirror.addReviewedPack(grammarPack); mirror.addLiteraturePack(literaturePack); mirror.addWrittenPack(pack);
 assert.equal(mirror.items.length, 240);
