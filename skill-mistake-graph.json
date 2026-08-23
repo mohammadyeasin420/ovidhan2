@@ -3053,7 +3053,7 @@
     },
     {
       "item_id": "bcs-lit-candidate-082",
-      "primary_skill_id": "genre_form_identification",
+      "primary_skill_id": "quotation_attribution",
       "primary_family_id": "LITERATURE",
       "secondary_skill_ids": []
     },
@@ -3105,6 +3105,246 @@
       "primary_family_id": "LITERATURE",
       "secondary_skill_ids": []
     },
+      {
+        "item_id": "bcs-lit-candidate-005",
+        "primary_skill_id": "literary_period_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-009",
+        "primary_skill_id": "literary_period_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-012",
+        "primary_skill_id": "literary_period_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-017",
+        "primary_skill_id": "literary_period_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-020",
+        "primary_skill_id": "literary_period_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-022",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-024",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-026",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-035",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-039",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-044",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-047",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-058",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-076",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-080",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-081",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-083",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-087",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-089",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-090",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-094",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-095",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-096",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-097",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-099",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-100",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-101",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-106",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-107",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-108",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-109",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-110",
+        "primary_skill_id": "genre_form_identification",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-111",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-112",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-113",
+        "primary_skill_id": "quotation_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-114",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-115",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-116",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-117",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
+      {
+        "item_id": "bcs-lit-candidate-118",
+        "primary_skill_id": "author_work_attribution",
+        "primary_family_id": "LITERATURE",
+        "secondary_skill_ids": []
+      },
     {
       "item_id": "bcs-written-comp-001",
       "primary_skill_id": "reading_main_idea",

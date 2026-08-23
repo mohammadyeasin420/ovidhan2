@@ -47,7 +47,7 @@ asset.probes.forEach(probe => {
 });
 assert.equal(graph.families.length, 14);
 assert.equal(graph.skills.filter(skill => skill.status === 'ACTIVE').length, 67);
-assert.equal(graph.item_mappings.length, 320);
+assert.equal(graph.item_mappings.length, 360);
 assert.match(diagnostic, /deriveBoundarySignal\(anchorCorrect,probeCorrect\)/);
 assert.match(diagnostic, /buildBoundaryEvidencePayload\(true\)/);
 assert.match(diagnostic, /function showResults\(\)[\s\S]*buildBoundaryEvidencePayload\(true\)/);
@@ -58,4 +58,4 @@ assert.deepEqual([...diagnostic.matchAll(/['"](ovidhan_ielts_[^'"]+)['"]/g)].map
 const frozen = require('../reports/ovidhan-learning-foundation-3b-frozen-hashes.json');
 assert.equal(frozen.aggregateSha256, '202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
 [...frozen.pages, ...frozen.guards].forEach(item => assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root, item.path))).digest('hex'), item.sha256));
-console.log(JSON.stringify({status: 'PASS', questions: 40, probes: 4, questionSetSha256: questionSha, graph: {families: 14, activeSkills: 67, itemMappings: 320}, frozenAggregateSha256: frozen.aggregateSha256}, null, 2));
+console.log(JSON.stringify({status: 'PASS', questions: 40, probes: 4, questionSetSha256: questionSha, graph: {families: 14, activeSkills: 67, itemMappings: 360}, frozenAggregateSha256: frozen.aggregateSha256}, null, 2));

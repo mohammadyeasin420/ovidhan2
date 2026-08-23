@@ -54,7 +54,7 @@ assert.deepEqual(pack.difficulty_distribution, {FOUNDATION:12,INTERMEDIATE:18,AD
 const skill = graph.skills.find(candidate => candidate.id === 'writing_coherence_cohesion');
 assert.ok(skill && skill.status === 'ACTIVE');
 assert.ok(graph.families.find(family => family.family_id === 'WRITING').child_skill_ids.includes(skill.id));
-assert.deepEqual([graph.families.length, graph.skills.filter(candidate => candidate.status === 'ACTIVE').length, graph.item_mappings.length], [14,67,320]);
+assert.deepEqual([graph.families.length, graph.skills.filter(candidate => candidate.status === 'ACTIVE').length, graph.item_mappings.length], [14,67,360]);
 const newMappings = graph.item_mappings.filter(mapping => mapping.item_id.startsWith('ielts-coherence-'));
 assert.equal(newMappings.length, 40);
 assert.deepEqual(newMappings.map(mapping => mapping.item_id), expectedIds);
@@ -112,4 +112,4 @@ for (const item of [...frozen.pages, ...frozen.guards]) assert.equal(sha256(item
 const aggregate = crypto.createHash('sha256').update(frozen.pages.map(item => `${item.path}\0${sha256(item.path)}\n`).sort().join('')).digest('hex');
 assert.equal(aggregate, frozen.aggregateSha256);
 
-console.log(JSON.stringify({status:'PASS',items:40,difficulty,itemSubtype:countBy(pack.items,'item_subtype'),microFocus:countBy(pack.items,'micro_focus'),graph:{families:14,activeSkills:67,itemMappings:320},ieltsCoarseMappings:9,ieltsStaticDestinations:ieltsDestinations,productiveEvidence:false,frozenAggregateSha256:frozen.aggregateSha256}, null, 2));
+console.log(JSON.stringify({status:'PASS',items:40,difficulty,itemSubtype:countBy(pack.items,'item_subtype'),microFocus:countBy(pack.items,'micro_focus'),graph:{families:14,activeSkills:67,itemMappings:360},ieltsCoarseMappings:9,ieltsStaticDestinations:ieltsDestinations,productiveEvidence:false,frozenAggregateSha256:frozen.aggregateSha256}, null, 2));

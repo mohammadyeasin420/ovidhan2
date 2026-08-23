@@ -16,12 +16,14 @@ const profileApi = require('../mistake-profile.js');
 const router = require('../smartpath-router.js');
 const learningApi = require('../learning-foundation.js');
 
-const expectedCounts = {literary_period_identification:15,author_work_attribution:35,quotation_attribution:20,genre_form_identification:10};
+const expectedCounts = {literary_period_identification:20,author_work_attribution:50,quotation_attribution:30,genre_form_identification:20};
 const literatureSkills = new Set(Object.keys(expectedCounts));
 assert.equal(literaturePack.pack_id, 'bcs-literature-smartpath-v1');
-assert.equal(literaturePack.version, 1);
+assert.equal(literaturePack.version, 2);
 assert.equal(literaturePack.review_status, 'REVIEWED');
-assert.equal(literaturePack.items.length, 80);
+assert.deepEqual(literaturePack.counts, {total:120,period:20,author_work:50,quotation:30,genre_form:20});
+assert.equal(literaturePack.items.length, 120);
+const expectedIds = Array.from({length:120}, (_, index) => `bcs-lit-candidate-${String(index + 1).padStart(3, '0')}`);
 const counts = {};
 literaturePack.items.forEach(item => {
     counts[item.skill_id] = (counts[item.skill_id] || 0) + 1;
@@ -29,7 +31,7 @@ literaturePack.items.forEach(item => {
     assert.ok(literatureSkills.has(item.skill_id));
     assert.ok(['BEGINNER','INTERMEDIATE','ADVANCED'].includes(item.difficulty));
     assert.equal(item.options.length, 4);
-    assert.equal(new Set(item.options.map(option => option.id)).size, 4);
+    assert.deepEqual(item.options.map(option => option.id), ['A','B','C','D']);
     assert.equal(new Set(item.options.map(option => option.text)).size, 4);
     assert.equal(item.options.filter(option => option.id === item.correct_option).length, 1);
     assert.equal(item.options.find(option => option.id === item.correct_option).text, item.correct_answer);
@@ -42,8 +44,28 @@ literaturePack.items.forEach(item => {
     assert.equal(JSON.stringify(item).isWellFormed(), true);
 });
 assert.deepEqual(counts, expectedCounts);
-assert.equal(new Set(literaturePack.items.map(item => item.candidate_id)).size, 80);
-assert.equal(new Set(literaturePack.items.map(item => item.question.trim())).size, 80);
+const candidateIds = literaturePack.items.map(item => item.candidate_id);
+assert.equal(new Set(candidateIds).size, 120);
+assert.deepEqual([...candidateIds].sort(), expectedIds);
+assert.equal(new Set(literaturePack.items.map(item => item.question.trim())).size, 120);
+
+const normaliseQuotation = question => {
+    const quoted = question.match(/^["“]([^"”]+)["”]/);
+    return (quoted ? quoted[1] : question).normalize('NFKD').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+};
+const quotationItems = literaturePack.items.filter(item => item.skill_id === 'quotation_attribution');
+const quotationGroups = new Map();
+quotationItems.forEach(item => {
+    const key = normaliseQuotation(item.question);
+    quotationGroups.set(key, (quotationGroups.get(key) || []).concat(item.candidate_id));
+});
+const semanticQuotationDuplicates = [...quotationGroups.entries()].filter(([, ids]) => ids.length > 1);
+assert.deepEqual(semanticQuotationDuplicates, []);
+[['035','066'],['039','061'],['044','064'],['047','065']].forEach(([left, right]) => {
+    const a = literaturePack.items.find(item => item.candidate_id.endsWith(left));
+    const b = literaturePack.items.find(item => item.candidate_id.endsWith(right));
+    assert.notEqual(normaliseQuotation(a.question), normaliseQuotation(b.question), `${left} and ${right} remain semantic duplicates`);
+});
 
 assert.equal(graph.graph_version, 3);
 assert.equal(graph.families.length, 14);
@@ -59,13 +81,19 @@ assert.deepEqual(new Set(graphLiteratureSkills.map(skill => skill.id)), literatu
 assert.ok(graphLiteratureSkills.every(skill => skill.status === 'ACTIVE'));
 graphLiteratureSkills.forEach(skill => skill.example_item_ids.forEach(id => assert.equal(literaturePack.items.find(item => item.candidate_id === id).skill_id, skill.id)));
 assert.equal(graph.skills.filter(skill => /^bcs_/.test(skill.id) && /liter|author|quotation|genre/.test(skill.id)).length, 0);
-assert.equal(graph.item_mappings.length, 320);
-assert.equal(new Set(graph.item_mappings.map(mapping => mapping.item_id)).size, 320);
+assert.equal(graph.item_mappings.length, 360);
+assert.equal(new Set(graph.item_mappings.map(mapping => mapping.item_id)).size, 360);
 assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('mm-')).length, 30);
 assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('bcs-smartpath-')).length, 70);
-assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('bcs-lit-candidate-')).length, 80);
+assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('bcs-lit-candidate-')).length, 120);
 const skillIds = new Set(graph.skills.map(skill => skill.id));
 graph.item_mappings.forEach(mapping => assert.ok(skillIds.has(mapping.primary_skill_id)));
+literaturePack.items.forEach(item => {
+    const mappings = graph.item_mappings.filter(mapping => mapping.item_id === item.candidate_id);
+    assert.equal(mappings.length, 1);
+    assert.equal(mappings[0].primary_skill_id, item.skill_id);
+    assert.equal(mappings[0].primary_family_id, 'LITERATURE');
+});
 
 assert.deepEqual(goals.goal_ids, ['BCS','IELTS','BANK','UNIVERSITY_ADMISSION','GENERAL_ENGLISH','SPOKEN_CAREER']);
 const literatureGoalMappings = goals.mappings.filter(mapping => literatureSkills.has(mapping.skill_id));
@@ -76,10 +104,10 @@ assert.equal(mirror.items.length, 30);
 mirror.addReviewedPack(grammarPack);
 mirror.addLiteraturePack(literaturePack);
 mirror.addWrittenPack(writtenPack);
-assert.equal(mirror.items.length, 240);
+assert.equal(mirror.items.length, 280);
 const allDestinations = router.mistakeDestinations(mirror.items, graph).concat(destinationGraph.destinations);
 const literatureDestinations = allDestinations.filter(destination => destination.family_id === undefined && String(destination.item_id).startsWith('bcs-lit-candidate-'));
-assert.equal(literatureDestinations.length, 80);
+assert.equal(literatureDestinations.length, 120);
 const NOW = Date.parse('2026-08-22T12:00:00.000Z');
 const signal = overrides => Object.assign({attempts:1,initialResult:null,repairResult:null,retestResult:null,masteryStatus:'needs-repair',lastSeenAt:'2026-08-22T10:00:00.000Z',initialCorrect:0,initialIncorrect:0,repairCorrect:0,repairIncorrect:0,retestCorrect:0,retestIncorrect:0}, overrides);
 function run(state, destinations) {
@@ -122,4 +150,4 @@ assert.equal((read('mistake-mirror.js').match(/\/data\/bcs-smartpath-practice-v1
 assert.doesNotMatch([read('mistake-mirror.js'),read('mistake-profile.js')].join('\n'), /literature_(state|profile)|bcs_literature_(state|profile)/i);
 assert.doesNotMatch(read('smartpath-router.js'), /Math\.random|fetch\(['"]https?:|XMLHttpRequest|api\.openai|openai\.com/i);
 
-console.log(JSON.stringify({status:'PASS',literatureItems:80,counts,practiceItems:mirror.items.length,graph:{families:14,skills:67,active:67,planned:0,itemMappings:320},goals:goals.goal_ids.length,literatureGoalMappings:literatureGoalMappings.length}, null, 2));
+console.log(JSON.stringify({status:'PASS',literatureItems:120,uniqueCandidateIds:new Set(candidateIds).size,counts,quotationSemanticDuplicates:semanticQuotationDuplicates,targetedDuplicatePairs:'PASS',practiceItems:mirror.items.length,graph:{families:14,skills:67,active:67,planned:0,itemMappings:360},goals:goals.goal_ids.length,literatureGoalMappings:literatureGoalMappings.length}, null, 2));
