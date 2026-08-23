@@ -189,7 +189,8 @@
         "formal_letter_writing",
         "essay_thesis_focus",
         "essay_outline_structure",
-        "writing_coherence_cohesion"
+        "writing_coherence_cohesion",
+        "writing_visual_information_description"
       ],
       "related_family_ids": [
         "SENTENCE_STRUCTURE",
@@ -1960,6 +1961,31 @@
       ],
       "status": "ACTIVE",
       "version": 1
+    },
+    {
+      "id": "writing_visual_information_description",
+      "name_en": "Writing Visual Information Description",
+      "name_bn": "ভিজ্যুয়াল তথ্য বর্ণনা",
+      "family_id": "WRITING",
+      "description": "Ability to identify, select, compare and accurately describe important information from an IELTS Academic Task 1 visual while producing a clear overview and avoiding unsupported interpretation.",
+      "prerequisites": [],
+      "related_skills": [
+        "writing_coherence_cohesion",
+        "essay_outline_structure",
+        "word_choice_register"
+      ],
+      "common_mistake_families": [],
+      "example_item_ids": [
+        "ielts-task1-visual-001",
+        "ielts-task1-visual-020",
+        "ielts-task1-visual-040"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
     }
   ],
   "item_mappings": [
@@ -3478,7 +3504,47 @@
     {"item_id":"ielts-coherence-037","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
     {"item_id":"ielts-coherence-038","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
     {"item_id":"ielts-coherence-039","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-040","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]}
+    {"item_id":"ielts-coherence-040","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-001","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-002","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-003","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-004","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-005","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-006","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-007","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-008","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-009","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-010","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-011","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-012","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-013","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-014","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-015","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-016","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-017","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-018","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-019","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-020","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-021","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-022","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-023","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-024","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-025","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-026","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-027","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-028","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-029","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-030","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-031","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-032","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-033","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-034","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-035","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-036","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-037","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-038","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-039","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
+    {"item_id":"ielts-task1-visual-040","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]}
   ],
   "transfer_patterns": [
     {

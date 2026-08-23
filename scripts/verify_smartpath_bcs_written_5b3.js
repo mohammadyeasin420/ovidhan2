@@ -37,11 +37,11 @@ assert.equal(translation.filter(item => item.genuine_errors_bn.length).length, 2
 assert.equal(translation.filter(item => item.acceptable_alternatives.length).length, 20);
 assert.equal(translation.filter(item => Object.hasOwn(item, 'common_errors_bn')).length, 0);
 
-assert.equal(graph.families.length, 14); assert.equal(graph.skills.length, 66);
-assert.equal(graph.skills.filter(skill => skill.status === 'ACTIVE').length, 66);
+assert.equal(graph.families.length, 14); assert.equal(graph.skills.length, 67);
+assert.equal(graph.skills.filter(skill => skill.status === 'ACTIVE').length, 67);
 assert.equal(graph.skills.filter(skill => skill.status === 'PLANNED').length, 0);
-assert.equal(graph.item_mappings.length, 280);
-const oldMappings = graph.item_mappings.filter(mapping => !mapping.item_id.startsWith('bcs-written-') && !mapping.item_id.startsWith('ielts-coherence-'));
+assert.equal(graph.item_mappings.length, 320);
+const oldMappings = graph.item_mappings.filter(mapping => !mapping.item_id.startsWith('bcs-written-') && !mapping.item_id.startsWith('ielts-coherence-') && !mapping.item_id.startsWith('ielts-task1-visual-'));
 assert.equal(oldMappings.length, 180); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('mm-')).length,30); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('bcs-smartpath-')).length,70); assert.equal(oldMappings.filter(x=>x.item_id.startsWith('bcs-lit-candidate-')).length,80);
 const newMappings = graph.item_mappings.filter(mapping => mapping.item_id.startsWith('bcs-written-'));
 assert.equal(newMappings.length, 60); assert.equal(new Set(newMappings.map(mapping => mapping.item_id)).size, 60);
@@ -84,4 +84,4 @@ assert.doesNotMatch(runtime, /written_(learner_)?(store|profile|router)|secondLe
 assert.equal((read('mistake-mirror.js').match(/\/data\/bcs-written-smartpath-v1\.json/g)||[]).length,1);
 assert.equal(JSON.stringify(pack).includes('common_errors_bn'),false);
 
-console.log(JSON.stringify({status:'PASS',activities:{total:60,comprehension:24,translation:20,essay:16},directions:{bnToEn:10,enToBn:10},passages:6,graph:{families:14,skills:66,active:66,planned:0,mappings:280,preservedMappings:180},bcsCoreMappings:9,productiveUngraded:36},null,2));
+console.log(JSON.stringify({status:'PASS',activities:{total:60,comprehension:24,translation:20,essay:16},directions:{bnToEn:10,enToBn:10},passages:6,graph:{families:14,skills:67,active:67,planned:0,mappings:320,preservedMappings:180},bcsCoreMappings:9,productiveUngraded:36},null,2));

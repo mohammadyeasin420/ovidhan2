@@ -46,9 +46,9 @@ const byQuestion=new Map(manifest.items.map(item=>[item.question_id,item]));
 assert.equal(byQuestion.get('ielts-diag-v1-q18').primary_skill_id,'reading_main_idea');
 assert.ok(manifest.items.filter(item=>['listening','speaking'].includes(item.broad_category)).every(item=>item.mapping_status==='UNMAPPED_PROXY'&&item.primary_skill_id===null));
 assert.equal(graph.families.length,14);
-assert.equal(graph.skills.length,66);
-assert.equal(graph.skills.filter(skill=>skill.status==='ACTIVE').length,66);
-assert.equal(graph.item_mappings.length,280);
+assert.equal(graph.skills.length,67);
+assert.equal(graph.skills.filter(skill=>skill.status==='ACTIVE').length,67);
+assert.equal(graph.item_mappings.length,320);
 assert.match(diagnostic,/recordSkillEvidence\(/);
 assert.doesNotMatch(diagnostic,/recordMistakeSignal\(/);
 assert.match(diagnostic,/if\(current===QUESTIONS\.length-1\)showResults\(\)/);
@@ -73,4 +73,4 @@ const frozen=require('../reports/ovidhan-learning-foundation-3b-frozen-hashes.js
 assert.equal(frozen.aggregateSha256,'202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
 frozen.pages.forEach(page=>assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,page.path))).digest('hex'),page.sha256));
 frozen.guards.forEach(guard=>assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,guard.path))).digest('hex'),guard.sha256));
-console.log(JSON.stringify({status:'PASS',questions:40,mapped:mapped.length,unmapped:unmapped.length,uniqueMappedSkills:new Set(mapped.map(item=>item.primary_skill_id)).size,questionSetSha256,graph:{families:14,skills:66,active:66,practiceMappings:280},legacyCreatesEvidence:false,distinctEvidenceAfterRetake:1,frozenAggregateSha256:frozen.aggregateSha256},null,2));
+console.log(JSON.stringify({status:'PASS',questions:40,mapped:mapped.length,unmapped:unmapped.length,uniqueMappedSkills:new Set(mapped.map(item=>item.primary_skill_id)).size,questionSetSha256,graph:{families:14,skills:67,active:67,practiceMappings:320},legacyCreatesEvidence:false,distinctEvidenceAfterRetake:1,frozenAggregateSha256:frozen.aggregateSha256},null,2));
