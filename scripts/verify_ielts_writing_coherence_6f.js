@@ -54,14 +54,14 @@ assert.deepEqual(pack.difficulty_distribution, {FOUNDATION:12,INTERMEDIATE:18,AD
 const skill = graph.skills.find(candidate => candidate.id === 'writing_coherence_cohesion');
 assert.ok(skill && skill.status === 'ACTIVE');
 assert.ok(graph.families.find(family => family.family_id === 'WRITING').child_skill_ids.includes(skill.id));
-assert.deepEqual([graph.families.length, graph.skills.filter(candidate => candidate.status === 'ACTIVE').length, graph.item_mappings.length], [14,67,360]);
+assert.deepEqual([graph.families.length, graph.skills.filter(candidate => candidate.status === 'ACTIVE').length, graph.item_mappings.length], [14,68,400]);
 const newMappings = graph.item_mappings.filter(mapping => mapping.item_id.startsWith('ielts-coherence-'));
 assert.equal(newMappings.length, 40);
 assert.deepEqual(newMappings.map(mapping => mapping.item_id), expectedIds);
 assert.ok(newMappings.every(mapping => mapping.primary_skill_id === skill.id && mapping.primary_family_id === 'WRITING'));
 
 const ieltsGoals = goals.mappings.filter(mapping => mapping.goal_id === 'IELTS');
-assert.equal(ieltsGoals.length, 9);
+assert.equal(ieltsGoals.length, 10);
 assert.equal(ieltsGoals.find(mapping => mapping.skill_id === skill.id).importance, 'CORE');
 assert.equal(ieltsGoals.find(mapping => mapping.skill_id === 'essay_outline_structure').importance, 'SUPPORTING');
 for (const id of ['writing_academic_coherence_cohesion','writing_gt_coherence_cohesion']) {
@@ -75,7 +75,7 @@ for (const id of ['writing_academic_coherence_cohesion','writing_gt_coherence_co
   assert.match(relation.coverage_note, /no productive Writing performance evidence/i);
 }
 const ieltsDestinations = destinations.destinations.filter(destination => destination.goal_ids.includes('IELTS')).map(destination => destination.skill_id);
-assert.deepEqual(ieltsDestinations, ['formal_letter_writing','writing_coherence_cohesion','writing_visual_information_description']);
+assert.deepEqual(ieltsDestinations, ['formal_letter_writing','writing_coherence_cohesion','writing_visual_information_description','writing_argument_development']);
 const destination = destinations.destinations.find(candidate => candidate.skill_id === skill.id);
 assert.ok(destination && destination.url === '/ielts-writing-coherence-cohesion-bangla.html' && destination.review_status === 'REVIEWED');
 assert.ok(!destinations.destinations.find(candidate => candidate.skill_id === 'writing_precis').goal_ids.includes('IELTS'));
@@ -112,4 +112,4 @@ for (const item of [...frozen.pages, ...frozen.guards]) assert.equal(sha256(item
 const aggregate = crypto.createHash('sha256').update(frozen.pages.map(item => `${item.path}\0${sha256(item.path)}\n`).sort().join('')).digest('hex');
 assert.equal(aggregate, frozen.aggregateSha256);
 
-console.log(JSON.stringify({status:'PASS',items:40,difficulty,itemSubtype:countBy(pack.items,'item_subtype'),microFocus:countBy(pack.items,'micro_focus'),graph:{families:14,activeSkills:67,itemMappings:360},ieltsCoarseMappings:9,ieltsStaticDestinations:ieltsDestinations,productiveEvidence:false,frozenAggregateSha256:frozen.aggregateSha256}, null, 2));
+console.log(JSON.stringify({status:'PASS',items:40,difficulty,itemSubtype:countBy(pack.items,'item_subtype'),microFocus:countBy(pack.items,'micro_focus'),graph:{families:14,activeSkills:68,itemMappings:400},ieltsCoarseMappings:10,ieltsStaticDestinations:ieltsDestinations,productiveEvidence:false,frozenAggregateSha256:frozen.aggregateSha256}, null, 2));

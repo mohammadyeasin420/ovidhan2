@@ -1,0 +1,1680 @@
+{
+  "schema_version": 1,
+  "pack_id": "ielts-task2-argument-practice-v1",
+  "review_status": "REVIEWED",
+  "skill_id": "writing_argument_development",
+  "family": "WRITING",
+  "difficulty_distribution": {
+    "FOUNDATION": 12,
+    "INTERMEDIATE": 18,
+    "ADVANCED": 10
+  },
+  "item_subtype_distribution": {
+    "CLAIM_SUPPORT_ALIGNMENT": 5,
+    "REASON_RELEVANCE": 5,
+    "EXAMPLE_RELEVANCE": 5,
+    "DEVELOPMENT_COMPLETENESS": 5,
+    "OFF_TOPIC_DETECTION": 5,
+    "COUNTERPOINT_RESPONSE": 5,
+    "ARGUMENT_PROGRESSION": 5,
+    "TASK_PART_COVERAGE": 5
+  },
+  "micro_focus_distribution": {
+    "claim_support_alignment": 5,
+    "reason_relevance": 5,
+    "example_relevance": 5,
+    "development_completeness": 5,
+    "off_topic_detection": 5,
+    "counterpoint_response": 5,
+    "argument_progression": 5,
+    "task_part_coverage": 5
+  },
+  "correct_option_distribution": {
+    "A": 10,
+    "B": 10,
+    "C": 10,
+    "D": 10
+  },
+  "items": [
+    {
+      "id": "ielts-task2-argument-001",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "CLAIM_SUPPORT_ALIGNMENT",
+      "micro_focus": "claim_support_alignment",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which reason most directly supports the claim that cities should invest more in public transport?",
+      "question_bn": "শহরগুলোর গণপরিবহনে বেশি বিনিয়োগ করা উচিত – এই দাবিটিকে কোন যুক্তি সবচেয়ে সরাসরি সমর্থন করে?",
+      "context_en": "Claim: 'Cities should increase funding for public transport.'",
+      "context_bn": "দাবি: 'শহরগুলোর গণপরিবহনের জন্য তহবিল বাড়ানো উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reliable buses and trains can reduce traffic congestion without expanding roads."
+        },
+        {
+          "id": "B",
+          "text": "Public transport is often slower than driving."
+        },
+        {
+          "id": "C",
+          "text": "Some people prefer to travel by car."
+        },
+        {
+          "id": "D",
+          "text": "Many buses are painted bright colours."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Reliable buses and trains can reduce traffic congestion without expanding roads.",
+      "explanation_en": "Option A directly links investment to a clear benefit (reducing congestion) without relying on road expansion. The others are irrelevant or contradictory.",
+      "explanation_bn": "বিকল্প A সরাসরি বিনিয়োগকে একটি স্পষ্ট সুবিধার (যানজট কমানো) সাথে যুক্ত করে। অন্যগুলো অপ্রাসঙ্গিক বা পরস্পরবিরোধী।",
+      "common_wrong_reason_bn": "অনেক শিক্ষার্থী 'B' বেছে নেয় কারণ তারা বিষয়-শব্দ (বাস) দেখে, কিন্তু সেটি যুক্তি নয় – এটি সরাসরি দাবিকে সমর্থন করে না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-002",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "CLAIM_SUPPORT_ALIGNMENT",
+      "micro_focus": "claim_support_alignment",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which reason most directly supports the claim that schools should teach financial literacy?",
+      "question_bn": "বিদ্যালয়ে আর্থিক সাক্ষরতা শেখানো উচিত – এই দাবিটিকে কোন যুক্তি সবচেয়ে সরাসরি সমর্থন করে?",
+      "context_en": "Claim: 'Financial literacy should be a compulsory subject in schools.'",
+      "context_bn": "দাবি: 'আর্থিক সাক্ষরতা স্কুলে একটি বাধ্যতামূলক বিষয় হওয়া উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Some students enjoy mathematics."
+        },
+        {
+          "id": "B",
+          "text": "Schools already teach many subjects."
+        },
+        {
+          "id": "C",
+          "text": "Learning about budgeting and saving helps young people make better financial decisions later."
+        },
+        {
+          "id": "D",
+          "text": "Many adults have credit card debt."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Learning about budgeting and saving helps young people make better financial decisions later.",
+      "explanation_en": "Option A explains a direct benefit of the proposed policy. B is a general observation, C is irrelevant, D doesn't support the claim.",
+      "explanation_bn": "বিকল্প A প্রস্তাবিত নীতির একটি সরাসরি সুবিধা ব্যাখ্যা করে। B একটি সাধারণ পর্যবেক্ষণ, C অপ্রাসঙ্গিক, D দাবিকে সমর্থন করে না।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'debt' দেখে, কিন্তু এটি সরাসরি 'why schools should teach' এর সাথে সম্পর্কিত নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-003",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "CLAIM_SUPPORT_ALIGNMENT",
+      "micro_focus": "claim_support_alignment",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which reason most directly supports the claim that governments should invest more in renewable energy?",
+      "question_bn": "সরকারের উচিত নবায়নযোগ্য জ্বালানিতে বেশি বিনিয়োগ করা – এই দাবিটিকে কোন যুক্তি সবচেয়ে সরাসরি সমর্থন করে?",
+      "context_en": "Claim: 'Governments should increase funding for renewable energy sources like solar and wind.'",
+      "context_bn": "দাবি: 'সরকারের সৌর ও বায়ুর মতো নবায়নযোগ্য জ্বালানি উৎসের জন্য তহবিল বাড়ানো উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Renewable energy is a popular topic in the news."
+        },
+        {
+          "id": "B",
+          "text": "Some countries still use coal."
+        },
+        {
+          "id": "C",
+          "text": "Renewable energy reduces dependence on fossil fuels and lowers carbon emissions."
+        },
+        {
+          "id": "D",
+          "text": "Solar panels are often installed on rooftops."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Renewable energy reduces dependence on fossil fuels and lowers carbon emissions.",
+      "explanation_en": "Option A provides a clear, direct benefit. B, C, D are facts or opinions that do not directly support increased investment.",
+      "explanation_bn": "বিকল্প A একটি স্পষ্ট, সরাসরি সুবিধা প্রদান করে। B, C, D এমন তথ্য বা মতামত যা বিনিয়োগ বৃদ্ধিকে সরাসরি সমর্থন করে না।",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নেন কারণ তারা 'coal' এবং 'renewable' এর মধ্যে বৈপরীত্য দেখেন, কিন্তু এটি সরকারের বিনিয়োগকে সমর্থন করে না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-004",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "CLAIM_SUPPORT_ALIGNMENT",
+      "micro_focus": "claim_support_alignment",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which reason most directly supports the claim that companies should allow flexible working hours?",
+      "question_bn": "কোম্পানির উচিত কর্মীদের নমনীয় সময় দেওয়া – এই দাবিটিকে কোন যুক্তি সবচেয়ে সরাসরি সমর্থন করে?",
+      "context_en": "Claim: 'Companies should adopt flexible working hours for their employees.'",
+      "context_bn": "দাবি: 'কোম্পানিগুলোর কর্মীদের জন্য নমনীয় কর্মঘণ্টা চালু করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Some employees prefer to start work early."
+        },
+        {
+          "id": "B",
+          "text": "Flexible hours are difficult to manage."
+        },
+        {
+          "id": "C",
+          "text": "Many companies have fixed working hours."
+        },
+        {
+          "id": "D",
+          "text": "Flexible hours can improve work-life balance and increase employee satisfaction."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Flexible hours can improve work-life balance and increase employee satisfaction.",
+      "explanation_en": "Option A states a positive outcome directly linked to the policy. B is a preference, C is a fact, D is a potential drawback.",
+      "explanation_bn": "বিকল্প A নীতির সাথে সরাসরি যুক্ত একটি ইতিবাচক ফলাফল বলে। B একটি পছন্দ, C একটি তথ্য, D একটি সম্ভাব্য অসুবিধা।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ এটি 'flexible' এর সাথে সম্পর্কিত মনে হয়, কিন্তু এটি দাবিকে সমর্থন করে না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-005",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "CLAIM_SUPPORT_ALIGNMENT",
+      "micro_focus": "claim_support_alignment",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which reason most directly supports the claim that schools should reduce the amount of homework given?",
+      "question_bn": "বিদ্যালয়ে শিক্ষার্থীদের দেওয়া হোমওয়ার্কের পরিমাণ কমানো উচিত – এই দাবিটিকে কোন যুক্তি সবচেয়ে সরাসরি সমর্থন করে?",
+      "context_en": "Claim: 'Schools should reduce the amount of homework students receive.'",
+      "context_bn": "দাবি: 'বিদ্যালয়গুলোর শিক্ষার্থীদের দেওয়া হোমওয়ার্কের পরিমাণ কমানো উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Some students enjoy doing homework."
+        },
+        {
+          "id": "B",
+          "text": "Homework is often graded."
+        },
+        {
+          "id": "C",
+          "text": "Teachers spend a lot of time marking homework."
+        },
+        {
+          "id": "D",
+          "text": "Too much homework can cause stress and limit time for family activities."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Too much homework can cause stress and limit time for family activities.",
+      "explanation_en": "Option A directly addresses a negative consequence of excessive homework, supporting the claim. B, C, D are general facts not directly supporting reduction.",
+      "explanation_bn": "বিকল্প A অতিরিক্ত হোমওয়ার্কের একটি নেতিবাচক পরিণতি সম্বোধন করে, যা দাবিকে সমর্থন করে। B, C, D সাধারণ তথ্য যা কমানোকে সরাসরি সমর্থন করে না।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'teachers' সম্পর্কে চিন্তা করেন, কিন্তু দাবিটি শিক্ষার্থীদের জন্য হোমওয়ার্ক কমানো নিয়ে, শিক্ষকদের নিয়ে নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-006",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "REASON_RELEVANCE",
+      "micro_focus": "reason_relevance",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which reason is directly relevant to the argument that public libraries should provide free digital resources?",
+      "question_bn": "পাবলিক লাইব্রেরিগুলো বিনামূল্যে ডিজিটাল সম্পদ প্রদান করবে – এই যুক্তির সাথে কোন কারণটি সরাসরি প্রাসঙ্গিক?",
+      "context_en": "Argument: 'Public libraries should offer free e-books and online databases to all residents.'",
+      "context_bn": "যুক্তি: 'পাবলিক লাইব্রেরিগুলো সকল বাসিন্দাদের বিনামূল্যে ই-বই ও অনলাইন ডেটাবেস প্রদান করবে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Libraries are usually located in city centres."
+        },
+        {
+          "id": "B",
+          "text": "E-books are cheaper to purchase than physical books."
+        },
+        {
+          "id": "C",
+          "text": "Many residents do not have internet access at home and rely on libraries for digital resources."
+        },
+        {
+          "id": "D",
+          "text": "Some people prefer reading paper books."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Many residents do not have internet access at home and rely on libraries for digital resources.",
+      "explanation_en": "Option A directly addresses the need and relevance of free digital resources. B is a location detail, C is about cost (not relevance to the argument), D is a preference.",
+      "explanation_bn": "বিকল্প A সরাসরি বিনামূল্যে ডিজিটাল সম্পদের প্রয়োজন এবং প্রাসঙ্গিকতা সম্বোধন করে। B একটি অবস্থানের বিবরণ, C খরচ সম্পর্কে (যুক্তির সাথে প্রাসঙ্গিক নয়), D একটি পছন্দ।",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নেন কারণ এটি 'digital' এবং 'cost' সম্পর্কিত, কিন্তু 'relevance' বলতে বোঝায় কেন এটি যুক্তির জন্য প্রাসঙ্গিক।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-007",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "REASON_RELEVANCE",
+      "micro_focus": "reason_relevance",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which reason is directly relevant to the argument that governments should subsidise electric vehicles?",
+      "question_bn": "সরকারের উচিত বৈদ্যুতিক যানবাহনে ভর্তুকি দেওয়া – এই যুক্তির সাথে কোন কারণটি সরাসরি প্রাসঙ্গিক?",
+      "context_en": "Argument: 'Governments should provide subsidies for electric vehicles to reduce pollution.'",
+      "context_bn": "যুক্তি: 'দূষণ কমাতে সরকারের বৈদ্যুতিক যানবাহনে ভর্তুকি প্রদান করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Some countries have limited charging infrastructure."
+        },
+        {
+          "id": "B",
+          "text": "Electric cars are often more expensive than petrol cars."
+        },
+        {
+          "id": "C",
+          "text": "Many people are interested in buying electric cars."
+        },
+        {
+          "id": "D",
+          "text": "Battery-electric vehicles produce no tailpipe exhaust during operation, so wider use can reduce street-level exhaust pollution."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Battery-electric vehicles produce no tailpipe exhaust during operation, so wider use can reduce street-level exhaust pollution.",
+      "explanation_en": "The correct option directly connects the proposed subsidy with the stated pollution goal. The other options describe cost, infrastructure, or interest without making that connection.",
+      "explanation_bn": "সঠিক বিকল্পটি প্রস্তাবিত ভর্তুকিকে সরাসরি দূষণ কমানোর লক্ষ্যের সঙ্গে যুক্ত করে। অন্য বিকল্পগুলো খরচ, অবকাঠামো বা আগ্রহের কথা বলে, কিন্তু সেই সংযোগটি তৈরি করে না।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'subsidy' এবং 'expensive' এর মধ্যে সম্পর্ক দেখেন, কিন্তু যুক্তির মূল লক্ষ্য দূষণ কমানো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-008",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "REASON_RELEVANCE",
+      "micro_focus": "reason_relevance",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which reason is directly relevant to the argument that schools should teach practical life skills?",
+      "question_bn": "বিদ্যালয়ে ব্যবহারিক জীবন দক্ষতা শেখানো উচিত – এই যুক্তির সাথে কোন কারণটি সরাসরি প্রাসঙ্গিক?",
+      "context_en": "Argument: 'Schools should include practical skills like cooking and budgeting in the curriculum.'",
+      "context_bn": "যুক্তি: 'বিদ্যালয়ের পাঠ্যক্রমে রান্না ও বাজেট তৈরির মতো ব্যবহারিক দক্ষতা অন্তর্ভুক্ত করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Textbooks on these topics are available."
+        },
+        {
+          "id": "B",
+          "text": "Many students enjoy practical subjects."
+        },
+        {
+          "id": "C",
+          "text": "Some schools already offer such courses."
+        },
+        {
+          "id": "D",
+          "text": "These skills are essential for independent living and daily problem-solving."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "These skills are essential for independent living and daily problem-solving.",
+      "explanation_en": "Option A states the importance and relevance of the skills. B, C, D are observations that do not directly justify the argument.",
+      "explanation_bn": "বিকল্প A দক্ষতার গুরুত্ব ও প্রাসঙ্গিকতা বলে। B, C, D এমন পর্যবেক্ষণ যা যুক্তিকে সরাসরি যুক্তিযুক্ত করে না।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ এটি 'practical' সম্পর্কিত মনে হয়, কিন্তু যুক্তিটি কেন প্রয়োজনীয় তা ব্যাখ্যা করে না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-009",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "REASON_RELEVANCE",
+      "micro_focus": "reason_relevance",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which reason is directly relevant to the argument that cities should limit car use in city centres?",
+      "question_bn": "শহরগুলোর কেন্দ্রস্থলে গাড়ির ব্যবহার সীমিত করা উচিত – এই যুক্তির সাথে কোন কারণটি সরাসরি প্রাসঙ্গিক?",
+      "context_en": "Argument: 'City centres should be car-free zones to improve quality of life.'",
+      "context_bn": "যুক্তি: 'শহরের কেন্দ্রস্থল গাড়িমুক্ত অঞ্চল হওয়া উচিত জীবনমান উন্নত করতে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Public transport is available in most cities."
+        },
+        {
+          "id": "B",
+          "text": "Some cities have implemented car-free zones successfully."
+        },
+        {
+          "id": "C",
+          "text": "Many people drive to work in the city centre."
+        },
+        {
+          "id": "D",
+          "text": "Reducing traffic can lower noise and air pollution, making the area more pleasant."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Reducing traffic can lower noise and air pollution, making the area more pleasant.",
+      "explanation_en": "Option A explains the direct benefit of the policy. B is a fact, C is an example, D is general availability.",
+      "explanation_bn": "বিকল্প A নীতির সরাসরি সুবিধা ব্যাখ্যা করে। B একটি তথ্য, C একটি উদাহরণ, D সাধারণ প্রাপ্যতা।",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নেন কারণ এটি 'successful' শোনায়, কিন্তু এটি যুক্তির কারণ নয়, এটি একটি উদাহরণ।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-010",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "REASON_RELEVANCE",
+      "micro_focus": "reason_relevance",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which reason is directly relevant to the argument that governments should invest more in public health campaigns?",
+      "question_bn": "সরকারের উচিত জনস্বাস্থ্য প্রচারণায় বেশি বিনিয়োগ করা – এই যুক্তির সাথে কোন কারণটি সরাসরি প্রাসঙ্গিক?",
+      "context_en": "Argument: 'Governments should increase spending on public health awareness campaigns.'",
+      "context_bn": "যুক্তি: 'সরকারের জনস্বাস্থ্য সচেতনতা প্রচারণায় ব্যয় বৃদ্ধি করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Many people ignore health warnings."
+        },
+        {
+          "id": "B",
+          "text": "Awareness campaigns can prevent diseases and reduce long-term healthcare costs."
+        },
+        {
+          "id": "C",
+          "text": "Some campaigns use social media effectively."
+        },
+        {
+          "id": "D",
+          "text": "Healthcare costs are rising."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Awareness campaigns can prevent diseases and reduce long-term healthcare costs.",
+      "explanation_en": "Option A gives a clear reason for investment. B is a method, C is a challenge, D is a general trend.",
+      "explanation_bn": "বিকল্প A বিনিয়োগের একটি স্পষ্ট কারণ দেয়। B একটি পদ্ধতি, C একটি চ্যালেঞ্জ, D একটি সাধারণ প্রবণতা।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ এটি 'costs' সম্পর্কিত, কিন্তু এটি বিনিয়োগের কারণ নয়; এটি পরিস্থিতি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-011",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "EXAMPLE_RELEVANCE",
+      "micro_focus": "example_relevance",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which example best supports the claim that learning a second language improves cognitive skills?",
+      "question_bn": "দ্বিতীয় ভাষা শেখা জ্ঞানীয় দক্ষতা উন্নত করে – এই দাবিটিকে কোন উদাহরণ সবচেয়ে ভালো সমর্থন করে?",
+      "context_en": "Claim: 'Learning a second language enhances cognitive abilities like problem-solving and memory.'",
+      "context_bn": "দাবি: 'দ্বিতীয় ভাষা শেখা সমস্যা সমাধান ও স্মৃতিশক্তির মতো জ্ঞানীয় দক্ষতা বাড়ায়।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Some languages are easier to learn than others."
+        },
+        {
+          "id": "B",
+          "text": "Many people learn languages for travel."
+        },
+        {
+          "id": "C",
+          "text": "For example, a learner who regularly switches between two languages may have to select relevant words while ignoring competing ones, illustrating the kind of attention control described in the claim."
+        },
+        {
+          "id": "D",
+          "text": "Language classes are popular in universities."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "For example, a learner who regularly switches between two languages may have to select relevant words while ignoring competing ones, illustrating the kind of attention control described in the claim.",
+      "explanation_en": "The correct option is a concrete illustration of the cognitive process named in the claim. The other options concern travel, language difficulty, or course popularity rather than cognitive development.",
+      "explanation_bn": "সঠিক বিকল্পটি দাবিতে উল্লেখ করা মনোযোগ নিয়ন্ত্রণের একটি নির্দিষ্ট উদাহরণ দেখায়। অন্যগুলো ভ্রমণ, ভাষার কঠিনতা বা কোর্সের জনপ্রিয়তা নিয়ে—জ্ঞানীয় বিকাশ নিয়ে নয়।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ এটি 'language' সম্পর্কিত, কিন্তু এটি জ্ঞানীয় দক্ষতার সাথে সম্পর্কিত নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-012",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "EXAMPLE_RELEVANCE",
+      "micro_focus": "example_relevance",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which example best supports the claim that tourism can harm local culture?",
+      "question_bn": "পর্যটন স্থানীয় সংস্কৃতির ক্ষতি করতে পারে – এই দাবিটিকে কোন উদাহরণ সবচেয়ে ভালো সমর্থন করে?",
+      "context_en": "Claim: 'Mass tourism can erode local traditions and customs.'",
+      "context_bn": "দাবি: 'বৃহৎ পর্যটন স্থানীয় ঐতিহ্য ও রীতিনীতিকে ক্ষয় করতে পারে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Some tourists are interested in local history."
+        },
+        {
+          "id": "B",
+          "text": "For instance, in some coastal villages, traditional fishing practices have been replaced by souvenir stalls catering to tourists."
+        },
+        {
+          "id": "C",
+          "text": "Hotels are often built near beaches."
+        },
+        {
+          "id": "D",
+          "text": "Tourism creates many jobs in the service sector."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "For instance, in some coastal villages, traditional fishing practices have been replaced by souvenir stalls catering to tourists.",
+      "explanation_en": "Option A illustrates the loss of traditional practices. B is a benefit, C is a positive interest, D is infrastructure.",
+      "explanation_bn": "বিকল্প A ঐতিহ্যগত চর্চার ক্ষতি চিত্রিত করে। B একটি সুবিধা, C একটি ইতিবাচক আগ্রহ, D অবকাঠামো।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ এটি tourism এর সাথে সম্পর্কিত, কিন্তু এটি ক্ষতির পরিবর্তে সুবিধার কথা বলে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-013",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "EXAMPLE_RELEVANCE",
+      "micro_focus": "example_relevance",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which example best supports the claim that advertising targets children unethically?",
+      "question_bn": "বিজ্ঞাপন অনৈতিকভাবে শিশুদের লক্ষ্য করে – এই দাবিটিকে কোন উদাহরণ সবচেয়ে ভালো সমর্থন করে?",
+      "context_en": "Claim: 'Advertising often uses manipulative techniques to attract children.'",
+      "context_bn": "দাবি: 'বিজ্ঞাপন প্রায়শই শিশুদের আকৃষ্ট করতে বিভ্রান্তিকর কৌশল ব্যবহার করে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "For example, many food ads use cartoon characters and toys to promote sugary products directly to children."
+        },
+        {
+          "id": "B",
+          "text": "Parents often buy products their children ask for."
+        },
+        {
+          "id": "C",
+          "text": "Some advertisements are funny."
+        },
+        {
+          "id": "D",
+          "text": "Children watch a lot of television."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "For example, many food ads use cartoon characters and toys to promote sugary products directly to children.",
+      "explanation_en": "Option A shows a manipulative technique targeting children. B is a fact, C is a style, D is a consequence.",
+      "explanation_bn": "বিকল্প A শিশুদের লক্ষ্য করে একটি বিভ্রান্তিকর কৌশল দেখায়। B একটি তথ্য, C একটি শৈলী, D একটি পরিণতি।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'children ask for' দেখে, কিন্তু এটি বিজ্ঞাপনের কৌশল নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-014",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "EXAMPLE_RELEVANCE",
+      "micro_focus": "example_relevance",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which example best supports the claim that studying abroad broadens a student's perspective?",
+      "question_bn": "বিদেশে পড়াশোনা শিক্ষার্থীর দৃষ্টিভঙ্গি প্রসারিত করে – এই দাবিটিকে কোন উদাহরণ সবচেয়ে ভালো সমর্থন করে?",
+      "context_en": "Claim: 'Studying abroad can significantly broaden a student's worldview and cultural understanding.'",
+      "context_bn": "দাবি: 'বিদেশে পড়াশোনা শিক্ষার্থীর বিশ্বদৃষ্টি ও সাংস্কৃতিক বোধগম্যতাকে উল্লেখযোগ্যভাবে প্রসারিত করতে পারে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Many students study abroad for a semester."
+        },
+        {
+          "id": "B",
+          "text": "For example, an exchange student may learn to appreciate different educational systems and social norms, which challenges their previous assumptions."
+        },
+        {
+          "id": "C",
+          "text": "Studying abroad can be expensive."
+        },
+        {
+          "id": "D",
+          "text": "Some universities have international programmes."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "For example, an exchange student may learn to appreciate different educational systems and social norms, which challenges their previous assumptions.",
+      "explanation_en": "Option A gives a concrete example of how perspective broadens. B, C, D are general facts.",
+      "explanation_bn": "বিকল্প A একটি কংক্রিট উদাহরণ দেয় যা দৃষ্টিভঙ্গি কীভাবে প্রসারিত হয় তা দেখায়। B, C, D সাধারণ তথ্য।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ এটি 'studying abroad' এর সাথে সম্পর্কিত, কিন্তু এটি দৃষ্টিভঙ্গি প্রসারণের উদাহরণ নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-015",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "EXAMPLE_RELEVANCE",
+      "micro_focus": "example_relevance",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which example best supports the claim that workplace diversity leads to better innovation?",
+      "question_bn": "কর্মক্ষেত্রে বৈচিত্র্য উদ্ভাবন উন্নত করে – এই দাবিটিকে কোন উদাহরণ সবচেয়ে ভালো সমর্থন করে?",
+      "context_en": "Claim: 'Diverse teams are more innovative because they bring different perspectives.'",
+      "context_bn": "দাবি: 'বৈচিত্র্যপূর্ণ দলগুলি উদ্ভাবনী হয় কারণ তারা বিভিন্ন দৃষ্টিভঙ্গি নিয়ে আসে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "For example, a tech company that hired engineers from various cultural backgrounds developed a product that addressed a wider range of user needs."
+        },
+        {
+          "id": "B",
+          "text": "Diversity training is common."
+        },
+        {
+          "id": "C",
+          "text": "Some employees prefer homogeneous teams."
+        },
+        {
+          "id": "D",
+          "text": "Many companies have diversity policies."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "For example, a tech company that hired engineers from various cultural backgrounds developed a product that addressed a wider range of user needs.",
+      "explanation_en": "Option A shows how diversity directly led to innovation. B, C, D are general statements.",
+      "explanation_bn": "বিকল্প A দেখায় যে কীভাবে বৈচিত্র্য সরাসরি উদ্ভাবনের দিকে পরিচালিত করেছে। B, C, D সাধারণ বিবৃতি।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ এটি 'diversity' সম্পর্কিত, কিন্তু এটি উদ্ভাবনের উদাহরণ নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-016",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "DEVELOPMENT_COMPLETENESS",
+      "micro_focus": "development_completeness",
+      "difficulty": "ADVANCED",
+      "question_en": "Which option develops the claim most completely by explaining the mechanism?",
+      "question_bn": "কোন বিকল্পটি প্রক্রিয়াটি ব্যাখ্যা করে দাবিটিকে সবচেয়ে সম্পূর্ণভাবে বিকশিত করে?",
+      "context_en": "Claim: 'Regular exercise improves mental health.'",
+      "context_bn": "দাবি: 'নিয়মিত ব্যায়াম মানসিক স্বাস্থ্য উন্নত করে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Many people exercise regularly."
+        },
+        {
+          "id": "B",
+          "text": "Mental health is important."
+        },
+        {
+          "id": "C",
+          "text": "Exercise is good for mental health."
+        },
+        {
+          "id": "D",
+          "text": "Regular exercise can reduce stress and improve sleep, which can in turn support mood and concentration."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Regular exercise can reduce stress and improve sleep, which can in turn support mood and concentration.",
+      "explanation_en": "The correct option develops the claim by giving a clear mechanism from exercise to stress and sleep, then to mood and concentration. The others mainly repeat or generalise.",
+      "explanation_bn": "সঠিক বিকল্পটি ব্যায়াম থেকে চাপ ও ঘুমের উন্নতি, এবং সেখান থেকে মেজাজ ও মনোযোগে প্রভাব—এই যুক্তির ধাপটি ব্যাখ্যা করে। অন্যগুলো মূলত দাবি পুনরাবৃত্তি করে বা সাধারণ কথা বলে।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা মনে করেন এটি যথেষ্ট, কিন্তু 'কেন' তা ব্যাখ্যা না করলে দাবিটি সম্পূর্ণ হয় না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-017",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "DEVELOPMENT_COMPLETENESS",
+      "micro_focus": "development_completeness",
+      "difficulty": "ADVANCED",
+      "question_en": "Which option develops the claim most completely by providing specific consequences?",
+      "question_bn": "কোন বিকল্পটি নির্দিষ্ট পরিণতি প্রদান করে দাবিটিকে সবচেয়ে সম্পূর্ণভাবে বিকশিত করে?",
+      "context_en": "Claim: 'Reducing plastic packaging can benefit the environment.'",
+      "context_bn": "দাবি: 'প্লাস্টিক প্যাকেজিং কমানো পরিবেশের জন্য উপকারী হতে পারে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The environment is important."
+        },
+        {
+          "id": "B",
+          "text": "Some companies use plastic packaging."
+        },
+        {
+          "id": "C",
+          "text": "Less plastic means less waste in oceans and landfills, which can reduce harm to marine life and lower pollution."
+        },
+        {
+          "id": "D",
+          "text": "Plastic is harmful."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Less plastic means less waste in oceans and landfills, which can reduce harm to marine life and lower pollution.",
+      "explanation_en": "Option A gives specific consequences (ocean, landfill, marine life, pollution). B, C, D are general.",
+      "explanation_bn": "বিকল্প A নির্দিষ্ট পরিণতি দেয় (সমুদ্র, ল্যান্ডফিল, সামুদ্রিক জীবন, দূষণ)। B, C, D সাধারণ।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'harmful' দেখে, কিন্তু এটি কীভাবে উপকারী তা ব্যাখ্যা করে না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-018",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "DEVELOPMENT_COMPLETENESS",
+      "micro_focus": "development_completeness",
+      "difficulty": "ADVANCED",
+      "question_en": "Which option develops the claim most completely by linking cause and effect?",
+      "question_bn": "কোন বিকল্পটি কারণ ও প্রভাবের সম্পর্ক দেখিয়ে দাবিটিকে সবচেয়ে সম্পূর্ণভাবে বিকশিত করে?",
+      "context_en": "Claim: 'Studying history helps us avoid past mistakes.'",
+      "context_bn": "দাবি: 'ইতিহাস অধ্যয়ন আমাদের অতীতের ভুলগুলি এড়াতে সাহায্য করে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "History is interesting."
+        },
+        {
+          "id": "B",
+          "text": "Past mistakes are often repeated."
+        },
+        {
+          "id": "C",
+          "text": "Many people study history."
+        },
+        {
+          "id": "D",
+          "text": "By understanding historical conflicts, societies can recognize early warning signs and take preventive action before similar crises escalate."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "By understanding historical conflicts, societies can recognize early warning signs and take preventive action before similar crises escalate.",
+      "explanation_en": "Option A explains the mechanism (understanding -> recognition -> prevention). B, C, D are weak or general.",
+      "explanation_bn": "বিকল্প A প্রক্রিয়াটি ব্যাখ্যা করে (বোঝা -> চিহ্নিতকরণ -> প্রতিরোধ)। B, C, D দুর্বল বা সাধারণ।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ এটি 'mistakes' সম্পর্কিত, কিন্তু এটি কীভাবে এড়ানো যায় তা ব্যাখ্যা করে না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-019",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "DEVELOPMENT_COMPLETENESS",
+      "micro_focus": "development_completeness",
+      "difficulty": "ADVANCED",
+      "question_en": "Which option develops the claim most completely by providing the reasoning behind the proposed solution?",
+      "question_bn": "কোন বিকল্পটি প্রস্তাবিত সমাধানের পেছনের যুক্তি প্রদান করে দাবিটিকে সবচেয়ে সম্পূর্ণভাবে বিকশিত করে?",
+      "context_en": "Claim: 'Governments should invest more in public libraries.'",
+      "context_bn": "দাবি: 'সরকারের পাবলিক লাইব্রেরিতে বেশি বিনিয়োগ করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Libraries provide free access to information and technology, which is especially important for low-income communities to bridge the digital divide."
+        },
+        {
+          "id": "B",
+          "text": "Libraries are good places to study."
+        },
+        {
+          "id": "C",
+          "text": "Libraries need more funding."
+        },
+        {
+          "id": "D",
+          "text": "Many people visit libraries."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Libraries provide free access to information and technology, which is especially important for low-income communities to bridge the digital divide.",
+      "explanation_en": "Option A explains the rationale (free access, importance for low-income) and the benefit (bridging the divide). B, C, D are surface-level.",
+      "explanation_bn": "বিকল্প A যুক্তির কারণটি ব্যাখ্যা করে—বিনামূল্যে তথ্য ও প্রযুক্তি কেন বিশেষ করে নিম্ন আয়ের মানুষের জন্য গুরুত্বপূর্ণ এবং কীভাবে এটি ডিজিটাল বৈষম্য কমাতে সাহায্য করতে পারে। B, C ও D তুলনামূলকভাবে অগভীর বা অসম্পূর্ণ।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'funding' দেখে, কিন্তু কেন বিনিয়োগ প্রয়োজন তা ব্যাখ্যা করে না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-020",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "DEVELOPMENT_COMPLETENESS",
+      "micro_focus": "development_completeness",
+      "difficulty": "ADVANCED",
+      "question_en": "Which option develops the claim most completely by explaining how the policy would work in practice?",
+      "question_bn": "কোন বিকল্পটি নীতিটি কীভাবে কাজ করবে তা ব্যাখ্যা করে দাবিটিকে সবচেয়ে সম্পূর্ণভাবে বিকশিত করে?",
+      "context_en": "Claim: 'Cities should introduce a congestion charge for cars entering the city centre.'",
+      "context_bn": "দাবি: 'শহরের কেন্দ্রে প্রবেশকারী গাড়ির জন্য যানজট চার্জ প্রবর্তন করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "A congestion charge would discourage private car use during peak hours, reducing traffic and encouraging public transport, cycling, or walking."
+        },
+        {
+          "id": "B",
+          "text": "Congestion charges are used in some cities."
+        },
+        {
+          "id": "C",
+          "text": "Driving is convenient."
+        },
+        {
+          "id": "D",
+          "text": "The charge would generate revenue."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "A congestion charge would discourage private car use during peak hours, reducing traffic and encouraging public transport, cycling, or walking.",
+      "explanation_en": "Option A explains the mechanism (discourage private cars, reduce traffic, encourage alternatives). B is an example, C is a preference, D is a side effect.",
+      "explanation_bn": "বিকল্প A প্রক্রিয়াটি ব্যাখ্যা করে (ব্যক্তিগত গাড়ি নিরুৎসাহিত করা, যানজট কমানো, বিকল্প উৎসাহিত করা)। B একটি উদাহরণ, C একটি পছন্দ, D একটি পার্শ্ব প্রতিক্রিয়া।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'revenue' দেখে, কিন্তু মূল উদ্দেশ্য যানজট কমানো, অর্থ নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-021",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "OFF_TOPIC_DETECTION",
+      "micro_focus": "off_topic_detection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sentence is off‑topic for a paragraph arguing that schools should teach coding?",
+      "question_bn": "বিদ্যালয়ে কোডিং শেখানো উচিত – এই যুক্তির জন্য কোন বাক্যটি অপ্রাসঙ্গিক?",
+      "context_en": "Main idea: 'Schools should introduce coding as a compulsory subject.'",
+      "context_bn": "মূল ধারণা: 'বিদ্যালয়গুলোর কোডিংকে বাধ্যতামূলক বিষয় করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Many students enjoy playing computer games."
+        },
+        {
+          "id": "B",
+          "text": "In today's digital world, coding is a valuable skill for many careers."
+        },
+        {
+          "id": "C",
+          "text": "Coding teaches logical thinking and problem-solving."
+        },
+        {
+          "id": "D",
+          "text": "Learning to code can also improve mathematical ability."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Many students enjoy playing computer games.",
+      "explanation_en": "Option B is about enjoyment of games, not about the value or relevance of coding in school. The others relate directly to the benefits of teaching coding.",
+      "explanation_bn": "বিকল্প B গেম উপভোগের বিষয়ে, যা বিদ্যালয়ে কোডিং শেখানোর সুবিধার সাথে সম্পর্কিত নয়। অন্যগুলো সরাসরি কোডিং শিক্ষার সুবিধার সাথে যুক্ত।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'coding' এবং 'games' এর মধ্যে সংযোগ দেখতে পান, কিন্তু যুক্তিটি শিক্ষার বিষয়ে, বিনোদন নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-022",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "OFF_TOPIC_DETECTION",
+      "micro_focus": "off_topic_detection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sentence is off‑topic for a paragraph arguing that governments should fund the arts?",
+      "question_bn": "সরকারের শিল্পকলায় অর্থায়ন করা উচিত – এই যুক্তির জন্য কোন বাক্যটি অপ্রাসঙ্গিক?",
+      "context_en": "Main idea: 'Governments should allocate more funding to support the arts.'",
+      "context_bn": "মূল ধারণা: 'সরকারের শিল্পকলা সমর্থনে আরও তহবিল বরাদ্দ করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The arts contribute to cultural identity and tourism."
+        },
+        {
+          "id": "B",
+          "text": "Artistic expression can improve mental well-being."
+        },
+        {
+          "id": "C",
+          "text": "Many artists struggle to find affordable studio space."
+        },
+        {
+          "id": "D",
+          "text": "Some people prefer to watch movies at home."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Some people prefer to watch movies at home.",
+      "explanation_en": "Option C is a personal preference unrelated to public funding for the arts. A, B, D are relevant to the argument.",
+      "explanation_bn": "বিকল্প C একটি ব্যক্তিগত পছন্দ যা শিল্পকলার জন্য পাবলিক অর্থায়নের সাথে সম্পর্কিত নয়। A, B, D যুক্তির সাথে প্রাসঙ্গিক।",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নেন কারণ এটি 'movies' সম্পর্কিত, কিন্তু এটি অর্থায়নের যুক্তি নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-023",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "OFF_TOPIC_DETECTION",
+      "micro_focus": "off_topic_detection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sentence is off‑topic for a paragraph arguing that cities should create more green spaces?",
+      "question_bn": "শহরগুলোকে আরও সবুজ স্থান তৈরি করা উচিত – এই যুক্তির জন্য কোন বাক্যটি অপ্রাসঙ্গিক?",
+      "context_en": "Main idea: 'Urban planners should prioritise the creation of parks and gardens.'",
+      "context_bn": "মূল ধারণা: 'শহর পরিকল্পনাবিদদের উদ্যান ও বাগান তৈরিকে অগ্রাধিকার দেওয়া উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The cost of maintaining green spaces can be high."
+        },
+        {
+          "id": "B",
+          "text": "Green spaces can reduce air pollution and provide recreation areas."
+        },
+        {
+          "id": "C",
+          "text": "Some people prefer to live in suburban areas."
+        },
+        {
+          "id": "D",
+          "text": "Many cities have existing parking lots that could be converted into parks."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Some people prefer to live in suburban areas.",
+      "explanation_en": "Option D is about residential preference, not about creating green spaces in cities. A, B, C are directly relevant to the argument.",
+      "explanation_bn": "বিকল্প D আবাসিক পছন্দ সম্পর্কে, যা শহরে সবুজ স্থান তৈরির সাথে সম্পর্কিত নয়। A, B, C সরাসরি যুক্তির সাথে প্রাসঙ্গিক।",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নেন কারণ তারা 'cost' দেখে, কিন্তু এটি যুক্তির সাথে প্রাসঙ্গিক (ব্যয় একটি ফ্যাক্টর); 'suburban' অপ্রাসঙ্গিক।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-024",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "OFF_TOPIC_DETECTION",
+      "micro_focus": "off_topic_detection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sentence is off‑topic for a paragraph arguing that recycling should be mandatory?",
+      "question_bn": "পুনর্ব্যবহারকে বাধ্যতামূলক করা উচিত – এই যুক্তির জন্য কোন বাক্যটি অপ্রাসঙ্গিক?",
+      "context_en": "Main idea: 'Governments should enforce mandatory recycling programmes.'",
+      "context_bn": "মূল ধারণা: 'সরকারের বাধ্যতামূলক পুনর্ব্যবহার কর্মসূচি চালু করা উচিত।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mandatory recycling can reduce landfill waste and conserve natural resources."
+        },
+        {
+          "id": "B",
+          "text": "Many people enjoy shopping online."
+        },
+        {
+          "id": "C",
+          "text": "Some communities already have successful recycling programmes."
+        },
+        {
+          "id": "D",
+          "text": "Recycling bins are often provided in public places."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Many people enjoy shopping online.",
+      "explanation_en": "Option D is about shopping preferences, unrelated to recycling mandates. A, B, C are relevant to the argument.",
+      "explanation_bn": "বিকল্প D কেনাকাটার পছন্দ সম্পর্কে, যা পুনর্ব্যবহার বাধ্যতামূলক করার সাথে সম্পর্কিত নয়। A, B, C যুক্তির সাথে প্রাসঙ্গিক।",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নেন কারণ তারা 'recycling bins' দেখে, কিন্তু এটি প্রাসঙ্গিক; 'online shopping' অপ্রাসঙ্গিক।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-025",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "OFF_TOPIC_DETECTION",
+      "micro_focus": "off_topic_detection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sentence is off‑topic for a paragraph arguing that remote work improves productivity?",
+      "question_bn": "দূরবর্তী কাজ উৎপাদনশীলতা উন্নত করে – এই যুক্তির জন্য কোন বাক্যটি অপ্রাসঙ্গিক?",
+      "context_en": "Main idea: 'Remote working can increase employee productivity.'",
+      "context_bn": "মূল ধারণা: 'দূরবর্তী কাজ কর্মীদের উৎপাদনশীলতা বাড়াতে পারে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Flexible work hours allow employees to work when they are most focused."
+        },
+        {
+          "id": "B",
+          "text": "Employees save time on commuting, which can be used for work."
+        },
+        {
+          "id": "C",
+          "text": "Some employees prefer to dress casually at home."
+        },
+        {
+          "id": "D",
+          "text": "Reduced office distractions can lead to greater concentration on tasks."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Some employees prefer to dress casually at home.",
+      "explanation_en": "Option C is about clothing preference, not directly about productivity. A, B, D are directly linked to productivity.",
+      "explanation_bn": "বিকল্প C পোশাক পছন্দ সম্পর্কে, যা সরাসরি উৎপাদনশীলতার সাথে সম্পর্কিত নয়। A, B, D সরাসরি উৎপাদনশীলতার সাথে যুক্ত।",
+      "common_wrong_reason_bn": "অনেকে 'A' বা 'B' বেছে নিতে পারেন, কিন্তু 'dress casually' উৎপাদনশীলতার সাথে প্রাসঙ্গিক নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-026",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "COUNTERPOINT_RESPONSE",
+      "micro_focus": "counterpoint_response",
+      "difficulty": "ADVANCED",
+      "question_en": "Which response best addresses the counterpoint that reducing car use will hurt local businesses?",
+      "question_bn": "গাড়ির ব্যবহার কমানো স্থানীয় ব্যবসার ক্ষতি করবে – এই পাল্টা যুক্তিটির সেরা প্রতিক্রিয়া কোনটি?",
+      "context_en": "Counterpoint: 'Limiting car traffic in the city centre will reduce customers for shops and restaurants, hurting the local economy.'",
+      "context_bn": "পাল্টা যুক্তি: 'শহরের কেন্দ্রে যানবাহন সীমিত করা দোকান ও রেস্তোরাঁয় গ্রাহক কমাবে, যা স্থানীয় অর্থনীতির ক্ষতি করবে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Many people still prefer to drive to shops."
+        },
+        {
+          "id": "B",
+          "text": "While some businesses may initially lose car-borne customers, improved pedestrian and cycling access can attract new visitors and increase footfall."
+        },
+        {
+          "id": "C",
+          "text": "The government can provide compensation to affected businesses."
+        },
+        {
+          "id": "D",
+          "text": "Businesses will adapt to changes in traffic patterns."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "While some businesses may initially lose car-borne customers, improved pedestrian and cycling access can attract new visitors and increase footfall.",
+      "explanation_en": "Option A acknowledges the counterpoint and offers a reasoned rebuttal (increased footfall) without dismissing the concern. B is vague, C supports the counterpoint, D is a possible measure but not a direct rebuttal of the economic argument.",
+      "explanation_bn": "বিকল্প A পাল্টা যুক্তিটি স্বীকার করে এবং একটি যুক্তিযুক্ত প্রত্যুত্তর দেয় (পথচারীদের আগমন বৃদ্ধি) উদ্বেগকে উড়িয়ে না দিয়ে। B অস্পষ্ট, C পাল্টা যুক্তিকে সমর্থন করে, D একটি সম্ভাব্য ব্যবস্থা কিন্তু অর্থনৈতিক যুক্তির সরাসরি প্রত্যুত্তর নয়।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'compensation' দেখে, কিন্তু এটি যুক্তির প্রত্যুত্তর নয়, বরং একটি সমাধান; 'A' যুক্তি দেয় যে পরিবর্তন আসলে উপকারী হতে পারে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-027",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "COUNTERPOINT_RESPONSE",
+      "micro_focus": "counterpoint_response",
+      "difficulty": "ADVANCED",
+      "question_en": "Which response best addresses the counterpoint that teaching financial literacy in schools is a waste of time?",
+      "question_bn": "বিদ্যালয়ে আর্থিক সাক্ষরতা শেখানো সময়ের অপচয় – এই পাল্টা যুক্তিটির সেরা প্রতিক্রিয়া কোনটি?",
+      "context_en": "Counterpoint: 'Financial literacy lessons are unnecessary because parents can teach children about money at home.'",
+      "context_bn": "পাল্টা যুক্তি: 'আর্থিক সাক্ষরতার পাঠ অপ্রয়োজনীয় কারণ বাবা-মা বাড়িতে সন্তানদের টাকা সম্পর্কে শেখাতে পারেন।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Schools already have a packed curriculum."
+        },
+        {
+          "id": "B",
+          "text": "Not all parents are financially literate or have the time to teach these skills, and school provides a structured environment that ensures all students gain this knowledge."
+        },
+        {
+          "id": "C",
+          "text": "Parents should be responsible for their children's education."
+        },
+        {
+          "id": "D",
+          "text": "Financial literacy is not a priority in many families."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Not all parents are financially literate or have the time to teach these skills, and school provides a structured environment that ensures all students gain this knowledge.",
+      "explanation_en": "Option A refutes the counterpoint by pointing out gaps in parental capability and the equity provided by school education. B supports the counterpoint, C is a fact, D is a challenge but not a rebuttal.",
+      "explanation_bn": "বিকল্প A পাল্টা যুক্তিকে খণ্ডন করে যে সকল বাবা-মা আর্থিকভাবে সাক্ষর নন বা সময় নেই, এবং স্কুল একটি কাঠামোবদ্ধ পরিবেশ প্রদান করে যা সকল শিক্ষার্থীকে জ্ঞান দেয়। B পাল্টা যুক্তিকে সমর্থন করে, C একটি তথ্য, D একটি চ্যালেঞ্জ কিন্তু প্রত্যুত্তর নয়।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'packed curriculum' দেখে, কিন্তু এটি পাল্টা যুক্তির প্রত্যুত্তর নয়; 'A' সরাসরি যুক্তির বিরোধিতা করে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-028",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "COUNTERPOINT_RESPONSE",
+      "micro_focus": "counterpoint_response",
+      "difficulty": "ADVANCED",
+      "question_en": "Which response best addresses the counterpoint that investing in renewable energy is too expensive?",
+      "question_bn": "নবায়নযোগ্য জ্বালানিতে বিনিয়োগ খুব ব্যয়বহুল – এই পাল্টা যুক্তিটির সেরা প্রতিক্রিয়া কোনটি?",
+      "context_en": "Counterpoint: 'The cost of switching to renewable energy is too high for developing countries.'",
+      "context_bn": "পাল্টা যুক্তি: 'নবায়নযোগ্য জ্বালানিতে স্যুইচ করার খরচ উন্নয়নশীল দেশগুলোর জন্য খুব বেশি।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Developed countries can provide financial aid."
+        },
+        {
+          "id": "B",
+          "text": "Although initial costs are high, the long-term savings from reduced fuel imports and lower pollution can outweigh the investment."
+        },
+        {
+          "id": "C",
+          "text": "Some countries have already switched to renewables."
+        },
+        {
+          "id": "D",
+          "text": "Renewable energy is becoming cheaper over time."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Although initial costs are high, the long-term savings from reduced fuel imports and lower pollution can outweigh the investment.",
+      "explanation_en": "Option A acknowledges the cost concern but argues that long-term benefits justify the expense. B is a possible solution but doesn't directly rebut the cost argument; C and D are general observations.",
+      "explanation_bn": "বিকল্প A খরচের উদ্বেগ স্বীকার করে কিন্তু যুক্তি দেয় যে দীর্ঘমেয়াদী সুবিধা ব্যয়কে ন্যায়সঙ্গত করে। B একটি সম্ভাব্য সমাধান কিন্তু সরাসরি খরচ যুক্তির প্রত্যুত্তর নয়; C এবং D সাধারণ পর্যবেক্ষণ।",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নেন কারণ তারা 'cheaper' দেখে, কিন্তু এটি বর্তমান খরচের যুক্তির সরাসরি প্রত্যুত্তর নয়; 'A' যুক্তি দেয় যে খরচ সত্ত্বেও সুবিধা বেশি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-029",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "COUNTERPOINT_RESPONSE",
+      "micro_focus": "counterpoint_response",
+      "difficulty": "ADVANCED",
+      "question_en": "Which response best addresses the counterpoint that artificial intelligence will lead to mass unemployment?",
+      "question_bn": "কৃত্রিম বুদ্ধিমত্তা ব্যাপক বেকারত্বের দিকে নিয়ে যাবে – এই পাল্টা যুক্তিটির সেরা প্রতিক্রিয়া কোনটি?",
+      "context_en": "Counterpoint: 'AI will replace human workers in many industries, causing massive job losses.'",
+      "context_bn": "পাল্টা যুক্তি: 'এআই অনেক শিল্পে মানব কর্মী প্রতিস্থাপন করবে, যা ব্যাপক চাকরি হারানোর কারণ হবে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "AI is already being used in various sectors."
+        },
+        {
+          "id": "B",
+          "text": "Some jobs cannot be automated."
+        },
+        {
+          "id": "C",
+          "text": "While AI may automate some roles, technological change can also create different kinds of work, so the employment effect is not necessarily a simple one-way loss and retraining becomes important."
+        },
+        {
+          "id": "D",
+          "text": "Governments should provide unemployment benefits."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "While AI may automate some roles, technological change can also create different kinds of work, so the employment effect is not necessarily a simple one-way loss and retraining becomes important.",
+      "explanation_en": "The correct option acknowledges the displacement concern and offers a qualified counterargument rather than claiming a certain employment outcome. The other choices do not answer the overall counterpoint as directly.",
+      "explanation_bn": "সঠিক বিকল্পটি চাকরি স্থানচ্যুতির উদ্বেগ স্বীকার করে, কিন্তু নিশ্চিত ভবিষ্যৎ ফল দাবি না করে একটি শর্তসাপেক্ষ পাল্টা যুক্তি দেয়। অন্য বিকল্পগুলো সামগ্রিক পাল্টা যুক্তির উত্তর তত সরাসরি দেয় না।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা মনে করেন কিছু কাজ প্রতিস্থাপন করা যায় না, কিন্তু এটি বেকারত্বের যুক্তির পুরোপুরি প্রত্যুত্তর নয়; 'A' আরও ব্যাপক।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-030",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "COUNTERPOINT_RESPONSE",
+      "micro_focus": "counterpoint_response",
+      "difficulty": "ADVANCED",
+      "question_en": "Which response best addresses the counterpoint that reducing homework will lower academic standards?",
+      "question_bn": "হোমওয়ার্ক কমানো শিক্ষার মান কমাবে – এই পাল্টা যুক্তিটির সেরা প্রতিক্রিয়া কোনটি?",
+      "context_en": "Counterpoint: 'Cutting back on homework will reduce students' academic achievement and make them less competitive.'",
+      "context_bn": "পাল্টা যুক্তি: 'হোমওয়ার্ক কমানো শিক্ষার্থীদের শিক্ষাগত অর্জন কমাবে এবং তাদের কম প্রতিযোগিতামূলক করবে।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Teachers can assign less homework but make it more effective."
+        },
+        {
+          "id": "B",
+          "text": "Academic standards are determined by exams, not homework."
+        },
+        {
+          "id": "C",
+          "text": "Reducing homework does not mean lowering expectations; it can allow more time for deeper learning in class and for extracurricular development, which can actually enhance overall academic performance."
+        },
+        {
+          "id": "D",
+          "text": "Some students do not complete homework anyway."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Reducing homework does not mean lowering expectations; it can allow more time for deeper learning in class and for extracurricular development, which can actually enhance overall academic performance.",
+      "explanation_en": "Option A offers a reasoned rebuttal arguing that reduced homework could improve learning quality. B is a suggestion, C is a fact, D oversimplifies.",
+      "explanation_bn": "বিকল্প A একটি যুক্তিযুক্ত প্রত্যুত্তর দেয় যে হোমওয়ার্ক কমানো শেখার মান উন্নত করতে পারে। B একটি পরামর্শ, C একটি তথ্য, D অতিসরলীকরণ।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'more effective' দেখে, কিন্তু এটি সরাসরি মান কমানোর যুক্তির প্রত্যুত্তর নয়; 'A' যুক্তি দেয় যে এটি আসলে উন্নতি করতে পারে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-031",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "ARGUMENT_PROGRESSION",
+      "micro_focus": "argument_progression",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which ordering most logically develops this argument from claim to conclusion?",
+      "question_bn": "কোন ক্রমটি দাবি থেকে উপসংহার পর্যন্ত যুক্তিটিকে সবচেয়ে যৌক্তিকভাবে বিকশিত করে?",
+      "context_en": "Ideas: (1) Therefore, reducing plastic use is essential for environmental health. (2) For example, many cities have banned single-use plastics. (3) Plastic waste pollutes oceans and harms wildlife. (4) We should reduce plastic use.",
+      "context_bn": "ধারণা: (1) অতএব, প্লাস্টিক ব্যবহার কমানো পরিবেশের স্বাস্থ্যের জন্য অপরিহার্য। (2) উদাহরণস্বরূপ, অনেক শহর একক-ব্যবহার প্লাস্টিক নিষিদ্ধ করেছে। (3) প্লাস্টিক বর্জ্য সমুদ্র দূষিত করে এবং বন্যপ্রাণীর ক্ষতি করে। (4) আমাদের প্লাস্টিক ব্যবহার কমানো উচিত।",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 → 2 → 3 → 4"
+        },
+        {
+          "id": "B",
+          "text": "2 → 3 → 1 → 4"
+        },
+        {
+          "id": "C",
+          "text": "4 → 3 → 2 → 1"
+        },
+        {
+          "id": "D",
+          "text": "3 → 4 → 2 → 1"
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "4 → 3 → 2 → 1",
+      "explanation_en": "The logical flow: claim (4) → reason (3) → example (2) → conclusion (1). Option A follows this sequence.",
+      "explanation_bn": "যৌক্তিক প্রবাহ: দাবি (4) → কারণ (3) → উদাহরণ (2) → উপসংহার (1)। বিকল্প A এই ক্রম অনুসরণ করে।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'example' আগে দিতে চান, কিন্তু যুক্তির সঠিক ক্রম প্রথমে দাবি, তারপর কারণ, তারপর উদাহরণ, তারপর উপসংহার।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-032",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "ARGUMENT_PROGRESSION",
+      "micro_focus": "argument_progression",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sequence best develops the claim through reason and explanation before the conclusion?",
+      "question_bn": "কোন ক্রমটি উপসংহারের আগে কারণ ও ব্যাখ্যার মাধ্যমে দাবিটিকে সবচেয়ে ভালোভাবে বিকশিত করে?",
+      "context_en": "Ideas: (1) Therefore, governments should invest in public transport. (2) This is because it reduces traffic congestion and pollution. (3) Public transport is essential for sustainable cities. (4) Efficient buses and trains can move many people without the need for more roads.",
+      "context_bn": "ধারণা: (1) অতএব, সরকারের গণপরিবহনে বিনিয়োগ করা উচিত। (2) কারণ এটি যানজট ও দূষণ কমায়। (3) টেকসই শহরের জন্য গণপরিবহন অপরিহার্য। (4) দক্ষ বাস ও ট্রেনগুলি আরও রাস্তার প্রয়োজন ছাড়াই অনেক লোককে চলাচল করতে পারে।",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 → 2 → 4 → 1"
+        },
+        {
+          "id": "B",
+          "text": "1 → 3 → 2 → 4"
+        },
+        {
+          "id": "C",
+          "text": "2 → 3 → 1 → 4"
+        },
+        {
+          "id": "D",
+          "text": "3 → 4 → 2 → 1"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "3 → 2 → 4 → 1",
+      "explanation_en": "Sequence: claim (3) → reason (2) → explanation (4) → conclusion (1). Option A matches.",
+      "explanation_bn": "ক্রম: দাবি (3) → কারণ (2) → ব্যাখ্যা (4) → উপসংহার (1)। বিকল্প A মেলে।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'reason' হিসেবে '4' ব্যবহার করেন, কিন্তু '4' হলো 'explanation' (কারণটি কীভাবে কাজ করে)।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-033",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "ARGUMENT_PROGRESSION",
+      "micro_focus": "argument_progression",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which option shows a sound claim–reason–example–conclusion progression?",
+      "question_bn": "কোন বিকল্পটি দাবি–কারণ–উদাহরণ–উপসংহারের সঠিক অগ্রগতি দেখায়?",
+      "context_en": "Ideas: (1) Hence, school uniforms help reduce peer pressure. (2) Uniforms create a sense of equality among students. (3) Schools should consider adopting uniforms. (4) For instance, in some schools that introduced uniforms, students reported less bullying about clothing.",
+      "context_bn": "ধারণা: (1) অতএব, স্কুল ইউনিফর্ম সহপাঠীদের মধ্যে চাপ কমাতে সাহায্য করে। (2) ইউনিফর্ম শিক্ষার্থীদের মধ্যে সাম্যের অনুভূতি তৈরি করে। (3) স্কুলগুলোর ইউনিফর্ম গ্রহণ বিবেচনা করা উচিত। (4) উদাহরণস্বরূপ, যে স্কুলগুলো ইউনিফর্ম চালু করেছে, সেখানে পোশাক নিয়ে উত্যক্ত করা কমেছে।",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 → 2 → 3 → 1"
+        },
+        {
+          "id": "B",
+          "text": "2 → 3 → 1 → 4"
+        },
+        {
+          "id": "C",
+          "text": "3 → 4 → 2 → 1"
+        },
+        {
+          "id": "D",
+          "text": "3 → 2 → 4 → 1"
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "3 → 2 → 4 → 1",
+      "explanation_en": "Claim (3) → reason (2) → example (4) → conclusion (1). A is correct.",
+      "explanation_bn": "দাবি (3) → কারণ (2) → উদাহরণ (4) → উপসংহার (1)। A সঠিক।",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নেন কারণ তারা 'example' এর পরে 'reason' দিতে চান, কিন্তু যুক্তির ক্রমে reason আগে আসে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-034",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "ARGUMENT_PROGRESSION",
+      "micro_focus": "argument_progression",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sequence of ideas creates a logical progression: claim → reason → consequence → conclusion?",
+      "question_bn": "কোন ধারণার ক্রমটি একটি যৌক্তিক অগ্রগতি তৈরি করে: দাবি → কারণ → পরিণতি → উপসংহার?",
+      "context_en": "Ideas: (1) Consequently, better health and lower healthcare costs are achieved. (2) Regular exercise strengthens the heart and improves circulation. (3) Therefore, exercise should be promoted in schools. (4) Regular exercise is beneficial for health.",
+      "context_bn": "ধারণা: (1) ফলস্বরূপ, ভালো স্বাস্থ্য এবং কম স্বাস্থ্যসেবা খরচ অর্জিত হয়। (2) নিয়মিত ব্যায়াম হৃদয়কে শক্তিশালী করে এবং রক্ত সঞ্চালন উন্নত করে। (3) তাই, স্কুলে ব্যায়ামকে উৎসাহিত করা উচিত। (4) নিয়মিত ব্যায়াম স্বাস্থ্যের জন্য উপকারী।",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 → 4 → 2 → 3"
+        },
+        {
+          "id": "B",
+          "text": "4 → 2 → 1 → 3"
+        },
+        {
+          "id": "C",
+          "text": "2 → 4 → 1 → 3"
+        },
+        {
+          "id": "D",
+          "text": "4 → 1 → 2 → 3"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "4 → 2 → 1 → 3",
+      "explanation_en": "Claim (4) → reason (2) → consequence (1) → conclusion (3). A is correct.",
+      "explanation_bn": "দাবি (4) → কারণ (2) → পরিণতি (1) → উপসংহার (3)। A সঠিক।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'consequence' এর আগে 'reason' রাখতে চান না, কিন্তু যুক্তির ক্রমে কারণ আগে আসে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-035",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "ARGUMENT_PROGRESSION",
+      "micro_focus": "argument_progression",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which ordering gives the clearest claim–reason–explanation–conclusion progression?",
+      "question_bn": "কোন ক্রমটি দাবি–কারণ–ব্যাখ্যা–উপসংহারের সবচেয়ে পরিষ্কার অগ্রগতি দেখায়?",
+      "context_en": "Ideas: (1) Therefore, reducing food waste can help combat climate change. (2) Food waste produces methane gas when it decomposes. (3) We should reduce food waste. (4) Methane is a potent greenhouse gas that contributes to global warming.",
+      "context_bn": "ধারণা: (1) অতএব, খাদ্য অপচয় কমানো জলবায়ু পরিবর্তন মোকাবেলায় সাহায্য করতে পারে। (2) খাদ্য অপচয় পচে গিয়ে মিথেন গ্যাস উৎপন্ন করে। (3) আমাদের খাদ্য অপচয় কমানো উচিত। (4) মিথেন একটি শক্তিশালী গ্রিনহাউস গ্যাস যা বৈশ্বিক উষ্ণায়নে অবদান রাখে।",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 → 2 → 4 → 1"
+        },
+        {
+          "id": "B",
+          "text": "2 → 3 → 1 → 4"
+        },
+        {
+          "id": "C",
+          "text": "1 → 3 → 2 → 4"
+        },
+        {
+          "id": "D",
+          "text": "3 → 4 → 2 → 1"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "3 → 2 → 4 → 1",
+      "explanation_en": "Claim (3) → reason (2) → explanation (4) → conclusion (1). A is correct.",
+      "explanation_bn": "দাবি (3) → কারণ (2) → ব্যাখ্যা (4) → উপসংহার (1)। A সঠিক।",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নেন কারণ তারা 'explanation' হিসেবে '2' দিতে চান, কিন্তু '2' হলো কারণ, '4' হলো এর ব্যাখ্যা।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-036",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "TASK_PART_COVERAGE",
+      "micro_focus": "task_part_coverage",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which response covers both views and also gives a clear opinion on arts funding versus public services?",
+      "question_bn": "শিল্পকলায় অর্থায়ন বনাম জনসেবার বিষয়ে কোন উত্তরটি উভয় মত আলোচনা করে এবং স্পষ্ট মতামতও দেয়?",
+      "context_en": "Prompt: 'Some people believe that governments should fund the arts, while others think this money should be spent on public services. Discuss both views and give your opinion.'",
+      "context_bn": "প্রম্পট: 'কেউ কেউ মনে করেন সরকারের শিল্পকলায় অর্থায়ন করা উচিত, অন্যরা মনে করেন এই অর্থ জনসেবায় ব্যয় করা উচিত। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং আপনার মতামত দিন।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "I agree that arts funding is important."
+        },
+        {
+          "id": "B",
+          "text": "The arts are essential for culture, but public services like health and education are more immediate needs. Therefore, I believe funds should primarily go to public services."
+        },
+        {
+          "id": "C",
+          "text": "Public services are more important than arts."
+        },
+        {
+          "id": "D",
+          "text": "I will discuss both views and give my opinion."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "The arts are essential for culture, but public services like health and education are more immediate needs. Therefore, I believe funds should primarily go to public services.",
+      "explanation_en": "Option B acknowledges both views (arts are essential, public services are immediate) and gives a clear opinion. A is vague, C ignores arts, D ignores public services.",
+      "explanation_bn": "বিকল্প B উভয় দৃষ্টিভঙ্গি স্বীকার করে (শিল্প অপরিহার্য, জনসেবা জরুরি) এবং স্পষ্ট মতামত দেয়। A অস্পষ্ট, C শিল্প উপেক্ষা করে, D জনসেবা উপেক্ষা করে।",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নেন কারণ তারা মনে করেন 'discuss both views' লেখাই যথেষ্ট, কিন্তু মতামত দেওয়াও জরুরি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-037",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "TASK_PART_COVERAGE",
+      "micro_focus": "task_part_coverage",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which response addresses both approaches to reducing crime and gives a clear opinion?",
+      "question_bn": "অপরাধ কমানোর উভয় পদ্ধতি আলোচনা করে এবং স্পষ্ট মতামত দেয়—এমন উত্তর কোনটি?",
+      "context_en": "Prompt: 'Some people argue that the best way to reduce crime is to increase prison sentences, while others believe alternative approaches are more effective. Discuss both views and give your opinion.'",
+      "context_bn": "প্রম্পট: 'কেউ কেউ যুক্তি দেন যে অপরাধ কমানোর সর্বোত্তম উপায় হলো কারাদণ্ড বৃদ্ধি করা, অন্যরা বিশ্বাস করেন বিকল্প পদ্ধতি বেশি কার্যকর। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং আপনার মতামত দিন।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Longer prison sentences can deter criminals, but rehabilitation and education may address root causes. I believe a combination is most effective."
+        },
+        {
+          "id": "B",
+          "text": "I believe that rehabilitation is better than prison."
+        },
+        {
+          "id": "C",
+          "text": "Crime should be reduced through various methods."
+        },
+        {
+          "id": "D",
+          "text": "The effectiveness of prison sentences is debated."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Longer prison sentences can deter criminals, but rehabilitation and education may address root causes. I believe a combination is most effective.",
+      "explanation_en": "Option A discusses both views and gives a clear opinion. B ignores prison, C is vague, D ignores rehabilitation.",
+      "explanation_bn": "বিকল্প A উভয় দৃষ্টিভঙ্গি আলোচনা করে এবং স্পষ্ট মতামত দেয়। B কারাগার উপেক্ষা করে, C অস্পষ্ট, D পুনর্বাসন উপেক্ষা করে।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'debated' দেখে, কিন্তু এটি মতামত দেয় না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-038",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "TASK_PART_COVERAGE",
+      "micro_focus": "task_part_coverage",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which response addresses both proposed school-starting ages and gives a clear opinion?",
+      "question_bn": "স্কুল শুরুর উভয় প্রস্তাবিত বয়স আলোচনা করে এবং স্পষ্ট মতামত দেয়—এমন উত্তর কোনটি?",
+      "context_en": "Prompt: 'Some people think that children should start school at a very early age, while others believe they should begin at 6 or 7. Discuss both views and give your opinion.'",
+      "context_bn": "প্রম্পট: 'কেউ কেউ মনে করেন শিশুদের খুব অল্প বয়সে স্কুল শুরু করা উচিত, অন্যরা বিশ্বাস করেন তাদের ৬ বা ৭ বছর বয়সে শুরু করা উচিত। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং আপনার মতামত দিন।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Starting early can give children a head start, but starting later allows more time for social development. I believe a balanced approach is best."
+        },
+        {
+          "id": "B",
+          "text": "Early education is beneficial for cognitive development."
+        },
+        {
+          "id": "C",
+          "text": "Children should start school at 6 or 7."
+        },
+        {
+          "id": "D",
+          "text": "There are pros and cons to each side."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Starting early can give children a head start, but starting later allows more time for social development. I believe a balanced approach is best.",
+      "explanation_en": "Option A discusses both views and gives a clear opinion. B is one-sided, C ignores the later start view, D doesn't give an opinion.",
+      "explanation_bn": "বিকল্প A উভয় দৃষ্টিভঙ্গি আলোচনা করে এবং স্পষ্ট মতামত দেয়। B একপেশে, C পরে শুরু করার দৃষ্টিভঙ্গি উপেক্ষা করে, D মতামত দেয় না।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'pros and cons' দেখে, কিন্তু এটি মতামত দেয় না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-039",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "TASK_PART_COVERAGE",
+      "micro_focus": "task_part_coverage",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which response discusses both views on technology's effect on life and gives a clear opinion?",
+      "question_bn": "জীবনে প্রযুক্তির প্রভাব নিয়ে উভয় মত আলোচনা করে এবং স্পষ্ট মতামত দেয়—এমন উত্তর কোনটি?",
+      "context_en": "Prompt: 'Some people believe that technology has made life more complicated, while others think it has simplified it. Discuss both views and give your opinion.'",
+      "context_bn": "প্রম্পট: 'কেউ কেউ বিশ্বাস করেন প্রযুক্তি জীবনকে আরও জটিল করেছে, অন্যরা মনে করে এটি সহজ করেছে। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং আপনার মতামত দিন।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Technology is often complicated."
+        },
+        {
+          "id": "B",
+          "text": "Technology has brought convenience, but it has also introduced new challenges. I believe that, overall, it has simplified many aspects of life."
+        },
+        {
+          "id": "C",
+          "text": "Technology has made life simpler."
+        },
+        {
+          "id": "D",
+          "text": "There are different opinions on technology."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Technology has brought convenience, but it has also introduced new challenges. I believe that, overall, it has simplified many aspects of life.",
+      "explanation_en": "Option A discusses both views and gives an opinion. B is one-sided, C is vague, D doesn't give an opinion.",
+      "explanation_bn": "বিকল্প A উভয় দৃষ্টিভঙ্গি আলোচনা করে এবং মতামত দেয়। B একপেশে, C অস্পষ্ট, D মতামত দেয় না।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'different opinions' দেখে, কিন্তু এটি মতামত দেয় না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task2-argument-040",
+      "skill_id": "writing_argument_development",
+      "family": "WRITING",
+      "item_subtype": "TASK_PART_COVERAGE",
+      "micro_focus": "task_part_coverage",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which response discusses both public-health approaches and gives a clear opinion?",
+      "question_bn": "জনস্বাস্থ্য উন্নয়নের উভয় পদ্ধতি আলোচনা করে এবং স্পষ্ট মতামত দেয়—এমন উত্তর কোনটি?",
+      "context_en": "Prompt: 'Some people think that the best way to improve public health is to increase the number of sports facilities, while others believe that educating people about healthy eating is more important. Discuss both views and give your opinion.'",
+      "context_bn": "প্রম্পট: 'কেউ কেউ মনে করেন জনস্বাস্থ্য উন্নত করার সর্বোত্তম উপায় হলো ক্রীড়া সুবিধা বৃদ্ধি করা, অন্যরা বিশ্বাস করেন সুস্থ খাদ্যাভ্যাস সম্পর্কে শিক্ষা দেওয়া বেশি গুরুত্বপূর্ণ। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং আপনার মতামত দিন।'",
+      "options": [
+        {
+          "id": "A",
+          "text": "There are many ways to improve public health."
+        },
+        {
+          "id": "B",
+          "text": "Healthy eating is crucial for public health."
+        },
+        {
+          "id": "C",
+          "text": "Sports facilities are more important than nutrition education."
+        },
+        {
+          "id": "D",
+          "text": "Sports facilities encourage physical activity, but education about nutrition addresses diet directly. I believe a combination of both would be most effective."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Sports facilities encourage physical activity, but education about nutrition addresses diet directly. I believe a combination of both would be most effective.",
+      "explanation_en": "Option A discusses both views and gives an opinion. B is one-sided, C ignores sports, D is vague.",
+      "explanation_bn": "বিকল্প A উভয় দৃষ্টিভঙ্গি আলোচনা করে এবং মতামত দেয়। B একপেশে, C ক্রীড়া উপেক্ষা করে, D অস্পষ্ট।",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নেন কারণ তারা 'many ways' দেখে, কিন্তু এটি মতামত দেয় না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    }
+  ]
+}

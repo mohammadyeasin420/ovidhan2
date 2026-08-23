@@ -137,6 +137,13 @@
       "source_or_rationale": "Directly relevant to IELTS Academic Writing Task 1 but not General Training Task 1; test-type specificity is governed in the IELTS requirement map."
     },
     {
+      "goal_id": "IELTS",
+      "skill_id": "writing_argument_development",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Directly supports Task 2 argument development shared across Academic and General Training; current evidence remains bounded objective practice."
+    },
+    {
       "goal_id": "BANK",
       "skill_id": "indefinite_article_a_an",
       "importance": "CORE",

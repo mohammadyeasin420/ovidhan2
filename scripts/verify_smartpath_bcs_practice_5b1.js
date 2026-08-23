@@ -27,10 +27,10 @@ assert.ok(pack.every(item => typeof item.explanation_bn === 'string' && item.exp
 
 const skills = new Map(graph.skills.map(skill => [skill.id, skill]));
 assert.ok(pack.every(item => skills.has(item.micro_skill)));
-assert.equal(graph.item_mappings.length, 360);
+assert.equal(graph.item_mappings.length, 400);
 assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('mm-')).length, 30);
 assert.equal(graph.item_mappings.filter(mapping => mapping.item_id.startsWith('bcs-smartpath-')).length, 70);
-assert.equal(new Set(graph.item_mappings.map(mapping => mapping.item_id)).size, 360);
+assert.equal(new Set(graph.item_mappings.map(mapping => mapping.item_id)).size, 400);
 graph.item_mappings.forEach(mapping => {
     assert.ok(skills.has(mapping.primary_skill_id));
     assert.equal(skills.get(mapping.primary_skill_id).family_id, mapping.primary_family_id);
