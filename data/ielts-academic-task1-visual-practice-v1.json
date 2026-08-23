@@ -1,0 +1,2704 @@
+{
+  "pack_id": "ielts-academic-task1-visual-practice-v1",
+  "schema_version": 1,
+  "review_status": "REVIEWED",
+  "skill_id": "writing_visual_information_description",
+  "family": "WRITING",
+  "items": [
+    {
+      "id": "ielts-task1-visual-001",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "OVERVIEW",
+      "micro_focus": "overview_selection",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which sentence gives a valid overview without listing detailed figures?",
+      "question_bn": "কোন বাক্যটি বিস্তারিত সংখ্যা তালিকাভুক্ত না করে একটি সঠিক overview দেয়?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Museum visitors (thousands)",
+        "unit": "thousand visitors",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr"
+        ],
+        "series": [
+          {
+            "name": "Visitors",
+            "values": [
+              5,
+              7,
+              9,
+              12
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Overall, museum attendance rose steadily throughout the four-month period."
+        },
+        {
+          "id": "B",
+          "text": "Attendance rose in February, fell in March and recovered in April."
+        },
+        {
+          "id": "C",
+          "text": "The museum received exactly the same number of visitors each month."
+        },
+        {
+          "id": "D",
+          "text": "April recorded fewer visitors than January."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Overall, museum attendance rose steadily throughout the four-month period.",
+      "explanation_en": "The correct sentence captures the single major trend—a steady rise—without turning the overview into a list of figures.",
+      "explanation_bn": "সঠিক বাক্যটি সংখ্যা তালিকাভুক্ত না করে মূল ধারা—স্থির বৃদ্ধি—ধরে।",
+      "common_wrong_reason_bn": "অনেকে overview-এ সব সংখ্যা যোগ করতে চান; আগে মূল trend বা comparison ধরুন, তারপর প্রয়োজন হলে supporting detail-এ representative figure দিন।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-002",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "OVERVIEW",
+      "micro_focus": "overview_selection",
+      "difficulty": "FOUNDATION",
+      "question_en": "The bar chart shows sales of three products in a shop over two quarters. Which is the best overview?",
+      "question_bn": "বার চার্টটি দুই ত্রৈমাসিকে তিনটি পণ্যের বিক্রি দেখায়। কোনটি সেরা সারসংক্ষেপ?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Product sales (units)",
+        "unit": "units",
+        "categories": [
+          "Q1",
+          "Q2"
+        ],
+        "series": [
+          {
+            "name": "Product A",
+            "values": [
+              100,
+              120
+            ]
+          },
+          {
+            "name": "Product B",
+            "values": [
+              80,
+              70
+            ]
+          },
+          {
+            "name": "Product C",
+            "values": [
+              60,
+              90
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Product A sold 100 units in Q1 and 120 in Q2; Product B sold 80 and 70; Product C sold 60 and 90."
+        },
+        {
+          "id": "B",
+          "text": "Product A remained the best-selling product in both quarters, while Product C showed the strongest growth."
+        },
+        {
+          "id": "C",
+          "text": "Sales of Product B decreased while the other two increased."
+        },
+        {
+          "id": "D",
+          "text": "All products sold more than 50 units."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Product A remained the best-selling product in both quarters, while Product C showed the strongest growth.",
+      "explanation_en": "It captures the broad pattern rather than listing every value.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে বিস্তারিত সংখ্যা দিয়ে শুরু করেন, কিন্তু প্রথমে সামগ্রিক চিত্র দেওয়া ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-003",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "OVERVIEW",
+      "micro_focus": "overview_selection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The table shows the number of students enrolled in three courses over two years. Which is the best overview?",
+      "question_bn": "সারণিটি দুই বছরে তিনটি কোর্সে ভর্তি শিক্ষার্থীর সংখ্যা দেখায়। কোনটি সেরা সারসংক্ষেপ?",
+      "visual_payload": {
+        "visual_type": "TABLE",
+        "title": "Course enrolment",
+        "unit": "students",
+        "columns": [
+          "2022",
+          "2023"
+        ],
+        "rows": [
+          {
+            "label": "Course A",
+            "values": [
+              50,
+              65
+            ]
+          },
+          {
+            "label": "Course B",
+            "values": [
+              45,
+              40
+            ]
+          },
+          {
+            "label": "Course C",
+            "values": [
+              30,
+              55
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "In 2022, Course A had 50, Course B 45, Course C 30; in 2023, Course A had 65, Course B 40, Course C 55."
+        },
+        {
+          "id": "B",
+          "text": "Course C saw the largest percentage increase from 2022 to 2023."
+        },
+        {
+          "id": "C",
+          "text": "Overall, enrolments increased for Courses A and C, but decreased for Course B; Course A had the highest enrolment in both years."
+        },
+        {
+          "id": "D",
+          "text": "The table shows course enrolment."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Overall, enrolments increased for Courses A and C, but decreased for Course B; Course A had the highest enrolment in both years.",
+      "explanation_en": "It captures the broad pattern rather than listing every value.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে শুধু একটি কোর্সের পরিবর্তন নিয়ে লেখেন, কিন্তু সামগ্রিক চিত্র দেওয়া ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-004",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "OVERVIEW",
+      "micro_focus": "overview_selection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The line chart shows the average temperature in two cities over six months. Which is the best overview?",
+      "question_bn": "রেখাচিত্রটি ছয় মাসে দুই শহরের গড় তাপমাত্রা দেখায়। কোনটি সেরা সারসংক্ষেপ?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Average monthly temperature (°C)",
+        "unit": "°C",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "City X",
+            "values": [
+              10,
+              12,
+              15,
+              18,
+              22,
+              25
+            ]
+          },
+          {
+            "name": "City Y",
+            "values": [
+              5,
+              7,
+              10,
+              13,
+              17,
+              20
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "City X started at 10°C and reached 25°C; City Y started at 5°C and reached 20°C."
+        },
+        {
+          "id": "B",
+          "text": "The temperature difference between the two cities was greatest in January and smallest in June."
+        },
+        {
+          "id": "C",
+          "text": "The chart shows temperatures in two cities."
+        },
+        {
+          "id": "D",
+          "text": "Both cities experienced a steady rise in temperature, with City X consistently warmer than City Y throughout the period."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Both cities experienced a steady rise in temperature, with City X consistently warmer than City Y throughout the period.",
+      "explanation_en": "It captures the broad pattern rather than listing every value.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে তুলনা নিয়ে লেখেন কিন্তু সামগ্রিক প্রবণতা ভুলে যান।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-005",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "MAIN_FEATURE",
+      "micro_focus": "main_feature_selection",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which sentence identifies both extremes without listing every value?",
+      "question_bn": "কোন বাক্যটি প্রতিটি মান তালিকাভুক্ত না করে সর্বোচ্চ ও সর্বনিম্ন দুটিই চিহ্নিত করে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Attraction visitors (thousands)",
+        "unit": "thousand visitors",
+        "categories": [
+          "Attraction A",
+          "Attraction B",
+          "Attraction C"
+        ],
+        "series": [
+          {
+            "name": "Visitors",
+            "values": [
+              120,
+              95,
+              60
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Attraction A had the highest attendance, whereas Attraction C had the lowest."
+        },
+        {
+          "id": "B",
+          "text": "Attraction B had the highest attendance and Attraction A the lowest."
+        },
+        {
+          "id": "C",
+          "text": "All three attractions received the same number of visitors."
+        },
+        {
+          "id": "D",
+          "text": "Attraction C received more visitors than Attraction A."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Attraction A had the highest attendance, whereas Attraction C had the lowest.",
+      "explanation_en": "The displayed ranking places Attraction A highest and Attraction C lowest.",
+      "explanation_bn": "দেখানো ranking-এ Attraction A সর্বোচ্চ এবং Attraction C সর্বনিম্ন।",
+      "common_wrong_reason_bn": "অনেকে বিস্তারিত সংখ্যা দিয়ে শুরু করেন, কিন্তু প্রথমে মূল তুলনা বলা ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-006",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "MAIN_FEATURE",
+      "micro_focus": "main_feature_selection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sentence accurately contrasts the overall patterns of both series?",
+      "question_bn": "কোন বাক্যটি দুই series-এর সামগ্রিক pattern সঠিকভাবে contrast করে?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Stock price (USD)",
+        "unit": "USD",
+        "categories": [
+          "Jan",
+          "Mar",
+          "May",
+          "Jul",
+          "Sep",
+          "Nov"
+        ],
+        "series": [
+          {
+            "name": "Company A",
+            "values": [
+              50,
+              55,
+              60,
+              65,
+              70,
+              75
+            ]
+          },
+          {
+            "name": "Company B",
+            "values": [
+              40,
+              45,
+              55,
+              50,
+              60,
+              65
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both companies declined steadily throughout the year."
+        },
+        {
+          "id": "B",
+          "text": "Company A rose steadily, while Company B rose overall but fluctuated."
+        },
+        {
+          "id": "C",
+          "text": "Company B remained unchanged while Company A fluctuated."
+        },
+        {
+          "id": "D",
+          "text": "Company B was consistently higher than Company A."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Company A rose steadily, while Company B rose overall but fluctuated.",
+      "explanation_en": "One series rises at every point; the other rises overall but includes a mid-period fall.",
+      "explanation_bn": "একটি series প্রতিটি point-এ বাড়ে; অন্যটি সামগ্রিকভাবে বাড়লেও মাঝখানে কমে।",
+      "common_wrong_reason_bn": "অনেকে শুধু সংখ্যা নিয়ে লেখেন, কিন্তু আচরণগত পার্থক্য তুলে ধরা জরুরি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-007",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "TREND",
+      "micro_focus": "trend_direction",
+      "difficulty": "FOUNDATION",
+      "question_en": "The line chart shows the sales of a product over five years. Which statement best describes the trend?",
+      "question_bn": "রেখাচিত্রটি পাঁচ বছরে একটি পণ্যের বিক্রি দেখায়। কোন বক্তব্যটি প্রবণতা সবচেয়ে ভালো বর্ণনা করে?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Product sales (thousands)",
+        "unit": "thousand units",
+        "categories": [
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "series": [
+          {
+            "name": "Sales",
+            "values": [
+              10,
+              15,
+              18,
+              22,
+              25
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Sales fluctuated widely over the period."
+        },
+        {
+          "id": "B",
+          "text": "Sales remained stable for most of the period."
+        },
+        {
+          "id": "C",
+          "text": "Sales increased consistently over the five‑year period."
+        },
+        {
+          "id": "D",
+          "text": "Sales increased sharply in 2020, then fell in 2021."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Sales increased consistently over the five‑year period.",
+      "explanation_en": "It matches the direction and shape of the displayed series.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে 'increased' লিখলেও 'consistently' যোগ করতে ভুলে যান।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-008",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "TREND",
+      "micro_focus": "trend_direction",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The line chart shows the price of a commodity over six months. Which trend description is most accurate?",
+      "question_bn": "রেখাচিত্রটি ছয় মাসে একটি পণ্যের দাম দেখায়। কোন প্রবণতা বর্ণনাটি সবচেয়ে সঠিক?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Commodity price (USD)",
+        "unit": "USD",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "Price",
+            "values": [
+              100,
+              95,
+              102,
+              98,
+              105,
+              110
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "The price increased steadily month by month."
+        },
+        {
+          "id": "B",
+          "text": "The price remained stable throughout the period."
+        },
+        {
+          "id": "C",
+          "text": "The price fell sharply in February and then never recovered."
+        },
+        {
+          "id": "D",
+          "text": "The price fluctuated but showed an overall upward trend."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "The price fluctuated but showed an overall upward trend.",
+      "explanation_en": "It matches the direction and shape of the displayed series.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে শুধু 'increased' লেখেন, কিন্তু ওঠানামার কথাও বলা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-009",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "TREND",
+      "micro_focus": "peak_low_point",
+      "difficulty": "FOUNDATION",
+      "question_en": "The bar chart shows monthly revenue for a business. Which statement correctly identifies the highest and lowest months?",
+      "question_bn": "বার চার্টটি একটি ব্যবসার মাসিক রাজস্ব দেখায়। কোন বক্তব্যটি সর্বোচ্চ ও সর্বনিম্ন মাস সঠিকভাবে চিহ্নিত করে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Monthly revenue (USD)",
+        "unit": "USD",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "Revenue",
+            "values": [
+              5000,
+              4500,
+              6000,
+              5500,
+              7000,
+              6500
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "The highest revenue was in May and the lowest was in February."
+        },
+        {
+          "id": "B",
+          "text": "Revenue was highest in June and lowest in April."
+        },
+        {
+          "id": "C",
+          "text": "Revenue was highest in January and lowest in March."
+        },
+        {
+          "id": "D",
+          "text": "Revenue was highest in May and lowest in April."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "The highest revenue was in May and the lowest was in February.",
+      "explanation_en": "It identifies the actual maximum and minimum values.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে দ্রুত পড়ে ভুল করে; সাবধানে মান যাচাই করা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-010",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "COMPARISON",
+      "micro_focus": "comparison_accuracy",
+      "difficulty": "FOUNDATION",
+      "question_en": "The bar chart shows the number of books borrowed from two libraries over a week. Which comparison is accurate?",
+      "question_bn": "বার চার্টটি এক সপ্তাহে দুইটি লাইব্রেরি থেকে ধার করা বইয়ের সংখ্যা দেখায়। কোন তুলনাটি সঠিক?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Books borrowed",
+        "unit": "books",
+        "categories": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
+        "series": [
+          {
+            "name": "Library X",
+            "values": [
+              20,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          {
+            "name": "Library Y",
+            "values": [
+              15,
+              20,
+              25,
+              30,
+              35
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Library Y borrowed more books than Library X on most days."
+        },
+        {
+          "id": "B",
+          "text": "Library X consistently borrowed more books than Library Y."
+        },
+        {
+          "id": "C",
+          "text": "The two libraries borrowed the same number of books on Monday."
+        },
+        {
+          "id": "D",
+          "text": "Library X borrowed exactly twice as many books as Library Y on Friday."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Library X consistently borrowed more books than Library Y.",
+      "explanation_en": "Its comparison agrees with the displayed values.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে দ্রুত 'twice' বলে ফেলেন, কিন্তু মান যাচাই করা জরুরি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-011",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "COMPARISON",
+      "micro_focus": "comparison_accuracy",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The line chart shows the population growth of two countries over ten years. Which comparison is accurate?",
+      "question_bn": "রেখাচিত্রটি দশ বছরে দুই দেশের জনসংখ্যা বৃদ্ধি দেখায়। কোন তুলনাটি সঠিক?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Population (millions)",
+        "unit": "million",
+        "categories": [
+          "2014",
+          "2016",
+          "2018",
+          "2020",
+          "2022",
+          "2024"
+        ],
+        "series": [
+          {
+            "name": "Country A",
+            "values": [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "name": "Country B",
+            "values": [
+              8,
+              9,
+              10,
+              11,
+              13,
+              14
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Country B's population grew faster than Country A's in every year."
+        },
+        {
+          "id": "B",
+          "text": "Both countries had the same population in 2024."
+        },
+        {
+          "id": "C",
+          "text": "Country A's population was consistently about 2 million higher than Country B's until 2020, after which the gap closed."
+        },
+        {
+          "id": "D",
+          "text": "Country A's population doubled over the period."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Country A's population was consistently about 2 million higher than Country B's until 2020, after which the gap closed.",
+      "explanation_en": "Its comparison agrees with the displayed values.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে শেষের দিকে গ্যাপ কমে যাওয়ায় ভুল বোঝেন; সময় অনুসারে তুলনা করা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-012",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "COMPARISON",
+      "micro_focus": "comparison_language",
+      "difficulty": "ADVANCED",
+      "question_en": "The bar chart shows the sales of four products in two regions. Which sentence uses comparison language correctly?",
+      "question_bn": "বার চার্টটি দুই অঞ্চলে চারটি পণ্যের বিক্রি দেখায়। কোন বাক্যটি তুলনা ভাষা সঠিকভাবে ব্যবহার করে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Sales (thousands)",
+        "unit": "thousand units",
+        "categories": [
+          "Product A",
+          "Product B",
+          "Product C",
+          "Product D"
+        ],
+        "series": [
+          {
+            "name": "Region 1",
+            "values": [
+              50,
+              40,
+              30,
+              20
+            ]
+          },
+          {
+            "name": "Region 2",
+            "values": [
+              60,
+              45,
+              35,
+              25
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Region 1 recorded higher sales for every product."
+        },
+        {
+          "id": "B",
+          "text": "Region 2 sold roughly twice as much Product A as Region 1."
+        },
+        {
+          "id": "C",
+          "text": "Product A was the lowest-selling product in both regions."
+        },
+        {
+          "id": "D",
+          "text": "Region 2 recorded higher sales for every product, with the widest gap for Product A."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Region 2 recorded higher sales for every product, with the widest gap for Product A.",
+      "explanation_en": "Every Region 2 value exceeds its Region 1 counterpart, and Product A has the largest absolute gap.",
+      "explanation_bn": "Region 2-এর প্রতিটি মান Region 1-এর চেয়ে বেশি এবং Product A-তে absolute gap সবচেয়ে বড়।",
+      "common_wrong_reason_bn": "অনেকে 'twice as' বলে ভুল করেন; সঠিক তুলনা শব্দ ব্যবহার করা জরুরি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-013",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "DATA_SELECTION",
+      "micro_focus": "relevant_data_selection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which pair identifies the two highest transport shares?",
+      "question_bn": "কোন pair দুইটি সর্বোচ্চ transport share চিহ্নিত করে?",
+      "visual_payload": {
+        "visual_type": "TABLE",
+        "title": "Transport mode usage",
+        "unit": "%",
+        "columns": [
+          "Percentage"
+        ],
+        "rows": [
+          {
+            "label": "Car",
+            "values": [
+              45
+            ]
+          },
+          {
+            "label": "Bus",
+            "values": [
+              30
+            ]
+          },
+          {
+            "label": "Bicycle",
+            "values": [
+              15
+            ]
+          },
+          {
+            "label": "Walk",
+            "values": [
+              10
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Car (45%) and bus (30%)."
+        },
+        {
+          "id": "B",
+          "text": "Bicycle (15%) and walking (10%)."
+        },
+        {
+          "id": "C",
+          "text": "Car (45%) and bicycle (15%)."
+        },
+        {
+          "id": "D",
+          "text": "Bus (30%) and walking (10%)."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Car (45%) and bus (30%).",
+      "explanation_en": "Car and bus are uniquely the two largest percentages in the table.",
+      "explanation_bn": "Car ও bus-ই table-এর একমাত্র দুইটি সর্বোচ্চ percentage।",
+      "common_wrong_reason_bn": "অনেকে সব সংখ্যা উল্লেখ করতে চান, কিন্তু শুধু প্রাসঙ্গিকগুলো নির্বাচন করা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-014",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "DATA_SELECTION",
+      "micro_focus": "grouping_data",
+      "difficulty": "ADVANCED",
+      "question_en": "Which grouping reflects the clear gap in the displayed values?",
+      "question_bn": "দেখানো মানের স্পষ্ট gap কোন grouping-এ ধরা পড়ে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Exam passes",
+        "unit": "students",
+        "categories": [
+          "Math",
+          "Science",
+          "English",
+          "History",
+          "Art"
+        ],
+        "series": [
+          {
+            "name": "Passes",
+            "values": [
+              82,
+              79,
+              51,
+              49,
+              47
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Group Math with Art, and Science with History."
+        },
+        {
+          "id": "B",
+          "text": "Group Math and Science together, and group English, History and Art together."
+        },
+        {
+          "id": "C",
+          "text": "Place all five subjects in one group because all values differ."
+        },
+        {
+          "id": "D",
+          "text": "Group only History and Art, leaving the other three ungrouped."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Group Math and Science together, and group English, History and Art together.",
+      "explanation_en": "Math and Science form the high cluster above the clear gap; the remaining three form the lower cluster.",
+      "explanation_bn": "স্পষ্ট gap-এর ওপরে Math ও Science high cluster; বাকি তিনটি lower cluster।",
+      "common_wrong_reason_bn": "অনেকে প্রতিটি বিষয় আলাদাভাবে উল্লেখ করেন, কিন্তু গ্রুপিং তুলনা সহজ করে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-015",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "DATA_ACCURACY",
+      "micro_focus": "unit_accuracy",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which sentence reports both endpoint values using the chart unit accurately?",
+      "question_bn": "কোন বাক্যটি chart-এর unit ব্যবহার করে দুই endpoint সঠিকভাবে report করে?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Rainfall (mm)",
+        "unit": "mm",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "Rainfall",
+            "values": [
+              50,
+              60,
+              70,
+              80,
+              90,
+              100
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Rainfall rose from 50 cm in January to 100 cm in June."
+        },
+        {
+          "id": "B",
+          "text": "Rainfall rose from 50 mm in January to 100% in June."
+        },
+        {
+          "id": "C",
+          "text": "Rainfall rose from 50 mm in January to 100 mm in June."
+        },
+        {
+          "id": "D",
+          "text": "Rainfall rose from 50 in January to 100 in June."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Rainfall rose from 50 mm in January to 100 mm in June.",
+      "explanation_en": "Both endpoint values are expressed in millimetres, the unit supplied by the chart.",
+      "explanation_bn": "দুই endpoint-ই chart-এ দেওয়া millimetre unit-এ প্রকাশিত।",
+      "common_wrong_reason_bn": "অনেকে একক উল্লেখ করতে ভুলে যান; সবসময় একক দেওয়া উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-016",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "DATA_ACCURACY",
+      "micro_focus": "time_period_accuracy",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The bar chart shows quarterly sales of a company over two years. Which sentence correctly references the time period?",
+      "question_bn": "বার চার্টটি দুই বছরে একটি কোম্পানির ত্রৈমাসিক বিক্রি দেখায়। কোন বাক্যটি সময়কাল সঠিকভাবে উল্লেখ করে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Quarterly sales (USD)",
+        "unit": "USD",
+        "categories": [
+          "Q1 2022",
+          "Q2 2022",
+          "Q3 2022",
+          "Q4 2022",
+          "Q1 2023",
+          "Q2 2023"
+        ],
+        "series": [
+          {
+            "name": "Sales",
+            "values": [
+              100,
+              110,
+              105,
+              120,
+              115,
+              130
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Sales increased from 100 to 130 over the period."
+        },
+        {
+          "id": "B",
+          "text": "Sales increased from Q1 2022 to Q2 2023."
+        },
+        {
+          "id": "C",
+          "text": "Sales increased every quarter over the two years."
+        },
+        {
+          "id": "D",
+          "text": "Sales increased from 100 in Q1 2022 to 130 in Q2 2023."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Sales increased from 100 in Q1 2022 to 130 in Q2 2023.",
+      "explanation_en": "It preserves the displayed dates and period.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে শুধু 'over the period' বলেন, কিন্তু নির্দিষ্ট সময় উল্লেখ করা ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-017",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "DATA_ACCURACY",
+      "micro_focus": "approximation_language",
+      "difficulty": "ADVANCED",
+      "question_en": "The line chart shows the number of tourists visiting a country over a year. Which sentence uses approximation language appropriately?",
+      "question_bn": "রেখাচিত্রটি এক বছরে একটি দেশে পর্যটকদের সংখ্যা দেখায়। কোন বাক্যটি প্রায়-নির্ভর ভাষা সঠিকভাবে ব্যবহার করে?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Tourist arrivals (thousands)",
+        "unit": "thousand",
+        "categories": [
+          "Jan",
+          "Mar",
+          "May",
+          "Jul",
+          "Sep",
+          "Nov"
+        ],
+        "series": [
+          {
+            "name": "Tourists",
+            "values": [
+              120,
+              130,
+              115,
+              125,
+              140,
+              135
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Tourist numbers fluctuated around 125,000 throughout the year."
+        },
+        {
+          "id": "B",
+          "text": "Tourist numbers increased steadily from 120,000 to 135,000."
+        },
+        {
+          "id": "C",
+          "text": "Tourist numbers were exactly 120,000 in January and 135,000 in November."
+        },
+        {
+          "id": "D",
+          "text": "Tourist numbers varied between 115,000 and 140,000."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Tourist numbers fluctuated around 125,000 throughout the year.",
+      "explanation_en": "Its degree of approximation matches the displayed precision.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে 'about' বা 'around' ব্যবহার করতে ভয় পান, কিন্তু এটি প্রাকৃতিক ভাষা।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-018",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "NO_INFERENCE",
+      "micro_focus": "no_cause_invention",
+      "difficulty": "FOUNDATION",
+      "question_en": "The line chart shows an increase in sales from 2019 to 2023. Which statement avoids inventing a cause?",
+      "question_bn": "রেখাচিত্রটি ২০১৯ থেকে ২০২৩ সাল পর্যন্ত বিক্রি বৃদ্ধি দেখায়। কোন বক্তব্যটি কারণ উদ্ভাবন এড়ায়?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Sales (units)",
+        "unit": "units",
+        "categories": [
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "series": [
+          {
+            "name": "Sales",
+            "values": [
+              100,
+              120,
+              140,
+              160,
+              180
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Sales increased because the company launched a successful advertising campaign."
+        },
+        {
+          "id": "B",
+          "text": "Sales increased every year from 2019 to 2023."
+        },
+        {
+          "id": "C",
+          "text": "Sales increased due to population growth."
+        },
+        {
+          "id": "D",
+          "text": "Sales rose as a result of improved product quality."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Sales increased every year from 2019 to 2023.",
+      "explanation_en": "It reports only visible data and adds no unsupported cause.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে কারণ উদ্ভাবন করতে চান, কিন্তু Task 1-এ শুধু তথ্য বর্ণনা করতে হয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-019",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "NO_INFERENCE",
+      "micro_focus": "no_cause_invention",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The bar chart shows a drop in exports in 2022. Which statement correctly describes the data without adding causation?",
+      "question_bn": "বার চার্টটি ২০২২ সালে রপ্তানি হ্রাস দেখায়। কোন বক্তব্যটি কারণ না যোগ করে সঠিকভাবে তথ্য বর্ণনা করে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Exports (million USD)",
+        "unit": "million USD",
+        "categories": [
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "series": [
+          {
+            "name": "Exports",
+            "values": [
+              500,
+              550,
+              480,
+              520
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Exports decreased in 2022 due to a global recession."
+        },
+        {
+          "id": "B",
+          "text": "Exports dropped because of supply chain issues."
+        },
+        {
+          "id": "C",
+          "text": "Exports fell to 480 in 2022 after reaching 550 in 2021."
+        },
+        {
+          "id": "D",
+          "text": "The fall in exports was caused by a decline in demand."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Exports fell to 480 in 2022 after reaching 550 in 2021.",
+      "explanation_en": "It reports only visible data and adds no unsupported cause.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে প্রকৃত কারণ জানা না থাকলেও অনুমান করে লেখেন, যা Task 1-এ অনুচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-020",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "NO_INFERENCE",
+      "micro_focus": "no_personal_opinion",
+      "difficulty": "FOUNDATION",
+      "question_en": "The table shows the number of complaints received by a company in two years. Which sentence avoids personal opinion?",
+      "question_bn": "সারণিটি দুই বছরে একটি কোম্পানিতে প্রাপ্ত অভিযোগের সংখ্যা দেখায়। কোন বাক্যটি ব্যক্তিগত মতামত এড়ায়?",
+      "visual_payload": {
+        "visual_type": "TABLE",
+        "title": "Complaints",
+        "unit": "number",
+        "columns": [
+          "Complaints"
+        ],
+        "rows": [
+          {
+            "label": "2022",
+            "values": [
+              120
+            ]
+          },
+          {
+            "label": "2023",
+            "values": [
+              100
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "I think the company did a great job reducing complaints."
+        },
+        {
+          "id": "B",
+          "text": "It is impressive that complaints decreased."
+        },
+        {
+          "id": "C",
+          "text": "The company should be praised for this improvement."
+        },
+        {
+          "id": "D",
+          "text": "Complaints fell from 120 in 2022 to 100 in 2023."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Complaints fell from 120 in 2022 to 100 in 2023.",
+      "explanation_en": "It reports the data neutrally without evaluation.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে তথ্য দিয়ে শুরু করলেও শেষে মতামত যোগ করেন, যা Task 1-এর জন্য উপযুক্ত নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-021",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "NO_INFERENCE",
+      "micro_focus": "no_personal_opinion",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The line chart shows energy consumption from different sources. Which sentence reports the data neutrally?",
+      "question_bn": "রেখাচিত্রটি বিভিন্ন উৎস থেকে শক্তি ব্যবহার দেখায়। কোন বাক্যটি নিরপেক্ষভাবে তথ্য রিপোর্ট করে?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Energy consumption (TWh)",
+        "unit": "TWh",
+        "categories": [
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "series": [
+          {
+            "name": "Renewables",
+            "values": [
+              100,
+              110,
+              120,
+              130,
+              140
+            ]
+          },
+          {
+            "name": "Fossil",
+            "values": [
+              200,
+              190,
+              180,
+              170,
+              160
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Renewable energy consumption increased while fossil fuel consumption decreased over the period."
+        },
+        {
+          "id": "B",
+          "text": "It is good to see renewable energy increasing."
+        },
+        {
+          "id": "C",
+          "text": "Fossil fuel consumption is worrying and should be reduced."
+        },
+        {
+          "id": "D",
+          "text": "The growth of renewables is a positive sign for the environment."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Renewable energy consumption increased while fossil fuel consumption decreased over the period.",
+      "explanation_en": "It reports the data neutrally without evaluation.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে পরিবেশগত দৃষ্টিকোণ থেকে মন্তব্য করতে পারেন, কিন্তু Task 1-এ নিরপেক্ষ বর্ণনা প্রত্যাশিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-022",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "PROCESS_SEQUENCE",
+      "micro_focus": "process_sequence",
+      "difficulty": "FOUNDATION",
+      "question_en": "The diagram shows the process of recycling paper. Which sequence correctly describes the steps?",
+      "question_bn": "চিত্রটি কাগজ পুনর্ব্যবহারের প্রক্রিয়া দেখায়। কোন ক্রমটি ধাপগুলো সঠিকভাবে বর্ণনা করে?",
+      "visual_payload": {
+        "visual_type": "PROCESS",
+        "title": "Paper recycling process",
+        "stages": [
+          {
+            "id": "S1",
+            "label_en": "Collection",
+            "label_bn": "সংগ্রহ"
+          },
+          {
+            "id": "S2",
+            "label_en": "Sorting",
+            "label_bn": "বাছাই"
+          },
+          {
+            "id": "S3",
+            "label_en": "Pulping",
+            "label_bn": "সজ্জায় রূপান্তর"
+          },
+          {
+            "id": "S4",
+            "label_en": "De-inking",
+            "label_bn": "কালি অপসারণ"
+          },
+          {
+            "id": "S5",
+            "label_en": "Drying and rolling",
+            "label_bn": "শুকানো ও গড়ানো"
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Sorting → Collection → De-inking → Pulping → Drying and rolling"
+        },
+        {
+          "id": "B",
+          "text": "Collection → Sorting → Pulping → De-inking → Drying and rolling"
+        },
+        {
+          "id": "C",
+          "text": "Pulping → Collection → Sorting → De-inking → Drying and rolling"
+        },
+        {
+          "id": "D",
+          "text": "Collection → Pulping → Sorting → Drying and rolling → De-inking"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Collection → Sorting → Pulping → De-inking → Drying and rolling",
+      "explanation_en": "It follows the displayed stages in order.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে প্রথমে বাছাই বা সজ্জায় রূপান্তর বলে ভুল করেন; প্রক্রিয়ার প্রাকৃতিক ক্রম অনুসরণ করা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-023",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "PROCESS_SEQUENCE",
+      "micro_focus": "process_sequence",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The diagram shows how a water treatment plant works. Which sentence correctly describes the beginning and end of the process?",
+      "question_bn": "চিত্রটি একটি জল শোধনাগার কীভাবে কাজ করে তা দেখায়। কোন বাক্যটি প্রক্রিয়ার শুরু ও শেষ সঠিকভাবে বর্ণনা করে?",
+      "visual_payload": {
+        "visual_type": "PROCESS",
+        "title": "Water treatment process",
+        "stages": [
+          {
+            "id": "S1",
+            "label_en": "Intake from river",
+            "label_bn": "নদী থেকে পানি গ্রহণ"
+          },
+          {
+            "id": "S2",
+            "label_en": "Screening",
+            "label_bn": "ছাঁকনি"
+          },
+          {
+            "id": "S3",
+            "label_en": "Sedimentation",
+            "label_bn": "পলি জমা"
+          },
+          {
+            "id": "S4",
+            "label_en": "Filtration",
+            "label_bn": "পরিশোধন"
+          },
+          {
+            "id": "S5",
+            "label_en": "Chlorination",
+            "label_bn": "ক্লোরিনেশন"
+          },
+          {
+            "id": "S6",
+            "label_en": "Storage and distribution",
+            "label_bn": "সংরক্ষণ ও বিতরণ"
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "The process starts with screening and ends with filtration."
+        },
+        {
+          "id": "B",
+          "text": "The process begins with sedimentation and ends with chlorination."
+        },
+        {
+          "id": "C",
+          "text": "The process begins with intake from the river and ends with storage and distribution."
+        },
+        {
+          "id": "D",
+          "text": "The process starts with intake and ends with chlorination."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "The process begins with intake from the river and ends with storage and distribution.",
+      "explanation_en": "It follows the displayed stages in order.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে মাঝামাঝি ধাপ দিয়ে শুরু করতে ভুল করেন; প্রথম ও শেষ ধাপ চিহ্নিত করা গুরুত্বপূর্ণ।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-024",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "PROCESS_SEQUENCE",
+      "micro_focus": "process_sequence",
+      "difficulty": "ADVANCED",
+      "question_en": "Which statement gives the complete displayed sequence from the first stage to the last?",
+      "question_bn": "কোন বাক্যটি প্রথম থেকে শেষ পর্যন্ত সম্পূর্ণ displayed sequence দেয়?",
+      "visual_payload": {
+        "visual_type": "PROCESS",
+        "title": "Butterfly life cycle",
+        "stages": [
+          {
+            "id": "S1",
+            "label_en": "Egg",
+            "label_bn": "ডিম"
+          },
+          {
+            "id": "S2",
+            "label_en": "Larva (caterpillar)",
+            "label_bn": "শুঁয়োপোকা"
+          },
+          {
+            "id": "S3",
+            "label_en": "Pupa (chrysalis)",
+            "label_bn": "পিউপা"
+          },
+          {
+            "id": "S4",
+            "label_en": "Adult butterfly",
+            "label_bn": "প্রাপ্তবয়স্ক প্রজাপতি"
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Egg → pupa → larva → adult butterfly."
+        },
+        {
+          "id": "B",
+          "text": "Larva → egg → adult butterfly → pupa."
+        },
+        {
+          "id": "C",
+          "text": "Adult butterfly → pupa → egg → larva."
+        },
+        {
+          "id": "D",
+          "text": "Egg → larva → pupa → adult butterfly."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Egg → larva → pupa → adult butterfly.",
+      "explanation_en": "Only the correct answer follows every displayed stage ID in order from S1 through S4.",
+      "explanation_bn": "শুধু সঠিক উত্তরটি S1 থেকে S4 পর্যন্ত প্রতিটি displayed stage-এর ক্রম মেনে চলে।",
+      "common_wrong_reason_bn": "অনেকে শুধু একটি ধাপ উল্লেখ করেন, কিন্তু পূর্ণ ক্রম দেওয়া ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-025",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "LANGUAGE_CHOICE",
+      "micro_focus": "trend_direction",
+      "difficulty": "FOUNDATION",
+      "question_en": "The line chart shows a steady increase in prices. Which sentence uses appropriate language for a steady rise?",
+      "question_bn": "রেখাচিত্রটি দামের স্থির বৃদ্ধি দেখায়। কোন বাক্যটি স্থির বৃদ্ধির জন্য উপযুক্ত ভাষা ব্যবহার করে?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Price index",
+        "unit": "points",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "Price",
+            "values": [
+              100,
+              102,
+              104,
+              106,
+              108,
+              110
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Prices rose steadily from 100 to 110 over the six months."
+        },
+        {
+          "id": "B",
+          "text": "Prices increased dramatically."
+        },
+        {
+          "id": "C",
+          "text": "Prices fluctuated wildly."
+        },
+        {
+          "id": "D",
+          "text": "Prices remained relatively constant."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Prices rose steadily from 100 to 110 over the six months.",
+      "explanation_en": "It matches the direction and shape of the displayed series.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে 'increased dramatically' লেখেন, কিন্তু বৃদ্ধির হার দেখে শব্দ নির্বাচন করা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-026",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "LANGUAGE_CHOICE",
+      "micro_focus": "comparison_language",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The bar chart compares the average salaries of two professions. Which sentence uses comparison language correctly?",
+      "question_bn": "বার চার্টটি দুই পেশার গড় বেতন তুলনা করে। কোন বাক্যটি তুলনা ভাষা সঠিকভাবে ব্যবহার করে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Average salary (USD)",
+        "unit": "USD",
+        "categories": [
+          "Profession A",
+          "Profession B"
+        ],
+        "series": [
+          {
+            "name": "Salary",
+            "values": [
+              50000,
+              40000
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Profession A earns $10,000 higher than Profession B."
+        },
+        {
+          "id": "B",
+          "text": "Profession A earns $10,000 more than Profession B."
+        },
+        {
+          "id": "C",
+          "text": "Profession A earns $10,000 as compared to Profession B."
+        },
+        {
+          "id": "D",
+          "text": "Profession A earns $10,000 excess over Profession B."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Profession A earns $10,000 more than Profession B.",
+      "explanation_en": "It uses accurate, grammatical comparison language.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে 'higher than' ব্যবহার করেন, কিন্তু 'more than' এখানে বেশি প্রাকৃতিক।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-027",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "LANGUAGE_CHOICE",
+      "micro_focus": "approximation_language",
+      "difficulty": "ADVANCED",
+      "question_en": "The figures are rounded to one decimal place in millions. Which sentence appropriately rounds City X to the nearest whole million?",
+      "question_bn": "মানগুলো million-এ এক decimal place পর্যন্ত দেওয়া। কোন বাক্যটি City X-কে nearest whole million-এ যথাযথভাবে round করে?",
+      "visual_payload": {
+        "visual_type": "TABLE",
+        "title": "Population (millions)",
+        "unit": "million",
+        "columns": [
+          "Population"
+        ],
+        "rows": [
+          {
+            "label": "City X",
+            "values": [
+              12.4
+            ]
+          },
+          {
+            "label": "City Y",
+            "values": [
+              8.7
+            ]
+          },
+          {
+            "label": "City Z",
+            "values": [
+              5.2
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "City X has exactly 12 million residents."
+        },
+        {
+          "id": "B",
+          "text": "City X has about 124 million residents."
+        },
+        {
+          "id": "C",
+          "text": "City X has about 12 million residents."
+        },
+        {
+          "id": "D",
+          "text": "City X has roughly 13 million residents."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "City X has about 12 million residents.",
+      "explanation_en": "Rounding 12.4 million to the nearest whole million gives about 12 million; “exactly” would misrepresent rounded data.",
+      "explanation_bn": "12.4 million nearest whole million-এ round করলে about 12 million হয়; “exactly” rounded data-কে ভুলভাবে উপস্থাপন করে।",
+      "common_wrong_reason_bn": "অনেকে 'exactly' লেখেন, কিন্তু আনুমানিক তথ্যের ক্ষেত্রে তা ভুল।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-028",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "MAIN_FEATURE",
+      "micro_focus": "main_feature_selection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which statement captures the overall pattern and its main exception?",
+      "question_bn": "কোন বাক্যটি overall pattern এবং তার main exception দুটিই ধরে?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Car sales",
+        "unit": "cars",
+        "categories": [
+          "Jan",
+          "Mar",
+          "May",
+          "Jul",
+          "Sep",
+          "Nov"
+        ],
+        "series": [
+          {
+            "name": "Sales",
+            "values": [
+              50,
+              60,
+              55,
+              70,
+              80,
+              90
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Sales declined overall, despite a rise in May."
+        },
+        {
+          "id": "B",
+          "text": "Sales remained unchanged throughout the year."
+        },
+        {
+          "id": "C",
+          "text": "Sales peaked in May and then fell continuously."
+        },
+        {
+          "id": "D",
+          "text": "Sales rose overall, despite a temporary dip in May."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Sales rose overall, despite a temporary dip in May.",
+      "explanation_en": "The series increases from 50 to 90 overall, with May as the only temporary decline.",
+      "explanation_bn": "Series সামগ্রিকভাবে 50 থেকে 90-এ বাড়ে; May একমাত্র temporary decline।",
+      "common_wrong_reason_bn": "অনেকে শুধু শেষের দিকে ফোকাস করেন, কিন্তু সামগ্রিক প্রবণতা বেশি গুরুত্বপূর্ণ।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-029",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "TREND",
+      "micro_focus": "trend_direction",
+      "difficulty": "FOUNDATION",
+      "question_en": "The bar chart shows quarterly profits. Which trend description is most accurate?",
+      "question_bn": "বার চার্টটি ত্রৈমাসিক মুনাফা দেখায়। কোন প্রবণতা বর্ণনাটি সবচেয়ে সঠিক?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Profit (USD)",
+        "unit": "USD",
+        "categories": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ],
+        "series": [
+          {
+            "name": "Profit",
+            "values": [
+              1000,
+              1200,
+              1100,
+              1300
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Profits increased overall, with a small dip in Q3."
+        },
+        {
+          "id": "B",
+          "text": "Profits increased every quarter."
+        },
+        {
+          "id": "C",
+          "text": "Profits were stable throughout the year."
+        },
+        {
+          "id": "D",
+          "text": "Profits dropped sharply in Q3."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Profits increased overall, with a small dip in Q3.",
+      "explanation_en": "It matches the direction and shape of the displayed series.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে শুধু 'increased' লেখেন, কিন্তু ছোট হ্রাসও উল্লেখ করা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-030",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "COMPARISON",
+      "micro_focus": "comparison_accuracy",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which comparison matches the exact weekly values?",
+      "question_bn": "কোন comparison exact weekly values-এর সঙ্গে মেলে?",
+      "visual_payload": {
+        "visual_type": "TABLE",
+        "title": "Weekly working hours",
+        "unit": "hours",
+        "columns": [
+          "Avg hours"
+        ],
+        "rows": [
+          {
+            "label": "Dept A",
+            "values": [
+              38
+            ]
+          },
+          {
+            "label": "Dept B",
+            "values": [
+              34
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Department A averaged 3 more working hours per week than Department B."
+        },
+        {
+          "id": "B",
+          "text": "Department A averaged 4 more working hours per week than Department B."
+        },
+        {
+          "id": "C",
+          "text": "Department B averaged 4 more working hours per week than Department A."
+        },
+        {
+          "id": "D",
+          "text": "Both departments averaged 38 working hours per week."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Department A averaged 4 more working hours per week than Department B.",
+      "explanation_en": "The table gives 38 hours for A and 34 for B, an exact difference of four hours.",
+      "explanation_bn": "Table-এ A 38 এবং B 34 hours; exact difference চার hours।",
+      "common_wrong_reason_bn": "অনেকে 'approximately' লেখেন, কিন্তু সঠিক সংখ্যা থাকলে তা ব্যবহার করা ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-031",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "DATA_SELECTION",
+      "micro_focus": "relevant_data_selection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sentence gives a broad grouping suitable for an overview?",
+      "question_bn": "কোন বাক্যটি overview-এর উপযোগী broad grouping দেয়?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Subject choices",
+        "unit": "students",
+        "categories": [
+          "Science",
+          "Arts",
+          "Commerce",
+          "Engineering"
+        ],
+        "series": [
+          {
+            "name": "Students",
+            "values": [
+              120,
+              90,
+              110,
+              80
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Science enrolled exactly 120 students and no other subject is relevant."
+        },
+        {
+          "id": "B",
+          "text": "Engineering was more popular than Science and Commerce."
+        },
+        {
+          "id": "C",
+          "text": "Science and Commerce attracted more students than Arts and Engineering."
+        },
+        {
+          "id": "D",
+          "text": "All four subjects attracted identical numbers of students."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Science and Commerce attracted more students than Arts and Engineering.",
+      "explanation_en": "The two higher values form one group and the two lower values form the contrasting group.",
+      "explanation_bn": "দুইটি higher value এক group এবং দুইটি lower value contrasting group তৈরি করে।",
+      "common_wrong_reason_bn": "অনেকে সব সংখ্যা দিয়ে শুরু করেন, কিন্তু গ্রুপিং বেশি কার্যকর।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-032",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "DATA_ACCURACY",
+      "micro_focus": "unit_accuracy",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The chart unit is kilograms. Which sentence contains no unit error and includes the displayed period?",
+      "question_bn": "Chart-এর unit kilograms। কোন বাক্যে unit error নেই এবং displayed period-ও আছে?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Product weight (kg)",
+        "unit": "kg",
+        "categories": [
+          "Jan",
+          "Apr",
+          "Jul",
+          "Oct"
+        ],
+        "series": [
+          {
+            "name": "Weight",
+            "values": [
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "The product weight rose from 5 tonnes in January to 8 tonnes in October."
+        },
+        {
+          "id": "B",
+          "text": "The product weight rose from 5 grams in January to 8 grams in October."
+        },
+        {
+          "id": "C",
+          "text": "The product weight rose from 5 in January to 8 in October."
+        },
+        {
+          "id": "D",
+          "text": "The product weight rose from 5 kg in January to 8 kg in October."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "The product weight rose from 5 kg in January to 8 kg in October.",
+      "explanation_en": "Kilograms match the visual unit at both endpoints; the alternatives change or omit that unit.",
+      "explanation_bn": "দুই endpoint-এ kilograms visual unit-এর সঙ্গে মেলে; অন্যগুলো unit বদলায় বা বাদ দেয়।",
+      "common_wrong_reason_bn": "অনেকে একক উল্লেখ করতে ভুলে যান; সবসময় একক দেওয়া উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-033",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "OVERVIEW",
+      "micro_focus": "overview_selection",
+      "difficulty": "ADVANCED",
+      "question_en": "The line chart shows the unemployment rate in two countries over five years. Which overview is most effective?",
+      "question_bn": "রেখাচিত্রটি পাঁচ বছরে দুই দেশের বেকারত্বের হার দেখায়। কোন সারসংক্ষেপটি সবচেয়ে কার্যকর?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Unemployment rate (%)",
+        "unit": "%",
+        "categories": [
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "series": [
+          {
+            "name": "Country A",
+            "values": [
+              5,
+              6,
+              8,
+              7,
+              6
+            ]
+          },
+          {
+            "name": "Country B",
+            "values": [
+              4,
+              5,
+              6,
+              5,
+              4
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Both countries experienced a rise then a fall in unemployment, with Country A consistently higher."
+        },
+        {
+          "id": "B",
+          "text": "Unemployment in Country A peaked in 2021 at 8%, while Country B peaked at 6% in the same year."
+        },
+        {
+          "id": "C",
+          "text": "Country A's unemployment rate was 5%, 6%, 8%, 7%, 6% and Country B's was 4%, 5%, 6%, 5%, 4%."
+        },
+        {
+          "id": "D",
+          "text": "Both countries reduced unemployment by 2023."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Both countries experienced a rise then a fall in unemployment, with Country A consistently higher.",
+      "explanation_en": "It captures the broad pattern rather than listing every value.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে শুধু peak উল্লেখ করেন, কিন্তু সামগ্রিক ধারা দেওয়া ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-034",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "MAIN_FEATURE",
+      "micro_focus": "main_feature_selection",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which sentence gives the complete accurate comparison between the two groups?",
+      "question_bn": "কোন বাক্যটি দুই group-এর complete accurate comparison দেয়?",
+      "visual_payload": {
+        "visual_type": "TABLE",
+        "title": "Books read per year",
+        "unit": "books",
+        "columns": [
+          "Average"
+        ],
+        "rows": [
+          {
+            "label": "10-14",
+            "values": [
+              12
+            ]
+          },
+          {
+            "label": "15-19",
+            "values": [
+              8
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Students aged 15–19 read an average of 12 books, four more than the younger group."
+        },
+        {
+          "id": "B",
+          "text": "Students aged 10–14 read an average of 12 books, four more than the 15–19 group."
+        },
+        {
+          "id": "C",
+          "text": "Both age groups read an average of 10 books."
+        },
+        {
+          "id": "D",
+          "text": "Students aged 10–14 read four fewer books than the older group."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Students aged 10–14 read an average of 12 books, four more than the 15–19 group.",
+      "explanation_en": "The younger group averages 12 books versus 8, so it reads four more on average.",
+      "explanation_bn": "Younger group average 12 বনাম 8, তাই তারা average-এ চারটি বেশি বই পড়ে।",
+      "common_wrong_reason_bn": "অনেকে শুধু সংখ্যা উল্লেখ করেন, কিন্তু তুলনা করে বলাটা বেশি কার্যকর।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-035",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "TREND",
+      "micro_focus": "trend_direction",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The line chart shows the number of users of a mobile app over time. Which trend is most accurate?",
+      "question_bn": "রেখাচিত্রটি সময়ের সাথে একটি মোবাইল অ্যাপের ব্যবহারকারীর সংখ্যা দেখায়। কোন প্রবণতা সবচেয়ে সঠিক?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "App users (thousands)",
+        "unit": "thousand",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "Users",
+            "values": [
+              10,
+              15,
+              20,
+              18,
+              22,
+              25
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "User numbers increased every month."
+        },
+        {
+          "id": "B",
+          "text": "User numbers remained stable until April, then increased."
+        },
+        {
+          "id": "C",
+          "text": "User numbers increased overall but with a slight decline in April."
+        },
+        {
+          "id": "D",
+          "text": "User numbers decreased in April."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "User numbers increased overall but with a slight decline in April.",
+      "explanation_en": "It matches the direction and shape of the displayed series.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে শুধু 'increased' লেখেন, কিন্তু ছোট হ্রাসও উল্লেখ করা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-036",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "DATA_ACCURACY",
+      "micro_focus": "time_period_accuracy",
+      "difficulty": "ADVANCED",
+      "question_en": "Which sentence reports the exact displayed endpoints with both dates and values?",
+      "question_bn": "কোন বাক্যটি date ও value-সহ exact displayed endpoints report করে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Monthly sales (USD)",
+        "unit": "USD",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "series": [
+          {
+            "name": "Sales",
+            "values": [
+              100,
+              110,
+              120,
+              115,
+              125,
+              130
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Sales rose from $110 in January to $130 in June."
+        },
+        {
+          "id": "B",
+          "text": "Sales rose from $100 in February to $130 in July."
+        },
+        {
+          "id": "C",
+          "text": "Sales rose from $100 in January to $125 in June."
+        },
+        {
+          "id": "D",
+          "text": "Sales rose from $100 in January to $130 in June."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Sales rose from $100 in January to $130 in June.",
+      "explanation_en": "The chart begins at $100 in January and ends at $130 in June; only one sentence preserves both dates and values.",
+      "explanation_bn": "Chart January-এ $100 দিয়ে শুরু এবং June-এ $130-এ শেষ; শুধু একটি বাক্য দুই date ও value ঠিক রাখে।",
+      "common_wrong_reason_bn": "অনেকে 'first half' বললেও নির্দিষ্ট মাস উল্লেখ করা ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-037",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "NO_INFERENCE",
+      "micro_focus": "no_cause_invention",
+      "difficulty": "ADVANCED",
+      "question_en": "The line chart shows a sharp increase in exports in 2022. Which statement avoids unsupported speculation?",
+      "question_bn": "রেখাচিত্রটি ২০২২ সালে রপ্তানিতে তীব্র বৃদ্ধি দেখায়। কোন বক্তব্যটি অসমর্থিত অনুমান এড়ায়?",
+      "visual_payload": {
+        "visual_type": "LINE_CHART",
+        "title": "Exports (million USD)",
+        "unit": "million USD",
+        "categories": [
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "series": [
+          {
+            "name": "Exports",
+            "values": [
+              200,
+              220,
+              300,
+              320
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Exports rose sharply in 2022 to 300 million, following a more gradual increase in previous years."
+        },
+        {
+          "id": "B",
+          "text": "Exports rose sharply due to a new trade agreement."
+        },
+        {
+          "id": "C",
+          "text": "The government's policies caused the export boom."
+        },
+        {
+          "id": "D",
+          "text": "Exports surged because of increased demand."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Exports rose sharply in 2022 to 300 million, following a more gradual increase in previous years.",
+      "explanation_en": "It reports only visible data and adds no unsupported cause.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে শার্প বৃদ্ধি দেখে কারণ অনুমান করতে চান, কিন্তু Task 1-এ তা অনুচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-038",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "NO_INFERENCE",
+      "micro_focus": "no_personal_opinion",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "The table shows the number of accidents in two regions. Which sentence is objective?",
+      "question_bn": "সারণিটি দুই অঞ্চলে দুর্ঘটনার সংখ্যা দেখায়। কোন বাক্যটি বস্তুনিষ্ঠ?",
+      "visual_payload": {
+        "visual_type": "TABLE",
+        "title": "Accidents",
+        "unit": "number",
+        "columns": [
+          "Accidents"
+        ],
+        "rows": [
+          {
+            "label": "Region A",
+            "values": [
+              45
+            ]
+          },
+          {
+            "label": "Region B",
+            "values": [
+              30
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Region A had more accidents, which is a bad thing."
+        },
+        {
+          "id": "B",
+          "text": "Region A had 45 accidents, which is higher than the 30 in Region B."
+        },
+        {
+          "id": "C",
+          "text": "It is worrying that Region A has so many accidents."
+        },
+        {
+          "id": "D",
+          "text": "Region B should be praised for having fewer accidents."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Region A had 45 accidents, which is higher than the 30 in Region B.",
+      "explanation_en": "It reports the data neutrally without evaluation.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে দুর্ঘটনা নিয়ে মন্তব্য করতে চান, কিন্তু বস্তুনিষ্ঠ থাকা উচিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-039",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "COMPARISON",
+      "micro_focus": "comparison_language",
+      "difficulty": "ADVANCED",
+      "question_en": "The bar chart shows the revenue of three companies in 2023. Which sentence uses comparison language correctly?",
+      "question_bn": "বার চার্টটি ২০২৩ সালে তিনটি কোম্পানির রাজস্ব দেখায়। কোন বাক্যটি তুলনা ভাষা সঠিকভাবে ব্যবহার করে?",
+      "visual_payload": {
+        "visual_type": "BAR_CHART",
+        "title": "Revenue (million USD)",
+        "unit": "million USD",
+        "categories": [
+          "Company A",
+          "Company B",
+          "Company C"
+        ],
+        "series": [
+          {
+            "name": "Revenue",
+            "values": [
+              80,
+              60,
+              40
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Company A generated $20 million higher revenue than Company B."
+        },
+        {
+          "id": "B",
+          "text": "Company A's revenue was $20 million as compared to Company B."
+        },
+        {
+          "id": "C",
+          "text": "Company A generated $20 million more revenue than Company B, and $40 million more than Company C."
+        },
+        {
+          "id": "D",
+          "text": "Company A earned $20 million excess over Company B."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Company A generated $20 million more revenue than Company B, and $40 million more than Company C.",
+      "explanation_en": "It uses accurate, grammatical comparison language.",
+      "explanation_bn": "সঠিক উত্তরটি visual-এর তথ্য ও প্রশ্নে নির্ধারিত construct-এর সঙ্গে মেলে; অন্যগুলো data বদলায়, প্রয়োজনীয় তথ্য বাদ দেয় বা unsupported content যোগ করে।",
+      "common_wrong_reason_bn": "অনেকে 'higher than' ব্যবহার করেন, কিন্তু 'more than' বেশি প্রাকৃতিক।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-task1-visual-040",
+      "skill_id": "writing_visual_information_description",
+      "family": "WRITING",
+      "item_subtype": "OVERVIEW",
+      "micro_focus": "overview_selection",
+      "difficulty": "ADVANCED",
+      "question_en": "The table shows the number of tourists from four regions over three years. Which is the best overview?",
+      "question_bn": "সারণিটি তিন বছরে চারটি অঞ্চল থেকে পর্যটকের সংখ্যা দেখায়। কোনটি সেরা সারসংক্ষেপ?",
+      "visual_payload": {
+        "visual_type": "TABLE",
+        "title": "Tourist arrivals (thousands)",
+        "unit": "thousand",
+        "columns": [
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "rows": [
+          {
+            "label": "Region A",
+            "values": [
+              40,
+              45,
+              50
+            ]
+          },
+          {
+            "label": "Region B",
+            "values": [
+              30,
+              35,
+              40
+            ]
+          },
+          {
+            "label": "Region C",
+            "values": [
+              20,
+              25,
+              30
+            ]
+          },
+          {
+            "label": "Region D",
+            "values": [
+              10,
+              15,
+              20
+            ]
+          }
+        ]
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": "Region D was the only region whose arrivals declined over the period."
+        },
+        {
+          "id": "B",
+          "text": "Region B overtook Region A in 2023."
+        },
+        {
+          "id": "C",
+          "text": "All four regions recorded identical arrival totals in 2021."
+        },
+        {
+          "id": "D",
+          "text": "Overall, arrivals from every region rose each year; Region A remained highest and Region D lowest."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Overall, arrivals from every region rose each year; Region A remained highest and Region D lowest.",
+      "explanation_en": "All four rows rise year by year while their ranking remains unchanged, which captures both major patterns.",
+      "explanation_bn": "চারটি row-ই প্রতি বছর বাড়ে এবং ranking অপরিবর্তিত থাকে—এটাই দুইটি major pattern।",
+      "common_wrong_reason_bn": "অনেকে সব সংখ্যা দিয়ে শুরু করেন, কিন্তু সারসংক্ষেপে গ্রুপিং ও মূল প্রবণতা দেওয়া ভালো।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    }
+  ],
+  "difficulty_distribution": {
+    "ADVANCED": 10,
+    "FOUNDATION": 12,
+    "INTERMEDIATE": 18
+  },
+  "correct_option_distribution": {
+    "A": 10,
+    "B": 10,
+    "C": 10,
+    "D": 10
+  },
+  "item_subtype_distribution": {
+    "COMPARISON": 5,
+    "DATA_ACCURACY": 5,
+    "DATA_SELECTION": 3,
+    "LANGUAGE_CHOICE": 3,
+    "MAIN_FEATURE": 4,
+    "NO_INFERENCE": 6,
+    "OVERVIEW": 6,
+    "PROCESS_SEQUENCE": 3,
+    "TREND": 5
+  },
+  "micro_focus_distribution": {
+    "approximation_language": 2,
+    "comparison_accuracy": 3,
+    "comparison_language": 3,
+    "grouping_data": 1,
+    "main_feature_selection": 4,
+    "no_cause_invention": 3,
+    "no_personal_opinion": 3,
+    "overview_selection": 6,
+    "peak_low_point": 1,
+    "process_sequence": 3,
+    "relevant_data_selection": 2,
+    "time_period_accuracy": 2,
+    "trend_direction": 5,
+    "unit_accuracy": 2
+  },
+  "visual_type_distribution": {
+    "BAR_CHART": 13,
+    "LINE_CHART": 16,
+    "PROCESS": 3,
+    "TABLE": 8
+  }
+}

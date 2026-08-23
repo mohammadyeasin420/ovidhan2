@@ -98,14 +98,14 @@ assert.equal(gtLetter.mapping_class, 'SUPPORTING_LANGUAGE_FOUNDATION');
 assert.equal(gtLetter.coverage_status, 'PARTIALLY_COVERED');
 
 const ieltsGoals = goals.mappings.filter(mapping => mapping.goal_id === 'IELTS');
-assert.equal(ieltsGoals.length, 8, 'IELTS coarse mapping count');
+assert.equal(ieltsGoals.length, 9, 'IELTS coarse mapping count');
 assert.ok(ieltsGoals.every(mapping => mapping.evidence_class === 'CURATED_REPOSITORY_MAPPING'));
 assert.equal(ieltsGoals.find(mapping => mapping.skill_id === 'word_choice_register').importance, 'SUPPORTING');
 assert.equal(ieltsGoals.find(mapping => mapping.skill_id === 'formal_letter_writing').importance, 'OPTIONAL');
 assert.ok(!ieltsGoals.some(mapping => mapping.skill_id === 'writing_precis'), 'writing_precis coarse IELTS leakage');
 
 const ieltsDestinationSkills = destinations.destinations.filter(destination => destination.goal_ids.includes('IELTS')).map(destination => destination.skill_id);
-assert.deepEqual(ieltsDestinationSkills, ['formal_letter_writing', 'writing_coherence_cohesion']);
+assert.deepEqual(ieltsDestinationSkills, ['formal_letter_writing', 'writing_coherence_cohesion', 'writing_visual_information_description']);
 assert.ok(!destinations.destinations.find(destination => destination.skill_id === 'writing_precis').goal_ids.includes('IELTS'), 'writing_precis IELTS eligibility');
 for (const relation of asset.mapped_relations) {
   const actual = ieltsDestinationSkills.includes(relation.skill_id);
@@ -121,8 +121,8 @@ assert.equal(diagnostic.items.filter(item => item.mapping_status !== 'MAPPED_OBJ
 assert.equal(new Set(diagnostic.items.filter(item => item.mapping_status === 'MAPPED_OBJECTIVE').map(item => item.primary_skill_id)).size, 12);
 assert.deepEqual(new Set(boundary.probes.map(probe => probe.primary_skill_id)), new Set(['compound_subject_agreement', 'indefinite_article_a_an', 'gerund_after_preposition', 'essay_thesis_focus']));
 assert.equal(graph.families.length, 14);
-assert.equal(activeSkills.size, 66);
-assert.equal(graph.item_mappings.length, 280);
+assert.equal(activeSkills.size, 67);
+assert.equal(graph.item_mappings.length, 320);
 
 assert.equal(frozen.aggregateSha256, '202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
 for (const item of [...frozen.pages, ...frozen.guards]) assert.equal(sha256(item.path), item.sha256, `frozen file changed ${item.path}`);
@@ -137,7 +137,7 @@ const result = {
   unmapped: asset.unmapped_requirements.length,
   ieltsCoarseMappings: ieltsGoals.map(mapping => ({skill_id: mapping.skill_id, importance: mapping.importance})),
   diagnostic: {questions: 40, mapped: 19, unmapped: 21, uniqueSkills: 12},
-  graph: {families: 14, activeSkills: 66, itemMappings: 280},
+  graph: {families: 14, activeSkills: 67, itemMappings: 320},
   frozenAggregateSha256: frozen.aggregateSha256
 };
 console.log(JSON.stringify(result, null, 2));
