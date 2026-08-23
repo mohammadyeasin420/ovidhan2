@@ -83,16 +83,44 @@
     {
       "goal_id": "IELTS",
       "skill_id": "word_choice_register",
-      "importance": "CORE",
+      "importance": "SUPPORTING",
       "evidence_class": "CURATED_REPOSITORY_MAPPING",
-      "source_or_rationale": "Existing canonical skill is tagged IELTS and supports reviewed writing/register practice."
+      "source_or_rationale": "Supports register and lexical-choice requirements, but does not cover the full IELTS Lexical Resource construct."
     },
     {
       "goal_id": "IELTS",
       "skill_id": "formal_letter_writing",
       "importance": "OPTIONAL",
       "evidence_class": "CURATED_REPOSITORY_MAPPING",
-      "source_or_rationale": "Reviewed page is qualified as general formal-writing practice, not a universal IELTS format."
+      "source_or_rationale": "Conditionally supports General Training Task 1 formal and semi-formal letters; it is not a universal IELTS requirement and does not cover the full personal/semi-formal/formal range."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "reading_main_idea",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Directly aligns with official Academic and General Training Reading requirements to identify main ideas."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "reading_supporting_detail",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Directly aligns with official Academic and General Training Reading requirements to locate specific information and detail."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "essay_thesis_focus",
+      "importance": "SUPPORTING",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Supports a focused position for Writing Task 2 Task Response, without claiming complete argument or criterion coverage."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "essay_outline_structure",
+      "importance": "SUPPORTING",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Supports organisation relevant to Writing Coherence and Cohesion, without claiming complete criterion coverage."
     },
     {
       "goal_id": "BANK",
