@@ -43,7 +43,7 @@ assert.equal(new Set(pack.items.map(item => item.context_en.trim().toLowerCase()
 const skill = graph.skills.find(item => item.id === 'writing_argument_development');
 assert.ok(skill && skill.status === 'ACTIVE' && skill.family_id === 'WRITING');
 assert.ok(graph.families.find(item => item.family_id === 'WRITING').child_skill_ids.includes(skill.id));
-assert.deepEqual([graph.families.length,graph.skills.filter(item => item.status === 'ACTIVE').length,graph.skills.filter(item => item.status === 'PLANNED').length,graph.item_mappings.length],[14,68,0,400]);
+assert.deepEqual([graph.families.length,graph.skills.filter(item => item.status === 'ACTIVE').length,graph.skills.filter(item => item.status === 'PLANNED').length,graph.item_mappings.length],[14,68,0,440]);
 const mappings = graph.item_mappings.filter(item => item.item_id.startsWith('ielts-task2-argument-'));
 assert.equal(mappings.length, 40); assert.deepEqual(new Set(mappings.map(item => item.item_id)), new Set(expectedIds));
 assert.ok(mappings.every(item => item.primary_skill_id === skill.id && item.primary_family_id === 'WRITING'));
@@ -72,4 +72,4 @@ mirror.addTask2ArgumentPack(pack); assert.ok(expectedIds.every(id => mirror.item
 assert.equal(mirror.initialItemFor({dataset:{defaultItem:'ielts-task2-argument-001'}},{hash:''}).id, 'ielts-task2-argument-001');
 assert.match(runtime, /ielts-task2-argument-practice-v1\.json/); assert.doesNotMatch(runtime + page, /api\.openai|openai\.com|XMLHttpRequest|fetch\(['"]https?:/i);
 
-console.log(JSON.stringify({status:'PASS',items:pack.items.length,difficulty:countBy(pack.items,'difficulty'),answers:countBy(pack.items,'correct_option'),subtypes:countBy(pack.items,'item_subtype'),microFocus:countBy(pack.items,'micro_focus'),graph:{families:14,activeSkills:68,plannedSkills:0,itemMappings:400},ieltsGoalMapping:{skill:skill.id,importance:goalMapping[0].importance},requirementRelations:Object.keys(requiredRelations),runtimeItems:normalized.length,destination:destination.url,productiveEvidence:false},null,2));
+console.log(JSON.stringify({status:'PASS',items:pack.items.length,difficulty:countBy(pack.items,'difficulty'),answers:countBy(pack.items,'correct_option'),subtypes:countBy(pack.items,'item_subtype'),microFocus:countBy(pack.items,'micro_focus'),graph:{families:14,activeSkills:68,plannedSkills:0,itemMappings:440},ieltsGoalMapping:{skill:skill.id,importance:goalMapping[0].importance},requirementRelations:Object.keys(requiredRelations),runtimeItems:normalized.length,destination:destination.url,productiveEvidence:false},null,2));

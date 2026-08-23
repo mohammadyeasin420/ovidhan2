@@ -1,0 +1,1722 @@
+{
+  "schema_version": 1,
+  "pack_id": "ielts-reading-practice-v1",
+  "review_status": "REVIEWED",
+  "family": "READING_COMPREHENSION",
+  "passage_distribution": {
+    "ACADEMIC": 5,
+    "GENERAL_TRAINING": 5
+  },
+  "question_test_type_distribution": {
+    "ACADEMIC": 20,
+    "GENERAL_TRAINING": 20
+  },
+  "skill_distribution": {
+    "reading_main_idea": 10,
+    "reading_supporting_detail": 10,
+    "reading_inference": 8,
+    "reading_tone_purpose": 6,
+    "reading_reference": 6
+  },
+  "difficulty_distribution": {
+    "FOUNDATION": 12,
+    "INTERMEDIATE": 18,
+    "ADVANCED": 10
+  },
+  "correct_option_distribution": {
+    "A": 10,
+    "B": 10,
+    "C": 10,
+    "D": 10
+  },
+  "passages": [
+    {
+      "passage_id": "ielts-reading-passage-001",
+      "test_type": "ACADEMIC",
+      "title_en": "Urban Green Spaces and Well-being",
+      "text_en": "Urban green spaces, including parks, tree-lined streets and community gardens, can serve several purposes at once. They give residents places to walk, rest and meet other people, while vegetation can also provide shade and help moderate heat in built-up areas. Green areas may support birds and insects as well. Yet access is not always evenly distributed. In some lower-income neighbourhoods, residents have fewer nearby parks or smaller public spaces than people in wealthier districts. This difference has led planners to think more carefully about fairness when new projects are designed. In very dense areas, creating a large park may be difficult, so planners are also considering pocket parks, planted courtyards and small roadside green zones. The overall challenge is to increase the benefits of greenery while improving access across different neighbourhoods.",
+      "word_count": 131,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-002",
+      "test_type": "ACADEMIC",
+      "title_en": "Language Acquisition in Adults",
+      "text_en": "Adults can learn a new language effectively, although they often approach the task differently from children. Younger learners may absorb patterns through repeated exposure, whereas adults can make deliberate use of grammar explanations, note-taking and comparison with languages they already know. Adult learners can build strong vocabulary and sentence control, but pronunciation may remain challenging because familiar sound patterns are deeply established. Motivation and regular practice are also important because progress depends on continued use rather than occasional study. Two common barriers are limited time and fear of making mistakes. These barriers can reduce the amount of speaking practice a learner attempts, especially in public. Adults who create a regular routine, use feedback and accept temporary mistakes are therefore more likely to keep progressing than those who wait until they feel completely confident.",
+      "word_count": 133,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-003",
+      "test_type": "ACADEMIC",
+      "title_en": "Solar Panel Efficiency Improvements",
+      "text_en": "Developers of solar panels continually look for ways to convert more sunlight into usable electricity without making panels too expensive or fragile. Newer materials and layered designs can perform better than older designs in controlled tests, but high efficiency alone is not enough for everyday use. A panel on a roof must continue working through heat, cold, moisture and repeated changes in weather. Some experimental materials still raise questions about stability and longevity, so researchers and manufacturers test them over longer periods before large-scale production. Better performance could make solar systems more useful where roof space is limited, but a short-lived panel would reduce that advantage. For this reason, current development focuses on balancing efficiency with durability, manufacturing cost and practical reliability rather than pursuing a single performance measure.",
+      "word_count": 129,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-004",
+      "test_type": "ACADEMIC",
+      "title_en": "The Psychology of Workplace Collaboration",
+      "text_en": "Effective teamwork depends on more than placing skilled people in the same room. Team members need clear communication, mutual trust and a shared understanding of the task. One useful idea is psychological safety: people feel able to ask questions, admit mistakes and offer uncertain suggestions without expecting ridicule. Leaders can help create this environment by inviting participation and responding constructively when someone raises a concern. However, cooperation has a possible weakness. If members avoid disagreement simply to preserve harmony, the group may fall into groupthink and ignore important risks. A strong team therefore needs both support and constructive dissent. Members should be able to challenge an idea without attacking the person who proposed it. The goal is not constant agreement, but a working climate in which different views can be examined before decisions are made.",
+      "word_count": 135,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-005",
+      "test_type": "ACADEMIC",
+      "title_en": "The Role of Public Libraries in the Digital Age",
+      "text_en": "Public libraries have changed considerably as information has moved online. They still lend books, but many now also provide internet access, digital resources, workshops and basic technology support. These services can be particularly useful for job seekers, students and older residents who do not have reliable devices or connections at home. Libraries also offer shared spaces where people can study, attend classes or receive help with online forms. The growth of digital services has not removed the need for physical libraries; instead, it has expanded the range of work they do. This wider role can create financial pressure because equipment, software and trained staff all cost money. When budgets are tight, libraries may have to reduce opening hours or programmes. Their future therefore depends on continued adaptation as well as decisions about public funding.",
+      "word_count": 134,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-006",
+      "test_type": "GENERAL_TRAINING",
+      "title_en": "New Office Hours Policy",
+      "text_en": "Starting next month, the office will trial a flexible-hours policy for three months. Employees may choose a starting time between 8:00 and 10:00 AM and a finishing time between 4:00 and 6:00 PM, provided they complete their required hours and attend scheduled meetings. Staff should agree their preferred schedule with their supervisor before the trial begins and should keep the same pattern unless a change is approved. This policy aims to support work-life balance and reduce unnecessary commuting stress without disrupting team coordination. During the trial, managers will record any problems involving coverage, meetings or customer service. At the end of the three months, HR will review the results before deciding whether the arrangement should continue, be adjusted or end. Questions about the trial should be sent to HR.",
+      "word_count": 129,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-007",
+      "test_type": "GENERAL_TRAINING",
+      "title_en": "Community Centre Opening Times",
+      "text_en": "The Eastside Community Centre is open from 9:00 AM to 9:00 PM on weekdays and from 10:00 AM to 5:00 PM on weekends. The facility includes a gym, a small library, study tables and meeting rooms that can be reserved in advance. Members should check reception for room availability because evening slots are often busy. During the summer holidays, the centre will add extra activities for children, including arts and crafts sessions, beginner sports and supervised reading groups. These seasonal activities are intended to give families more options while schools are closed. The regular gym, library and room-booking services will continue as usual. The centre is closed on public holidays. Visitors who want information about membership fees, child activity registration or accessibility support should speak to reception or use the centre's information desk.",
+      "word_count": 133,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-008",
+      "test_type": "GENERAL_TRAINING",
+      "title_en": "Rail Service Changes",
+      "text_en": "From Monday 15 May, rail services between Wembley and Kingsbridge will run less frequently during off-peak hours while track maintenance is carried out. Trains will operate every 30 minutes instead of every 20 minutes during the affected periods. This change is necessary to allow track maintenance to proceed safely. Peak-hour services will follow the normal timetable unless a separate notice is issued. A replacement bus will run between the two stations when maintenance prevents a scheduled train from operating, although the bus journey may take longer. Passengers should check the updated timetable before travelling and allow extra time for connections. Staff at both stations can provide information about accessible travel arrangements. The maintenance programme is temporary, and the operator will publish another notice when the normal off-peak frequency returns. We apologise for the inconvenience and thank passengers for their patience.",
+      "word_count": 140,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-009",
+      "test_type": "GENERAL_TRAINING",
+      "title_en": "Library Borrowing Rules",
+      "text_en": "Library members may borrow up to ten items at one time, including books, DVDs and audiobooks. The standard loan period is three weeks. Most items can be renewed online up to two times, but renewal is not available when another member has already reserved the item. Members should therefore check their account before the due date rather than assume that an extension will be possible. Late returns are charged at £0.30 per day for each overdue item. If an item is lost or returned with serious damage, the member who borrowed it may be charged the replacement cost. Children under 12 may join only with a parent or guardian present. Members are responsible for keeping their contact details current so that reservation and overdue notices reach them promptly.",
+      "word_count": 128,
+      "review_status": "REVIEWED"
+    },
+    {
+      "passage_id": "ielts-reading-passage-010",
+      "test_type": "GENERAL_TRAINING",
+      "title_en": "Volunteer Notice for Summer Event",
+      "text_en": "The City Summer Festival will take place from 20 to 22 August, and the organising team is recruiting volunteers for several roles. Help is needed with site setup, ticket desks, visitor directions, crowd management and cleanup after activities finish. Volunteers will receive role instructions and safety training on 18 August at 10:00 AM in the Town Hall, two days before the festival opens. The organisers want volunteers to understand procedures before their first shift begins. Each volunteer will receive free entry to the festival and a meal voucher for every completed shift. Applicants should be available for at least one full shift and should mention any accessibility needs when registering. Anyone interested must sign up at the community office by 1 August so that the final schedule can be prepared in advance.",
+      "word_count": 132,
+      "review_status": "REVIEWED"
+    }
+  ],
+  "items": [
+    {
+      "id": "ielts-reading-001",
+      "passage_id": "ielts-reading-passage-001",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which option best summarises the passage about urban green spaces?",
+      "question_bn": "শহরের সবুজ স্থান সম্পর্কে অনুচ্ছেদটির সেরা সারসংক্ষেপ কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Green spaces are only beneficial for mental health."
+        },
+        {
+          "id": "B",
+          "text": "City planning should focus entirely on parks."
+        },
+        {
+          "id": "C",
+          "text": "Lower-income neighbourhoods have more green spaces."
+        },
+        {
+          "id": "D",
+          "text": "Urban green spaces offer multiple benefits but are unevenly distributed."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Urban green spaces offer multiple benefits but are unevenly distributed.",
+      "explanation_en": "The passage highlights benefits (stress reduction, temperature moderation, biodiversity) and mentions uneven distribution, making D the correct summary.",
+      "explanation_bn": "অনুচ্ছেদটি সুবিধাগুলো (চাপ কমানো, তাপমাত্রা নিয়ন্ত্রণ, জীববৈচিত্র্য) তুলে ধরেছে এবং অসম বণ্টনের কথা বলেছে, তাই D সঠিক সারসংক্ষেপ।",
+      "evidence_locator_en": "Across the passage: several benefits are described, followed by unequal access and planning responses.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন কারণ তারা মানসিক স্বাস্থ্যের কথা মনে রেখেছেন, কিন্তু অনুচ্ছেদে অন্যান্য সুবিধাও উল্লেখ আছে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-002",
+      "passage_id": "ielts-reading-passage-001",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "FOUNDATION",
+      "question_en": "According to the passage, what effect do green spaces have on urban temperatures?",
+      "question_bn": "অনুচ্ছেদ অনুযায়ী, সবুজ স্থানগুলো শহরের তাপমাত্রার ওপর কী প্রভাব ফেলে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They have no effect."
+        },
+        {
+          "id": "B",
+          "text": "They help moderate temperatures."
+        },
+        {
+          "id": "C",
+          "text": "They only affect biodiversity."
+        },
+        {
+          "id": "D",
+          "text": "They significantly increase temperatures."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "They help moderate temperatures.",
+      "explanation_en": "The passage states: 'green spaces can help moderate urban temperatures'.",
+      "explanation_bn": "অনুচ্ছেদে বলা হয়েছে: 'সবুজ স্থান শহরের তাপমাত্রা নিয়ন্ত্রণে সাহায্য করতে পারে'।",
+      "evidence_locator_en": "The passage says vegetation can provide shade and help moderate heat in built-up areas.",
+      "common_wrong_reason_bn": "অনেকে 'A' বা 'C' বেছে নিতে পারেন, কিন্তু অনুচ্ছেদে স্পষ্টভাবে 'moderate' বলা হয়েছে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-003",
+      "passage_id": "ielts-reading-passage-001",
+      "skill_id": "reading_inference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "ADVANCED",
+      "question_en": "What can be inferred about the current distribution of urban green spaces?",
+      "question_bn": "শহরের সবুজ স্থানের বর্তমান বণ্টন সম্পর্কে কী অনুমান করা যায়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is insufficient for lower-income areas."
+        },
+        {
+          "id": "B",
+          "text": "It is equal across all neighbourhoods."
+        },
+        {
+          "id": "C",
+          "text": "It has already been resolved by planners."
+        },
+        {
+          "id": "D",
+          "text": "It is not a concern for city planners."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "It is insufficient for lower-income areas.",
+      "explanation_en": "The passage notes that 'lower-income neighbourhoods have fewer parks' and there are 'calls for more equitable development', implying insufficiency.",
+      "explanation_bn": "অনুচ্ছেদে বলা হয়েছে 'নিম্ন আয়ের পাড়ায় কম পার্ক রয়েছে' এবং 'সুসম বণ্টনের আহ্বান' আছে, যা থেকে অপর্যাপ্ততা বোঝা যায়।",
+      "evidence_locator_en": "The passage states that some lower-income neighbourhoods have fewer nearby parks or smaller public spaces and links this to fairness concerns.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু অনুচ্ছেদটি অসম বণ্টনের কথা বলে, তাই B সঠিক।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-004",
+      "passage_id": "ielts-reading-passage-001",
+      "skill_id": "reading_tone_purpose",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the main purpose of the passage about urban green spaces?",
+      "question_bn": "শহরের সবুজ স্থান নিয়ে অনুচ্ছেদটির প্রধান উদ্দেশ্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To persuade readers to visit parks."
+        },
+        {
+          "id": "B",
+          "text": "To argue for eliminating all green spaces."
+        },
+        {
+          "id": "C",
+          "text": "To describe the benefits and inequalities of urban green spaces."
+        },
+        {
+          "id": "D",
+          "text": "To provide a historical overview of city planning."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "To describe the benefits and inequalities of urban green spaces.",
+      "explanation_en": "The passage presents both advantages and the issue of disparity, without advocating a specific action.",
+      "explanation_bn": "অনুচ্ছেদটি সুবিধা এবং বৈষম্যের বিষয় উপস্থাপন করেছে, কোনো নির্দিষ্ট পদক্ষেপের পক্ষে নয়।",
+      "evidence_locator_en": "Across the passage: it explains both the benefits of greenery and the problem of unequal access.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু লেখক পছন্দের পরিবর্তে বর্ণনা করছেন।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-005",
+      "passage_id": "ielts-reading-passage-002",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "FOUNDATION",
+      "question_en": "What is the main point of the passage?",
+      "question_bn": "অনুচ্ছেদটির মূল বক্তব্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adults cannot learn languages as well as children."
+        },
+        {
+          "id": "B",
+          "text": "Adults can learn languages effectively if they use appropriate strategies and stay motivated."
+        },
+        {
+          "id": "C",
+          "text": "Children are better at grammar than adults."
+        },
+        {
+          "id": "D",
+          "text": "Motivation is the only factor in language learning."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Adults can learn languages effectively if they use appropriate strategies and stay motivated.",
+      "explanation_en": "The passage states that adults can learn effectively with analytical strategies and motivation, while acknowledging some challenges.",
+      "explanation_bn": "অনুচ্ছেদে বলা হয়েছে যে প্রাপ্তবয়স্করা বিশ্লেষণাত্মক কৌশল এবং অনুপ্রেরণার মাধ্যমে কার্যকরভাবে ভাষা শিখতে পারে, কিছু চ্যালেঞ্জ স্বীকার করে।",
+      "evidence_locator_en": "The passage contrasts adult learning strategies with children's learning and stresses motivation and regular practice.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন কারণ তারা মনে করেন শিশুদের তুলনায় প্রাপ্তবয়স্করা খারাপ, কিন্তু অনুচ্ছেদটি তা বলে না।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-006",
+      "passage_id": "ielts-reading-passage-002",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "FOUNDATION",
+      "question_en": "According to the passage, which aspect may remain challenging for adult language learners?",
+      "question_bn": "অনুচ্ছেদ অনুযায়ী, প্রাপ্তবয়স্ক ভাষা শিক্ষার্থীদের জন্য কোন দিকটি চ্যালেঞ্জিং থেকে যেতে পারে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vocabulary"
+        },
+        {
+          "id": "B",
+          "text": "Pronunciation"
+        },
+        {
+          "id": "C",
+          "text": "Grammar"
+        },
+        {
+          "id": "D",
+          "text": "Motivation"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Pronunciation",
+      "explanation_en": "The passage says that adult learners can build strong vocabulary and sentence control, but pronunciation may remain challenging.",
+      "explanation_bn": "অনুচ্ছেদে বলা হয়েছে যে প্রাপ্তবয়স্করা শব্দভাণ্ডার ও বাক্যগঠন ভালোভাবে শিখতে পারেন, কিন্তু উচ্চারণ চ্যালেঞ্জিং থেকে যেতে পারে।",
+      "evidence_locator_en": "The passage says pronunciation may remain challenging even when adults build strong vocabulary and sentence control.",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নিতে পারেন, কিন্তু অনুপ্রেরণা চ্যালেঞ্জ নয়, বরং উচ্চারণে সমস্যা বেশি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-007",
+      "passage_id": "ielts-reading-passage-002",
+      "skill_id": "reading_inference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "ADVANCED",
+      "question_en": "What can be inferred about adult language learners who lack motivation?",
+      "question_bn": "অনুপ্রেরণাবিহীন প্রাপ্তবয়স্ক ভাষা শিক্ষার্থীদের সম্পর্কে কী অনুমান করা যায়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They will still achieve near-native proficiency."
+        },
+        {
+          "id": "B",
+          "text": "They have no difficulty with pronunciation."
+        },
+        {
+          "id": "C",
+          "text": "They learn better than children."
+        },
+        {
+          "id": "D",
+          "text": "They are likely to make slower progress."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "They are likely to make slower progress.",
+      "explanation_en": "The passage states that motivation is a key factor; without it, progress would be slower.",
+      "explanation_bn": "অনুচ্ছেদে বলা হয়েছে যে অনুপ্রেরণা একটি মূল কারণ; এটি ছাড়া অগ্রগতি ধীর হবে।",
+      "evidence_locator_en": "The passage says motivation and regular practice are important because progress depends on continued use.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু অনুপ্রেরণা ছাড়া উচ্চ অর্জন সম্ভব নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-008",
+      "passage_id": "ielts-reading-passage-002",
+      "skill_id": "reading_reference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "In the sentence 'These barriers can reduce the amount of speaking practice...', what does 'These barriers' refer to?",
+      "question_bn": "'These barriers can reduce the amount of speaking practice...' বাক্যে 'These barriers' বলতে কী বোঝানো হয়েছে?",
+      "context_en": "The passage first names two common barriers: limited time and fear of making mistakes.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Motivation and regular practice"
+        },
+        {
+          "id": "B",
+          "text": "Pronunciation and sentence control"
+        },
+        {
+          "id": "C",
+          "text": "Limited time and fear of making mistakes"
+        },
+        {
+          "id": "D",
+          "text": "Grammar explanations and note-taking"
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Limited time and fear of making mistakes",
+      "explanation_en": "The phrase refers back to the two barriers named immediately before it: limited time and fear of making mistakes.",
+      "explanation_bn": "এটি ঠিক আগের বাক্যে উল্লেখ করা দুটি বাধাকে নির্দেশ করে—সময়ের সীমাবদ্ধতা এবং ভুল করার ভয়।",
+      "evidence_locator_en": "Immediately before 'These barriers', the passage names limited time and fear of making mistakes.",
+      "common_wrong_reason_bn": "কাছাকাছি থাকা অন্য শেখার কৌশলগুলো দেখে বিভ্রান্ত হওয়া সহজ, কিন্তু reference phraseটি সরাসরি আগের দুই বাধাকে নির্দেশ করে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-009",
+      "passage_id": "ielts-reading-passage-003",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which statement best summarises the passage about solar-panel development?",
+      "question_bn": "সোলার প্যানেল উন্নয়ন সম্পর্কে অনুচ্ছেদটির সেরা সারসংক্ষেপ কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solar panel efficiency has improved, but challenges remain."
+        },
+        {
+          "id": "B",
+          "text": "Solar power is still too expensive to use."
+        },
+        {
+          "id": "C",
+          "text": "Solar panels are now perfect for all uses."
+        },
+        {
+          "id": "D",
+          "text": "New materials have completely solved all problems."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Solar panel efficiency has improved, but challenges remain.",
+      "explanation_en": "The passage discusses efficiency gains but also highlights challenges like stability and longevity.",
+      "explanation_bn": "অনুচ্ছেদে দক্ষতা বৃদ্ধির কথা বলা হয়েছে কিন্তু স্থায়িত্ব এবং দীর্ঘায়ুর মতো চ্যালেঞ্জও তুলে ধরা হয়েছে।",
+      "evidence_locator_en": "The passage explains improved performance in newer designs but emphasises remaining stability, longevity and practical-reliability challenges.",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নিতে পারেন, কিন্তু অনুচ্ছেদে চ্যালেঞ্জের কথাও বলা আছে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-010",
+      "passage_id": "ielts-reading-passage-003",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which challenge does the passage mention for some experimental solar materials?",
+      "question_bn": "অনুচ্ছেদে কিছু পরীক্ষামূলক সৌর উপাদানের কোন চ্যালেঞ্জের কথা বলা হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A requirement for larger roofs"
+        },
+        {
+          "id": "B",
+          "text": "A complete lack of sunlight"
+        },
+        {
+          "id": "C",
+          "text": "An inability to generate electricity"
+        },
+        {
+          "id": "D",
+          "text": "Stability and longevity"
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "Stability and longevity",
+      "explanation_en": "The passage says that some experimental materials still raise questions about stability and longevity.",
+      "explanation_bn": "অনুচ্ছেদে বলা হয়েছে যে কিছু পরীক্ষামূলক উপাদানের স্থায়িত্ব ও দীর্ঘমেয়াদি কার্যকারিতা নিয়ে এখনও প্রশ্ন রয়েছে।",
+      "evidence_locator_en": "The passage explicitly says some experimental materials still raise questions about stability and longevity.",
+      "common_wrong_reason_bn": "অন্যান্য বিকল্পগুলো পাঠ্যে বলা হয়নি; সঠিক উত্তরটি সরাসরি stability ও longevity সম্পর্কিত।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-011",
+      "passage_id": "ielts-reading-passage-003",
+      "skill_id": "reading_inference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "ADVANCED",
+      "question_en": "What can be inferred about some newer experimental solar materials?",
+      "question_bn": "কিছু নতুন পরীক্ষামূলক সৌর উপাদান সম্পর্কে কী অনুমান করা যায়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They always cost less than older materials"
+        },
+        {
+          "id": "B",
+          "text": "They can perform better but may still have durability concerns"
+        },
+        {
+          "id": "C",
+          "text": "They cannot convert sunlight into electricity"
+        },
+        {
+          "id": "D",
+          "text": "They are already reliable in every climate"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "They can perform better but may still have durability concerns",
+      "explanation_en": "The passage says newer materials can perform better in controlled tests, but stability and longevity still require attention.",
+      "explanation_bn": "অনুচ্ছেদে বলা হয়েছে যে নতুন উপাদান নিয়ন্ত্রিত পরীক্ষায় ভালো কাজ করতে পারে, কিন্তু স্থায়িত্ব ও দীর্ঘমেয়াদি কার্যকারিতা নিয়ে এখনও উদ্বেগ আছে।",
+      "evidence_locator_en": "The passage links newer materials with better controlled-test performance but also with stability and longevity concerns.",
+      "common_wrong_reason_bn": "‘Better performance’ দেখে সব বাস্তব সমস্যা সমাধান হয়ে গেছে মনে করা ভুল; পাঠ্যে durability-related concern-ও আছে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-012",
+      "passage_id": "ielts-reading-passage-003",
+      "skill_id": "reading_tone_purpose",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the main purpose of the passage about solar technology?",
+      "question_bn": "সৌর প্রযুক্তি নিয়ে অনুচ্ছেদটির প্রধান উদ্দেশ্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To inform about recent developments and remaining challenges in solar technology."
+        },
+        {
+          "id": "B",
+          "text": "To discourage investment in solar energy."
+        },
+        {
+          "id": "C",
+          "text": "To compare solar panels with wind turbines."
+        },
+        {
+          "id": "D",
+          "text": "To advertise a specific solar panel brand."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "To inform about recent developments and remaining challenges in solar technology.",
+      "explanation_en": "The passage presents both advances and unresolved issues, without bias.",
+      "explanation_bn": "অনুচ্ছেদটি অগ্রগতি এবং অমীমাংসিত সমস্যা উভয়ই উপস্থাপন করে, পক্ষপাতিত্ব ছাড়া।",
+      "evidence_locator_en": "Across the passage: it presents both technological improvement and unresolved practical challenges.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু লেখক কোনো নির্দিষ্ট ব্র্যান্ডের কথা বলেননি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-013",
+      "passage_id": "ielts-reading-passage-004",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "FOUNDATION",
+      "question_en": "Which statement best captures the passage's central point about teamwork?",
+      "question_bn": "দলগত কাজ সম্পর্কে অনুচ্ছেদটির কেন্দ্রীয় বক্তব্য কোনটি সবচেয়ে ভালোভাবে প্রকাশ করে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Effective teamwork requires a balance of cooperation and constructive dissent."
+        },
+        {
+          "id": "B",
+          "text": "Teamwork is always successful."
+        },
+        {
+          "id": "C",
+          "text": "Leaders should make all decisions."
+        },
+        {
+          "id": "D",
+          "text": "Groupthink is beneficial for teams."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Effective teamwork requires a balance of cooperation and constructive dissent.",
+      "explanation_en": "The passage discusses the importance of psychological safety but also warns against groupthink, highlighting the need for balance.",
+      "explanation_bn": "অনুচ্ছেদে মনস্তাত্ত্বিক নিরাপত্তার গুরুত্ব আলোচনা করা হয়েছে তবে গ্রুপথিংক সম্পর্কে সতর্ক করা হয়েছে, যা ভারসাম্যের প্রয়োজনীয়তা নির্দেশ করে।",
+      "evidence_locator_en": "The final half of the passage contrasts psychological safety with the risk of groupthink and calls for constructive dissent.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু অনুচ্ছেদটি teamwork এর জটিলতা নিয়ে কথা বলে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-014",
+      "passage_id": "ielts-reading-passage-004",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "FOUNDATION",
+      "question_en": "According to the passage, what does psychological safety allow team members to do?",
+      "question_bn": "অনুচ্ছেদ অনুযায়ী, মনস্তাত্ত্বিক নিরাপত্তা দলীয় সদস্যদের কী করতে সাহায্য করে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Let leaders make every decision"
+        },
+        {
+          "id": "B",
+          "text": "Ask questions, admit mistakes, and offer uncertain suggestions"
+        },
+        {
+          "id": "C",
+          "text": "Work without a shared purpose"
+        },
+        {
+          "id": "D",
+          "text": "Avoid all disagreement"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Ask questions, admit mistakes, and offer uncertain suggestions",
+      "explanation_en": "The passage defines psychological safety as a climate where people can ask questions, admit mistakes, and offer uncertain suggestions without expecting ridicule.",
+      "explanation_bn": "অনুচ্ছেদে psychological safety-কে এমন পরিবেশ হিসেবে ব্যাখ্যা করা হয়েছে যেখানে মানুষ প্রশ্ন করতে, ভুল স্বীকার করতে এবং অনিশ্চিত ধারণা বলতে পারে।",
+      "evidence_locator_en": "The passage defines psychological safety as being able to ask questions, admit mistakes and offer uncertain suggestions without ridicule.",
+      "common_wrong_reason_bn": "কাছাকাছি teamwork ধারণা দেখে অন্য বিকল্প বেছে নেওয়া যেতে পারে, কিন্তু পাঠ্যে এই তিনটি আচরণই সরাসরি উল্লেখ আছে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-015",
+      "passage_id": "ielts-reading-passage-004",
+      "skill_id": "reading_inference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "ADVANCED",
+      "question_en": "What can be inferred about a team that lacks psychological safety?",
+      "question_bn": "যে দলে psychological safety নেই, সে দল সম্পর্কে কী অনুমান করা যায়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Members will always agree for good reasons"
+        },
+        {
+          "id": "B",
+          "text": "The team will automatically make faster decisions"
+        },
+        {
+          "id": "C",
+          "text": "Members may be less willing to raise concerns or share uncertain ideas"
+        },
+        {
+          "id": "D",
+          "text": "Leaders will no longer need to communicate"
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Members may be less willing to raise concerns or share uncertain ideas",
+      "explanation_en": "If psychological safety makes it easier to ask questions, admit mistakes and offer uncertain suggestions, its absence can reasonably make those behaviours less likely.",
+      "explanation_bn": "Psychological safety থাকলে প্রশ্ন করা, ভুল স্বীকার করা ও অনিশ্চিত ধারণা বলা সহজ হয়; তাই এটি না থাকলে এসব আচরণ কম হওয়া যৌক্তিকভাবে অনুমান করা যায়।",
+      "evidence_locator_en": "The passage links psychological safety to questioning, admitting mistakes and offering uncertain suggestions, which supports the inference about idea sharing.",
+      "common_wrong_reason_bn": "দ্রুত সিদ্ধান্ত বা স্থায়ী সম্মতি পাঠ্যে সমর্থিত নয়; inferenceটি psychological safety-এর সংজ্ঞা থেকেই আসে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-016",
+      "passage_id": "ielts-reading-passage-004",
+      "skill_id": "reading_reference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "ADVANCED",
+      "question_en": "In the passage, what does 'this environment' most directly refer to?",
+      "question_bn": "অনুচ্ছেদে 'this environment' সবচেয়ে সরাসরি কোন পরিবেশকে বোঝায়?",
+      "context_en": "The sentence: 'Leaders play a crucial role in fostering this environment by encouraging participation...'",
+      "options": [
+        {
+          "id": "A",
+          "text": "An environment of psychological safety"
+        },
+        {
+          "id": "B",
+          "text": "A competitive atmosphere"
+        },
+        {
+          "id": "C",
+          "text": "A strict hierarchy"
+        },
+        {
+          "id": "D",
+          "text": "A remote-working arrangement"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "An environment of psychological safety",
+      "explanation_en": "The phrase follows the definition of psychological safety, so 'this environment' refers to that supportive climate.",
+      "explanation_bn": "বাক্যাংশটি psychological safety-এর বর্ণনার ঠিক পরে এসেছে, তাই এটি সেই নিরাপদ ও সহায়ক পরিবেশকেই নির্দেশ করে।",
+      "evidence_locator_en": "The phrase 'this environment' follows immediately after the passage defines psychological safety.",
+      "common_wrong_reason_bn": "নেতৃত্ব বা teamwork-এর অন্যান্য ধারণা কাছাকাছি থাকলেও referenceটি ঠিক আগের psychological safety ধারণাটির দিকে ফিরে যায়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-017",
+      "passage_id": "ielts-reading-passage-005",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the central message of the passage about public libraries?",
+      "question_bn": "পাবলিক লাইব্রেরি সম্পর্কে অনুচ্ছেদটির কেন্দ্রীয় বক্তব্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Libraries have become obsolete due to the internet."
+        },
+        {
+          "id": "B",
+          "text": "Libraries have adapted to the digital age but face funding challenges."
+        },
+        {
+          "id": "C",
+          "text": "Libraries only provide books."
+        },
+        {
+          "id": "D",
+          "text": "Funding for libraries is no longer needed."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Libraries have adapted to the digital age but face funding challenges.",
+      "explanation_en": "The passage describes how libraries have evolved to offer digital services but also mentions funding constraints.",
+      "explanation_bn": "অনুচ্ছেদে লাইব্রেরিগুলো কীভাবে ডিজিটাল সেবা প্রদান করেছে তা বর্ণনা করা হয়েছে তবে অর্থায়ন সংকটের কথাও বলা হয়েছে।",
+      "evidence_locator_en": "The passage describes expanded digital/community roles and then explains funding pressure.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু অনুচ্ছেদে বলা হয়েছে তারা অভিযোজিত হয়েছে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-018",
+      "passage_id": "ielts-reading-passage-005",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Which services does the passage say many modern libraries provide?",
+      "question_bn": "অনুচ্ছেদ অনুযায়ী, অনেক আধুনিক লাইব্রেরি কোন সেবাগুলো দেয়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Internet access, digital resources, and workshops."
+        },
+        {
+          "id": "B",
+          "text": "Only physical books."
+        },
+        {
+          "id": "C",
+          "text": "Cafes and restaurants."
+        },
+        {
+          "id": "D",
+          "text": "Sporting facilities."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Internet access, digital resources, and workshops.",
+      "explanation_en": "The passage says many libraries provide internet access, digital resources, workshops and basic technology support.",
+      "explanation_bn": "অনুচ্ছেদে বলা হয়েছে যে অনেক লাইব্রেরি internet access, digital resources, workshops এবং basic technology support দেয়।",
+      "evidence_locator_en": "The passage lists internet access, digital resources, workshops and technology support among modern library services.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু আধুনিক লাইব্রেরিগুলো আরও বেশি কিছু অফার করে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-019",
+      "passage_id": "ielts-reading-passage-005",
+      "skill_id": "reading_inference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "ADVANCED",
+      "question_en": "What can be inferred about the future of public libraries?",
+      "question_bn": "পাবলিক লাইব্রেরিগুলোর ভবিষ্যৎ সম্পর্কে কী অনুমান করা যায়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They will all close due to lack of funding."
+        },
+        {
+          "id": "B",
+          "text": "They will return to being only book repositories."
+        },
+        {
+          "id": "C",
+          "text": "They will continue to evolve but may face budget pressures."
+        },
+        {
+          "id": "D",
+          "text": "They will no longer need any funding."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "They will continue to evolve but may face budget pressures.",
+      "explanation_en": "The passage indicates adaptation but also mentions funding constraints, implying a need to justify budgets.",
+      "explanation_bn": "অনুচ্ছেদে অভিযোজন নির্দেশ করে তবে অর্থায়ন সীমাবদ্ধতার কথাও বলা হয়েছে, যা বাজেট চাপের ইঙ্গিত দেয়।",
+      "evidence_locator_en": "The passage shows continued adaptation but also says wider services create financial pressure when budgets are tight.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু অনুচ্ছেদটি বন্ধ হওয়ার কথা বলে না, বরং সংকটের কথা বলে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-020",
+      "passage_id": "ielts-reading-passage-005",
+      "skill_id": "reading_tone_purpose",
+      "family": "READING_COMPREHENSION",
+      "test_type": "ACADEMIC",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the author's main purpose in the passage about public libraries?",
+      "question_bn": "পাবলিক লাইব্রেরি নিয়ে অনুচ্ছেদটির প্রধান উদ্দেশ্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To advertise a particular library membership"
+        },
+        {
+          "id": "B",
+          "text": "To compare libraries with private technology companies"
+        },
+        {
+          "id": "C",
+          "text": "To argue that physical libraries should close"
+        },
+        {
+          "id": "D",
+          "text": "To explain how libraries have expanded their role while noting funding pressures"
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "To explain how libraries have expanded their role while noting funding pressures",
+      "explanation_en": "The passage describes expanded digital and community services, then explains the financial pressure created by that wider role.",
+      "explanation_bn": "অনুচ্ছেদটি ডিজিটাল ও কমিউনিটি সেবার বিস্তৃতি দেখায় এবং পরে সেই বিস্তৃত ভূমিকার সঙ্গে যুক্ত অর্থায়নের চাপ ব্যাখ্যা করে।",
+      "evidence_locator_en": "Across the passage: the author explains role expansion and the resulting funding pressure.",
+      "common_wrong_reason_bn": "একটি funding detail দেখে শুধু সংকটকেই মূল উদ্দেশ্য মনে হতে পারে, কিন্তু অনুচ্ছেদটি পরিবর্তিত ভূমিকা ও অর্থায়ন—দুই দিকই ব্যাখ্যা করে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-021",
+      "passage_id": "ielts-reading-passage-006",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "FOUNDATION",
+      "question_en": "What is the main purpose of the office-hours notice?",
+      "question_bn": "অফিসের কর্মঘণ্টা সংক্রান্ত বিজ্ঞপ্তিটির প্রধান উদ্দেশ্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To announce office closure."
+        },
+        {
+          "id": "B",
+          "text": "To introduce new HR staff."
+        },
+        {
+          "id": "C",
+          "text": "To announce a new flexible working policy."
+        },
+        {
+          "id": "D",
+          "text": "To inform about salary changes."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "To announce a new flexible working policy.",
+      "explanation_en": "The notice describes the introduction of flexible hours.",
+      "explanation_bn": "বিজ্ঞপ্তিটি নমনীয় কর্মঘণ্টা প্রবর্তনের বর্ণনা দেয়।",
+      "evidence_locator_en": "The opening sentence announces a three-month flexible-hours trial.",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নিতে পারেন, কিন্তু বেতনের কোনো উল্লেখ নেই।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-022",
+      "passage_id": "ielts-reading-passage-006",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "FOUNDATION",
+      "question_en": "What is the time range for flexible start times?",
+      "question_bn": "নমনীয় শুরু সময়ের পরিসীমা কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:00 AM to 10:00 AM"
+        },
+        {
+          "id": "B",
+          "text": "9:00 AM to 11:00 AM"
+        },
+        {
+          "id": "C",
+          "text": "7:30 AM to 9:30 AM"
+        },
+        {
+          "id": "D",
+          "text": "10:00 AM to 12:00 PM"
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "8:00 AM to 10:00 AM",
+      "explanation_en": "The policy allows start between 8:00 and 10:00 AM.",
+      "explanation_bn": "নীতিটি সকাল ৮:০০ থেকে ১০:০০ এর মধ্যে শুরু করার অনুমতি দেয়।",
+      "evidence_locator_en": "The notice states that employees may choose a starting time between 8:00 and 10:00 AM.",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নিতে পারেন, কিন্তু উল্লেখিত সঠিক সময় ৮-১০।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-023",
+      "passage_id": "ielts-reading-passage-006",
+      "skill_id": "reading_tone_purpose",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Why does the notice say the flexible-hours policy will be reviewed after three months?",
+      "question_bn": "বিজ্ঞপ্তিতে কেন বলা হয়েছে যে তিন মাস পরে নমনীয় কর্মঘণ্টার নীতি পর্যালোচনা করা হবে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To guarantee that the policy will become permanent"
+        },
+        {
+          "id": "B",
+          "text": "To announce that the office will close after three months"
+        },
+        {
+          "id": "C",
+          "text": "To replace all scheduled meetings with remote work"
+        },
+        {
+          "id": "D",
+          "text": "To show that the arrangement is being tested before a longer-term decision"
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "To show that the arrangement is being tested before a longer-term decision",
+      "explanation_en": "The notice calls the arrangement a three-month trial and says HR will review the results before deciding whether it should continue, change, or end.",
+      "explanation_bn": "বিজ্ঞপ্তিতে এটিকে তিন মাসের trial বলা হয়েছে এবং ফলাফল দেখে পরে চালু রাখা, পরিবর্তন করা বা বন্ধ করার সিদ্ধান্ত নেওয়ার কথা বলা হয়েছে।",
+      "evidence_locator_en": "The notice calls the policy a trial and says HR will review results before deciding whether it should continue, change or end.",
+      "common_wrong_reason_bn": "‘Three months’ দেখে সরাসরি স্থায়ী হওয়া বা বন্ধ হওয়া ধরে নেওয়া ভুল; লেখাটি স্পষ্টভাবে পরীক্ষামূলক পর্যালোচনার কথা বলে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-024",
+      "passage_id": "ielts-reading-passage-006",
+      "skill_id": "reading_reference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "In the notice, what does 'this policy' refer to?",
+      "question_bn": "বিজ্ঞপ্তিতে, 'this policy' বলতে কী বোঝানো হয়েছে?",
+      "context_en": "The sentence: 'This policy aims to improve work-life balance and reduce commuting stress.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "Flexible working hours."
+        },
+        {
+          "id": "B",
+          "text": "Office closure."
+        },
+        {
+          "id": "C",
+          "text": "Salary revision."
+        },
+        {
+          "id": "D",
+          "text": "Training programme."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "Flexible working hours.",
+      "explanation_en": "The policy mentioned is the flexible hours policy.",
+      "explanation_bn": "উল্লিখিত নীতিটি নমনীয় কর্মঘণ্টা নীতি।",
+      "evidence_locator_en": "The phrase 'The aim' and later trial details refer back to the flexible-hours policy introduced at the start.",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নিতে পারেন, কিন্তু বিজ্ঞপ্তিটি অফিস বন্ধের বিষয়ে নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-025",
+      "passage_id": "ielts-reading-passage-007",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "FOUNDATION",
+      "question_en": "What is the main purpose of the community-centre notice?",
+      "question_bn": "কমিউনিটি সেন্টারের বিজ্ঞপ্তিটির প্রধান উদ্দেশ্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To announce a public holiday."
+        },
+        {
+          "id": "B",
+          "text": "To inform about community centre opening times and services."
+        },
+        {
+          "id": "C",
+          "text": "To promote children's activities only."
+        },
+        {
+          "id": "D",
+          "text": "To advertise a new gym."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "To inform about community centre opening times and services.",
+      "explanation_en": "The notice provides details on opening hours, facilities, and activities.",
+      "explanation_bn": "বিজ্ঞপ্তিটি খোলার সময়, সুবিধা এবং কার্যক্রম সম্পর্কে তথ্য দেয়।",
+      "evidence_locator_en": "Across the notice: opening hours, facilities, seasonal activities, closures and membership information are provided.",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নিতে পারেন, কিন্তু এটি মূল উদ্দেশ্য নয়, কেবল একটি অংশ।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-026",
+      "passage_id": "ielts-reading-passage-007",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "FOUNDATION",
+      "question_en": "When is the community centre open on Saturdays?",
+      "question_bn": "শনিবার কমিউনিটি সেন্টার কখন খোলা থাকে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9:00 AM to 9:00 PM"
+        },
+        {
+          "id": "B",
+          "text": "Closed"
+        },
+        {
+          "id": "C",
+          "text": "9:00 AM to 5:00 PM"
+        },
+        {
+          "id": "D",
+          "text": "10:00 AM to 5:00 PM"
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "10:00 AM to 5:00 PM",
+      "explanation_en": "Weekends: 10:00 AM to 5:00 PM.",
+      "explanation_bn": "সপ্তাহান্তে: সকাল ১০:০০ থেকে বিকাল ৫:০০।",
+      "evidence_locator_en": "The notice states that weekend opening hours are 10:00 AM to 5:00 PM.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু তা সপ্তাহের দিনগুলোর জন্য।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-027",
+      "passage_id": "ielts-reading-passage-007",
+      "skill_id": "reading_tone_purpose",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "Why does the community-centre notice mention extra children's activities during the summer holidays?",
+      "question_bn": "কমিউনিটি সেন্টারের বিজ্ঞপ্তিতে গ্রীষ্মকালীন ছুটিতে শিশুদের অতিরিক্ত কার্যক্রমের কথা কেন বলা হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To say that all regular services stop in summer"
+        },
+        {
+          "id": "B",
+          "text": "To require every child to join a sports class"
+        },
+        {
+          "id": "C",
+          "text": "To announce that the centre is closed during school holidays"
+        },
+        {
+          "id": "D",
+          "text": "To inform families about additional seasonal activities"
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "To inform families about additional seasonal activities",
+      "explanation_en": "The notice presents the summer activities as extra options while regular gym, library and room-booking services continue.",
+      "explanation_bn": "বিজ্ঞপ্তিতে summer activities-কে অতিরিক্ত বিকল্প হিসেবে দেখানো হয়েছে, আর নিয়মিত gym, library ও room-booking সেবা চালু থাকে।",
+      "evidence_locator_en": "The notice describes children's activities as extra summer-holiday options while regular services continue.",
+      "common_wrong_reason_bn": "‘During the summer holidays’ দেখে সব শিশু-সেবা শুধু গ্রীষ্মে হয় মনে করা ভুল; এখানে অতিরিক্ত seasonal activity-এর কথা বলা হয়েছে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-028",
+      "passage_id": "ielts-reading-passage-007",
+      "skill_id": "reading_reference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "In the notice, what does 'the facility' refer to?",
+      "question_bn": "বিজ্ঞপ্তিতে, 'the facility' বলতে কী বোঝানো হয়েছে?",
+      "context_en": "The sentence: 'The facility offers a gym, a library, and meeting rooms...'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The gym."
+        },
+        {
+          "id": "B",
+          "text": "The community centre."
+        },
+        {
+          "id": "C",
+          "text": "The library."
+        },
+        {
+          "id": "D",
+          "text": "The meeting rooms."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "The community centre.",
+      "explanation_en": "The notice is about the community centre, and 'the facility' refers back to it.",
+      "explanation_bn": "বিজ্ঞপ্তিটি কমিউনিটি সেন্টার সম্পর্কে, এবং 'the facility' তা নির্দেশ করে।",
+      "evidence_locator_en": "The notice first names the Eastside Community Centre and then says 'The facility includes...'.",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নিতে পারেন, কিন্তু জিমটি ফ্যাসিলিটির অংশ, পুরো ফ্যাসিলিটি নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-029",
+      "passage_id": "ielts-reading-passage-008",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the main purpose of the rail-service notice?",
+      "question_bn": "রেলসেবা সংক্রান্ত বিজ্ঞপ্তিটির প্রধান উদ্দেশ্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To advertise a new train line."
+        },
+        {
+          "id": "B",
+          "text": "To announce train service changes."
+        },
+        {
+          "id": "C",
+          "text": "To cancel all train services."
+        },
+        {
+          "id": "D",
+          "text": "To promote bus travel."
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "To announce train service changes.",
+      "explanation_en": "The notice informs about reduced frequency and replacement bus service.",
+      "explanation_bn": "বিজ্ঞপ্তিটি কম ফ্রিকোয়েন্সি এবং বিকল্প বাস সেবা সম্পর্কে জানায়।",
+      "evidence_locator_en": "The notice announces reduced off-peak rail frequency and temporary arrangements during track maintenance.",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নিতে পারেন, কিন্তু বাস শুধু প্রতিস্থাপন, মূল উদ্দেশ্য ট্রেন পরিবর্তন।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-030",
+      "passage_id": "ielts-reading-passage-008",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the reason for the train service changes?",
+      "question_bn": "ট্রেন পরিষেবা পরিবর্তনের কারণ কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Low passenger numbers."
+        },
+        {
+          "id": "B",
+          "text": "Staff shortage."
+        },
+        {
+          "id": "C",
+          "text": "Track maintenance."
+        },
+        {
+          "id": "D",
+          "text": "New timetable."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Track maintenance.",
+      "explanation_en": "The notice states: 'This change is necessary to allow for track maintenance'.",
+      "explanation_bn": "বিজ্ঞপ্তিতে বলা হয়েছে: 'ট্র্যাক রক্ষণাবেক্ষণের জন্য এই পরিবর্তন প্রয়োজন'।",
+      "evidence_locator_en": "The first sentence says services will run less frequently while track maintenance is carried out.",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নিতে পারেন, কিন্তু নতুন সময়সূচি ফলাফল, কারণ নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-031",
+      "passage_id": "ielts-reading-passage-008",
+      "skill_id": "reading_inference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "ADVANCED",
+      "question_en": "What can be inferred about the expected passenger inconvenience?",
+      "question_bn": "যাত্রীদের প্রত্যাশিত অসুবিধা সম্পর্কে কী অনুমান করা যায়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "There will be no impact."
+        },
+        {
+          "id": "B",
+          "text": "Trains will be cancelled entirely."
+        },
+        {
+          "id": "C",
+          "text": "It will be minimal."
+        },
+        {
+          "id": "D",
+          "text": "It may increase due to less frequent trains."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "It may increase due to less frequent trains.",
+      "explanation_en": "The frequency reduction from every 20 to every 30 minutes suggests longer waiting times, causing inconvenience.",
+      "explanation_bn": "ফ্রিকোয়েন্সি ২০ থেকে ৩০ মিনিটে কমানো হলে অপেক্ষার সময় বাড়বে, যা অসুবিধা বোঝায়।",
+      "evidence_locator_en": "The notice changes off-peak frequency from every 20 minutes to every 30 minutes and advises passengers to allow extra time.",
+      "common_wrong_reason_bn": "অনেকে 'A' বেছে নিতে পারেন, কিন্তু কম ফ্রিকোয়েন্সি অসুবিধা বাড়াতে পারে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-032",
+      "passage_id": "ielts-reading-passage-008",
+      "skill_id": "reading_reference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "In the notice, what does 'this change' refer to?",
+      "question_bn": "বিজ্ঞপ্তিতে, 'this change' বলতে কী বোঝানো হয়েছে?",
+      "context_en": "The sentence: 'This change is necessary to allow for track maintenance.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The reduction in train frequency."
+        },
+        {
+          "id": "B",
+          "text": "The introduction of a replacement bus."
+        },
+        {
+          "id": "C",
+          "text": "The track maintenance work."
+        },
+        {
+          "id": "D",
+          "text": "The online timetable update."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "The reduction in train frequency.",
+      "explanation_en": "The preceding sentence describes the frequency change.",
+      "explanation_bn": "পূর্ববর্তী বাক্যে ফ্রিকোয়েন্সি পরিবর্তন বর্ণনা করা হয়েছে।",
+      "evidence_locator_en": "The reduced off-peak frequency is introduced before the notice explains why the change is necessary.",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নিতে পারেন, কিন্তু রক্ষণাবেক্ষণ কারণ, পরিবর্তনটি ফ্রিকোয়েন্সি।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-033",
+      "passage_id": "ielts-reading-passage-009",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the main purpose of the library borrowing notice?",
+      "question_bn": "লাইব্রেরির ধার নেওয়ার নিয়ম সংক্রান্ত বিজ্ঞপ্তিটির প্রধান উদ্দেশ্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To announce library closure."
+        },
+        {
+          "id": "B",
+          "text": "To promote children's events."
+        },
+        {
+          "id": "C",
+          "text": "To explain library borrowing rules."
+        },
+        {
+          "id": "D",
+          "text": "To advertise new books."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "To explain library borrowing rules.",
+      "explanation_en": "The notice outlines borrowing limits, loan periods, renewals, fines, and replacement costs.",
+      "explanation_bn": "বিজ্ঞপ্তিটি ধার সীমা, ঋণ সময়কাল, নবায়ন, জরিমানা এবং প্রতিস্থাপন খরচ বর্ণনা করে।",
+      "evidence_locator_en": "Across the notice: borrowing limits, loan periods, renewals, late charges and replacement costs are explained.",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নিতে পারেন, কিন্তু শিশুদের ইভেন্টের উল্লেখ নেই।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-034",
+      "passage_id": "ielts-reading-passage-009",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "How many items can a library member borrow at one time?",
+      "question_bn": "একজন লাইব্রেরি সদস্য এক সময়ে কতটি আইটেম ধার করতে পারেন?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "10",
+      "explanation_en": "The notice states: 'Library members may borrow up to ten items'.",
+      "explanation_bn": "বিজ্ঞপ্তিতে বলা হয়েছে: 'লাইব্রেরি সদস্যরা সর্বোচ্চ দশটি আইটেম ধার করতে পারবেন'।",
+      "evidence_locator_en": "The notice states that members may borrow up to ten items at one time.",
+      "common_wrong_reason_bn": "অনেকে 'C' বেছে নিতে পারেন, কিন্তু উল্লেখিত সংখ্যা ১০।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-035",
+      "passage_id": "ielts-reading-passage-009",
+      "skill_id": "reading_inference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "ADVANCED",
+      "question_en": "What can be inferred about items that are requested by other members?",
+      "question_bn": "অন্যান্য সদস্যদের দ্বারা অনুরোধ করা আইটেম সম্পর্কে কী অনুমান করা যায়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They cannot be renewed."
+        },
+        {
+          "id": "B",
+          "text": "They can be renewed indefinitely."
+        },
+        {
+          "id": "C",
+          "text": "They are free."
+        },
+        {
+          "id": "D",
+          "text": "They are not available for borrowing."
+        }
+      ],
+      "correct_option": "A",
+      "correct_answer": "They cannot be renewed.",
+      "explanation_en": "The notice says: 'items can be renewed online twice if no other member has reserved them' – implying if reserved, renewal is not allowed.",
+      "explanation_bn": "বিজ্ঞপ্তিতে বলা হয়েছে: 'আইটেম দুবার নবায়ন করা যাবে যদি অন্য কোন সদস্য সংরক্ষণ না করে থাকে' – অর্থাৎ সংরক্ষিত হলে নবায়ন সম্ভব নয়।",
+      "evidence_locator_en": "The notice says renewal is not available when another member has already reserved the item.",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নিতে পারেন, কিন্তু নবায়নের সীমা আছে এবং সংরক্ষিত অবস্থায় নবায়ন সম্ভব নয়।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-036",
+      "passage_id": "ielts-reading-passage-009",
+      "skill_id": "reading_reference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "ADVANCED",
+      "question_en": "In the notice, what does 'the member' refer to in 'the member will be charged'?",
+      "question_bn": "বিজ্ঞপ্তিতে, 'the member' বলতে কাকে বোঝানো হয়েছে?",
+      "context_en": "The sentence: 'If an item is lost or damaged, the member will be charged the replacement cost.'",
+      "options": [
+        {
+          "id": "A",
+          "text": "The librarian."
+        },
+        {
+          "id": "B",
+          "text": "The person who found the item."
+        },
+        {
+          "id": "C",
+          "text": "The library staff."
+        },
+        {
+          "id": "D",
+          "text": "The person who borrowed the item."
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "The person who borrowed the item.",
+      "explanation_en": "The notice is about borrowing rules, so 'the member' refers to the borrower.",
+      "explanation_bn": "বিজ্ঞপ্তিটি ধার নেওয়ার নিয়ম সম্পর্কে, তাই 'the member' বলতে ধারককে বোঝানো হয়েছে।",
+      "evidence_locator_en": "The notice says that if a borrowed item is lost or seriously damaged, the member who borrowed it may be charged.",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নিতে পারেন, কিন্তু স্টাফ নয়, সদস্যই দায়ী।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-037",
+      "passage_id": "ielts-reading-passage-010",
+      "skill_id": "reading_main_idea",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the main purpose of the summer-festival notice?",
+      "question_bn": "সামার ফেস্টিভ্যাল বিজ্ঞপ্তিটির প্রধান উদ্দেশ্য কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To advertise the festival's entertainment."
+        },
+        {
+          "id": "B",
+          "text": "To announce a change in festival dates."
+        },
+        {
+          "id": "C",
+          "text": "To recruit volunteers for a summer festival."
+        },
+        {
+          "id": "D",
+          "text": "To sell festival tickets."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "To recruit volunteers for a summer festival.",
+      "explanation_en": "The notice calls for volunteers and provides details.",
+      "explanation_bn": "বিজ্ঞপ্তিটি স্বেচ্ছাসেবক চেয়েছে এবং বিস্তারিত দিয়েছে।",
+      "evidence_locator_en": "The opening sentence says the organising team is recruiting volunteers for several festival roles.",
+      "common_wrong_reason_bn": "অনেকে 'D' বেছে নিতে পারেন, কিন্তু টিকিট বিক্রির কথা নেই।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-038",
+      "passage_id": "ielts-reading-passage-010",
+      "skill_id": "reading_supporting_detail",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What will volunteers receive for their work?",
+      "question_bn": "স্বেচ্ছাসেবকরা তাদের কাজের জন্য কী পাবেন?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A cash payment."
+        },
+        {
+          "id": "B",
+          "text": "A certificate."
+        },
+        {
+          "id": "C",
+          "text": "Free entry and a meal voucher."
+        },
+        {
+          "id": "D",
+          "text": "A free T-shirt."
+        }
+      ],
+      "correct_option": "C",
+      "correct_answer": "Free entry and a meal voucher.",
+      "explanation_en": "The notice says: 'Volunteers will receive free entry to the festival and a meal voucher for each shift'.",
+      "explanation_bn": "বিজ্ঞপ্তিতে বলা হয়েছে: 'স্বেচ্ছাসেবকরা উৎসবে বিনামূল্যে প্রবেশ এবং প্রতিটি শিফটের জন্য একটি খাবার ভাউচার পাবেন'।",
+      "evidence_locator_en": "The notice says each volunteer receives free entry and a meal voucher for every completed shift.",
+      "common_wrong_reason_bn": "অনেকে 'B' বেছে নিতে পারেন, কিন্তু অর্থের উল্লেখ নেই।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-039",
+      "passage_id": "ielts-reading-passage-010",
+      "skill_id": "reading_inference",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "ADVANCED",
+      "question_en": "What can be inferred from the training date and the festival dates?",
+      "question_bn": "প্রশিক্ষণের তারিখ এবং উৎসবের তারিখ থেকে কী অনুমান করা যায়?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Training takes place after the festival ends"
+        },
+        {
+          "id": "B",
+          "text": "Only experienced volunteers may attend training"
+        },
+        {
+          "id": "C",
+          "text": "Volunteers can register after the festival begins"
+        },
+        {
+          "id": "D",
+          "text": "The organisers want volunteers prepared before their first festival shifts"
+        }
+      ],
+      "correct_option": "D",
+      "correct_answer": "The organisers want volunteers prepared before their first festival shifts",
+      "explanation_en": "Training is scheduled for 18 August, while the festival starts on 20 August, and the passage says organisers want volunteers to understand procedures before their first shift.",
+      "explanation_bn": "প্রশিক্ষণ ১৮ আগস্ট এবং উৎসব শুরু ২০ আগস্ট; অনুচ্ছেদে আরও বলা হয়েছে যে প্রথম শিফটের আগে স্বেচ্ছাসেবকদের প্রক্রিয়া বুঝে নিতে হবে।",
+      "evidence_locator_en": "Training is on 18 August, the festival starts on 20 August, and organisers want volunteers to understand procedures before their first shift.",
+      "common_wrong_reason_bn": "তারিখগুলো না মিলিয়ে দেখলে ভুল বিকল্প আকর্ষণীয় হতে পারে; প্রশিক্ষণটি উৎসব শুরুর আগেই রাখা হয়েছে।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "id": "ielts-reading-040",
+      "passage_id": "ielts-reading-passage-010",
+      "skill_id": "reading_tone_purpose",
+      "family": "READING_COMPREHENSION",
+      "test_type": "GENERAL_TRAINING",
+      "difficulty": "INTERMEDIATE",
+      "question_en": "What is the overall tone of the summer-festival volunteer notice?",
+      "question_bn": "সামার ফেস্টিভ্যালের স্বেচ্ছাসেবক বিজ্ঞপ্তিটির সামগ্রিক সুর কী?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Critical and accusatory"
+        },
+        {
+          "id": "B",
+          "text": "Encouraging and practical"
+        },
+        {
+          "id": "C",
+          "text": "Uncertain and confused"
+        },
+        {
+          "id": "D",
+          "text": "Humorous and sarcastic"
+        }
+      ],
+      "correct_option": "B",
+      "correct_answer": "Encouraging and practical",
+      "explanation_en": "The notice invites participation while giving clear dates, roles, benefits and registration instructions.",
+      "explanation_bn": "বিজ্ঞপ্তিটি অংশগ্রহণে উৎসাহ দেয় এবং একই সঙ্গে তারিখ, কাজের ধরন, সুবিধা ও নিবন্ধনের নির্দেশনা স্পষ্টভাবে জানায়।",
+      "evidence_locator_en": "Across the notice: it invites volunteers while giving practical dates, roles, benefits and registration instructions.",
+      "common_wrong_reason_bn": "তথ্যভিত্তিক হওয়াকে ‘cold’ বা ‘critical’ ভাবা ভুল; ভাষাটি আমন্ত্রণমূলক এবং ব্যবহারিক।",
+      "official_question": false,
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    }
+  ]
+}

@@ -48,7 +48,7 @@ assert.ok(manifest.items.filter(item=>['listening','speaking'].includes(item.bro
 assert.equal(graph.families.length,14);
 assert.equal(graph.skills.length,68);
 assert.equal(graph.skills.filter(skill=>skill.status==='ACTIVE').length,68);
-assert.equal(graph.item_mappings.length,400);
+assert.equal(graph.item_mappings.length,440);
 assert.match(diagnostic,/recordSkillEvidence\(/);
 assert.doesNotMatch(diagnostic,/recordMistakeSignal\(/);
 assert.match(diagnostic,/if\(current===QUESTIONS\.length-1\)showResults\(\)/);
@@ -73,4 +73,4 @@ const frozen=require('../reports/ovidhan-learning-foundation-3b-frozen-hashes.js
 assert.equal(frozen.aggregateSha256,'202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
 frozen.pages.forEach(page=>assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,page.path))).digest('hex'),page.sha256));
 frozen.guards.forEach(guard=>assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,guard.path))).digest('hex'),guard.sha256));
-console.log(JSON.stringify({status:'PASS',questions:40,mapped:mapped.length,unmapped:unmapped.length,uniqueMappedSkills:new Set(mapped.map(item=>item.primary_skill_id)).size,questionSetSha256,graph:{families:14,skills:68,active:68,practiceMappings:400},legacyCreatesEvidence:false,distinctEvidenceAfterRetake:1,frozenAggregateSha256:frozen.aggregateSha256},null,2));
+console.log(JSON.stringify({status:'PASS',questions:40,mapped:mapped.length,unmapped:unmapped.length,uniqueMappedSkills:new Set(mapped.map(item=>item.primary_skill_id)).size,questionSetSha256,graph:{families:14,skills:68,active:68,practiceMappings:440},legacyCreatesEvidence:false,distinctEvidenceAfterRetake:1,frozenAggregateSha256:frozen.aggregateSha256},null,2));
