@@ -345,6 +345,20 @@
       "importance": "CORE",
       "evidence_class": "CURATED_REPOSITORY_MAPPING",
       "source_or_rationale": "Reviewed Ovidhan-created synthetic-audio objective practice directly supports this bounded listening-comprehension skill without establishing full IELTS performance."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "speaking_extended_turn",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Reviewed Ovidhan-created productive speaking practice supports a bounded attempt and self-review workflow without scoring fluency, grammar, pronunciation, vocabulary, or IELTS performance."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "speaking_discussion_response",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Reviewed Ovidhan-created productive speaking practice supports a bounded attempt and self-review workflow without scoring fluency, grammar, pronunciation, vocabulary, or IELTS performance."
     }
   ]
 }

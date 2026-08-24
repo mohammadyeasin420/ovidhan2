@@ -190,6 +190,30 @@
       "goal_ids": [
         "IELTS"
       ]
+    },
+    {
+      "destination_id": "content:ielts_speaking_extended_turn",
+      "skill_id": "speaking_extended_turn",
+      "url": "/ielts-speaking-practice-bangla.html",
+      "activity_type": "GUIDED_SPEAKING_PERFORMANCE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 20,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_speaking_discussion_response",
+      "skill_id": "speaking_discussion_response",
+      "url": "/ielts-speaking-practice-bangla.html",
+      "activity_type": "GUIDED_SPEAKING_PERFORMANCE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 20,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     }
   ]
 }

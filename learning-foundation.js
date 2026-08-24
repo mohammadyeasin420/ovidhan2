@@ -16,7 +16,7 @@
 
     const STATE_KEY = 'ovidhan_learning_v1';
     const SESSION_KEY = 'ovidhan_learning_session_v1';
-    const STATE_VERSION = 5;
+    const STATE_VERSION = 6;
     const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
     const MAX_IDENTIFIER_ITEMS = 250;
     const MAX_RECENT_ACTIONS = 50;
@@ -25,6 +25,10 @@
     const MAX_RETENTION_COUNT = 9999;
     const MAX_SKILL_EVIDENCE = 250;
     const SKILL_EVIDENCE_TYPES = Object.freeze(['DIAGNOSTIC_OBJECTIVE', 'BOUNDARY_PROBE', 'OBJECTIVE_AUDIO_COMPREHENSION']);
+    const PERFORMANCE_EVIDENCE_TYPES = Object.freeze(['SPEAKING_PERFORMANCE_ATTEMPT']);
+    const PERFORMANCE_TASK_TYPES = Object.freeze(['PART_2_EXTENDED_TURN', 'PART_3_DISCUSSION_RESPONSE']);
+    const PERFORMANCE_DURATION_BUCKETS = Object.freeze(['UNDER_30_SECONDS', '30_TO_59_SECONDS', '60_TO_119_SECONDS', '120_SECONDS_OR_MORE']);
+    const MAX_PERFORMANCE_EVIDENCE = 100;
     const GOAL_IDS = Object.freeze(['BCS', 'IELTS', 'BANK', 'UNIVERSITY_ADMISSION', 'GENERAL_ENGLISH', 'SPOKEN_CAREER']);
 
     const EVENT_PROPERTIES = Object.freeze({
@@ -170,6 +174,7 @@
             mistakes: [],
             mistakeSignals: {},
             skillEvidence: {},
+            performanceEvidence: {},
             recentActions: [],
             retention: {
                 firstSeenAt: nowIso,
@@ -289,6 +294,21 @@
                     first_seen_at: validIso(entry.first_seen_at) || nowIso,
                     last_seen_at: validIso(entry.last_seen_at) || nowIso,
                     attempts: Math.max(1, Math.min(99, Math.floor(Number(entry.attempts) || 1)))
+                };
+            });
+        }
+        if (source.performanceEvidence && typeof source.performanceEvidence === 'object' && !Array.isArray(source.performanceEvidence)) {
+            Object.keys(source.performanceEvidence).slice(-MAX_PERFORMANCE_EVIDENCE).forEach(evidenceId => {
+                if (!/^[a-z0-9:_-]{1,100}$/.test(evidenceId)) return;
+                const entry = source.performanceEvidence[evidenceId] || {};
+                if (!/^[a-z0-9_-]{1,100}$/.test(entry.skill_id || '') || !PERFORMANCE_EVIDENCE_TYPES.includes(entry.evidence_type) ||
+                    !PERFORMANCE_TASK_TYPES.includes(entry.task_type) || !PERFORMANCE_DURATION_BUCKETS.includes(entry.duration_bucket) ||
+                    !/^[a-z0-9:_-]{1,100}$/.test(entry.source_id || '')) return;
+                state.performanceEvidence[evidenceId] = {
+                    evidence_id: evidenceId, skill_id: entry.skill_id, evidence_type: entry.evidence_type,
+                    task_type: entry.task_type, source_id: entry.source_id, duration_bucket: entry.duration_bucket,
+                    first_seen_at: validIso(entry.first_seen_at) || nowIso, last_seen_at: validIso(entry.last_seen_at) || nowIso,
+                    attempt_count: Math.max(1, Math.min(99, Math.floor(Number(entry.attempt_count) || 1)))
                 };
             });
         }
@@ -645,6 +665,23 @@
             return true;
         }
 
+        function recordPerformanceEvidence(evidenceId, skillId, evidenceType, taskType, sourceId, durationBucket) {
+            if (!/^[a-z0-9:_-]{1,100}$/.test(evidenceId || '') || !/^[a-z0-9_-]{1,100}$/.test(skillId || '') ||
+                !PERFORMANCE_EVIDENCE_TYPES.includes(evidenceType) || !PERFORMANCE_TASK_TYPES.includes(taskType) ||
+                !/^[a-z0-9:_-]{1,100}$/.test(sourceId || '') || !PERFORMANCE_DURATION_BUCKETS.includes(durationBucket)) return false;
+            const timestamp = now().toISOString(), previous = learnerState.performanceEvidence[evidenceId];
+            learnerState.performanceEvidence[evidenceId] = {
+                evidence_id: evidenceId, skill_id: skillId, evidence_type: evidenceType, task_type: taskType,
+                source_id: sourceId, duration_bucket: durationBucket,
+                first_seen_at: previous && previous.first_seen_at || timestamp, last_seen_at: timestamp,
+                attempt_count: Math.min(99, (previous && Number(previous.attempt_count) || 0) + 1)
+            };
+            const keys = Object.keys(learnerState.performanceEvidence);
+            if (keys.length > MAX_PERFORMANCE_EVIDENCE) delete learnerState.performanceEvidence[keys[0]];
+            saveState(learnerState);
+            return true;
+        }
+
         function setGoal(goal) {
             if (goal === null || goal === '') learnerState.goal = null;
             else if (GOAL_IDS.includes(goal)) learnerState.goal = goal;
@@ -801,6 +838,7 @@
             saveMistake,
             recordMistakeSignal,
             recordSkillEvidence,
+            recordPerformanceEvidence,
             setGoal,
             getRoutingGoal,
             reset,
@@ -834,6 +872,10 @@
             ,MAX_LEARNING_DAYS
             ,MAX_SKILL_EVIDENCE
             ,SKILL_EVIDENCE_TYPES
+            ,MAX_PERFORMANCE_EVIDENCE
+            ,PERFORMANCE_EVIDENCE_TYPES
+            ,PERFORMANCE_TASK_TYPES
+            ,PERFORMANCE_DURATION_BUCKETS
             ,MAX_RETENTION_COUNT
         })
     };
