@@ -1,0 +1,670 @@
+{
+  "phase": "6L",
+  "scope": "IELTS_GENERAL_TRAINING_PRODUCTIVE_WRITING_FOUNDATION_V1",
+  "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+  "proposed_new_canonical_skill": {
+    "id": "writing_letter_task_response",
+    "family_id": "WRITING",
+    "definition": "Produce a purposeful written letter or message that addresses required content points for a defined reader, purpose and context."
+  },
+  "gt_task1_letters": [
+    {
+      "id": "gt-task1-letter-001",
+      "theme_id": "accommodation",
+      "context": "You are a tenant in a rented apartment. You recently noticed a maintenance issue that needs urgent attention.",
+      "relationship_audience": "Landlord",
+      "style_register": "FORMAL",
+      "prompt_en": "Write a letter to your landlord. In your letter:\n- explain the problem you have noticed\n- describe the current condition and why it is urgent\n- suggest a convenient time for a repair visit",
+      "prompt_bn": "আপনার বাড়িওয়ালাকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- আপনি যে সমস্যাটি লক্ষ্য করেছেন তা ব্যাখ্যা করুন\n- বর্তমান অবস্থা এবং কেন এটি জরুরি তা বর্ণনা করুন\n- মেরামতের জন্য একটি সুবিধাজনক সময় প্রস্তাব করুন",
+      "required_content_points": [
+        "describe the problem",
+        "explain urgency",
+        "suggest repair time"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "formal_letter_writing",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "FORMAL",
+      "language_functions": [
+        "complaint",
+        "request",
+        "suggestion"
+      ],
+      "relationship_to_reader": "Landlord-tenant",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-002",
+      "theme_id": "neighbourhood",
+      "context": "You live in a quiet neighbourhood. A new neighbour has been playing loud music late at night, disturbing your sleep.",
+      "relationship_audience": "Neighbour",
+      "style_register": "SEMI_FORMAL",
+      "prompt_en": "Write a letter to your new neighbour. In your letter:\n- introduce yourself and explain the issue\n- describe how the noise affects you\n- suggest a friendly solution",
+      "prompt_bn": "আপনার নতুন প্রতিবেশীকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- নিজের পরিচয় দিন এবং সমস্যাটি ব্যাখ্যা করুন\n- গোলমালটি কীভাবে আপনাকে প্রভাবিত করে তা বর্ণনা করুন\n- একটি বন্ধুত্বপূর্ণ সমাধান প্রস্তাব করুন",
+      "required_content_points": [
+        "introduce yourself",
+        "explain the issue",
+        "suggest a solution"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "SEMI_FORMAL",
+      "language_functions": [
+        "request",
+        "explain",
+        "suggest"
+      ],
+      "relationship_to_reader": "Neighbour",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-003",
+      "theme_id": "workplace",
+      "context": "You work in a medium‑sized company and have a good working relationship with your manager. You have been offered a training course that would benefit your career, but it requires time off.",
+      "relationship_audience": "Manager",
+      "style_register": "SEMI_FORMAL",
+      "prompt_en": "Write a letter to your manager. In your letter:\n- describe the training course and its benefits\n- explain why you would like to attend\n- request time off and suggest how your work could be covered",
+      "prompt_bn": "আপনার ম্যানেজারকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- প্রশিক্ষণ কোর্স এবং এর সুবিধা বর্ণনা করুন\n- কেন আপনি অংশগ্রহণ করতে চান তা ব্যাখ্যা করুন\n- ছুটির অনুমতি চান এবং কীভাবে আপনার কাজ সামলানো যেতে পারে তা প্রস্তাব করুন",
+      "required_content_points": [
+        "describe the course and benefits",
+        "explain your interest",
+        "request leave and suggest coverage"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "SEMI_FORMAL",
+      "language_functions": [
+        "request",
+        "persuade",
+        "explain"
+      ],
+      "relationship_to_reader": "Manager-employee",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-004",
+      "theme_id": "travel",
+      "context": "You recently went on a holiday and booked a tour. The tour was not as advertised and you were disappointed.",
+      "relationship_audience": "Tour company",
+      "style_register": "FORMAL",
+      "prompt_en": "Write a letter to the tour company. In your letter:\n- give details of your booking and the tour\n- explain what was wrong\n- describe what you expect them to do",
+      "prompt_bn": "ট্যুর কোম্পানিকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- আপনার বুকিং এবং ট্যুরের বিবরণ দিন\n- কী ভুল ছিল তা ব্যাখ্যা করুন\n- আপনি তাদের কাছ থেকে কী ব্যবস্থা আশা করেন তা জানান",
+      "required_content_points": [
+        "give booking details",
+        "explain the problem",
+        "state expected action"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "formal_letter_writing",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "FORMAL",
+      "language_functions": [
+        "complaint",
+        "request",
+        "explain"
+      ],
+      "relationship_to_reader": "Customer-company",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-005",
+      "theme_id": "study/course",
+      "context": "You have applied to a college course and received a conditional offer. You need to clarify some details about the offer.",
+      "relationship_audience": "Admissions officer",
+      "style_register": "FORMAL",
+      "prompt_en": "Write a letter to the admissions officer. In your letter:\n- thank them for the offer\n- ask for clarification about the conditions\n- request more information about the course content",
+      "prompt_bn": "ভর্তি কর্মকর্তাকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- অফারের জন্য ধন্যবাদ জানান\n- অফারের শর্তগুলো সম্পর্কে স্পষ্টতা চান\n- কোর্সের বিষয়বস্তু সম্পর্কে আরও তথ্য চান",
+      "required_content_points": [
+        "thank for offer",
+        "ask for clarification",
+        "request course info"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "formal_letter_writing",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "FORMAL",
+      "language_functions": [
+        "thank",
+        "request",
+        "ask for information"
+      ],
+      "relationship_to_reader": "Applicant-admissions",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-006",
+      "theme_id": "service complaint",
+      "context": "You purchased a product online that arrived damaged. You want to return it and get a refund.",
+      "relationship_audience": "Customer service",
+      "style_register": "FORMAL",
+      "prompt_en": "Write a letter to the customer service department. In your letter:\n- describe the product and the damage\n- explain that you want a refund or replacement\n- ask how to return the item",
+      "prompt_bn": "গ্রাহক সেবা বিভাগকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- পণ্যটি এবং কীভাবে ক্ষতিগ্রস্ত হয়েছে তা বর্ণনা করুন\n- আপনি মূল্য ফেরত চান নাকি পণ্যটি প্রতিস্থাপন করতে চান তা জানান\n- পণ্যটি কীভাবে ফেরত পাঠাবেন তা জিজ্ঞাসা করুন",
+      "required_content_points": [
+        "describe product and damage",
+        "state desired resolution",
+        "ask return procedure"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "formal_letter_writing",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "FORMAL",
+      "language_functions": [
+        "complaint",
+        "request",
+        "inquiry"
+      ],
+      "relationship_to_reader": "Customer-service",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-007",
+      "theme_id": "invitation",
+      "context": "You are organising a small party for a friend. You want to invite a colleague you know well.",
+      "relationship_audience": "Colleague",
+      "style_register": "INFORMAL_PERSONAL",
+      "prompt_en": "Write a letter to your colleague. In your letter:\n- explain what the party is for and when it will be\n- describe why you are inviting them\n- ask if they can bring something",
+      "prompt_bn": "আপনার সহকর্মীকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- পার্টি কী জন্য এবং কখন তা ব্যাখ্যা করুন\n- কেন আপনি তাদের আমন্ত্রণ জানাচ্ছেন তা বর্ণনা করুন\n- তারা কিছু আনতে পারবেন কিনা জিজ্ঞাসা করুন",
+      "required_content_points": [
+        "explain party details",
+        "reason for invitation",
+        "request contribution"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "INFORMAL_PERSONAL",
+      "language_functions": [
+        "invite",
+        "explain",
+        "request"
+      ],
+      "relationship_to_reader": "Colleague/friend",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-008",
+      "theme_id": "request",
+      "context": "You are going to visit a friend who lives abroad. You need to ask if you can stay with them for a few days.",
+      "relationship_audience": "Friend",
+      "style_register": "INFORMAL_PERSONAL",
+      "prompt_en": "Write a letter to your friend. In your letter:\n- say you are planning to visit their city\n- ask if you can stay with them for a few days\n- tell them what you would like to do together",
+      "prompt_bn": "আপনার বন্ধুকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- আপনি তাদের শহর পরিদর্শনের পরিকল্পনা করছেন তা জানান\n- আপনি তাদের সাথে কয়েকদিন থাকতে পারেন কিনা জিজ্ঞাসা করুন\n- আপনি একসাথে কী করতে চান তা বলুন",
+      "required_content_points": [
+        "announce visit plan",
+        "request accommodation",
+        "suggest activities"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "INFORMAL_PERSONAL",
+      "language_functions": [
+        "request",
+        "invite",
+        "suggest"
+      ],
+      "relationship_to_reader": "Friend",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-009",
+      "theme_id": "apology",
+      "context": "You accidentally damaged a borrowed book from a friend. You want to apologise and explain what happened.",
+      "relationship_audience": "Friend",
+      "style_register": "INFORMAL_PERSONAL",
+      "prompt_en": "Write a letter to your friend. In your letter:\n- apologise for the damage\n- explain how it happened\n- tell them what you will do to make up for it",
+      "prompt_bn": "আপনার বন্ধুকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- ক্ষতির জন্য ক্ষমা চান\n- এটি কীভাবে ঘটেছে তা ব্যাখ্যা করুন\n- আপনি কীভাবে এর জন্য ক্ষতিপূরণ করবেন তা বলুন",
+      "required_content_points": [
+        "apologise",
+        "explain the accident",
+        "offer compensation"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "INFORMAL_PERSONAL",
+      "language_functions": [
+        "apologise",
+        "explain",
+        "offer"
+      ],
+      "relationship_to_reader": "Friend",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-010",
+      "theme_id": "recommendation",
+      "context": "A colleague has asked for a recommendation for a restaurant where you can have a business lunch.",
+      "relationship_audience": "Colleague",
+      "style_register": "SEMI_FORMAL",
+      "prompt_en": "Write a letter to your colleague. In your letter:\n- recommend a restaurant and give reasons\n- describe the atmosphere and menu\n- suggest what to order or avoid",
+      "prompt_bn": "আপনার সহকর্মীকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- একটি রেস্তোরাঁ সুপারিশ করুন এবং কারণ দিন\n- সেখানকার পরিবেশ ও খাবারের ধরন বর্ণনা করুন\n- কী অর্ডার করা ভালো বা কী এড়িয়ে চলা উচিত সে বিষয়ে পরামর্শ দিন",
+      "required_content_points": [
+        "recommend restaurant",
+        "describe it",
+        "give ordering advice"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "SEMI_FORMAL",
+      "language_functions": [
+        "recommend",
+        "describe",
+        "advise"
+      ],
+      "relationship_to_reader": "Colleague",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-011",
+      "theme_id": "local facilities",
+      "context": "You are a resident of a housing complex. The community centre is underused. You want to propose new activities.",
+      "relationship_audience": "Residents' committee",
+      "style_register": "SEMI_FORMAL",
+      "prompt_en": "Write a letter to the residents' committee. In your letter:\n- explain why the centre is underused\n- suggest two new activities and their benefits\n- offer to help organise one of them",
+      "prompt_bn": "বাসিন্দাদের কমিটিকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- কমিউনিটি সেন্টারটি কেন কম ব্যবহার করা হয় তা ব্যাখ্যা করুন\n- দুটি নতুন কার্যক্রম এবং সেগুলোর উপকারিতা প্রস্তাব করুন\n- একটি কার্যক্রম আয়োজন করতে সাহায্য করার প্রস্তাব দিন",
+      "required_content_points": [
+        "explain underuse",
+        "propose activities",
+        "offer help"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "SEMI_FORMAL",
+      "language_functions": [
+        "explain",
+        "suggest",
+        "offer"
+      ],
+      "relationship_to_reader": "Resident-committee",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task1-letter-012",
+      "theme_id": "arrangements",
+      "context": "You are planning a surprise party for a friend. You need to coordinate with another friend who lives far away.",
+      "relationship_audience": "Friend",
+      "style_register": "INFORMAL_PERSONAL",
+      "prompt_en": "Write a letter to your friend. In your letter:\n- explain the surprise plan and date\n- ask them to help with something (e.g., bring food or music)\n- suggest how you can meet beforehand to prepare",
+      "prompt_bn": "আপনার বন্ধুকে একটি চিঠি লিখুন। আপনার চিঠিতে:\n- সারপ্রাইজ পার্টির পরিকল্পনা এবং তারিখ ব্যাখ্যা করুন\n- তাদের কিছুতে সাহায্য করতে বলুন (যেমন খাবার বা সঙ্গীত আনা)\n- কীভাবে আপনি আগে থেকেই প্রস্তুতির জন্য দেখা করতে পারেন তা পরামর্শ দিন",
+      "required_content_points": [
+        "explain plan",
+        "request help",
+        "suggest preparation meet-up"
+      ],
+      "skill_targets": [
+        "writing_letter_task_response",
+        "word_choice_register"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_1_LETTER",
+      "expected_register": "INFORMAL_PERSONAL",
+      "language_functions": [
+        "invite",
+        "request",
+        "suggest"
+      ],
+      "relationship_to_reader": "Friend",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    }
+  ],
+  "gt_task2_essays": [
+    {
+      "id": "gt-task2-essay-001",
+      "theme_id": "education",
+      "prompt_en": "Some parents believe that enrolling children in extracurricular activities from a very young age is essential, while others think it puts too much pressure on them. Discuss both views and give your own opinion.",
+      "prompt_bn": "কিছু অভিভাবক মনে করেন খুব অল্প বয়স থেকেই শিশুদের পাঠ্যক্রমের বাইরের বিভিন্ন কার্যক্রমে যুক্ত করা গুরুত্বপূর্ণ, আবার অন্যরা মনে করেন এতে শিশুদের ওপর অতিরিক্ত চাপ পড়ে। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং নিজের মতামত দিন।",
+      "reasoning_demand": "DISCUSS_BOTH_AND_POSITION",
+      "skill_targets": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_argument_development"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_2_ARGUMENT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task2-essay-002",
+      "theme_id": "environment",
+      "prompt_en": "Many people believe that the easiest way to reduce household waste is to recycle, but others argue that we should first reduce what we buy. Discuss both views and give your opinion.",
+      "prompt_bn": "অনেকে মনে করেন পরিবারের বর্জ্য কমানোর সবচেয়ে সহজ উপায় হলো পুনর্ব্যবহার করা, আবার অন্যরা মনে করেন আগে কেনাকাটা ও ভোগ কমানো উচিত। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং নিজের মতামত দিন।",
+      "reasoning_demand": "DISCUSS_BOTH_AND_POSITION",
+      "skill_targets": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_argument_development"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_2_ARGUMENT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task2-essay-003",
+      "theme_id": "technology",
+      "prompt_en": "Do you agree or disagree that the widespread use of smartphones has made face‑to‑face communication less important?",
+      "prompt_bn": "আপনি কি একমত নাকি দ্বিমত পোষণ করেন যে স্মার্টফোনের ব্যাপক ব্যবহার মুখোমুখি যোগাযোগকে কম গুরুত্বপূর্ণ করে তুলেছে?",
+      "reasoning_demand": "POSITION_OPINION",
+      "skill_targets": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_argument_development"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_2_ARGUMENT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task2-essay-004",
+      "theme_id": "health",
+      "prompt_en": "Some people think that governments should prioritise spending on preventive health measures rather than on treating diseases. To what extent do you agree or disagree?",
+      "prompt_bn": "কেউ কেউ মনে করেন সরকারের রোগের চিকিৎসার চেয়ে প্রতিরোধমূলক স্বাস্থ্য ব্যবস্থায় ব্যয়কে অগ্রাধিকার দেওয়া উচিত। আপনি কতটা একমত বা দ্বিমত পোষণ করেন?",
+      "reasoning_demand": "POSITION_OPINION",
+      "skill_targets": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_argument_development"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_2_ARGUMENT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task2-essay-005",
+      "theme_id": "work",
+      "prompt_en": "Many people are now working remotely from home. What are the advantages and disadvantages of this trend for employees and employers?",
+      "prompt_bn": "অনেক মানুষ এখন বাসা থেকে কাজ করছেন। এই প্রবণতা কর্মী ও নিয়োগকর্তাদের জন্য কী কী সুবিধা এবং অসুবিধা তৈরি করে?",
+      "reasoning_demand": "ADVANTAGES_DISADVANTAGES",
+      "skill_targets": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_argument_development"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_2_ARGUMENT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task2-essay-006",
+      "theme_id": "urban life",
+      "prompt_en": "In many cities, public parks are being replaced by housing developments. What are the causes of this trend, and what are some possible solutions?",
+      "prompt_bn": "অনেক শহরে জনসাধারণের পার্কের জায়গায় আবাসন প্রকল্প তৈরি করা হচ্ছে। এই প্রবণতার কারণ কী, এবং এর সম্ভাব্য সমাধান কী হতে পারে?",
+      "reasoning_demand": "CAUSES_SOLUTIONS",
+      "skill_targets": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_argument_development"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_2_ARGUMENT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task2-essay-007",
+      "theme_id": "society",
+      "prompt_en": "In some countries, the cost of living in cities is rising so fast that many young people cannot afford to buy their own home. What problems does this create, and what can be done to address them?",
+      "prompt_bn": "কিছু দেশে শহরের জীবনযাত্রার ব্যয় এত দ্রুত বাড়ছে যে অনেক তরুণ নিজের বাড়ি কিনতে পারছেন না। এতে কী কী সমস্যা তৈরি হয়, এবং সেগুলো মোকাবিলায় কী করা যেতে পারে?",
+      "reasoning_demand": "PROBLEMS_SOLUTIONS",
+      "skill_targets": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_argument_development"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_2_ARGUMENT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    },
+    {
+      "id": "gt-task2-essay-008",
+      "theme_id": "community",
+      "prompt_en": "Many towns are considering restricting commercial advertising in parks, transport stations and other public spaces. Why do some people support these restrictions? Should local governments introduce them even if advertising provides revenue for public services?",
+      "prompt_bn": "অনেক শহরে পার্ক, পরিবহনকেন্দ্র ও অন্যান্য জনসমাগমস্থলে বাণিজ্যিক বিজ্ঞাপন সীমিত করার কথা ভাবা হচ্ছে। মানুষ কেন এমন সীমাবদ্ধতাকে সমর্থন করে? বিজ্ঞাপন থেকে সরকারি সেবার জন্য আয় হলেও স্থানীয় কর্তৃপক্ষের কি এই সীমাবদ্ধতা চালু করা উচিত?",
+      "reasoning_demand": "TWO_PART_POLICY_SOCIAL",
+      "skill_targets": [
+        "essay_thesis_focus",
+        "essay_outline_structure",
+        "writing_argument_development"
+      ],
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "test_type": "GENERAL_TRAINING",
+      "task_type": "GT_TASK_2_ARGUMENT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE"
+    }
+  ],
+  "self_review_frameworks": {
+    "GT_TASK_1_LETTER": [
+      "Is the purpose of my letter clear from the start?",
+      "Did I cover all three required content points?",
+      "Did I choose a register that is appropriate for the reader?",
+      "Did I organise the letter logically from opening to closing?",
+      "Is the language polite and natural for the context?",
+      "Did I check spelling, grammar, vocabulary and tone consistency?"
+    ],
+    "GT_TASK_2_ARGUMENT": [
+      "Did I answer the exact question and address all parts of the prompt?",
+      "Is my position or thesis clear where the task requires one?",
+      "Did I develop my main ideas with relevant reasons or explanations?",
+      "Did I support important ideas with suitable examples where useful?",
+      "Did I organise the essay with a clear and logical paragraph flow?",
+      "Did I review grammar, vocabulary, repetition and clarity?"
+    ]
+  },
+  "register_guidance": {
+    "FORMAL": {
+      "guidance": [
+        "Use respectful, professional language.",
+        "Contractions are often best avoided when a more formal tone is required.",
+        "Use clear full forms where they help maintain a professional tone."
+      ],
+      "note": "Ovidhan practice guidance: choose language that fits the reader, purpose and level of formality. This is not presented as an official IELTS scoring rule."
+    },
+    "SEMI_FORMAL": {
+      "guidance": [
+        "Use a polite but slightly more relaxed tone.",
+        "Match the tone to how well you know the reader and the purpose of the letter.",
+        "Natural contractions may be appropriate when they fit the relationship."
+      ]
+    },
+    "INFORMAL_PERSONAL": {
+      "guidance": [
+        "Use a friendly, direct and natural tone.",
+        "Contractions and conversational expressions may be appropriate.",
+        "Keep the purpose and required points clear even when the tone is relaxed."
+      ]
+    }
+  },
+  "ux_copy_bn": {
+    "hero": "IELTS General Training Writing Practice – লিখে প্রস্তুতি নিন, self-review করুন এবং আবার চেষ্টা করুন।",
+    "privacy_notice": "আপনার লেখা এই practice চলাকালে শুধু এই page session-এর browser memory-তে থাকে। Ovidhan এটি AI, server বা third party-তে পাঠায় না। Page refresh বা close করলে লেখা হারিয়ে যেতে পারে।",
+    "writing_instructions": "নিচের বাক্সে আপনার উত্তর টাইপ করুন। নির্দেশনা ভালোভাবে পড়ুন এবং প্রতিটি অংশের উত্তর দিন।",
+    "word_count": "শব্দ সংখ্যা: [x]",
+    "timer_note": "এই টাইমারটি Ovidhan-এর practice aid। এটি কোনো official IELTS timing বা score নয়।",
+    "finish_attempt": "লেখা শেষ করুন",
+    "review": "আপনার লেখাটি আবার পড়ুন এবং নিচের checklist ব্যবহার করে self-review করুন।",
+    "revise": "চাইলে একই উত্তর আবার সম্পাদনা করে আরেকটি attempt করতে পারেন।",
+    "next_task": "পরবর্তী টাস্ক",
+    "evidence": "আপনার raw লেখা সংরক্ষণ করা হবে না। Practice সম্পন্ন হলে শুধু সীমিত attempt metadata learner state-এ রাখা হতে পারে। এটি কোনো score, band বা quality judgement নয়।",
+    "dakho_cta": "আরও English practice-এর জন্য Dakho – Learn English app ব্যবহার করুন।"
+  },
+  "privacy_evidence_contract": {
+    "raw_text_persistence": "DO_NOT_PERSIST",
+    "server_upload": false,
+    "ai_processing": false,
+    "third_party_transfer": false,
+    "allowed_future_attempt_metadata": [
+      "evidence_id",
+      "skill_id",
+      "task_type",
+      "source_id",
+      "attempt_count",
+      "timestamp",
+      "coarse_duration_bucket"
+    ],
+    "exact_word_count_persisted": false,
+    "score_or_band": false
+  },
+  "deferred_to_6M": [
+    "ACADEMIC_TASK_1_PRODUCTIVE_WRITING",
+    "ACADEMIC_TASK_2_PRODUCTIVE_WRITING"
+  ]
+}

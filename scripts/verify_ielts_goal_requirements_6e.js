@@ -99,14 +99,14 @@ assert.equal(gtLetter.mapping_class, 'SUPPORTING_LANGUAGE_FOUNDATION');
 assert.equal(gtLetter.coverage_status, 'PARTIALLY_COVERED');
 
 const ieltsGoals = goals.mappings.filter(mapping => mapping.goal_id === 'IELTS');
-assert.equal(ieltsGoals.length, 17, 'IELTS coarse mapping count');
+assert.equal(ieltsGoals.length, 18, 'IELTS coarse mapping count');
 assert.ok(ieltsGoals.every(mapping => mapping.evidence_class === 'CURATED_REPOSITORY_MAPPING'));
 assert.equal(ieltsGoals.find(mapping => mapping.skill_id === 'word_choice_register').importance, 'SUPPORTING');
 assert.equal(ieltsGoals.find(mapping => mapping.skill_id === 'formal_letter_writing').importance, 'OPTIONAL');
 assert.ok(!ieltsGoals.some(mapping => mapping.skill_id === 'writing_precis'), 'writing_precis coarse IELTS leakage');
 
 const ieltsDestinationSkills = destinations.destinations.filter(destination => destination.goal_ids.includes('IELTS')).map(destination => destination.skill_id);
-assert.deepEqual(ieltsDestinationSkills, ['formal_letter_writing', 'writing_coherence_cohesion', 'writing_visual_information_description','writing_argument_development','reading_main_idea','reading_supporting_detail','reading_inference','reading_tone_purpose','reading_reference','listening_main_point','listening_specific_detail','listening_conversation_tracking','listening_fact_connection','listening_information_relationship','speaking_extended_turn','speaking_discussion_response']);
+assert.deepEqual(ieltsDestinationSkills, ['formal_letter_writing', 'writing_coherence_cohesion', 'writing_visual_information_description','writing_argument_development','reading_main_idea','reading_supporting_detail','reading_inference','reading_tone_purpose','reading_reference','listening_main_point','listening_specific_detail','listening_conversation_tracking','listening_fact_connection','listening_information_relationship','speaking_extended_turn','speaking_discussion_response','writing_letter_task_response']);
 assert.ok(!destinations.destinations.find(destination => destination.skill_id === 'writing_precis').goal_ids.includes('IELTS'), 'writing_precis IELTS eligibility');
 for (const relation of asset.mapped_relations) {
   const actual = ieltsDestinationSkills.includes(relation.skill_id);
@@ -122,8 +122,8 @@ assert.equal(diagnostic.items.filter(item => item.mapping_status !== 'MAPPED_OBJ
 assert.equal(new Set(diagnostic.items.filter(item => item.mapping_status === 'MAPPED_OBJECTIVE').map(item => item.primary_skill_id)).size, 12);
 assert.deepEqual(new Set(boundary.probes.map(probe => probe.primary_skill_id)), new Set(['compound_subject_agreement', 'indefinite_article_a_an', 'gerund_after_preposition', 'essay_thesis_focus']));
 assert.equal(graph.families.length, 16);
-assert.equal(activeSkills.size, 75);
-assert.equal(graph.item_mappings.length, 500);
+assert.equal(activeSkills.size, 76);
+assert.equal(graph.item_mappings.length, 520);
 
 assert.equal(frozen.aggregateSha256, '202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
 for (const item of [...frozen.pages, ...frozen.guards]) assert.equal(sha256(item.path), item.sha256, `frozen file changed ${item.path}`);

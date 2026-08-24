@@ -191,7 +191,8 @@
         "essay_outline_structure",
         "writing_coherence_cohesion",
         "writing_visual_information_description",
-        "writing_argument_development"
+        "writing_argument_development",
+        "writing_letter_task_response"
       ],
       "related_family_ids": [
         "SENTENCE_STRUCTURE",
@@ -2231,6 +2232,34 @@
       "example_item_ids": [
         "ielts-speaking-part3-001",
         "ielts-speaking-part3-002"
+      ]
+    },
+    {
+      "id": "writing_letter_task_response",
+      "name_en": "Writing letter task response",
+      "name_bn": "উদ্দেশ্যপূর্ণ চিঠির উত্তর লেখা",
+      "family_id": "WRITING",
+      "description": "Produce a purposeful written letter or message that addresses required content points for a defined reader, purpose and context.",
+      "prerequisites": [],
+      "related_skills": [
+        "formal_letter_writing",
+        "word_choice_register",
+        "writing_argument_development"
+      ],
+      "common_mistake_families": [
+        "incomplete-letter-purpose",
+        "missing-required-content"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS",
+        "GENERAL_ENGLISH"
+      ],
+      "status": "ACTIVE",
+      "version": 1,
+      "example_item_ids": [
+        "gt-task1-letter-001",
+        "gt-task1-letter-002"
       ]
     }
   ],
@@ -5270,6 +5299,178 @@
       "primary_skill_id": "speaking_discussion_response",
       "primary_family_id": "SPEAKING_PERFORMANCE",
       "secondary_skill_ids": []
+    },
+    {
+      "item_id": "gt-task1-letter-001",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "formal_letter_writing",
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-002",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-003",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-004",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "formal_letter_writing",
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-005",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "formal_letter_writing",
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-006",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "formal_letter_writing",
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-007",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-008",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-009",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-010",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-011",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task1-letter-012",
+      "primary_skill_id": "writing_letter_task_response",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "word_choice_register"
+      ]
+    },
+    {
+      "item_id": "gt-task2-essay-001",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ]
+    },
+    {
+      "item_id": "gt-task2-essay-002",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ]
+    },
+    {
+      "item_id": "gt-task2-essay-003",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ]
+    },
+    {
+      "item_id": "gt-task2-essay-004",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ]
+    },
+    {
+      "item_id": "gt-task2-essay-005",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ]
+    },
+    {
+      "item_id": "gt-task2-essay-006",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ]
+    },
+    {
+      "item_id": "gt-task2-essay-007",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ]
+    },
+    {
+      "item_id": "gt-task2-essay-008",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": [
+        "essay_thesis_focus",
+        "essay_outline_structure"
+      ]
     }
   ],
   "transfer_patterns": [

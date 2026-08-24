@@ -359,6 +359,13 @@
       "importance": "CORE",
       "evidence_class": "CURATED_REPOSITORY_MAPPING",
       "source_or_rationale": "Reviewed Ovidhan-created productive speaking practice supports a bounded attempt and self-review workflow without scoring fluency, grammar, pronunciation, vocabulary, or IELTS performance."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "writing_letter_task_response",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Reviewed Ovidhan-created General Training letter prompts support bounded productive attempts and self-review without assessing writing quality or predicting an IELTS score."
     }
   ]
 }
