@@ -2106,7 +2106,7 @@
       ],
       "example_item_ids": [
         "ielts-listening-003",
-        "ielts-listening-008"
+        "ielts-listening-005"
       ],
       "difficulty_band": "INTERMEDIATE",
       "exam_relevance": [
@@ -2161,8 +2161,8 @@
         "speaker-change-loss"
       ],
       "example_item_ids": [
-        "ielts-listening-005",
-        "ielts-listening-010"
+        "ielts-listening-010",
+        "ielts-listening-020"
       ],
       "difficulty_band": "INTERMEDIATE",
       "exam_relevance": [
@@ -4875,7 +4875,7 @@
     },
     {
       "item_id": "ielts-listening-005",
-      "primary_skill_id": "listening_information_relationship",
+      "primary_skill_id": "listening_conversation_tracking",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -4893,7 +4893,7 @@
     },
     {
       "item_id": "ielts-listening-008",
-      "primary_skill_id": "listening_conversation_tracking",
+      "primary_skill_id": "listening_specific_detail",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -4935,7 +4935,7 @@
     },
     {
       "item_id": "ielts-listening-015",
-      "primary_skill_id": "listening_information_relationship",
+      "primary_skill_id": "listening_conversation_tracking",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -4953,7 +4953,7 @@
     },
     {
       "item_id": "ielts-listening-018",
-      "primary_skill_id": "listening_conversation_tracking",
+      "primary_skill_id": "listening_specific_detail",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -4983,7 +4983,7 @@
     },
     {
       "item_id": "ielts-listening-023",
-      "primary_skill_id": "listening_conversation_tracking",
+      "primary_skill_id": "listening_specific_detail",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -4995,7 +4995,7 @@
     },
     {
       "item_id": "ielts-listening-025",
-      "primary_skill_id": "listening_information_relationship",
+      "primary_skill_id": "listening_conversation_tracking",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -5013,7 +5013,7 @@
     },
     {
       "item_id": "ielts-listening-028",
-      "primary_skill_id": "listening_conversation_tracking",
+      "primary_skill_id": "listening_specific_detail",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -5037,13 +5037,13 @@
     },
     {
       "item_id": "ielts-listening-032",
-      "primary_skill_id": "listening_specific_detail",
+      "primary_skill_id": "listening_conversation_tracking",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
     {
       "item_id": "ielts-listening-033",
-      "primary_skill_id": "listening_conversation_tracking",
+      "primary_skill_id": "listening_specific_detail",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -5055,7 +5055,7 @@
     },
     {
       "item_id": "ielts-listening-035",
-      "primary_skill_id": "listening_information_relationship",
+      "primary_skill_id": "listening_fact_connection",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },
@@ -5073,7 +5073,7 @@
     },
     {
       "item_id": "ielts-listening-038",
-      "primary_skill_id": "listening_conversation_tracking",
+      "primary_skill_id": "listening_specific_detail",
       "primary_family_id": "LISTENING_COMPREHENSION",
       "secondary_skill_ids": []
     },

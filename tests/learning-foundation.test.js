@@ -395,6 +395,16 @@ test('canonical skill evidence is bounded, validated, and deduplicated by eviden
     assert.equal(foundation.recordSkillEvidence('bad text','skill','DIAGNOSTIC_OBJECTIVE','incorrect','source'),false);
 });
 
+test('objective audio comprehension persists as canonical skill evidence', () => {
+    const { foundation, localStorage } = createHarness();
+    const evidenceId='ielts-listening-v1:ielts-listening-001';
+    assert.equal(foundation.recordSkillEvidence(evidenceId,'listening_main_point','OBJECTIVE_AUDIO_COMPREHENSION','correct','ielts-listening-001'),true);
+    const evidence=foundation.getState().skillEvidence[evidenceId];
+    assert.deepEqual({evidence_id:evidence.evidence_id,skill_id:evidence.skill_id,evidence_type:evidence.evidence_type,result:evidence.result,source_id:evidence.source_id},{evidence_id:evidenceId,skill_id:'listening_main_point',evidence_type:'OBJECTIVE_AUDIO_COMPREHENSION',result:'correct',source_id:'ielts-listening-001'});
+    const reloaded=createLearningFoundation({localStorage});
+    assert.equal(reloaded.getState().skillEvidence[evidenceId].evidence_type,'OBJECTIVE_AUDIO_COMPREHENSION');
+});
+
 test('version-4 state migrates without manufacturing diagnostic evidence', () => {
     const localStorage=createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY,JSON.stringify({version:4,anonymousLearnerId:'11111111-1111-4111-8111-111111111111',mistakeSignals:{}}));
