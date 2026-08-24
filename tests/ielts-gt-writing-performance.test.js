@@ -12,7 +12,9 @@ let evidence=session.finish();
 assert.deepEqual(evidence,{evidenceId:'ielts-gt-writing-v1:gt-task1-letter-001',skillId:'writing_letter_task_response',evidenceType:'WRITING_PERFORMANCE_ATTEMPT',taskType:'GT_TASK_1_LETTER',sourceId:'gt-task1-letter-001',durationBucket:'60_TO_119_SECONDS'});
 assert.equal(session.getState().stage,'review');
 assert.equal(pack.self_review_frameworks.GT_TASK_1_LETTER.length,6);
-session.revise();assert.equal(session.getState().text,'one two three','revise preserves the same response');
+session.revise();assert.equal(session.getState().text,'one two three','revise preserves the same response');assert.equal(session.getState().stage,'writing');assert.equal(session.getState().startedAt,null);assert.equal(session.getState().finishedDuration,0);
+assert.equal(session.finish(),null,'revision without a meaningful edit cannot create evidence');
+now=1000000;session.setText('one two three revised');now+=35000;const revisionEvidence=session.finish();assert.equal(revisionEvidence.durationBucket,'30_TO_59_SECONDS','revision timing excludes the original attempt and review wait');
 session.next();assert.equal(session.getState().text,'','next clears raw text');assert.equal(session.getState().index,1);
 session.setText('private draft');session.changeMode('essay');assert.equal(session.getState().text,'','mode change clears raw text');assert.equal(session.getState().mode,'essay');
 assert.equal(pack.self_review_frameworks.GT_TASK_2_ARGUMENT.length,6);
@@ -27,6 +29,7 @@ assert.equal(learning.createLearningFoundation({localStorage:storage}).getState(
 const fresh=runtime.createWritingSession(pack,()=>now);assert.equal(fresh.getState().text,'','a refreshed session starts without draft text');
 
 const page=fs.readFileSync(path.join(root,'ielts-writing-practice-bangla.html'),'utf8'),source=fs.readFileSync(path.join(root,'ielts-writing-practice.js'),'utf8');
+assert.match(source,/state\.stage==='review'\?' readonly':''/,'review rendering makes the textarea read-only');
 assert.match(page,/https:\/\/ovidhan\.net\/ielts-writing-practice-bangla\.html/);assert.match(page,/href="\/ielts-guide\.html"/);
 assert.ok(page.indexOf('/learning-foundation.js')<page.indexOf('/ielts-writing-practice.js'));
 assert.match(page,/class="announce-bar"/);assert.match(page,/class="site-header"/);assert.match(page,/class="footer-grid"/);
