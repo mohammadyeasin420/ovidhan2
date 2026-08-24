@@ -310,6 +310,41 @@
       "importance": "CORE",
       "evidence_class": "CURATED_REPOSITORY_MAPPING",
       "source_or_rationale": "The reviewed BCS Written English practice pack directly exercises this canonical skill."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "listening_main_point",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Reviewed Ovidhan-created synthetic-audio objective practice directly supports this bounded listening-comprehension skill without establishing full IELTS performance."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "listening_specific_detail",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Reviewed Ovidhan-created synthetic-audio objective practice directly supports this bounded listening-comprehension skill without establishing full IELTS performance."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "listening_conversation_tracking",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Reviewed Ovidhan-created synthetic-audio objective practice directly supports this bounded listening-comprehension skill without establishing full IELTS performance."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "listening_fact_connection",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Reviewed Ovidhan-created synthetic-audio objective practice directly supports this bounded listening-comprehension skill without establishing full IELTS performance."
+    },
+    {
+      "goal_id": "IELTS",
+      "skill_id": "listening_information_relationship",
+      "importance": "CORE",
+      "evidence_class": "CURATED_REPOSITORY_MAPPING",
+      "source_or_rationale": "Reviewed Ovidhan-created synthetic-audio objective practice directly supports this bounded listening-comprehension skill without establishing full IELTS performance."
     }
   ]
 }

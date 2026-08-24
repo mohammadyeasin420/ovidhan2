@@ -240,6 +240,22 @@
         "WRITING",
         "VOCABULARY_REGISTER"
       ]
+    },
+    {
+      "family_id": "LISTENING_COMPREHENSION",
+      "name_en": "Listening comprehension",
+      "name_bn": "শ্রবণ অনুধাবন",
+      "description": "Objective comprehension of main points, details, sequence and relationships delivered through audio.",
+      "child_skill_ids": [
+        "listening_main_point",
+        "listening_specific_detail",
+        "listening_conversation_tracking",
+        "listening_fact_connection",
+        "listening_information_relationship"
+      ],
+      "related_family_ids": [
+        "READING_COMPREHENSION"
+      ]
     }
   ],
   "skills": [
@@ -2014,6 +2030,146 @@
       ],
       "status": "ACTIVE",
       "version": 1
+    },
+    {
+      "id": "listening_main_point",
+      "name_en": "Listening main point",
+      "name_bn": "শুনে মূল বিষয় শনাক্তকরণ",
+      "family_id": "LISTENING_COMPREHENSION",
+      "description": "Identify the main point or communicative purpose from audio.",
+      "prerequisites": [],
+      "related_skills": [
+        "listening_specific_detail",
+        "listening_conversation_tracking",
+        "listening_fact_connection",
+        "listening_information_relationship"
+      ],
+      "common_mistake_families": [
+        "audio-detail-loss",
+        "speaker-change-loss"
+      ],
+      "example_item_ids": [
+        "ielts-listening-001",
+        "ielts-listening-006"
+      ],
+      "difficulty_band": "FOUNDATION",
+      "exam_relevance": [
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "listening_specific_detail",
+      "name_en": "Listening specific detail",
+      "name_bn": "শুনে নির্দিষ্ট তথ্য শনাক্তকরণ",
+      "family_id": "LISTENING_COMPREHENSION",
+      "description": "Locate a specific detail delivered through audio.",
+      "prerequisites": [],
+      "related_skills": [
+        "listening_main_point",
+        "listening_conversation_tracking",
+        "listening_fact_connection",
+        "listening_information_relationship"
+      ],
+      "common_mistake_families": [
+        "audio-detail-loss",
+        "speaker-change-loss"
+      ],
+      "example_item_ids": [
+        "ielts-listening-002",
+        "ielts-listening-007"
+      ],
+      "difficulty_band": "FOUNDATION",
+      "exam_relevance": [
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "listening_conversation_tracking",
+      "name_en": "Conversation tracking",
+      "name_bn": "কথোপকথনের ধারা অনুসরণ",
+      "family_id": "LISTENING_COMPREHENSION",
+      "description": "Follow speakers, changes and event sequence in audio.",
+      "prerequisites": [],
+      "related_skills": [
+        "listening_main_point",
+        "listening_specific_detail",
+        "listening_fact_connection",
+        "listening_information_relationship"
+      ],
+      "common_mistake_families": [
+        "audio-detail-loss",
+        "speaker-change-loss"
+      ],
+      "example_item_ids": [
+        "ielts-listening-003",
+        "ielts-listening-008"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "listening_fact_connection",
+      "name_en": "Listening fact connection",
+      "name_bn": "শোনা তথ্যের কারণ-সংযোগ",
+      "family_id": "LISTENING_COMPREHENSION",
+      "description": "Recognise how facts and reasons are connected in audio.",
+      "prerequisites": [],
+      "related_skills": [
+        "listening_main_point",
+        "listening_specific_detail",
+        "listening_conversation_tracking",
+        "listening_information_relationship"
+      ],
+      "common_mistake_families": [
+        "audio-detail-loss",
+        "speaker-change-loss"
+      ],
+      "example_item_ids": [
+        "ielts-listening-004",
+        "ielts-listening-009"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
+    },
+    {
+      "id": "listening_information_relationship",
+      "name_en": "Listening information relationships",
+      "name_bn": "শোনা তথ্যের পারস্পরিক সম্পর্ক",
+      "family_id": "LISTENING_COMPREHENSION",
+      "description": "Identify relationships among ideas, facts and events in audio.",
+      "prerequisites": [],
+      "related_skills": [
+        "listening_main_point",
+        "listening_specific_detail",
+        "listening_conversation_tracking",
+        "listening_fact_connection"
+      ],
+      "common_mistake_families": [
+        "audio-detail-loss",
+        "speaker-change-loss"
+      ],
+      "example_item_ids": [
+        "ielts-listening-005",
+        "ielts-listening-010"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1
     }
   ],
   "item_mappings": [
@@ -3133,246 +3289,246 @@
       "primary_family_id": "LITERATURE",
       "secondary_skill_ids": []
     },
-      {
-        "item_id": "bcs-lit-candidate-005",
-        "primary_skill_id": "literary_period_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-009",
-        "primary_skill_id": "literary_period_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-012",
-        "primary_skill_id": "literary_period_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-017",
-        "primary_skill_id": "literary_period_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-020",
-        "primary_skill_id": "literary_period_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-022",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-024",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-026",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-035",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-039",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-044",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-047",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-058",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-076",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-080",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-081",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-083",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-087",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-089",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-090",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-094",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-095",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-096",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-097",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-099",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-100",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-101",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-106",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-107",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-108",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-109",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-110",
-        "primary_skill_id": "genre_form_identification",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-111",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-112",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-113",
-        "primary_skill_id": "quotation_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-114",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-115",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-116",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-117",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
-      {
-        "item_id": "bcs-lit-candidate-118",
-        "primary_skill_id": "author_work_attribution",
-        "primary_family_id": "LITERATURE",
-        "secondary_skill_ids": []
-      },
+    {
+      "item_id": "bcs-lit-candidate-005",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-009",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-012",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-017",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-020",
+      "primary_skill_id": "literary_period_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-022",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-024",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-026",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-035",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-039",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-044",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-047",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-058",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-076",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-080",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-081",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-083",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-087",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-089",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-090",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-094",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-095",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-096",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-097",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-099",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-100",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-101",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-106",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-107",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-108",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-109",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-110",
+      "primary_skill_id": "genre_form_identification",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-111",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-112",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-113",
+      "primary_skill_id": "quotation_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-114",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-115",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-116",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-117",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "bcs-lit-candidate-118",
+      "primary_skill_id": "author_work_attribution",
+      "primary_family_id": "LITERATURE",
+      "secondary_skill_ids": []
+    },
     {
       "item_id": "bcs-written-comp-001",
       "primary_skill_id": "reading_main_idea",
@@ -3733,166 +3889,1206 @@
       "primary_family_id": "WRITING",
       "secondary_skill_ids": []
     },
-    {"item_id":"ielts-coherence-001","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-002","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-003","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-004","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-005","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-006","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-007","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-008","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-009","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-010","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-011","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-012","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-013","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-014","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-015","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-016","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-017","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-018","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-019","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-020","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-021","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-022","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-023","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-024","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-025","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-026","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-027","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-028","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-029","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-030","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-031","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-032","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-033","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-034","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-035","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-036","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-037","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-038","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-039","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-coherence-040","primary_skill_id":"writing_coherence_cohesion","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-001","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-002","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-003","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-004","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-005","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-006","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-007","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-008","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-009","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-010","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-011","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-012","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-013","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-014","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-015","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-016","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-017","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-018","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-019","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-020","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-021","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-022","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-023","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-024","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-025","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-026","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-027","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-028","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-029","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-030","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-031","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-032","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-033","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-034","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-035","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-036","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-037","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-038","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-039","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task1-visual-040","primary_skill_id":"writing_visual_information_description","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-001","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-002","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-003","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-004","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-005","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-006","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-007","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-008","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-009","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-010","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-011","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-012","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-013","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-014","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-015","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-016","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-017","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-018","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-019","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-020","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-021","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-022","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-023","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-024","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-025","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-026","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-027","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-028","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-029","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-030","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-031","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-032","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-033","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-034","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-035","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-036","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-037","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-038","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-039","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-task2-argument-040","primary_skill_id":"writing_argument_development","primary_family_id":"WRITING","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-001","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-002","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-003","primary_skill_id":"reading_inference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-004","primary_skill_id":"reading_tone_purpose","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-005","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-006","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-007","primary_skill_id":"reading_inference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-008","primary_skill_id":"reading_reference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-009","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-010","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-011","primary_skill_id":"reading_inference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-012","primary_skill_id":"reading_tone_purpose","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-013","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-014","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-015","primary_skill_id":"reading_inference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-016","primary_skill_id":"reading_reference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-017","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-018","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-019","primary_skill_id":"reading_inference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-020","primary_skill_id":"reading_tone_purpose","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-021","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-022","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-023","primary_skill_id":"reading_tone_purpose","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-024","primary_skill_id":"reading_reference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-025","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-026","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-027","primary_skill_id":"reading_tone_purpose","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-028","primary_skill_id":"reading_reference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-029","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-030","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-031","primary_skill_id":"reading_inference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-032","primary_skill_id":"reading_reference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-033","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-034","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-035","primary_skill_id":"reading_inference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-036","primary_skill_id":"reading_reference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-037","primary_skill_id":"reading_main_idea","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-038","primary_skill_id":"reading_supporting_detail","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-039","primary_skill_id":"reading_inference","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]},
-    {"item_id":"ielts-reading-040","primary_skill_id":"reading_tone_purpose","primary_family_id":"READING_COMPREHENSION","secondary_skill_ids":[]}
+    {
+      "item_id": "ielts-coherence-001",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-002",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-003",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-004",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-005",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-006",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-007",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-008",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-009",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-010",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-011",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-012",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-013",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-014",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-015",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-016",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-017",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-018",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-019",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-020",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-021",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-022",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-023",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-024",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-025",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-026",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-027",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-028",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-029",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-030",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-031",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-032",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-033",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-034",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-035",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-036",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-037",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-038",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-039",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-coherence-040",
+      "primary_skill_id": "writing_coherence_cohesion",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-001",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-002",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-003",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-004",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-005",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-006",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-007",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-008",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-009",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-010",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-011",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-012",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-013",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-014",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-015",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-016",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-017",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-018",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-019",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-020",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-021",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-022",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-023",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-024",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-025",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-026",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-027",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-028",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-029",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-030",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-031",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-032",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-033",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-034",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-035",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-036",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-037",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-038",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-039",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task1-visual-040",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-001",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-002",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-003",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-004",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-005",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-006",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-007",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-008",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-009",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-010",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-011",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-012",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-013",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-014",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-015",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-016",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-017",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-018",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-019",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-020",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-021",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-022",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-023",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-024",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-025",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-026",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-027",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-028",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-029",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-030",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-031",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-032",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-033",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-034",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-035",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-036",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-037",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-038",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-039",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-task2-argument-040",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-001",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-002",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-003",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-004",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-005",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-006",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-007",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-008",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-009",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-010",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-011",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-012",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-013",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-014",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-015",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-016",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-017",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-018",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-019",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-020",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-021",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-022",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-023",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-024",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-025",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-026",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-027",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-028",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-029",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-030",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-031",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-032",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-033",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-034",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-035",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-036",
+      "primary_skill_id": "reading_reference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-037",
+      "primary_skill_id": "reading_main_idea",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-038",
+      "primary_skill_id": "reading_supporting_detail",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-039",
+      "primary_skill_id": "reading_inference",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-reading-040",
+      "primary_skill_id": "reading_tone_purpose",
+      "primary_family_id": "READING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-001",
+      "primary_skill_id": "listening_main_point",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-002",
+      "primary_skill_id": "listening_specific_detail",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-003",
+      "primary_skill_id": "listening_conversation_tracking",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-004",
+      "primary_skill_id": "listening_fact_connection",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-005",
+      "primary_skill_id": "listening_information_relationship",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-006",
+      "primary_skill_id": "listening_main_point",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-007",
+      "primary_skill_id": "listening_specific_detail",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-008",
+      "primary_skill_id": "listening_conversation_tracking",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-009",
+      "primary_skill_id": "listening_fact_connection",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-010",
+      "primary_skill_id": "listening_information_relationship",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-011",
+      "primary_skill_id": "listening_main_point",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-012",
+      "primary_skill_id": "listening_specific_detail",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-013",
+      "primary_skill_id": "listening_conversation_tracking",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-014",
+      "primary_skill_id": "listening_fact_connection",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-015",
+      "primary_skill_id": "listening_information_relationship",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-016",
+      "primary_skill_id": "listening_main_point",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-017",
+      "primary_skill_id": "listening_specific_detail",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-018",
+      "primary_skill_id": "listening_conversation_tracking",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-019",
+      "primary_skill_id": "listening_fact_connection",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-020",
+      "primary_skill_id": "listening_information_relationship",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-021",
+      "primary_skill_id": "listening_main_point",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-022",
+      "primary_skill_id": "listening_specific_detail",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-023",
+      "primary_skill_id": "listening_conversation_tracking",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-024",
+      "primary_skill_id": "listening_fact_connection",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-025",
+      "primary_skill_id": "listening_information_relationship",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-026",
+      "primary_skill_id": "listening_main_point",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-027",
+      "primary_skill_id": "listening_specific_detail",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-028",
+      "primary_skill_id": "listening_conversation_tracking",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-029",
+      "primary_skill_id": "listening_fact_connection",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-030",
+      "primary_skill_id": "listening_information_relationship",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-031",
+      "primary_skill_id": "listening_main_point",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-032",
+      "primary_skill_id": "listening_specific_detail",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-033",
+      "primary_skill_id": "listening_conversation_tracking",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-034",
+      "primary_skill_id": "listening_fact_connection",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-035",
+      "primary_skill_id": "listening_information_relationship",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-036",
+      "primary_skill_id": "listening_main_point",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-037",
+      "primary_skill_id": "listening_specific_detail",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-038",
+      "primary_skill_id": "listening_conversation_tracking",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-039",
+      "primary_skill_id": "listening_fact_connection",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-listening-040",
+      "primary_skill_id": "listening_information_relationship",
+      "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    }
   ],
   "transfer_patterns": [
     {
