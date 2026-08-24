@@ -1,0 +1,410 @@
+{
+  "schema_version": 1,
+  "pack_id": "ielts-listening-review-v1",
+  "payload_role": "POST_ATTEMPT_REVIEW_ONLY",
+  "review_status": "REVIEWED",
+  "recordings": [
+    {
+      "recording_id": "ielts-listening-recording-001",
+      "transcript_en": "Staff: Good morning. How can I help? Learner: I would like to join the library. I thought it closed at six, so I came early. Staff: On weekdays we now close at eight, but on Fridays we close at six. You will need one photo and proof of address. Learner: I have my passport photo, but my electricity bill is at home. Staff: A digital bill on your phone is fine. Membership is free for students. Other adults pay twelve pounds a year. Learner: Great. I am studying at North College, so I will show my student card too. Staff: Perfect. Then you can borrow up to six books for three weeks.",
+      "transcript_release": "POST_ATTEMPT_ONLY"
+    },
+    {
+      "recording_id": "ielts-listening-recording-002",
+      "transcript_en": "Teacher: Here is an update about Saturday’s geography field trip. The coach will leave the school gate at seven fifteen, not seven thirty as printed on the first notice. Please arrive by seven. We planned to eat beside the lake, but recent rain has made that ground too wet. Lunch will now be in the visitor centre. Bring a waterproof jacket and a notebook. The school will provide maps, so you do not need to print one. We expect to return at five forty-five, although heavy traffic could delay us by fifteen minutes.",
+      "transcript_release": "POST_ATTEMPT_ONLY"
+    },
+    {
+      "recording_id": "ielts-listening-recording-003",
+      "transcript_en": "Manager: Mina, can we discuss next week’s rota? You asked to avoid Tuesday evening because of your class. Mina: Yes, but the class has moved to Wednesday this week. I can work Tuesday after all. Manager: That helps. Could you do Tuesday from four until nine, then? Mina: Certainly. I cannot start Thursday at four, though, because my exam ends at four thirty. Manager: Start at five thirty on Thursday. Sam can cover the first hour and a half. Mina: Thanks. Shall I still open the café on Saturday? Manager: No, Priya will open. Please take the midday shift from twelve until five.",
+      "transcript_release": "POST_ATTEMPT_ONLY"
+    },
+    {
+      "recording_id": "ielts-listening-recording-004",
+      "transcript_en": "Welcome to the Riverside Museum. The ground-floor photography gallery is temporarily closed while new lights are installed. Begin your visit in the local history room on the first floor. At eleven thirty, a curator will give a free talk there about the city’s bridges. The talk was originally advertised for Gallery Two, but it has moved because that room holds a school workshop today. Large bags must be left in the lockers near reception. The lockers take a one-pound coin, which is returned when you collect your bag. The museum café closes at four, one hour before the galleries.",
+      "transcript_release": "POST_ATTEMPT_ONLY"
+    },
+    {
+      "recording_id": "ielts-listening-recording-005",
+      "transcript_en": "Adviser: Language Centre, how may I help? Caller: I registered for Intermediate French, but my confirmation says Monday morning. I work then. Adviser: Let me check. The Tuesday evening class is full, but there are two places on Thursday evening. Caller: Thursday is possible. Does it still begin at half past six? Adviser: It now begins at six fifteen and finishes at eight fifteen. The course starts on the twelfth of September. Caller: Fine. I already paid the full fee online. Adviser: I can transfer the payment. I will email a new confirmation today. Please reply before noon tomorrow, or the place will be released.",
+      "transcript_release": "POST_ATTEMPT_ONLY"
+    },
+    {
+      "recording_id": "ielts-listening-recording-006",
+      "transcript_en": "This term the university is changing its recycling system. Blue bins will remain for paper and card, while new green bins are for clean glass and metal. Food packaging with grease must go into general waste because it contaminates recyclable material. Last year the university increased the number of bins, but recycling rates did not improve. A survey showed that unclear labels were the main problem. Therefore, every bin will now carry a large picture label, and student volunteers will answer questions during the first two weeks. The target is to reduce general waste by ten percent by December.",
+      "transcript_release": "POST_ATTEMPT_ONLY"
+    },
+    {
+      "recording_id": "ielts-listening-recording-007",
+      "transcript_en": "Agent: I can show you the Park Road flat tomorrow at ten. Tenant: I have a dental appointment then. Could we meet after lunch? Agent: I am booked at one, but two thirty is free. Tenant: That works. The advert says the flat is furnished. Does that include a desk? Agent: There is a dining table but no desk. The landlord will add one if you sign a twelve-month contract. For a six-month contract, the rent is twenty pounds more each week and no desk is included. Tenant: I expect to stay for a year. Is bicycle storage available? Agent: Yes, behind the building. Bring photo identification to the viewing if you want to apply immediately.",
+      "transcript_release": "POST_ATTEMPT_ONLY"
+    },
+    {
+      "recording_id": "ielts-listening-recording-008",
+      "transcript_en": "For your urban-noise project, work in groups of three. Each group will compare two locations: one busy road and one quiet residential street. Record sound levels for ten minutes at each place, once in the morning and once in the evening. Do not stand closer than five metres to a junction, because accelerating vehicles can distort the comparison. Upload your measurements by Friday the eighteenth. Your first chart is due then, but the written discussion is not due until the following Monday. If rain is heavy, postpone the recording; water can damage the meters and change traffic noise.",
+      "transcript_release": "POST_ATTEMPT_ONLY"
+    }
+  ],
+  "items": [
+    {
+      "id": "ielts-listening-001",
+      "recording_id": "ielts-listening-recording-001",
+      "correct_option": "A",
+      "correct_answer": "To join a library",
+      "explanation_en": "The recording supports “To join a library”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “To join a library” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-002",
+      "recording_id": "ielts-listening-recording-001",
+      "correct_option": "B",
+      "correct_answer": "Six o’clock",
+      "explanation_en": "The recording supports “Six o’clock”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Six o’clock” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-003",
+      "recording_id": "ielts-listening-recording-001",
+      "correct_option": "C",
+      "correct_answer": "A digital bill",
+      "explanation_en": "The recording supports “A digital bill”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “A digital bill” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-004",
+      "recording_id": "ielts-listening-recording-001",
+      "correct_option": "D",
+      "correct_answer": "To receive free membership",
+      "explanation_en": "The recording supports “To receive free membership”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “To receive free membership” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-005",
+      "recording_id": "ielts-listening-recording-001",
+      "correct_option": "A",
+      "correct_answer": "Show documents, confirm student status, borrow books",
+      "explanation_en": "The recording supports “Show documents, confirm student status, borrow books”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Show documents, confirm student status, borrow books” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-006",
+      "recording_id": "ielts-listening-recording-002",
+      "correct_option": "B",
+      "correct_answer": "Changes and instructions for a field trip",
+      "explanation_en": "The recording supports “Changes and instructions for a field trip”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Changes and instructions for a field trip” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-007",
+      "recording_id": "ielts-listening-recording-002",
+      "correct_option": "C",
+      "correct_answer": "7:15",
+      "explanation_en": "The recording supports “7:15”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “7:15” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-008",
+      "recording_id": "ielts-listening-recording-002",
+      "correct_option": "D",
+      "correct_answer": "In the visitor centre",
+      "explanation_en": "The recording supports “In the visitor centre”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “In the visitor centre” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-009",
+      "recording_id": "ielts-listening-recording-002",
+      "correct_option": "A",
+      "correct_answer": "The ground is too wet",
+      "explanation_en": "The recording supports “The ground is too wet”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “The ground is too wet” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-010",
+      "recording_id": "ielts-listening-recording-002",
+      "correct_option": "B",
+      "correct_answer": "Arriving by seven allows time before the 7:15 departure",
+      "explanation_en": "The recording supports “Arriving by seven allows time before the 7:15 departure”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Arriving by seven allows time before the 7:15 departure” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-011",
+      "recording_id": "ielts-listening-recording-003",
+      "correct_option": "C",
+      "correct_answer": "A café work schedule",
+      "explanation_en": "The recording supports “A café work schedule”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “A café work schedule” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-012",
+      "recording_id": "ielts-listening-recording-003",
+      "correct_option": "D",
+      "correct_answer": "5:30",
+      "explanation_en": "The recording supports “5:30”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “5:30” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-013",
+      "recording_id": "ielts-listening-recording-003",
+      "correct_option": "A",
+      "correct_answer": "Sam",
+      "explanation_en": "The recording supports “Sam”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Sam” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-014",
+      "recording_id": "ielts-listening-recording-003",
+      "correct_option": "B",
+      "correct_answer": "Her class moved to Wednesday",
+      "explanation_en": "The recording supports “Her class moved to Wednesday”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Her class moved to Wednesday” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-015",
+      "recording_id": "ielts-listening-recording-003",
+      "correct_option": "C",
+      "correct_answer": "Mina works from midday",
+      "explanation_en": "The recording supports “Mina works from midday”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Mina works from midday” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-016",
+      "recording_id": "ielts-listening-recording-004",
+      "correct_option": "D",
+      "correct_answer": "Directions and current visitor information",
+      "explanation_en": "The recording supports “Directions and current visitor information”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Directions and current visitor information” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-017",
+      "recording_id": "ielts-listening-recording-004",
+      "correct_option": "A",
+      "correct_answer": "A curator’s talk",
+      "explanation_en": "The recording supports “A curator’s talk”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “A curator’s talk” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-018",
+      "recording_id": "ielts-listening-recording-004",
+      "correct_option": "B",
+      "correct_answer": "In lockers near reception",
+      "explanation_en": "The recording supports “In lockers near reception”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “In lockers near reception” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-019",
+      "recording_id": "ielts-listening-recording-004",
+      "correct_option": "C",
+      "correct_answer": "A school workshop uses Gallery Two",
+      "explanation_en": "The recording supports “A school workshop uses Gallery Two”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “A school workshop uses Gallery Two” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-020",
+      "recording_id": "ielts-listening-recording-004",
+      "correct_option": "D",
+      "correct_answer": "It operates a refundable locker",
+      "explanation_en": "The recording supports “It operates a refundable locker”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “It operates a refundable locker” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-021",
+      "recording_id": "ielts-listening-recording-005",
+      "correct_option": "A",
+      "correct_answer": "The class time",
+      "explanation_en": "The recording supports “The class time”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “The class time” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-022",
+      "recording_id": "ielts-listening-recording-005",
+      "correct_option": "B",
+      "correct_answer": "6:15",
+      "explanation_en": "The recording supports “6:15”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “6:15” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-023",
+      "recording_id": "ielts-listening-recording-005",
+      "correct_option": "C",
+      "correct_answer": "Two",
+      "explanation_en": "The recording supports “Two”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Two” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-024",
+      "recording_id": "ielts-listening-recording-005",
+      "correct_option": "D",
+      "correct_answer": "To keep the available place",
+      "explanation_en": "The recording supports “To keep the available place”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “To keep the available place” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-025",
+      "recording_id": "ielts-listening-recording-005",
+      "correct_option": "A",
+      "correct_answer": "Send a new confirmation",
+      "explanation_en": "The recording supports “Send a new confirmation”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Send a new confirmation” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-026",
+      "recording_id": "ielts-listening-recording-006",
+      "correct_option": "B",
+      "correct_answer": "A change to campus recycling",
+      "explanation_en": "The recording supports “A change to campus recycling”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “A change to campus recycling” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-027",
+      "recording_id": "ielts-listening-recording-006",
+      "correct_option": "C",
+      "correct_answer": "Clean glass and metal",
+      "explanation_en": "The recording supports “Clean glass and metal”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Clean glass and metal” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-028",
+      "recording_id": "ielts-listening-recording-006",
+      "correct_option": "D",
+      "correct_answer": "Unclear bin labels",
+      "explanation_en": "The recording supports “Unclear bin labels”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Unclear bin labels” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-029",
+      "recording_id": "ielts-listening-recording-006",
+      "correct_option": "A",
+      "correct_answer": "More bins previously failed to improve recycling",
+      "explanation_en": "The recording supports “More bins previously failed to improve recycling”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “More bins previously failed to improve recycling” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-030",
+      "recording_id": "ielts-listening-recording-006",
+      "correct_option": "B",
+      "correct_answer": "Volunteers explain the new system early in the term",
+      "explanation_en": "The recording supports “Volunteers explain the new system early in the term”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Volunteers explain the new system early in the term” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-031",
+      "recording_id": "ielts-listening-recording-007",
+      "correct_option": "C",
+      "correct_answer": "A flat viewing",
+      "explanation_en": "The recording supports “A flat viewing”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “A flat viewing” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-032",
+      "recording_id": "ielts-listening-recording-007",
+      "correct_option": "D",
+      "correct_answer": "2:30",
+      "explanation_en": "The recording supports “2:30”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “2:30” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-033",
+      "recording_id": "ielts-listening-recording-007",
+      "correct_option": "A",
+      "correct_answer": "A desk",
+      "explanation_en": "The recording supports “A desk”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “A desk” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-034",
+      "recording_id": "ielts-listening-recording-007",
+      "correct_option": "B",
+      "correct_answer": "The tenant signs for twelve months",
+      "explanation_en": "The recording supports “The tenant signs for twelve months”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “The tenant signs for twelve months” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-035",
+      "recording_id": "ielts-listening-recording-007",
+      "correct_option": "C",
+      "correct_answer": "To apply immediately after viewing",
+      "explanation_en": "The recording supports “To apply immediately after viewing”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “To apply immediately after viewing” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-036",
+      "recording_id": "ielts-listening-recording-008",
+      "correct_option": "D",
+      "correct_answer": "To compare noise at two types of location",
+      "explanation_en": "The recording supports “To compare noise at two types of location”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “To compare noise at two types of location” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-037",
+      "recording_id": "ielts-listening-recording-008",
+      "correct_option": "A",
+      "correct_answer": "Ten minutes",
+      "explanation_en": "The recording supports “Ten minutes”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Ten minutes” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-038",
+      "recording_id": "ielts-listening-recording-008",
+      "correct_option": "B",
+      "correct_answer": "Measurements and the first chart",
+      "explanation_en": "The recording supports “Measurements and the first chart”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Measurements and the first chart” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-039",
+      "recording_id": "ielts-listening-recording-008",
+      "correct_option": "C",
+      "correct_answer": "Accelerating vehicles can distort results",
+      "explanation_en": "The recording supports “Accelerating vehicles can distort results”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Accelerating vehicles can distort results” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    },
+    {
+      "id": "ielts-listening-040",
+      "recording_id": "ielts-listening-recording-008",
+      "correct_option": "D",
+      "correct_answer": "Heavy rain may damage equipment and alter the noise observed",
+      "explanation_en": "The recording supports “Heavy rain may damage equipment and alter the noise observed”. Review the released transcript and replay the audio to locate the evidence.",
+      "explanation_bn": "Audio অনুযায়ী “Heavy rain may damage equipment and alter the noise observed” সঠিক। Attempt-এর পরে transcript দেখে evidence মিলিয়ে আবার শুনুন।",
+      "common_wrong_reason_bn": "একটি পরিচিত শব্দ শুনে সম্পূর্ণ বক্তব্য বা correction অনুসরণ না করে option নেওয়া।"
+    }
+  ]
+}

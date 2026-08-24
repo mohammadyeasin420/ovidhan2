@@ -2,15 +2,194 @@
   "schema_version": 1,
   "status": "reviewed-foundation",
   "destinations": [
-    {"destination_id":"content:writing_precis","skill_id":"writing_precis","url":"/precis-summary-writing-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":18,"review_status":"REVIEWED","goal_ids":["BCS","BANK","UNIVERSITY_ADMISSION","GENERAL_ENGLISH"]},
-    {"destination_id":"content:formal_letter_writing","skill_id":"formal_letter_writing","url":"/formal-letter-writing-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":20,"review_status":"REVIEWED","goal_ids":["BCS","IELTS","UNIVERSITY_ADMISSION","GENERAL_ENGLISH","SPOKEN_CAREER"]},
-    {"destination_id":"content:writing_coherence_cohesion","skill_id":"writing_coherence_cohesion","url":"/ielts-writing-coherence-cohesion-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":20,"review_status":"REVIEWED","goal_ids":["IELTS","BCS","GENERAL_ENGLISH"]},
-    {"destination_id":"content:writing_visual_information_description","skill_id":"writing_visual_information_description","url":"/ielts-academic-writing-task1-visual-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":22,"review_status":"REVIEWED","goal_ids":["IELTS"]},
-    {"destination_id":"content:writing_argument_development","skill_id":"writing_argument_development","url":"/ielts-task2-argument-development-bangla.html","activity_type":"GUIDED_WRITING_LESSON","difficulty":"INTERMEDIATE","estimated_minutes":22,"review_status":"REVIEWED","goal_ids":["IELTS"]},
-    {"destination_id":"content:ielts_reading_main_idea","skill_id":"reading_main_idea","url":"/ielts-reading-practice-bangla.html","activity_type":"GUIDED_READING_PRACTICE","difficulty":"INTERMEDIATE","estimated_minutes":25,"review_status":"REVIEWED","goal_ids":["IELTS"]},
-    {"destination_id":"content:ielts_reading_supporting_detail","skill_id":"reading_supporting_detail","url":"/ielts-reading-practice-bangla.html","activity_type":"GUIDED_READING_PRACTICE","difficulty":"INTERMEDIATE","estimated_minutes":25,"review_status":"REVIEWED","goal_ids":["IELTS"]},
-    {"destination_id":"content:ielts_reading_inference","skill_id":"reading_inference","url":"/ielts-reading-practice-bangla.html","activity_type":"GUIDED_READING_PRACTICE","difficulty":"INTERMEDIATE","estimated_minutes":25,"review_status":"REVIEWED","goal_ids":["IELTS"]},
-    {"destination_id":"content:ielts_reading_tone_purpose","skill_id":"reading_tone_purpose","url":"/ielts-reading-practice-bangla.html","activity_type":"GUIDED_READING_PRACTICE","difficulty":"INTERMEDIATE","estimated_minutes":25,"review_status":"REVIEWED","goal_ids":["IELTS"]},
-    {"destination_id":"content:ielts_reading_reference","skill_id":"reading_reference","url":"/ielts-reading-practice-bangla.html","activity_type":"GUIDED_READING_PRACTICE","difficulty":"INTERMEDIATE","estimated_minutes":25,"review_status":"REVIEWED","goal_ids":["IELTS"]}
+    {
+      "destination_id": "content:writing_precis",
+      "skill_id": "writing_precis",
+      "url": "/precis-summary-writing-bangla.html",
+      "activity_type": "GUIDED_WRITING_LESSON",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 18,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "BCS",
+        "BANK",
+        "UNIVERSITY_ADMISSION",
+        "GENERAL_ENGLISH"
+      ]
+    },
+    {
+      "destination_id": "content:formal_letter_writing",
+      "skill_id": "formal_letter_writing",
+      "url": "/formal-letter-writing-bangla.html",
+      "activity_type": "GUIDED_WRITING_LESSON",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 20,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "BCS",
+        "IELTS",
+        "UNIVERSITY_ADMISSION",
+        "GENERAL_ENGLISH",
+        "SPOKEN_CAREER"
+      ]
+    },
+    {
+      "destination_id": "content:writing_coherence_cohesion",
+      "skill_id": "writing_coherence_cohesion",
+      "url": "/ielts-writing-coherence-cohesion-bangla.html",
+      "activity_type": "GUIDED_WRITING_LESSON",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 20,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS",
+        "BCS",
+        "GENERAL_ENGLISH"
+      ]
+    },
+    {
+      "destination_id": "content:writing_visual_information_description",
+      "skill_id": "writing_visual_information_description",
+      "url": "/ielts-academic-writing-task1-visual-bangla.html",
+      "activity_type": "GUIDED_WRITING_LESSON",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 22,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:writing_argument_development",
+      "skill_id": "writing_argument_development",
+      "url": "/ielts-task2-argument-development-bangla.html",
+      "activity_type": "GUIDED_WRITING_LESSON",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 22,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_reading_main_idea",
+      "skill_id": "reading_main_idea",
+      "url": "/ielts-reading-practice-bangla.html",
+      "activity_type": "GUIDED_READING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 25,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_reading_supporting_detail",
+      "skill_id": "reading_supporting_detail",
+      "url": "/ielts-reading-practice-bangla.html",
+      "activity_type": "GUIDED_READING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 25,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_reading_inference",
+      "skill_id": "reading_inference",
+      "url": "/ielts-reading-practice-bangla.html",
+      "activity_type": "GUIDED_READING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 25,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_reading_tone_purpose",
+      "skill_id": "reading_tone_purpose",
+      "url": "/ielts-reading-practice-bangla.html",
+      "activity_type": "GUIDED_READING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 25,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_reading_reference",
+      "skill_id": "reading_reference",
+      "url": "/ielts-reading-practice-bangla.html",
+      "activity_type": "GUIDED_READING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 25,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_listening_main_point",
+      "skill_id": "listening_main_point",
+      "url": "/ielts-listening-practice-bangla.html",
+      "activity_type": "GUIDED_AUDIO_LISTENING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 30,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_listening_specific_detail",
+      "skill_id": "listening_specific_detail",
+      "url": "/ielts-listening-practice-bangla.html",
+      "activity_type": "GUIDED_AUDIO_LISTENING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 30,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_listening_conversation_tracking",
+      "skill_id": "listening_conversation_tracking",
+      "url": "/ielts-listening-practice-bangla.html",
+      "activity_type": "GUIDED_AUDIO_LISTENING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 30,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_listening_fact_connection",
+      "skill_id": "listening_fact_connection",
+      "url": "/ielts-listening-practice-bangla.html",
+      "activity_type": "GUIDED_AUDIO_LISTENING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 30,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_listening_information_relationship",
+      "skill_id": "listening_information_relationship",
+      "url": "/ielts-listening-practice-bangla.html",
+      "activity_type": "GUIDED_AUDIO_LISTENING_PRACTICE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 30,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    }
   ]
 }

@@ -43,7 +43,7 @@ assert.equal(new Set(pack.items.map(item => item.context_en.trim().toLowerCase()
 const skill = graph.skills.find(item => item.id === 'writing_argument_development');
 assert.ok(skill && skill.status === 'ACTIVE' && skill.family_id === 'WRITING');
 assert.ok(graph.families.find(item => item.family_id === 'WRITING').child_skill_ids.includes(skill.id));
-assert.deepEqual([graph.families.length,graph.skills.filter(item => item.status === 'ACTIVE').length,graph.skills.filter(item => item.status === 'PLANNED').length,graph.item_mappings.length],[14,68,0,440]);
+assert.deepEqual([graph.families.length,graph.skills.filter(item => item.status === 'ACTIVE').length,graph.skills.filter(item => item.status === 'PLANNED').length,graph.item_mappings.length],[15,73,0,480]);
 const mappings = graph.item_mappings.filter(item => item.item_id.startsWith('ielts-task2-argument-'));
 assert.equal(mappings.length, 40); assert.deepEqual(new Set(mappings.map(item => item.item_id)), new Set(expectedIds));
 assert.ok(mappings.every(item => item.primary_skill_id === skill.id && item.primary_family_id === 'WRITING'));

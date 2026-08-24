@@ -1,0 +1,1546 @@
+{
+  "schema_version": 1,
+  "review_status": "REVIEWED",
+  "created_at": "2026-08-24",
+  "practice_scope": "Bounded objective audio-comprehension foundation; not a full IELTS test, band prediction, readiness measure, or mastery claim.",
+  "official_material": false,
+  "audio_delivery": "PREGENERATED_SYNTHETIC_WAV",
+  "pack_id": "ielts-listening-practice-v1",
+  "payload_role": "LEARNER_SAFE_PRE_ATTEMPT",
+  "recordings": [
+    {
+      "recording_id": "ielts-listening-recording-001",
+      "title": "Community library membership",
+      "recording_type": "CONVERSATION",
+      "audio_path": "audio/ielts-listening-v1/clip-001.wav",
+      "audio_mime": "audio/wav",
+      "voice_profile": "Two local English synthetic voices when installed",
+      "source_type": "OVIDHAN_EDITORIAL_SYNTHETIC_AUDIO",
+      "review_status": "REVIEWED"
+    },
+    {
+      "recording_id": "ielts-listening-recording-002",
+      "title": "Field trip update",
+      "recording_type": "MONOLOGUE",
+      "audio_path": "audio/ielts-listening-v1/clip-002.wav",
+      "audio_mime": "audio/wav",
+      "voice_profile": "Windows default English synthetic voice",
+      "source_type": "OVIDHAN_EDITORIAL_SYNTHETIC_AUDIO",
+      "review_status": "REVIEWED"
+    },
+    {
+      "recording_id": "ielts-listening-recording-003",
+      "title": "Part-time café rota",
+      "recording_type": "CONVERSATION",
+      "audio_path": "audio/ielts-listening-v1/clip-003.wav",
+      "audio_mime": "audio/wav",
+      "voice_profile": "Two local English synthetic voices when installed",
+      "source_type": "OVIDHAN_EDITORIAL_SYNTHETIC_AUDIO",
+      "review_status": "REVIEWED"
+    },
+    {
+      "recording_id": "ielts-listening-recording-004",
+      "title": "Museum audio guide",
+      "recording_type": "MONOLOGUE",
+      "audio_path": "audio/ielts-listening-v1/clip-004.wav",
+      "audio_mime": "audio/wav",
+      "voice_profile": "Windows default English synthetic voice",
+      "source_type": "OVIDHAN_EDITORIAL_SYNTHETIC_AUDIO",
+      "review_status": "REVIEWED"
+    },
+    {
+      "recording_id": "ielts-listening-recording-005",
+      "title": "Course registration call",
+      "recording_type": "CONVERSATION",
+      "audio_path": "audio/ielts-listening-v1/clip-005.wav",
+      "audio_mime": "audio/wav",
+      "voice_profile": "Two local English synthetic voices when installed",
+      "source_type": "OVIDHAN_EDITORIAL_SYNTHETIC_AUDIO",
+      "review_status": "REVIEWED"
+    },
+    {
+      "recording_id": "ielts-listening-recording-006",
+      "title": "Campus sustainability briefing",
+      "recording_type": "MONOLOGUE",
+      "audio_path": "audio/ielts-listening-v1/clip-006.wav",
+      "audio_mime": "audio/wav",
+      "voice_profile": "Windows default English synthetic voice",
+      "source_type": "OVIDHAN_EDITORIAL_SYNTHETIC_AUDIO",
+      "review_status": "REVIEWED"
+    },
+    {
+      "recording_id": "ielts-listening-recording-007",
+      "title": "Flat viewing arrangement",
+      "recording_type": "CONVERSATION",
+      "audio_path": "audio/ielts-listening-v1/clip-007.wav",
+      "audio_mime": "audio/wav",
+      "voice_profile": "Two local English synthetic voices when installed",
+      "source_type": "OVIDHAN_EDITORIAL_SYNTHETIC_AUDIO",
+      "review_status": "REVIEWED"
+    },
+    {
+      "recording_id": "ielts-listening-recording-008",
+      "title": "Research project briefing",
+      "recording_type": "MONOLOGUE",
+      "audio_path": "audio/ielts-listening-v1/clip-008.wav",
+      "audio_mime": "audio/wav",
+      "voice_profile": "Windows default English synthetic voice",
+      "source_type": "OVIDHAN_EDITORIAL_SYNTHETIC_AUDIO",
+      "review_status": "REVIEWED"
+    }
+  ],
+  "items": [
+    {
+      "id": "ielts-listening-001",
+      "recording_id": "ielts-listening-recording-001",
+      "skill_id": "listening_main_point",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What is the main purpose of the conversation?",
+      "question_bn": "Audio-টির মূল উদ্দেশ্য বা বিষয় কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To join a library"
+        },
+        {
+          "id": "B",
+          "text": "To reserve a study room"
+        },
+        {
+          "id": "C",
+          "text": "To report a lost book"
+        },
+        {
+          "id": "D",
+          "text": "To apply for a college"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-002",
+      "recording_id": "ielts-listening-recording-001",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "When does the library close on Fridays?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Five o’clock"
+        },
+        {
+          "id": "B",
+          "text": "Six o’clock"
+        },
+        {
+          "id": "C",
+          "text": "Seven o’clock"
+        },
+        {
+          "id": "D",
+          "text": "Eight o’clock"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-003",
+      "recording_id": "ielts-listening-recording-001",
+      "skill_id": "listening_conversation_tracking",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What can the learner use instead of a paper electricity bill?",
+      "question_bn": "Speaker, change বা interaction অনুসরণ করে সঠিক উত্তর কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A bank card"
+        },
+        {
+          "id": "B",
+          "text": "A college letter"
+        },
+        {
+          "id": "C",
+          "text": "A digital bill"
+        },
+        {
+          "id": "D",
+          "text": "A passport photo"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "CONVERSATION_SPEAKER_CHANGE_SEQUENCE"
+    },
+    {
+      "id": "ielts-listening-004",
+      "recording_id": "ielts-listening-recording-001",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Why will the learner show a student card?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To borrow more than six books"
+        },
+        {
+          "id": "B",
+          "text": "To extend the loan period"
+        },
+        {
+          "id": "C",
+          "text": "To enter after closing"
+        },
+        {
+          "id": "D",
+          "text": "To receive free membership"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-005",
+      "recording_id": "ielts-listening-recording-001",
+      "skill_id": "listening_conversation_tracking",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Which sequence correctly follows the exchange?",
+      "question_bn": "Speaker, change বা interaction অনুসরণ করে সঠিক উত্তর কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Show documents, confirm student status, borrow books"
+        },
+        {
+          "id": "B",
+          "text": "Pay twelve pounds, show a bill, collect one book"
+        },
+        {
+          "id": "C",
+          "text": "Borrow books, return home, send a photo"
+        },
+        {
+          "id": "D",
+          "text": "Show a photo, pay a fine, reserve a room"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "CONVERSATION_SPEAKER_CHANGE_SEQUENCE"
+    },
+    {
+      "id": "ielts-listening-006",
+      "recording_id": "ielts-listening-recording-002",
+      "skill_id": "listening_main_point",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What is the announcement mainly about?",
+      "question_bn": "Audio-টির মূল উদ্দেশ্য বা বিষয় কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Results from a geography test"
+        },
+        {
+          "id": "B",
+          "text": "Changes and instructions for a field trip"
+        },
+        {
+          "id": "C",
+          "text": "A new visitor centre"
+        },
+        {
+          "id": "D",
+          "text": "Weekend weather forecasts"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-007",
+      "recording_id": "ielts-listening-recording-002",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What time will the coach leave?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7:00"
+        },
+        {
+          "id": "B",
+          "text": "7:30"
+        },
+        {
+          "id": "C",
+          "text": "7:15"
+        },
+        {
+          "id": "D",
+          "text": "7:45"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-008",
+      "recording_id": "ielts-listening-recording-002",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Where will the group eat lunch?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At school"
+        },
+        {
+          "id": "B",
+          "text": "Beside the lake"
+        },
+        {
+          "id": "C",
+          "text": "On the coach"
+        },
+        {
+          "id": "D",
+          "text": "In the visitor centre"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-009",
+      "recording_id": "ielts-listening-recording-002",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Why was the lunch location changed?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ground is too wet"
+        },
+        {
+          "id": "B",
+          "text": "The lake road is closed"
+        },
+        {
+          "id": "C",
+          "text": "The centre requested a booking"
+        },
+        {
+          "id": "D",
+          "text": "The teacher forgot the maps"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-010",
+      "recording_id": "ielts-listening-recording-002",
+      "skill_id": "listening_information_relationship",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "How are the departure-time and arrival-time instructions connected?",
+      "question_bn": "শোনা তথ্যগুলোর সম্পর্ক কোন option-এ সঠিক?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The coach arrives after it departs"
+        },
+        {
+          "id": "B",
+          "text": "Arriving by seven allows time before the 7:15 departure"
+        },
+        {
+          "id": "C",
+          "text": "Both times were delayed by fifteen minutes"
+        },
+        {
+          "id": "D",
+          "text": "The printed notice gives the final times"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-011",
+      "recording_id": "ielts-listening-recording-003",
+      "skill_id": "listening_main_point",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What are the speakers arranging?",
+      "question_bn": "Audio-টির মূল উদ্দেশ্য বা বিষয় কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An exam timetable"
+        },
+        {
+          "id": "B",
+          "text": "A class presentation"
+        },
+        {
+          "id": "C",
+          "text": "A café work schedule"
+        },
+        {
+          "id": "D",
+          "text": "A Saturday journey"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-012",
+      "recording_id": "ielts-listening-recording-003",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "When will Mina start work on Thursday?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4:00"
+        },
+        {
+          "id": "B",
+          "text": "4:30"
+        },
+        {
+          "id": "C",
+          "text": "5:00"
+        },
+        {
+          "id": "D",
+          "text": "5:30"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-013",
+      "recording_id": "ielts-listening-recording-003",
+      "skill_id": "listening_conversation_tracking",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Who will cover the beginning of Thursday’s shift?",
+      "question_bn": "Speaker, change বা interaction অনুসরণ করে সঠিক উত্তর কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sam"
+        },
+        {
+          "id": "B",
+          "text": "Mina"
+        },
+        {
+          "id": "C",
+          "text": "Priya"
+        },
+        {
+          "id": "D",
+          "text": "The manager"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "CONVERSATION_SPEAKER_CHANGE_SEQUENCE"
+    },
+    {
+      "id": "ielts-listening-014",
+      "recording_id": "ielts-listening-recording-003",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Why can Mina work on Tuesday evening?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Her exam was cancelled"
+        },
+        {
+          "id": "B",
+          "text": "Her class moved to Wednesday"
+        },
+        {
+          "id": "C",
+          "text": "Sam exchanged shifts"
+        },
+        {
+          "id": "D",
+          "text": "The café will close early"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-015",
+      "recording_id": "ielts-listening-recording-003",
+      "skill_id": "listening_conversation_tracking",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "ADVANCED",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What happens after Priya opens the café on Saturday?",
+      "question_bn": "Speaker, change বা interaction অনুসরণ করে সঠিক উত্তর কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sam closes at noon"
+        },
+        {
+          "id": "B",
+          "text": "The manager cancels the shift"
+        },
+        {
+          "id": "C",
+          "text": "Mina works from midday"
+        },
+        {
+          "id": "D",
+          "text": "Mina attends her class"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "CONVERSATION_SPEAKER_CHANGE_SEQUENCE"
+    },
+    {
+      "id": "ielts-listening-016",
+      "recording_id": "ielts-listening-recording-004",
+      "skill_id": "listening_main_point",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What is the guide mainly providing?",
+      "question_bn": "Audio-টির মূল উদ্দেশ্য বা বিষয় কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A history of museum photography"
+        },
+        {
+          "id": "B",
+          "text": "Instructions for a school project"
+        },
+        {
+          "id": "C",
+          "text": "A review of the museum café"
+        },
+        {
+          "id": "D",
+          "text": "Directions and current visitor information"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-017",
+      "recording_id": "ielts-listening-recording-004",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What begins at 11:30?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A curator’s talk"
+        },
+        {
+          "id": "B",
+          "text": "A lighting repair"
+        },
+        {
+          "id": "C",
+          "text": "A photography workshop"
+        },
+        {
+          "id": "D",
+          "text": "A café service"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-018",
+      "recording_id": "ielts-listening-recording-004",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Where should visitors leave large bags?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In Gallery Two"
+        },
+        {
+          "id": "B",
+          "text": "In lockers near reception"
+        },
+        {
+          "id": "C",
+          "text": "In the café"
+        },
+        {
+          "id": "D",
+          "text": "In the local history room"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-019",
+      "recording_id": "ielts-listening-recording-004",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Why was the curator’s talk moved?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The first floor is closed"
+        },
+        {
+          "id": "B",
+          "text": "The curator requested new lights"
+        },
+        {
+          "id": "C",
+          "text": "A school workshop uses Gallery Two"
+        },
+        {
+          "id": "D",
+          "text": "The café closes early"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-020",
+      "recording_id": "ielts-listening-recording-004",
+      "skill_id": "listening_information_relationship",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Which fact explains why visitors need a one-pound coin?",
+      "question_bn": "শোনা তথ্যগুলোর সম্পর্ক কোন option-এ সঠিক?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It pays for the talk"
+        },
+        {
+          "id": "B",
+          "text": "It buys a museum map"
+        },
+        {
+          "id": "C",
+          "text": "It provides entry to the café"
+        },
+        {
+          "id": "D",
+          "text": "It operates a refundable locker"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-021",
+      "recording_id": "ielts-listening-recording-005",
+      "skill_id": "listening_main_point",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What does the caller want to change?",
+      "question_bn": "Audio-টির মূল উদ্দেশ্য বা বিষয় কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The class time"
+        },
+        {
+          "id": "B",
+          "text": "The language being studied"
+        },
+        {
+          "id": "C",
+          "text": "The course level"
+        },
+        {
+          "id": "D",
+          "text": "The payment method"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-022",
+      "recording_id": "ielts-listening-recording-005",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "When does the Thursday class begin?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:00"
+        },
+        {
+          "id": "B",
+          "text": "6:15"
+        },
+        {
+          "id": "C",
+          "text": "6:30"
+        },
+        {
+          "id": "D",
+          "text": "8:15"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-023",
+      "recording_id": "ielts-listening-recording-005",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "How many places remain in the Thursday class?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "One"
+        },
+        {
+          "id": "B",
+          "text": "Twelve"
+        },
+        {
+          "id": "C",
+          "text": "Two"
+        },
+        {
+          "id": "D",
+          "text": "None"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-024",
+      "recording_id": "ielts-listening-recording-005",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Why must the caller reply before noon tomorrow?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To receive a fee reduction"
+        },
+        {
+          "id": "B",
+          "text": "To change the course level"
+        },
+        {
+          "id": "C",
+          "text": "To start on Tuesday"
+        },
+        {
+          "id": "D",
+          "text": "To keep the available place"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-025",
+      "recording_id": "ielts-listening-recording-005",
+      "skill_id": "listening_conversation_tracking",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What will the adviser do before the caller replies?",
+      "question_bn": "Speaker, change বা interaction অনুসরণ করে সঠিক উত্তর কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Send a new confirmation"
+        },
+        {
+          "id": "B",
+          "text": "Release the place"
+        },
+        {
+          "id": "C",
+          "text": "Refund the fee"
+        },
+        {
+          "id": "D",
+          "text": "Phone the employer"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "CONVERSATION_SPEAKER_CHANGE_SEQUENCE"
+    },
+    {
+      "id": "ielts-listening-026",
+      "recording_id": "ielts-listening-recording-006",
+      "skill_id": "listening_main_point",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What is the briefing mainly about?",
+      "question_bn": "Audio-টির মূল উদ্দেশ্য বা বিষয় কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A volunteer recruitment exam"
+        },
+        {
+          "id": "B",
+          "text": "A change to campus recycling"
+        },
+        {
+          "id": "C",
+          "text": "The price of food packaging"
+        },
+        {
+          "id": "D",
+          "text": "A survey of university courses"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-027",
+      "recording_id": "ielts-listening-recording-006",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What belongs in the new green bins?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Paper and card"
+        },
+        {
+          "id": "B",
+          "text": "Greasy food boxes"
+        },
+        {
+          "id": "C",
+          "text": "Clean glass and metal"
+        },
+        {
+          "id": "D",
+          "text": "All general waste"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-028",
+      "recording_id": "ielts-listening-recording-006",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What problem did the survey identify?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Too few student volunteers"
+        },
+        {
+          "id": "B",
+          "text": "A shortage of green bins"
+        },
+        {
+          "id": "C",
+          "text": "Low glass use"
+        },
+        {
+          "id": "D",
+          "text": "Unclear bin labels"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-029",
+      "recording_id": "ielts-listening-recording-006",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Why are picture labels being added?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "More bins previously failed to improve recycling"
+        },
+        {
+          "id": "B",
+          "text": "Students requested art displays"
+        },
+        {
+          "id": "C",
+          "text": "General waste fell last year"
+        },
+        {
+          "id": "D",
+          "text": "Metal cannot be recycled"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-030",
+      "recording_id": "ielts-listening-recording-006",
+      "skill_id": "listening_information_relationship",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "ADVANCED",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "How does the volunteer scheme support the December target?",
+      "question_bn": "শোনা তথ্যগুলোর সম্পর্ক কোন option-এ সঠিক?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volunteers remove all general waste"
+        },
+        {
+          "id": "B",
+          "text": "Volunteers explain the new system early in the term"
+        },
+        {
+          "id": "C",
+          "text": "Volunteers measure course attendance"
+        },
+        {
+          "id": "D",
+          "text": "Volunteers replace the picture labels"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-031",
+      "recording_id": "ielts-listening-recording-007",
+      "skill_id": "listening_main_point",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What is the main purpose of the Park Road call?",
+      "question_bn": "Audio-টির মূল উদ্দেশ্য বা বিষয় কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A dental visit"
+        },
+        {
+          "id": "B",
+          "text": "A bicycle repair"
+        },
+        {
+          "id": "C",
+          "text": "A flat viewing"
+        },
+        {
+          "id": "D",
+          "text": "A furniture delivery"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-032",
+      "recording_id": "ielts-listening-recording-007",
+      "skill_id": "listening_conversation_tracking",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What time will they meet?",
+      "question_bn": "Speaker, change বা interaction অনুসরণ করে সঠিক উত্তর কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10:00"
+        },
+        {
+          "id": "B",
+          "text": "1:00"
+        },
+        {
+          "id": "C",
+          "text": "2:00"
+        },
+        {
+          "id": "D",
+          "text": "2:30"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "CONVERSATION_SPEAKER_CHANGE_SEQUENCE"
+    },
+    {
+      "id": "ielts-listening-033",
+      "recording_id": "ielts-listening-recording-007",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What furniture is currently missing?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A desk"
+        },
+        {
+          "id": "B",
+          "text": "A bed"
+        },
+        {
+          "id": "C",
+          "text": "A dining table"
+        },
+        {
+          "id": "D",
+          "text": "A chair"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-034",
+      "recording_id": "ielts-listening-recording-007",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Under what condition will the landlord add a desk?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The tenant pays weekly"
+        },
+        {
+          "id": "B",
+          "text": "The tenant signs for twelve months"
+        },
+        {
+          "id": "C",
+          "text": "The tenant arrives before lunch"
+        },
+        {
+          "id": "D",
+          "text": "The tenant stores a bicycle"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-035",
+      "recording_id": "ielts-listening-recording-007",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Why should the tenant bring photo identification?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To enter the bicycle store"
+        },
+        {
+          "id": "B",
+          "text": "To change the appointment"
+        },
+        {
+          "id": "C",
+          "text": "To apply immediately after viewing"
+        },
+        {
+          "id": "D",
+          "text": "To obtain the shorter contract"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-036",
+      "recording_id": "ielts-listening-recording-008",
+      "skill_id": "listening_main_point",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What is the main aim of the project?",
+      "question_bn": "Audio-টির মূল উদ্দেশ্য বা বিষয় কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To repair damaged sound meters"
+        },
+        {
+          "id": "B",
+          "text": "To count vehicles at one junction"
+        },
+        {
+          "id": "C",
+          "text": "To write about residential housing"
+        },
+        {
+          "id": "D",
+          "text": "To compare noise at two types of location"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-037",
+      "recording_id": "ielts-listening-recording-008",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "FOUNDATION",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "How long should each sound recording last?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ten minutes"
+        },
+        {
+          "id": "B",
+          "text": "Three minutes"
+        },
+        {
+          "id": "C",
+          "text": "Five minutes"
+        },
+        {
+          "id": "D",
+          "text": "Eighteen minutes"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-038",
+      "recording_id": "ielts-listening-recording-008",
+      "skill_id": "listening_specific_detail",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "INTERMEDIATE",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "What must be uploaded by Friday the eighteenth?",
+      "question_bn": "Audio অনুযায়ী সঠিক detail কোনটি?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the written discussion"
+        },
+        {
+          "id": "B",
+          "text": "Measurements and the first chart"
+        },
+        {
+          "id": "C",
+          "text": "A list of group members"
+        },
+        {
+          "id": "D",
+          "text": "Photographs of every junction"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-039",
+      "recording_id": "ielts-listening-recording-008",
+      "skill_id": "listening_fact_connection",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "ADVANCED",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "Why must students stay away from junctions?",
+      "question_bn": "Audio-তে কারণ ও তথ্য কীভাবে যুক্ত হয়েছে?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rain collects there"
+        },
+        {
+          "id": "B",
+          "text": "Residential streets are closed"
+        },
+        {
+          "id": "C",
+          "text": "Accelerating vehicles can distort results"
+        },
+        {
+          "id": "D",
+          "text": "The meters require electricity"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    },
+    {
+      "id": "ielts-listening-040",
+      "recording_id": "ielts-listening-recording-008",
+      "skill_id": "listening_information_relationship",
+      "family": "LISTENING_COMPREHENSION",
+      "difficulty": "ADVANCED",
+      "difficulty_basis": "EDITORIAL_V1_AUDIO_AND_ITEM_COMPLEXITY",
+      "question_en": "How are weather and data quality connected?",
+      "question_bn": "শোনা তথ্যগুলোর সম্পর্ক কোন option-এ সঠিক?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Morning rain makes the deadline earlier"
+        },
+        {
+          "id": "B",
+          "text": "Dry weather prevents group work"
+        },
+        {
+          "id": "C",
+          "text": "Rain makes residential streets busier"
+        },
+        {
+          "id": "D",
+          "text": "Heavy rain may damage equipment and alter the noise observed"
+        }
+      ],
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE_AUDIO",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ],
+      "evidence_type": "OBJECTIVE_AUDIO_COMPREHENSION",
+      "evidence_basis": "OBJECTIVE_AUDIO_CONTENT"
+    }
+  ],
+  "skill_distribution": {
+    "listening_main_point": 8,
+    "listening_specific_detail": 13,
+    "listening_conversation_tracking": 6,
+    "listening_fact_connection": 9,
+    "listening_information_relationship": 4
+  },
+  "difficulty_distribution": {
+    "FOUNDATION": 16,
+    "INTERMEDIATE": 20,
+    "ADVANCED": 4
+  }
+}

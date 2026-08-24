@@ -45,9 +45,9 @@ asset.probes.forEach(probe => {
   assert.equal(mapping.mapping_status, 'MAPPED_OBJECTIVE');
   assert.equal(mapping.primary_skill_id, probe.primary_skill_id);
 });
-assert.equal(graph.families.length, 14);
-assert.equal(graph.skills.filter(skill => skill.status === 'ACTIVE').length, 68);
-assert.equal(graph.item_mappings.length, 440);
+assert.equal(graph.families.length, 15);
+assert.equal(graph.skills.filter(skill => skill.status === 'ACTIVE').length, 73);
+assert.equal(graph.item_mappings.length, 480);
 assert.match(diagnostic, /deriveBoundarySignal\(anchorCorrect,probeCorrect\)/);
 assert.match(diagnostic, /buildBoundaryEvidencePayload\(true\)/);
 assert.match(diagnostic, /function showResults\(\)[\s\S]*buildBoundaryEvidencePayload\(true\)/);

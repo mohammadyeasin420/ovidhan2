@@ -66,13 +66,13 @@ assert.match(pack.items[0].explanation_bn, /তাই D সঠিক সার�
 
 const readingSkills = Object.keys(skillDistribution);
 assert.ok(readingSkills.every(id => graph.skills.some(skill => skill.id === id && skill.status === 'ACTIVE' && skill.family_id === 'READING_COMPREHENSION')));
-assert.deepEqual([graph.families.length,graph.skills.filter(item => item.status === 'ACTIVE').length,graph.skills.filter(item => item.status === 'PLANNED').length,graph.item_mappings.length],[14,68,0,440]);
+assert.deepEqual([graph.families.length,graph.skills.filter(item => item.status === 'ACTIVE').length,graph.skills.filter(item => item.status === 'PLANNED').length,graph.item_mappings.length],[15,73,0,480]);
 const mappings = graph.item_mappings.filter(item => item.item_id.startsWith('ielts-reading-'));
 assert.equal(mappings.length, 40);
 assert.deepEqual(new Set(mappings.map(item => item.item_id)), new Set(expectedIds));
 assert.ok(mappings.every(mapping => mapping.primary_family_id === 'READING_COMPREHENSION' && pack.items.find(item => item.id === mapping.item_id).skill_id === mapping.primary_skill_id));
-assert.equal(new Set(graph.item_mappings.map(item => item.item_id)).size, 440);
-assert.equal(goals.mappings.filter(item => item.goal_id === 'IELTS').length, 10);
+assert.equal(new Set(graph.item_mappings.map(item => item.item_id)).size, 480);
+assert.equal(goals.mappings.filter(item => item.goal_id === 'IELTS').length, 15);
 
 const requirementIds = ['reading_academic_main_idea','reading_gt_main_idea','reading_academic_detail','reading_gt_detail','reading_academic_writer_views_claims','reading_gt_writer_views_claims'];
 for (const requirementId of requirementIds) {
@@ -83,8 +83,8 @@ for (const requirementId of requirementIds) {
   assert.equal(relation.boundary_evidence, false);
   assert.match(relation.coverage_note, /but|does not/i);
 }
-assert.equal(requirements.mapped_relations.length, 25);
-assert.equal(requirements.unmapped_requirements.length, 14);
+assert.equal(requirements.mapped_relations.length, 30);
+assert.equal(requirements.unmapped_requirements.length, 9);
 
 const readingDestinations = destinations.destinations.filter(item => readingSkills.includes(item.skill_id));
 assert.equal(readingDestinations.length, 5);

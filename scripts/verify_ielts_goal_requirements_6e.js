@@ -47,7 +47,7 @@ assert.equal(asset.sources.length, approvedSourceUrls.size, 'official source reg
 
 const testTypes = new Set(['SHARED', 'ACADEMIC', 'GENERAL_TRAINING']);
 const sections = new Set(['LISTENING', 'READING', 'WRITING', 'SPEAKING']);
-const mappingClasses = new Set(['DIRECT_TASK_ALIGNMENT', 'ASSESSMENT_CRITERION_ALIGNMENT', 'SUPPORTING_LANGUAGE_FOUNDATION']);
+const mappingClasses = new Set(['DIRECT_TASK_ALIGNMENT', 'DIRECT_AUDIO_COMPREHENSION_ALIGNMENT', 'ASSESSMENT_CRITERION_ALIGNMENT', 'SUPPORTING_LANGUAGE_FOUNDATION']);
 const coverageStatuses = new Set(['COVERED', 'PARTIALLY_COVERED', 'EVIDENCE_GAP', 'PRACTICE_GAP', 'CANONICAL_SKILL_GAP']);
 const requirementIds = new Set();
 for (const requirement of asset.requirements) {
@@ -89,7 +89,8 @@ for (const id of requirementIds) assert.equal(Number(mappedIds.has(id)) + Number
 const proxies = diagnostic.items.filter(item => ['listening', 'speaking'].includes(item.broad_category));
 assert.equal(proxies.length, 10);
 assert.ok(proxies.every(item => item.mapping_status === 'UNMAPPED_PROXY' && item.primary_skill_id === null && item.evidence_type === null));
-assert.ok(asset.mapped_relations.filter(relation => ['LISTENING', 'SPEAKING'].includes(requirementById.get(relation.requirement_id).section)).every(relation => relation.diagnostic_evidence === false), 'proxy treated as performance evidence');
+assert.ok(asset.mapped_relations.filter(relation => requirementById.get(relation.requirement_id).section === 'SPEAKING').every(relation => relation.diagnostic_evidence === false), 'speaking proxy treated as performance evidence');
+assert.ok(asset.mapped_relations.filter(relation => requirementById.get(relation.requirement_id).section === 'LISTENING').every(relation => relation.diagnostic_evidence === true), 'audio-backed listening evidence missing');
 
 const gtLetter = asset.mapped_relations.find(relation => relation.requirement_id === 'writing_gt_task1_letter');
 assert.ok(gtLetter);
@@ -98,14 +99,14 @@ assert.equal(gtLetter.mapping_class, 'SUPPORTING_LANGUAGE_FOUNDATION');
 assert.equal(gtLetter.coverage_status, 'PARTIALLY_COVERED');
 
 const ieltsGoals = goals.mappings.filter(mapping => mapping.goal_id === 'IELTS');
-assert.equal(ieltsGoals.length, 10, 'IELTS coarse mapping count');
+assert.equal(ieltsGoals.length, 15, 'IELTS coarse mapping count');
 assert.ok(ieltsGoals.every(mapping => mapping.evidence_class === 'CURATED_REPOSITORY_MAPPING'));
 assert.equal(ieltsGoals.find(mapping => mapping.skill_id === 'word_choice_register').importance, 'SUPPORTING');
 assert.equal(ieltsGoals.find(mapping => mapping.skill_id === 'formal_letter_writing').importance, 'OPTIONAL');
 assert.ok(!ieltsGoals.some(mapping => mapping.skill_id === 'writing_precis'), 'writing_precis coarse IELTS leakage');
 
 const ieltsDestinationSkills = destinations.destinations.filter(destination => destination.goal_ids.includes('IELTS')).map(destination => destination.skill_id);
-assert.deepEqual(ieltsDestinationSkills, ['formal_letter_writing', 'writing_coherence_cohesion', 'writing_visual_information_description','writing_argument_development','reading_main_idea','reading_supporting_detail','reading_inference','reading_tone_purpose','reading_reference']);
+assert.deepEqual(ieltsDestinationSkills, ['formal_letter_writing', 'writing_coherence_cohesion', 'writing_visual_information_description','writing_argument_development','reading_main_idea','reading_supporting_detail','reading_inference','reading_tone_purpose','reading_reference','listening_main_point','listening_specific_detail','listening_conversation_tracking','listening_fact_connection','listening_information_relationship']);
 assert.ok(!destinations.destinations.find(destination => destination.skill_id === 'writing_precis').goal_ids.includes('IELTS'), 'writing_precis IELTS eligibility');
 for (const relation of asset.mapped_relations) {
   const actual = ieltsDestinationSkills.includes(relation.skill_id);
@@ -120,9 +121,9 @@ assert.equal(diagnostic.items.filter(item => item.mapping_status === 'MAPPED_OBJ
 assert.equal(diagnostic.items.filter(item => item.mapping_status !== 'MAPPED_OBJECTIVE').length, 21);
 assert.equal(new Set(diagnostic.items.filter(item => item.mapping_status === 'MAPPED_OBJECTIVE').map(item => item.primary_skill_id)).size, 12);
 assert.deepEqual(new Set(boundary.probes.map(probe => probe.primary_skill_id)), new Set(['compound_subject_agreement', 'indefinite_article_a_an', 'gerund_after_preposition', 'essay_thesis_focus']));
-assert.equal(graph.families.length, 14);
-assert.equal(activeSkills.size, 68);
-assert.equal(graph.item_mappings.length, 440);
+assert.equal(graph.families.length, 15);
+assert.equal(activeSkills.size, 73);
+assert.equal(graph.item_mappings.length, 480);
 
 assert.equal(frozen.aggregateSha256, '202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0');
 for (const item of [...frozen.pages, ...frozen.guards]) assert.equal(sha256(item.path), item.sha256, `frozen file changed ${item.path}`);
