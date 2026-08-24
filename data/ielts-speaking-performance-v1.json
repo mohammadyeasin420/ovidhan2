@@ -24,7 +24,13 @@
       ],
       "skill_id": "speaking_extended_turn",
       "task_type": "PART_2_EXTENDED_TURN",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part2-002",
@@ -41,7 +47,13 @@
       ],
       "skill_id": "speaking_extended_turn",
       "task_type": "PART_2_EXTENDED_TURN",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part2-003",
@@ -58,7 +70,13 @@
       ],
       "skill_id": "speaking_extended_turn",
       "task_type": "PART_2_EXTENDED_TURN",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part2-004",
@@ -75,7 +93,13 @@
       ],
       "skill_id": "speaking_extended_turn",
       "task_type": "PART_2_EXTENDED_TURN",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part2-005",
@@ -92,7 +116,13 @@
       ],
       "skill_id": "speaking_extended_turn",
       "task_type": "PART_2_EXTENDED_TURN",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part2-006",
@@ -109,7 +139,13 @@
       ],
       "skill_id": "speaking_extended_turn",
       "task_type": "PART_2_EXTENDED_TURN",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part2-007",
@@ -126,7 +162,13 @@
       ],
       "skill_id": "speaking_extended_turn",
       "task_type": "PART_2_EXTENDED_TURN",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part2-008",
@@ -143,7 +185,13 @@
       ],
       "skill_id": "speaking_extended_turn",
       "task_type": "PART_2_EXTENDED_TURN",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     }
   ],
   "part3_prompts": [
@@ -156,7 +204,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-002",
@@ -167,7 +221,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-003",
@@ -178,7 +238,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-004",
@@ -189,7 +255,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-005",
@@ -200,7 +272,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-006",
@@ -211,7 +289,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-007",
@@ -222,7 +306,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-008",
@@ -233,7 +323,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-009",
@@ -244,7 +340,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-010",
@@ -255,7 +357,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-011",
@@ -266,7 +374,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     },
     {
       "id": "ielts-speaking-part3-012",
@@ -277,7 +391,13 @@
       "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
       "skill_id": "speaking_discussion_response",
       "task_type": "PART_3_DISCUSSION_RESPONSE",
-      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     }
   ]
 }
