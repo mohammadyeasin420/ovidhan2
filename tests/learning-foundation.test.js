@@ -58,7 +58,7 @@ function test(name, callback) {
 test('new anonymous learner receives versioned state and random first-party ID', () => {
     const { foundation } = createHarness();
     const state = foundation.getState();
-    assert.equal(state.version, 5);
+    assert.equal(state.version, 6);
     assert.match(state.anonymousLearnerId, /^[0-9a-f-]{36}$/);
     assert.equal(state.progress.learningActions, 0);
 });
@@ -79,7 +79,7 @@ test('corrupted state recovers without breaking initialization', () => {
     const localStorage = createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY, '{not-json');
     const { foundation } = createHarness({ localStorage });
-    assert.equal(foundation.getState().version, 5);
+    assert.equal(foundation.getState().version, 6);
     assert.equal(foundation.getState().progress.learningActions, 0);
 });
 
@@ -93,7 +93,7 @@ test('old foundation schema is normalized without losing identifiers', () => {
     }));
     const { foundation } = createHarness({ localStorage });
     const state = foundation.getState();
-    assert.equal(state.version, 5);
+    assert.equal(state.version, 6);
     assert.equal(state.anonymousLearnerId, '11111111-1111-4111-8111-111111111111');
     assert.deepEqual(state.savedWords, ['language']);
     assert.equal(state.progress.learningActions, 2);
@@ -272,7 +272,7 @@ test('version-2 mistake signals migrate to bounded evidence counters', () => {
     }));
     const { foundation } = createHarness({ localStorage });
     const state = foundation.getState();
-    assert.equal(state.version, 5);
+    assert.equal(state.version, 6);
     assert.equal(state.mistakeSignals['mm-agree-verb'].initialIncorrect, 1);
     assert.equal(state.mistakeSignals['mm-agree-verb'].repairCorrect, 1);
     assert.equal(state.mistakeSignals['mm-agree-verb'].retestCorrect, 1);
@@ -409,8 +409,27 @@ test('version-4 state migrates without manufacturing diagnostic evidence', () =>
     const localStorage=createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY,JSON.stringify({version:4,anonymousLearnerId:'11111111-1111-4111-8111-111111111111',mistakeSignals:{}}));
     const { foundation }=createHarness({localStorage});
-    assert.equal(foundation.getState().version,5);
+    assert.equal(foundation.getState().version,6);
     assert.deepEqual(foundation.getState().skillEvidence,{});
+});
+
+test('speaking performance evidence persists coarse metadata only', () => {
+    const { foundation, localStorage }=createHarness();
+    const id='ielts-speaking-v1:ielts-speaking-part2-001';
+    assert.equal(foundation.recordPerformanceEvidence(id,'speaking_extended_turn','SPEAKING_PERFORMANCE_ATTEMPT','PART_2_EXTENDED_TURN','ielts-speaking-part2-001','60_TO_119_SECONDS'),true);
+    assert.equal(foundation.recordPerformanceEvidence(id,'speaking_extended_turn','SPEAKING_PERFORMANCE_ATTEMPT','PART_2_EXTENDED_TURN','ielts-speaking-part2-001','120_SECONDS_OR_MORE'),true);
+    const entry=foundation.getState().performanceEvidence[id];
+    assert.equal(entry.attempt_count,2);assert.equal(entry.duration_bucket,'120_SECONDS_OR_MORE');
+    ['audio','blob','transcript','content','score','correctness','result'].forEach(field=>assert.equal(entry[field],undefined));
+    assert.equal(createLearningFoundation({localStorage}).getState().performanceEvidence[id].attempt_count,2);
+});
+
+test('performance evidence normalization rejects raw speech and arbitrary fields', () => {
+    const localStorage=createMemoryStorage(),id='ielts-speaking-v1:ielts-speaking-part3-001';
+    localStorage.setItem(constants.STATE_KEY,JSON.stringify({version:6,anonymousLearnerId:'11111111-1111-4111-8111-111111111111',performanceEvidence:{[id]:{evidence_id:id,skill_id:'speaking_discussion_response',evidence_type:'SPEAKING_PERFORMANCE_ATTEMPT',task_type:'PART_3_DISCUSSION_RESPONSE',source_id:'ielts-speaking-part3-001',duration_bucket:'30_TO_59_SECONDS',attempt_count:1,audio:'raw voice',transcript:'secret',score:9,arbitrary:'no'}}}));
+    const entry=createLearningFoundation({localStorage}).getState().performanceEvidence[id];
+    assert.ok(entry);assert.deepEqual(Object.keys(entry).sort(),['attempt_count','duration_bucket','evidence_id','evidence_type','first_seen_at','last_seen_at','skill_id','source_id','task_type'].sort());
+    assert.equal(createLearningFoundation({localStorage}).recordPerformanceEvidence(id,'speaking_discussion_response','SPEAKING_PERFORMANCE_ATTEMPT','BAD_TASK','ielts-speaking-part3-001','30_TO_59_SECONDS'),false);
 });
 
 console.log('PASS all learning-foundation tests');

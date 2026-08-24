@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "pack_id": "ielts-speaking-performance-v1",
+  "created_at": "2026-08-24",
+  "review_status": "REVIEWED",
+  "content_origin": "OVIDHAN_CREATED",
+  "official_material": false,
+  "practice_scope": "Bounded, self-recorded IELTS-style speaking practice. It is not an official IELTS test, examiner assessment, band prediction, score, readiness measure, or guarantee.",
+  "privacy": "Raw voice remains in browser memory for the current page session only. It is not uploaded, transcribed, or saved by Ovidhan.",
+  "timer_note": "Any preparation or elapsed-time display is an Ovidhan practice aid, not an official test timer.",
+  "part2_cue_cards": [
+    {
+      "id": "ielts-speaking-part2-001",
+      "theme_id": "education",
+      "theme_en": "Education and learning",
+      "theme_bn": "শিক্ষা ও শেখা",
+      "prompt_en": "Describe a skill you learned outside school or university.",
+      "prompt_bn": "নিচের cue card অনুসরণ করে একটি extended response record করুন।",
+      "bullet_points": [
+        "what it was",
+        "when and where you learned about it",
+        "what you did",
+        "and explain why it was valuable"
+      ],
+      "skill_id": "speaking_extended_turn",
+      "task_type": "PART_2_EXTENDED_TURN",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part2-002",
+      "theme_id": "education",
+      "theme_en": "Education and learning",
+      "theme_bn": "শিক্ষা ও শেখা",
+      "prompt_en": "Describe a teacher who helped you become more confident.",
+      "prompt_bn": "নিচের cue card অনুসরণ করে একটি extended response record করুন।",
+      "bullet_points": [
+        "who this person was",
+        "when they taught or guided you",
+        "what they did",
+        "and explain how your confidence changed"
+      ],
+      "skill_id": "speaking_extended_turn",
+      "task_type": "PART_2_EXTENDED_TURN",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part2-003",
+      "theme_id": "community",
+      "theme_en": "Community and public life",
+      "theme_bn": "কমিউনিটি ও জনজীবন",
+      "prompt_en": "Describe a public place in your area that people enjoy using.",
+      "prompt_bn": "নিচের cue card অনুসরণ করে একটি extended response record করুন।",
+      "bullet_points": [
+        "where it is",
+        "what people do there",
+        "who uses it",
+        "and explain why people value it"
+      ],
+      "skill_id": "speaking_extended_turn",
+      "task_type": "PART_2_EXTENDED_TURN",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part2-004",
+      "theme_id": "community",
+      "theme_en": "Community and public life",
+      "theme_bn": "কমিউনিটি ও জনজীবন",
+      "prompt_en": "Describe a community event you remember well.",
+      "prompt_bn": "নিচের cue card অনুসরণ করে একটি extended response record করুন।",
+      "bullet_points": [
+        "what the event was",
+        "when and where it happened",
+        "who took part",
+        "and explain why you remember it"
+      ],
+      "skill_id": "speaking_extended_turn",
+      "task_type": "PART_2_EXTENDED_TURN",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part2-005",
+      "theme_id": "work",
+      "theme_en": "Work and ambition",
+      "theme_bn": "কাজ ও আকাঙ্ক্ষা",
+      "prompt_en": "Describe a job you would like to understand better.",
+      "prompt_bn": "নিচের cue card অনুসরণ করে একটি extended response record করুন।",
+      "bullet_points": [
+        "what the job is",
+        "what its main responsibilities are",
+        "why it interests you",
+        "and explain how you would learn more about it"
+      ],
+      "skill_id": "speaking_extended_turn",
+      "task_type": "PART_2_EXTENDED_TURN",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part2-006",
+      "theme_id": "work",
+      "theme_en": "Work and ambition",
+      "theme_bn": "কাজ ও আকাঙ্ক্ষা",
+      "prompt_en": "Describe a goal that required steady effort.",
+      "prompt_bn": "নিচের cue card অনুসরণ করে একটি extended response record করুন।",
+      "bullet_points": [
+        "what the goal was",
+        "why you chose it",
+        "what difficulties you faced",
+        "and explain what the experience taught you"
+      ],
+      "skill_id": "speaking_extended_turn",
+      "task_type": "PART_2_EXTENDED_TURN",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part2-007",
+      "theme_id": "technology",
+      "theme_en": "Technology and daily life",
+      "theme_bn": "প্রযুক্তি ও দৈনন্দিন জীবন",
+      "prompt_en": "Describe a piece of technology that improved a daily task.",
+      "prompt_bn": "নিচের cue card অনুসরণ করে একটি extended response record করুন।",
+      "bullet_points": [
+        "what it is",
+        "what task it improved",
+        "how you use it",
+        "and explain why the change mattered"
+      ],
+      "skill_id": "speaking_extended_turn",
+      "task_type": "PART_2_EXTENDED_TURN",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part2-008",
+      "theme_id": "technology",
+      "theme_en": "Technology and daily life",
+      "theme_bn": "প্রযুক্তি ও দৈনন্দিন জীবন",
+      "prompt_en": "Describe a time when you chose not to use technology.",
+      "prompt_bn": "নিচের cue card অনুসরণ করে একটি extended response record করুন।",
+      "bullet_points": [
+        "when this happened",
+        "what technology you avoided",
+        "why you made that choice",
+        "and explain how the situation went"
+      ],
+      "skill_id": "speaking_extended_turn",
+      "task_type": "PART_2_EXTENDED_TURN",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    }
+  ],
+  "part3_prompts": [
+    {
+      "id": "ielts-speaking-part3-001",
+      "theme_id": "education",
+      "theme_en": "Education and learning",
+      "theme_bn": "শিক্ষা ও শেখা",
+      "prompt_en": "Why do adults continue learning after formal education?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-002",
+      "theme_id": "education",
+      "theme_en": "Education and learning",
+      "theme_bn": "শিক্ষা ও শেখা",
+      "prompt_en": "How might technology change the role of teachers?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-003",
+      "theme_id": "education",
+      "theme_en": "Education and learning",
+      "theme_bn": "শিক্ষা ও শেখা",
+      "prompt_en": "Should practical skills receive more attention in schools?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-004",
+      "theme_id": "community",
+      "theme_en": "Community and public life",
+      "theme_bn": "কমিউনিটি ও জনজীবন",
+      "prompt_en": "What makes a public space useful for different age groups?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-005",
+      "theme_id": "community",
+      "theme_en": "Community and public life",
+      "theme_bn": "কমিউনিটি ও জনজীবন",
+      "prompt_en": "Why do some people take part in community activities while others do not?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-006",
+      "theme_id": "community",
+      "theme_en": "Community and public life",
+      "theme_bn": "কমিউনিটি ও জনজীবন",
+      "prompt_en": "How can local authorities encourage stronger neighbourhood connections?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-007",
+      "theme_id": "work",
+      "theme_en": "Work and ambition",
+      "theme_bn": "কাজ ও আকাঙ্ক্ষা",
+      "prompt_en": "How have people’s expectations of a good career changed?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-008",
+      "theme_id": "work",
+      "theme_en": "Work and ambition",
+      "theme_bn": "কাজ ও আকাঙ্ক্ষা",
+      "prompt_en": "Is ambition always beneficial for individuals and society?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-009",
+      "theme_id": "work",
+      "theme_en": "Work and ambition",
+      "theme_bn": "কাজ ও আকাঙ্ক্ষা",
+      "prompt_en": "What responsibilities do employers have for staff development?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-010",
+      "theme_id": "technology",
+      "theme_en": "Technology and daily life",
+      "theme_bn": "প্রযুক্তি ও দৈনন্দিন জীবন",
+      "prompt_en": "Why do people adopt some technologies faster than others?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-011",
+      "theme_id": "technology",
+      "theme_en": "Technology and daily life",
+      "theme_bn": "প্রযুক্তি ও দৈনন্দিন জীবন",
+      "prompt_en": "How can societies reduce the disadvantages of digital change?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    },
+    {
+      "id": "ielts-speaking-part3-012",
+      "theme_id": "technology",
+      "theme_en": "Technology and daily life",
+      "theme_bn": "প্রযুক্তি ও দৈনন্দিন জীবন",
+      "prompt_en": "Should there be limits on technology use in public places?",
+      "prompt_bn": "কারণ, উদাহরণ ও balanced explanation দিয়ে discussion response record করুন।",
+      "skill_id": "speaking_discussion_response",
+      "task_type": "PART_3_DISCUSSION_RESPONSE",
+      "evidence_type": "SPEAKING_PERFORMANCE_ATTEMPT"
+    }
+  ]
+}

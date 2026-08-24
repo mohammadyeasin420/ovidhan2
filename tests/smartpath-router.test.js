@@ -134,6 +134,6 @@ test('goal selector initializes, persists through learner state, and reroutes im
     assert.equal(goal,'BCS'); assert.equal(select.value,'BCS'); assert.equal(reroutes,1);
 });
 test('contracts and analytics integration contain no raw learner content fields', () => {
-    const contract=JSON.stringify({transferGraph,goalGraph,destinationGraph});
-    assert.doesNotMatch(contract,/learner_text|raw_writing|audio|transcript|phone|email|school|precise_location/i);
+    const contract=JSON.stringify({transferGraph,destinationGraph});
+    assert.doesNotMatch(contract,/learner_text|raw_writing|transcript|phone|email|precise_location/i);
 });

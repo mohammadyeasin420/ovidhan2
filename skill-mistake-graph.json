@@ -256,6 +256,20 @@
       "related_family_ids": [
         "READING_COMPREHENSION"
       ]
+    },
+    {
+      "family_id": "SPEAKING_PERFORMANCE",
+      "name_en": "Speaking performance",
+      "name_bn": "কথন অনুশীলন",
+      "description": "Productive speaking attempts recorded locally for replay and learner self-review.",
+      "child_skill_ids": [
+        "speaking_extended_turn",
+        "speaking_discussion_response"
+      ],
+      "related_family_ids": [
+        "SPEAKING",
+        "WRITING_PERFORMANCE"
+      ]
     }
   ],
   "skills": [
@@ -2170,6 +2184,54 @@
       ],
       "status": "ACTIVE",
       "version": 1
+    },
+    {
+      "id": "speaking_extended_turn",
+      "name_en": "Speaking extended turn",
+      "name_bn": "দীর্ঘ একক কথন",
+      "family_id": "SPEAKING_PERFORMANCE",
+      "description": "Develop and sustain an extended spoken response to a cue card.",
+      "prerequisites": [],
+      "related_skills": [
+        "speaking_discussion_response"
+      ],
+      "common_mistake_families": [
+        "underdeveloped-speaking-response"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1,
+      "example_item_ids": [
+        "ielts-speaking-part2-001",
+        "ielts-speaking-part2-002"
+      ]
+    },
+    {
+      "id": "speaking_discussion_response",
+      "name_en": "Speaking discussion response",
+      "name_bn": "আলোচনামূলক কথন",
+      "family_id": "SPEAKING_PERFORMANCE",
+      "description": "Develop a reasoned spoken response to an abstract discussion prompt.",
+      "prerequisites": [],
+      "related_skills": [
+        "speaking_extended_turn"
+      ],
+      "common_mistake_families": [
+        "underdeveloped-speaking-response"
+      ],
+      "difficulty_band": "INTERMEDIATE",
+      "exam_relevance": [
+        "IELTS"
+      ],
+      "status": "ACTIVE",
+      "version": 1,
+      "example_item_ids": [
+        "ielts-speaking-part3-001",
+        "ielts-speaking-part3-002"
+      ]
     }
   ],
   "item_mappings": [
@@ -5087,6 +5149,126 @@
       "item_id": "ielts-listening-040",
       "primary_skill_id": "listening_information_relationship",
       "primary_family_id": "LISTENING_COMPREHENSION",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part2-001",
+      "primary_skill_id": "speaking_extended_turn",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part2-002",
+      "primary_skill_id": "speaking_extended_turn",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part2-003",
+      "primary_skill_id": "speaking_extended_turn",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part2-004",
+      "primary_skill_id": "speaking_extended_turn",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part2-005",
+      "primary_skill_id": "speaking_extended_turn",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part2-006",
+      "primary_skill_id": "speaking_extended_turn",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part2-007",
+      "primary_skill_id": "speaking_extended_turn",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part2-008",
+      "primary_skill_id": "speaking_extended_turn",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-001",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-002",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-003",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-004",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-005",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-006",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-007",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-008",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-009",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-010",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-011",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "ielts-speaking-part3-012",
+      "primary_skill_id": "speaking_discussion_response",
+      "primary_family_id": "SPEAKING_PERFORMANCE",
       "secondary_skill_ids": []
     }
   ],

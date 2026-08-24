@@ -668,6 +668,26 @@
       "diagnostic_evidence": true,
       "boundary_evidence": false,
       "static_destination": true
+    },
+    {
+      "requirement_id": "speaking_part2_extended_turn",
+      "skill_id": "speaking_extended_turn",
+      "mapping_class": "DIRECT_PRODUCTIVE_TASK_ALIGNMENT",
+      "coverage_status": "PARTIALLY_COVERED",
+      "coverage_note": "Local recording, replay and self-review provide bounded productive-task alignment; no examiner assessment, score, band prediction, or criterion mastery is inferred.",
+      "diagnostic_evidence": false,
+      "boundary_evidence": false,
+      "static_destination": true
+    },
+    {
+      "requirement_id": "speaking_part3_discussion",
+      "skill_id": "speaking_discussion_response",
+      "mapping_class": "DIRECT_PRODUCTIVE_TASK_ALIGNMENT",
+      "coverage_status": "PARTIALLY_COVERED",
+      "coverage_note": "Local recording, replay and self-review provide bounded productive-task alignment; no examiner assessment, score, band prediction, or criterion mastery is inferred.",
+      "diagnostic_evidence": false,
+      "boundary_evidence": false,
+      "static_destination": true
     }
   ],
   "unmapped_requirements": [
@@ -705,16 +725,6 @@
       "requirement_id": "speaking_pronunciation",
       "coverage_status": "CANONICAL_SKILL_GAP",
       "gap_note": "No pronunciation skill or performance evidence exists."
-    },
-    {
-      "requirement_id": "speaking_part2_extended_turn",
-      "coverage_status": "CANONICAL_SKILL_GAP",
-      "gap_note": "No extended-turn skill or speaking-performance evidence exists."
-    },
-    {
-      "requirement_id": "speaking_part3_discussion",
-      "coverage_status": "CANONICAL_SKILL_GAP",
-      "gap_note": "No discussion/analysis/speculation skill or speaking-performance evidence exists."
     }
   ]
 }
