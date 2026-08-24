@@ -214,6 +214,18 @@
       "goal_ids": [
         "IELTS"
       ]
+    },
+    {
+      "destination_id": "content:ielts_writing_letter_task_response",
+      "skill_id": "writing_letter_task_response",
+      "url": "/ielts-writing-practice-bangla.html",
+      "activity_type": "GUIDED_WRITING_PERFORMANCE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 25,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     }
   ]
 }

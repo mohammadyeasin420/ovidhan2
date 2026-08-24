@@ -514,10 +514,11 @@
       "requirement_id": "writing_gt_task1_register",
       "skill_id": "word_choice_register",
       "mapping_class": "DIRECT_TASK_ALIGNMENT",
-      "coverage_status": "PRACTICE_GAP",
+      "coverage_status": "PARTIALLY_COVERED",
       "diagnostic_evidence": true,
       "boundary_evidence": false,
-      "static_destination": false
+      "static_destination": false,
+      "coverage_note": "Reviewed formal, semi-formal and informal/personal letter prompts provide bounded register practice; appropriacy quality is self-reviewed, not automatically assessed."
     },
     {
       "requirement_id": "writing_gt_task2_argument",
@@ -583,8 +584,8 @@
       "requirement_id": "writing_gt_task2_argument",
       "skill_id": "writing_argument_development",
       "mapping_class": "DIRECT_TASK_ALIGNMENT",
-      "coverage_status": "EVIDENCE_GAP",
-      "coverage_note": "Reviewed objective practice exists, but productive IELTS writing performance is not collected.",
+      "coverage_status": "PARTIALLY_COVERED",
+      "coverage_note": "Reviewed GT Task 2 prompts now support productive attempts and self-review; argument quality, language quality, score and band remain unassessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
@@ -604,7 +605,7 @@
       "skill_id": "writing_argument_development",
       "mapping_class": "ASSESSMENT_CRITERION_ALIGNMENT",
       "coverage_status": "PARTIALLY_COVERED",
-      "coverage_note": "Argument development supports Task Response but does not represent the complete criterion and no productive writing evidence is collected.",
+      "coverage_note": "Productive GT Task 2 attempts support bounded Task Response practice, but no automatic quality, completeness, score or band assessment is made.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
@@ -685,6 +686,16 @@
       "mapping_class": "DIRECT_PRODUCTIVE_TASK_ALIGNMENT",
       "coverage_status": "PARTIALLY_COVERED",
       "coverage_note": "Local recording, replay and self-review provide bounded productive-task alignment; no examiner assessment, score, band prediction, or criterion mastery is inferred.",
+      "diagnostic_evidence": false,
+      "boundary_evidence": false,
+      "static_destination": true
+    },
+    {
+      "requirement_id": "writing_gt_task1_letter",
+      "skill_id": "writing_letter_task_response",
+      "mapping_class": "DIRECT_PRODUCTIVE_TASK_ALIGNMENT",
+      "coverage_status": "PARTIALLY_COVERED",
+      "coverage_note": "Reviewed GT letter prompts now support raw-text-in-memory productive attempts and self-review; no Task Achievement quality, language quality, score or band is assessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true

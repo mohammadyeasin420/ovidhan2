@@ -432,4 +432,14 @@ test('performance evidence normalization rejects raw speech and arbitrary fields
     assert.equal(createLearningFoundation({localStorage}).recordPerformanceEvidence(id,'speaking_discussion_response','SPEAKING_PERFORMANCE_ATTEMPT','BAD_TASK','ielts-speaking-part3-001','30_TO_59_SECONDS'),false);
 });
 
+test('writing performance evidence persists coarse metadata and rejects raw writing fields', () => {
+    const { foundation, localStorage }=createHarness(),id='ielts-gt-writing-v1:gt-task1-letter-001';
+    assert.equal(foundation.recordPerformanceEvidence(id,'writing_letter_task_response','WRITING_PERFORMANCE_ATTEMPT','GT_TASK_1_LETTER','gt-task1-letter-001','60_TO_119_SECONDS'),true);
+    const entry=foundation.getState().performanceEvidence[id];
+    assert.equal(entry.attempt_count,1);assert.equal(entry.task_type,'GT_TASK_1_LETTER');
+    ['raw_text','text','response','exact_word_count','word_count','score','band','quality','correctness'].forEach(field=>assert.equal(entry[field],undefined));
+    assert.equal(createLearningFoundation({localStorage}).getState().performanceEvidence[id].skill_id,'writing_letter_task_response');
+    assert.equal(foundation.recordPerformanceEvidence(id,'writing_letter_task_response','WRITING_PERFORMANCE_ATTEMPT','ACADEMIC_TASK_1','gt-task1-letter-001','60_TO_119_SECONDS'),false);
+});
+
 console.log('PASS all learning-foundation tests');
