@@ -59,6 +59,13 @@ function Get-Sha256([string]$Path) {
     return (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant()
 }
 
+function Get-CollectionSize {
+    param([AllowNull()][object]$Value)
+    $size = 0
+    foreach ($item in $Value) { $size += 1 }
+    return $size
+}
+
 function Assert-SafeOutputPath([string]$Path) {
     $resolved = [System.IO.Path]::GetFullPath($Path).TrimEnd('\')
     $deployRoot = [System.IO.Path]::GetFullPath('C:\deploy').TrimEnd('\')
@@ -75,11 +82,11 @@ function Assert-SafeOutputPath([string]$Path) {
 }
 
 function Copy-DirectoryWithRobocopy([string]$Source, [string]$Destination, [string[]]$ExcludedFiles = @()) {
-    $ExcludedFiles = @($ExcludedFiles)
     $arguments = @($Source, $Destination, '/E', '/COPY:DAT', '/DCOPY:DAT', '/R:1', '/W:1', '/NFL', '/NDL', '/NJH', '/NJS', '/NP')
-    if ($ExcludedFiles.Count -gt 0) {
+    $excludedFileCount = Get-CollectionSize $ExcludedFiles
+    if ($excludedFileCount -gt 0) {
         $arguments += '/XF'
-        $arguments += $ExcludedFiles
+        $arguments += @($ExcludedFiles)
     }
     & robocopy @arguments
     if ($LASTEXITCODE -gt 7) {
@@ -106,7 +113,7 @@ function Invoke-OvidhanSmokeRequest {
         $result = @(& curl.exe @arguments)
         if ($LASTEXITCODE -ne 0) { throw "Live smoke request failed (curl exit $LASTEXITCODE): $Url" }
         $statusCode = [int]$result[0]
-        $xRobotsTag = if ($result.Count -gt 1) { [string]$result[1] } else { '' }
+        $xRobotsTag = if ((Get-CollectionSize $result) -gt 1) { [string]$result[1] } else { '' }
         return [pscustomobject]@{
             Url = $Url
             StatusCode = $statusCode
@@ -128,7 +135,7 @@ try {
     if (-not $branch) { throw 'Detached HEAD is not allowed for production builds.' }
     if ($Deploy -and $AllowDirty) { throw '-AllowDirty is for local build/test work only and cannot be combined with -Deploy.' }
     if ($Deploy -and $branch -ne 'main') { throw "Production deployment requires local branch 'main'; current branch is '$branch'." }
-    if ($gitStatus.Count -gt 0 -and -not $AllowDirty) {
+    if ((Get-CollectionSize $gitStatus) -gt 0 -and -not $AllowDirty) {
         throw "Working tree is not clean. Commit/stash changes or use -AllowDirty for local development verification only."
     }
     foreach ($directory in $requiredDirectories) {
@@ -136,7 +143,7 @@ try {
             throw "Required source directory is missing: $directory"
         }
     }
-    foreach ($file in @('enriched-dictionary.json', 'robots.txt', 'sitemap.xml')) {
+    foreach ($file in @('enriched-dictionary.json', 'robots.txt', 'sitemap.xml', 'scripts\minify-production-dictionary.js')) {
         if (-not (Test-Path -LiteralPath (Join-Path $sourceRoot $file) -PathType Leaf)) {
             throw "Required source file is missing: $file"
         }
@@ -153,7 +160,7 @@ try {
     if ($Deploy) { [void](Get-Command curl.exe -ErrorAction Stop) }
     Write-Host "BRANCH: $branch"
     Write-Host "GIT SHA: $gitSha"
-    Write-Host "WORKTREE: $(if ($gitStatus.Count -eq 0) { 'CLEAN' } else { 'DIRTY (explicitly allowed)' })"
+    Write-Host "WORKTREE: $(if ((Get-CollectionSize $gitStatus) -eq 0) { 'CLEAN' } else { 'DIRTY (explicitly allowed)' })"
     Write-Host "WRANGLER LAUNCHER: $($npx.Source)"
 
     Write-Stage 'CLEAN PRODUCTION BUILD'
@@ -187,17 +194,15 @@ try {
     Write-Stage 'MINIFY ENRICHED DICTIONARY'
     $sourceDictionary = Join-Path $sourceRoot 'enriched-dictionary.json'
     $outputDictionary = Join-Path $outputFull 'enriched-dictionary.json'
-    $minifyCode = 'const fs=require("fs");const [src,out]=process.argv.slice(1);const value=JSON.parse(fs.readFileSync(src,"utf8"));fs.writeFileSync(out,JSON.stringify(value));'
-    Invoke-Checked $node.Source @('-e', $minifyCode, $sourceDictionary, $outputDictionary) 'Dictionary minification failed'
-    $verifyCode = 'const fs=require("fs");const [src,out]=process.argv.slice(1);const expected=JSON.stringify(JSON.parse(fs.readFileSync(src,"utf8")));const actual=fs.readFileSync(out,"utf8");if(actual!==expected)process.exit(1);'
-    Invoke-Checked $node.Source @('-e', $verifyCode, $sourceDictionary, $outputDictionary) 'Minified dictionary semantic verification failed'
+    $dictionaryTool = Join-Path $sourceRoot 'scripts\minify-production-dictionary.js'
+    Invoke-Checked $node.Source @($dictionaryTool, $sourceDictionary, $outputDictionary) 'Dictionary minification or semantic verification failed'
     $dictionaryHash = Get-Sha256 $outputDictionary
 
     Write-Stage 'WORD AND SEO VALIDATION'
     $trackedWordFiles = @(& git -c core.quotepath=false ls-files -- 'word/*.html')
-    $trackedWordCount = $trackedWordFiles.Count
+    $trackedWordCount = Get-CollectionSize $trackedWordFiles
     $outputWordFiles = @(Get-ChildItem -LiteralPath (Join-Path $outputFull 'word') -File -Filter '*.html')
-    $wordCount = $outputWordFiles.Count
+    $wordCount = Get-CollectionSize $outputWordFiles
     $unicodeWordFiles = @($outputWordFiles | Where-Object { $_.BaseName -match '[^\x00-\x7F]' })
     $sourceNames = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::Ordinal)
     Get-ChildItem -LiteralPath (Join-Path $sourceRoot 'word') -File -Filter '*.html' | ForEach-Object { [void]$sourceNames.Add($_.Name) }
@@ -207,8 +212,11 @@ try {
     $extraWords = @($outputNames | Where-Object { -not $sourceNames.Contains($_) })
     if ($trackedWordCount -ne $expectedWordCount) { throw "Git-tracked word count is $trackedWordCount; expected $expectedWordCount." }
     if ($wordCount -ne $expectedWordCount) { throw "Production word count is $wordCount; expected $expectedWordCount." }
-    if ($unicodeWordFiles.Count -ne $expectedUnicodeWordCount) { throw "Unicode word count is $($unicodeWordFiles.Count); expected $expectedUnicodeWordCount." }
-    if ($missingWords.Count -gt 0 -or $extraWords.Count -gt 0) { throw "Production/source word mismatch: $($missingWords.Count) missing, $($extraWords.Count) extra." }
+    $unicodeWordCount = Get-CollectionSize $unicodeWordFiles
+    $missingWordCount = Get-CollectionSize $missingWords
+    $extraWordCount = Get-CollectionSize $extraWords
+    if ($unicodeWordCount -ne $expectedUnicodeWordCount) { throw "Unicode word count is $unicodeWordCount; expected $expectedUnicodeWordCount." }
+    if ($missingWordCount -gt 0 -or $extraWordCount -gt 0) { throw "Production/source word mismatch: $missingWordCount missing, $extraWordCount extra." }
 
     foreach ($word in @($pilotTreatment + $pilotControls)) {
         if (-not (Test-Path -LiteralPath (Join-Path $outputFull "word\$word.html") -PathType Leaf)) {
@@ -241,15 +249,16 @@ try {
         if (Test-Path -LiteralPath (Join-Path $outputFull $file)) { throw "Internal audit file leaked: $file" }
     }
     $allAssets = @(Get-ChildItem -LiteralPath $outputFull -File -Recurse)
-    if ($allAssets.Count -gt $maximumAssetCount) { throw "Asset count $($allAssets.Count) exceeds paid Workers limit $maximumAssetCount." }
+    $assetCount = Get-CollectionSize $allAssets
+    if ($assetCount -gt $maximumAssetCount) { throw "Asset count $assetCount exceeds paid Workers limit $maximumAssetCount." }
     $oversized = @($allAssets | Where-Object { $_.Length -gt $maximumAssetBytes })
-    if ($oversized.Count -gt 0) {
+    if ((Get-CollectionSize $oversized) -gt 0) {
         throw "Asset exceeds Cloudflare's 25 MiB limit: $(Get-RelativePath $outputFull $oversized[0].FullName)"
     }
     $leakedRootDevelopment = @($allAssets | Where-Object {
         $_.DirectoryName -eq $outputFull -and $_.Extension.ToLowerInvariant() -in @('.py', '.csv', '.bat', '.md')
     })
-    if ($leakedRootDevelopment.Count -gt 0) { throw "Root development file leaked: $($leakedRootDevelopment[0].Name)" }
+    if ((Get-CollectionSize $leakedRootDevelopment) -gt 0) { throw "Root development file leaked: $($leakedRootDevelopment[0].Name)" }
 
     Write-Stage 'WRANGLER DRY RUN'
     $wranglerVersionText = (& $npx.Source wrangler --version 2>&1 | Out-String).Trim()
@@ -264,7 +273,7 @@ try {
     $deploymentStatus = 'NOT RUN'
     if ($Deploy) {
         Write-Stage 'EXPLICIT PRODUCTION DEPLOYMENT'
-        Write-Host "PRODUCTION PACKAGE COUNT: $($allAssets.Count)"
+        Write-Host "PRODUCTION PACKAGE COUNT: $assetCount"
         Write-Host "GIT SHA: $gitSha"
         Write-Host "WORD COUNT: $wordCount"
         Write-Host "DICTIONARY HASH: $dictionaryHash"
@@ -278,9 +287,11 @@ try {
         Write-Stage 'POST-DEPLOY SMOKE TESTS'
         $localAddresses = @(Resolve-DnsName -Name 'ovidhan.net' -Type A -ErrorAction Stop | Where-Object IPAddress | ForEach-Object IPAddress | Sort-Object -Unique)
         $publicDns = Invoke-RestMethod -Uri 'https://cloudflare-dns.com/dns-query?name=ovidhan.net&type=A' -Headers @{ Accept = 'application/dns-json' } -TimeoutSec 30
-        $publicAddresses = @($publicDns.Answer | Where-Object type -eq 1 | ForEach-Object data | Sort-Object -Unique)
-        if ($publicAddresses.Count -eq 0) { throw 'Public Cloudflare DNS returned no A records for ovidhan.net.' }
-        $dnsMismatch = @(Compare-Object $localAddresses $publicAddresses).Count -gt 0
+        $answerProperty = $publicDns.PSObject.Properties['Answer']
+        $dnsAnswers = if ($null -eq $answerProperty) { @() } else { @($answerProperty.Value) }
+        $publicAddresses = @($dnsAnswers | Where-Object type -eq 1 | ForEach-Object data | Sort-Object -Unique)
+        if ((Get-CollectionSize $publicAddresses) -eq 0) { throw 'Public Cloudflare DNS returned no A records for ovidhan.net.' }
+        $dnsMismatch = ($localAddresses -join "`n") -ne ($publicAddresses -join "`n")
         $smokeResolveAddress = if ($dnsMismatch) { $publicAddresses[0] } else { $null }
         Write-Host "PUBLIC CLOUDFLARE DNS: $($publicAddresses -join ', ')"
         Write-Host "LOCAL RESOLVER DNS: $($localAddresses -join ', ')"
@@ -318,9 +329,9 @@ try {
 
     Write-Stage 'RESULT'
     Write-Host 'BUILD: PASS'
-    Write-Host "ASSET COUNT: PASS ($($allAssets.Count) / $maximumAssetCount)"
+    Write-Host "ASSET COUNT: PASS ($assetCount / $maximumAssetCount)"
     Write-Host "WORD COUNT: PASS ($wordCount)"
-    Write-Host "UNICODE RECONCILIATION: PASS ($($unicodeWordFiles.Count); Git-tracked, generated 0, missing 0, extra 0)"
+    Write-Host "UNICODE RECONCILIATION: PASS ($unicodeWordCount; Git-tracked, generated 0, missing 0, extra 0)"
     Write-Host "DICTIONARY: PASS ($dictionaryHash)"
     Write-Host 'INTERNAL FILE LEAK: PASS'
     Write-Host 'FILE SIZE: PASS'
