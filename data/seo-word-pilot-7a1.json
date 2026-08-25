@@ -1,74 +1,138 @@
 {
-  "schema": "ovidhan-seo-word-static-pilot-7a1-v1",
-  "approved_cohort_source": "Human-approved 48-word list supplied for Phase 7A1-C",
-  "assignment_rule": "Sort by quality_score descending then slug ascending; form adjacent pairs; SHA-256(pair_slug_1 + \"|\" + pair_slug_2 + \"|7A1\"); even first hex digit assigns first member to treatment, odd assigns second.",
-  "quality_score_formula": "+1 pronunciation; +1 part_of_speech; +2 any singular example or examples-array item; +0.5 each for up to 3 synonyms; +0.5 each for up to 3 antonyms; +0.5 each for up to 3 collocations; +1 non-empty verb_forms object; +1 story.",
-  "rendering_exclusions": [
-    "example",
-    "examples",
-    "synonyms",
-    "antonyms"
+  "schema": "ovidhan-seo-word-static-pilot-7a1-v2",
+  "hypothesis": "Does converting a JS-shell word page to useful static raw HTML improve crawl/index behavior?",
+  "approved_population_source": "Exact human-approved 48-word list supplied for Phase 7A1-C",
+  "approved_population": [
+    "acceptable",
+    "acting",
+    "aspects",
+    "association",
+    "beast",
+    "buildings",
+    "businesses",
+    "cartridge",
+    "casual",
+    "cheap",
+    "comparison",
+    "constitution",
+    "dancing",
+    "degrees",
+    "doctor",
+    "dress",
+    "evil",
+    "exercise",
+    "forecast",
+    "gene",
+    "increase",
+    "internet",
+    "interviews",
+    "mass",
+    "merchants",
+    "model",
+    "name",
+    "nation",
+    "notebooks",
+    "objects",
+    "offers",
+    "packaging",
+    "popular",
+    "posters",
+    "process",
+    "proposal",
+    "psychology",
+    "pub",
+    "request",
+    "result",
+    "rules",
+    "stick",
+    "studies",
+    "sufficient",
+    "terminal",
+    "tests",
+    "textbooks",
+    "typical"
   ],
+  "assignment_rule": "Filter to baseline JS_SHELL; sort by quality_score descending then slug ascending; drop final odd entry; pair adjacent entries; SHA-256(first_slug + \"|\" + second_slug + \"|7A1\"); even first hex digit assigns first member to treatment, odd assigns second.",
+  "quality_score_formula": "+1 pronunciation; +1 part_of_speech; +2 any singular example or examples-array item; +0.5 each for up to 3 synonyms; +0.5 each for up to 3 antonyms; +0.5 each for up to 3 collocations; +1 non-empty verb_forms object; +1 story.",
+  "render_example": false,
+  "render_examples": false,
+  "render_synonyms": false,
+  "render_antonyms": false,
+  "render_collocations": false,
+  "render_verb_forms": false,
+  "render_story": false,
   "counts": {
-    "total": 48,
-    "treatment": 24,
-    "control": 24,
-    "pairs": 24
+    "approved_population_count": 48,
+    "eligible_js_shell_count": 43,
+    "experiment_treatment_count": 21,
+    "experiment_control_count": 21,
+    "unused_static_core_count": 5,
+    "unused_odd_shell_count": 1
+  },
+  "unused": {
+    "static_core": [
+      "acceptable",
+      "acting",
+      "aspects",
+      "association",
+      "beast"
+    ],
+    "odd_shell": [
+      "stick"
+    ]
   },
   "baseline": {
     "captured_from_main_sha": "9c666d3c12120c2a68197e408b51061087294961",
-    "word_file_count": 49628,
-    "all_word_aggregate_sha256": "e3c2cf22a83e1e120c2de07d21750a3e648410a896a1db973141bd20b7454a8a",
-    "non_treatment_word_aggregate_sha256": "dd0d79f711cf2f7664047cc503e11af0c3d47631a832c813a05b8ac7bf98f97d",
+    "word_file_count": 49514,
     "cohort_page_sha256": {
-      "textbooks": "e796bd02abe1943c67cf951bd2bb527b100a05c7d1249e1c55fc592e63ce3ba0",
-      "acting": "aeaf7b860676fb5ad0d3f77be46584bb9d5e59c259849a512187ac04f45db7bd",
-      "beast": "1148dd05b0274c95232d622684f24a2395b594405d90d9ca821e8a98dc7015e2",
-      "businesses": "20f4e413b33c452f1f154d54c5e5200b5952d0ab0e0e7aef47f4cb7370ae059a",
-      "casual": "4416d37ab121012179c2aaa4a7fe00e2b6715fb2dab9bbd5b94626e20956012e",
-      "cheap": "9e5313b1d6a03e47f3e9fc69f3f29e62ec613276f4b2dd6d2a08e67b6ba65944",
-      "constitution": "172e1770cccf2ab72b11d03a9ce3fc211648858f5cfb5815a9db43c563b1181e",
-      "dancing": "8101f19a49b8c942af4c8b231f29d57ac3d5130a9bb78de64832af207eb50ee9",
-      "degrees": "d054508685f6604054799f617b5ff1a732003cf843cd48501fe4f61c50ee050c",
-      "doctor": "13e89f6c5d3cb36c2ca807188c5df977d557a1cd78384c0f7e94b2fa2b6877f3",
-      "evil": "6e95aa16db2472a337fd1205a55313db10e3af1c0db720206b3286d17fdfabad",
-      "exercise": "064e60eed587be255b6f5691eaed74f8686896e57fc950006ad497a7f896999c",
-      "gene": "35ed31b8405969ddc51601e40607184d4721f450f19c32a9c2baa9076550c333",
-      "increase": "7b232ea9a4973159cc23c4957ae8b646231f49e5fb37f6ca35b0830441365957",
-      "internet": "b237a21d0e9db58aaa577155d1098fe9437cfacd634677478bdc3ea72d1aece9",
-      "model": "b1b87929f028283bb86d351aaf5522317b22cb82507129f03143e36e6cf4b4bb",
-      "nation": "360c303acbf682b74c95612dca1747aade5e6a11f73cdd488dfe884a03bba56d",
-      "posters": "6232724517aef922676c4d4da501588969717a0cb49f8efd713d5b78c799b289",
-      "pub": "390de2709a0dd329c69000217c9d0d45fb43e50316927883ebe34cda6febc61e",
-      "request": "279f845521903496b0abdfebbda5820cba6ce8cc05b924fd0df6a458f60f95ad",
-      "result": "d74bb2ec130f6465391f8db0c931b7c8560f60b4fd597eed2ba18b9fef7f257e",
-      "terminal": "06bdd3a8d719813b36631eb2e4395428d1fe9666122465b6f49856109cdc81a8",
-      "tests": "93b56d8b3b558f243b2a72433562f9e42b312300787b8178362072b3902aa9d3",
-      "acceptable": "c0674002b29f257c64bc311de356180b1157970db910fcec7273572238e30158",
-      "aspects": "3abb54d86c27e648ac9dca6ddd8deefb6ea1a33b5d44e90f756d2950ae0d5921",
-      "buildings": "78ae7e6715ec7e8c4a83f1c406b4d9a50c51b94432b81afc1639aad8389bc88f",
-      "comparison": "af60d64327e12c9611ed4642932d54ce58994b11e3d3c26e67b317dde58c09d1",
-      "dress": "7ca3f81aa524d3f1372b2b4d255a68fc8401bd8f3be38054e22bf399b6994191",
-      "forecast": "86c328ae89e184a400cb6e8afd70decace908626577e5d6333076dc7e7ab4e14",
-      "merchants": "9496e04a1d2942853877f206df177dd668b700055d4630c1dcd3ec7cc8c4b87e",
-      "objects": "deab61c9c0c65e8bafbb7275e30bf9c283da6a445900d4f6746fca7302eec162",
-      "offers": "2592b18008419f4059464e2b67f3f29fc0e3eb5fff26f5b118c71b0a32e4f50e",
-      "popular": "d124531b0ce53aee544ef86656b060f5e63aa58d86110f2276dd7eba5f05fc42",
-      "process": "6f445a618c468168f609d09e9f117b877a12e58dcfecb8f43cf42745a119c0fe",
-      "psychology": "e636650543022cb193f5e7f99dbfb5f3fe620737dfbe5de458462cb0e5bebf14",
-      "rules": "7350a615571c5ceaf7beaa349f739735f0d10c247cfaf3a9a7468f919d864af2",
-      "studies": "d138375c9961ab648c594c8dab9988a9fa0a23c359507facf795276af52d2a5a",
-      "sufficient": "3c107a07c43151d25f5dbead3a9e0391af919dd692098f928d4204b5e7ffa00d",
-      "typical": "17b4db10a0034118719feb34cd372a800017e6e63fa12c86e06e50edaa43f616",
-      "association": "b162643d91861eb1469404d6373decd654479d4d76e9c6f4b83f06c294570b9f",
-      "cartridge": "fac27d393d178d6b3ec9b582262d33af2ccd88cef9e8368a4f76e7102a825a33",
-      "interviews": "5caf75b27432ac3f3eef31c2e20ef16223a6a7f00a9700e9a5b248a30369baf5",
-      "mass": "de727c29a468d91edb42c09f10311703d05b576867c4a2d2512d6b3a83ff60d2",
-      "name": "c08d424e20d915adbd8d9f34eb6c22ff8bf42c27ff71629b49a1670bd3ffa837",
-      "notebooks": "fa5e184730260def9dbb4646bfd6ce25c179fb32b26610cf9972edcea4733431",
-      "packaging": "3e05f7b87e451d40d590303e6247ebfec57579b7b9edd4b8ca0045f1a3003f74",
-      "proposal": "df409e1cdb716bb78aae31a86480d49d237dd66e6bb71881c008c219fd6ab02a",
-      "stick": "72615586c1797a855da1634073074245ac88fda7d9efd65f04375a8b049be5df"
+      "acceptable": "808f1092561b74332754e14b650b1b23ca36e1720e667d77bb964f7aba52c59f",
+      "acting": "2395f6e0e7db0a2cdffe2105a3edc3a34a1908a7838487c4727ccdc21ecffa0b",
+      "aspects": "c83814f814e54b2168f0fb71320f4e839f63a16a0f1c43b9a780bbea2fcc38f7",
+      "association": "2ce1997279c7f50cbf4043ee9e31b89645c116a3b3a9eafdc0ce1a397826e46f",
+      "beast": "0c3367ceedd5dedf3eeb27d55060f7be3cd95901a5f0494b43ca97657b7a36ba",
+      "buildings": "f557295c16818a95f2ff30be146f43e75a69a909d8b8c4678894456f51bc8b24",
+      "businesses": "f85ac1ae3bf180aec971595199dd942fc0d3bbe09045c21c4ee5110a10b999ef",
+      "cartridge": "006b9b2d8dbe91aa88654770bac0b2fef1a350211d5199c794c6c7d12195c9bb",
+      "casual": "cd30123df963be83272d4de1bd1c18aab04518d5b82b0a35126b12fa5b5201a0",
+      "cheap": "5e59a63cbe2694d0c8384c3e706de801ea32d0fca3e8bc8e298bec66deab31d7",
+      "comparison": "018a01305290edbdfcd8ec4ae3adc686ae288bc7952bdd08879489732e340a76",
+      "constitution": "803d46433dd5bb8a87df75d32e8e488682c06cce233af69e16d853248c3742d1",
+      "dancing": "db2cb553e5091de1a7af16f987a34dce0afd40ce4accacb875fa926b90f5adf1",
+      "degrees": "2fb1f86b803a897dad3d4ae1539f48edb66aea161bf7741c1fefa9a80a74bc22",
+      "doctor": "c694b9a49d0994b42d23a1f1cd22675d1c0d679ea672d6fc905009b58aaf240a",
+      "dress": "da340463fc9e16cae3a18e6d43973d844d2ca4b86bd12771d252f8a5bf534258",
+      "evil": "57623055eac1523307d0006d89a76c75b36923d29b9e23f7b6ea01b22a992aec",
+      "exercise": "34c3b4b400bbe1402e1fc1dec9bcdce0e8d2dd1b3dd6d59067526d6c168af06e",
+      "forecast": "a528995c218cacedad2191867a3ae7e5223b91c8871f08ab377b51345b61a83d",
+      "gene": "1a149e2e9e38e3827f8b184aa6c9d59bb877da84e11ce356d5737e0fe7182a6c",
+      "increase": "8dd5a4d3533c8da9a432b4f46ae2406f454ea2b8643a4e38b578fbdc936032ba",
+      "internet": "9ba8c3227120628193c47777351a30e2f6eac1871d0d5c24d579db3d95e4f9ee",
+      "interviews": "3ff6dc325534d7d4aa46b829394b124d2af5f5940422cc2d1c0e0569723d1473",
+      "mass": "f13abcc7f8f03db06b4dca8c1ba41b891eabfa50958eb964f6c1528b36e4fd41",
+      "merchants": "fe9ed14ac2f82a2f23ac8ebb6b5073cf73612bc3e4a8e80f05cf16961a980ee2",
+      "model": "497c51f369d7bb681cb099df30d014d6b4ec5853883a4fc80dec1d48a0a36fe6",
+      "name": "b5aa5493e2d92f984d46af946377becdf4d606decb4e0d41a945b5f716a2a953",
+      "nation": "7804147a5e4eefc395c2e79613e5e243581a65c7a26f4e40743326e8c585631e",
+      "notebooks": "80febb5246825bfaf4d52a5af7ead6824db4407afcd0660639f5d1cc1308cf5a",
+      "objects": "e3cb56abddfb464c9d7895812bba9758fa4d0b33c3899eee4f12c84e3a9d0ce1",
+      "offers": "376241e8614d5fe13df4f7ff1e8c9c8a9819b3d0eb880eef6a74e658092582f0",
+      "packaging": "058eef2627c1ab26664f79ad27dd5b32612f0f87bdc969eafc78a5d34a1ec42a",
+      "popular": "09c80d0dee7880df2708027272edca81207b2c30309835020b17be3c2a3328d3",
+      "posters": "5022da5d9a6bbc27f96feada5daa3c36e09f84b0994af2ecdf4a837bd04060c8",
+      "process": "0c433b27fa6b0818fe5a3b00d9b88db12c9fec7fece60f5339f7735077b2c8f5",
+      "proposal": "c2c638c3e3754bc97d1e2a73b12f751b8f0f7ce51a9d221bf36cee49d74a1524",
+      "psychology": "7e2ec054d4b6790474f44212a5d76ee6d9bcfb69dda9ff856137333e7f31928e",
+      "pub": "e9e28050a50e242805370cc811bdcb11dac1f0224aa35eb0bb1d1bcdff9b005e",
+      "request": "6fa069c0b11fd04f8bae29dc9310b46e3efe896f4f20e55b5964b71f9550ec49",
+      "result": "4ebf0ed9a431b311ec42b28b4db8953ec74ea8f539d11fbfd19d1f08f7b2ba59",
+      "rules": "a25b4379e66545e14ddef639dde773cb93071e133409a17db506214ccac5fd48",
+      "stick": "4a807472a2c3c8fccf24fb478b9e09516ed8e9cfefe03443c9e69d37e5caae12",
+      "studies": "7c46d8bf28d3f8e91113ed691412f9431e2ed28f187a0cbaf8f80077c665a2d9",
+      "sufficient": "7c37e6ed9888f5fed2ce7d1eada8c2318426c61bb12b333a34d98da5ef307af1",
+      "terminal": "39ea719948102d87500a4581eb847ea45fbad69a07265f9ad0a46025eb28aab4",
+      "tests": "00a2f20638d73f343149d73e1b09a386dd71d9f6e5ef25009ca767d9fede03e6",
+      "textbooks": "f951a0ca3ccea798069d0af1422b7c12953c8cc3885525b3642f991c36b95a99",
+      "typical": "de90841c1ec9eb8b8ce6c21357815519c8983ee8daa461a098bd87936591a181"
     },
     "sitemap_sha256": {
       "sitemap-index.xml": "c491d6136340e62060bb7795902274e9ff219c155599386521631ac2a90d8d73",
@@ -90,34 +154,15 @@
       "dictionary_index": 3803,
       "quality_score": 5,
       "pair_id": "7A1-01",
-      "assignment_sha256": "530c835a1d4ac34ff14da8b69cd0ee447eb1aaf5d9d1870b6cbdcae71c4b24fc",
+      "assignment_sha256": "1332682b6e43d37e27914f50f84521f33ecce8bb5edd31efb23c10bad4e523be",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms",
-        "antonyms"
-      ],
-      "in_gsc_export": true,
-      "in_sitemap": true
-    },
-    {
-      "word": "acting",
-      "slug": "acting",
-      "url": "https://ovidhan.net/word/acting.html",
-      "dictionary_index": 3911,
-      "quality_score": 4.5,
-      "pair_id": "7A1-01",
-      "assignment_sha256": "530c835a1d4ac34ff14da8b69cd0ee447eb1aaf5d9d1870b6cbdcae71c4b24fc",
-      "group": "treatment",
-      "available_fields": [
-        "bangla",
-        "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -128,34 +173,16 @@
       "url": "https://ovidhan.net/word/businesses.html",
       "dictionary_index": 1698,
       "quality_score": 4.5,
-      "pair_id": "7A1-02",
-      "assignment_sha256": "431720443f6bacebfb3d652d3ff29fe07d0b0bd91477caea5e704606cf7fcce9",
-      "group": "control",
-      "available_fields": [
-        "bangla",
-        "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
-      ],
-      "in_gsc_export": true,
-      "in_sitemap": true
-    },
-    {
-      "word": "beast",
-      "slug": "beast",
-      "url": "https://ovidhan.net/word/beast.html",
-      "dictionary_index": 4614,
-      "quality_score": 4.5,
-      "pair_id": "7A1-02",
-      "assignment_sha256": "431720443f6bacebfb3d652d3ff29fe07d0b0bd91477caea5e704606cf7fcce9",
+      "pair_id": "7A1-01",
+      "assignment_sha256": "1332682b6e43d37e27914f50f84521f33ecce8bb5edd31efb23c10bad4e523be",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -166,16 +193,16 @@
       "url": "https://ovidhan.net/word/cheap.html",
       "dictionary_index": 826,
       "quality_score": 4.5,
-      "pair_id": "7A1-03",
+      "pair_id": "7A1-02",
       "assignment_sha256": "c02f04cd2d3e78dabd9753a7c25f771e497eb59079a6055d4b0701c37ec1939b",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms",
-        "antonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -186,15 +213,16 @@
       "url": "https://ovidhan.net/word/casual.html",
       "dictionary_index": 4827,
       "quality_score": 4.5,
-      "pair_id": "7A1-03",
+      "pair_id": "7A1-02",
       "assignment_sha256": "c02f04cd2d3e78dabd9753a7c25f771e497eb59079a6055d4b0701c37ec1939b",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -205,15 +233,16 @@
       "url": "https://ovidhan.net/word/constitution.html",
       "dictionary_index": 3627,
       "quality_score": 4.5,
-      "pair_id": "7A1-04",
+      "pair_id": "7A1-03",
       "assignment_sha256": "9aeb34eb702ce9a7cad39c5ae39f696bed6ce92453868bec9bf564c439b2e5f3",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -224,15 +253,16 @@
       "url": "https://ovidhan.net/word/dancing.html",
       "dictionary_index": 4723,
       "quality_score": 4.5,
-      "pair_id": "7A1-04",
+      "pair_id": "7A1-03",
       "assignment_sha256": "9aeb34eb702ce9a7cad39c5ae39f696bed6ce92453868bec9bf564c439b2e5f3",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -243,15 +273,16 @@
       "url": "https://ovidhan.net/word/doctor.html",
       "dictionary_index": 2033,
       "quality_score": 4.5,
-      "pair_id": "7A1-05",
+      "pair_id": "7A1-04",
       "assignment_sha256": "2672bd545d02de0de22a8ee1255847263b08ba91c217964064a56cad6437b9d8",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -262,15 +293,16 @@
       "url": "https://ovidhan.net/word/degrees.html",
       "dictionary_index": 2818,
       "quality_score": 4.5,
-      "pair_id": "7A1-05",
+      "pair_id": "7A1-04",
       "assignment_sha256": "2672bd545d02de0de22a8ee1255847263b08ba91c217964064a56cad6437b9d8",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -281,15 +313,16 @@
       "url": "https://ovidhan.net/word/evil.html",
       "dictionary_index": 3007,
       "quality_score": 4.5,
-      "pair_id": "7A1-06",
+      "pair_id": "7A1-05",
       "assignment_sha256": "78ee46672cda579026bd0d85efcb1c8724940824fb2c7fe4a83dbcf9420f3839",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -300,15 +333,16 @@
       "url": "https://ovidhan.net/word/exercise.html",
       "dictionary_index": 2041,
       "quality_score": 4.5,
-      "pair_id": "7A1-06",
+      "pair_id": "7A1-05",
       "assignment_sha256": "78ee46672cda579026bd0d85efcb1c8724940824fb2c7fe4a83dbcf9420f3839",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -319,15 +353,16 @@
       "url": "https://ovidhan.net/word/increase.html",
       "dictionary_index": 984,
       "quality_score": 4.5,
-      "pair_id": "7A1-07",
+      "pair_id": "7A1-06",
       "assignment_sha256": "6c26ce3c5d99d9229378db971398805098486b6b5b53420631acb2a4c64c5dff",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -338,15 +373,16 @@
       "url": "https://ovidhan.net/word/gene.html",
       "dictionary_index": 2348,
       "quality_score": 4.5,
-      "pair_id": "7A1-07",
+      "pair_id": "7A1-06",
       "assignment_sha256": "6c26ce3c5d99d9229378db971398805098486b6b5b53420631acb2a4c64c5dff",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -357,15 +393,16 @@
       "url": "https://ovidhan.net/word/internet.html",
       "dictionary_index": 247,
       "quality_score": 4.5,
-      "pair_id": "7A1-08",
+      "pair_id": "7A1-07",
       "assignment_sha256": "f9329dc9288fb02f33c966ff3de82fbd6af3b71037cc2d5fef830eee613f24dc",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -376,15 +413,16 @@
       "url": "https://ovidhan.net/word/model.html",
       "dictionary_index": 475,
       "quality_score": 4.5,
-      "pair_id": "7A1-08",
+      "pair_id": "7A1-07",
       "assignment_sha256": "f9329dc9288fb02f33c966ff3de82fbd6af3b71037cc2d5fef830eee613f24dc",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -395,15 +433,16 @@
       "url": "https://ovidhan.net/word/posters.html",
       "dictionary_index": 2315,
       "quality_score": 4.5,
-      "pair_id": "7A1-09",
+      "pair_id": "7A1-08",
       "assignment_sha256": "4960f86553986196391aa99de63984141af41174c44c0045bfe6193925e8b2e4",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -414,15 +453,16 @@
       "url": "https://ovidhan.net/word/nation.html",
       "dictionary_index": 1848,
       "quality_score": 4.5,
-      "pair_id": "7A1-09",
+      "pair_id": "7A1-08",
       "assignment_sha256": "4960f86553986196391aa99de63984141af41174c44c0045bfe6193925e8b2e4",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -433,15 +473,16 @@
       "url": "https://ovidhan.net/word/request.html",
       "dictionary_index": 626,
       "quality_score": 4.5,
-      "pair_id": "7A1-10",
+      "pair_id": "7A1-09",
       "assignment_sha256": "061ff85f9ab6c429f0f221034b1506f3bb7dea986c582796e75ed2b92069bf1b",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -452,15 +493,16 @@
       "url": "https://ovidhan.net/word/pub.html",
       "dictionary_index": 3265,
       "quality_score": 4.5,
-      "pair_id": "7A1-10",
+      "pair_id": "7A1-09",
       "assignment_sha256": "061ff85f9ab6c429f0f221034b1506f3bb7dea986c582796e75ed2b92069bf1b",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -471,15 +513,16 @@
       "url": "https://ovidhan.net/word/terminal.html",
       "dictionary_index": 3524,
       "quality_score": 4.5,
-      "pair_id": "7A1-11",
+      "pair_id": "7A1-10",
       "assignment_sha256": "479db55d3e02ab636af983ead38a822328a84332b9e2bc5014eee2a848eca6a8",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -490,54 +533,16 @@
       "url": "https://ovidhan.net/word/result.html",
       "dictionary_index": 610,
       "quality_score": 4.5,
-      "pair_id": "7A1-11",
+      "pair_id": "7A1-10",
       "assignment_sha256": "479db55d3e02ab636af983ead38a822328a84332b9e2bc5014eee2a848eca6a8",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
-      ],
-      "in_gsc_export": true,
-      "in_sitemap": true
-    },
-    {
-      "word": "tests",
-      "slug": "tests",
-      "url": "https://ovidhan.net/word/tests.html",
-      "dictionary_index": 1931,
-      "quality_score": 4.5,
-      "pair_id": "7A1-12",
-      "assignment_sha256": "171af3df5ebc353cadc155c3694bc15232eed3a66e7a72b29ed74619d7207e80",
-      "group": "control",
-      "available_fields": [
-        "bangla",
-        "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
-      ],
-      "in_gsc_export": true,
-      "in_sitemap": true
-    },
-    {
-      "word": "acceptable",
-      "slug": "acceptable",
-      "url": "https://ovidhan.net/word/acceptable.html",
-      "dictionary_index": 4665,
-      "quality_score": 4,
-      "pair_id": "7A1-12",
-      "assignment_sha256": "171af3df5ebc353cadc155c3694bc15232eed3a66e7a72b29ed74619d7207e80",
-      "group": "treatment",
-      "available_fields": [
-        "bangla",
-        "definition",
-        "example",
-        "part_of_speech",
-        "synonyms",
-        "antonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -548,34 +553,36 @@
       "url": "https://ovidhan.net/word/buildings.html",
       "dictionary_index": 2847,
       "quality_score": 4,
-      "pair_id": "7A1-13",
-      "assignment_sha256": "c1bbccdb340a861408f7f063a6f3508e4d999c35d19d54e3070428ebd9c93856",
+      "pair_id": "7A1-11",
+      "assignment_sha256": "ea5d84a222edec03a4ec82b8216b999f6e536af742be712bb36acf394b3e32b2",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
     },
     {
-      "word": "aspects",
-      "slug": "aspects",
-      "url": "https://ovidhan.net/word/aspects.html",
-      "dictionary_index": 2796,
-      "quality_score": 4,
-      "pair_id": "7A1-13",
-      "assignment_sha256": "c1bbccdb340a861408f7f063a6f3508e4d999c35d19d54e3070428ebd9c93856",
+      "word": "tests",
+      "slug": "tests",
+      "url": "https://ovidhan.net/word/tests.html",
+      "dictionary_index": 1931,
+      "quality_score": 4.5,
+      "pair_id": "7A1-11",
+      "assignment_sha256": "ea5d84a222edec03a4ec82b8216b999f6e536af742be712bb36acf394b3e32b2",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -586,15 +593,16 @@
       "url": "https://ovidhan.net/word/comparison.html",
       "dictionary_index": 2254,
       "quality_score": 4,
-      "pair_id": "7A1-14",
+      "pair_id": "7A1-12",
       "assignment_sha256": "3f3763ea19d5a45e11d0b2b6122885fc694799ea2f7590e0fda532b749787ded",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -605,15 +613,16 @@
       "url": "https://ovidhan.net/word/dress.html",
       "dictionary_index": 2866,
       "quality_score": 4,
-      "pair_id": "7A1-14",
+      "pair_id": "7A1-12",
       "assignment_sha256": "3f3763ea19d5a45e11d0b2b6122885fc694799ea2f7590e0fda532b749787ded",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -624,15 +633,16 @@
       "url": "https://ovidhan.net/word/forecast.html",
       "dictionary_index": 2692,
       "quality_score": 4,
-      "pair_id": "7A1-15",
+      "pair_id": "7A1-13",
       "assignment_sha256": "7c3d0ed00c41bbfacaaf5bd73250c7b22f7eea716207a94c5a5013aac5d1ea9f",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -643,15 +653,16 @@
       "url": "https://ovidhan.net/word/merchants.html",
       "dictionary_index": 4793,
       "quality_score": 4,
-      "pair_id": "7A1-15",
+      "pair_id": "7A1-13",
       "assignment_sha256": "7c3d0ed00c41bbfacaaf5bd73250c7b22f7eea716207a94c5a5013aac5d1ea9f",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -662,15 +673,16 @@
       "url": "https://ovidhan.net/word/objects.html",
       "dictionary_index": 2374,
       "quality_score": 4,
-      "pair_id": "7A1-16",
+      "pair_id": "7A1-14",
       "assignment_sha256": "976a798c25d65b0236cbb31b3a24d9eaf71d2e386956add4f26829f8c13f9557",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -681,15 +693,16 @@
       "url": "https://ovidhan.net/word/offers.html",
       "dictionary_index": 544,
       "quality_score": 4,
-      "pair_id": "7A1-16",
+      "pair_id": "7A1-14",
       "assignment_sha256": "976a798c25d65b0236cbb31b3a24d9eaf71d2e386956add4f26829f8c13f9557",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -700,15 +713,16 @@
       "url": "https://ovidhan.net/word/process.html",
       "dictionary_index": 430,
       "quality_score": 4,
-      "pair_id": "7A1-17",
+      "pair_id": "7A1-15",
       "assignment_sha256": "4e8012ded4411288d030b0be864b68b9139a73007f9ba4cbc349b5cb11ba08de",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -719,16 +733,16 @@
       "url": "https://ovidhan.net/word/popular.html",
       "dictionary_index": 674,
       "quality_score": 4,
-      "pair_id": "7A1-17",
+      "pair_id": "7A1-15",
       "assignment_sha256": "4e8012ded4411288d030b0be864b68b9139a73007f9ba4cbc349b5cb11ba08de",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms",
-        "antonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -739,15 +753,16 @@
       "url": "https://ovidhan.net/word/psychology.html",
       "dictionary_index": 3202,
       "quality_score": 4,
-      "pair_id": "7A1-18",
+      "pair_id": "7A1-16",
       "assignment_sha256": "f2c07b027b3b4e79511f48abca159755f3333e77e3f05a7a64e534a156693517",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -758,15 +773,16 @@
       "url": "https://ovidhan.net/word/rules.html",
       "dictionary_index": 818,
       "quality_score": 4,
-      "pair_id": "7A1-18",
+      "pair_id": "7A1-16",
       "assignment_sha256": "f2c07b027b3b4e79511f48abca159755f3333e77e3f05a7a64e534a156693517",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -777,16 +793,16 @@
       "url": "https://ovidhan.net/word/sufficient.html",
       "dictionary_index": 3610,
       "quality_score": 4,
-      "pair_id": "7A1-19",
+      "pair_id": "7A1-17",
       "assignment_sha256": "67fab460197c893f835a24f3dc26cf1fe850767da73fa0c41b342637631cb2b7",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms",
-        "antonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -797,15 +813,16 @@
       "url": "https://ovidhan.net/word/studies.html",
       "dictionary_index": 733,
       "quality_score": 4,
-      "pair_id": "7A1-19",
+      "pair_id": "7A1-17",
       "assignment_sha256": "67fab460197c893f835a24f3dc26cf1fe850767da73fa0c41b342637631cb2b7",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -816,35 +833,16 @@
       "url": "https://ovidhan.net/word/typical.html",
       "dictionary_index": 3594,
       "quality_score": 4,
-      "pair_id": "7A1-20",
-      "assignment_sha256": "d0a17f4d1c6a593156a61d3146f0738741f8d67c3988771c295396598bc00f4c",
+      "pair_id": "7A1-18",
+      "assignment_sha256": "b098d0b95338f133006359c2ff7d23ffa16f7b3397ffd2e6e5012e9a2cb58308",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms",
-        "antonyms"
-      ],
-      "in_gsc_export": true,
-      "in_sitemap": true
-    },
-    {
-      "word": "association",
-      "slug": "association",
-      "url": "https://ovidhan.net/word/association.html",
-      "dictionary_index": 725,
-      "quality_score": 3.5,
-      "pair_id": "7A1-20",
-      "assignment_sha256": "d0a17f4d1c6a593156a61d3146f0738741f8d67c3988771c295396598bc00f4c",
-      "group": "treatment",
-      "available_fields": [
-        "bangla",
-        "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -855,15 +853,16 @@
       "url": "https://ovidhan.net/word/cartridge.html",
       "dictionary_index": 4467,
       "quality_score": 3.5,
-      "pair_id": "7A1-21",
-      "assignment_sha256": "b0e44ecc3a519471143550cc522ec1d6e1cefac6922285d95311e9111bde6193",
-      "group": "control",
+      "pair_id": "7A1-18",
+      "assignment_sha256": "b098d0b95338f133006359c2ff7d23ffa16f7b3397ffd2e6e5012e9a2cb58308",
+      "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -874,15 +873,16 @@
       "url": "https://ovidhan.net/word/interviews.html",
       "dictionary_index": 3329,
       "quality_score": 3.5,
-      "pair_id": "7A1-21",
-      "assignment_sha256": "b0e44ecc3a519471143550cc522ec1d6e1cefac6922285d95311e9111bde6193",
-      "group": "treatment",
+      "pair_id": "7A1-19",
+      "assignment_sha256": "75e097742991606b6656020fd2fc08c995c8439d90c882a6a8c8eed7cb2c6e10",
+      "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -893,15 +893,16 @@
       "url": "https://ovidhan.net/word/mass.html",
       "dictionary_index": 2008,
       "quality_score": 3.5,
-      "pair_id": "7A1-22",
-      "assignment_sha256": "7179b57a2e27506095dfa64ed2735bf816735be238872be4f18f85ed3651cb4c",
-      "group": "control",
+      "pair_id": "7A1-19",
+      "assignment_sha256": "75e097742991606b6656020fd2fc08c995c8439d90c882a6a8c8eed7cb2c6e10",
+      "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -912,15 +913,16 @@
       "url": "https://ovidhan.net/word/name.html",
       "dictionary_index": 107,
       "quality_score": 3.5,
-      "pair_id": "7A1-22",
-      "assignment_sha256": "7179b57a2e27506095dfa64ed2735bf816735be238872be4f18f85ed3651cb4c",
-      "group": "treatment",
+      "pair_id": "7A1-20",
+      "assignment_sha256": "ddeccba3a1241fad7d12953185c554dedadeec788c57b2e6e94b9b2cc0696d89",
+      "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -931,34 +933,16 @@
       "url": "https://ovidhan.net/word/notebooks.html",
       "dictionary_index": 4238,
       "quality_score": 3.5,
-      "pair_id": "7A1-23",
-      "assignment_sha256": "fd4b949347b31e67ca96a9baa712b2997ad7d044f0cb4188bb658bd3635ffb22",
-      "group": "control",
-      "available_fields": [
-        "bangla",
-        "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
-      ],
-      "in_gsc_export": true,
-      "in_sitemap": true
-    },
-    {
-      "word": "packaging",
-      "slug": "packaging",
-      "url": "https://ovidhan.net/word/packaging.html",
-      "dictionary_index": 3628,
-      "quality_score": 3.5,
-      "pair_id": "7A1-23",
-      "assignment_sha256": "fd4b949347b31e67ca96a9baa712b2997ad7d044f0cb4188bb658bd3635ffb22",
+      "pair_id": "7A1-20",
+      "assignment_sha256": "ddeccba3a1241fad7d12953185c554dedadeec788c57b2e6e94b9b2cc0696d89",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
@@ -969,34 +953,36 @@
       "url": "https://ovidhan.net/word/proposal.html",
       "dictionary_index": 2628,
       "quality_score": 3.5,
-      "pair_id": "7A1-24",
-      "assignment_sha256": "5b4cc014ef49e935fe91d25a6d957f5bdc348df7d677eaa205d4b5add346a15b",
+      "pair_id": "7A1-21",
+      "assignment_sha256": "cbffac6b9cf2f721e2a0b141634cdbd244190711bc687c8119a905748125306f",
       "group": "control",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true
     },
     {
-      "word": "stick",
-      "slug": "stick",
-      "url": "https://ovidhan.net/word/stick.html",
-      "dictionary_index": 3384,
+      "word": "packaging",
+      "slug": "packaging",
+      "url": "https://ovidhan.net/word/packaging.html",
+      "dictionary_index": 3628,
       "quality_score": 3.5,
-      "pair_id": "7A1-24",
-      "assignment_sha256": "5b4cc014ef49e935fe91d25a6d957f5bdc348df7d677eaa205d4b5add346a15b",
+      "pair_id": "7A1-21",
+      "assignment_sha256": "cbffac6b9cf2f721e2a0b141634cdbd244190711bc687c8119a905748125306f",
       "group": "treatment",
+      "human_editorial_status": "approved_core",
+      "baseline_architecture": "JS_SHELL",
       "available_fields": [
+        "english",
         "bangla",
         "definition",
-        "example",
-        "part_of_speech",
-        "synonyms"
+        "part_of_speech"
       ],
       "in_gsc_export": true,
       "in_sitemap": true

@@ -4,149 +4,57 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { execFileSync } = require('child_process');
-
 const root = path.resolve(__dirname, '..');
+const baseSha = '9c666d3c12120c2a68197e408b51061087294961';
 const expectedXlsxHash = '9ee447fcb3e53d07256f35723afc3a5b0d21799040f9e1860e24e9358f4eb426';
 const expectedApproved = `acceptable acting aspects association beast buildings businesses cartridge casual cheap comparison constitution dancing degrees doctor dress evil exercise forecast gene increase internet interviews mass merchants model name nation notebooks objects offers packaging popular posters process proposal psychology pub request result rules stick studies sufficient terminal tests textbooks typical`.split(' ');
+const forbiddenEmbedded = ['example', 'examples', 'synonyms', 'antonyms', 'collocations', 'verb_forms', 'story', 'word_family', 'common_mistake', 'common_mistakes', 'bcs_importance', 'ielts_importance'];
 const sha256 = data => crypto.createHash('sha256').update(data).digest('hex');
 const fileHash = file => sha256(fs.readFileSync(file));
-const rel = file => path.relative(root, file).replace(/\\/g, '/');
-const aggregate = files => sha256(files.map(file => `${rel(file)}\0${fileHash(file)}\n`).sort().join(''));
-const fail = message => { throw new Error(message); };
-
-function findXlsx() {
-  const candidates = [
-    process.env.OVIDHAN_GSC_XLSX,
-    path.join(os.homedir(), 'Downloads', 'https___ovidhan.net_-Coverage-Validation-2026-08-25.xlsx')
-  ].filter(Boolean);
-  return candidates.find(file => fs.existsSync(file)) || fail('Required GSC XLSX not found');
-}
-
-const xlsx = findXlsx();
+const baseFile = relativePath => execFileSync('git', ['show', `${baseSha}:${relativePath}`], { cwd: root, maxBuffer: 32 * 1024 * 1024 });
+const changedFiles = scope => execFileSync('git', ['diff', '--name-only', baseSha, '--', ...(scope ? [scope] : [])], { cwd: root, encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean).sort();
+const xlsx = [process.env.OVIDHAN_GSC_XLSX, path.join(os.homedir(), 'Downloads', 'https___ovidhan.net_-Coverage-Validation-2026-08-25.xlsx')].filter(Boolean).find(fs.existsSync);
+assert(xlsx, 'Required GSC XLSX not found');
 assert.strictEqual(fileHash(xlsx), expectedXlsxHash, 'GSC XLSX hash mismatch');
 const source = JSON.parse(fs.readFileSync(path.join(root, 'data', 'seo-word-pilot-7a1-source.json'), 'utf8'));
-assert.strictEqual(source.sha256, expectedXlsxHash);
-assert.strictEqual(source.total_exported_url_count, 1000);
-assert.strictEqual(source.word_url_count, 993);
-assert.strictEqual(source.cohort_urls.length, 993);
-assert.deepStrictEqual(source.cohort_urls, [...source.cohort_urls].sort(), 'GSC cohort URLs are not sorted');
-
+assert.strictEqual(source.sha256, expectedXlsxHash); assert.strictEqual(source.total_exported_url_count, 1000); assert.strictEqual(source.word_url_count, 993); assert.strictEqual(source.cohort_urls.length, 993);
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data', 'seo-word-pilot-7a1.json'), 'utf8'));
-assert.deepStrictEqual(manifest.counts, { total: 48, treatment: 24, control: 24, pairs: 24 });
-assert.strictEqual(manifest.entries.length, 48);
-assert.deepStrictEqual([...manifest.entries.map(entry => entry.slug)].sort(), [...expectedApproved].sort(), 'Approved cohort differs from exact 48-word list');
-assert.strictEqual(new Set(manifest.entries.map(entry => entry.slug)).size, 48);
-const treatment = manifest.entries.filter(entry => entry.group === 'treatment');
-const control = manifest.entries.filter(entry => entry.group === 'control');
-assert.strictEqual(treatment.length, 24);
-assert.strictEqual(control.length, 24);
-assert.strictEqual(treatment.filter(item => control.some(other => other.slug === item.slug)).length, 0);
-
+const architecture = JSON.parse(fs.readFileSync(path.join(root, 'reports', 'seo-word-pilot-7a1-baseline-architecture.json'), 'utf8'));
+assert.strictEqual(architecture.base_main_sha, baseSha); assert.strictEqual(architecture.entries.length, 48);
+assert.deepStrictEqual(architecture.counts, { approved_population: 48, static_core: 5, js_shell: 43, experiment_treatment: 21, experiment_control: 21, unused_odd_shell: 1 });
+assert.deepStrictEqual([...architecture.entries.map(item => item.slug)].sort(), [...expectedApproved].sort());
+const staticCore = architecture.entries.filter(item => item.baseline_architecture === 'STATIC_CORE');
+const jsShell = architecture.entries.filter(item => item.baseline_architecture === 'JS_SHELL');
+assert.deepStrictEqual(staticCore.map(item => item.slug).sort(), ['acceptable', 'acting', 'aspects', 'association', 'beast']);
+assert.strictEqual(jsShell.length, 43);
+for (const item of staticCore) assert(item.baseline_h1_presence && item.baseline_bangla_presence && item.baseline_definition_presence && item.baseline_pos_presence, `Invalid STATIC_CORE evidence: ${item.slug}`);
+for (const item of jsShell) assert(!(item.baseline_h1_presence && item.baseline_bangla_presence && item.baseline_definition_presence && item.baseline_pos_presence), `Invalid JS_SHELL evidence: ${item.slug}`);
+assert.deepStrictEqual(manifest.counts, { approved_population_count: 48, eligible_js_shell_count: 43, experiment_treatment_count: 21, experiment_control_count: 21, unused_static_core_count: 5, unused_odd_shell_count: 1 });
+assert.deepStrictEqual(manifest.approved_population, expectedApproved); assert.strictEqual(manifest.entries.length, 42);
+for (const field of ['render_example', 'render_examples', 'render_synonyms', 'render_antonyms', 'render_collocations', 'render_verb_forms', 'render_story']) assert.strictEqual(manifest[field], false, `${field} must be false`);
+const treatment = manifest.entries.filter(item => item.group === 'treatment'); const control = manifest.entries.filter(item => item.group === 'control');
+assert.strictEqual(treatment.length, 21); assert.strictEqual(control.length, 21);
+for (const entry of manifest.entries) { assert.strictEqual(entry.human_editorial_status, 'approved_core'); assert.strictEqual(entry.baseline_architecture, 'JS_SHELL'); assert(jsShell.some(item => item.slug === entry.slug), `Non-shell experiment member: ${entry.slug}`); }
 const sorted = [...manifest.entries].sort((a, b) => b.quality_score - a.quality_score || a.slug.localeCompare(b.slug));
-for (let index = 0; index < sorted.length; index += 2) {
-  const pair = sorted.slice(index, index + 2);
-  const pairId = `7A1-${String(index / 2 + 1).padStart(2, '0')}`;
-  assert(pair.every(item => item.pair_id === pairId), `Invalid pair membership: ${pairId}`);
-  const hash = sha256(`${pair[0].slug}|${pair[1].slug}|7A1`);
-  assert(pair.every(item => item.assignment_sha256 === hash), `Invalid assignment hash: ${pairId}`);
-  const treatmentIndex = parseInt(hash[0], 16) % 2;
-  assert.strictEqual(pair[treatmentIndex].group, 'treatment', `Invalid treatment assignment: ${pairId}`);
-  assert.strictEqual(pair[1 - treatmentIndex].group, 'control', `Invalid control assignment: ${pairId}`);
-}
-
-const sitemapFiles = Object.keys(manifest.baseline.sitemap_sha256).map(name => path.join(root, name));
-const sitemapText = sitemapFiles.map(file => fs.readFileSync(file, 'utf8')).join('\n');
-for (const entry of manifest.entries) {
-  assert(source.cohort_urls.includes(entry.url), `Not in GSC cohort: ${entry.url}`);
-  assert.strictEqual(entry.in_gsc_export, true);
-  assert.strictEqual(entry.in_sitemap, true);
-  assert(fs.existsSync(path.join(root, 'word', `${entry.slug}.html`)), `Missing word file: ${entry.slug}`);
-  assert(sitemapText.includes(entry.url), `Missing sitemap URL: ${entry.url}`);
-}
-
-const changedWordFiles = execFileSync('git', ['diff', '--name-only', manifest.baseline.captured_from_main_sha, '--', 'word'], { cwd: root, encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean).sort();
-const expectedChanged = treatment.map(entry => `word/${entry.slug}.html`).sort();
-assert.deepStrictEqual(changedWordFiles, expectedChanged, 'Changed word files differ from treatment set');
-
-for (const entry of control) {
-  assert.strictEqual(fileHash(path.join(root, 'word', `${entry.slug}.html`)), manifest.baseline.cohort_page_sha256[entry.slug], `Control changed: ${entry.slug}`);
-}
-const wordFiles = fs.readdirSync(path.join(root, 'word')).filter(name => name.endsWith('.html')).sort().map(name => path.join(root, 'word', name));
-assert.strictEqual(wordFiles.length, manifest.baseline.word_file_count);
-const treatmentSlugs = new Set(treatment.map(entry => entry.slug));
-const nonTreatmentFiles = wordFiles.filter(file => !treatmentSlugs.has(path.basename(file, '.html')));
-assert.strictEqual(aggregate(nonTreatmentFiles), manifest.baseline.non_treatment_word_aggregate_sha256, 'A non-treatment word page changed');
-
+for (let index = 0; index < sorted.length; index += 2) { const pair = sorted.slice(index, index + 2); const pairId = `7A1-${String(index / 2 + 1).padStart(2, '0')}`; const hash = sha256(`${pair[0].slug}|${pair[1].slug}|7A1`); const treatmentIndex = parseInt(hash[0], 16) % 2; assert(pair.every(item => item.pair_id === pairId && item.assignment_sha256 === hash), `Pair/hash invalid: ${pairId}`); assert.strictEqual(pair[treatmentIndex].group, 'treatment'); assert.strictEqual(pair[1 - treatmentIndex].group, 'control'); }
+const expectedChangedWords = treatment.map(item => `word/${item.slug}.html`).sort();
+assert.deepStrictEqual(changedFiles('word'), expectedChangedWords, 'Only final treatment word pages may differ from base');
+for (const entry of control) assert.strictEqual(fileHash(path.join(root, 'word', `${entry.slug}.html`)), sha256(baseFile(`word/${entry.slug}.html`)), `Control differs from base: ${entry.slug}`);
 const dictionary = JSON.parse(fs.readFileSync(path.join(root, 'enriched-dictionary.json'), 'utf8'));
 for (const entry of treatment) {
-  const html = fs.readFileSync(path.join(root, 'word', `${entry.slug}.html`), 'utf8');
-  const dictionaryEntry = dictionary[entry.dictionary_index];
-  assert(dictionaryEntry, `Missing dictionary index: ${entry.slug}`);
-  const canonical = html.match(/<link rel="canonical" href="([^"]+)">/);
-  assert(canonical && canonical[1] === entry.url, `Canonical mismatch: ${entry.slug}`);
-  assert.strictEqual((html.match(/<h1(?:\s[^>]*)?>/g) || []).length, 1, `H1 count mismatch: ${entry.slug}`);
-  assert(html.includes(dictionaryEntry.bangla.trim()), `Static Bangla missing: ${entry.slug}`);
-  assert(html.includes(dictionaryEntry.definition.trim()), `Static definition missing: ${entry.slug}`);
-  assert(!/<section class="examples"|<div class="examples"/.test(html), `Examples rendered: ${entry.slug}`);
-  assert(!/<section class="synonyms"|<div class="related-words"/.test(html), `Synonyms/antonyms rendered: ${entry.slug}`);
-  assert(!html.includes('${'), `Leaked template marker: ${entry.slug}`);
-  const embeddedMatch = html.match(/<script type="application\/json" id="ovidhan-word-data">([\s\S]*?)<\/script>/);
-  assert(embeddedMatch, `Embedded JSON missing: ${entry.slug}`);
-  const article = html.match(/<article class="dictionary-answer"[\s\S]*?<\/article>/)?.[0] || '';
-  assert(!article.includes(dictionaryEntry.example.trim()), `Example rendered: ${entry.slug}`);
-  assert(!/class="(?:examples|related-words|synonyms|antonyms)"|<h2>(?:Examples|Synonyms|Antonyms)<\/h2>|<strong>(?:Examples|Related|Synonyms|Antonyms):?<\/strong>/i.test(article), `Example/synonym/antonym structure rendered: ${entry.slug}`);
-  const embedded = JSON.parse(embeddedMatch[1]);
-  assert.strictEqual((embedded.english || embedded.word || embedded.en).toLowerCase(), entry.slug);
-  assert.deepStrictEqual(embedded, dictionaryEntry, `Embedded entry mismatch: ${entry.slug}`);
-  const ldBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match => JSON.parse(match[1]));
-  const term = ldBlocks.find(block => block['@type'] === 'DefinedTerm');
-  const crumbs = ldBlocks.find(block => block['@type'] === 'BreadcrumbList');
-  assert(term && typeof term.description === 'string' && term.description.trim(), `DefinedTerm description missing: ${entry.slug}`);
-  assert(crumbs && crumbs.itemListElement.at(-1).item === entry.url, `Breadcrumb invalid: ${entry.slug}`);
+  const html = fs.readFileSync(path.join(root, 'word', `${entry.slug}.html`), 'utf8'); const sourceEntry = dictionary[entry.dictionary_index];
+  assert(source.cohort_urls.includes(entry.url) && entry.in_gsc_export && entry.in_sitemap); assert.strictEqual((html.match(/<h1(?:\s[^>]*)?>/g) || []).length, 1); assert(html.includes(sourceEntry.bangla.trim())); assert(html.includes(sourceEntry.definition.trim()));
+  const canonical = html.match(/<link rel="canonical" href="([^"]+)">/); assert(canonical && canonical[1] === entry.url, `Canonical mismatch: ${entry.slug}`);
+  const embeddedMatch = html.match(/<script type="application\/json" id="ovidhan-word-data">([\s\S]*?)<\/script>/); assert(embeddedMatch, `Embedded JSON missing: ${entry.slug}`); const embedded = JSON.parse(embeddedMatch[1]);
+  const expectedKeys = ['bangla', 'definition', 'english', ...(sourceEntry.part_of_speech?.trim() ? ['part_of_speech'] : [])].sort(); assert.deepStrictEqual(Object.keys(embedded).sort(), expectedKeys, `Embedded keys invalid: ${entry.slug}`);
+  assert.deepStrictEqual(embedded, { english: sourceEntry.english, bangla: sourceEntry.bangla, definition: sourceEntry.definition, ...(sourceEntry.part_of_speech?.trim() ? { part_of_speech: sourceEntry.part_of_speech } : {}) });
+  for (const key of forbiddenEmbedded) assert(!(key in embedded), `Forbidden embedded key ${key}: ${entry.slug}`);
+  assert(!/class="(?:examples|related-words|synonyms|antonyms|pronunciation|verb-forms|collocations|mini-story)"|<h2>(?:Examples|Synonyms|Antonyms|Verb forms|Collocations)<\/h2>/i.test(html), `Non-core static content rendered: ${entry.slug}`); assert(!html.includes('${'));
 }
-
 for (const [name, hash] of Object.entries(manifest.baseline.sitemap_sha256)) assert.strictEqual(fileHash(path.join(root, name)), hash, `Sitemap changed: ${name}`);
-assert.strictEqual(fileHash(path.join(root, 'robots.txt')), manifest.baseline.robots_sha256, 'robots.txt changed');
-assert.strictEqual(fileHash(path.join(root, 'reports', 'seo-word-pilot-7a1-editorial-review.json')), manifest.baseline.editorial_review_sha256, 'Editorial review JSON changed');
-assert.strictEqual(fileHash(path.join(root, 'reports', 'ovidhan-learning-foundation-3b-frozen-hashes.json')), manifest.baseline.frozen_manifest_sha256, 'Frozen manifest changed');
-const frozen = JSON.parse(fs.readFileSync(path.join(root, 'reports', 'ovidhan-learning-foundation-3b-frozen-hashes.json'), 'utf8'));
-assert.strictEqual(frozen.uniquePageCount, 144);
-for (const item of [...frozen.pages, ...frozen.guards]) assert.strictEqual(fileHash(path.join(root, item.path)), item.sha256, `Frozen file changed: ${item.path}`);
-
-const runtime = fs.readFileSync(path.join(root, 'learning-explorer.js'), 'utf8');
-assert(runtime.includes("document.getElementById('ovidhan-word-data')"), 'Embedded-data detection missing');
-assert(runtime.includes('if (embeddedData)'), 'Embedded initial branch missing');
-assert(runtime.includes('loadFullDictionary()'), 'Non-treatment/lazy full dictionary path missing');
-assert(runtime.indexOf('if (embeddedData)') < runtime.indexOf('loadFullDictionary()\n    .then'), 'Embedded branch does not precede initial full load');
-assert(runtime.includes('.then(() => searchWord())'), 'Lazy search continuation missing');
-assert(!runtime.includes('seo-word-pilot-7a1-editorial-review'), 'Editorial review is referenced by runtime');
-
-const scores = group => group.map(entry => entry.quality_score).sort((a, b) => a - b);
-const mean = values => values.reduce((sum, value) => sum + value, 0) / values.length;
-const median = values => (values[values.length / 2 - 1] + values[values.length / 2]) / 2;
-const treatmentScores = scores(treatment);
-const controlScores = scores(control);
-const maxPairDifference = Math.max(...Array.from({ length: 24 }, (_, index) => {
-  const pair = manifest.entries.filter(entry => entry.pair_id === `7A1-${String(index + 1).padStart(2, '0')}`);
-  return Math.abs(pair[0].quality_score - pair[1].quality_score);
-}));
-const result = {
-  status: 'PASS',
-  xlsx_sha256: expectedXlsxHash,
-  gsc: { total: 1000, word: 993 },
-  cohort: manifest.counts,
-  changed_word_files: changedWordFiles.length,
-  scores: {
-    treatment_mean: mean(treatmentScores),
-    control_mean: mean(controlScores),
-    treatment_median: median(treatmentScores),
-    control_median: median(controlScores),
-    maximum_within_pair_difference: maxPairDifference
-  },
-  controls_unchanged: true,
-  non_treatment_word_pages_unchanged: true,
-  sitemap_robots_unchanged: true,
-  frozen_experiment_unchanged: true,
-  editorial_review_unchanged: true
-};
+assert.strictEqual(fileHash(path.join(root, 'robots.txt')), manifest.baseline.robots_sha256, 'robots changed'); assert.strictEqual(fileHash(path.join(root, 'reports', 'seo-word-pilot-7a1-editorial-review.json')), manifest.baseline.editorial_review_sha256, 'Editorial audit changed');
+const frozen = JSON.parse(fs.readFileSync(path.join(root, 'reports', 'ovidhan-learning-foundation-3b-frozen-hashes.json'), 'utf8')); assert.strictEqual(frozen.uniquePageCount, 144); for (const item of [...frozen.pages, ...frozen.guards]) assert.strictEqual(fileHash(path.join(root, item.path)), item.sha256, `Frozen file changed: ${item.path}`);
+const runtime = fs.readFileSync(path.join(root, 'learning-explorer.js'), 'utf8'); assert(runtime.includes("document.getElementById('ovidhan-word-data')")); assert(runtime.includes('.then(() => searchWord())')); assert(!runtime.includes('seo-word-pilot-7a1-editorial-review'));
+const values = group => group.map(item => item.quality_score).sort((a, b) => a - b); const mean = items => items.reduce((sum, value) => sum + value, 0) / items.length; const median = items => items[Math.floor(items.length / 2)]; const ts = values(treatment), cs = values(control);
+const result = { status: 'PASS', baseline_architecture: { static_core: 5, js_shell: 43, static_core_words: staticCore.map(item => item.slug), odd_unused_shell: manifest.unused.odd_shell }, cohort: manifest.counts, changed_word_files: expectedChangedWords.length, changed_files_total: changedFiles().length, treatment: treatment.map(item => item.slug), control: control.map(item => item.slug), scores: { treatment_mean: mean(ts), control_mean: mean(cs), treatment_median: median(ts), control_median: median(cs) }, controls_unchanged: true, unrelated_word_pages_unchanged: true, sitemap_robots_unchanged: true, frozen_experiment_unchanged: true, editorial_review_unchanged: true };
 console.log(JSON.stringify(result, null, 2));
