@@ -31,11 +31,16 @@ After reviewing the dry run, deploy only with the explicit flag:
 .\deploy-production.ps1 -Deploy
 ```
 
+Real deployment requires a clean local `main` branch. `-AllowDirty` cannot be
+combined with `-Deploy`; it is strictly for local build testing. The deployment
+path does not fetch GitHub or otherwise require GitHub availability.
+
 The script prints the Git SHA, asset and word counts, dictionary hash, and
-Worker name before publishing, then checks ovidhan.net and workers.dev. It does
-not change DNS. A stale local DNS answer must be investigated separately using
-authoritative/public DNS; never work around it by changing system or router DNS
-from this script.
+Worker name before publishing, then checks ovidhan.net and workers.dev. If the
+local resolver disagrees with public Cloudflare DNS, smoke tests use
+`curl.exe --resolve` with a public Cloudflare IPv4 address while preserving the
+ovidhan.net Host header and TLS/SNI. The script never changes system, router, or
+Cloudflare DNS.
 
 ## Recovery and rollback
 

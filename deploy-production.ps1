@@ -91,6 +91,33 @@ function Get-RelativePath([string]$Base, [string]$Path) {
     return [System.IO.Path]::GetRelativePath($Base, $Path).Replace('\', '/')
 }
 
+function Invoke-OvidhanSmokeRequest {
+    param(
+        [Parameter(Mandatory)][string]$Url,
+        [string]$ResolveAddress
+    )
+    $bodyFile = New-TemporaryFile
+    try {
+        $arguments = @('--silent', '--show-error', '--location', '--max-time', '30', '--output', $bodyFile.FullName, '--write-out', "%{http_code}`n%header{x-robots-tag}")
+        if ($ResolveAddress) {
+            $arguments += @('--resolve', "ovidhan.net:443:$ResolveAddress")
+        }
+        $arguments += $Url
+        $result = @(& curl.exe @arguments)
+        if ($LASTEXITCODE -ne 0) { throw "Live smoke request failed (curl exit $LASTEXITCODE): $Url" }
+        $statusCode = [int]$result[0]
+        $xRobotsTag = if ($result.Count -gt 1) { [string]$result[1] } else { '' }
+        return [pscustomobject]@{
+            Url = $Url
+            StatusCode = $statusCode
+            XRobotsTag = $xRobotsTag
+            Body = Get-Content -LiteralPath $bodyFile.FullName -Raw
+        }
+    } finally {
+        Remove-Item -LiteralPath $bodyFile.FullName -Force -ErrorAction SilentlyContinue
+    }
+}
+
 Write-Stage 'PREFLIGHT'
 $outputFull = Assert-SafeOutputPath $OutputPath
 Push-Location $sourceRoot
@@ -99,6 +126,8 @@ try {
     $gitSha = (& git rev-parse HEAD).Trim()
     $gitStatus = @(& git status --porcelain=v1 --untracked-files=all)
     if (-not $branch) { throw 'Detached HEAD is not allowed for production builds.' }
+    if ($Deploy -and $AllowDirty) { throw '-AllowDirty is for local build/test work only and cannot be combined with -Deploy.' }
+    if ($Deploy -and $branch -ne 'main') { throw "Production deployment requires local branch 'main'; current branch is '$branch'." }
     if ($gitStatus.Count -gt 0 -and -not $AllowDirty) {
         throw "Working tree is not clean. Commit/stash changes or use -AllowDirty for local development verification only."
     }
@@ -121,6 +150,7 @@ try {
     if ($configText -notmatch '"not_found_handling"\s*:\s*"none"') { throw 'Worker config must keep not_found_handling set to none.' }
     $npx = Get-Command npx -ErrorAction Stop
     $node = Get-Command node -ErrorAction Stop
+    if ($Deploy) { [void](Get-Command curl.exe -ErrorAction Stop) }
     Write-Host "BRANCH: $branch"
     Write-Host "GIT SHA: $gitSha"
     Write-Host "WORKTREE: $(if ($gitStatus.Count -eq 0) { 'CLEAN' } else { 'DIRTY (explicitly allowed)' })"
@@ -251,21 +281,32 @@ try {
         $publicAddresses = @($publicDns.Answer | Where-Object type -eq 1 | ForEach-Object data | Sort-Object -Unique)
         if ($publicAddresses.Count -eq 0) { throw 'Public Cloudflare DNS returned no A records for ovidhan.net.' }
         $dnsMismatch = @(Compare-Object $localAddresses $publicAddresses).Count -gt 0
+        $smokeResolveAddress = if ($dnsMismatch) { $publicAddresses[0] } else { $null }
         Write-Host "PUBLIC CLOUDFLARE DNS: $($publicAddresses -join ', ')"
         Write-Host "LOCAL RESOLVER DNS: $($localAddresses -join ', ')"
         Write-Host "DNS VIEW: $(if ($dnsMismatch) { 'MISMATCH — stale local resolver suspected' } else { 'MATCH' })"
-        $publicUrls = @(
-            'https://ovidhan.net/',
-            'https://ovidhan.net/word/businesses.html',
-            'https://ovidhan.net/word/textbooks.html',
-            'https://ovidhan.net/word/ability.html',
-            'https://ovidhan.net/robots.txt',
-            'https://ovidhan.net/sitemap.xml'
-        )
-        foreach ($url in $publicUrls) {
-            $response = Invoke-WebRequest -Uri $url -Method Get -TimeoutSec 30 -MaximumRedirection 5
-            if ($response.StatusCode -ne 200) { throw "Live smoke test failed ($($response.StatusCode)): $url" }
+        if ($smokeResolveAddress) {
+            Write-Host "SMOKE ROUTE: curl.exe --resolve ovidhan.net:443:$smokeResolveAddress (Host and TLS/SNI remain ovidhan.net)"
         }
+        $smokePaths = @(
+            '/',
+            '/word/businesses.html',
+            '/word/textbooks.html',
+            '/word/ability.html',
+            '/robots.txt',
+            '/sitemap.xml'
+        )
+        $smokeResponses = @{}
+        foreach ($path in $smokePaths) {
+            $url = "https://ovidhan.net$path"
+            $response = Invoke-OvidhanSmokeRequest -Url $url -ResolveAddress $smokeResolveAddress
+            if ($response.StatusCode -ne 200) { throw "Live smoke test failed ($($response.StatusCode)): $url" }
+            if ($response.XRobotsTag -match '(?i)noindex') { throw "Production hostname must not receive X-Robots-Tag noindex: $url" }
+            $smokeResponses[$path] = $response
+        }
+        if ($smokeResponses['/word/businesses.html'].Body -notmatch 'id=["'']staticWordContent["'']') { throw 'Treatment smoke test lacks staticWordContent: businesses' }
+        if ($smokeResponses['/word/businesses.html'].Body -notmatch '(?i)<h1[^>]*>\s*businesses meaning in Bangla\s*</h1>') { throw 'Treatment smoke test lacks expected static H1: businesses' }
+        if ($smokeResponses['/word/textbooks.html'].Body -match 'id=["'']staticWordContent["'']') { throw 'Control smoke test unexpectedly contains staticWordContent: textbooks' }
         $workersDev = Invoke-WebRequest -Uri 'https://ovidhan.yeasinarafat0.workers.dev/' -Method Get -TimeoutSec 30 -MaximumRedirection 5
         $xRobots = [string]$workersDev.Headers['X-Robots-Tag']
         if ($xRobots -notmatch 'noindex' -or $xRobots -notmatch 'nofollow' -or $xRobots -notmatch 'noarchive') {
