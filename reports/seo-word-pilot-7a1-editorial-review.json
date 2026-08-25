@@ -1,0 +1,2281 @@
+{
+  "schema": "ovidhan-seo-word-pilot-7a1-editorial-review-v1",
+  "source": "data/seo-word-pilot-7a1-source.json",
+  "grouping_note": "Groups are deterministic triage only. likely_clean means no configured automatic flag was detected; it does not assert semantic correctness.",
+  "flag_definitions": {
+    "code_like_slug": "Slug is exactly br, hr, or url: a deterministic HTML/web/code token list.",
+    "very_short_slug": "Slug length is two characters or fewer.",
+    "bangla_equals_english": "Trimmed, case-normalized Bangla value equals the English word.",
+    "generic_example": "Example exactly matches one of five corpus template sentences using the entry word.",
+    "grammar_pattern_suspect": "Example exactly matches “This is a <word>.”, a mechanically detectable article template requiring review.",
+    "proper_noun_like": "A synonym equals the entry word case-insensitively but uses capitalization, providing source-level proper-name evidence.",
+    "synonym_contains_self": "At least one normalized synonym equals the normalized entry word.",
+    "duplicate_synonyms": "Two or more synonyms are identical after trimming and case normalization.",
+    "definition_mentions_different_term_if_detectable": "For a one/two-character slug, the definition explicitly contains a longer non-self synonym."
+  },
+  "grouping_rules": {
+    "likely_reject": [
+      "code_like_slug",
+      "bangla_equals_english",
+      "grammar_pattern_suspect",
+      "definition_mentions_different_term_if_detectable"
+    ],
+    "needs_human_review": "One or more non-reject automatic flags and no likely-reject flag.",
+    "likely_clean": "No automatic flags."
+  },
+  "counts": {
+    "total": 77,
+    "likely_clean": 0,
+    "needs_human_review": 57,
+    "likely_reject": 20
+  },
+  "entries": [
+    {
+      "dictionary_index": 4665,
+      "word": "acceptable",
+      "slug": "acceptable",
+      "url": "https://ovidhan.net/word/acceptable.html",
+      "bangla": "গ্রহণযোগ্য",
+      "definition": "worthy of acceptance or satisfactory",
+      "example": "This is a acceptable.",
+      "part_of_speech": "adjective",
+      "synonyms": [
+        "acceptable"
+      ],
+      "antonyms": [
+        "unacceptable"
+      ],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 3911,
+      "word": "acting",
+      "slug": "acting",
+      "url": "https://ovidhan.net/word/acting.html",
+      "bangla": "অভিনয়",
+      "definition": "the performance of a part or role in a drama",
+      "example": "I know the word 'acting'.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "acting",
+        "playing",
+        "performing",
+        "playacting"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 1201,
+      "word": "allow",
+      "slug": "allow",
+      "url": "https://ovidhan.net/word/allow.html",
+      "bangla": "অনুমতি",
+      "definition": "make it possible through a specific action or lack of action for something to happen",
+      "example": "'allow' is common in English.",
+      "part_of_speech": "verb",
+      "synonyms": [
+        "permit",
+        "let",
+        "allow"
+      ],
+      "antonyms": [
+        "prevent"
+      ],
+      "quality_score": 5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2926,
+      "word": "amazing",
+      "slug": "amazing",
+      "url": "https://ovidhan.net/word/amazing.html",
+      "bangla": "আশ্চর্যজনক",
+      "definition": "affect with wonder",
+      "example": "Can you use 'amazing' in a sentence?",
+      "part_of_speech": "verb",
+      "synonyms": [
+        "amaze",
+        "astound",
+        "astonish"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 22,
+      "word": "as",
+      "slug": "as",
+      "url": "https://ovidhan.net/word/as.html",
+      "bangla": "হিসাবে",
+      "definition": "a very poisonous metallic element that has three allotropic forms; arsenic and arsenic compounds are used as herbicides and insecticides and various alloys; found in arsenopyrite and orpiment and realgar",
+      "example": "Can you use 'as' in a sentence?",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "arsenic",
+        "As",
+        "atomic number 33"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": true,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": true,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": true
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 2796,
+      "word": "aspects",
+      "slug": "aspects",
+      "url": "https://ovidhan.net/word/aspects.html",
+      "bangla": "দিক",
+      "definition": "a distinct feature or element in a problem",
+      "example": "This is a aspects.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "facet",
+        "aspect"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 725,
+      "word": "association",
+      "slug": "association",
+      "url": "https://ovidhan.net/word/association.html",
+      "bangla": "সমিতি",
+      "definition": "a formal organization of people or groups of people",
+      "example": "Learning 'association' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "association"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 1605,
+      "word": "battery",
+      "slug": "battery",
+      "url": "https://ovidhan.net/word/battery.html",
+      "bangla": "ব্যাটারি",
+      "definition": "group of guns or missile launchers operated together at one place",
+      "example": "'battery' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "battery"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 4614,
+      "word": "beast",
+      "slug": "beast",
+      "url": "https://ovidhan.net/word/beast.html",
+      "bangla": "জন্তু",
+      "definition": "a living organism characterized by voluntary movement",
+      "example": "Learning 'beast' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "fauna",
+        "animate being",
+        "brute",
+        "creature",
+        "beast",
+        "animal"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2434,
+      "word": "binding",
+      "slug": "binding",
+      "url": "https://ovidhan.net/word/binding.html",
+      "bangla": "বাঁধাই",
+      "definition": "the capacity to attract and hold something",
+      "example": "Can you use 'binding' in a sentence?",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "binding"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3684,
+      "word": "br",
+      "slug": "br",
+      "url": "https://ovidhan.net/word/br.html",
+      "bangla": "br",
+      "definition": "a nonmetallic heavy volatile corrosive dark brown liquid element belonging to the halogens; found in sea water",
+      "example": "Can you use 'br' in a sentence?",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "atomic number 35",
+        "bromine",
+        "Br"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": true,
+        "very_short_slug": true,
+        "bangla_equals_english": true,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": true,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 2847,
+      "word": "buildings",
+      "slug": "buildings",
+      "url": "https://ovidhan.net/word/buildings.html",
+      "bangla": "ভবন",
+      "definition": "a structure that has a roof and walls and stands more or less permanently in one place",
+      "example": "I know the word 'buildings'.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "edifice",
+        "building"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 1698,
+      "word": "businesses",
+      "slug": "businesses",
+      "url": "https://ovidhan.net/word/businesses.html",
+      "bangla": "ব্যবসা",
+      "definition": "a commercial or industrial enterprise and the people who constitute it",
+      "example": "'businesses' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "business organization",
+        "business organisation",
+        "concern",
+        "business concern",
+        "business"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 657,
+      "word": "california",
+      "slug": "california",
+      "url": "https://ovidhan.net/word/california.html",
+      "bangla": "ক্যালিফোর্নিয়া",
+      "definition": "a state in the western United States on the Pacific; the 3rd largest state; known for earthquakes",
+      "example": "Learning 'california' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "Calif.",
+        "CA",
+        "Golden State",
+        "California"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": true,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 4467,
+      "word": "cartridge",
+      "slug": "cartridge",
+      "url": "https://ovidhan.net/word/cartridge.html",
+      "bangla": "কার্তুজ",
+      "definition": "ammunition consisting of a cylindrical casing containing an explosive charge and a bullet; fired from a rifle or handgun",
+      "example": "'cartridge' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "cartridge"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 4827,
+      "word": "casual",
+      "slug": "casual",
+      "url": "https://ovidhan.net/word/casual.html",
+      "bangla": "নৈমিত্তিক",
+      "definition": "marked by blithe unconcern",
+      "example": "I know the word 'casual'.",
+      "part_of_speech": "adjective",
+      "synonyms": [
+        "nonchalant",
+        "casual",
+        "insouciant"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 826,
+      "word": "cheap",
+      "slug": "cheap",
+      "url": "https://ovidhan.net/word/cheap.html",
+      "bangla": "সস্তা",
+      "definition": "relatively low in price or charging low prices",
+      "example": "I know the word 'cheap'.",
+      "part_of_speech": "adjective",
+      "synonyms": [
+        "inexpensive",
+        "cheap"
+      ],
+      "antonyms": [
+        "expensive"
+      ],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 4835,
+      "word": "clause",
+      "slug": "clause",
+      "url": "https://ovidhan.net/word/clause.html",
+      "bangla": "ধারা",
+      "definition": "(grammar) an expression including a subject and predicate but not constituting a complete sentence",
+      "example": "'clause' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "clause"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2254,
+      "word": "comparison",
+      "slug": "comparison",
+      "url": "https://ovidhan.net/word/comparison.html",
+      "bangla": "তুলনা",
+      "definition": "the act of examining resemblances",
+      "example": "I know the word 'comparison'.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "comparison",
+        "comparing"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3023,
+      "word": "concerned",
+      "slug": "concerned",
+      "url": "https://ovidhan.net/word/concerned.html",
+      "bangla": "উদ্বিগ্ন",
+      "definition": "be relevant to",
+      "example": "This is a concerned.",
+      "part_of_speech": "verb",
+      "synonyms": [
+        "refer",
+        "bear on",
+        "touch on",
+        "come to",
+        "touch",
+        "pertain",
+        "have-to doe with",
+        "concern",
+        "relate"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 451,
+      "word": "conditions",
+      "slug": "conditions",
+      "url": "https://ovidhan.net/word/conditions.html",
+      "bangla": "শর্তাবলী",
+      "definition": "the prevailing context that influences the performance or the outcome of a process",
+      "example": "This is a conditions.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "conditions"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 3105,
+      "word": "conducted",
+      "slug": "conducted",
+      "url": "https://ovidhan.net/word/conducted.html",
+      "bangla": "পরিচালিত",
+      "definition": "direct the course of; manage or control",
+      "example": "This is a conducted.",
+      "part_of_speech": "verb",
+      "synonyms": [
+        "carry on",
+        "conduct",
+        "deal"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 3627,
+      "word": "constitution",
+      "slug": "constitution",
+      "url": "https://ovidhan.net/word/constitution.html",
+      "bangla": "সংবিধান",
+      "definition": "law determining the fundamental political principles of a government",
+      "example": "This is a constitution.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "organic law",
+        "fundamental law",
+        "constitution"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 3447,
+      "word": "continuous",
+      "slug": "continuous",
+      "url": "https://ovidhan.net/word/continuous.html",
+      "bangla": "একটানা",
+      "definition": "continuing in time or space without interruption; - James Jeans",
+      "example": "This is a continuous.",
+      "part_of_speech": "adjective",
+      "synonyms": [
+        "continuous",
+        "uninterrupted"
+      ],
+      "antonyms": [
+        "discontinuous"
+      ],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 4723,
+      "word": "dancing",
+      "slug": "dancing",
+      "url": "https://ovidhan.net/word/dancing.html",
+      "bangla": "নাচ",
+      "definition": "taking a series of rhythmical steps (and movements) in time to music",
+      "example": "Can you use 'dancing' in a sentence?",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "dancing",
+        "terpsichore",
+        "saltation",
+        "dance"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2369,
+      "word": "dedicated",
+      "slug": "dedicated",
+      "url": "https://ovidhan.net/word/dedicated.html",
+      "bangla": "উত্সর্গীকৃত",
+      "definition": "give entirely to a specific person, activity, or cause",
+      "example": "'dedicated' is common in English.",
+      "part_of_speech": "verb",
+      "synonyms": [
+        "devote",
+        "commit",
+        "dedicate",
+        "give",
+        "consecrate"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2818,
+      "word": "degrees",
+      "slug": "degrees",
+      "url": "https://ovidhan.net/word/degrees.html",
+      "bangla": "ডিগ্রী",
+      "definition": "a position on a scale of intensity or amount or quality",
+      "example": "This is a degrees.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "grade",
+        "level",
+        "degree"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 2033,
+      "word": "doctor",
+      "slug": "doctor",
+      "url": "https://ovidhan.net/word/doctor.html",
+      "bangla": "ডাক্তার",
+      "definition": "a licensed medical practitioner",
+      "example": "Learning 'doctor' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "Dr.",
+        "MD",
+        "physician",
+        "medico",
+        "doc",
+        "doctor"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2866,
+      "word": "dress",
+      "slug": "dress",
+      "url": "https://ovidhan.net/word/dress.html",
+      "bangla": "পোষাক",
+      "definition": "a one-piece garment for a woman; has skirt and bodice",
+      "example": "I know the word 'dress'.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "frock",
+        "dress"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3007,
+      "word": "evil",
+      "slug": "evil",
+      "url": "https://ovidhan.net/word/evil.html",
+      "bangla": "মন্দ",
+      "definition": "morally objectionable behavior",
+      "example": "Learning 'evil' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "evil",
+        "wickedness",
+        "iniquity",
+        "immorality"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 1935,
+      "word": "ex",
+      "slug": "ex",
+      "url": "https://ovidhan.net/word/ex.html",
+      "bangla": "প্রাক্তন",
+      "definition": "a man who was formerly a certain woman's husband",
+      "example": "Learning 'ex' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "ex-husband",
+        "ex"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": true,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2041,
+      "word": "exercise",
+      "slug": "exercise",
+      "url": "https://ovidhan.net/word/exercise.html",
+      "bangla": "ব্যায়াম",
+      "definition": "the activity of exerting your muscles in various ways to keep fit",
+      "example": "This is a exercise.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "physical exercise",
+        "physical exertion",
+        "exercise",
+        "exercising",
+        "workout"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 2060,
+      "word": "flight",
+      "slug": "flight",
+      "url": "https://ovidhan.net/word/flight.html",
+      "bangla": "ফ্লাইট",
+      "definition": "a formation of aircraft in flight",
+      "example": "Can you use 'flight' in a sentence?",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "flight"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2692,
+      "word": "forecast",
+      "slug": "forecast",
+      "url": "https://ovidhan.net/word/forecast.html",
+      "bangla": "পূর্বাভাস",
+      "definition": "a prediction about how something (as the weather) will develop",
+      "example": "Learning 'forecast' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "prognosis",
+        "forecast"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2515,
+      "word": "forgot",
+      "slug": "forgot",
+      "url": "https://ovidhan.net/word/forgot.html",
+      "bangla": "ভুলে গেছি",
+      "definition": "dismiss from the mind; stop remembering",
+      "example": "Can you use 'forgot' in a sentence?",
+      "part_of_speech": "verb",
+      "synonyms": [
+        "forget",
+        "bury"
+      ],
+      "antonyms": [
+        "remember"
+      ],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2348,
+      "word": "gene",
+      "slug": "gene",
+      "url": "https://ovidhan.net/word/gene.html",
+      "bangla": "জিন",
+      "definition": "(genetics) a segment of DNA that is involved in producing a polypeptide chain; it can include regions preceding and following the coding DNA as well as introns between the exons; it is considered a unit of heredity",
+      "example": "This is a gene.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "cistron",
+        "gene",
+        "factor"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 2416,
+      "word": "hr",
+      "slug": "hr",
+      "url": "https://ovidhan.net/word/hr.html",
+      "bangla": "ঘন্টা",
+      "definition": "a period of time equal to 1/24th of a day",
+      "example": "Learning 'hr' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "hr",
+        "hour",
+        "60 minutes"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": true,
+        "very_short_slug": true,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 984,
+      "word": "increase",
+      "slug": "increase",
+      "url": "https://ovidhan.net/word/increase.html",
+      "bangla": "বৃদ্ধি",
+      "definition": "a quantity that is added",
+      "example": "Can you use 'increase' in a sentence?",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "increase",
+        "addition",
+        "gain"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 247,
+      "word": "internet",
+      "slug": "internet",
+      "url": "https://ovidhan.net/word/internet.html",
+      "bangla": "ইন্টারনেট",
+      "definition": "a computer network consisting of a worldwide network of computer networks that use the TCP/IP network protocols to facilitate data transmission and exchange",
+      "example": "Learning 'internet' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "cyberspace",
+        "internet",
+        "net"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3329,
+      "word": "interviews",
+      "slug": "interviews",
+      "url": "https://ovidhan.net/word/interviews.html",
+      "bangla": "সাক্ষাৎকার",
+      "definition": "the questioning of a person (or a conversation in which information is elicited); often conducted by journalists",
+      "example": "I know the word 'interviews'.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "interview"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2067,
+      "word": "italian",
+      "slug": "italian",
+      "url": "https://ovidhan.net/word/italian.html",
+      "bangla": "ইতালিয়ান",
+      "definition": "a native or inhabitant of Italy",
+      "example": "'italian' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "Italian"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": true,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2302,
+      "word": "jesus",
+      "slug": "jesus",
+      "url": "https://ovidhan.net/word/jesus.html",
+      "bangla": "যীশু",
+      "definition": "a teacher and prophet born in Bethlehem and active in Nazareth; his life and sermons form the basis for Christianity (circa 4 BC - AD 29)",
+      "example": "'jesus' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "Savior",
+        "Good Shepherd",
+        "Jesus of Nazareth",
+        "Jesus",
+        "Deliverer",
+        "Christ",
+        "Jesus Christ",
+        "Redeemer",
+        "Saviour",
+        "the Nazarene"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": true,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 4378,
+      "word": "lets",
+      "slug": "lets",
+      "url": "https://ovidhan.net/word/lets.html",
+      "bangla": "দেয়",
+      "definition": "a brutal terrorist group active in Kashmir; fights against India with the goal of restoring Islamic rule of India",
+      "example": "Learning 'lets' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "Army of the Pure",
+        "Lashkar-e-Toiba",
+        "Army of the Righteous",
+        "LET",
+        "Lashkar-e-Tayyiba",
+        "Lashkar-e-Taiba"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2008,
+      "word": "mass",
+      "slug": "mass",
+      "url": "https://ovidhan.net/word/mass.html",
+      "bangla": "ভর",
+      "definition": "the property of a body that causes it to have weight in a gravitational field",
+      "example": "'mass' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "mass"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3056,
+      "word": "matches",
+      "slug": "matches",
+      "url": "https://ovidhan.net/word/matches.html",
+      "bangla": "মেলে",
+      "definition": "lighter consisting of a thin piece of wood or cardboard tipped with combustible chemical; ignites with friction",
+      "example": "This is a matches.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "match",
+        "lucifer",
+        "friction match"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 4793,
+      "word": "merchants",
+      "slug": "merchants",
+      "url": "https://ovidhan.net/word/merchants.html",
+      "bangla": "বণিক",
+      "definition": "a businessperson engaged in retail trade",
+      "example": "'merchants' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "merchant",
+        "merchandiser"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 475,
+      "word": "model",
+      "slug": "model",
+      "url": "https://ovidhan.net/word/model.html",
+      "bangla": "মডেল",
+      "definition": "a hypothetical description of a complex entity or process",
+      "example": "Learning 'model' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "theoretical account",
+        "framework",
+        "model"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 107,
+      "word": "name",
+      "slug": "name",
+      "url": "https://ovidhan.net/word/name.html",
+      "bangla": "নাম",
+      "definition": "a language unit by which a person or thing is known",
+      "example": "This is a name.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "name"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 1848,
+      "word": "nation",
+      "slug": "nation",
+      "url": "https://ovidhan.net/word/nation.html",
+      "bangla": "জাতি",
+      "definition": "a politically organized body of people under a single government",
+      "example": "This is a nation.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "country",
+        "nation",
+        "body politic",
+        "res publica",
+        "state",
+        "land",
+        "commonwealth"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 4238,
+      "word": "notebooks",
+      "slug": "notebooks",
+      "url": "https://ovidhan.net/word/notebooks.html",
+      "bangla": "নোটবুক",
+      "definition": "a book with blank pages for recording notes or memoranda",
+      "example": "Learning 'notebooks' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "notebook"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2374,
+      "word": "objects",
+      "slug": "objects",
+      "url": "https://ovidhan.net/word/objects.html",
+      "bangla": "বস্তু",
+      "definition": "a tangible and visible entity; an entity that can cast a shadow",
+      "example": "Learning 'objects' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "physical object",
+        "object"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 544,
+      "word": "offers",
+      "slug": "offers",
+      "url": "https://ovidhan.net/word/offers.html",
+      "bangla": "অফার",
+      "definition": "the verbal act of offering",
+      "example": "I know the word 'offers'.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "offering",
+        "offer"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3628,
+      "word": "packaging",
+      "slug": "packaging",
+      "url": "https://ovidhan.net/word/packaging.html",
+      "bangla": "প্যাকেজিং",
+      "definition": "the business of packing",
+      "example": "'packaging' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "packaging"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3994,
+      "word": "para",
+      "slug": "para",
+      "url": "https://ovidhan.net/word/para.html",
+      "bangla": "প্যারা",
+      "definition": "(obstetrics) the number of liveborn children a woman has delivered",
+      "example": "Learning 'para' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "para",
+        "parity"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2396,
+      "word": "personnel",
+      "slug": "personnel",
+      "url": "https://ovidhan.net/word/personnel.html",
+      "bangla": "কর্মীদের",
+      "definition": "group of people willing to obey orders",
+      "example": "I know the word 'personnel'.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "force",
+        "personnel"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 144,
+      "word": "please",
+      "slug": "please",
+      "url": "https://ovidhan.net/word/please.html",
+      "bangla": "দয়া করে",
+      "definition": "give pleasure to or be pleasing to",
+      "example": "Can you use 'please' in a sentence?",
+      "part_of_speech": "verb",
+      "synonyms": [
+        "delight",
+        "please"
+      ],
+      "antonyms": [
+        "displease"
+      ],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 674,
+      "word": "popular",
+      "slug": "popular",
+      "url": "https://ovidhan.net/word/popular.html",
+      "bangla": "জনপ্রিয়",
+      "definition": "regarded with great favor, approval, or affection especially by the general public",
+      "example": "'popular' is common in English.",
+      "part_of_speech": "adjective",
+      "synonyms": [
+        "popular"
+      ],
+      "antonyms": [
+        "unpopular"
+      ],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2315,
+      "word": "posters",
+      "slug": "posters",
+      "url": "https://ovidhan.net/word/posters.html",
+      "bangla": "পোস্টার",
+      "definition": "a sign posted in a public place as an advertisement",
+      "example": "Can you use 'posters' in a sentence?",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "notice",
+        "card",
+        "posting",
+        "poster",
+        "placard",
+        "bill"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 430,
+      "word": "process",
+      "slug": "process",
+      "url": "https://ovidhan.net/word/process.html",
+      "bangla": "প্রক্রিয়া",
+      "definition": "a particular course of action intended to achieve a result",
+      "example": "'process' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "procedure",
+        "process"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2409,
+      "word": "professionals",
+      "slug": "professionals",
+      "url": "https://ovidhan.net/word/professionals.html",
+      "bangla": "পেশাদারদের",
+      "definition": "a person engaged in one of the learned professions",
+      "example": "'professionals' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "professional",
+        "professional person"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 2628,
+      "word": "proposal",
+      "slug": "proposal",
+      "url": "https://ovidhan.net/word/proposal.html",
+      "bangla": "প্রস্তাব",
+      "definition": "something proposed (such as a plan or assumption)",
+      "example": "Learning 'proposal' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "proposal"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 4335,
+      "word": "prove",
+      "slug": "prove",
+      "url": "https://ovidhan.net/word/prove.html",
+      "bangla": "প্রমাণ",
+      "definition": "be shown or be found to be",
+      "example": "Learning 'prove' helps your vocabulary.",
+      "part_of_speech": "verb",
+      "synonyms": [
+        "prove",
+        "turn up",
+        "turn out"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3202,
+      "word": "psychology",
+      "slug": "psychology",
+      "url": "https://ovidhan.net/word/psychology.html",
+      "bangla": "মনোবিজ্ঞান",
+      "definition": "the science of mental life",
+      "example": "'psychology' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "psychology",
+        "psychological science"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3265,
+      "word": "pub",
+      "slug": "pub",
+      "url": "https://ovidhan.net/word/pub.html",
+      "bangla": "পাব",
+      "definition": "tavern consisting of a building with a bar and public rooms; often provides light meals",
+      "example": "'pub' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "taphouse",
+        "gin mill",
+        "public house",
+        "pub",
+        "saloon",
+        "pothouse"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 626,
+      "word": "request",
+      "slug": "request",
+      "url": "https://ovidhan.net/word/request.html",
+      "bangla": "অনুরোধ",
+      "definition": "a formal message requesting something that is submitted to an authority",
+      "example": "This is a request.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "request",
+        "petition",
+        "postulation"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 610,
+      "word": "result",
+      "slug": "result",
+      "url": "https://ovidhan.net/word/result.html",
+      "bangla": "ফলাফল",
+      "definition": "a phenomenon that follows and is caused by some previous phenomenon",
+      "example": "'result' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "outcome",
+        "event",
+        "effect",
+        "upshot",
+        "issue",
+        "result",
+        "consequence"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 818,
+      "word": "rules",
+      "slug": "rules",
+      "url": "https://ovidhan.net/word/rules.html",
+      "bangla": "নিয়ম",
+      "definition": "a principle or condition that customarily governs behavior",
+      "example": "Learning 'rules' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "regulation",
+        "rule"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 4443,
+      "word": "russell",
+      "slug": "russell",
+      "url": "https://ovidhan.net/word/russell.html",
+      "bangla": "রাসেল",
+      "definition": "United States religious leader who founded the sect that is now called Jehovah's Witnesses (1852-1916)",
+      "example": "This is a russell.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "Russell",
+        "Charles Taze Russell"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": true,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 3199,
+      "word": "soil",
+      "slug": "soil",
+      "url": "https://ovidhan.net/word/soil.html",
+      "bangla": "মাটি",
+      "definition": "the state of being covered with unclean things",
+      "example": "Learning 'soil' helps your vocabulary.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "grease",
+        "soil",
+        "stain",
+        "dirt",
+        "filth",
+        "grunge",
+        "grime"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3384,
+      "word": "stick",
+      "slug": "stick",
+      "url": "https://ovidhan.net/word/stick.html",
+      "bangla": "লাঠি",
+      "definition": "an implement consisting of a length of wood",
+      "example": "This is a stick.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "stick"
+      ],
+      "antonyms": [],
+      "quality_score": 3.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": true,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    },
+    {
+      "dictionary_index": 733,
+      "word": "studies",
+      "slug": "studies",
+      "url": "https://ovidhan.net/word/studies.html",
+      "bangla": "অধ্যয়ন",
+      "definition": "a detailed critical inspection",
+      "example": "'studies' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "survey",
+        "study"
+      ],
+      "antonyms": [],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3610,
+      "word": "sufficient",
+      "slug": "sufficient",
+      "url": "https://ovidhan.net/word/sufficient.html",
+      "bangla": "যথেষ্ট",
+      "definition": "of a quantity that can fulfill a need or requirement but without being abundant",
+      "example": "Learning 'sufficient' helps your vocabulary.",
+      "part_of_speech": "adjective",
+      "synonyms": [
+        "sufficient"
+      ],
+      "antonyms": [
+        "insufficient"
+      ],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3524,
+      "word": "terminal",
+      "slug": "terminal",
+      "url": "https://ovidhan.net/word/terminal.html",
+      "bangla": "টার্মিনাল",
+      "definition": "station where transport vehicles load or unload passengers or goods",
+      "example": "'terminal' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "terminal",
+        "terminus",
+        "depot"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 1931,
+      "word": "tests",
+      "slug": "tests",
+      "url": "https://ovidhan.net/word/tests.html",
+      "bangla": "পরীক্ষা",
+      "definition": "trying something to find out about it",
+      "example": "'tests' is common in English.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "trial run",
+        "tryout",
+        "test",
+        "trial"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3803,
+      "word": "textbooks",
+      "slug": "textbooks",
+      "url": "https://ovidhan.net/word/textbooks.html",
+      "bangla": "পাঠ্যপুস্তক",
+      "definition": "a book prepared for use in schools or colleges",
+      "example": "I know the word 'textbooks'.",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "school text",
+        "textbook",
+        "text edition",
+        "schoolbook",
+        "text"
+      ],
+      "antonyms": [
+        "trade edition"
+      ],
+      "quality_score": 5,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": false,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 3594,
+      "word": "typical",
+      "slug": "typical",
+      "url": "https://ovidhan.net/word/typical.html",
+      "bangla": "সাধারণ",
+      "definition": "exhibiting the qualities or characteristics that identify a group or kind or category",
+      "example": "'typical' is common in English.",
+      "part_of_speech": "adjective",
+      "synonyms": [
+        "typical"
+      ],
+      "antonyms": [
+        "atypical"
+      ],
+      "quality_score": 4,
+      "automatic_flags": {
+        "code_like_slug": false,
+        "very_short_slug": false,
+        "bangla_equals_english": false,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": false,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "needs_human_review"
+    },
+    {
+      "dictionary_index": 792,
+      "word": "url",
+      "slug": "url",
+      "url": "https://ovidhan.net/word/url.html",
+      "bangla": "url",
+      "definition": "the address of a web page on the world wide web",
+      "example": "Can you use 'url' in a sentence?",
+      "part_of_speech": "noun",
+      "synonyms": [
+        "uniform resource locator",
+        "URL",
+        "universal resource locator"
+      ],
+      "antonyms": [],
+      "quality_score": 4.5,
+      "automatic_flags": {
+        "code_like_slug": true,
+        "very_short_slug": false,
+        "bangla_equals_english": true,
+        "generic_example": true,
+        "grammar_pattern_suspect": false,
+        "proper_noun_like": true,
+        "synonym_contains_self": true,
+        "duplicate_synonyms": false,
+        "definition_mentions_different_term_if_detectable": false
+      },
+      "review_group": "likely_reject"
+    }
+  ]
+}

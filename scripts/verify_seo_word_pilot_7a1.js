@@ -1,0 +1,92 @@
+const assert = require('assert');
+const crypto = require('crypto');
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+const vm = require('vm');
+const { execFileSync } = require('child_process');
+const root = path.resolve(__dirname, '..');
+const baseSha = '9c666d3c12120c2a68197e408b51061087294961';
+const expectedXlsxHash = '9ee447fcb3e53d07256f35723afc3a5b0d21799040f9e1860e24e9358f4eb426';
+const expectedApproved = `acceptable acting aspects association beast buildings businesses cartridge casual cheap comparison constitution dancing degrees doctor dress evil exercise forecast gene increase internet interviews mass merchants model name nation notebooks objects offers packaging popular posters process proposal psychology pub request result rules stick studies sufficient terminal tests textbooks typical`.split(' ');
+const expectedTreatment = `businesses casual dancing degrees exercise gene model nation pub result tests dress merchants offers popular rules studies cartridge mass notebooks packaging`.split(' ');
+const expectedControl = `textbooks cheap constitution doctor evil increase internet posters request terminal buildings comparison forecast objects process psychology sufficient typical interviews name proposal`.split(' ');
+const forbiddenEmbedded = ['example', 'examples', 'synonyms', 'antonyms', 'collocations', 'verb_forms', 'story', 'word_family', 'common_mistake', 'common_mistakes', 'bcs_importance', 'ielts_importance'];
+const sha256 = data => crypto.createHash('sha256').update(data).digest('hex');
+const fileHash = file => sha256(fs.readFileSync(file));
+const baseFile = relativePath => execFileSync('git', ['show', `${baseSha}:${relativePath}`], { cwd: root, maxBuffer: 32 * 1024 * 1024 });
+const changedFiles = scope => execFileSync('git', ['diff', '--name-only', baseSha, '--', ...(scope ? [scope] : [])], { cwd: root, encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean).sort();
+const xlsx = [process.env.OVIDHAN_GSC_XLSX, path.join(os.homedir(), 'Downloads', 'https___ovidhan.net_-Coverage-Validation-2026-08-25.xlsx')].filter(Boolean).find(fs.existsSync);
+assert(xlsx, 'Required GSC XLSX not found');
+assert.strictEqual(fileHash(xlsx), expectedXlsxHash, 'GSC XLSX hash mismatch');
+const source = JSON.parse(fs.readFileSync(path.join(root, 'data', 'seo-word-pilot-7a1-source.json'), 'utf8'));
+assert.strictEqual(source.sha256, expectedXlsxHash); assert.strictEqual(source.total_exported_url_count, 1000); assert.strictEqual(source.word_url_count, 993); assert.strictEqual(source.cohort_urls.length, 993);
+const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data', 'seo-word-pilot-7a1.json'), 'utf8'));
+const architecture = JSON.parse(fs.readFileSync(path.join(root, 'reports', 'seo-word-pilot-7a1-baseline-architecture.json'), 'utf8'));
+assert.strictEqual(architecture.base_main_sha, baseSha); assert.strictEqual(architecture.entries.length, 48);
+assert.deepStrictEqual(architecture.counts, { approved_population: 48, static_core: 5, js_shell: 43, experiment_treatment: 21, experiment_control: 21, unused_odd_shell: 1 });
+assert.deepStrictEqual([...architecture.entries.map(item => item.slug)].sort(), [...expectedApproved].sort());
+const staticCore = architecture.entries.filter(item => item.baseline_architecture === 'STATIC_CORE');
+const jsShell = architecture.entries.filter(item => item.baseline_architecture === 'JS_SHELL');
+assert.deepStrictEqual(staticCore.map(item => item.slug).sort(), ['acceptable', 'acting', 'aspects', 'association', 'beast']);
+assert.strictEqual(jsShell.length, 43);
+for (const item of staticCore) assert(item.baseline_h1_presence && item.baseline_bangla_presence && item.baseline_definition_presence && item.baseline_pos_presence, `Invalid STATIC_CORE evidence: ${item.slug}`);
+for (const item of jsShell) assert(!(item.baseline_h1_presence && item.baseline_bangla_presence && item.baseline_definition_presence && item.baseline_pos_presence), `Invalid JS_SHELL evidence: ${item.slug}`);
+assert.deepStrictEqual(manifest.counts, { approved_population_count: 48, eligible_js_shell_count: 43, experiment_treatment_count: 21, experiment_control_count: 21, unused_static_core_count: 5, unused_odd_shell_count: 1 });
+assert.deepStrictEqual(manifest.approved_population, expectedApproved); assert.strictEqual(manifest.entries.length, 42);
+for (const field of ['render_example', 'render_examples', 'render_synonyms', 'render_antonyms', 'render_collocations', 'render_verb_forms', 'render_story']) assert.strictEqual(manifest[field], false, `${field} must be false`);
+const treatment = manifest.entries.filter(item => item.group === 'treatment'); const control = manifest.entries.filter(item => item.group === 'control');
+assert.strictEqual(treatment.length, 21); assert.strictEqual(control.length, 21);
+assert.deepStrictEqual(treatment.map(item => item.slug).sort(), [...expectedTreatment].sort(), 'Frozen treatment membership changed');
+assert.deepStrictEqual(control.map(item => item.slug).sort(), [...expectedControl].sort(), 'Frozen control membership changed');
+for (const entry of manifest.entries) { assert.strictEqual(entry.human_editorial_status, 'approved_core'); assert.strictEqual(entry.baseline_architecture, 'JS_SHELL'); assert(jsShell.some(item => item.slug === entry.slug), `Non-shell experiment member: ${entry.slug}`); }
+const sorted = [...manifest.entries].sort((a, b) => b.quality_score - a.quality_score || a.slug.localeCompare(b.slug));
+for (let index = 0; index < sorted.length; index += 2) { const pair = sorted.slice(index, index + 2); const pairId = `7A1-${String(index / 2 + 1).padStart(2, '0')}`; const hash = sha256(`${pair[0].slug}|${pair[1].slug}|7A1`); const treatmentIndex = parseInt(hash[0], 16) % 2; assert(pair.every(item => item.pair_id === pairId && item.assignment_sha256 === hash), `Pair/hash invalid: ${pairId}`); assert.strictEqual(pair[treatmentIndex].group, 'treatment'); assert.strictEqual(pair[1 - treatmentIndex].group, 'control'); }
+const expectedChangedWords = treatment.map(item => `word/${item.slug}.html`).sort();
+assert.deepStrictEqual(changedFiles('word'), expectedChangedWords, 'Only final treatment word pages may differ from base');
+for (const entry of control) assert.strictEqual(fileHash(path.join(root, 'word', `${entry.slug}.html`)), sha256(baseFile(`word/${entry.slug}.html`)), `Control differs from base: ${entry.slug}`);
+const dictionary = JSON.parse(fs.readFileSync(path.join(root, 'enriched-dictionary.json'), 'utf8'));
+for (const entry of treatment) {
+  const html = fs.readFileSync(path.join(root, 'word', `${entry.slug}.html`), 'utf8'); const baselineHtml = baseFile(`word/${entry.slug}.html`).toString('utf8'); const sourceEntry = dictionary[entry.dictionary_index];
+  const treatmentHead = html.match(/<head>[\s\S]*?<\/head>/)?.[0]; const baselineHead = baselineHtml.match(/<head>[\s\S]*?<\/head>/)?.[0];
+  assert.strictEqual(treatmentHead, baselineHead, `Head differs from baseline: ${entry.slug}`);
+  const treatmentHreflang = treatmentHead.match(/<link[^>]+hreflang=[^>]+>/g) || []; const baselineHreflang = baselineHead.match(/<link[^>]+hreflang=[^>]+>/g) || [];
+  assert.deepStrictEqual(treatmentHreflang, baselineHreflang, `hreflang differs from baseline: ${entry.slug}`);
+  assert(source.cohort_urls.includes(entry.url) && entry.in_gsc_export && entry.in_sitemap); assert.strictEqual((html.match(/<h1(?:\s[^>]*)?>/g) || []).length, 1); assert(html.includes(sourceEntry.bangla.trim())); assert(html.includes(sourceEntry.definition.trim()));
+  assert(/<article id="staticWordContent" class="dictionary-answer">/.test(html), `Static article missing: ${entry.slug}`);
+  assert(/<h2(?:\s[^>]*)?>[\s\S]*?Learning Explorer[\s\S]*?<\/h2>/i.test(html), `Learning Explorer H2 missing: ${entry.slug}`);
+  assert(!/<h1(?:\s[^>]*)?>[\s\S]*?Learning Explorer[\s\S]*?<\/h1>/i.test(html), `Learning Explorer H1 retained: ${entry.slug}`);
+  const embeddedMatch = html.match(/<script type="application\/json" id="ovidhan-word-data">([\s\S]*?)<\/script>/); assert(embeddedMatch, `Embedded JSON missing: ${entry.slug}`); const embedded = JSON.parse(embeddedMatch[1]);
+  const expectedKeys = ['bangla', 'definition', 'english', ...(sourceEntry.part_of_speech?.trim() ? ['part_of_speech'] : [])].sort(); assert.deepStrictEqual(Object.keys(embedded).sort(), expectedKeys, `Embedded keys invalid: ${entry.slug}`);
+  assert.deepStrictEqual(embedded, { english: sourceEntry.english, bangla: sourceEntry.bangla, definition: sourceEntry.definition, ...(sourceEntry.part_of_speech?.trim() ? { part_of_speech: sourceEntry.part_of_speech } : {}) });
+  for (const key of forbiddenEmbedded) assert(!(key in embedded), `Forbidden embedded key ${key}: ${entry.slug}`);
+  assert(!/class="(?:examples|related-words|synonyms|antonyms|pronunciation|verb-forms|collocations|mini-story)"|<h2>(?:Examples|Synonyms|Antonyms|Verb forms|Collocations)<\/h2>/i.test(html), `Non-core static content rendered: ${entry.slug}`); assert(!html.includes('${'));
+}
+for (const [name, hash] of Object.entries(manifest.baseline.sitemap_sha256)) assert.strictEqual(fileHash(path.join(root, name)), hash, `Sitemap changed: ${name}`);
+assert.strictEqual(fileHash(path.join(root, 'robots.txt')), manifest.baseline.robots_sha256, 'robots changed'); assert.strictEqual(fileHash(path.join(root, 'reports', 'seo-word-pilot-7a1-editorial-review.json')), manifest.baseline.editorial_review_sha256, 'Editorial audit changed');
+const frozen = JSON.parse(fs.readFileSync(path.join(root, 'reports', 'ovidhan-learning-foundation-3b-frozen-hashes.json'), 'utf8')); assert.strictEqual(frozen.uniquePageCount, 144); for (const item of [...frozen.pages, ...frozen.guards]) assert.strictEqual(fileHash(path.join(root, item.path)), item.sha256, `Frozen file changed: ${item.path}`);
+const runtime = fs.readFileSync(path.join(root, 'learning-explorer.js'), 'utf8'); assert(runtime.includes("document.getElementById('ovidhan-word-data')")); assert(runtime.includes("document.getElementById('staticWordContent')")); assert(runtime.includes('staticContent.hidden = true')); assert(runtime.includes('.then(() => searchWord())')); assert(!runtime.includes('seo-word-pilot-7a1-editorial-review'));
+async function verifyCurrentWordInteraction() {
+  const embedded = { english: 'businesses', bangla: 'ব্যবসা', definition: 'a commercial enterprise', part_of_speech: 'noun' };
+  const elements = { wordInput: { value: 'businesses', addEventListener() {} }, resultArea: { innerHTML: '' }, staticWordContent: { hidden: false }, 'ovidhan-word-data': { textContent: JSON.stringify(embedded) } };
+  let fetchCount = 0;
+  const context = {
+    console, URL, URLSearchParams, setTimeout, clearTimeout,
+    fetch: async url => { assert.strictEqual(url, '/enriched-dictionary.json'); fetchCount += 1; return { ok: true, json: async () => [{ ...embedded, examples: ['Example'], synonyms: ['commerce'] }] }; },
+    document: { getElementById: id => elements[id] || null, querySelector: () => ({ setAttribute() {} }), createElement: () => ({ setAttribute() {} }), head: { appendChild() {} } },
+    window: { location: 'https://ovidhan.net/word/businesses.html', history: { pushState() {} }, dispatchEvent() {}, speechSynthesis: { cancel() {}, speak() {} } },
+    localStorage: { getItem: () => null, setItem() {} }, CustomEvent: function () {}, SpeechSynthesisUtterance: function () {}
+  };
+  vm.runInNewContext(runtime, context, { filename: 'learning-explorer.js' });
+  assert.strictEqual(fetchCount, 0, 'Treatment initial load fetched the full dictionary');
+  context.searchWord();
+  await new Promise(resolve => setImmediate(resolve)); await new Promise(resolve => setImmediate(resolve));
+  assert.strictEqual(fetchCount, 1, 'Current-word Search did not lazy-load exactly once');
+  assert.strictEqual(elements.staticWordContent.hidden, true, 'Current-word Search did not hide static content');
+  for (const feature of ['quiz-block', 'flashcard-block', 'daily-challenge', 'save-word']) assert(elements.resultArea.innerHTML.includes(feature), `Current-word interactive feature missing: ${feature}`);
+}
+const values = group => group.map(item => item.quality_score).sort((a, b) => a - b); const mean = items => items.reduce((sum, value) => sum + value, 0) / items.length; const median = items => items[Math.floor(items.length / 2)]; const ts = values(treatment), cs = values(control);
+verifyCurrentWordInteraction().then(() => {
+  const result = { status: 'PASS', baseline_architecture: { static_core: 5, js_shell: 43, static_core_words: staticCore.map(item => item.slug), odd_unused_shell: manifest.unused.odd_shell }, cohort: manifest.counts, changed_word_files: expectedChangedWords.length, changed_files_total: changedFiles().length, treatment: treatment.map(item => item.slug), control: control.map(item => item.slug), scores: { treatment_mean: mean(ts), control_mean: mean(cs), treatment_median: median(ts), control_median: median(cs) }, treatment_heads_byte_identical_to_base: true, hreflang_preserved: true, initial_dictionary_fetches: 0, current_word_interaction: true, controls_unchanged: true, unrelated_word_pages_unchanged: true, sitemap_robots_unchanged: true, frozen_experiment_unchanged: true, editorial_review_unchanged: true };
+  console.log(JSON.stringify(result, null, 2));
+}).catch(error => { console.error(error); process.exitCode = 1; });

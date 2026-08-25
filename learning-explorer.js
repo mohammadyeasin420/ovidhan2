@@ -2,15 +2,57 @@
 
 let dictionary = null;
 let currentWord = null;
+let embeddedWord = null;
+let fullDictionaryLoaded = false;
+let dictionaryLoadPromise = null;
 
-fetch('/enriched-dictionary.json')
-    .then(res => res.json())
-    .then(data => {
-        dictionary = {};
-        data.forEach(entry => {
-            const word = entry.english || entry.word || entry.en;
-            if (word) dictionary[word.toLowerCase()] = entry;
+function indexDictionary(data) {
+    const indexed = {};
+    data.forEach(entry => {
+        const word = entry.english || entry.word || entry.en;
+        if (word) indexed[word.toLowerCase()] = entry;
+    });
+    return indexed;
+}
+
+function loadFullDictionary() {
+    if (fullDictionaryLoaded) return Promise.resolve(dictionary);
+    if (dictionaryLoadPromise) return dictionaryLoadPromise;
+    dictionaryLoadPromise = fetch('/enriched-dictionary.json')
+        .then(res => {
+            if (!res.ok) throw new Error(`Dictionary request failed: ${res.status}`);
+            return res.json();
+        })
+        .then(data => {
+            dictionary = indexDictionary(data);
+            fullDictionaryLoaded = true;
+            return dictionary;
+        })
+        .catch(err => {
+            dictionaryLoadPromise = null;
+            throw err;
         });
+    return dictionaryLoadPromise;
+}
+
+function loadInitialDictionary() {
+    const embeddedData = document.getElementById('ovidhan-word-data');
+    if (embeddedData) {
+        try {
+            const entry = JSON.parse(embeddedData.textContent);
+            const word = entry.english || entry.word || entry.en;
+            if (!word) throw new Error('Embedded dictionary entry has no English word');
+            embeddedWord = word.toLowerCase();
+            currentWord = embeddedWord;
+            dictionary = { [embeddedWord]: entry };
+            return;
+        } catch (err) {
+            console.error('Embedded dictionary data error:', err);
+        }
+    }
+
+    loadFullDictionary()
+    .then(() => {
         const params = new URLSearchParams(window.location.search);
         const wordParam = params.get('word');
         if (wordParam) {
@@ -22,6 +64,9 @@ fetch('/enriched-dictionary.json')
         console.error('Dictionary load error:', err);
         document.getElementById('resultArea').innerHTML = '<p style="color: var(--red);">❌ Failed to load dictionary.</p>';
     });
+}
+
+loadInitialDictionary();
 
 function searchWord() {
     const word = document.getElementById('wordInput').value.trim().toLowerCase();
@@ -35,8 +80,33 @@ function searchWord() {
         return;
     }
 
+    if (embeddedWord && !fullDictionaryLoaded) {
+        resultArea.innerHTML = '<p>Loading dictionary...</p>';
+        loadFullDictionary()
+            .then(() => {
+                const staticContent = document.getElementById('staticWordContent');
+                if (staticContent) staticContent.hidden = true;
+                searchWord();
+            })
+            .catch(err => {
+                console.error('Dictionary load error:', err);
+                resultArea.innerHTML = '<p style="color: var(--red);">❌ Failed to load dictionary.</p>';
+            });
+        return;
+    }
+
     const entry = dictionary[word];
     if (!entry) {
+        if (!fullDictionaryLoaded) {
+            resultArea.innerHTML = '<p>Loading dictionary...</p>';
+            loadFullDictionary()
+                .then(() => searchWord())
+                .catch(err => {
+                    console.error('Dictionary load error:', err);
+                    resultArea.innerHTML = '<p style="color: var(--red);">❌ Failed to load dictionary.</p>';
+                });
+            return;
+        }
         resultArea.innerHTML = `<p style="color: var(--text-soft);">❌ Word not found. Try another word.</p>`;
         return;
     }
