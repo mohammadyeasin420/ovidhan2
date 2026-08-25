@@ -318,7 +318,7 @@ try {
         if ($smokeResponses['/word/businesses.html'].Body -notmatch 'id=["'']staticWordContent["'']') { throw 'Treatment smoke test lacks staticWordContent: businesses' }
         if ($smokeResponses['/word/businesses.html'].Body -notmatch '(?i)<h1[^>]*>\s*businesses meaning in Bangla\s*</h1>') { throw 'Treatment smoke test lacks expected static H1: businesses' }
         if ($smokeResponses['/word/textbooks.html'].Body -match 'id=["'']staticWordContent["'']') { throw 'Control smoke test unexpectedly contains staticWordContent: textbooks' }
-        $workersDev = Invoke-WebRequest -Uri 'https://ovidhan.yeasinarafat0.workers.dev/' -Method Get -TimeoutSec 30 -MaximumRedirection 5
+        $workersDev = Invoke-WebRequest -Uri 'https://ovidhan.yeasinarafat0.workers.dev/' -Method Get -TimeoutSec 30 -MaximumRedirection 5 -UseBasicParsing
         $xRobots = [string]$workersDev.Headers['X-Robots-Tag']
         if ($xRobots -notmatch 'noindex' -or $xRobots -notmatch 'nofollow' -or $xRobots -notmatch 'noarchive') {
             throw "workers.dev X-Robots-Tag is unsafe: '$xRobots'"
