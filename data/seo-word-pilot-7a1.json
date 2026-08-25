@@ -1,5 +1,5 @@
 {
-  "schema": "ovidhan-seo-word-static-pilot-7a1-v2",
+  "schema": "ovidhan-seo-word-static-pilot-7a1-v3",
   "hypothesis": "Does converting a JS-shell word page to useful static raw HTML improve crawl/index behavior?",
   "approved_population_source": "Exact human-approved 48-word list supplied for Phase 7A1-C",
   "approved_population": [
@@ -52,7 +52,7 @@
     "textbooks",
     "typical"
   ],
-  "assignment_rule": "Filter to baseline JS_SHELL; sort by quality_score descending then slug ascending; drop final odd entry; pair adjacent entries; SHA-256(first_slug + \"|\" + second_slug + \"|7A1\"); even first hex digit assigns first member to treatment, odd assigns second.",
+  "assignment_rule": "Frozen Phase 7A1-D 21+21 membership and pair metadata; the generator validates but does not recalculate assignment.",
   "quality_score_formula": "+1 pronunciation; +1 part_of_speech; +2 any singular example or examples-array item; +0.5 each for up to 3 synonyms; +0.5 each for up to 3 antonyms; +0.5 each for up to 3 collocations; +1 non-empty verb_forms object; +1 story.",
   "render_example": false,
   "render_examples": false,

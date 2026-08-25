@@ -80,9 +80,18 @@ function searchWord() {
         return;
     }
 
-    if (embeddedWord && !fullDictionaryLoaded && word === embeddedWord) {
-        currentWord = word;
-        resultArea.innerHTML = '<p style="color: var(--text-soft);">The selected entry is shown above.</p>';
+    if (embeddedWord && !fullDictionaryLoaded) {
+        resultArea.innerHTML = '<p>Loading dictionary...</p>';
+        loadFullDictionary()
+            .then(() => {
+                const staticContent = document.getElementById('staticWordContent');
+                if (staticContent) staticContent.hidden = true;
+                searchWord();
+            })
+            .catch(err => {
+                console.error('Dictionary load error:', err);
+                resultArea.innerHTML = '<p style="color: var(--red);">❌ Failed to load dictionary.</p>';
+            });
         return;
     }
 

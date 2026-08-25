@@ -41,6 +41,22 @@ The manifest explicitly records all rendering exclusions, `human_editorial_statu
 
 The existing frozen verifier also passes at 72 treatment, 72 control, 144 unchanged pages, and aggregate SHA-256 `202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0`.
 
-Browser QA covered treatments `businesses`, `casual`, `exercise`, `gene`, `notebooks`, and `tests`; controls `textbooks`, `cheap`, and `proposal`; excluded static-core pages `acceptable`, `acting`, and `beast`; and odd unused shell `stick`. Treatments had one correct H1, static Bangla and definition, core-only embedded keys, no rendered example/related sections, no initial full-dictionary request, and no console errors. Controls and exclusions retained their baseline full-dictionary request. Searching `cheap` from treatment `businesses` lazy-loaded `/enriched-dictionary.json` and rendered the existing explorer result without console errors.
+Treatment pages are now derived from their own baseline files. Their complete `<head>` blocks, including any hreflang tags, remain byte-for-byte identical to base. Only the baseline body is minimally changed: the Learning Explorer H1 becomes H2, `#staticWordContent` is inserted immediately before the explorer, and core embedded JSON is inserted immediately before `learning-explorer.js`.
+
+Browser QA covers representative treatments, controls, excluded static-core pages, and odd unused shell `stick`. Treatments have one correct H1, static Bangla and definition, core-only embedded keys, no rendered example/related sections, no initial full-dictionary request, and no console errors. Controls and exclusions retain their baseline full-dictionary request. Explicitly searching either the current embedded word or another word lazy-loads `/enriched-dictionary.json`, hides `#staticWordContent`, and renders the existing dynamic audio, quiz, flashcard, daily-challenge, and save/review experience without duplicate static content.
+
+## Word-file count reconciliation
+
+- Git-tracked `word/*.html` at base SHA: 49,514
+- Current workspace `word/*.html`: 49,628
+- `C:\deploy\ovidhan-production\word`: 49,628
+- Base files missing from workspace or deployment: none
+- Workspace and deployment have the same 114 additional filenames:
+
+`á.html`, `à.html`, `â.html`, `å.html`, `ã.html`, `andré.html`, `andrés.html`, `ángel.html`, `atlético.html`, `attaché.html`, `barça.html`, `beyoncé.html`, `bogotá.html`, `café.html`, `cafés.html`, `céline.html`, `césar.html`, `château.html`, `chávez.html`, `cliché.html`, `clichés.html`, `communiqué.html`, `condé.html`, `côte.html`, `crème.html`, `décor.html`, `déjà.html`, `díaz.html`, `düsseldorf.html`, `é.html`, `è.html`, `erdoğan.html`, `españa.html`, `español.html`, `état.html`, `exposé.html`, `façade.html`, `féin.html`, `fernández.html`, `fiancé.html`, `fiancée.html`, `français.html`, `française.html`, `françois.html`, `führer.html`, `für.html`, `garcía.html`, `gérard.html`, `gonzález.html`, `hernández.html`, `joão.html`, `josé.html`, `jürgen.html`, `león.html`, `lópez.html`, `malmö.html`, `maría.html`, `martín.html`, `martínez.html`, `más.html`, `méxico.html`, `montréal.html`, `müller.html`, `naïve.html`, `nestlé.html`, `niño.html`, `º.html`, `ó.html`, `ö.html`, `ø.html`, `özil.html`, `peña.html`, `pérez.html`, `piñata.html`, `pokémon.html`, `protégé.html`, `qué.html`, `québec.html`, `ramón.html`, `raúl.html`, `rené.html`, `renée.html`, `résumé.html`, `rodríguez.html`, `rosé.html`, `sánchez.html`, `são.html`, `señor.html`, `señora.html`, `société.html`, `suárez.html`, `ü.html`, `über.html`, `zoë.html`, `α.html`, `β.html`, `γ.html`, `δ.html`, `ε.html`, `θ.html`, `λ.html`, `μ.html`, `μg.html`, `μm.html`, `π.html`, `σ.html`, `φ.html`, `ω.html`, `а.html`, `в.html`, `и.html`, `на.html`, `с.html`, `ツ.html`.
+
+These untracked/non-base production files were audited only. None was added, deleted, or modified for the experiment.
+
+PR #46 title/body still describe the earlier 24+24 design and need updating to 21+21 after final approval.
 
 No sitemap, robots, frozen experiment, DNS, or Cloudflare deployment change was made. PR #46 remains review-only and must not be merged until the corrected diff is reviewed.
