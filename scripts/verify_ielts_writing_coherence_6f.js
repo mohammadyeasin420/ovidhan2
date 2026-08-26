@@ -74,8 +74,9 @@ for (const id of ['writing_academic_coherence_cohesion','writing_gt_coherence_co
   assert.equal(relation.static_destination, true);
   assert.match(relation.coverage_note, /no productive Writing performance evidence/i);
 }
-const ieltsDestinations = destinations.destinations.filter(destination => destination.goal_ids.includes('IELTS')).map(destination => destination.skill_id);
-assert.deepEqual(ieltsDestinations.slice(0,17), ['formal_letter_writing','writing_coherence_cohesion','writing_visual_information_description','writing_argument_development','reading_main_idea','reading_supporting_detail','reading_inference','reading_tone_purpose','reading_reference','listening_main_point','listening_specific_detail','listening_conversation_tracking','listening_fact_connection','listening_information_relationship','speaking_extended_turn','speaking_discussion_response','writing_letter_task_response']);
+const ieltsDestinationRecords = destinations.destinations.filter(destination => destination.goal_ids.includes('IELTS'));
+const ieltsDestinations = ieltsDestinationRecords.map(destination => destination.skill_id);
+assert.deepEqual(ieltsDestinationRecords.map(destination=>destination.destination_id), ['content:formal_letter_writing','content:writing_coherence_cohesion','content:writing_visual_information_description','content:writing_argument_development','content:ielts_reading_main_idea','content:ielts_reading_supporting_detail','content:ielts_reading_inference','content:ielts_reading_tone_purpose','content:ielts_reading_reference','content:ielts_listening_main_point','content:ielts_listening_specific_detail','content:ielts_listening_conversation_tracking','content:ielts_listening_fact_connection','content:ielts_listening_information_relationship','content:ielts_speaking_extended_turn','content:ielts_speaking_discussion_response','content:ielts_writing_letter_task_response','content:ielts_academic_task1_writing','content:ielts_academic_task2_writing']);
 const destination = destinations.destinations.find(candidate => candidate.skill_id === skill.id);
 assert.ok(destination && destination.url === '/ielts-writing-coherence-cohesion-bangla.html' && destination.review_status === 'REVIEWED');
 assert.ok(!destinations.destinations.find(candidate => candidate.skill_id === 'writing_precis').goal_ids.includes('IELTS'));

@@ -1,10 +1,10 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8'),sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex');
-const pack=require('../data/ielts-gt-writing-performance-v1.json'),governedSourceSha256='aa54547f2a71982014a193af4ddba81b040412159d0da9b411585f2ece14b2c7';
+const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8'),sha=f=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex'),normalizedTextSha256=f=>crypto.createHash('sha256').update(read(f).replace(/\r\n?/g,'\n'),'utf8').digest('hex');
+const pack=require('../data/ielts-gt-writing-performance-v1.json'),governedSourceSha256='003ed1c552a82b34082d88a7b7f1330ca9075a217325922ccd4771d667cdd801';
 const graph=require('../skill-mistake-graph.json'),goals=require('../goal-skill-requirements.json'),requirements=require('../data/ielts-goal-requirement-map-v1.json'),destinations=require('../smartpath-destinations.json'),learning=require('../learning-foundation.js'),frozen=require('../reports/ovidhan-learning-foundation-3b-frozen-hashes.json');
 const page=read('ielts-writing-practice-bangla.html'),runtime=read('ielts-writing-practice.js'),all=[...pack.gt_task1_letters,...pack.gt_task2_essays];
-assert.equal(sha('data/ielts-gt-writing-performance-v1.json'),governedSourceSha256,'governed editorial source must remain verbatim');
+assert.equal(normalizedTextSha256('data/ielts-gt-writing-performance-v1.json'),governedSourceSha256,'governed editorial source must remain text-identical after newline normalization');
 assert.equal(pack.gt_task1_letters.length,12);assert.equal(pack.gt_task2_essays.length,8);assert.equal(all.length,20);
 assert.deepEqual(Object.fromEntries(['FORMAL','SEMI_FORMAL','INFORMAL_PERSONAL'].map(x=>[x,pack.gt_task1_letters.filter(y=>y.expected_register===x).length])),{FORMAL:4,SEMI_FORMAL:4,INFORMAL_PERSONAL:4});
 assert.deepEqual(Object.fromEntries(['POSITION_OPINION','DISCUSS_BOTH_AND_POSITION','ADVANTAGES_DISADVANTAGES','CAUSES_SOLUTIONS','PROBLEMS_SOLUTIONS','TWO_PART_POLICY_SOCIAL'].map(x=>[x,pack.gt_task2_essays.filter(y=>y.reasoning_demand===x).length])),{POSITION_OPINION:2,DISCUSS_BOTH_AND_POSITION:2,ADVANTAGES_DISADVANTAGES:1,CAUSES_SOLUTIONS:1,PROBLEMS_SOLUTIONS:1,TWO_PART_POLICY_SOCIAL:1});
