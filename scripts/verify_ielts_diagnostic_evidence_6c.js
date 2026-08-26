@@ -48,7 +48,7 @@ assert.ok(manifest.items.filter(item=>['listening','speaking'].includes(item.bro
 assert.equal(graph.families.length,16);
 assert.equal(graph.skills.length,76);
 assert.equal(graph.skills.filter(skill=>skill.status==='ACTIVE').length,76);
-assert.equal(graph.item_mappings.length,520);
+assert.equal(graph.item_mappings.length,536);assert.equal(new Set(graph.item_mappings.map(x=>x.item_id)).size,536);
 assert.match(diagnostic,/recordSkillEvidence\(/);
 assert.doesNotMatch(diagnostic,/recordMistakeSignal\(/);
 assert.match(diagnostic,/if\(current===QUESTIONS\.length-1\)showResults\(\)/);

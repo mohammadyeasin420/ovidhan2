@@ -5471,6 +5471,102 @@
         "essay_thesis_focus",
         "essay_outline_structure"
       ]
+    },
+    {
+      "item_id": "academic-task1-001",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task1-002",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task1-003",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task1-004",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task1-005",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task1-006",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task1-007",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task1-008",
+      "primary_skill_id": "writing_visual_information_description",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task2-001",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task2-002",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task2-003",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task2-004",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task2-005",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task2-006",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task2-007",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
+    },
+    {
+      "item_id": "academic-task2-008",
+      "primary_skill_id": "writing_argument_development",
+      "primary_family_id": "WRITING",
+      "secondary_skill_ids": []
     }
   ],
   "transfer_patterns": [

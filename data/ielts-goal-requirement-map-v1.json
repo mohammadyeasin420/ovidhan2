@@ -474,8 +474,8 @@
       "requirement_id": "writing_academic_task1_visual",
       "skill_id": "writing_visual_information_description",
       "mapping_class": "DIRECT_TASK_ALIGNMENT",
-      "coverage_status": "EVIDENCE_GAP",
-      "coverage_note": "Canonical skill, reviewed objective practice and static destination now exist, but no productive Academic Task 1 writing performance evidence is collected.",
+      "coverage_status": "PARTIALLY_COVERED",
+      "coverage_note": "Productive Ovidhan-created Academic Task 1 visual attempts and self-review now exist; visual-description quality, completeness, score and band are not automatically assessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
@@ -484,8 +484,8 @@
       "requirement_id": "writing_academic_task1_overview",
       "skill_id": "writing_visual_information_description",
       "mapping_class": "DIRECT_TASK_ALIGNMENT",
-      "coverage_status": "EVIDENCE_GAP",
-      "coverage_note": "Canonical skill, reviewed objective practice and static destination now exist, but no productive Academic Task 1 writing performance evidence is collected.",
+      "coverage_status": "PARTIALLY_COVERED",
+      "coverage_note": "Every productive Academic Task 1 item supports overview planning and self-review; overview presence and quality, score and band are not automatically assessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
@@ -574,8 +574,8 @@
       "requirement_id": "writing_academic_task2_argument",
       "skill_id": "writing_argument_development",
       "mapping_class": "DIRECT_TASK_ALIGNMENT",
-      "coverage_status": "EVIDENCE_GAP",
-      "coverage_note": "Reviewed objective practice exists, but productive IELTS writing performance is not collected.",
+      "coverage_status": "PARTIALLY_COVERED",
+      "coverage_note": "Productive Ovidhan-created Academic Task 2 attempts and self-review now exist; argument quality, completeness, score and band are not automatically assessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
@@ -595,7 +595,7 @@
       "skill_id": "writing_argument_development",
       "mapping_class": "ASSESSMENT_CRITERION_ALIGNMENT",
       "coverage_status": "PARTIALLY_COVERED",
-      "coverage_note": "Argument development supports Task Response but does not represent the complete criterion and no productive writing evidence is collected.",
+      "coverage_note": "Productive Academic Task 2 attempts and learner self-review support bounded Task Response practice; completeness, quality, score and band are not automatically assessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
