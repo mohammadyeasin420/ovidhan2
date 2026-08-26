@@ -24,7 +24,8 @@
       "impressions": 9.0,
       "position": 4.78,
       "editorial_judgment": "EDITORIAL_PRIORITY",
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "actions": [
         "SEO_PROTECT",
         "EDITORIAL_PRIORITY"
@@ -47,7 +48,8 @@
       "impressions": 9.0,
       "position": 6.89,
       "editorial_judgment": "EDITORIAL_PRIORITY",
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "actions": [
         "SEO_PROTECT",
         "EDITORIAL_PRIORITY"
@@ -70,6 +72,7 @@
       "position": 12.0,
       "editorial_judgment": "EDITORIAL_PRIORITY",
       "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "actions": [
         "SEO_PROTECT",
         "EDITORIAL_PRIORITY"
@@ -90,6 +93,7 @@
       "position": 6.38,
       "editorial_judgment": "PROTECT_NO_EDITORIAL_EXPANSION",
       "semantic_class": "PROPER_NAME_BRAND_OR_ENTITY",
+      "base_lemma": null,
       "actions": [
         "SEO_PROTECT",
         "PROTECT_NO_EDITORIAL_EXPANSION"
@@ -110,6 +114,7 @@
       "position": 10.42,
       "editorial_judgment": "PROTECT_NO_EDITORIAL_EXPANSION",
       "semantic_class": "PROPER_NAME_BRAND_OR_ENTITY",
+      "base_lemma": null,
       "actions": [
         "SEO_PROTECT",
         "PROTECT_NO_EDITORIAL_EXPANSION"
@@ -123,20 +128,85 @@
       }
     }
   ],
+  "protection_register": {
+    "size": 204,
+    "clicked_urls": [
+      "https://ovidhan.net/word/slytherin.html",
+      "https://ovidhan.net/word/net.html",
+      "https://ovidhan.net/word/translation.html",
+      "https://ovidhan.net/word/walmart.html",
+      "https://ovidhan.net/word/tradeoff.html",
+      "https://ovidhan.net/word/ua.html"
+    ],
+    "action_counts": {
+      "PROTECT_NO_EDITORIAL_EXPANSION": 2,
+      "SEO_PROTECT": 204,
+      "EDITORIAL_PRIORITY": 3,
+      "HUMAN_REVIEW": 195
+    }
+  },
   "review_queue": {
+    "tier_b_total_considered": 824,
+    "tier_b_pages_with_learner_value_evidence": 23,
+    "tier_b_learner_source_intersections": {
+      "bcs": 0,
+      "ielts": 0,
+      "job_workplace": 0,
+      "general_english": 23
+    },
+    "tier_b_semantic_counts": {
+      "VALID_SECONDARY_WORD": 19,
+      "UNKNOWN_REQUIRES_HUMAN_REVIEW": 801,
+      "INFLECTED_OR_DERIVED_FORM": 4
+    },
+    "tier_b_inflected_relations": [
+      {
+        "slug": "creating",
+        "base_lemma": "create"
+      },
+      {
+        "slug": "producing",
+        "base_lemma": "produce"
+      },
+      {
+        "slug": "smaller",
+        "base_lemma": "small"
+      },
+      {
+        "slug": "having",
+        "base_lemma": "have"
+      }
+    ],
     "size": 100,
     "semantic_counts": {
-      "CORE_LEARNING_WORD": 11,
-      "UNKNOWN_REQUIRES_HUMAN_REVIEW": 89
+      "VALID_SECONDARY_WORD": 8,
+      "UNKNOWN_REQUIRES_HUMAN_REVIEW": 89,
+      "INFLECTED_OR_DERIVED_FORM": 3
     },
     "pages_with_learner_value_evidence": 11,
     "action_counts": {
       "SEO_PROTECT": 71,
       "INTERNAL_LINK_OPPORTUNITY": 11,
       "CONTENT_REPAIR": 3,
-      "HUMAN_REVIEW": 89
+      "HUMAN_REVIEW": 92
     }
   },
+  "previous_first_batch": [
+    "net",
+    "translation",
+    "tradeoff",
+    "without",
+    "must",
+    "provision",
+    "accordance",
+    "creating",
+    "producing",
+    "during",
+    "wallet",
+    "integration",
+    "smaller",
+    "street"
+  ],
   "first_batch": [
     {
       "slug": "net",
@@ -145,7 +215,8 @@
         "SEO_PROTECT",
         "EDITORIAL_PRIORITY"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -177,7 +248,8 @@
         "SEO_PROTECT",
         "EDITORIAL_PRIORITY"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -204,6 +276,7 @@
         "EDITORIAL_PRIORITY"
       ],
       "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -223,7 +296,8 @@
         "INTERNAL_LINK_OPPORTUNITY",
         "SEO_PROTECT"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -249,7 +323,8 @@
         "EDITORIAL_PRIORITY",
         "INTERNAL_LINK_OPPORTUNITY"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -275,7 +350,8 @@
         "EDITORIAL_PRIORITY",
         "INTERNAL_LINK_OPPORTUNITY"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -301,7 +377,8 @@
         "EDITORIAL_PRIORITY",
         "INTERNAL_LINK_OPPORTUNITY"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -321,60 +398,6 @@
       "reason": "Observed demand plus explicit curated learner evidence and technical safety"
     },
     {
-      "slug": "creating",
-      "url": "https://ovidhan.net/word/creating.html",
-      "actions": [
-        "EDITORIAL_PRIORITY",
-        "INTERNAL_LINK_OPPORTUNITY",
-        "SEO_PROTECT"
-      ],
-      "semantic_class": "CORE_LEARNING_WORD",
-      "learner_value": {
-        "bcs": "UNKNOWN",
-        "ielts": "UNKNOWN",
-        "job_workplace": "UNKNOWN",
-        "general_english": "KNOWN_POSITIVE",
-        "sources": [
-          "5000-common-words-data.json"
-        ]
-      },
-      "internal_links": [
-        {
-          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/creating.html",
-          "word_to_hub": "/word/creating.html -> /5000-common-english-words-bangla.html",
-          "evidence_source": "5000-common-words-data.json"
-        }
-      ],
-      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
-    },
-    {
-      "slug": "producing",
-      "url": "https://ovidhan.net/word/producing.html",
-      "actions": [
-        "EDITORIAL_PRIORITY",
-        "INTERNAL_LINK_OPPORTUNITY",
-        "SEO_PROTECT"
-      ],
-      "semantic_class": "CORE_LEARNING_WORD",
-      "learner_value": {
-        "bcs": "UNKNOWN",
-        "ielts": "UNKNOWN",
-        "job_workplace": "UNKNOWN",
-        "general_english": "KNOWN_POSITIVE",
-        "sources": [
-          "5000-common-words-data.json"
-        ]
-      },
-      "internal_links": [
-        {
-          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/producing.html",
-          "word_to_hub": "/word/producing.html -> /5000-common-english-words-bangla.html",
-          "evidence_source": "5000-common-words-data.json"
-        }
-      ],
-      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
-    },
-    {
       "slug": "during",
       "url": "https://ovidhan.net/word/during.html",
       "actions": [
@@ -382,7 +405,8 @@
         "EDITORIAL_PRIORITY",
         "INTERNAL_LINK_OPPORTUNITY"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -409,7 +433,8 @@
         "EDITORIAL_PRIORITY",
         "INTERNAL_LINK_OPPORTUNITY"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -436,7 +461,8 @@
         "INTERNAL_LINK_OPPORTUNITY",
         "SEO_PROTECT"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -456,40 +482,14 @@
       "reason": "Observed demand plus explicit curated learner evidence and technical safety"
     },
     {
-      "slug": "smaller",
-      "url": "https://ovidhan.net/word/smaller.html",
-      "actions": [
-        "EDITORIAL_PRIORITY",
-        "INTERNAL_LINK_OPPORTUNITY",
-        "SEO_PROTECT"
-      ],
-      "semantic_class": "CORE_LEARNING_WORD",
-      "learner_value": {
-        "bcs": "UNKNOWN",
-        "ielts": "UNKNOWN",
-        "job_workplace": "UNKNOWN",
-        "general_english": "KNOWN_POSITIVE",
-        "sources": [
-          "5000-common-words-data.json"
-        ]
-      },
-      "internal_links": [
-        {
-          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/smaller.html",
-          "word_to_hub": "/word/smaller.html -> /5000-common-english-words-bangla.html",
-          "evidence_source": "5000-common-words-data.json"
-        }
-      ],
-      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
-    },
-    {
       "slug": "street",
       "url": "https://ovidhan.net/word/street.html",
       "actions": [
         "EDITORIAL_PRIORITY",
         "INTERNAL_LINK_OPPORTUNITY"
       ],
-      "semantic_class": "CORE_LEARNING_WORD",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "base_lemma": null,
       "learner_value": {
         "bcs": "UNKNOWN",
         "ielts": "UNKNOWN",
@@ -510,12 +510,12 @@
     }
   ],
   "required_counts": {
-    "pages_with_clicks": 5,
-    "pages_with_learner_value_evidence": 13,
-    "proper_name_entity_noise_review": 91,
-    "editorial_priority": 14,
-    "first_batch_size": 14,
-    "internal_link_opportunities": 14,
+    "pages_with_clicks": 6,
+    "pages_with_learner_value_evidence": 16,
+    "proper_name_entity_noise_review": 286,
+    "editorial_priority": 11,
+    "first_batch_size": 11,
+    "internal_link_opportunities": 11,
     "overlap_7a1": 0,
     "coverage_backlog_overlap": 0
   },
@@ -526,7 +526,7 @@
     },
     "ielts": {
       "path": "ielts-vocabulary-2026-bangla-meaning.html",
-      "word_count": 0
+      "word_count": 22
     },
     "bank_job": {
       "path": "bank-job-vocabulary.html",
@@ -597,6 +597,6 @@
   },
   "tests": {
     "status": "PASS",
-    "cases": 8
+    "cases": 13
   }
 }
