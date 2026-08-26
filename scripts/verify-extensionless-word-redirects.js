@@ -26,8 +26,10 @@ function meaningfulLines(text) {
 function parseRules(text, label) {
   return meaningfulLines(text).map((line, index) => {
     const parts = line.split(/\s+/);
-    assert.strictEqual(parts.length, 3, `${label} line ${index + 1} must have source, target, status: ${line}`);
-    return { source: parts[0], target: parts[1], status: Number(parts[2]) };
+    assert(parts.length === 2 || parts.length === 3, `${label} line ${index + 1} must have source, target, and optional status: ${line}`);
+    const status = parts.length === 3 ? Number(parts[2]) : null;
+    assert(status === null || Number.isInteger(status), `${label} line ${index + 1} has invalid status: ${line}`);
+    return { source: parts[0], target: parts[1], status };
   });
 }
 
@@ -79,21 +81,31 @@ function proposalMappings() {
 
 function manifestMappings() {
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-  assert.strictEqual(manifest.schema, 'ovidhan-extensionless-word-redirects-7a3d-v1', 'Manifest schema mismatch');
-  assert(Array.isArray(manifest.redirects), 'Manifest redirects must be an array');
+  validateManifestMetadata(manifest);
   return manifest.redirects;
 }
 
-function activeMappings(filePath = redirectsPath) {
-  const rules = parseRules(fs.readFileSync(filePath, 'utf8'), path.basename(filePath));
+function validateManifestMetadata(manifest) {
+  assert.strictEqual(manifest.schema, 'ovidhan-extensionless-word-redirects-7a3d-v1', 'Manifest schema mismatch');
+  assert(Array.isArray(manifest.redirects), 'Manifest redirects must be an array');
+  assert.strictEqual(manifest.count, expectedCount, `Manifest declared count must be ${expectedCount}`);
+  assert.strictEqual(manifest.source, 'reports/dictionary-opportunity-7a3c-redirect-proposal.txt', 'Manifest source mismatch');
+}
+
+function activeMappingsFromText(text, label, phaseStrict = false) {
+  const rules = parseRules(text, label);
   const homepage = rules.filter(rule => rule.source === '/');
   assert.strictEqual(homepage.length, 1, 'Homepage rewrite must appear exactly once');
   assert.strictEqual(mappingKey(homepage[0]), mappingKey({ source: '/', target: '/index.html', status: 200 }), 'Homepage rewrite changed');
-  const wordRules = rules.filter(rule => rule.source.startsWith('/word/'));
-  assert.strictEqual(rules.length, expectedCount + 1, 'Active redirects must contain exactly 96 meaningful rules');
+  const wordRules = rules.filter(rule => rule.source.startsWith('/word/') && !rule.source.endsWith('.html'));
+  if (phaseStrict) assert.strictEqual(rules.length, expectedCount + 1, 'Phase-strict redirects must contain exactly 96 meaningful rules');
   assert.strictEqual(wordRules.length, expectedCount, 'Active redirects must contain exactly 95 word redirects');
   assert(!wordRules.some(rule => rule.source.includes('*') || rule.source.includes(':splat')), 'Wildcard word redirect forbidden');
   return wordRules;
+}
+
+function activeMappings(filePath = redirectsPath, phaseStrict = false) {
+  return activeMappingsFromText(fs.readFileSync(filePath, 'utf8'), path.basename(filePath), phaseStrict);
 }
 
 function assertSetEqual(left, right, label) {
@@ -140,6 +152,25 @@ function syntheticRejectionTests(validRules) {
   expectReject(rules => { rules[1].source = rules[0].target; rules[1].target = `${rules[0].target}.html`; }, /redirect chain|source is not extensionless/);
 }
 
+function futureSafetyTests(validRules) {
+  const baseText = [expectedHomepage, ...validRules.map(rule => `${rule.source} ${rule.target} 301`)].join('\n');
+  assert.strictEqual(parseRules('/legacy /replacement', 'optional-status')[0].status, null, 'Optional status parsing failed');
+  assert.strictEqual(activeMappingsFromText(`${baseText}\n/legacy /replacement`, 'unrelated-future').length, expectedCount, 'Unrelated non-word redirect was not allowed');
+  assert.throws(() => activeMappingsFromText(baseText.split('\n').slice(0, -1).join('\n'), 'missing-approved'), /exactly 95/);
+  assert.throws(() => activeMappingsFromText(`${baseText}\n/word/unapproved /word/unapproved.html 301`, 'extra-unapproved'), /exactly 95/);
+  assert.strictEqual(activeMappingsFromText(baseText, 'phase-strict', true).length, expectedCount, 'Current phase-strict rules failed');
+  assert.throws(() => activeMappingsFromText(`${baseText}\n/legacy /replacement`, 'phase-strict-extra', true), /exactly 96/);
+  const validManifest = { schema: 'ovidhan-extensionless-word-redirects-7a3d-v1', source: 'reports/dictionary-opportunity-7a3c-redirect-proposal.txt', count: expectedCount, redirects: validRules };
+  validateManifestMetadata(validManifest);
+  assert.throws(() => validateManifestMetadata({ ...validManifest, count: expectedCount - 1 }), /declared count/);
+  assert.throws(() => validateManifestMetadata({ ...validManifest, source: 'wrong.txt' }), /source mismatch/);
+  assert.strictEqual(shouldCheckPhaseScope([]), false, 'Default validation must not check historical phase scope');
+  assert.strictEqual(shouldCheckPhaseScope(['--package', 'x']), false, 'Package validation must not check historical phase scope');
+  assert.strictEqual(shouldCheckPhaseScope(['--live', 'https://example.com']), false, 'Live validation must not check historical phase scope');
+  assert.strictEqual(shouldCheckPhaseScope(['--check-phase-scope']), true, 'Explicit phase-scope flag not recognized');
+  return 13;
+}
+
 function currentSourceLeakCount() {
   const files = execFileSync('git', ['ls-files', '-z'], { cwd: root }).toString('utf8').split('\0').filter(Boolean);
   const findings = [];
@@ -158,8 +189,12 @@ function currentSourceLeakCount() {
   return findings;
 }
 
-function verifyProtectedScope() {
-  const changed = execFileSync('git', ['diff', '--name-only', approvedBase, '--', ...protectedPaths], { cwd: root, encoding: 'utf8' }).trim();
+function shouldCheckPhaseScope(args) {
+  return args.includes('--check-phase-scope') || args.includes('--phase-base');
+}
+
+function verifyProtectedScope(baseSha) {
+  const changed = execFileSync('git', ['diff', '--name-only', baseSha, '--', ...protectedPaths], { cwd: root, encoding: 'utf8' }).trim();
   assert.strictEqual(changed, '', `Protected files changed:\n${changed}`);
 }
 
@@ -184,26 +219,38 @@ async function verifyLive(baseUrl, rules) {
 async function main() {
   const args = process.argv.slice(2);
   if (args.includes('--write')) generate();
+  const phaseStrict = args.includes('--phase-strict');
   const proposal = proposalMappings();
   const manifest = manifestMappings();
-  const active = activeMappings();
+  const active = activeMappings(redirectsPath, phaseStrict);
+  const activeMeaningfulRules = parseRules(fs.readFileSync(redirectsPath, 'utf8'), '_redirects').length;
   const proposalSet = validateMappings(proposal, '7A3C proposal', { requireFiles: true });
   const manifestSet = validateMappings(manifest, '7A3D manifest', { requireFiles: true });
   const activeSet = validateMappings(active, 'active _redirects', { requireFiles: true });
   assertSetEqual(proposalSet, manifestSet, 'proposal/manifest');
   assertSetEqual(proposalSet, activeSet, 'proposal/_redirects');
   syntheticRejectionTests(proposal);
-  verifyProtectedScope();
+  const futureSafetyTestCount = futureSafetyTests(proposal);
+  const phaseScopeChecked = shouldCheckPhaseScope(args);
+  let phaseBase = null;
+  if (phaseScopeChecked) {
+    const phaseBaseIndex = args.indexOf('--phase-base');
+    phaseBase = phaseBaseIndex >= 0 ? args[phaseBaseIndex + 1] : approvedBase;
+    assert(phaseBase, '--phase-base requires a SHA');
+    verifyProtectedScope(phaseBase);
+  }
   const sourceLeakFindings = currentSourceLeakCount();
   assert.strictEqual(sourceLeakFindings.length, 0, `Current internal extensionless word URL generation detected:\n${sourceLeakFindings.join('\n')}`);
 
   const packageIndex = args.indexOf('--package');
   let packageRules = null;
+  let packageMeaningfulRules = null;
   if (packageIndex >= 0) {
     const packagePath = args[packageIndex + 1];
     assert(packagePath, '--package requires a path');
     const packageRedirects = path.join(packagePath, '_redirects');
-    packageRules = activeMappings(packageRedirects);
+    packageRules = activeMappings(packageRedirects, phaseStrict);
+    packageMeaningfulRules = parseRules(fs.readFileSync(packageRedirects, 'utf8'), 'production package _redirects').length;
     assertSetEqual(activeSet, validateMappings(packageRules, 'production package _redirects'), 'source/package');
     const sourceText = fs.readFileSync(redirectsPath, 'utf8').replace(/\r\n/g, '\n').trimEnd();
     const packageText = fs.readFileSync(packageRedirects, 'utf8').replace(/\r\n/g, '\n').trimEnd();
@@ -220,10 +267,12 @@ async function main() {
 
   console.log(JSON.stringify({
     status: 'PASS', proposal: proposal.length, manifest: manifest.length,
-    active_word_redirects: active.length, active_meaningful_rules: active.length + 1,
+    active_word_redirects: active.length, active_meaningful_rules: activeMeaningfulRules,
     targets_verified: active.length, current_internal_source_leaks: sourceLeakFindings.length,
-    package_rules: packageRules ? packageRules.length + 1 : null,
-    synthetic_rejection_tests: 6, live_samples: liveSamples
+    package_rules: packageMeaningfulRules,
+    synthetic_rejection_tests: 6, future_safety_tests: futureSafetyTestCount,
+    phase_strict: phaseStrict, phase_scope_checked: phaseScopeChecked, phase_base: phaseBase,
+    live_samples: liveSamples
   }, null, 2));
 }
 
