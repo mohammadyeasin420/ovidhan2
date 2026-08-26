@@ -1,0 +1,294 @@
+{
+  "schema": "ovidhan-dictionary-opportunity-7a3a-summary-v1",
+  "generated_at": "2026-08-26T08:31:43.208Z",
+  "starting_sha": "6e173161f831e9a5de387fc0a6b05044186a8657",
+  "analyzed_head": "6e173161f831e9a5de387fc0a6b05044186a8657",
+  "scope": {
+    "diagnostic_only": true,
+    "gsc_values_imported": false,
+    "final_tiers_assigned": false
+  },
+  "inventory": {
+    "tracked_word_pages": 49628,
+    "unicode_named_word_pages": 114,
+    "dictionary_records": 50489,
+    "unique_dictionary_headwords": 50486,
+    "duplicate_dictionary_records": 3,
+    "page_dictionary_matches": 48953,
+    "page_without_dictionary_record": 675,
+    "dictionary_records_without_page": 1533,
+    "dictionary_record_without_page": 1533,
+    "unique_dictionary_headword_without_page": 1533,
+    "sitemap_word_urls": 49628,
+    "pages_in_sitemap": 49628,
+    "sitemap_entry_without_page": 0
+  },
+  "coverage": {
+    "english": {
+      "count": 48953,
+      "percentage_of_pages": 98.64,
+      "percentage_of_matches": 100
+    },
+    "bangla": {
+      "count": 9468,
+      "percentage_of_pages": 19.08,
+      "percentage_of_matches": 19.34
+    },
+    "definition": {
+      "count": 4682,
+      "percentage_of_pages": 9.43,
+      "percentage_of_matches": 9.56
+    },
+    "part_of_speech": {
+      "count": 4682,
+      "percentage_of_pages": 9.43,
+      "percentage_of_matches": 9.56
+    },
+    "example": {
+      "count": 4994,
+      "percentage_of_pages": 10.06,
+      "percentage_of_matches": 10.2
+    },
+    "examples": {
+      "count": 0,
+      "percentage_of_pages": 0,
+      "percentage_of_matches": 0
+    },
+    "usable_example": {
+      "count": 976,
+      "percentage_of_pages": 1.97,
+      "percentage_of_matches": 1.99
+    },
+    "synonyms": {
+      "count": 4682,
+      "percentage_of_pages": 9.43,
+      "percentage_of_matches": 9.56
+    },
+    "antonyms": {
+      "count": 461,
+      "percentage_of_pages": 0.93,
+      "percentage_of_matches": 0.94
+    },
+    "pronunciation": {
+      "count": 0,
+      "percentage_of_pages": 0,
+      "percentage_of_matches": 0
+    },
+    "collocations": {
+      "count": 2,
+      "percentage_of_pages": 0,
+      "percentage_of_matches": 0
+    },
+    "verb_forms": {
+      "count": 0,
+      "percentage_of_pages": 0,
+      "percentage_of_matches": 0
+    },
+    "story": {
+      "count": 0,
+      "percentage_of_pages": 0,
+      "percentage_of_matches": 0
+    },
+    "word_family": {
+      "count": 3769,
+      "percentage_of_pages": 7.59,
+      "percentage_of_matches": 7.7
+    },
+    "bcs_importance": {
+      "count": 0,
+      "percentage_of_pages": 0,
+      "percentage_of_matches": 0
+    },
+    "ielts_importance": {
+      "count": 0,
+      "percentage_of_pages": 0,
+      "percentage_of_matches": 0
+    },
+    "common_mistake": {
+      "count": 0,
+      "percentage_of_pages": 0,
+      "percentage_of_matches": 0
+    }
+  },
+  "intersections": {
+    "bangla_and_definition": 4682,
+    "bangla_definition_and_pos": 4682,
+    "bangla_definition_pos_and_usable_example": 908
+  },
+  "architecture": {
+    "STATIC_CORE": 5,
+    "7A1_TREATMENT_STATIC": 21,
+    "7A1_CONTROL_JS_SHELL": 21,
+    "OTHER_JS_SHELL": 48906,
+    "OTHER_STATIC": 0,
+    "UNKNOWN_REQUIRES_REVIEW": 675
+  },
+  "editorial_status": {
+    "approved": 48,
+    "rejected": 29,
+    "unreviewed": 49551
+  },
+  "structural_flags": {
+    "slug_length_le_2": 883,
+    "empty_slug": 1,
+    "contains_digits": 387,
+    "non_ascii_slug": 114,
+    "unusually_long_slug_ge_30": 0,
+    "suspicious_empty_headword": 0,
+    "dictionary_record_missing": 675,
+    "missing_bangla": 39485,
+    "missing_definition": 44271,
+    "missing_pos": 44271,
+    "empty_definedterm_description": 48548,
+    "generic_js_shell": 48927,
+    "page_not_in_sitemap": 0,
+    "canonical_missing_or_invalid": 0,
+    "duplicate_canonical_target": 0,
+    "literal_template_url_pattern": 0,
+    "sitemap_entry_without_page": 0
+  },
+  "samples": {
+    "high_data_quality": [
+      "accepted",
+      "accessible",
+      "activities",
+      "advanced",
+      "alive"
+    ],
+    "missing_data": [
+      "",
+      "0",
+      "0f",
+      "0s",
+      "1"
+    ],
+    "static_core": [
+      "acceptable",
+      "acting",
+      "aspects",
+      "association",
+      "beast"
+    ],
+    "treatment_7a1": [
+      "businesses",
+      "cartridge",
+      "casual",
+      "dancing",
+      "degrees"
+    ],
+    "control_7a1": [
+      "buildings",
+      "cheap",
+      "comparison",
+      "constitution",
+      "doctor"
+    ],
+    "approved": [
+      "acceptable",
+      "acting",
+      "aspects",
+      "association",
+      "beast"
+    ],
+    "rejected": [
+      "allow",
+      "amazing",
+      "as",
+      "battery",
+      "binding"
+    ],
+    "suspicious_slugs": [
+      "",
+      "0",
+      "0f",
+      "0s",
+      "1"
+    ],
+    "page_without_dictionary": [
+      "",
+      "500",
+      "59",
+      "62",
+      "64"
+    ],
+    "dictionary_without_page": [
+      "con",
+      "and/or",
+      "it's",
+      "don't",
+      "i'm"
+    ],
+    "sitemap_without_page": []
+  },
+  "gsc_join_contract": {
+    "key": "normalized canonical URL",
+    "fields": [
+      "url",
+      "clicks",
+      "impressions",
+      "ctr",
+      "position",
+      "coverage_issue"
+    ],
+    "missing_row_state": "UNKNOWN (never synthetic zero)",
+    "normalization": [
+      "trim and parse URL",
+      "decode percent-encoding and normalize Unicode to NFC",
+      "force https",
+      "lowercase host and map www.ovidhan.net to ovidhan.net",
+      "remove query and fragment",
+      "collapse duplicate slashes",
+      "remove trailing slash except root",
+      "preserve .html",
+      "reject invalid/non-URL input"
+    ]
+  },
+  "opportunity_model": {
+    "state_domain": [
+      "KNOWN_POSITIVE",
+      "KNOWN_NEGATIVE",
+      "UNKNOWN"
+    ],
+    "families": {
+      "search_demand": [
+        "gsc_clicks",
+        "gsc_impressions",
+        "gsc_ctr",
+        "gsc_average_position",
+        "indexation_coverage"
+      ],
+      "data_quality": [
+        "bangla",
+        "definition",
+        "part_of_speech",
+        "usable_lexical_data",
+        "editorial_status"
+      ],
+      "learner_value": [
+        "general_english",
+        "bcs",
+        "ielts",
+        "workplace_job",
+        "speaking_real_life"
+      ],
+      "page_readiness": [
+        "static_answer",
+        "architecture",
+        "canonical",
+        "sitemap",
+        "indexability"
+      ],
+      "risk": [
+        "structural_anomalies",
+        "missing_data",
+        "editorial_rejection"
+      ]
+    },
+    "rule": "Score only known evidence. Unknown is excluded from both numerator and denominator; it is never converted to zero. Preserve raw evidence and family confidence alongside any future score."
+  },
+  "tier_intent": {
+    "TIER_A": "High strategic opportunity; planning range 2,000-5,000.",
+    "TIER_B": "Valid useful secondary priority; planning range 10,000-20,000.",
+    "TIER_C": "Long-tail, weak, questionable, or low-evidence inventory; never an automatic delete/noindex decision."
+  }
+}
