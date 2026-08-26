@@ -3,6 +3,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const assert = require('assert');
 const { execFileSync } = require('child_process');
 
 const root = path.resolve(__dirname, '..');
@@ -17,6 +18,28 @@ const canonicalUrl = slug => `https://ovidhan.net/word/${encodeURIComponent(slug
 const normalizeKey = value => String(value || '').normalize('NFC').trim().toLocaleLowerCase('en-US');
 const gitFiles = directory => execFileSync('git', ['ls-files', '-z', '--', directory], { cwd: root, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }).split('\0').filter(Boolean);
 const samples = (items, predicate, limit = 5) => items.filter(predicate).slice(0, limit).map(item => item.slug);
+
+const isMissingDataSample = row => row.dictionary_index === null || !row.fields.bangla || !row.fields.definition || !row.fields.part_of_speech;
+
+function hasHtmlUrlContextLiteralTemplatePattern(html) {
+  const marker = String.raw`(?:\$\{[^}\r\n]*\}|\{\{[^}\r\n]*\}\}|%24%7B[^\s"'<>]*|%7B%7B[^\s"'<>]*)`;
+  const attributeContext = new RegExp(String.raw`(?:href|src|action|formaction|data-(?:url|href|src|path))\s*=\s*["'][^"']*${marker}[^"']*["']`, 'i');
+  const quotedUrlContext = new RegExp(String.raw`["'](?:https?:\/\/|\/|\.\.?\/)[^"'\s]*${marker}[^"'\s]*["']`, 'i');
+  const cssUrlContext = new RegExp(String.raw`url\(\s*["']?[^)\s]*${marker}[^)]*\)`, 'i');
+  return attributeContext.test(html) || quotedUrlContext.test(html) || cssUrlContext.test(html);
+}
+
+function runDiagnosticSelfTests() {
+  const completeFields = { bangla: true, definition: true, part_of_speech: true };
+  assert.strictEqual(isMissingDataSample({ dictionary_index: 0, fields: completeFields }), false, 'dictionary index 0 must not mean missing');
+  assert.strictEqual(isMissingDataSample({ dictionary_index: null, fields: completeFields }), true, 'null dictionary index must mean missing');
+  assert.strictEqual(hasHtmlUrlContextLiteralTemplatePattern('<a href="/word/${slug}.html">word</a>'), true);
+  assert.strictEqual(hasHtmlUrlContextLiteralTemplatePattern('<script>const url = "https://ovidhan.net/word/{{slug}}.html";</script>'), true);
+  assert.strictEqual(hasHtmlUrlContextLiteralTemplatePattern('<img src="/word/%24%7Bslug%7D.html">'), true);
+  assert.strictEqual(hasHtmlUrlContextLiteralTemplatePattern('<script>const greeting = `Hello ${name}`;</script>'), false, 'ordinary JavaScript template literals must not be flagged');
+  assert.strictEqual(hasHtmlUrlContextLiteralTemplatePattern('<p>{{ learner_name }}</p>'), false, 'non-URL templates must not be flagged');
+  return { status: 'PASS', cases: 7 };
+}
 
 function normalizeJoinUrl(input) {
   const decoded = decodeURI(String(input).trim()).normalize('NFC');
@@ -47,6 +70,7 @@ function fieldState(entry) {
 }
 
 function main() {
+  const diagnosticSelfTests = runDiagnosticSelfTests();
   const head = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
   const dictionary = JSON.parse(fs.readFileSync(path.join(root, 'enriched-dictionary.json'), 'utf8'));
   const pilot = JSON.parse(fs.readFileSync(path.join(root, 'data', 'seo-word-pilot-7a1.json'), 'utf8'));
@@ -108,7 +132,7 @@ function main() {
     const expected = normalizeJoinUrl(canonicalUrl(slug));
     if (!sitemapUrls.has(expected)) flags.push('page_not_in_sitemap');
     if (!canonical) flags.push('canonical_missing_or_invalid');
-    if (/\$\{|\{\{|%7B%7B|%24%7B/i.test(file + ' ' + (canonicalMatch?.[1] || ''))) flags.push('literal_template_url_pattern');
+    if (hasHtmlUrlContextLiteralTemplatePattern(html)) flags.push('html_url_context_literal_template_pattern');
     rows.push({ slug, key, file, dictionary_index: found?.index ?? null, fields, architecture, editorial_status: approved.has(key) ? 'approved' : rejected.has(key) ? 'rejected' : 'unreviewed', canonical, expected_url: expected, in_sitemap: sitemapUrls.has(expected), flags });
   }
   for (const row of rows) if (row.canonical && canonicalTargets.get(row.canonical) > 1) row.flags.push('duplicate_canonical_target');
@@ -127,7 +151,7 @@ function main() {
   }
   const architectures = Object.fromEntries(['STATIC_CORE', '7A1_TREATMENT_STATIC', '7A1_CONTROL_JS_SHELL', 'OTHER_JS_SHELL', 'OTHER_STATIC', 'UNKNOWN_REQUIRES_REVIEW'].map(name => [name, countRows(row => row.architecture === name)]));
   const editorial = Object.fromEntries(['approved', 'rejected', 'unreviewed'].map(name => [name, countRows(row => row.editorial_status === name)]));
-  const flagNames = ['slug_length_le_2', 'empty_slug', 'contains_digits', 'non_ascii_slug', 'unusually_long_slug_ge_30', 'suspicious_empty_headword', 'dictionary_record_missing', 'missing_bangla', 'missing_definition', 'missing_pos', 'empty_definedterm_description', 'generic_js_shell', 'page_not_in_sitemap', 'canonical_missing_or_invalid', 'duplicate_canonical_target', 'literal_template_url_pattern'];
+  const flagNames = ['slug_length_le_2', 'empty_slug', 'contains_digits', 'non_ascii_slug', 'unusually_long_slug_ge_30', 'suspicious_empty_headword', 'dictionary_record_missing', 'missing_bangla', 'missing_definition', 'missing_pos', 'empty_definedterm_description', 'generic_js_shell', 'page_not_in_sitemap', 'canonical_missing_or_invalid', 'duplicate_canonical_target', 'html_url_context_literal_template_pattern'];
   const structuralFlags = Object.fromEntries(flagNames.map(flag => [flag, countRows(row => row.flags.includes(flag))]));
   structuralFlags.sitemap_entry_without_page = sitemapWithoutPage.length;
   const intersections = {
@@ -142,17 +166,20 @@ function main() {
     coverage, intersections, architecture: architectures, editorial_status: editorial, structural_flags: structuralFlags,
     samples: {
       high_data_quality: samples(rows, r => r.fields.bangla && r.fields.definition && r.fields.part_of_speech && r.fields.usable_example && r.fields.synonyms && r.fields.antonyms),
-      missing_data: samples(rows, r => !r.dictionary_index || !r.fields.bangla || !r.fields.definition || !r.fields.part_of_speech),
+      missing_data: samples(rows, isMissingDataSample),
       static_core: samples(rows, r => r.architecture === 'STATIC_CORE'), treatment_7a1: samples(rows, r => r.architecture === '7A1_TREATMENT_STATIC'), control_7a1: samples(rows, r => r.architecture === '7A1_CONTROL_JS_SHELL'),
-      approved: samples(rows, r => r.editorial_status === 'approved'), rejected: samples(rows, r => r.editorial_status === 'rejected'), suspicious_slugs: samples(rows, r => r.flags.some(f => ['slug_length_le_2','contains_digits','non_ascii_slug','unusually_long_slug_ge_30','literal_template_url_pattern'].includes(f))),
+      approved: samples(rows, r => r.editorial_status === 'approved'), rejected: samples(rows, r => r.editorial_status === 'rejected'), suspicious_slugs: samples(rows, r => r.flags.some(f => ['slug_length_le_2','contains_digits','non_ascii_slug','unusually_long_slug_ge_30','html_url_context_literal_template_pattern'].includes(f))),
       page_without_dictionary: samples(rows, r => r.dictionary_index === null), dictionary_without_page: dictionaryWithoutPage.slice(0, 5), sitemap_without_page: sitemapWithoutPage.slice(0, 5)
     },
+    diagnostic_self_tests: diagnosticSelfTests,
+    structural_detection_scope: { html_url_context_literal_template_pattern: 'Scans each tracked word-page HTML document for literal template markers only in href/src/action/data-URL attributes, quoted absolute/root-relative/relative URL strings, or CSS url() contexts. A zero means no match under this bounded current-page detector; it is not proof that historical or repository-wide template-URL leakage never existed.' },
     gsc_join_contract: { key: 'normalized canonical URL', fields: ['url','clicks','impressions','ctr','position','coverage_issue'], missing_row_state: 'UNKNOWN (never synthetic zero)', normalization: ['trim and parse URL','decode percent-encoding and normalize Unicode to NFC','force https','lowercase host and map www.ovidhan.net to ovidhan.net','remove query and fragment','collapse duplicate slashes','remove trailing slash except root','preserve .html','reject invalid/non-URL input'] },
     opportunity_model: { state_domain: ['KNOWN_POSITIVE','KNOWN_NEGATIVE','UNKNOWN'], families: { search_demand: ['gsc_clicks','gsc_impressions','gsc_ctr','gsc_average_position','indexation_coverage'], data_quality: ['bangla','definition','part_of_speech','usable_lexical_data','editorial_status'], learner_value: ['general_english','bcs','ielts','workplace_job','speaking_real_life'], page_readiness: ['static_answer','architecture','canonical','sitemap','indexability'], risk: ['structural_anomalies','missing_data','editorial_rejection'] }, rule: 'Score only known evidence. Unknown is excluded from both numerator and denominator; it is never converted to zero. Preserve raw evidence and family confidence alongside any future score.' },
     tier_intent: { TIER_A: 'High strategic opportunity; planning range 2,000-5,000.', TIER_B: 'Valid useful secondary priority; planning range 10,000-20,000.', TIER_C: 'Long-tail, weak, questionable, or low-evidence inventory; never an automatic delete/noindex decision.' }
   };
   fs.writeFileSync(summaryPath, JSON.stringify(result, null, 2) + '\n');
-  fs.writeFileSync(reportPath, renderReport(result) + '\n');
+  const report = renderReport(result).replace('Flags may overlap. They are evidence for review, not automatic noindex/deletion rules.', 'Flags may overlap. They are evidence for review, not automatic noindex/deletion rules. `html_url_context_literal_template_pattern` scans current tracked word-page HTML only in bounded URL contexts (URL-bearing attributes, quoted absolute/relative URL strings, and CSS `url()`). A zero does not establish that historical or repository-wide template-URL leakage never existed.');
+  fs.writeFileSync(reportPath, report + '\n');
   console.log(JSON.stringify({ status: 'PASS', report: path.relative(root, reportPath), summary: path.relative(root, summaryPath), inventory: result.inventory, architecture: result.architecture, editorial_status: result.editorial_status }, null, 2));
 }
 

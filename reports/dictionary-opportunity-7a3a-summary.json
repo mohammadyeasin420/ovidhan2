@@ -1,8 +1,8 @@
 {
   "schema": "ovidhan-dictionary-opportunity-7a3a-summary-v1",
-  "generated_at": "2026-08-26T08:31:43.208Z",
+  "generated_at": "2026-08-26T08:41:43.510Z",
   "starting_sha": "6e173161f831e9a5de387fc0a6b05044186a8657",
-  "analyzed_head": "6e173161f831e9a5de387fc0a6b05044186a8657",
+  "analyzed_head": "405f9038dfc79061b144ca3ac54edd17f2cfe1a0",
   "scope": {
     "diagnostic_only": true,
     "gsc_values_imported": false,
@@ -144,7 +144,7 @@
     "page_not_in_sitemap": 0,
     "canonical_missing_or_invalid": 0,
     "duplicate_canonical_target": 0,
-    "literal_template_url_pattern": 0,
+    "html_url_context_literal_template_pattern": 0,
     "sitemap_entry_without_page": 0
   },
   "samples": {
@@ -219,6 +219,13 @@
       "i'm"
     ],
     "sitemap_without_page": []
+  },
+  "diagnostic_self_tests": {
+    "status": "PASS",
+    "cases": 7
+  },
+  "structural_detection_scope": {
+    "html_url_context_literal_template_pattern": "Scans each tracked word-page HTML document for literal template markers only in href/src/action/data-URL attributes, quoted absolute/root-relative/relative URL strings, or CSS url() contexts. A zero means no match under this bounded current-page detector; it is not proof that historical or repository-wide template-URL leakage never existed."
   },
   "gsc_join_contract": {
     "key": "normalized canonical URL",

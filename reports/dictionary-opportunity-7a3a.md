@@ -5,7 +5,7 @@ Generated deterministically from Git-tracked repository evidence. This is diagno
 ## Baseline and inventory
 
 - Required starting main: `6e173161f831e9a5de387fc0a6b05044186a8657`
-- Analyzed HEAD at generation: `6e173161f831e9a5de387fc0a6b05044186a8657`
+- Analyzed HEAD at generation: `405f9038dfc79061b144ca3ac54edd17f2cfe1a0`
 - Tracked word pages: **49,628**
 - Unicode-named pages: **114**
 - Dictionary records: **50,489** (50,486 unique normalized headwords)
@@ -80,10 +80,10 @@ These are the existing 7A1 judgments (48 approved and the other 29 audited candi
 | page_not_in_sitemap | 0 |
 | canonical_missing_or_invalid | 0 |
 | duplicate_canonical_target | 0 |
-| literal_template_url_pattern | 0 |
+| html_url_context_literal_template_pattern | 0 |
 | sitemap_entry_without_page | 0 |
 
-Flags may overlap. They are evidence for review, not automatic noindex/deletion rules.
+Flags may overlap. They are evidence for review, not automatic noindex/deletion rules. `html_url_context_literal_template_pattern` scans current tracked word-page HTML only in bounded URL contexts (URL-bearing attributes, quoted absolute/relative URL strings, and CSS `url()`). A zero does not establish that historical or repository-wide template-URL leakage never existed.
 
 ## Representative samples
 
