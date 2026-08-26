@@ -191,6 +191,10 @@ try {
         Copy-Item -LiteralPath $specialSource -Destination (Join-Path $outputFull $special)
     }
 
+    Write-Stage 'EXTENSIONLESS REDIRECT VALIDATION'
+    $redirectVerifier = Join-Path $sourceRoot 'scripts\verify-extensionless-word-redirects.js'
+    Invoke-Checked $node.Source @($redirectVerifier, '--package', $outputFull) 'Extensionless redirect validation failed'
+
     Write-Stage 'MINIFY ENRICHED DICTIONARY'
     $sourceDictionary = Join-Path $sourceRoot 'enriched-dictionary.json'
     $outputDictionary = Join-Path $outputFull 'enriched-dictionary.json'
