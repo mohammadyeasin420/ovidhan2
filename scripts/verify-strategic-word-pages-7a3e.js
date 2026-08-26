@@ -15,6 +15,14 @@ const startSha = '41922864fb2c735dbcfac9fe14e9941fd7a50179';
 const originalCandidates = ['net', 'translation', 'tradeoff', 'without', 'must', 'provision', 'accordance', 'during', 'wallet', 'integration', 'street'];
 const frozenExclusions = ['integration', 'provision', 'street', 'wallet'];
 const targets = ['net', 'translation', 'tradeoff', 'without', 'must', 'accordance', 'during'];
+const evidenceRelationships = {
+  net: ['/bank-job-vocabulary.html', '/5000-common-english-words-bangla.html'],
+  translation: ['/5000-common-english-words-bangla.html'],
+  without: ['/5000-common-english-words-bangla.html'],
+  must: ['/5000-common-english-words-bangla.html'],
+  accordance: ['/5000-common-english-words-bangla.html'],
+  during: ['/5000-common-english-words-bangla.html']
+};
 
 function plain(value) { return value.replace(/\*\*/g, '').replace(/\s+/g, ' ').trim(); }
 function text(value) { return value.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim(); }
@@ -88,6 +96,7 @@ async function main() {
   assert.deepStrictEqual(changedWords, targets.map(slug => `word/${slug}.html`).sort(), 'Changed word-page scope differs from the authorized safe 7');
 
   let internalLinks = 0;
+  const relationshipStatus = {};
   for (const slug of targets) {
     const data = pack[slug];
     assert(data, `${slug}: approved source section missing`);
@@ -117,15 +126,41 @@ async function main() {
     const practiceAnswer = plain(data.QUICK_PRACTICE.match(/\*\*Correct answer:\*\* ([^\r\n]+)/)[1]);
     assert(pageText.includes(practiceQuestion) && pageText.includes(practiceAnswer), `${slug}: approved practice missing`);
     assert(!/noindex/i.test(html), `${slug}: noindex present`);
+    for (const href of evidenceRelationships[slug] || []) {
+      assert.strictEqual((html.match(new RegExp(`href="${href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`, 'g')) || []).length, 1, `${slug}: evidence-backed outbound link must occur exactly once: ${href}`);
+    }
     if (plain(data.COMMON_MISTAKE_FOR_BANGLA_LEARNERS) === 'NONE') assert(!html.includes('Common learner mistake'), `${slug}: fake mistake section rendered`);
     for (const href of [...html.matchAll(/href="(\/[^"]+)"/g)].map(match => match[1])) {
       if (href.startsWith('/word/')) continue;
-      assert(fs.existsSync(path.join(root, href.slice(1))), `${slug}: broken internal link ${href}`);
+      const localPath = href.slice(1).split(/[?#]/)[0];
+      assert(fs.existsSync(path.join(root, localPath)), `${slug}: broken internal link ${href}`);
       internalLinks += 1;
     }
   }
+  const accordance = fs.readFileSync(path.join(root, 'word', 'accordance.html'), 'utf8');
+  assert(accordance.includes('<header class="site-header">') && accordance.includes('<ul class="mega-menu" id="megaMenu">'), 'accordance: site header/navigation missing');
+  assert(accordance.includes('class="nav-cta"') && accordance.includes('Download App'), 'accordance: download CTA missing');
+  assert(accordance.includes('<footer class="site-footer">'), 'accordance: footer missing');
+  assert(accordance.includes('function toggleMenu()') && accordance.includes("menu.classList.toggle('open')"), 'accordance: mobile menu behavior missing');
+  assert.strictEqual((accordance.match(/<h1(?:\s[^>]*)?>/g) || []).length, 1, 'accordance: chrome restoration introduced duplicate H1');
+  assert.strictEqual((accordance.match(/id="staticWordContent"/g) || []).length, 1, 'accordance: duplicate strategic article');
+  assert.strictEqual((accordance.match(/id="resultArea"/g) || []).length, 1, 'accordance: duplicate search result area');
+
+  const commonData = JSON.parse(fs.readFileSync(path.join(root, '5000-common-words-data.json'), 'utf8'));
+  for (const slug of ['net', 'translation', 'without', 'must', 'accordance', 'during']) {
+    const records = commonData.filter(item => item.word === slug && item.url === `/word/${slug}.html`);
+    assert.strictEqual(records.length, 1, `${slug}: 5000-word hub canonical data relationship missing or duplicated`);
+    relationshipStatus[slug] = { common_words_inbound: 'EXISTING_VERIFIED', common_words_outbound: 'ADDED_AND_VERIFIED' };
+  }
+  const commonHub = fs.readFileSync(path.join(root, '5000-common-english-words-bangla.html'), 'utf8');
+  assert(commonHub.includes('href="${esc(w.url)}"'), '5000-word hub no longer renders canonical data URLs');
+  const bankHub = fs.readFileSync(path.join(root, 'bank-job-vocabulary.html'), 'utf8');
+  assert.strictEqual((bankHub.match(/'\/word\/net\.html'/g) || []).length, 1, 'Bank hub net canonical link missing or duplicated');
+  assert(bankHub.includes("w.english.toLowerCase() === 'net'"), 'Bank hub targeted net relationship missing');
+  relationshipStatus.net.bank_inbound = 'ADDED_AND_VERIFIED';
+  relationshipStatus.net.bank_outbound = 'ADDED_AND_VERIFIED';
   await verifySearchBehavior(fs.readFileSync(path.join(root, 'word', 'net.html'), 'utf8'));
-  console.log(JSON.stringify({ status: 'PASS', approved_hash: hash, original_candidates: originalCandidates.length, frozen_exclusions: frozenExclusions, pages: targets.length, examples: targets.length * 4, internal_links: internalLinks, frozen_144: 'PASS', search_behavior: 'PASS' }, null, 2));
+  console.log(JSON.stringify({ status: 'PASS', approved_hash: hash, original_candidates: originalCandidates.length, frozen_exclusions: frozenExclusions, pages: targets.length, examples: targets.length * 4, internal_links: internalLinks, accordance_chrome: 'PASS', evidence_relationships: relationshipStatus, frozen_144: 'PASS', search_behavior: 'PASS' }, null, 2));
 }
 
 main().catch(error => { console.error(error.stack || error.message); process.exitCode = 1; });

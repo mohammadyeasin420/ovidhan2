@@ -4,15 +4,25 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execFileSync } = require('child_process');
 
 const root = path.resolve(__dirname, '..');
 const sourcePath = process.argv[2] || 'C:\\data\\ovidhan-7a3e-approved-content.md';
 const expectedHash = 'A879BC75C02A8A8931231DD3EF3EB7847358C428543832501733B98FBE2649FE';
+const startSha = '41922864fb2c735dbcfac9fe14e9941fd7a50179';
 const targets = ['net', 'translation', 'tradeoff', 'without', 'must', 'accordance', 'during'];
 const linkMap = {
   'Grammar': ['/grammar.html', 'Grammar'],
   'Basic Vocabulary': ['/basic-vocabulary-list.html', 'Basic Vocabulary'],
   'Speaking / Real-life English': ['/real-life-english.html', 'Speaking / Real-life English']
+};
+const evidenceLinks = {
+  net: [['/bank-job-vocabulary.html', 'Bank Job Vocabulary'], ['/5000-common-english-words-bangla.html', '5000 Common English Words']],
+  translation: [['/5000-common-english-words-bangla.html', '5000 Common English Words']],
+  without: [['/5000-common-english-words-bangla.html', '5000 Common English Words']],
+  must: [['/5000-common-english-words-bangla.html', '5000 Common English Words']],
+  accordance: [['/5000-common-english-words-bangla.html', '5000 Common English Words']],
+  during: [['/5000-common-english-words-bangla.html', '5000 Common English Words']]
 };
 
 const source = fs.readFileSync(sourcePath, 'utf8');
@@ -69,15 +79,27 @@ function parseExamples(body) {
   return examples;
 }
 
-function renderConnections(body) {
-  const links = [];
+function renderConnections(slug, body) {
+  const links = new Map();
   for (const item of bullets(body || '')) {
     const key = Object.keys(linkMap).find(name => item.startsWith(name));
     if (!key) continue;
     const [href, label] = linkMap[key];
-    if (fs.existsSync(path.join(root, href.slice(1)))) links.push(`<li><a href="${href}">${label}</a></li>`);
+    if (fs.existsSync(path.join(root, href.slice(1)))) links.set(href, label);
   }
-  return links.length ? `<section class="strategic-next"><h2>Next learning step</h2><ul>${links.join('')}</ul></section>` : '';
+  for (const [href, label] of evidenceLinks[slug] || []) {
+    if (!fs.existsSync(path.join(root, href.slice(1)))) throw new Error(`${slug}: missing evidence-backed destination ${href}`);
+    links.set(href, label);
+  }
+  return links.size ? `<section class="strategic-next"><h2>Next learning step</h2><ul>${[...links].map(([href, label]) => `<li><a href="${href}">${label}</a></li>`).join('')}</ul></section>` : '';
+}
+
+function accordanceChrome() {
+  const baseline = execFileSync('git', ['show', `${startSha}:word/accordance.html`], { cwd: root, encoding: 'utf8' });
+  const prefix = baseline.match(/<body>([\s\S]*?)\s*<main>/)?.[1];
+  const footer = baseline.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)?.[0];
+  if (!prefix || !footer || !prefix.includes('function toggleMenu()')) throw new Error('Starting-main accordance chrome could not be preserved');
+  return { prefix: prefix.trim(), footer };
 }
 
 function renderPractice(body) {
@@ -114,9 +136,33 @@ ${renderListSection('Common learner mistake', data.COMMON_MISTAKE_FOR_BANGLA_LEA
 ${renderListSection('Collocations and patterns', data.COLLOCATIONS || data['COLLOCATIONS / COMMON PATTERNS'])}
 ${renderListSection('Word family', data.WORD_FAMILY)}
 ${renderPractice(data.QUICK_PRACTICE)}
-${renderConnections(data.NEXT_LEARNING_CONNECTION)}
+${renderConnections(slug, data.NEXT_LEARNING_CONNECTION)}
 </article>`;
   const embedded = JSON.stringify({ english: slug, bangla: plain(bangla[0]), definition: plain(simple[0]), part_of_speech: pos.join(' / ') }).replace(/</g, '\\u003c');
+  const chrome = slug === 'accordance' ? accordanceChrome() : null;
+  const body = chrome ? `${chrome.prefix}
+<main>
+${article}
+<div class="explorer-container strategic-word-search">
+<h2>🔍 Learning Explorer</h2>
+<p>Search another English word without leaving this page.</p>
+<div class="search-box"><input id="wordInput" placeholder="Type a word..." type="text" value="${slug}"/><button class="btn-primary" onclick="searchWord()">Search</button></div>
+<div id="resultArea"></div>
+</div>
+</main>
+<script type="application/json" id="ovidhan-word-data">${embedded}</script>
+<script src="../learning-explorer.js"></script>
+${chrome.footer}` : `<!-- Header will be injected later -->
+${article}
+<div class="explorer-container strategic-word-search">
+<h2>🔍 Learning Explorer</h2>
+<p>Search another English word without leaving this page.</p>
+<div class="search-box"><input id="wordInput" placeholder="Type a word..." type="text" value="${slug}"/><button class="btn-primary" onclick="searchWord()">Search</button></div>
+<div id="resultArea"></div>
+</div>
+<!-- Footer will be injected later -->
+<script type="application/json" id="ovidhan-word-data">${embedded}</script>
+<script src="../learning-explorer.js"></script>`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,18 +176,8 @@ ${renderConnections(data.NEXT_LEARNING_CONNECTION)}
 <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ovidhan.net' }, { '@type': 'ListItem', position: 2, name: title, item: `https://ovidhan.net/word/${slug}.html` }] }, null, 2)}</script>
 <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'DefinedTerm', name: slug, description: plain(shortAnswer), inLanguage: ['en', 'bn'], termCode: slug }, null, 2)}</script>
 </head>
-<body>
-<!-- Header will be injected later -->
-${article}
-<div class="explorer-container strategic-word-search">
-<h2>🔍 Learning Explorer</h2>
-<p>Search another English word without leaving this page.</p>
-<div class="search-box"><input id="wordInput" placeholder="Type a word..." type="text" value="${slug}"/><button class="btn-primary" onclick="searchWord()">Search</button></div>
-<div id="resultArea"></div>
-</div>
-<!-- Footer will be injected later -->
-<script type="application/json" id="ovidhan-word-data">${embedded}</script>
-<script src="../learning-explorer.js"></script>
+<body${chrome ? ' class="strategic-chrome-page"' : ''}>
+${body}
 </body>
 </html>
 `;
