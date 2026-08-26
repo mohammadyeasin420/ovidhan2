@@ -7982,7 +7982,7 @@
 
         grid.innerHTML = pageItems.map(w => `
             <div class="word-item">
-                <div class="en"><a href="/dictionary.html?q=${encodeURIComponent(w.english)}">${w.english}</a></div>
+                <div class="en"><a href="${w.english.toLowerCase() === 'net' ? '/word/net.html' : `/dictionary.html?q=${encodeURIComponent(w.english)}`}">${w.english}</a></div>
                 <div class="bn">${w.bangla}</div>
                 <div class="syn">${w.synonym}</div>
                 <div class="ant">${w.antonym}</div>
