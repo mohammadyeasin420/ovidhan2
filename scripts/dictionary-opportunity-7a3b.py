@@ -14,7 +14,7 @@ import sys
 import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
-from urllib.parse import quote, unquote, urlsplit, urlunsplit
+from urllib.parse import quote, urlsplit, urlunsplit
 
 import openpyxl
 
@@ -24,6 +24,7 @@ PERFORMANCE_PATH = Path(r"C:\data\ovidhan-gsc\ovidhan-gsc-performance-2026-08-16
 COVERAGE_PATH = Path(r"C:\data\ovidhan-gsc\ovidhan-gsc-coverage-2026-08-25.xlsx")
 PERFORMANCE_SHA = "c8eeb38ee815615cccb91d8513be9e78be87e1f382e43eef94627f0325fa227a"
 COVERAGE_SHA = "9ee447fcb3e53d07256f35723afc3a5b0d21799040f9e1860e24e9358f4eb426"
+PRE_CORRECTION_TIER_COUNTS = {"PROVISIONAL_TIER_A_CANDIDATE": 48, "PROVISIONAL_TIER_B_CANDIDATE": 781}
 GENERIC_EXAMPLE = re.compile(r"^(I know the word ['\"]|Learning ['\"].+['\"] helps your vocabulary\.|['\"].+['\"] is common in English\.|Can you use ['\"].+['\"] in a sentence\?|This is an? .+\.)$", re.I)
 URL_TEMPLATE_MARKER = r"(?:\$\{[^}\r\n]*\}|\{\{[^}\r\n]*\}\}|%24%7B[^\s\"'<>]*|%7B%7B[^\s\"'<>]*)"
 URL_TEMPLATE_PATTERNS = [
@@ -41,9 +42,26 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def decode_path_safely(path: str) -> str:
+    def decode_run(match: re.Match) -> str:
+        encoded = match.group(0)
+        raw_bytes = bytes.fromhex(encoded.replace("%", ""))
+        try:
+            decoded = raw_bytes.decode("utf-8")
+        except UnicodeDecodeError:
+            return encoded.upper()
+        output = []
+        for character in decoded:
+            if ord(character) > 127 or character.isalnum() or character in "-._~":
+                output.append(character)
+            else:
+                output.append(quote(character, safe=""))
+        return "".join(output)
+    return unicodedata.normalize("NFC", re.sub(r"(?:%[0-9A-Fa-f]{2})+", decode_run, path))
+
+
 def normalize_url(raw: object) -> str:
-    value = unicodedata.normalize("NFC", unquote(str(raw).strip()))
-    parsed = urlsplit(value)
+    parsed = urlsplit(str(raw).strip())
     if not parsed.scheme or not parsed.netloc:
         raise ValueError(f"absolute URL required: {raw!r}")
     host = (parsed.hostname or "").lower()
@@ -52,7 +70,7 @@ def normalize_url(raw: object) -> str:
     if not host:
         raise ValueError(f"hostname required: {raw!r}")
     port = f":{parsed.port}" if parsed.port and parsed.port != 443 else ""
-    path = re.sub(r"/{2,}", "/", parsed.path)
+    path = re.sub(r"/{2,}", "/", decode_path_safely(parsed.path))
     if path != "/":
         path = path.rstrip("/")
     return urlunsplit(("https", host + port, path or "/", "", ""))
@@ -143,15 +161,32 @@ def percentile_map(items: list[dict], field: str, reverse: bool = False) -> dict
     return result
 
 
+def zero_aware_click_percentile(items: list[dict]) -> dict[str, float]:
+    result = {item["url"]: 0.0 for item in items if item["clicks"] == 0}
+    positives = sorted((item for item in items if item["clicks"] > 0), key=lambda x: (x["clicks"], x["url"]))
+    if not positives:
+        return result
+    zero_count = len(items) - len(positives)
+    by_value: dict[float, list[int]] = defaultdict(list)
+    for index, item in enumerate(positives):
+        by_value[item["clicks"]].append(zero_count + index)
+    denominator = max(len(items) - 1, 1)
+    for item in positives:
+        ranks = by_value[item["clicks"]]
+        result[item["url"]] = round(100 * (sum(ranks) / len(ranks)) / denominator, 4)
+    return result
+
+
 def add_scores(observed: list[dict]) -> None:
     impression_pct = percentile_map(observed, "impressions")
-    click_pct = percentile_map(observed, "clicks")
+    click_pct = zero_aware_click_percentile(observed)
     visibility_pct = percentile_map(observed, "position", reverse=True)
     for row in observed:
         demand = impression_pct[row["url"]]
         visibility = visibility_pct[row["url"]]
         row["impression_percentile"] = demand
         row["click_percentile"] = click_pct[row["url"]]
+        row["acquisition_score_contribution"] = round(0.30 * click_pct[row["url"]], 2)
         row["visibility_percentile"] = visibility
         row["search_value_score"] = round(0.50 * demand + 0.30 * click_pct[row["url"]] + 0.20 * visibility, 2)
         row["search_improvement_score"] = round(0.65 * demand + 0.35 * (100 - visibility), 2)
@@ -159,7 +194,7 @@ def add_scores(observed: list[dict]) -> None:
 
 def data_readiness(row: dict) -> str:
     serious = {"empty_slug", "html_url_context_literal_template_pattern"}
-    if row["dictionary_index"] is None or row["editorial_status"] == "rejected" or serious.intersection(row["structural_flags"]):
+    if row["dictionary_index"] is None or row["editorial_status"] == "rejected" or serious.intersection(row["structural_anomaly_flags"]):
         return "REVIEW_REQUIRED"
     fields = row["fields"]
     if fields["bangla"] and fields["definition"] and fields["pos"]:
@@ -213,14 +248,23 @@ def reason(row: dict) -> str:
     if row["coverage_state"] != "UNKNOWN":
         bits.append("in exported discovered-not-indexed backlog")
     bits.append(row["data_readiness"].lower().replace("_", " "))
-    if row["structural_risk_count"]:
-        bits.append(f"{row['structural_risk_count']} structural flags")
+    if row["content_quality_flags"]:
+        bits.append(f"{len(row['content_quality_flags'])} content gaps")
+    if row["architecture_flags"]:
+        bits.append("JS-shell architecture")
+    if row["structural_anomaly_flags"]:
+        bits.append(f"{len(row['structural_anomaly_flags'])} structural anomalies")
     return "; ".join(bits)
 
 
 def run_tests() -> dict:
     assert normalize_url(" http://WWW.ovidhan.net/word/caf%C3%A9.html/?x=1#x ") == "https://ovidhan.net/word/café.html"
     assert normalize_url("https://ovidhan.net/word/net.html/") == "https://ovidhan.net/word/net.html"
+    assert normalize_url("https://ovidhan.net/word/a%2Fb.html") == "https://ovidhan.net/word/a%2Fb.html"
+    assert normalize_url("https://ovidhan.net/word/a%2Fb.html") != normalize_url("https://ovidhan.net/word/a/b.html")
+    assert normalize_url("https://ovidhan.net/word/a%3Fb.html") == "https://ovidhan.net/word/a%3Fb.html"
+    assert normalize_url("https://ovidhan.net/word/a%23b.html") == "https://ovidhan.net/word/a%23b.html"
+    assert normalize_url("https://ovidhan.net/word/example") != normalize_url("https://ovidhan.net/word/example.html")
     merged, duplicates = merge_performance([
         {"url": "https://ovidhan.net/word/a.html", "clicks": 0, "impressions": 2, "position": 10},
         {"url": "https://ovidhan.net/word/a.html", "clicks": 1, "impressions": 2, "position": 20},
@@ -232,13 +276,15 @@ def run_tests() -> dict:
     assert known_zero["clicks"] == 0
     scored = [{"url": "a", "clicks": 0, "impressions": 1, "position": 20}, {"url": "b", "clicks": 1, "impressions": 10, "position": 5}]
     add_scores(scored)
+    assert scored[0]["click_percentile"] == 0 and scored[0]["acquisition_score_contribution"] == 0
+    assert scored[1]["click_percentile"] > 0 and scored[1]["acquisition_score_contribution"] > 0
     first = json.dumps(scored, sort_keys=True)
     add_scores(scored)
     assert json.dumps(scored, sort_keys=True) == first
     rows = [{"slug": "b", "search_value_score": 1}, {"slug": "a", "search_value_score": 1}]
     assert [x["slug"] for x in sorted(rows, key=lambda x: (-x["search_value_score"], x["slug"]))] == ["a", "b"]
     assert not has_url_template_leak("<script>const x = `hello ${name}`;</script>")
-    return {"status": "PASS", "cases": 9}
+    return {"status": "PASS", "cases": 16}
 
 
 def load_inputs(performance_path: Path, coverage_path: Path) -> dict:
@@ -345,31 +391,36 @@ def main() -> None:
             architecture = "OTHER_JS_SHELL"
         else:
             architecture = "UNKNOWN_REQUIRES_REVIEW"
-        flags = []
-        if len(slug) <= 2: flags.append("slug_length_le_2")
-        if not slug: flags.append("empty_slug")
-        if re.search(r"\d", slug): flags.append("contains_digits")
-        if any(ord(c) > 127 for c in slug): flags.append("non_ascii_slug")
-        if len(slug) >= 30: flags.append("unusually_long_slug_ge_30")
-        if not found: flags.append("dictionary_record_missing")
-        if found and not fields["bangla"]: flags.append("missing_bangla")
-        if found and not fields["definition"]: flags.append("missing_definition")
-        if found and not fields["pos"]: flags.append("missing_pos")
-        if architecture.endswith("JS_SHELL"): flags.append("generic_js_shell")
-        if has_url_template_leak(html): flags.append("html_url_context_literal_template_pattern")
+        structural_anomaly_flags = []
+        content_quality_flags = []
+        architecture_flags = []
+        informational_flags = []
+        if len(slug) <= 2: structural_anomaly_flags.append("slug_length_le_2")
+        if not slug: structural_anomaly_flags.append("empty_slug")
+        if re.search(r"\d", slug): structural_anomaly_flags.append("contains_digits")
+        if any(ord(c) > 127 for c in slug): informational_flags.append("non_ascii_slug")
+        if len(slug) >= 30: structural_anomaly_flags.append("unusually_long_slug_ge_30")
+        if not found: structural_anomaly_flags.append("dictionary_record_missing")
+        if found and not fields["bangla"]: content_quality_flags.append("missing_bangla")
+        if found and not fields["definition"]: content_quality_flags.append("missing_definition")
+        if found and not fields["pos"]: content_quality_flags.append("missing_pos")
+        if architecture.endswith("JS_SHELL"): architecture_flags.append("generic_js_shell")
+        if has_url_template_leak(html): structural_anomaly_flags.append("html_url_context_literal_template_pattern")
         url = expected_url(slug)
-        if url not in sitemap_urls: flags.append("page_not_in_sitemap")
+        if url not in sitemap_urls: structural_anomaly_flags.append("page_not_in_sitemap")
         p = performance.get(url)
         c = coverage.get(url)
         row = {
             "slug": slug, "url": url, "dictionary_index": found[0] if found else None, "fields": fields,
             "architecture": architecture, "editorial_status": "approved" if key in approved else "rejected" if key in rejected else "unreviewed",
-            "structural_flags": flags, "structural_risk_count": len(flags), "in_sitemap": url in sitemap_urls,
+            "structural_anomaly_flags": structural_anomaly_flags, "structural_risk_count": len(structural_anomaly_flags),
+            "content_quality_flags": content_quality_flags, "architecture_flags": architecture_flags, "informational_flags": informational_flags, "in_sitemap": url in sitemap_urls,
             "performance_state": "OBSERVED" if p else "UNKNOWN", "coverage_state": c["coverage_state"] if c else "UNKNOWN",
             "coverage_validation_status": c["validation_status"] if c else None,
             "clicks": p["clicks"] if p else None, "impressions": p["impressions"] if p else None, "ctr": p["ctr"] if p else None, "position": p["position"] if p else None,
             "search_value_score": p["search_value_score"] if p else None, "search_improvement_score": p["search_improvement_score"] if p else None,
-            "impression_percentile": p["impression_percentile"] if p else None,
+            "impression_percentile": p["impression_percentile"] if p else None, "click_percentile": p["click_percentile"] if p else None,
+            "acquisition_score_contribution": p["acquisition_score_contribution"] if p else None,
         }
         row["data_readiness"] = data_readiness(row)
         classify(row)
@@ -405,6 +456,15 @@ def main() -> None:
         "TOP_20_OBSERVED": sum(x["position"] <= 20 for x in observed),
         "HIGHER_IMPRESSION_OBSERVED_P75_PLUS": sum(x["impression_percentile"] >= 75 for x in observed),
     }
+    flag_model = {
+        "structural_anomaly_pages": sum(bool(r["structural_anomaly_flags"]) for r in inventory),
+        "content_gap_pages": sum(bool(r["content_quality_flags"]) for r in inventory),
+        "architecture_flag_pages": sum(bool(r["architecture_flags"]) for r in inventory),
+        "non_ascii_informational_pages": sum("non_ascii_slug" in r["informational_flags"] for r in inventory),
+        "structural_anomaly_distribution": dict(Counter(flag for r in inventory for flag in r["structural_anomaly_flags"])),
+        "content_quality_distribution": dict(Counter(flag for r in inventory for flag in r["content_quality_flags"])),
+        "architecture_distribution": dict(Counter(flag for r in inventory for flag in r["architecture_flags"])),
+    }
 
     def intersection(predicate):
         values = [row for row in inventory if predicate(row)]
@@ -414,7 +474,9 @@ def main() -> None:
         "observed_performance_strong_lexical": intersection(lambda r: r["performance_state"] == "OBSERVED" and r["data_readiness"] == "READY_STRONG"),
         "observed_performance_weak_lexical": intersection(lambda r: r["performance_state"] == "OBSERVED" and r["data_readiness"] in {"READY_PARTIAL", "WEAK_DATA"}),
         "observed_performance_editorial_rejection": intersection(lambda r: r["performance_state"] == "OBSERVED" and r["editorial_status"] == "rejected"),
-        "observed_performance_structural_anomaly": intersection(lambda r: r["performance_state"] == "OBSERVED" and r["structural_risk_count"] > 0),
+        "observed_performance_genuine_structural_anomaly": intersection(lambda r: r["performance_state"] == "OBSERVED" and bool(r["structural_anomaly_flags"])),
+        "observed_performance_content_gaps": intersection(lambda r: r["performance_state"] == "OBSERVED" and bool(r["content_quality_flags"])),
+        "observed_performance_js_shell_architecture": intersection(lambda r: r["performance_state"] == "OBSERVED" and bool(r["architecture_flags"])),
         "coverage_backlog_strong_lexical": intersection(lambda r: r["coverage_state"] != "UNKNOWN" and r["data_readiness"] == "READY_STRONG"),
         "coverage_backlog_weak_lexical": intersection(lambda r: r["coverage_state"] != "UNKNOWN" and r["data_readiness"] in {"READY_PARTIAL", "WEAK_DATA"}),
         "coverage_backlog_missing_dictionary": intersection(lambda r: r["coverage_state"] != "UNKNOWN" and r["dictionary_index"] is None),
@@ -433,7 +495,7 @@ def main() -> None:
     candidate_rows.sort(key=lambda r: (tier_order[r["provisional_tier"]], -(r["search_value_score"] if r["search_value_score"] is not None else -1), -(r["impressions"] if r["impressions"] is not None else -1), r["slug"]))
     candidates = candidate_rows[:args.candidate_limit]
     csv_path = ROOT / "reports/dictionary-opportunity-7a3b-candidates.csv"
-    columns = ["slug", "url", "clicks", "impressions", "ctr", "position", "performance_state", "coverage_state", "coverage_validation_status", "bangla_present", "definition_present", "pos_present", "usable_example_present", "architecture", "editorial_status", "structural_risk_count", "data_readiness", "search_value_score", "search_improvement_score", "priority_labels", "provisional_tier", "confidence", "reason"]
+    columns = ["slug", "url", "clicks", "impressions", "ctr", "position", "performance_state", "coverage_state", "coverage_validation_status", "bangla_present", "definition_present", "pos_present", "usable_example_present", "architecture", "editorial_status", "structural_risk_count", "structural_anomaly_flags", "content_quality_flags", "architecture_flags", "data_readiness", "click_percentile", "acquisition_score_contribution", "search_value_score", "search_improvement_score", "priority_labels", "provisional_tier", "confidence", "reason"]
     with csv_path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=columns)
         writer.writeheader()
@@ -442,8 +504,9 @@ def main() -> None:
                 "slug": row["slug"], "url": row["url"], "clicks": row["clicks"], "impressions": row["impressions"], "ctr": row["ctr"], "position": row["position"],
                 "performance_state": row["performance_state"], "coverage_state": row["coverage_state"], "coverage_validation_status": row["coverage_validation_status"],
                 "bangla_present": row["fields"]["bangla"], "definition_present": row["fields"]["definition"], "pos_present": row["fields"]["pos"], "usable_example_present": row["fields"]["usable_example"],
-                "architecture": row["architecture"], "editorial_status": row["editorial_status"], "structural_risk_count": row["structural_risk_count"], "data_readiness": row["data_readiness"],
-                "search_value_score": row["search_value_score"], "search_improvement_score": row["search_improvement_score"], "priority_labels": "|".join(row["priority_labels"]), "provisional_tier": row["provisional_tier"], "confidence": row["confidence"], "reason": row["reason"],
+                "architecture": row["architecture"], "editorial_status": row["editorial_status"], "structural_risk_count": row["structural_risk_count"],
+                "structural_anomaly_flags": "|".join(row["structural_anomaly_flags"]), "content_quality_flags": "|".join(row["content_quality_flags"]), "architecture_flags": "|".join(row["architecture_flags"]), "data_readiness": row["data_readiness"],
+                "click_percentile": row["click_percentile"], "acquisition_score_contribution": row["acquisition_score_contribution"], "search_value_score": row["search_value_score"], "search_improvement_score": row["search_improvement_score"], "priority_labels": "|".join(row["priority_labels"]), "provisional_tier": row["provisional_tier"], "confidence": row["confidence"], "reason": row["reason"],
             })
 
     observed_baseline = {"performance_rows": len(inputs["page_rows"]), "performance_word_urls": len(performance), "word_clicks": sum(x["clicks"] for x in performance.values()), "word_impressions": sum(x["impressions"] for x in performance.values()), "clicked_word_urls": sum(x["clicks"] >= 1 for x in performance.values()), "coverage_rows": len(inputs["coverage_rows"]), "coverage_word_urls": len(coverage), "coverage_non_word_urls": coverage_nonword, "pending": statuses.get("Pending", 0), "cross_export_overlap": len(overlap)}
@@ -461,9 +524,11 @@ def main() -> None:
         "inventory": inventory_summary,
         "joins": {"performance_success": len(performance_joined), "performance_failure": len(performance) - len(performance_joined), "performance_failure_samples": sorted(set(performance) - set(inventory_by_url))[:10], "coverage_success": len(coverage_joined), "coverage_failure": len(coverage) - len(coverage_joined), "coverage_failure_samples": sorted(set(coverage) - set(inventory_by_url))[:10], "invalid_url_count": len(invalid_urls), "invalid_urls": invalid_urls},
         "states": {"performance": dict(Counter(r["performance_state"] for r in inventory)), "coverage": dict(Counter(r["coverage_state"] for r in inventory))},
-        "performance_signals": performance_signals, "classification_counts": dict(label_counts), "provisional_tier_counts": dict(tier_counts), "data_readiness_counts": dict(readiness_counts), "confidence_counts": dict(confidence_counts),
+        "performance_signals": performance_signals,
+        "scoring_correction": {"previous_commit": "eafd7f65bd7a7a9f786133de1529681e9219b46e", "previous_tier_counts": PRE_CORRECTION_TIER_COUNTS, "corrected_tier_counts": {key: tier_counts.get(key, 0) for key in PRE_CORRECTION_TIER_COUNTS}, "zero_click_rows": sum(x["clicks"] == 0 for x in observed), "zero_click_acquisition_contribution": sorted({x["acquisition_score_contribution"] for x in observed if x["clicks"] == 0}), "positive_click_min_acquisition_contribution": min(x["acquisition_score_contribution"] for x in observed if x["clicks"] > 0)},
+        "flag_model": flag_model, "classification_counts": dict(label_counts), "provisional_tier_counts": dict(tier_counts), "data_readiness_counts": dict(readiness_counts), "confidence_counts": dict(confidence_counts),
         "intersections": intersections, "experiment_7a1": cohort,
-        "scoring": {"cohort": len(observed), "search_value_score": "50% impression percentile + 30% click percentile + 20% ranking-visibility percentile within observed word URLs", "search_improvement_score": "65% impression percentile + 35% inverse ranking-visibility percentile within observed word URLs", "tie_rule": "average empirical percentile; deterministic URL tie order", "unknown_rule": "scores are null when performance_state is UNKNOWN"},
+        "scoring": {"cohort": len(observed), "search_value_score": "50% impression percentile + 30% zero-aware click percentile + 20% ranking-visibility percentile within observed word URLs", "search_improvement_score": "65% impression percentile + 35% inverse ranking-visibility percentile within observed word URLs", "click_rule": "clicks=0 has percentile 0 and acquisition contribution 0; positive clicks rank above zeros in the observed cohort", "tie_rule": "average empirical percentile for positive/tied known values; deterministic URL tie order", "unknown_rule": "scores are null when performance_state is UNKNOWN"},
         "candidate_artifact": {"limit": args.candidate_limit, "rows": len(candidates), "ordering": "tier class, search value descending, impressions descending, slug ascending"},
         "tests": tests,
     }
@@ -517,7 +582,9 @@ The 95 performance join failures are extensionless `/word/<slug>` URLs. The cano
 
 ## Transparent scoring
 
-Scores exist only for the observed {s['scoring']['cohort']}-word performance cohort. Search value = 50% impression percentile + 30% click percentile + 20% ranking-visibility percentile. Search improvement = 65% impression percentile + 35% inverse ranking-visibility percentile. Ties use average empirical percentiles. Unknown performance produces null scores, never synthetic zero.
+Scores exist only for the observed {s['scoring']['cohort']}-word performance cohort. Search value = 50% impression percentile + 30% **zero-aware** click percentile + 20% ranking-visibility percentile. Every observed zero-click row receives click percentile **0** and acquisition contribution **0**; positive clicks rank above zero. Search improvement = 65% impression percentile + 35% inverse ranking-visibility percentile. Unknown performance produces null scores, never synthetic zero.
+
+Before correction: Tier A **{s['scoring_correction']['previous_tier_counts']['PROVISIONAL_TIER_A_CANDIDATE']}**, Tier B **{s['scoring_correction']['previous_tier_counts']['PROVISIONAL_TIER_B_CANDIDATE']}**. Corrected: Tier A **{s['scoring_correction']['corrected_tier_counts']['PROVISIONAL_TIER_A_CANDIDATE']}**, Tier B **{s['scoring_correction']['corrected_tier_counts']['PROVISIONAL_TIER_B_CANDIDATE']}**.
 
 ## Operational classifications
 
@@ -530,6 +597,8 @@ Provisional tiers: `{json.dumps(s['provisional_tier_counts'], sort_keys=True)}`.
 Data readiness: `{json.dumps(s['data_readiness_counts'], sort_keys=True)}`.
 
 Confidence: `{json.dumps(s['confidence_counts'], sort_keys=True)}`.
+
+Flag taxonomy: content gaps (`missing_bangla`, `missing_definition`, `missing_pos`) are separate from JS-shell architecture and from genuine structural anomalies. Non-ASCII slugs are informational only. Breakdown: `{json.dumps(s['flag_model'], sort_keys=True)}`.
 
 ## Important intersections
 

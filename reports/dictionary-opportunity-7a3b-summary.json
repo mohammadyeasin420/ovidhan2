@@ -144,6 +144,42 @@
     "TOP_20_OBSERVED": 301,
     "HIGHER_IMPRESSION_OBSERVED_P75_PLUS": 277
   },
+  "scoring_correction": {
+    "previous_commit": "eafd7f65bd7a7a9f786133de1529681e9219b46e",
+    "previous_tier_counts": {
+      "PROVISIONAL_TIER_A_CANDIDATE": 48,
+      "PROVISIONAL_TIER_B_CANDIDATE": 781
+    },
+    "corrected_tier_counts": {
+      "PROVISIONAL_TIER_A_CANDIDATE": 5,
+      "PROVISIONAL_TIER_B_CANDIDATE": 824
+    },
+    "zero_click_rows": 928,
+    "zero_click_acquisition_contribution": [
+      0.0
+    ],
+    "positive_click_min_acquisition_contribution": 29.92
+  },
+  "flag_model": {
+    "structural_anomaly_pages": 1702,
+    "content_gap_pages": 44271,
+    "architecture_flag_pages": 48927,
+    "non_ascii_informational_pages": 114,
+    "structural_anomaly_distribution": {
+      "slug_length_le_2": 883,
+      "empty_slug": 1,
+      "dictionary_record_missing": 675,
+      "contains_digits": 387
+    },
+    "content_quality_distribution": {
+      "missing_bangla": 39485,
+      "missing_definition": 44271,
+      "missing_pos": 44271
+    },
+    "architecture_distribution": {
+      "generic_js_shell": 48927
+    }
+  },
   "classification_counts": {
     "REVIEW_REQUIRED": 704,
     "UNKNOWN": 47145,
@@ -156,8 +192,8 @@
   "provisional_tier_counts": {
     "REVIEW_REQUIRED": 704,
     "INSUFFICIENT_EVIDENCE": 48095,
-    "PROVISIONAL_TIER_B_CANDIDATE": 781,
-    "PROVISIONAL_TIER_A_CANDIDATE": 48
+    "PROVISIONAL_TIER_B_CANDIDATE": 824,
+    "PROVISIONAL_TIER_A_CANDIDATE": 5
   },
   "data_readiness_counts": {
     "REVIEW_REQUIRED": 704,
@@ -196,8 +232,28 @@
       "count": 0,
       "samples": []
     },
-    "observed_performance_structural_anomaly": {
-      "count": 839,
+    "observed_performance_genuine_structural_anomaly": {
+      "count": 19,
+      "samples": [
+        "https://ovidhan.net/word/3rd.html",
+        "https://ovidhan.net/word/4s.html",
+        "https://ovidhan.net/word/5d.html",
+        "https://ovidhan.net/word/6c.html",
+        "https://ovidhan.net/word/howards.html"
+      ]
+    },
+    "observed_performance_content_gaps": {
+      "count": 811,
+      "samples": [
+        "https://ovidhan.net/word/3rd.html",
+        "https://ovidhan.net/word/4s.html",
+        "https://ovidhan.net/word/5d.html",
+        "https://ovidhan.net/word/6c.html",
+        "https://ovidhan.net/word/abbas.html"
+      ]
+    },
+    "observed_performance_js_shell_architecture": {
+      "count": 829,
       "samples": [
         "https://ovidhan.net/word/3rd.html",
         "https://ovidhan.net/word/4s.html",
@@ -255,9 +311,10 @@
   },
   "scoring": {
     "cohort": 934,
-    "search_value_score": "50% impression percentile + 30% click percentile + 20% ranking-visibility percentile within observed word URLs",
+    "search_value_score": "50% impression percentile + 30% zero-aware click percentile + 20% ranking-visibility percentile within observed word URLs",
     "search_improvement_score": "65% impression percentile + 35% inverse ranking-visibility percentile within observed word URLs",
-    "tie_rule": "average empirical percentile; deterministic URL tie order",
+    "click_rule": "clicks=0 has percentile 0 and acquisition contribution 0; positive clicks rank above zeros in the observed cohort",
+    "tie_rule": "average empirical percentile for positive/tied known values; deterministic URL tie order",
     "unknown_rule": "scores are null when performance_state is UNKNOWN"
   },
   "candidate_artifact": {
@@ -267,6 +324,6 @@
   },
   "tests": {
     "status": "PASS",
-    "cases": 9
+    "cases": 16
   }
 }

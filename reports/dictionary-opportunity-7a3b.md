@@ -44,7 +44,9 @@ The 95 performance join failures are extensionless `/word/<slug>` URLs. The cano
 
 ## Transparent scoring
 
-Scores exist only for the observed 934-word performance cohort. Search value = 50% impression percentile + 30% click percentile + 20% ranking-visibility percentile. Search improvement = 65% impression percentile + 35% inverse ranking-visibility percentile. Ties use average empirical percentiles. Unknown performance produces null scores, never synthetic zero.
+Scores exist only for the observed 934-word performance cohort. Search value = 50% impression percentile + 30% **zero-aware** click percentile + 20% ranking-visibility percentile. Every observed zero-click row receives click percentile **0** and acquisition contribution **0**; positive clicks rank above zero. Search improvement = 65% impression percentile + 35% inverse ranking-visibility percentile. Unknown performance produces null scores, never synthetic zero.
+
+Before correction: Tier A **48**, Tier B **781**. Corrected: Tier A **5**, Tier B **824**.
 
 ## Operational classifications
 
@@ -58,18 +60,22 @@ Scores exist only for the observed 934-word performance cohort. Search value = 5
 | QUICK_WIN | 52 |
 | WATCH | 6 |
 
-Provisional tiers: `{"INSUFFICIENT_EVIDENCE": 48095, "PROVISIONAL_TIER_A_CANDIDATE": 48, "PROVISIONAL_TIER_B_CANDIDATE": 781, "REVIEW_REQUIRED": 704}`. These are candidates only; absence from GSC never creates Tier C.
+Provisional tiers: `{"INSUFFICIENT_EVIDENCE": 48095, "PROVISIONAL_TIER_A_CANDIDATE": 5, "PROVISIONAL_TIER_B_CANDIDATE": 824, "REVIEW_REQUIRED": 704}`. These are candidates only; absence from GSC never creates Tier C.
 
 Data readiness: `{"READY_PARTIAL": 4786, "READY_STRONG": 4653, "REVIEW_REQUIRED": 704, "WEAK_DATA": 39485}`.
 
 Confidence: `{"HIGH": 22, "LOW": 945, "MEDIUM": 865, "UNKNOWN": 47796}`.
+
+Flag taxonomy: content gaps (`missing_bangla`, `missing_definition`, `missing_pos`) are separate from JS-shell architecture and from genuine structural anomalies. Non-ASCII slugs are informational only. Breakdown: `{"architecture_distribution": {"generic_js_shell": 48927}, "architecture_flag_pages": 48927, "content_gap_pages": 44271, "content_quality_distribution": {"missing_bangla": 39485, "missing_definition": 44271, "missing_pos": 44271}, "non_ascii_informational_pages": 114, "structural_anomaly_distribution": {"contains_digits": 387, "dictionary_record_missing": 675, "empty_slug": 1, "slug_length_le_2": 883}, "structural_anomaly_pages": 1702}`.
 
 ## Important intersections
 
 - observed_performance_strong_lexical: **18**; samples: `https://ovidhan.net/word/accordance.html`, `https://ovidhan.net/word/creates.html`, `https://ovidhan.net/word/creating.html`, `https://ovidhan.net/word/establish.html`, `https://ovidhan.net/word/examples.html`
 - observed_performance_weak_lexical: **811**; samples: `https://ovidhan.net/word/3rd.html`, `https://ovidhan.net/word/4s.html`, `https://ovidhan.net/word/5d.html`, `https://ovidhan.net/word/6c.html`, `https://ovidhan.net/word/abbas.html`
 - observed_performance_editorial_rejection: **0**; samples: none
-- observed_performance_structural_anomaly: **839**; samples: `https://ovidhan.net/word/3rd.html`, `https://ovidhan.net/word/4s.html`, `https://ovidhan.net/word/5d.html`, `https://ovidhan.net/word/6c.html`, `https://ovidhan.net/word/abbas.html`
+- observed_performance_genuine_structural_anomaly: **19**; samples: `https://ovidhan.net/word/3rd.html`, `https://ovidhan.net/word/4s.html`, `https://ovidhan.net/word/5d.html`, `https://ovidhan.net/word/6c.html`, `https://ovidhan.net/word/howards.html`
+- observed_performance_content_gaps: **811**; samples: `https://ovidhan.net/word/3rd.html`, `https://ovidhan.net/word/4s.html`, `https://ovidhan.net/word/5d.html`, `https://ovidhan.net/word/6c.html`, `https://ovidhan.net/word/abbas.html`
+- observed_performance_js_shell_architecture: **829**; samples: `https://ovidhan.net/word/3rd.html`, `https://ovidhan.net/word/4s.html`, `https://ovidhan.net/word/5d.html`, `https://ovidhan.net/word/6c.html`, `https://ovidhan.net/word/abbas.html`
 - coverage_backlog_strong_lexical: **48**; samples: `https://ovidhan.net/word/acceptable.html`, `https://ovidhan.net/word/acting.html`, `https://ovidhan.net/word/aspects.html`, `https://ovidhan.net/word/association.html`, `https://ovidhan.net/word/beast.html`
 - coverage_backlog_weak_lexical: **902**; samples: `https://ovidhan.net/word/1g.html`, `https://ovidhan.net/word/4pm.html`, `https://ovidhan.net/word/abbreviated.html`, `https://ovidhan.net/word/absorption.html`, `https://ovidhan.net/word/abu.html`
 - coverage_backlog_missing_dictionary: **14**; samples: `https://ovidhan.net/word/62.html`, `https://ovidhan.net/word/andys.html`, `https://ovidhan.net/word/australias.html`, `https://ovidhan.net/word/bosss.html`, `https://ovidhan.net/word/freddys.html`
@@ -78,21 +84,21 @@ Confidence: `{"HIGH": 22, "LOW": 945, "MEDIUM": 865, "UNKNOWN": 47796}`.
 
 ## Top bounded candidate examples
 
-- `https://ovidhan.net/word/net.html` — observed 9 impressions/1 clicks at position 4.78; ready strong; 1 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/translation.html` — observed 9 impressions/1 clicks at position 6.89; ready strong; 1 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/walmart.html` — observed 8 impressions/1 clicks at position 6.38; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/slytherin.html` — observed 12 impressions/1 clicks at position 10.42; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/tradeoff.html` — observed 4 impressions/1 clicks at position 12.00; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/tafe.html` — observed 10 impressions/0 clicks at position 6.50; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/newsweek.html` — observed 27 impressions/0 clicks at position 9.59; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/huawei.html` — observed 10 impressions/0 clicks at position 7.10; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/unconventional.html` — observed 43 impressions/0 clicks at position 10.47; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/princeton.html` — observed 8 impressions/0 clicks at position 6.88; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/producing.html` — observed 10 impressions/0 clicks at position 9.40; ready strong; 1 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/catwoman.html` — observed 7 impressions/0 clicks at position 4.86; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/shenanigans.html` — observed 12 impressions/0 clicks at position 10.83; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/ied.html` — observed 10 impressions/0 clicks at position 9.70; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
-- `https://ovidhan.net/word/sephora.html` — observed 10 impressions/0 clicks at position 9.80; weak data; 4 structural flags — PROVISIONAL_TIER_A_CANDIDATE
+- `https://ovidhan.net/word/net.html` — observed 9 impressions/1 clicks at position 4.78; ready strong; JS-shell architecture — PROVISIONAL_TIER_A_CANDIDATE
+- `https://ovidhan.net/word/translation.html` — observed 9 impressions/1 clicks at position 6.89; ready strong; JS-shell architecture — PROVISIONAL_TIER_A_CANDIDATE
+- `https://ovidhan.net/word/walmart.html` — observed 8 impressions/1 clicks at position 6.38; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_A_CANDIDATE
+- `https://ovidhan.net/word/slytherin.html` — observed 12 impressions/1 clicks at position 10.42; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_A_CANDIDATE
+- `https://ovidhan.net/word/tradeoff.html` — observed 4 impressions/1 clicks at position 12.00; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_A_CANDIDATE
+- `https://ovidhan.net/word/tafe.html` — observed 10 impressions/0 clicks at position 6.50; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/newsweek.html` — observed 27 impressions/0 clicks at position 9.59; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/huawei.html` — observed 10 impressions/0 clicks at position 7.10; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/unconventional.html` — observed 43 impressions/0 clicks at position 10.47; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/princeton.html` — observed 8 impressions/0 clicks at position 6.88; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/producing.html` — observed 10 impressions/0 clicks at position 9.40; ready strong; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/catwoman.html` — observed 7 impressions/0 clicks at position 4.86; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/shenanigans.html` — observed 12 impressions/0 clicks at position 10.83; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/ied.html` — observed 10 impressions/0 clicks at position 9.70; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
+- `https://ovidhan.net/word/sephora.html` — observed 10 impressions/0 clicks at position 9.80; weak data; 3 content gaps; JS-shell architecture — PROVISIONAL_TIER_B_CANDIDATE
 
 The committed candidate CSV contains 500 rows and is ordered deterministically by provisional tier, search value, impressions, and slug. It includes both value/protection and improvement fields rather than collapsing them into one opaque score.
 
@@ -111,5 +117,5 @@ The performance workbook is capped at 1,000 exported page rows, and the coverage
 
 ## Reproduction and tests
 
-Run `python scripts/dictionary-opportunity-7a3b.py` with `openpyxl` available. The script validates hashes, sheets, headers, filters, metadata, URL normalization, duplicate aggregation, known-zero versus unknown semantics, score reproducibility, stable ordering, and literal-template false-positive behavior. Embedded deterministic tests: **PASS (9 cases)**.
+Run `python scripts/dictionary-opportunity-7a3b.py` with `openpyxl` available. The script validates hashes, sheets, headers, filters, metadata, URL normalization, duplicate aggregation, known-zero versus unknown semantics, score reproducibility, stable ordering, and literal-template false-positive behavior. Embedded deterministic tests: **PASS (16 cases)**.
 
