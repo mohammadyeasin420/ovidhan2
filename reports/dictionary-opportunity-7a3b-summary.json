@@ -1,0 +1,272 @@
+{
+  "schema": "ovidhan-dictionary-opportunity-7a3b-summary-v1",
+  "starting_sha": "f16255b4a7381011d03dc5e37db09a45d52ce560",
+  "inputs": {
+    "performance_path": "C:\\data\\ovidhan-gsc\\ovidhan-gsc-performance-2026-08-16.xlsx",
+    "coverage_path": "C:\\data\\ovidhan-gsc\\ovidhan-gsc-coverage-2026-08-25.xlsx",
+    "sha256": {
+      "performance": "c8eeb38ee815615cccb91d8513be9e78be87e1f382e43eef94627f0325fa227a",
+      "coverage": "9ee447fcb3e53d07256f35723afc3a5b0d21799040f9e1860e24e9358f4eb426"
+    },
+    "raw_files_committed": false
+  },
+  "workbooks": {
+    "performance": {
+      "rows": 1000,
+      "word_urls": 934,
+      "unique_word_urls": 934,
+      "non_word_urls": 66,
+      "duplicate_word_rows": 0,
+      "word_clicks": 6.0,
+      "word_impressions": 3115.0,
+      "word_urls_with_clicks": 6,
+      "clicked_word_urls": [
+        "https://ovidhan.net/word/net.html",
+        "https://ovidhan.net/word/slytherin.html",
+        "https://ovidhan.net/word/tradeoff.html",
+        "https://ovidhan.net/word/translation.html",
+        "https://ovidhan.net/word/ua.html",
+        "https://ovidhan.net/word/walmart.html"
+      ],
+      "position_distribution": {
+        "TOP_20": 93,
+        "TOP_10": 208,
+        "BEYOND_50": 291,
+        "TOP_50": 342
+      },
+      "impression_distribution": {
+        "10_PLUS": 37,
+        "5_9": 130,
+        "2_4": 688,
+        "1": 79
+      },
+      "filters": {
+        "search_type": "Web",
+        "date": "Last 3 months"
+      }
+    },
+    "coverage": {
+      "rows": 1000,
+      "word_urls": 993,
+      "non_word_urls": 7,
+      "duplicate_word_rows": 0,
+      "validation_status_distribution": {
+        "Pending": 1000
+      },
+      "issue": "DISCOVERED_CURRENTLY_NOT_INDEXED",
+      "metadata_issue_raw": "Discovered – currently not indexed"
+    }
+  },
+  "cross_export_word_url_overlap": 0,
+  "known_baseline_check": {
+    "expected": {
+      "performance_rows": 1000,
+      "performance_word_urls": 934,
+      "word_clicks": 6,
+      "word_impressions": 3115,
+      "clicked_word_urls": 6,
+      "coverage_rows": 1000,
+      "coverage_word_urls": 993,
+      "coverage_non_word_urls": 7,
+      "pending": 1000,
+      "cross_export_overlap": 0
+    },
+    "observed": {
+      "performance_rows": 1000,
+      "performance_word_urls": 934,
+      "word_clicks": 6.0,
+      "word_impressions": 3115.0,
+      "clicked_word_urls": 6,
+      "coverage_rows": 1000,
+      "coverage_word_urls": 993,
+      "coverage_non_word_urls": 7,
+      "pending": 1000,
+      "cross_export_overlap": 0
+    },
+    "discrepancies": {}
+  },
+  "inventory": {
+    "tracked_word_pages": 49628,
+    "dictionary_records": 50489,
+    "page_dictionary_matches": 48953,
+    "page_without_dictionary_record": 675,
+    "bangla_present": 9468,
+    "definition_present": 4682,
+    "pos_present": 4682,
+    "architecture": {
+      "UNKNOWN_REQUIRES_REVIEW": 675,
+      "OTHER_JS_SHELL": 48906,
+      "STATIC_CORE": 5,
+      "7A1_CONTROL_JS_SHELL": 21,
+      "7A1_TREATMENT_STATIC": 21
+    },
+    "editorial_status": {
+      "unreviewed": 49551,
+      "approved": 48,
+      "rejected": 29
+    }
+  },
+  "joins": {
+    "performance_success": 839,
+    "performance_failure": 95,
+    "performance_failure_samples": [
+      "https://ovidhan.net/word/abdominal",
+      "https://ovidhan.net/word/abrasion",
+      "https://ovidhan.net/word/adjudicate",
+      "https://ovidhan.net/word/ahn",
+      "https://ovidhan.net/word/alam",
+      "https://ovidhan.net/word/animosity",
+      "https://ovidhan.net/word/aortic",
+      "https://ovidhan.net/word/apologised",
+      "https://ovidhan.net/word/barter",
+      "https://ovidhan.net/word/betsy"
+    ],
+    "coverage_success": 993,
+    "coverage_failure": 0,
+    "coverage_failure_samples": [],
+    "invalid_url_count": 0,
+    "invalid_urls": []
+  },
+  "states": {
+    "performance": {
+      "UNKNOWN": 48789,
+      "OBSERVED": 839
+    },
+    "coverage": {
+      "UNKNOWN": 48635,
+      "DISCOVERED_CURRENTLY_NOT_INDEXED": 993
+    }
+  },
+  "performance_signals": {
+    "HAS_CLICK": 6,
+    "HAS_IMPRESSIONS": 934,
+    "TOP_10_OBSERVED": 208,
+    "TOP_20_OBSERVED": 301,
+    "HIGHER_IMPRESSION_OBSERVED_P75_PLUS": 277
+  },
+  "classification_counts": {
+    "REVIEW_REQUIRED": 704,
+    "UNKNOWN": 47145,
+    "CRAWL_BACKLOG": 993,
+    "CONTENT_ENRICH": 811,
+    "PROTECT": 204,
+    "QUICK_WIN": 52,
+    "WATCH": 6
+  },
+  "provisional_tier_counts": {
+    "REVIEW_REQUIRED": 704,
+    "INSUFFICIENT_EVIDENCE": 48095,
+    "PROVISIONAL_TIER_B_CANDIDATE": 781,
+    "PROVISIONAL_TIER_A_CANDIDATE": 48
+  },
+  "data_readiness_counts": {
+    "REVIEW_REQUIRED": 704,
+    "WEAK_DATA": 39485,
+    "READY_STRONG": 4653,
+    "READY_PARTIAL": 4786
+  },
+  "confidence_counts": {
+    "UNKNOWN": 47796,
+    "LOW": 945,
+    "MEDIUM": 865,
+    "HIGH": 22
+  },
+  "intersections": {
+    "observed_performance_strong_lexical": {
+      "count": 18,
+      "samples": [
+        "https://ovidhan.net/word/accordance.html",
+        "https://ovidhan.net/word/creates.html",
+        "https://ovidhan.net/word/creating.html",
+        "https://ovidhan.net/word/establish.html",
+        "https://ovidhan.net/word/examples.html"
+      ]
+    },
+    "observed_performance_weak_lexical": {
+      "count": 811,
+      "samples": [
+        "https://ovidhan.net/word/3rd.html",
+        "https://ovidhan.net/word/4s.html",
+        "https://ovidhan.net/word/5d.html",
+        "https://ovidhan.net/word/6c.html",
+        "https://ovidhan.net/word/abbas.html"
+      ]
+    },
+    "observed_performance_editorial_rejection": {
+      "count": 0,
+      "samples": []
+    },
+    "observed_performance_structural_anomaly": {
+      "count": 839,
+      "samples": [
+        "https://ovidhan.net/word/3rd.html",
+        "https://ovidhan.net/word/4s.html",
+        "https://ovidhan.net/word/5d.html",
+        "https://ovidhan.net/word/6c.html",
+        "https://ovidhan.net/word/abbas.html"
+      ]
+    },
+    "coverage_backlog_strong_lexical": {
+      "count": 48,
+      "samples": [
+        "https://ovidhan.net/word/acceptable.html",
+        "https://ovidhan.net/word/acting.html",
+        "https://ovidhan.net/word/aspects.html",
+        "https://ovidhan.net/word/association.html",
+        "https://ovidhan.net/word/beast.html"
+      ]
+    },
+    "coverage_backlog_weak_lexical": {
+      "count": 902,
+      "samples": [
+        "https://ovidhan.net/word/1g.html",
+        "https://ovidhan.net/word/4pm.html",
+        "https://ovidhan.net/word/abbreviated.html",
+        "https://ovidhan.net/word/absorption.html",
+        "https://ovidhan.net/word/abu.html"
+      ]
+    },
+    "coverage_backlog_missing_dictionary": {
+      "count": 14,
+      "samples": [
+        "https://ovidhan.net/word/62.html",
+        "https://ovidhan.net/word/andys.html",
+        "https://ovidhan.net/word/australias.html",
+        "https://ovidhan.net/word/bosss.html",
+        "https://ovidhan.net/word/freddys.html"
+      ]
+    },
+    "clicked_by_readiness": {
+      "READY_STRONG": 2,
+      "WEAK_DATA": 4
+    },
+    "top10_by_readiness": {
+      "WEAK_DATA": 193,
+      "READY_PARTIAL": 3,
+      "READY_STRONG": 5,
+      "REVIEW_REQUIRED": 1
+    }
+  },
+  "experiment_7a1": {
+    "treatment_observed_performance": 0,
+    "control_observed_performance": 0,
+    "treatment_coverage_backlog": 21,
+    "control_coverage_backlog": 21
+  },
+  "scoring": {
+    "cohort": 934,
+    "search_value_score": "50% impression percentile + 30% click percentile + 20% ranking-visibility percentile within observed word URLs",
+    "search_improvement_score": "65% impression percentile + 35% inverse ranking-visibility percentile within observed word URLs",
+    "tie_rule": "average empirical percentile; deterministic URL tie order",
+    "unknown_rule": "scores are null when performance_state is UNKNOWN"
+  },
+  "candidate_artifact": {
+    "limit": 500,
+    "rows": 500,
+    "ordering": "tier class, search value descending, impressions descending, slug ascending"
+  },
+  "tests": {
+    "status": "PASS",
+    "cases": 9
+  }
+}
