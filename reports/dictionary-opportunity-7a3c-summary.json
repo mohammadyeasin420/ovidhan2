@@ -1,0 +1,602 @@
+{
+  "schema": "ovidhan-dictionary-opportunity-7a3c-summary-v1",
+  "starting_sha": "b3eab99e3b427813cb981677e32d2a1b2ff5c8ba",
+  "input_hashes": {
+    "performance": "c8eeb38ee815615cccb91d8513be9e78be87e1f382e43eef94627f0325fa227a",
+    "coverage": "9ee447fcb3e53d07256f35723afc3a5b0d21799040f9e1860e24e9358f4eb426"
+  },
+  "extensionless": {
+    "observed_urls": 95,
+    "mapped_to_tracked_html": 95,
+    "safe_redirect_candidates": 95,
+    "unresolved": 0,
+    "suspected_internal_source_leak": 0,
+    "classification_counts": {
+      "SAFE_301_TO_HTML": 95
+    },
+    "generic_source_candidates": []
+  },
+  "tier_a_quality_gate": [
+    {
+      "slug": "net",
+      "url": "https://ovidhan.net/word/net.html",
+      "clicks": 1.0,
+      "impressions": 9.0,
+      "position": 4.78,
+      "editorial_judgment": "EDITORIAL_PRIORITY",
+      "semantic_class": "CORE_LEARNING_WORD",
+      "actions": [
+        "SEO_PROTECT",
+        "EDITORIAL_PRIORITY"
+      ],
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "KNOWN_POSITIVE",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "bank-job-vocabulary.html",
+          "5000-common-words-data.json"
+        ]
+      }
+    },
+    {
+      "slug": "translation",
+      "url": "https://ovidhan.net/word/translation.html",
+      "clicks": 1.0,
+      "impressions": 9.0,
+      "position": 6.89,
+      "editorial_judgment": "EDITORIAL_PRIORITY",
+      "semantic_class": "CORE_LEARNING_WORD",
+      "actions": [
+        "SEO_PROTECT",
+        "EDITORIAL_PRIORITY"
+      ],
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      }
+    },
+    {
+      "slug": "tradeoff",
+      "url": "https://ovidhan.net/word/tradeoff.html",
+      "clicks": 1.0,
+      "impressions": 4.0,
+      "position": 12.0,
+      "editorial_judgment": "EDITORIAL_PRIORITY",
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "actions": [
+        "SEO_PROTECT",
+        "EDITORIAL_PRIORITY"
+      ],
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "UNKNOWN",
+        "sources": []
+      }
+    },
+    {
+      "slug": "walmart",
+      "url": "https://ovidhan.net/word/walmart.html",
+      "clicks": 1.0,
+      "impressions": 8.0,
+      "position": 6.38,
+      "editorial_judgment": "PROTECT_NO_EDITORIAL_EXPANSION",
+      "semantic_class": "PROPER_NAME_BRAND_OR_ENTITY",
+      "actions": [
+        "SEO_PROTECT",
+        "PROTECT_NO_EDITORIAL_EXPANSION"
+      ],
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "UNKNOWN",
+        "sources": []
+      }
+    },
+    {
+      "slug": "slytherin",
+      "url": "https://ovidhan.net/word/slytherin.html",
+      "clicks": 1.0,
+      "impressions": 12.0,
+      "position": 10.42,
+      "editorial_judgment": "PROTECT_NO_EDITORIAL_EXPANSION",
+      "semantic_class": "PROPER_NAME_BRAND_OR_ENTITY",
+      "actions": [
+        "SEO_PROTECT",
+        "PROTECT_NO_EDITORIAL_EXPANSION"
+      ],
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "UNKNOWN",
+        "sources": []
+      }
+    }
+  ],
+  "review_queue": {
+    "size": 100,
+    "semantic_counts": {
+      "CORE_LEARNING_WORD": 11,
+      "UNKNOWN_REQUIRES_HUMAN_REVIEW": 89
+    },
+    "pages_with_learner_value_evidence": 11,
+    "action_counts": {
+      "SEO_PROTECT": 71,
+      "INTERNAL_LINK_OPPORTUNITY": 11,
+      "CONTENT_REPAIR": 3,
+      "HUMAN_REVIEW": 89
+    }
+  },
+  "first_batch": [
+    {
+      "slug": "net",
+      "url": "https://ovidhan.net/word/net.html",
+      "actions": [
+        "SEO_PROTECT",
+        "EDITORIAL_PRIORITY"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "KNOWN_POSITIVE",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "bank-job-vocabulary.html",
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/bank-job-vocabulary.html -> /word/net.html",
+          "word_to_hub": "/word/net.html -> /bank-job-vocabulary.html",
+          "evidence_source": "bank-job-vocabulary.html"
+        },
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/net.html",
+          "word_to_hub": "/word/net.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Explicit 7A3C human judgment plus observed Google value"
+    },
+    {
+      "slug": "translation",
+      "url": "https://ovidhan.net/word/translation.html",
+      "actions": [
+        "SEO_PROTECT",
+        "EDITORIAL_PRIORITY"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/translation.html",
+          "word_to_hub": "/word/translation.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Explicit 7A3C human judgment plus observed Google value"
+    },
+    {
+      "slug": "tradeoff",
+      "url": "https://ovidhan.net/word/tradeoff.html",
+      "actions": [
+        "SEO_PROTECT",
+        "EDITORIAL_PRIORITY"
+      ],
+      "semantic_class": "VALID_SECONDARY_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "UNKNOWN",
+        "sources": []
+      },
+      "internal_links": [],
+      "reason": "Explicit 7A3C human judgment plus observed Google value"
+    },
+    {
+      "slug": "without",
+      "url": "https://ovidhan.net/word/without.html",
+      "actions": [
+        "CONTENT_REPAIR",
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY",
+        "SEO_PROTECT"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/without.html",
+          "word_to_hub": "/word/without.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "must",
+      "url": "https://ovidhan.net/word/must.html",
+      "actions": [
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/must.html",
+          "word_to_hub": "/word/must.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "provision",
+      "url": "https://ovidhan.net/word/provision.html",
+      "actions": [
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/provision.html",
+          "word_to_hub": "/word/provision.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "accordance",
+      "url": "https://ovidhan.net/word/accordance.html",
+      "actions": [
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/accordance.html",
+          "word_to_hub": "/word/accordance.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "creating",
+      "url": "https://ovidhan.net/word/creating.html",
+      "actions": [
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY",
+        "SEO_PROTECT"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/creating.html",
+          "word_to_hub": "/word/creating.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "producing",
+      "url": "https://ovidhan.net/word/producing.html",
+      "actions": [
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY",
+        "SEO_PROTECT"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/producing.html",
+          "word_to_hub": "/word/producing.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "during",
+      "url": "https://ovidhan.net/word/during.html",
+      "actions": [
+        "CONTENT_REPAIR",
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/during.html",
+          "word_to_hub": "/word/during.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "wallet",
+      "url": "https://ovidhan.net/word/wallet.html",
+      "actions": [
+        "CONTENT_REPAIR",
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "basic-vocabulary-list.html"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/basic-vocabulary-list.html -> /word/wallet.html",
+          "word_to_hub": "/word/wallet.html -> /basic-vocabulary-list.html",
+          "evidence_source": "basic-vocabulary-list.html"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "integration",
+      "url": "https://ovidhan.net/word/integration.html",
+      "actions": [
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY",
+        "SEO_PROTECT"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/integration.html",
+          "word_to_hub": "/word/integration.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "smaller",
+      "url": "https://ovidhan.net/word/smaller.html",
+      "actions": [
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY",
+        "SEO_PROTECT"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/smaller.html",
+          "word_to_hub": "/word/smaller.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    },
+    {
+      "slug": "street",
+      "url": "https://ovidhan.net/word/street.html",
+      "actions": [
+        "EDITORIAL_PRIORITY",
+        "INTERNAL_LINK_OPPORTUNITY"
+      ],
+      "semantic_class": "CORE_LEARNING_WORD",
+      "learner_value": {
+        "bcs": "UNKNOWN",
+        "ielts": "UNKNOWN",
+        "job_workplace": "UNKNOWN",
+        "general_english": "KNOWN_POSITIVE",
+        "sources": [
+          "5000-common-words-data.json"
+        ]
+      },
+      "internal_links": [
+        {
+          "hub_to_word": "/5000-common-english-words-bangla.html -> /word/street.html",
+          "word_to_hub": "/word/street.html -> /5000-common-english-words-bangla.html",
+          "evidence_source": "5000-common-words-data.json"
+        }
+      ],
+      "reason": "Observed demand plus explicit curated learner evidence and technical safety"
+    }
+  ],
+  "required_counts": {
+    "pages_with_clicks": 5,
+    "pages_with_learner_value_evidence": 13,
+    "proper_name_entity_noise_review": 91,
+    "editorial_priority": 14,
+    "first_batch_size": 14,
+    "internal_link_opportunities": 14,
+    "overlap_7a1": 0,
+    "coverage_backlog_overlap": 0
+  },
+  "learner_value_sources": {
+    "bcs": {
+      "path": "bcs-500-words.html",
+      "word_count": 102
+    },
+    "ielts": {
+      "path": "ielts-vocabulary-2026-bangla-meaning.html",
+      "word_count": 0
+    },
+    "bank_job": {
+      "path": "bank-job-vocabulary.html",
+      "word_count": 99
+    },
+    "business_workplace": {
+      "path": "business-vocabulary-bangla.html",
+      "word_count": 127
+    },
+    "basic_vocabulary": {
+      "path": "basic-vocabulary-list.html",
+      "word_count": 80
+    },
+    "daily_use": {
+      "path": "1000-daily-use-english-words-bangla.html",
+      "word_count": 52
+    },
+    "common_5000": {
+      "path": "5000-common-words-data.json",
+      "word_count": 5000
+    }
+  },
+  "page_template_specification": {
+    "principle": "SEARCH ANSWER → UNDERSTANDING → USE → PRACTICE → LEARNER PROGRESS",
+    "constraint": "Render a module only when its underlying evidence is verified; never add filler for word count.",
+    "modules": [
+      {
+        "name": "Instant Answer",
+        "evidence": "English, Bangla, POS, pronunciation"
+      },
+      {
+        "name": "Simple Meaning",
+        "evidence": "reviewed learner-friendly English definition and Bangla explanation"
+      },
+      {
+        "name": "Use It Correctly",
+        "evidence": "reviewed natural contextual examples"
+      },
+      {
+        "name": "Bangla Learner Mistake",
+        "evidence": "verified confusion or L1-transfer evidence only"
+      },
+      {
+        "name": "Word Family / Forms",
+        "evidence": "verified lexical forms"
+      },
+      {
+        "name": "Collocations",
+        "evidence": "verified collocations"
+      },
+      {
+        "name": "Similar / Confused Words",
+        "evidence": "reviewed useful contrast"
+      },
+      {
+        "name": "Goal Relevance",
+        "evidence": "explicit BCS, IELTS, job, or speaking collection membership"
+      },
+      {
+        "name": "30-Second Practice",
+        "evidence": "deterministic exercise sourced from verified fields"
+      },
+      {
+        "name": "Next Learning Step",
+        "evidence": "contextual link to an existing relevant Ovidhan/Dakho learning page"
+      }
+    ]
+  },
+  "tests": {
+    "status": "PASS",
+    "cases": 8
+  }
+}
