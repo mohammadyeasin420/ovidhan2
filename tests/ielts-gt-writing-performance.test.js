@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),pack=require('../data/ielts-gt-writing-p
 
 assert.deepEqual(['',' one ','one\ttwo','বাংলা লেখা পরীক্ষা'].map(runtime.countWords),[0,1,2,3]);
 let now=1000,session=runtime.createWritingSession(pack,()=>now);
-assert.equal(session.getState().mode,'letter');
+assert.equal(session.getState().mode,'gt-letter');
 assert.equal(session.finish(),null,'empty attempts are not completed');
 assert.equal(session.setText('one two three'),3);now=66000;
 let evidence=session.finish();
@@ -16,7 +16,7 @@ session.revise();assert.equal(session.getState().text,'one two three','revise pr
 assert.equal(session.finish(),null,'revision without a meaningful edit cannot create evidence');
 now=1000000;session.setText('one two three revised');now+=35000;const revisionEvidence=session.finish();assert.equal(revisionEvidence.durationBucket,'30_TO_59_SECONDS','revision timing excludes the original attempt and review wait');
 session.next();assert.equal(session.getState().text,'','next clears raw text');assert.equal(session.getState().index,1);
-session.setText('private draft');session.changeMode('essay');assert.equal(session.getState().text,'','mode change clears raw text');assert.equal(session.getState().mode,'essay');
+session.setText('private draft');session.changeMode('gt-essay');assert.equal(session.getState().text,'','mode change clears raw text');assert.equal(session.getState().mode,'gt-essay');
 assert.equal(pack.self_review_frameworks.GT_TASK_2_ARGUMENT.length,6);
 session.setText('position and reasons');now+=35000;evidence=session.finish();assert.equal(evidence.taskType,'GT_TASK_2_ARGUMENT');assert.equal(evidence.skillId,'writing_argument_development');
 

@@ -1,0 +1,1461 @@
+{
+  "schema": "ovidhan-ielts-academic-writing-performance-v1",
+  "phase": "6M",
+  "test_type": "ACADEMIC",
+  "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+  "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+  "content_origin": "OVIDHAN_CREATED",
+  "official_question": false,
+  "research_status": "REVIEWED",
+  "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+  "disclaimer_en": "Note: This is Ovidhan-created IELTS-style practice material.\nThese tasks are not official IELTS questions.\nSelf-review and practice may help improve your writing, but this is not an official IELTS assessment.\nNo IELTS band score or official result is provided.",
+  "disclaimer_bn": "নোট: এটি Ovidhan-created IELTS-style অনুশীলন উপাদান। এই কাজগুলো অফিসিয়াল IELTS প্রশ্ন নয়। স্ব-মূল্যায়ন ও অনুশীলন আপনার লেখার দক্ষতা উন্নত করতে সাহায্য করতে পারে, কিন্তু এটি কোনো অফিসিয়াল IELTS মূল্যায়ন নয়। কোনো IELTS ব্যান্ড স্কোর বা অফিসিয়াল ফলাফল এখানে দেওয়া হয় না।",
+  "academic_task1": [
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task1-001",
+      "title": "Museum visits over a year",
+      "visual_type": "Line graph",
+      "topic": "Monthly visitor numbers to a city museum",
+      "prompt_en": "The line graph below shows the number of visitors (in thousands) to a city museum over a twelve‑month period.\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_bn": "নিচের রেখাচিত্রটি একটি শহরের জাদুঘরে বারো মাসের দর্শনার্থীর সংখ্যা (হাজারে) দেখায়।\nপ্রধান বৈশিষ্ট্যগুলো নির্বাচন ও রিপোর্ট করে তথ্যটি সংক্ষেপে বর্ণনা করুন এবং যেখানে প্রাসঙ্গিক তুলনা করুন।",
+      "visual_data": {
+        "raw_lines": [
+          "Unit: thousands of visitors",
+          "Months: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec",
+          "Values: 12, 15, 18, 22, 25, 28, 30, 32, 28, 24, 20, 18"
+        ],
+        "series": [
+          {
+            "name": "Values",
+            "values": [
+              12,
+              15,
+              18,
+              22,
+              25,
+              28,
+              30,
+              32,
+              28,
+              24,
+              20,
+              18
+            ]
+          }
+        ],
+        "features": {},
+        "unit": "thousands of visitors",
+        "categories": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ]
+      },
+      "key_features_for_review": [
+        "Overall upward trend from January to August",
+        "Peak in August (32,000)",
+        "Decline from August to December",
+        "Steady rise through July, with growth slowing between July and August before the decline began"
+      ],
+      "overview_targets": [
+        "Visitor numbers generally rose from January to August.",
+        "After peaking in August, they declined towards December."
+      ],
+      "detail_grouping_suggestion": "Group the year into three periods: January–April (steady increase), May–August (rapid rise and peak), September–December (declining trend).",
+      "bangla_planning_help": [
+        "বারো মাসের মধ্যে কোন সময়ে দর্শনার্থী সবচেয়ে বেশি?",
+        "কোন সময়ে দর্শনার্থী বাড়তে থাকে আর কোন সময়ে কমতে থাকে?",
+        "কোন মাসগুলোতে উল্লেখযোগ্য পরিবর্তন দেখা যায়?",
+        "মোটামুটি কয়টি পর্যায়ে আপনি ডেটা বিভক্ত করতে পারেন?"
+      ],
+      "useful_language": [
+        "The number of visitors rose steadily from ... to ...",
+        "There was a sharp increase between ... and ...",
+        "Visitor numbers peaked in ... at ...",
+        "After reaching a high point, the figures dropped ...",
+        "A slight decline followed ...",
+        "Throughout the period, ...",
+        "The trend was generally upward until ..."
+      ],
+      "common_mistakes": [
+        "Trying to describe every single monthly figure – focus on main changes.",
+        "Missing the overall trend and only describing local fluctuations.",
+        "Using opinion words like “good” or “bad” for Task 1 data."
+      ],
+      "self_review": [
+        "Did I answer the task (summarise the data)?",
+        "Did I include an overview of the main trends?",
+        "Did I select the most important features (e.g., peak, start/end points)?",
+        "Did I make relevant comparisons where appropriate?",
+        "Did I use accurate data from the visual?",
+        "Are my paragraphs logically organised?",
+        "Did I use appropriate vocabulary for describing change?",
+        "Did I check my grammar and sentence structures?"
+      ],
+      "task_type": "ACADEMIC_TASK_1_VISUAL"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task1-002",
+      "title": "Student enrolment by faculty",
+      "visual_type": "Bar chart",
+      "topic": "Number of students enrolled in different faculties at a university",
+      "prompt_en": "The bar chart shows the number of students (in hundreds) enrolled in six faculties at a university in 2020 and 2023.\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_bn": "বার চার্টটি একটি বিশ্ববিদ্যালয়ের ছয়টি বিভাগে ২০২০ ও ২০২৩ সালে ভর্তি শিক্ষার্থীর সংখ্যা (শতকে) দেখায়।\nপ্রধান বৈশিষ্ট্যগুলো নির্বাচন ও রিপোর্ট করে তথ্যটি সংক্ষেপে বর্ণনা করুন এবং যেখানে প্রাসঙ্গিক তুলনা করুন।",
+      "visual_data": {
+        "raw_lines": [
+          "Unit: hundreds of students",
+          "Faculties: Arts, Science, Business, Engineering, Law, Medicine",
+          "2020: 25, 30, 45, 35, 20, 28",
+          "2023: 30, 40, 50, 45, 22, 32"
+        ],
+        "series": [
+          {
+            "name": "2020",
+            "values": [
+              25,
+              30,
+              45,
+              35,
+              20,
+              28
+            ]
+          },
+          {
+            "name": "2023",
+            "values": [
+              30,
+              40,
+              50,
+              45,
+              22,
+              32
+            ]
+          }
+        ],
+        "features": {},
+        "unit": "hundreds of students",
+        "categories": [
+          "Arts",
+          "Science",
+          "Business",
+          "Engineering",
+          "Law",
+          "Medicine"
+        ]
+      },
+      "key_features_for_review": [
+        "Business had the highest enrolment in both years, while Engineering was also among the larger faculties.",
+        "All faculties increased over the period.",
+        "Science and Engineering each increased by 10 hundred students – the largest absolute rise.",
+        "Law had the smallest increase (2 hundred)."
+      ],
+      "overview_targets": [
+        "Enrolments increased in every faculty, with Business remaining the largest and Law the smallest.",
+        "Science and Engineering recorded the joint-largest absolute increases."
+      ],
+      "detail_grouping_suggestion": "Group faculties by high, medium, and low enrolment, or by the size of the increase.",
+      "bangla_planning_help": [
+        "কোন বিভাগে শিক্ষার্থী বেশি?",
+        "কোন বিভাগে সবচেয়ে বেশি পরিবর্তন হয়েছে?",
+        "কোন বিভাগে শিক্ষার্থী কম?",
+        "দুটি বছরের মধ্যে কী তুলনা করা যায়?"
+      ],
+      "useful_language": [
+        "The number of students in ... rose from ... to ...",
+        "A significant increase was seen in ...",
+        "... remained the most popular faculty throughout the period.",
+        "... experienced a modest rise.",
+        "... outnumbered ... in both years.",
+        "The figure for ... increased by ...",
+        "In contrast, the rise in ... was relatively small."
+      ],
+      "common_mistakes": [
+        "Forgetting to mention units (hundreds).",
+        "Only describing one year and ignoring the comparison.",
+        "Misreading the scale (e.g., reading 30 as 300 when it's hundreds)."
+      ],
+      "self_review": [
+        "Did I answer the task (summarise the data)?",
+        "Did I include an overview?",
+        "Did I select the most important features (e.g., largest increases, rankings)?",
+        "Did I make relevant comparisons?",
+        "Did I use accurate data?",
+        "Are my paragraphs logically organised?",
+        "Did I use appropriate vocabulary?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_1_VISUAL"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task1-003",
+      "title": "Household energy consumption by appliance",
+      "visual_type": "Table",
+      "topic": "Average annual energy consumption (kWh) per household by appliance type",
+      "prompt_en": "The table below shows the average annual energy consumption (in kilowatt‑hours) of six household appliances in Country X in 2019 and 2022.\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_bn": "নিচের সারণিটি X দেশের ছয়টি গৃহস্থালী যন্ত্রপাতির গড় বার্ষিক শক্তি ব্যবহার (কিলোওয়াট-ঘণ্টায়) ২০১৯ ও ২০২২ সালে দেখায়।\nপ্রধান বৈশিষ্ট্যগুলো নির্বাচন ও রিপোর্ট করে তথ্যটি সংক্ষেপে বর্ণনা করুন এবং যেখানে প্রাসঙ্গিক তুলনা করুন।",
+      "visual_data": {
+        "raw_lines": [
+          "Unit: kWh/year",
+          "Appliances: Refrigerator, Washing Machine, Air Conditioner, Television, Computer, Lighting",
+          "2019: 450, 200, 800, 150, 180, 100",
+          "2022: 420, 210, 750, 140, 190, 95"
+        ],
+        "series": [
+          {
+            "name": "2019",
+            "values": [
+              450,
+              200,
+              800,
+              150,
+              180,
+              100
+            ]
+          },
+          {
+            "name": "2022",
+            "values": [
+              420,
+              210,
+              750,
+              140,
+              190,
+              95
+            ]
+          }
+        ],
+        "features": {},
+        "unit": "kWh/year",
+        "categories": [
+          "Refrigerator",
+          "Washing Machine",
+          "Air Conditioner",
+          "Television",
+          "Computer",
+          "Lighting"
+        ]
+      },
+      "key_features_for_review": [
+        "Air conditioner consumed the most energy in both years.",
+        "Lighting consumed the least.",
+        "Refrigerator, AC, TV, and Lighting decreased; Washing Machine and Computer increased."
+      ],
+      "overview_targets": [
+        "The air conditioner remained the highest-energy appliance in both years, while lighting remained the lowest.",
+        "Most appliances used slightly less energy in 2022, although washing-machine and computer consumption rose."
+      ],
+      "detail_grouping_suggestion": "Group appliances by increasing vs decreasing consumption.",
+      "bangla_planning_help": [
+        "কোন যন্ত্রপাতি সবচেয়ে বেশি শক্তি ব্যবহার করে?",
+        "কোনটির ব্যবহার কমেছে?",
+        "কোনটির ব্যবহার বেড়েছে?",
+        "কয়টি যন্ত্রপাতির ব্যবহার পরিবর্তিত হয়েছে?"
+      ],
+      "useful_language": [
+        "The largest amount of energy was consumed by ...",
+        "Consumption of ... fell from ... to ...",
+        "A modest rise in ... was recorded.",
+        "... showed the smallest consumption.",
+        "Overall, the figures for ... changed little.",
+        "There was a slight decrease in ..."
+      ],
+      "common_mistakes": [
+        "Not mentioning the units (kWh).",
+        "Focusing only on the highest/lowest values without grouping.",
+        "Making unsupported comparisons (e.g., saying “better” or “worse”)."
+      ],
+      "self_review": [
+        "Did I answer the task?",
+        "Did I include an overview?",
+        "Did I select the most important features?",
+        "Did I make relevant comparisons?",
+        "Did I use accurate data?",
+        "Are my paragraphs logically organised?",
+        "Did I use appropriate vocabulary?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_1_VISUAL"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task1-004",
+      "title": "Household spending distribution",
+      "visual_type": "Pie charts",
+      "topic": "Percentage of household spending on different categories",
+      "prompt_en": "The pie charts illustrate the proportion of household expenditure in a city on five categories in 2015 and 2023.\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_bn": "পাই চার্ট দুটি ২০১৫ ও ২০২৩ সালে একটি শহরের পরিবারের মোট ব্যয়ের কত শতাংশ পাঁচটি ভিন্ন খাতে ব্যয় হয়েছে তা দেখায়।\nপ্রধান বৈশিষ্ট্যগুলো নির্বাচন ও রিপোর্ট করে তথ্যটি সংক্ষেপে বর্ণনা করুন এবং যেখানে প্রাসঙ্গিক তুলনা করুন।",
+      "visual_data": {
+        "raw_lines": [
+          "Categories: Housing, Food, Transport, Health, Entertainment",
+          "2015: 35%, 25%, 15%, 12%, 13%",
+          "2023: 40%, 20%, 18%, 10%, 12%"
+        ],
+        "series": [
+          {
+            "name": "2015",
+            "values": [
+              35,
+              25,
+              15,
+              12,
+              13
+            ]
+          },
+          {
+            "name": "2023",
+            "values": [
+              40,
+              20,
+              18,
+              10,
+              12
+            ]
+          }
+        ],
+        "features": {},
+        "categories": [
+          "Housing",
+          "Food",
+          "Transport",
+          "Health",
+          "Entertainment"
+        ]
+      },
+      "key_features_for_review": [
+        "Housing remained the largest category and increased from 35% to 40%.",
+        "Food spending dropped from 25% to 20%.",
+        "Transport increased from 15% to 18%.",
+        "Health and Entertainment saw minor declines."
+      ],
+      "overview_targets": [
+        "Housing remained the largest share of household spending and increased between 2015 and 2023.",
+        "Food recorded the largest decline, while transport rose and the other categories changed only slightly."
+      ],
+      "detail_grouping_suggestion": "Group categories by those that increased (Housing, Transport) and those that decreased (Food, Health, Entertainment).",
+      "bangla_planning_help": [
+        "কোন খাতে সবচেয়ে বেশি ব্যয়?",
+        "কোন খাতে ব্যয় কমেছে?",
+        "কোন খাতে ব্যয় বেড়েছে?",
+        "২০১৫ থেকে ২০২৩ পর্যন্ত ব্যয়ের ধরণ কীভাবে পাল্টেছে?"
+      ],
+      "useful_language": [
+        "The percentage of ... rose from ... to ...",
+        "There was a notable decline in ...",
+        "... accounted for the largest share.",
+        "The proportion of ... increased significantly.",
+        "... remained relatively stable.",
+        "In contrast, ... fell by ..."
+      ],
+      "common_mistakes": [
+        "Using exact percentages in every sentence unnecessarily.",
+        "Ignoring the overall picture and only comparing individual segments.",
+        "Misinterpreting the charts as amounts rather than percentages."
+      ],
+      "self_review": [
+        "Did I answer the task?",
+        "Did I include an overview?",
+        "Did I select the most important features (e.g., largest changes)?",
+        "Did I make relevant comparisons?",
+        "Did I use accurate data?",
+        "Are my paragraphs logically organised?",
+        "Did I use appropriate vocabulary?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_1_VISUAL"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task1-005",
+      "title": "Combined bar and line graph – sales and profit",
+      "visual_type": "Mixed chart (bar chart + line graph)",
+      "topic": "Quarterly sales (bars) and profit margin (line) of a company",
+      "prompt_en": "The chart shows the quarterly sales (in millions of dollars) as bars and the profit margin (as a percentage) as a line for a company over four quarters in 2022.\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_bn": "চার্টটি ২০২২ সালের চার ত্রৈমাসিকে একটি কোম্পানির ত্রৈমাসিক বিক্রয় (মিলিয়ন ডলারে) বার দ্বারা এবং মুনাফার হার (শতাংশে) রেখা দ্বারা দেখায়।\nপ্রধান বৈশিষ্ট্যগুলো নির্বাচন ও রিপোর্ট করে তথ্যটি সংক্ষেপে বর্ণনা করুন এবং যেখানে প্রাসঙ্গিক তুলনা করুন।",
+      "visual_data": {
+        "raw_lines": [
+          "Quarters: Q1, Q2, Q3, Q4",
+          "Sales (millions USD): 50, 60, 70, 65",
+          "Profit margin (%): 10, 12, 15, 13"
+        ],
+        "series": [
+          {
+            "name": "Sales (millions USD)",
+            "values": [
+              50,
+              60,
+              70,
+              65
+            ]
+          },
+          {
+            "name": "Profit margin (%)",
+            "values": [
+              10,
+              12,
+              15,
+              13
+            ]
+          }
+        ],
+        "features": {},
+        "categories": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
+        ]
+      },
+      "key_features_for_review": [
+        "Sales increased from Q1 to Q3, then fell slightly in Q4.",
+        "Profit margin followed a similar pattern but peaked at 15% in Q3.",
+        "Both indicators reached their highest values in Q3."
+      ],
+      "overview_targets": [
+        "Both sales and profit margin increased from Q1 to Q3 before falling slightly in Q4.",
+        "The highest values for both measures were recorded in Q3."
+      ],
+      "detail_grouping_suggestion": "Group by trend: rising (Q1–Q3) and falling (Q3–Q4). Also compare the two indicators.",
+      "bangla_planning_help": [
+        "বিক্রয় কীভাবে পরিবর্তিত হয়েছে?",
+        "মুনাফার হার কীভাবে পরিবর্তিত হয়েছে?",
+        "কোন ত্রৈমাসিকে বিক্রয় ও মুনাফার হার সর্বোচ্চ ছিল?",
+        "দুটি সূচকের মধ্যে কী সম্পর্ক দেখা যায়?"
+      ],
+      "useful_language": [
+        "Sales rose steadily from Q1 to Q3, reaching ...",
+        "The profit margin showed a similar trend, peaking at ...",
+        "There was a slight fall in the final quarter.",
+        "The highest sales were recorded in Q3, while the lowest were in Q1.",
+        "Both indicators moved in the same direction until Q3.",
+        "A comparison of the two sets of data reveals ...",
+        "While sales increased by ..., profit margin increased by ...",
+        "Overall, the trends are broadly similar."
+      ],
+      "common_mistakes": [
+        "Describing the bar and line separately without linking them.",
+        "Ignoring the units (millions, percent).",
+        "Overcomplicating the comparison."
+      ],
+      "self_review": [
+        "Did I answer the task?",
+        "Did I include an overview?",
+        "Did I select the most important features?",
+        "Did I make relevant comparisons?",
+        "Did I use accurate data?",
+        "Are my paragraphs logically organised?",
+        "Did I use appropriate vocabulary?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_1_VISUAL"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task1-006",
+      "title": "Paper recycling process",
+      "visual_type": "Process diagram",
+      "topic": "Steps involved in recycling paper",
+      "prompt_en": "The diagram illustrates the process of recycling paper.\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_bn": "চিত্রটি কাগজ পুনর্ব্যবহারের প্রক্রিয়া দেখায়।\nপ্রধান বৈশিষ্ট্যগুলো নির্বাচন ও রিপোর্ট করে তথ্যটি সংক্ষেপে বর্ণনা করুন এবং যেখানে প্রাসঙ্গিক তুলনা করুন।",
+      "visual_data": {
+        "raw_lines": [
+          "Stages in order:",
+          "Collection of waste paper from households and offices.",
+          "Sorting by type and quality.",
+          "Shredding and pulping in water to form a slurry.",
+          "Filtering and cleaning to remove contaminants (e.g., glue, staples).",
+          "De‑inking and bleaching to whiten the pulp.",
+          "Pressing and drying to remove water.",
+          "Rolling and cutting into new paper sheets.",
+          "Packaging and dispatch for reuse."
+        ],
+        "series": [],
+        "features": {},
+        "stages": [
+          "Collection of waste paper from households and offices.",
+          "Sorting by type and quality.",
+          "Shredding and pulping in water to form a slurry.",
+          "Filtering and cleaning to remove contaminants (e.g., glue, staples).",
+          "De‑inking and bleaching to whiten the pulp.",
+          "Pressing and drying to remove water.",
+          "Rolling and cutting into new paper sheets.",
+          "Packaging and dispatch for reuse."
+        ]
+      },
+      "key_features_for_review": [
+        "The process has eight main stages, from collection to dispatch.",
+        "It includes both mechanical (shredding, pressing) and chemical (de‑inking) steps.",
+        "The core transformation is from waste paper to new paper sheets."
+      ],
+      "overview_targets": [
+        "The process has eight stages, beginning with waste-paper collection and ending with packaging and dispatch.",
+        "Waste paper is transformed into pulp, cleaned and de-inked, then pressed, dried and formed into new sheets."
+      ],
+      "detail_grouping_suggestion": "Group into: preparation (collection, sorting), processing (shredding, pulping, cleaning, de‑inking), and finishing (pressing, drying, cutting, packaging).",
+      "bangla_planning_help": [
+        "প্রক্রিয়াটি কতটি ধাপে বিভক্ত?",
+        "প্রথম কয়েকটি ধাপ কী?",
+        "কোন ধাপে কাগজ তরলে পরিণত হয়?",
+        "শেষ ধাপগুলো কী?"
+      ],
+      "useful_language": [
+        "The process begins with ... and ends with ...",
+        "First, ..., then, ...",
+        "After that, ...",
+        "The next stage involves ...",
+        "Subsequently, ...",
+        "Finally, ...",
+        "The ... is then ...",
+        "This is followed by ..."
+      ],
+      "common_mistakes": [
+        "Not including all stages or missing key steps.",
+        "Using the active voice when passive voice is more appropriate (e.g., “paper is collected”).",
+        "Adding personal opinion or commenting on the process."
+      ],
+      "self_review": [
+        "Did I answer the task?",
+        "Did I include an overview?",
+        "Did I describe all the stages in the correct order?",
+        "Did I make relevant comparisons (if any)?",
+        "Did I use accurate data?",
+        "Are my paragraphs logically organised?",
+        "Did I use appropriate vocabulary (e.g., passive voice)?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_1_VISUAL"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task1-007",
+      "title": "Development of a village over 100 years",
+      "visual_type": "Map (before and after)",
+      "topic": "Changes in a village from 1920 to 2020",
+      "prompt_en": "The maps show the layout of a village in 1920 and 2020.\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_bn": "মানচিত্রগুলো ১৯২০ ও ২০২০ সালে একটি গ্রামের বিন্যাস দেখায়।\nপ্রধান বৈশিষ্ট্যগুলো নির্বাচন ও রিপোর্ট করে তথ্যটি সংক্ষেপে বর্ণনা করুন এবং যেখানে প্রাসঙ্গিক তুলনা করুন।",
+      "visual_data": {
+        "raw_lines": [
+          "Canvas: rectangular area, oriented with north at the top.",
+          "River: runs north–south along the western edge.",
+          "**1920 features:**",
+          "Church: north‑central, near the river.",
+          "School: north‑eastern corner.",
+          "A few scattered houses: in the central area.",
+          "Main road: dirt track running east–west through the centre.",
+          "Farmland: extensive in the southern half and eastern part.",
+          "**2020 features:**",
+          "Church: same location (retained).",
+          "School: same location (retained).",
+          "Many more houses: residential area expanded eastward and southward, filling most of the central and southern parts.",
+          "New hospital: south‑eastern corner.",
+          "New supermarket: north‑eastern corner, near the school.",
+          "Main road: paved, still east–west.",
+          "New railway line: runs east–west south of the main road.",
+          "New bridge: crosses the river at the southern end.",
+          "Farmland: significantly reduced; only a small patch remains in the far south‑west."
+        ],
+        "series": [],
+        "features": {
+          "1920": [
+            {
+              "name": "Church",
+              "description": "north‑central, near the river."
+            },
+            {
+              "name": "School",
+              "description": "north‑eastern corner."
+            },
+            {
+              "name": "A few scattered houses",
+              "description": "in the central area."
+            },
+            {
+              "name": "Main road",
+              "description": "dirt track running east–west through the centre."
+            },
+            {
+              "name": "Farmland",
+              "description": "extensive in the southern half and eastern part."
+            }
+          ],
+          "2020": [
+            {
+              "name": "Church",
+              "description": "same location (retained)."
+            },
+            {
+              "name": "School",
+              "description": "same location (retained)."
+            },
+            {
+              "name": "Many more houses",
+              "description": "residential area expanded eastward and southward, filling most of the central and southern parts."
+            },
+            {
+              "name": "New hospital",
+              "description": "south‑eastern corner."
+            },
+            {
+              "name": "New supermarket",
+              "description": "north‑eastern corner, near the school."
+            },
+            {
+              "name": "Main road",
+              "description": "paved, still east–west."
+            },
+            {
+              "name": "New railway line",
+              "description": "runs east–west south of the main road."
+            },
+            {
+              "name": "New bridge",
+              "description": "crosses the river at the southern end."
+            },
+            {
+              "name": "Farmland",
+              "description": "significantly reduced; only a small patch remains in the far south‑west."
+            }
+          ]
+        },
+        "canvas": "rectangular area, oriented with north at the top.",
+        "river": "runs north–south along the western edge."
+      },
+      "key_features_for_review": [
+        "Significant growth in housing.",
+        "Introduction of modern infrastructure: hospital, supermarket, railway, bridge.",
+        "Reduction in agricultural land.",
+        "The river is now crossed by a bridge."
+      ],
+      "overview_targets": [
+        "The village became much more developed, with expanded housing and several new public and commercial facilities.",
+        "Most farmland disappeared, while transport infrastructure was upgraded with a paved road, railway and bridge."
+      ],
+      "detail_grouping_suggestion": "Group changes into: infrastructure additions (hospital, supermarket, railway, bridge), housing expansion, and land‑use changes (farmland reduction).",
+      "bangla_planning_help": [
+        "১৯২০ সালে কী ছিল যা ২০২০ সালে নেই?",
+        "২০২০ সালে কোন নতুন জিনিস দেখা যায়?",
+        "গ্রামের আকার কীভাবে বদলেছে?",
+        "কীভাবে পরিবহন ব্যবস্থার উন্নতি হয়েছে?"
+      ],
+      "useful_language": [
+        "The village has undergone significant changes over the century.",
+        "A new ... has been built.",
+        "Many houses have appeared.",
+        "Some farmland has been converted into ...",
+        "The river is now crossed by a bridge.",
+        "The area has become more urbanised.",
+        "While the church and school remain, ...",
+        "The most notable changes are ..."
+      ],
+      "common_mistakes": [
+        "Only listing additions without mentioning what was removed or changed.",
+        "Not describing the spatial arrangement clearly.",
+        "Using complex spatial language incorrectly."
+      ],
+      "self_review": [
+        "Did I answer the task?",
+        "Did I include an overview?",
+        "Did I select the most important changes?",
+        "Did I make relevant comparisons?",
+        "Did I use accurate data?",
+        "Are my paragraphs logically organised?",
+        "Did I use appropriate vocabulary?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_1_VISUAL"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task1-008",
+      "title": "Average commuting times in two cities",
+      "visual_type": "Table",
+      "topic": "Average daily commuting time (minutes) by mode of transport in two cities",
+      "prompt_en": "The table shows the average daily commuting time (in minutes) for four modes of transport in City A and City B.\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "prompt_bn": "সারণিটি শহর A এবং শহর B-তে চারটি পরিবহন মাধ্যমের গড় দৈনিক যাতায়াতের সময় (মিনিটে) দেখায়।\nপ্রধান বৈশিষ্ট্যগুলো নির্বাচন ও রিপোর্ট করে তথ্যটি সংক্ষেপে বর্ণনা করুন এবং যেখানে প্রাসঙ্গিক তুলনা করুন।",
+      "visual_data": {
+        "raw_lines": [
+          "Modes: Car, Bus, Bicycle, Walking",
+          "City A: 30, 45, 20, 15",
+          "City B: 45, 50, 25, 20"
+        ],
+        "series": [
+          {
+            "name": "City A",
+            "values": [
+              30,
+              45,
+              20,
+              15
+            ]
+          },
+          {
+            "name": "City B",
+            "values": [
+              45,
+              50,
+              25,
+              20
+            ]
+          }
+        ],
+        "features": {},
+        "categories": [
+          "Car",
+          "Bus",
+          "Bicycle",
+          "Walking"
+        ]
+      },
+      "key_features_for_review": [
+        "City B has longer commuting times in all modes.",
+        "Bus journeys are the longest in both cities.",
+        "Walking is the fastest mode in both cities.",
+        "The largest difference between cities is for car travel (15 minutes)."
+      ],
+      "overview_targets": [
+        "Commuting times are longer in City B for every transport mode.",
+        "In both cities, bus journeys take the longest and walking takes the least time, with the largest city-to-city gap occurring for car travel."
+      ],
+      "detail_grouping_suggestion": "Compare by mode: for each mode, compare the two cities. Also compare between modes within each city.",
+      "bangla_planning_help": [
+        "কোন শহরে যাতায়াতের সময় বেশি?",
+        "কোন মাধ্যমটি সবচেয়ে বেশি সময় নেয়?",
+        "কোন মাধ্যমটি সবচেয়ে কম সময় নেয়?",
+        "শহর দুটির মধ্যে সবচেয়ে বড় পার্থক্য কোথায়?"
+      ],
+      "useful_language": [
+        "City B consistently has longer commuting times than City A.",
+        "Bus journeys are the longest in both cities.",
+        "Walking takes the least amount of time in both cities.",
+        "The gap between the two cities is largest for car travel.",
+        "In contrast, the difference for cycling is only 5 minutes.",
+        "The figures for ... range from ... to ...",
+        "Overall, City B has higher commuting times."
+      ],
+      "common_mistakes": [
+        "Not comparing between the two cities.",
+        "Forgetting to mention the units (minutes).",
+        "Overlooking the fastest mode."
+      ],
+      "self_review": [
+        "Did I answer the task?",
+        "Did I include an overview?",
+        "Did I select the most important features?",
+        "Did I make relevant comparisons?",
+        "Did I use accurate data?",
+        "Are my paragraphs logically organised?",
+        "Did I use appropriate vocabulary?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_1_VISUAL"
+    }
+  ],
+  "academic_task2": [
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task2-001",
+      "topic": "Education – Practical skills in curriculum",
+      "question_type": "Opinion / Agree‑Disagree",
+      "prompt_en": "Some people believe that schools should teach practical skills such as cooking and budgeting, alongside traditional academic subjects. To what extent do you agree or disagree?",
+      "prompt_bn": "কেউ কেউ বিশ্বাস করেন যে স্কুলে ঐতিহ্যবাহী একাডেমিক বিষয়গুলোর পাশাপাশি রান্না ও বাজেট তৈরির মতো ব্যবহারিক দক্ষতা শেখানো উচিত। আপনি কতটা একমত বা দ্বিমত পোষণ করেন?",
+      "task_requirements": [
+        "State your position clearly.",
+        "Give reasons to support your position.",
+        "Provide relevant examples or evidence."
+      ],
+      "response_options": [
+        "Strongly agree – practical skills are essential for independent life.",
+        "Somewhat agree – should be taught, but not at the expense of core subjects.",
+        "Disagree – schools should focus on academic knowledge; practical skills can be learned elsewhere."
+      ],
+      "planning_questions": [
+        "Why are practical skills important for students?",
+        "What might be the benefits of including them in the curriculum?",
+        "Are there any drawbacks or challenges?",
+        "How do these skills help students in the future?",
+        "What is your overall view?"
+      ],
+      "argument_building": "**Main Idea 1 (for agree):**\n- Main idea: Teaching practical skills prepares students for adult life.\n- Why: They need to manage their finances and daily tasks.\n- Example direction: Many young adults struggle with basic financial management.\n- Possible counterpoint: Some argue that family or community should teach these skills.\n\n**Main Idea 2 (for agree):**\n- Main idea: Practical skills can enhance critical thinking and real‑world application.\n- Why: They apply academic knowledge in meaningful contexts.\n- Example direction: Learning to budget uses mathematics and planning.\n- Possible counterpoint: School time is limited; academic subjects are more important.",
+      "bangla_planning_help": [
+        "আপনি এই ধারণার সাথে একমত কেন বা কেন নন?",
+        "ব্যবহারিক দক্ষতা শেখা শিক্ষার্থীদের কীভাবে সাহায্য করবে?",
+        "এটি শেখানোর কোনো অসুবিধা আছে কি?",
+        "আপনার মূল যুক্তি কী?"
+      ],
+      "useful_language": [
+        "I strongly believe that ...",
+        "In my opinion, ...",
+        "Firstly, ... Secondly, ...",
+        "Furthermore, ...",
+        "Critics might argue that ...",
+        "However, I would counter that ...",
+        "For instance, ...",
+        "As a result, ...",
+        "In conclusion, I would argue that ..."
+      ],
+      "common_mistakes": [
+        "Not clearly stating your position in the introduction.",
+        "Giving reasons without supporting them with examples.",
+        "Changing your position between the introduction and conclusion.",
+        "Having an unclear conclusion."
+      ],
+      "self_review": [
+        "Did I answer all parts of the question?",
+        "Is my position clear (where required)?",
+        "Did I develop my main ideas with reasons and examples?",
+        "Are my examples relevant?",
+        "Are my paragraphs logically organised?",
+        "Did I use linking words naturally?",
+        "Is my vocabulary sufficiently precise?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_2_ESSAY"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task2-002",
+      "topic": "Technology in education",
+      "question_type": "Discuss both views + opinion",
+      "prompt_en": "Some people believe that technology in the classroom enhances learning, while others think it distracts students. Discuss both views and give your own opinion.",
+      "prompt_bn": "কেউ কেউ বিশ্বাস করেন শ্রেণিকক্ষে প্রযুক্তি শিক্ষাকে উন্নত করে, আবার অন্যরা মনে করে এটি শিক্ষার্থীদের বিভ্রান্ত করে। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং আপনার নিজের মতামত দিন।",
+      "task_requirements": [
+        "Discuss both perspectives.",
+        "Give your opinion clearly."
+      ],
+      "response_options": [
+        "Technology is beneficial if used appropriately.",
+        "Technology can be distracting but can be managed.",
+        "Technology should be used sparingly."
+      ],
+      "planning_questions": [
+        "What are the benefits of using technology in the classroom?",
+        "What are the potential distractions?",
+        "How can schools balance these?",
+        "What is your view on the overall impact?",
+        "What examples support your position?"
+      ],
+      "argument_building": "**Main Idea 1 (for technology benefits):**\n- Main idea: Technology provides access to vast resources and interactive learning.\n- Why: Students can engage with multimedia, simulations, and online research.\n- Example direction: Using educational apps for language learning.\n- Possible counterpoint: Some students may misuse devices.\n\n**Main Idea 2 (for technology drawbacks):**\n- Main idea: Technology can be a source of distraction.\n- Why: Notifications, games, and social media can disrupt focus.\n- Example direction: Students checking phones during lessons.\n- Possible counterpoint: Schools can implement policies to limit misuse.",
+      "bangla_planning_help": [
+        "প্রযুক্তি শিক্ষাকে কীভাবে সহায়তা করতে পারে?",
+        "প্রযুক্তি কীভাবে বিভ্রান্তির কারণ হতে পারে?",
+        "উভয় দিকের প্রধান যুক্তিগুলো কী?",
+        "আপনার নিজের মতামত কী?"
+      ],
+      "useful_language": [
+        "On the one hand, ...",
+        "On the other hand, ...",
+        "Advocates of ... claim that ...",
+        "Critics argue that ...",
+        "In my view, ...",
+        "While it is true that ..., I believe ...",
+        "To illustrate, ...",
+        "Therefore, ..."
+      ],
+      "common_mistakes": [
+        "Discussing one view in detail while barely developing the other.",
+        "Not stating your opinion clearly.",
+        "Making claims without enough explanation or relevant support.",
+        "Giving a conclusion that does not match the position developed in the essay."
+      ],
+      "self_review": [
+        "Did I answer all parts of the question?",
+        "Is my position clear (where required)?",
+        "Did I develop my main ideas with reasons and examples?",
+        "Are my examples relevant?",
+        "Are my paragraphs logically organised?",
+        "Did I use linking words naturally?",
+        "Is my vocabulary sufficiently precise?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_2_ESSAY"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task2-003",
+      "topic": "Online shopping",
+      "question_type": "Advantages / Disadvantages",
+      "prompt_en": "In many countries, online shopping has become increasingly popular. Discuss the advantages and disadvantages of this trend.",
+      "prompt_bn": "অনেক দেশে অনলাইন শপিং ক্রমশ জনপ্রিয় হয়ে উঠেছে। এই প্রবণতার সুবিধা ও অসুবিধাগুলো আলোচনা করুন।",
+      "task_requirements": [
+        "Discuss both advantages and disadvantages.",
+        "Provide a balanced evaluation."
+      ],
+      "response_options": [
+        "(Opinion not required; structure should present both sides clearly.)"
+      ],
+      "planning_questions": [
+        "What are the main benefits of online shopping?",
+        "What are the drawbacks?",
+        "How can you organise these points?",
+        "Which advantages and disadvantages are most important to explain?",
+        "How can you summarise both sides clearly in the conclusion?"
+      ],
+      "argument_building": "**Main Idea 1 (advantages):**\n- Main idea: Convenience and choice.\n- Why: Accessible 24/7, wide range of products, price comparison.\n- Example direction: Buying books or electronics from home.\n- Possible counterpoint: Physical stores offer instant possession.\n\n**Main Idea 2 (disadvantages):**\n- Main idea: Security and quality issues.\n- Why: Risk of scams, inability to inspect products, delivery delays.\n- Example direction: Receiving damaged or counterfeit goods.\n- Possible counterpoint: Return policies can mitigate some risks.",
+      "bangla_planning_help": [
+        "অনলাইন শপিংয়ের সুবিধাগুলো কী?",
+        "অসুবিধাগুলো কী?",
+        "কোন সুবিধা ও অসুবিধাগুলো সবচেয়ে গুরুত্বপূর্ণ?",
+        "উপসংহারে দুই দিকের মূল বিষয় কীভাবে সংক্ষেপে তুলে ধরবেন?"
+      ],
+      "useful_language": [
+        "One of the main advantages is ...",
+        "Another benefit is ...",
+        "However, there are also disadvantages, such as ...",
+        "A major drawback is ...",
+        "From the perspective of consumers, ...",
+        "By contrast, a disadvantage is ...",
+        "For example, ...",
+        "In conclusion, ..."
+      ],
+      "common_mistakes": [
+        "Explaining only the advantages or only the disadvantages.",
+        "Listing points without explaining why they matter.",
+        "Using examples that do not directly support the advantage or disadvantage being discussed.",
+        "Treating an “advantages and disadvantages” prompt as if it requires an outweigh judgment or personal opinion."
+      ],
+      "self_review": [
+        "Did I answer all parts of the question?",
+        "Position not required by this prompt; is my response focus clear?",
+        "Did I develop my main ideas with reasons and examples?",
+        "Are my examples relevant?",
+        "Are my paragraphs logically organised?",
+        "Did I use linking words naturally?",
+        "Is my vocabulary sufficiently precise?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_2_ESSAY"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task2-004",
+      "topic": "Urban traffic congestion – problems and solutions",
+      "question_type": "Problems + Solutions",
+      "prompt_en": "Traffic congestion in many cities creates serious difficulties for residents and urban services.\nWhat problems does traffic congestion cause, and what measures could be taken to reduce these problems?",
+      "prompt_bn": "অনেক শহরে যানজট বাসিন্দা ও শহুরে পরিষেবাগুলোর জন্য গুরুতর সমস্যা তৈরি করে।\nযানজট কী কী সমস্যা সৃষ্টি করে, এবং এই সমস্যা কমাতে কী কী ব্যবস্থা নেওয়া যেতে পারে?",
+      "task_requirements": [
+        "Identify problems caused by traffic congestion.",
+        "Propose solutions to these problems."
+      ],
+      "response_options": [
+        "(No personal opinion required.)"
+      ],
+      "planning_questions": [
+        "What are the main problems caused by traffic congestion?",
+        "How do these affect people and services?",
+        "What solutions could be implemented?",
+        "Who should take action (government, citizens, businesses)?",
+        "How effective might these solutions be?"
+      ],
+      "argument_building": "**Main Idea 1 (problems):**\n- Main idea: Increased travel time and air pollution.\n- Why: Congestion slows movement and increases emissions.\n- Example direction: Longer commutes, respiratory issues.\n- Possible counterpoint: Some cities have already implemented measures.\n\n**Main Idea 2 (solutions):**\n- Main idea: Investment in public transport and cycling infrastructure.\n- Why: Encourages people to use alternatives.\n- Example direction: Building more metro lines or cycle lanes.\n- Possible counterpoint: Cost and long implementation time.",
+      "bangla_planning_help": [
+        "যানজট কী কী সমস্যা তৈরি করে?",
+        "কীভাবে এসব সমস্যা সমাধান করা যায়?",
+        "কোন সমাধানগুলো বেশি কার্যকর?",
+        "কার কী ভূমিকা?"
+      ],
+      "useful_language": [
+        "One of the main problems caused by ... is ...",
+        "This leads to ...",
+        "A possible solution would be ...",
+        "Another approach is ...",
+        "Governments could ...",
+        "For example, ...",
+        "In conclusion, a combination of measures is needed.",
+        "This could help to reduce ..."
+      ],
+      "common_mistakes": [
+        "Not clearly distinguishing problems from causes.",
+        "Proposing vague solutions without detail.",
+        "Not linking solutions to specific problems.",
+        "Ignoring the role of different stakeholders."
+      ],
+      "self_review": [
+        "Did I answer all parts of the question?",
+        "Position not required by this prompt; is my response focus clear?",
+        "Did I develop my main ideas with reasons and examples?",
+        "Are my examples relevant?",
+        "Are my paragraphs logically organised?",
+        "Did I use linking words naturally?",
+        "Is my vocabulary sufficiently precise?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_2_ESSAY"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task2-005",
+      "topic": "Aging population",
+      "question_type": "Two‑part question",
+      "prompt_en": "In many developed countries, the population is aging. What are the challenges this creates for society, and what measures can be taken to address them?",
+      "prompt_bn": "অনেক উন্নত দেশে জনসংখ্যায় বয়স্ক মানুষের অনুপাত বাড়ছে। এটি সমাজের জন্য কী কী চ্যালেঞ্জ তৈরি করে, এবং সেগুলো সমাধানে কী ব্যবস্থা নেওয়া যেতে পারে?",
+      "task_requirements": [
+        "Address both parts: challenges and measures."
+      ],
+      "response_options": [
+        "(No personal opinion required.)"
+      ],
+      "planning_questions": [
+        "What are the major challenges of an aging population?",
+        "How do these affect healthcare, economy, and society?",
+        "What measures can governments take?",
+        "What can individuals do?",
+        "How can these measures be implemented effectively?"
+      ],
+      "argument_building": "**Main Idea 1 (challenges):**\n- Main idea: Increased pressure on healthcare and pension systems.\n- Why: More elderly people need medical care and financial support.\n- Example direction: A smaller working population supporting more retirees.\n- Possible counterpoint: Technological advances can reduce healthcare costs.\n\n**Main Idea 2 (measures):**\n- Main idea: Encourage higher birth rates and increase retirement age.\n- Why: To balance the dependency ratio.\n- Example direction: Policies supporting families and later retirement.\n- Possible counterpoint: These may face public resistance.",
+      "bangla_planning_help": [
+        "বয়স্ক জনসংখ্যার চ্যালেঞ্জগুলো কী?",
+        "কীভাবে স্বাস্থ্যসেবা ও অর্থনীতি প্রভাবিত হয়?",
+        "এই চ্যালেঞ্জ মোকাবিলায় কী কী পদক্ষেপ নেওয়া যেতে পারে?",
+        "সরকার, সমাজ, ব্যক্তি – কার কী ভূমিকা?"
+      ],
+      "useful_language": [
+        "One of the main challenges is ...",
+        "This leads to ...",
+        "To tackle this, ...",
+        "Governments could implement ...",
+        "Furthermore, ...",
+        "For instance, ...",
+        "In conclusion, addressing this issue requires ...",
+        "Another measure that could help is ..."
+      ],
+      "common_mistakes": [
+        "Only answering one part of the question.",
+        "Giving general solutions without specifics.",
+        "Not linking the two parts (e.g., solutions to challenges).",
+        "Overlooking social and economic dimensions."
+      ],
+      "self_review": [
+        "Did I answer all parts of the question?",
+        "Position not required by this prompt; is my response focus clear?",
+        "Did I develop my main ideas with reasons and examples?",
+        "Are my examples relevant?",
+        "Are my paragraphs logically organised?",
+        "Did I use linking words naturally?",
+        "Is my vocabulary sufficiently precise?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_2_ESSAY"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task2-006",
+      "topic": "Remote work",
+      "question_type": "Positive or negative development",
+      "prompt_en": "Many companies have adopted remote working policies. Do you think this is a positive or negative development? Give reasons for your answer.",
+      "prompt_bn": "অনেক কোম্পানি দূরবর্তী কাজের নীতি গ্রহণ করেছে। আপনি কি মনে করেন এটি একটি ইতিবাচক না নেতিবাচক উন্নয়ন? আপনার উত্তরের কারণ দিন।",
+      "task_requirements": [
+        "State whether it is positive or negative (or both).",
+        "Provide reasons and examples."
+      ],
+      "response_options": [
+        "Positive – increases flexibility and reduces commuting.",
+        "Negative – reduces team cohesion and collaboration.",
+        "Mixed – has both advantages and disadvantages."
+      ],
+      "planning_questions": [
+        "What are the positive aspects of remote work?",
+        "What are the negative aspects?",
+        "Which outweighs the other?",
+        "What is your overall assessment?",
+        "What examples support your view?"
+      ],
+      "argument_building": "**Main Idea 1 (positive):**\n- Main idea: Remote work offers flexibility and work‑life balance.\n- Why: Employees save time and can manage personal tasks.\n- Example direction: Less commuting stress.\n- Possible counterpoint: Some struggle with isolation.\n\n**Main Idea 2 (negative):**\n- Main idea: It can weaken team relationships and innovation.\n- Why: Spontaneous interaction is limited.\n- Example direction: Creativity may suffer.\n- Possible counterpoint: Regular virtual meetings can maintain connection.",
+      "bangla_planning_help": [
+        "দূরবর্তী কাজের ইতিবাচক দিকগুলো কী?",
+        "নেতিবাচক দিকগুলো কী?",
+        "আপনার মতে, এটি বেশি ইতিবাচক না নেতিবাচক?",
+        "কেন?"
+      ],
+      "useful_language": [
+        "In my view, ...",
+        "On the positive side, ...",
+        "However, there are also negative aspects.",
+        "For example, ...",
+        "As a result, ...",
+        "Furthermore, ...",
+        "In conclusion, I believe that ...",
+        "A key benefit or drawback is ..."
+      ],
+      "common_mistakes": [
+        "Not clearly stating whether it is positive or negative.",
+        "Giving a balanced view but not concluding.",
+        "Not providing specific examples.",
+        "Overlooking the role of context or industry."
+      ],
+      "self_review": [
+        "Did I answer all parts of the question?",
+        "Is my position clear (where required)?",
+        "Did I develop my main ideas with reasons and examples?",
+        "Are my examples relevant?",
+        "Are my paragraphs logically organised?",
+        "Did I use linking words naturally?",
+        "Is my vocabulary sufficiently precise?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_2_ESSAY"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task2-007",
+      "topic": "Food waste",
+      "question_type": "Causes + Solutions",
+      "prompt_en": "A large amount of food is wasted every year. What are the main causes of food waste, and what solutions can you suggest?",
+      "prompt_bn": "প্রতি বছর প্রচুর পরিমাণে খাদ্য নষ্ট হয়। খাদ্য অপচয়ের প্রধান কারণগুলি কী এবং আপনি কী কী সমাধান প্রস্তাব করতে পারেন?",
+      "task_requirements": [
+        "Identify causes and propose solutions."
+      ],
+      "response_options": [
+        "(No personal opinion required.)"
+      ],
+      "planning_questions": [
+        "Why does food waste occur?",
+        "What are the main sources (household, retail, agriculture)?",
+        "What can be done to reduce waste?",
+        "How effective are these measures?",
+        "Who should take responsibility?"
+      ],
+      "argument_building": "**Main Idea 1 (causes):**\n- Main idea: Consumer behaviour and over‑purchasing.\n- Why: People buy more than they need due to promotions or poor planning.\n- Example direction: Buying in bulk and then discarding.\n- Possible counterpoint: Better meal planning could help.\n\n**Main Idea 2 (solutions):**\n- Main idea: Education and better storage practices.\n- Why: Consumers need to learn how to store food properly and plan meals.\n- Example direction: Using leftovers creatively.\n- Possible counterpoint: Change in habits takes time.",
+      "bangla_planning_help": [
+        "খাদ্য অপচয় কেন হয়?",
+        "কী কী সমাধান হতে পারে?",
+        "সরকার, ব্যবসা, এবং ব্যক্তিরা কী করতে পারে?",
+        "কোন সমাধানগুলো বেশি কার্যকর?"
+      ],
+      "useful_language": [
+        "One of the main causes is ...",
+        "Another reason is ...",
+        "A solution to this problem would be ...",
+        "For instance, ...",
+        "Moreover, ...",
+        "In conclusion, tackling food waste requires ...",
+        "This problem could be reduced by ...",
+        "Retailers and households can ..."
+      ],
+      "common_mistakes": [
+        "Not distinguishing between causes and effects.",
+        "Proposing overly general solutions.",
+        "Not linking solutions to specific causes.",
+        "Ignoring the role of retailers and producers."
+      ],
+      "self_review": [
+        "Did I answer all parts of the question?",
+        "Position not required by this prompt; is my response focus clear?",
+        "Did I develop my main ideas with reasons and examples?",
+        "Are my examples relevant?",
+        "Are my paragraphs logically organised?",
+        "Did I use linking words naturally?",
+        "Is my vocabulary sufficiently precise?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_2_ESSAY"
+    },
+    {
+      "phase": "6M",
+      "test_type": "ACADEMIC",
+      "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+      "approved_source_sha256": "EF6EE6A794895B059DE92208CAB55ECBA041972A78C0395B9440EB29B1246035",
+      "content_origin": "OVIDHAN_CREATED",
+      "official_question": false,
+      "research_status": "REVIEWED",
+      "practice_type": "OVIDHAN_CREATED_IELTS_STYLE",
+      "id": "academic-task2-008",
+      "topic": "Advertising to children",
+      "question_type": "Balanced argument",
+      "prompt_en": "Some people think that advertising aimed at children should be banned, while others believe it is acceptable. Discuss both views and give your own opinion.",
+      "prompt_bn": "কেউ কেউ মনে করেন শিশুদের লক্ষ্য করে বিজ্ঞাপন নিষিদ্ধ করা উচিত, আবার অন্যরা মনে করে এটি গ্রহণযোগ্য। উভয় দৃষ্টিভঙ্গি আলোচনা করুন এবং আপনার নিজের মতামত দিন।",
+      "task_requirements": [
+        "Discuss both views.",
+        "Give your opinion."
+      ],
+      "response_options": [
+        "Strongly agree with banning – children are vulnerable.",
+        "Somewhat agree with regulations but not a full ban.",
+        "Disagree – advertising is part of free market."
+      ],
+      "planning_questions": [
+        "Why might advertising to children be harmful?",
+        "Why might it be considered acceptable?",
+        "What are the arguments on both sides?",
+        "What is your stance?",
+        "What evidence or reasoning supports your opinion?"
+      ],
+      "argument_building": "**Main Idea 1 (for ban):**\n- Main idea: Children lack the ability to distinguish advertising from reality.\n- Why: They may be easily influenced to want unhealthy products.\n- Example direction: Junk food ads.\n- Possible counterpoint: Parents can control children's media exposure.\n\n**Main Idea 2 (against ban):**\n- Main idea: Advertising is a legitimate business practice.\n- Why: It funds content and provides information.\n- Example direction: Educational toy ads.\n- Possible counterpoint: Some ads are manipulative.",
+      "bangla_planning_help": [
+        "শিশুদের জন্য বিজ্ঞাপন ক্ষতিকর কেন?",
+        "কেন এটি গ্রহণযোগ্য হতে পারে?",
+        "উভয় পক্ষের যুক্তিগুলো কী?",
+        "আপনার নিজের মতামত কী?"
+      ],
+      "useful_language": [
+        "Proponents of a ban argue that ...",
+        "Others, however, believe that ...",
+        "While it is true that ..., I would argue ...",
+        "For example, ...",
+        "In conclusion, I believe that ...",
+        "One argument in favour of a ban is ...",
+        "A contrasting view is that ...",
+        "My own view is that ..."
+      ],
+      "common_mistakes": [
+        "Not presenting both sides fairly.",
+        "Giving an unclear opinion.",
+        "Using emotional appeals rather than logical reasoning.",
+        "Not linking the conclusion back to the discussion."
+      ],
+      "self_review": [
+        "Did I answer all parts of the question?",
+        "Is my position clear (where required)?",
+        "Did I develop my main ideas with reasons and examples?",
+        "Are my examples relevant?",
+        "Are my paragraphs logically organised?",
+        "Did I use linking words naturally?",
+        "Is my vocabulary sufficiently precise?",
+        "Did I check grammar and spelling?"
+      ],
+      "task_type": "ACADEMIC_TASK_2_ESSAY"
+    }
+  ],
+  "reusable_task1_support": {
+    "before_writing": [
+      "Read the task carefully. Identify the type of visual (graph, chart, table, diagram).",
+      "Spend a few minutes understanding the data. Note the labels, units, and time periods.",
+      "Ask yourself: What is the overall trend? What are the key features? What comparisons can I make?",
+      "Plan your structure: Introduction (paraphrase the task), Overview (main trends), Body paragraphs (details with data).",
+      "Do not start writing until you have a clear idea of what to include."
+    ],
+    "while_writing": [
+      "Write a clear introduction that paraphrases the task.",
+      "Write an overview paragraph that highlights 2–3 main features (e.g., highest/lowest, biggest change, overall trend).",
+      "In body paragraphs, group data logically (e.g., by time periods, by categories).",
+      "Use a range of vocabulary for describing change (rise, fall, fluctuate, peak, etc.).",
+      "Make comparisons where relevant (e.g., more than, twice as many).",
+      "Avoid opinions or conclusions – just report the data.",
+      "Keep paragraphs focused and cohesive."
+    ],
+    "after_writing": [
+      "Read your response to check it answers the task.",
+      "Check that you have included an overview.",
+      "Verify that your data references are accurate.",
+      "Review your vocabulary: have you used varied language?",
+      "Check grammar, spelling, and punctuation.",
+      "Ensure you have not added personal opinions.",
+      "---"
+    ]
+  },
+  "reusable_task2_support": {
+    "before_writing": [
+      "Read the question carefully. Underline key words (e.g., discuss, agree, disadvantages, solutions).",
+      "Identify the type of question (opinion, discussion, advantages/disadvantages, etc.).",
+      "Brainstorm ideas for each part of the task.",
+      "Plan your essay structure: Introduction, 2–3 body paragraphs, Conclusion.",
+      "Decide on your position (if required).",
+      "Outline your main arguments and examples."
+    ],
+    "while_writing": [
+      "Write a clear introduction that paraphrases the question and states your position (if required).",
+      "In body paragraphs, start with a clear topic sentence.",
+      "Develop each idea with reasons, explanations, and examples.",
+      "Use linking words to connect ideas within and between paragraphs.",
+      "Include a counterargument if relevant.",
+      "In the conclusion, summarise your main points and restate your position (if required).",
+      "Keep paragraphs focused on one main idea."
+    ],
+    "after_writing": [
+      "Re‑read the question to ensure you have answered it fully.",
+      "If the prompt requires a position, check that it is clear and consistent throughout.",
+      "Review your arguments – are they well‑developed?",
+      "Check your examples – are they relevant?",
+      "Examine your paragraph organisation and linking.",
+      "Proofread for grammar, vocabulary, and spelling errors.",
+      "---"
+    ]
+  },
+  "self_repair": [
+    {
+      "code": "TASK_NOT_FULLY_ANSWERED",
+      "english_label": "Task not fully answered",
+      "bangla_label": "কাজ সম্পূর্ণ উত্তর দেওয়া হয়নি",
+      "bangla_explanation": "প্রশ্নের সব অংশের উত্তর দেননি।",
+      "next_retry_action": "আবার প্রশ্ন পড়ুন এবং বাদ পড়া অংশ যোগ করুন।"
+    },
+    {
+      "code": "OVERVIEW_MISSING",
+      "english_label": "Overview missing",
+      "bangla_label": "সারসংক্ষেপ অনুপস্থিত",
+      "bangla_explanation": "Task 1-এ প্রধান প্রবণতার সারসংক্ষেপ নেই।",
+      "next_retry_action": "একটি নতুন সারসংক্ষেপ বাক্য যোগ করুন।"
+    },
+    {
+      "code": "IMPORTANT_FEATURE_MISSED",
+      "english_label": "Important feature missed",
+      "bangla_label": "গুরুত্বপূর্ণ বৈশিষ্ট্য বাদ গেছে",
+      "bangla_explanation": "কোনো প্রধান ডেটা পয়েন্ট বা তুলনা বাদ পড়েছে।",
+      "next_retry_action": "চার্ট/ডেটা আবার দেখে বাদ পড়া অংশ যোগ করুন।"
+    },
+    {
+      "code": "DATA_ERROR",
+      "english_label": "Data error",
+      "bangla_label": "তথ্যগত ভুল",
+      "bangla_explanation": "ভুল সংখ্যা বা সময় উল্লেখ করেছেন।",
+      "next_retry_action": "সঠিক ডেটা ব্যবহার করে সংশোধন করুন।"
+    },
+    {
+      "code": "POSITION_UNCLEAR",
+      "english_label": "Position unclear",
+      "bangla_label": "অবস্থান অস্পষ্ট",
+      "bangla_explanation": "আপনার মতামত স্পষ্ট নয়।",
+      "next_retry_action": "থিসিস বাক্য পরিষ্কার করুন এবং জুড়ে ধরে রাখুন।"
+    },
+    {
+      "code": "IDEA_NOT_DEVELOPED",
+      "english_label": "Idea not developed",
+      "bangla_label": "ধারণা বিকশিত হয়নি",
+      "bangla_explanation": "যুক্তি যথেষ্ট ব্যাখ্যা করা হয়নি।",
+      "next_retry_action": "কারণ বা উদাহরণ যোগ করে ধারণা বিস্তার করুন।"
+    },
+    {
+      "code": "PARAGRAPH_ORGANISATION",
+      "english_label": "Paragraph organisation",
+      "bangla_label": "অনুচ্ছেদ বিন্যাস",
+      "bangla_explanation": "অনুচ্ছেদগুলো সুসংগঠিত নয়।",
+      "next_retry_action": "প্রতিটি অনুচ্ছেদে একটি কেন্দ্রীয় ধারণা রাখুন।"
+    },
+    {
+      "code": "LINKING_PROBLEM",
+      "english_label": "Linking problem",
+      "bangla_label": "সংযোগ সমস্যা",
+      "bangla_explanation": "বাক্য/অনুচ্ছেদের মধ্যে সংযোগ দুর্বল।",
+      "next_retry_action": "linking words ব্যবহার করে প্রবাহ উন্নত করুন।"
+    },
+    {
+      "code": "WORD_CHOICE",
+      "english_label": "Word choice",
+      "bangla_label": "শব্দ চয়ন",
+      "bangla_explanation": "শব্দগুলো সঠিক বা প্রাকৃতিক নয়।",
+      "next_retry_action": "আরও উপযুক্ত শব্দ ব্যবহার করুন।"
+    },
+    {
+      "code": "GRAMMAR_CHECK_NEEDED",
+      "english_label": "Grammar check needed",
+      "bangla_label": "ব্যাকরণ পরীক্ষা প্রয়োজন",
+      "bangla_explanation": "ব্যাকরণগত ভুল আছে।",
+      "next_retry_action": "লেখাটি আবার পড়ে ব্যাকরণ সংশোধন করুন।"
+    }
+  ]
+}

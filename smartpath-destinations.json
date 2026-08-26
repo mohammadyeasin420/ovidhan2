@@ -226,6 +226,30 @@
       "goal_ids": [
         "IELTS"
       ]
+    },
+    {
+      "destination_id": "content:ielts_academic_task1_writing",
+      "skill_id": "writing_visual_information_description",
+      "url": "/ielts-writing-practice-bangla.html?mode=academic-task1",
+      "activity_type": "GUIDED_WRITING_PERFORMANCE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 25,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
+    },
+    {
+      "destination_id": "content:ielts_academic_task2_writing",
+      "skill_id": "writing_argument_development",
+      "url": "/ielts-writing-practice-bangla.html?mode=academic-task2",
+      "activity_type": "GUIDED_WRITING_PERFORMANCE",
+      "difficulty": "INTERMEDIATE",
+      "estimated_minutes": 40,
+      "review_status": "REVIEWED",
+      "goal_ids": [
+        "IELTS"
+      ]
     }
   ]
 }
