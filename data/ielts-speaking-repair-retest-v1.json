@@ -1,0 +1,729 @@
+{
+  "schema": "ovidhan-ielts-speaking-repair-retest-v1",
+  "phase": "6O",
+  "product": "IELTS Speaking Repair & Retest",
+  "content_origin": "OVIDHAN_CREATED",
+  "review_status": "REVIEWED_APPROVED",
+  "approved_source": {
+    "path": "C:\\data\\ovidhan-ielts-6o-approved-content.md",
+    "sha256": "ADCA74AD73BB98D9BCFCB22CF654C963B4A8A5CB0CEB38ADBA518F0E545E18C3",
+    "size_bytes": 64001
+  },
+  "official_ielts_questions": false,
+  "automatic_speech_diagnosis": false,
+  "pronunciation_scoring": false,
+  "band_prediction": false,
+  "raw_audio_policy": "SESSION_BROWSER_MEMORY_ONLY",
+  "disclaimer": {
+    "english": "These are Ovidhan‑created IELTS‑style speaking repair activities.  \nThey are not official IELTS questions or examiner assessments.  \nThe learner chooses the weakness to practise after listening to their own recording.  \nNo IELTS band score or official result is provided.",
+    "bangla": "এগুলো Ovidhan‑created IELTS‑style speaking repair অনুশীলন।  \nএগুলো অফিসিয়াল IELTS প্রশ্ন বা পরীক্ষকের মূল্যায়ন নয়।  \nনিজের রেকর্ডিং শুনে শিক্ষার্থী নিজেই কোন দুর্বলতা অনুশীলন করবে তা বেছে নেয়।  \nএখানে কোনো IELTS ব্যান্ড স্কোর বা অফিসিয়াল ফলাফল দেওয়া হয় না।"
+  },
+  "repair_codes": [
+    {
+      "order": 1,
+      "repair_code": "ANSWER_TOO_SHORT",
+      "learner_label_en": "Answer too short",
+      "learner_label_bn": "উত্তর খুব সংক্ষিপ্ত",
+      "explanation_en": "A very short answer gives the listener little explanation.  \nAdd a reason, a detail, or a small example.",
+      "explanation_bn": "খুব সংক্ষিপ্ত উত্তর শ্রোতাকে কম ব্যাখ্যা দেয়।  \nএকটি কারণ, একটি বিবরণ বা একটি ছোট উদাহরণ যোগ করুন।",
+      "why_it_matters_bn": "IELTS Speaking-এ ধারণা সম্পূর্ণ ও স্পষ্ট হওয়া গুরুত্বপূর্ণ।  \nঅল্প উত্তর দিলে ধারণা অসম্পূর্ণ থাকে।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "আমি কি শুধু একটি খুব সংক্ষিপ্ত উত্তর দিয়েছি?",
+        "আমি কি একটি কারণ বা ব্যাখ্যা যোগ করেছি?",
+        "আমি কি একটি ছোট উদাহরণ বা বিস্তারিত তথ্য দিয়েছি?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-short-answer-notice",
+          "repair_code": "ANSWER_TOO_SHORT",
+          "stage": "NOTICE",
+          "task_context": "Two responses to the same Part 3 question. One is too short; the other develops the idea.",
+          "instruction_en": "Read both responses. Choose the one that is too short.",
+          "instruction_bn": "উভয় উত্তর পড়ুন। কোনটি খুব সংক্ষিপ্ত তা বেছে নিন।",
+          "content_markdown": "**Question:**  \n\"Do you like public transport?\"\n\n**Response A:**  \n\"Yes, I like public transport.\"\n\n**Response B:**  \n\"Yes, I like public transport because it is affordable and convenient. For example, I use the bus every day to go to work, and it saves me a lot of money compared to driving.\"",
+          "learner_action": "Choose the too‑short response.",
+          "answer_or_check_markdown": "Correct answer: Response A",
+          "explanation_bn": "Response A শুধু একটি সংক্ষিপ্ত উত্তর দিয়েছে, কোনো কারণ বা উদাহরণ নেই। Response B উত্তরটি ব্যাখ্যা ও উদাহরণ দিয়ে বাড়িয়েছে।",
+          "why_other_options_fail_bn": "Response B উন্নত কারণ এটি কারণ ও উদাহরণ যোগ করেছে।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "Response A",
+              "label": "Response A: \"Yes, I like public transport.\""
+            },
+            {
+              "value": "Response B",
+              "label": "Response B: \"Yes, I like public transport because it is affordable and convenient. For example, I use the bus every day to go to work, and it saves me a lot of money compared to driving.\""
+            }
+          ]
+        },
+        {
+          "activity_id": "6o-short-answer-repair",
+          "repair_code": "ANSWER_TOO_SHORT",
+          "stage": "REPAIR",
+          "task_context": "A short answer needs to be extended.",
+          "instruction_en": "The following answer is too short. Record yourself giving a longer answer with a reason or example.",
+          "instruction_bn": "নিচের উত্তরটি খুব সংক্ষিপ্ত। একটি কারণ বা উদাহরণ সহ একটি দীর্ঘ উত্তর রেকর্ড করুন।",
+          "content_markdown": "**Question:**  \n\"Why do some people prefer cooking at home?\"\n\n**Short answer:**  \n\"I think they prefer cooking at home.\"",
+          "learner_action": "Record a response that gives a reason or example.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you give a direct answer?  \n- Did you add a reason, detail, or example?  \n\n**Acceptable features:**  \n- A reason (e.g., \"because it is cheaper\").  \n- An example (e.g., \"my family often cooks traditional dishes\").  \n\n**Sample possible answer:**  \n\"I think they prefer cooking at home because it is often cheaper and healthier. For example, home‑cooked meals use fresh ingredients and are usually better for health.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন সরাসরি উত্তরের পরে একটি কারণ, বিবরণ বা উদাহরণ এসেছে কি না। না এলে একই প্রশ্নে আরেকবার সংক্ষিপ্ত কিন্তু বেশি বিকশিত উত্তর রেকর্ড করুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-short-answer-retest",
+          "repair_code": "ANSWER_TOO_SHORT",
+          "stage": "RETEST",
+          "task_context": "A Part 3 question. Give a developed spoken response.",
+          "instruction_en": "Record a response to the following question. Give a direct answer, then add a useful reason, detail or example.",
+          "instruction_bn": "নিচের প্রশ্নের উত্তর রেকর্ড করুন। সরাসরি উত্তর দিন, তারপর একটি কারণ, বিবরণ বা উদাহরণ যোগ করুন।",
+          "content_markdown": "**Question:**  \n\"Why do some people prefer to live in small towns rather than big cities?\"",
+          "learner_action": "Record your response.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you give a direct answer?  \n- Did you add a reason, detail or example?  \n\n**Acceptable features:**  \n- A clear answer.  \n- A reason or example (e.g., \"peaceful environment\", \"less traffic\").  \n\n**Sample possible answer:**  \n\"I think some people prefer small towns because they are quieter and less crowded. For example, many people enjoy the fresh air and slower pace of life in a small town.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন উত্তরটি শুধু বক্তব্যে থেমে গেছে কি না। প্রয়োজন হলে একটি কারণ বা প্রাসঙ্গিক উদাহরণ যোগ করে দ্বিতীয়বার বলুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "After your direct answer, add a useful reason, detail or example when it helps develop the response.",
+      "next_retry_action_bn": "সরাসরি উত্তর দেওয়ার পর প্রয়োজনমতো একটি কারণ, বিবরণ বা উদাহরণ যোগ করে উত্তরটি বিকশিত করুন।"
+    },
+    {
+      "order": 2,
+      "repair_code": "IDEA_NOT_EXTENDED",
+      "learner_label_en": "Idea not extended",
+      "learner_label_bn": "ধারণা বাড়ানো হয়নি",
+      "explanation_en": "Don't just state an idea – explain it.  \nAdd a reason, a consequence, or a simple example.",
+      "explanation_bn": "শুধু একটি ধারণা বললেই হয় না – তা ব্যাখ্যা করুন।  \nএকটি কারণ, একটি পরিণতি বা একটি ছোট উদাহরণ যোগ করুন।",
+      "why_it_matters_bn": "IELTS Speaking-এ ধারণা বাড়ানো গুরুত্বপূর্ণ।  \nধারণা ব্যাখ্যা না করলে উত্তর অসম্পূর্ণ থাকে।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "আমি কি শুধু একটি বক্তব্য দিয়েছি?",
+        "আমি কি 'কেন' বা 'কীভাবে' ব্যাখ্যা করেছি?",
+        "আমি কি একটি উদাহরণ বা পরিণতি যোগ করেছি?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-idea-notice",
+          "repair_code": "IDEA_NOT_EXTENDED",
+          "stage": "NOTICE",
+          "task_context": "Two versions of the same idea.",
+          "instruction_en": "Read the two versions. Which one extends the idea?",
+          "instruction_bn": "দুটি সংস্করণ পড়ুন। কোনটি ধারণাটিকে বাড়িয়েছে?",
+          "content_markdown": "**Topic:** Learning a new language.\n\n**Version A:**  \n\"Learning a new language is useful.\"\n\n**Version B:**  \n\"Learning a new language is useful because it helps you communicate with more people. For example, when I travel to another country, I can speak with locals and understand their culture better.\"",
+          "learner_action": "Choose the version that extends the idea.",
+          "answer_or_check_markdown": "Correct answer: Version B",
+          "explanation_bn": "Version B ধারণাটি ব্যাখ্যা করেছে (why) এবং একটি উদাহরণ দিয়েছে। Version A শুধু বক্তব্য দিয়েছে, কোনো ব্যাখ্যা নেই।",
+          "why_other_options_fail_bn": "Version A অত্যন্ত সংক্ষিপ্ত এবং ধারণা বাড়ায়নি।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "Version A",
+              "label": "Version A: \"Learning a new language is useful.\""
+            },
+            {
+              "value": "Version B",
+              "label": "Version B: \"Learning a new language is useful because it helps you communicate with more people. For example, when I travel to another country, I can speak with locals and understand their culture better.\""
+            }
+          ]
+        },
+        {
+          "activity_id": "6o-idea-repair",
+          "repair_code": "IDEA_NOT_EXTENDED",
+          "stage": "REPAIR",
+          "task_context": "An idea needs to be extended.",
+          "instruction_en": "The following answer states an idea but does not extend it. Record a response that extends the idea with a reason or example.",
+          "instruction_bn": "নিচের উত্তরটি একটি ধারণা বলেছে কিন্তু তা বাড়ায়নি। একটি কারণ বা উদাহরণ যোগ করে উত্তরটি রেকর্ড করুন।",
+          "content_markdown": "**Question:**  \n\"Why is it important to learn practical skills?\"\n\n**Answer:**  \n\"Practical skills are important because they help people in daily life.\"",
+          "learner_action": "Record a response that extends this idea.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you add a reason or consequence?  \n- Did you give a simple example?  \n\n**Acceptable features:**  \n- A reason (e.g., \"they help you become independent\").  \n- A simple example (e.g., \"knowing how to cook saves money\").  \n\n**Sample possible answer:**  \n\"Practical skills are important because they help people in daily life. For example, knowing how to cook can save money and improve health. It also helps people become more independent.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন মূল ধারণার পরে কেন, কীভাবে বা একটি উদাহরণ যোগ হয়েছে কি না। যে জায়গায় ধারণা থেমে গেছে, সেটি আরেকটু ব্যাখ্যা করে আবার রেকর্ড করুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-idea-retest",
+          "repair_code": "IDEA_NOT_EXTENDED",
+          "stage": "RETEST",
+          "task_context": "A Part 2‑style speaking prompt.",
+          "instruction_en": "Record your response to the following prompt. Extend your ideas.",
+          "instruction_bn": "নিচের প্রম্পটে উত্তর রেকর্ড করুন। আপনার ধারণাগুলো বাড়ান।",
+          "content_markdown": "**Prompt:**  \n\"Describe a useful skill you learned recently. You should say: what the skill is, how you learned it, and why it is useful.\"",
+          "learner_action": "Record a spoken response (around 45–60 seconds) that extends the main ideas.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you describe the skill?  \n- Did you explain how you learned it?  \n- Did you explain why it is useful?  \n- Did you add any extra detail or example?  \n\n**Acceptable features:**  \n- Clear description of the skill.  \n- A short explanation of how you learned it.  \n- A clear benefit (e.g., saving time, saving money).  \n\n**Sample possible answer:**  \n\"I recently learned how to use a basic budgeting app on my phone. I learned it by watching a short tutorial online. It is useful because it helps me track my spending and save more money every month.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন skill, শেখার উপায় এবং usefulness—প্রতিটি মূল ধারণা কিছুটা ব্যাখ্যা করেছেন কি না। কোনো অংশ খুব সংক্ষিপ্ত হলে সেই অংশটি বাড়িয়ে দ্বিতীয়বার বলুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "After making a point, ask yourself: Why? What happens because of this?",
+      "next_retry_action_bn": "কোনো পয়েন্ট দেওয়ার পর নিজেকে জিজ্ঞাসা করুন: কেন? এর ফলে কী হয়?"
+    },
+    {
+      "order": 3,
+      "repair_code": "OFF_TOPIC",
+      "learner_label_en": "Off‑topic",
+      "learner_label_bn": "প্রাসঙ্গিক নয় / বিষয়ের বাইরে",
+      "explanation_en": "Answer the exact question that was asked.  \nDon't drift into unrelated stories or ideas.",
+      "explanation_bn": "ঠিক যে প্রশ্ন করা হয়েছে, তার উত্তর দিন।  \nঅপ্রাসঙ্গিক গল্প বা ধারণায় চলে যাবেন না।",
+      "why_it_matters_bn": "প্রশ্নের বাইরে চলে গেলে শ্রোতার জন্য আপনার মূল উত্তর বোঝা কঠিন হয়।  \nপ্রশ্নের সাথে সম্পর্কিত তথ্য রাখলে উত্তর আরও স্পষ্ট ও সংগত থাকে।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "আমি কি প্রশ্নের সরাসরি উত্তর দিয়েছি?",
+        "আমি কি অপ্রাসঙ্গিক কোনো তথ্য যোগ করেছি?",
+        "আমার উত্তর কি প্রশ্নের সাথে সম্পূর্ণ সংগত?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-offtopic-notice",
+          "repair_code": "OFF_TOPIC",
+          "stage": "NOTICE",
+          "task_context": "A response starts relevantly but drifts off‑topic. Identify the off‑topic part.",
+          "instruction_en": "Read the response. Which part is off‑topic?",
+          "instruction_bn": "উত্তরটি পড়ুন। কোন অংশটি অপ্রাসঙ্গিক?",
+          "content_markdown": "**Question:**  \n\"Why do some people enjoy reading books?\"\n\n**Response:**  \n\"Reading helps people relax and learn about new ideas. Last week my phone battery stopped working, so I bought a new charger.\"",
+          "learner_action": "Choose the off‑topic part.",
+          "answer_or_check_markdown": "Correct answer: The part about the phone battery and charger.",
+          "explanation_bn": "প্রশ্ন ছিল বই পড়ার বিষয়ে। ফোনের ব্যাটারি ও চার্জারের অংশটি এর সাথে সম্পূর্ণ অপ্রাসঙ্গিক।",
+          "why_other_options_fail_bn": "প্রথম অংশটি সরাসরি প্রশ্নের উত্তর দিয়েছে।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-offtopic-repair",
+          "repair_code": "OFF_TOPIC",
+          "stage": "REPAIR",
+          "task_context": "A response has an off‑topic section. Rewrite it to stay on topic.",
+          "instruction_en": "The following response drifts off‑topic. Rewrite it to keep it relevant.",
+          "instruction_bn": "নিচের উত্তরটি প্রাসঙ্গিকতা হারিয়েছে। প্রাসঙ্গিক রেখে এটি পুনরায় লিখুন।",
+          "content_markdown": "**Question:**  \n\"Why do some people prefer to travel by train?\"\n\n**Response:**  \n\"Trains are comfortable and often faster than buses. Last week my phone battery stopped working, so I bought a new charger. I also like the scenery from train windows.\"",
+          "learner_action": "Rewrite the response so it stays on topic.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Does it answer the question?  \n- Does it avoid unrelated stories?  \n\n**Acceptable features:**  \n- A clear answer about trains.  \n- A reason or example directly related to trains.  \n\n**Sample possible answer:**  \n\"Some people prefer trains because they are comfortable and often faster than buses. They also offer a good view of the countryside, which makes the journey more enjoyable.\"",
+          "explanation_bn": "রেকর্ডিং বা পুনর্লিখিত উত্তরটি দেখে নিশ্চিত করুন প্রতিটি বাক্য train পছন্দ করার কারণকে সমর্থন করছে। অপ্রাসঙ্গিক তথ্য বাদ দিয়ে মূল প্রশ্নে ফিরে আসুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "TEXT",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-offtopic-retest",
+          "repair_code": "OFF_TOPIC",
+          "stage": "RETEST",
+          "task_context": "A Part 3 question. Respond on topic.",
+          "instruction_en": "Record a response to the following question. Stay on topic.",
+          "instruction_bn": "নিচের প্রশ্নের উত্তর রেকর্ড করুন। প্রাসঙ্গিক থাকুন।",
+          "content_markdown": "**Question:**  \n\"Why do some people prefer to eat at home rather than at restaurants?\"",
+          "learner_action": "Record a response that stays on topic.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Does it directly answer the question?  \n- Does it avoid unrelated details?  \n\n**Acceptable features:**  \n- A clear reason (e.g., \"it is cheaper\", \"more control over ingredients\").  \n- A short example directly related to the question.  \n\n**Sample possible answer:**  \n\"Many people prefer eating at home because it is usually cheaper and they can choose exactly what goes into their food. It is also more comfortable for some families.\"",
+          "explanation_bn": "রেকর্ডিং শুনে প্রতিটি কারণ বা উদাহরণ প্রশ্নটির সাথে সরাসরি সম্পর্কিত কি না যাচাই করুন। কোনো অংশ অন্য বিষয়ে চলে গেলে সেটি বাদ দিয়ে আবার বলুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "Before speaking, repeat the question in your head to stay focused. If you notice you are drifting, gently bring yourself back to the question.",
+      "next_retry_action_bn": "বলার আগে প্রশ্নটি মনে মনে পড়ুন যাতে ফোকাস থাকে। যদি দেখেন বিষয়ের বাইরে যাচ্ছেন, ধীরে ধীরে আবার প্রশ্নে ফিরে আসুন।"
+    },
+    {
+      "order": 4,
+      "repair_code": "STRUCTURE_UNCLEAR",
+      "learner_label_en": "Structure unclear",
+      "learner_label_bn": "গঠন অস্পষ্ট",
+      "explanation_en": "Make your ideas easy to follow.  \nUse a simple order: say what it is, give some detail, and explain why it matters.",
+      "explanation_bn": "আপনার ধারণাগুলো সহজে বোঝার মতো করুন।  \nএকটি সহজ ক্রম ব্যবহার করুন: কী, কিছু বিবরণ, এবং কেন তা গুরুত্বপূর্ণ।",
+      "why_it_matters_bn": "স্পষ্ট গঠন ধারণাগুলো বোধগম্য করে।  \nগঠন স্পষ্ট না হলে উত্তর বুঝতে অসুবিধা হয়।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "আমি কি শুরুতে স্পষ্টভাবে বলেছি আমি কী বলতে চাই?",
+        "আমি কি ধারাবাহিকভাবে তথ্য দিয়েছি?",
+        "আমার উত্তরের কি একটি যৌক্তিক ক্রম আছে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-structure-notice",
+          "repair_code": "STRUCTURE_UNCLEAR",
+          "stage": "NOTICE",
+          "task_context": "Two responses to a Part 2 prompt. One is clearly organised; the other jumps around.",
+          "instruction_en": "Read the two responses. Which one is clearer?",
+          "instruction_bn": "দুটি উত্তর পড়ুন। কোনটি স্পষ্ট?",
+          "content_markdown": "**Prompt:**  \n\"Describe a place you enjoy visiting.\"\n\n**Response A:**  \n\"I go there on weekends. The lake is nice. A place I enjoy visiting is a park near my house. I go with friends. It helps me relax. There are tall trees.\"\n\n**Response B:**  \n\"A place I enjoy visiting is a park near my house. It has many trees and a nice lake. I like going there because it helps me relax. I usually go there with friends on weekends.\"",
+          "learner_action": "Choose the clearer response.",
+          "answer_or_check_markdown": "Correct answer: Response B",
+          "explanation_bn": "Response B-তে একটি স্পষ্ট ক্রম আছে: স্থানের পরিচয় → বর্ণনা → কেন ভালো লাগে। Response A-তে ধারণাগুলো এলোমেলো।",
+          "why_other_options_fail_bn": "Response A-তে কোনো স্পষ্ট ক্রম নেই; বাক্যগুলো সংযুক্ত নয়।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "Response A",
+              "label": "Response A: \"I go there on weekends. The lake is nice. A place I enjoy visiting is a park near my house. I go with friends. It helps me relax. There are tall trees.\""
+            },
+            {
+              "value": "Response B",
+              "label": "Response B: \"A place I enjoy visiting is a park near my house. It has many trees and a nice lake. I like going there because it helps me relax. I usually go there with friends on weekends.\""
+            }
+          ]
+        },
+        {
+          "activity_id": "6o-structure-repair",
+          "repair_code": "STRUCTURE_UNCLEAR",
+          "stage": "REPAIR",
+          "task_context": "A Part 3 response has useful ideas but presents them in an unclear order.",
+          "instruction_en": "Record a clearer response. As a flexible guide, try: direct answer → reason → example or contrast. This is not a compulsory speaking formula.",
+          "instruction_bn": "আরও স্পষ্ট একটি উত্তর রেকর্ড করুন। সহায়ক একটি নমনীয় ক্রম হিসেবে ব্যবহার করতে পারেন: সরাসরি উত্তর → কারণ → উদাহরণ বা বিপরীত দিক। এটি বাধ্যতামূলক কোনো speaking formula নয়।",
+          "content_markdown": "**Question:**  \n\"Why do some people prefer working from home?\"\n\n**Original response:**  \n\"For example, they save commuting time. Working from home has some benefits. It can also be isolating. I think many people prefer it because they have more control over their day.\"",
+          "learner_action": "Record a clearer version using a logical order.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you begin with a direct answer?  \n- Did you explain a reason?  \n- Did you add an example or useful contrast where relevant?  \n- Does the answer sound natural rather than memorised?  \n\n**Acceptable features:**  \n- A clear position at the start.  \n- One developed reason.  \n- An example or contrast that supports the answer.  \n\n**Sample possible answer:**  \n\"Many people prefer working from home because it gives them more flexibility. For example, they can avoid commuting and use that time for family or rest. On the other hand, some people miss face-to-face contact, so it does not suit everyone.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন শ্রোতা সহজে direct answer → reason → example/contrast অনুসরণ করতে পারে কি না। এই ক্রমটি সহায়ক, বাধ্যতামূলক নয়; লক্ষ্য হলো স্বাভাবিক ও পরিষ্কার গঠন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-structure-retest",
+          "repair_code": "STRUCTURE_UNCLEAR",
+          "stage": "RETEST",
+          "task_context": "A Part 2 prompt. Produce a clearly structured spoken response.",
+          "instruction_en": "Record a response to the following prompt. Organise your ideas clearly.",
+          "instruction_bn": "নিচের প্রম্পটে উত্তর রেকর্ড করুন। আপনার ধারণাগুলো স্পষ্টভাবে সাজান।",
+          "content_markdown": "**Prompt:**  \n\"Describe a person who has helped you in your life. You should say: who the person is, how they helped you, and why it was important.\"",
+          "learner_action": "Record a spoken response with a clear structure.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you introduce the person?  \n- Did you explain how they helped you?  \n- Did you explain why it was important?  \n\n**Acceptable features:**  \n- A clear introduction.  \n- A logical order of ideas.  \n- A brief conclusion or reflection.  \n\n**Sample possible answer:**  \n\"The person who has helped me in my life is my mother. She has always supported me in my studies and encouraged me to work hard. This was important because I used to feel nervous about exams, and her encouragement gave me confidence.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন person, help এবং importance—এই তিনটি অংশ যৌক্তিক ক্রমে এসেছে কি না। এলোমেলো মনে হলে ছোট একটি পরিকল্পনা করে আবার রেকর্ড করুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "Before speaking, plan a short order: main point, a detail, and why it matters.",
+      "next_retry_action_bn": "বলার আগে একটি সংক্ষিপ্ত ক্রম পরিকল্পনা করুন: মূল বক্তব্য, একটি বিবরণ, এবং কেন তা গুরুত্বপূর্ণ।"
+    },
+    {
+      "order": 5,
+      "repair_code": "REPETITION",
+      "learner_label_en": "Repetition",
+      "learner_label_bn": "পুনরাবৃত্তি",
+      "explanation_en": "Repeating the same word or idea can make your speech less fluent.  \nTry to use a pronoun, a natural synonym, or rephrase the idea.",
+      "explanation_bn": "একই শব্দ বা ধারণা বারবার বলা স্পিচ কম সাবলীল করে তোলে।  \nএকটি pronoun, একটি প্রাকৃতিক সমার্থক শব্দ বা ধারণাটিকে ভিন্নভাবে বলা যায়।",
+      "why_it_matters_bn": "অপ্রয়োজনীয় পুনরাবৃত্তি কমালে উত্তর আরও স্বাভাবিক ও সহজে অনুসরণযোগ্য হয়।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "আমি কি একই শব্দ অনেকবার ব্যবহার করেছি?",
+        "আমি কি একই ধারণা বারবার ভিন্ন ভাষায় বলেছি?",
+        "আমি কি pronoun (he/she/it/they) ব্যবহার করতে পারি?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-repetition-notice",
+          "repair_code": "REPETITION",
+          "stage": "NOTICE",
+          "task_context": "A response contains unnecessary repetition.",
+          "instruction_en": "Read the response. Which word or phrase is repeated too often?",
+          "instruction_bn": "উত্তরটি পড়ুন। কোন শব্দ বা বাক্যাংশ বারবার এসেছে?",
+          "content_markdown": "**Response:**  \n\"My teacher is very good. My teacher helps me with my studies. My teacher also gives me advice about exams. I like my teacher very much.\"",
+          "learner_action": "Choose the word that is repeated too often.",
+          "answer_or_check_markdown": "Correct answer: \"my teacher\"",
+          "explanation_bn": "\"my teacher\" চারবার এসেছে, যা অপ্রয়োজনীয় পুনরাবৃত্তি। pronoun (she/he) ব্যবহার করলে উত্তরের প্রবাহ উন্নত হয়।",
+          "why_other_options_fail_bn": "অন্য শব্দগুলো স্বাভাবিকভাবে ব্যবহৃত হয়েছে।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-repetition-repair",
+          "repair_code": "REPETITION",
+          "stage": "REPAIR",
+          "task_context": "A response has repetition. Rewrite it to reduce repetition.",
+          "instruction_en": "The following response repeats the same word too often. Rewrite it with less repetition.",
+          "instruction_bn": "নিচের উত্তরটি একই শব্দ বারবার ব্যবহার করেছে। পুনরাবৃত্তি কমিয়ে এটি পুনরায় লিখুন।",
+          "content_markdown": "**Original response:**  \n\"I like my hometown. My hometown is a small town. My hometown is peaceful. I like the people in my hometown.\"",
+          "learner_action": "Rewrite the response with less repetition.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you replace repeated nouns with pronouns?  \n- Did you vary vocabulary?  \n\n**Acceptable features:**  \n- Using \"it\" or \"there\" to avoid repetition.  \n- Using synonyms (e.g., \"place\" instead of \"hometown\").  \n\n**Sample possible answer:**  \n\"I like my hometown. It is a small and peaceful place, and I really enjoy the people who live there.\"",
+          "explanation_bn": "পুনর্লিখিত বা বলা উত্তরটি শুনে একই noun বা idea অপ্রয়োজনীয়ভাবে বারবার এসেছে কি না দেখুন। প্রয়োজন হলে pronoun বা স্বাভাবিক reformulation ব্যবহার করুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "TEXT",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-repetition-retest",
+          "repair_code": "REPETITION",
+          "stage": "RETEST",
+          "task_context": "A new prompt. Speak without unnecessary repetition.",
+          "instruction_en": "Record a response to the following question. Try not to repeat the same word or idea too often.",
+          "instruction_bn": "নিচের প্রশ্নের উত্তর রেকর্ড করুন। একই শব্দ বা ধারণা বারবার এড়িয়ে চলুন।",
+          "content_markdown": "**Question:**  \n\"Why do some people enjoy watching sports?\"",
+          "learner_action": "Record a response with minimal repetition.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you use a variety of words?  \n- Did you avoid repeating the same noun?  \n\n**Acceptable features:**  \n- Different words for the topic (e.g., \"sports\", \"games\", \"it\").  \n- Avoiding repeated structure.  \n\n**Sample possible answer:**  \n\"Many people enjoy watching sports because it is exciting and entertaining. It also brings people together, especially when they support the same team.\"",
+          "explanation_bn": "রেকর্ডিং শুনে একই শব্দ বা একই ধারণা অপ্রয়োজনীয়ভাবে পুনরাবৃত্ত হয়েছে কি না দেখুন। অর্থ না বদলে একটি pronoun বা স্বাভাবিক বিকল্প ব্যবহার করে দ্বিতীয়বার বলুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "When you notice yourself repeating a word, try to use a pronoun or pause and rephrase.",
+      "next_retry_action_bn": "যখন দেখেন আপনি একটি শব্দ বারবার বলছেন, তখন pronoun ব্যবহার করুন বা থেমে ধারণাটি ভিন্নভাবে বলুন।"
+    },
+    {
+      "order": 6,
+      "repair_code": "LINKING_SPEECH",
+      "learner_label_en": "Linking in speech",
+      "learner_label_bn": "কথায় সংযোগ",
+      "explanation_en": "Use simple linking to connect your ideas.  \nA pronoun, sentence order, or natural continuation may be enough.  \nUse linking words when they genuinely express a relationship.",
+      "explanation_bn": "আপনার ধারণাগুলো সংযুক্ত করতে সহজ linking ব্যবহার করুন।  \nএকটি pronoun, বাক্যের ক্রম বা স্বাভাবিক ধারাবাহিকতাই যথেষ্ট হতে পারে।  \nযখন সম্পর্ক প্রকাশের প্রয়োজন হয় তখন linking শব্দ ব্যবহার করুন।",
+      "why_it_matters_bn": "সঠিক সংযোগ speech-কে বোধগম্য ও স্বাভাবিক করে।  \nঅতিরিক্ত linking অপ্রাকৃতিক শোনায়।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "আমার ধারণাগুলো কি যুক্ত?",
+        "আমি কি অপ্রয়োজনীয় linking শব্দ ব্যবহার করেছি?",
+        "আমার ভাষা কি স্বাভাবিক?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-linking-notice",
+          "repair_code": "LINKING_SPEECH",
+          "stage": "NOTICE",
+          "task_context": "A response uses unnecessary linking. Identify the problem.",
+          "instruction_en": "Read the response. What is the linking problem?",
+          "instruction_bn": "উত্তরটি পড়ুন। linking সমস্যাটি কী?",
+          "content_markdown": "**Response:**  \n\"Firstly, I bought a bicycle. Moreover, it was on sale. Furthermore, it is a good way to travel.\"",
+          "learner_action": "Choose the problem.",
+          "answer_or_check_markdown": "Correct answer: The linking words are overused and unnatural.",
+          "explanation_bn": "প্রতি বাক্যে \"Firstly\", \"Moreover\", \"Furthermore\" ব্যবহার করা হয়েছে, যা অপ্রাকৃতিক। এখানে \"I bought a bicycle\" ও \"it was on sale\" সহজেই যুক্ত ছিল।",
+          "why_other_options_fail_bn": "অন্যান্য সমস্যা যেমন বানান বা ব্যাকরণ নেই; প্রধান সমস্যা অতিরিক্ত linking।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-linking-repair",
+          "repair_code": "LINKING_SPEECH",
+          "stage": "REPAIR",
+          "task_context": "A response has overused linking words. Rewrite it with fewer.",
+          "instruction_en": "The following response has too many linking words. Rewrite it with natural linking.",
+          "instruction_bn": "নিচের উত্তরটিতে অতিরিক্ত linking শব্দ আছে। স্বাভাবিক linking দিয়ে এটি পুনরায় লিখুন।",
+          "content_markdown": "**Original response:**  \n\"Firstly, I bought a bicycle last year. Moreover, it was on sale. Furthermore, it has saved me money on short journeys.\"",
+          "learner_action": "Rewrite the response with natural linking.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you remove unnecessary linking words?  \n- Is the response now more natural?  \n\n**Acceptable features:**  \n- Removing linkers that do not add a real relationship.  \n- Using a pronoun or sentence order when that is enough.  \n- Using a simple connector only when it genuinely helps.\n\n**Sample possible answer:**  \n\"I bought a bicycle last year. It was on sale. It has saved me money on short journeys.\"\n\nThis version is naturally connected through \"It\" and sentence order; no explicit linker is needed.",
+          "explanation_bn": "উত্তরটি শুনে দেখুন linking word না থাকলেও pronoun ও বাক্যের ক্রমে অর্থ পরিষ্কার আছে কি না। সম্পর্ক স্পষ্ট হলে অতিরিক্ত connector যোগ করার দরকার নেই।",
+          "why_other_options_fail_bn": "",
+          "control_type": "TEXT",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-linking-retest",
+          "repair_code": "LINKING_SPEECH",
+          "stage": "RETEST",
+          "task_context": "A new question. Speak with natural linking.",
+          "instruction_en": "Record a response to the following question. Use natural linking.",
+          "instruction_bn": "নিচের প্রশ্নের উত্তর রেকর্ড করুন। স্বাভাবিক linking ব্যবহার করুন।",
+          "content_markdown": "**Question:**  \n\"Why do people prefer different seasons for travel?\"",
+          "learner_action": "Record a response with natural linking.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Is the linking natural?  \n- Are ideas connected?  \n\n**Acceptable features:**  \n- A reason (because).  \n- A contrast or addition (but, also).  \n\n**Sample possible answer:**  \n\"People prefer different seasons for travel because the weather affects what they can do. In summer, many people like beaches, while in winter, some prefer mountains and snow.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন connector-গুলো সত্যিই কারণ, contrast বা addition দেখাচ্ছে কি না। শুধু শোনাতে ভালো লাগবে বলে অতিরিক্ত linking word ব্যবহার করবেন না।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "When you speak, connect your ideas naturally. Use a linking word only when the relationship is not already clear from the context.",
+      "next_retry_action_bn": "বলার সময় ধারণাগুলো স্বাভাবিকভাবে যুক্ত করুন। শুধুমাত্র যখন সম্পর্ক প্রসঙ্গ থেকে স্পষ্ট নয়, তখনই linking শব্দ ব্যবহার করুন।"
+    },
+    {
+      "order": 7,
+      "repair_code": "WORD_CHOICE",
+      "learner_label_en": "Word choice",
+      "learner_label_bn": "শব্দ চয়ন",
+      "explanation_en": "Choose words that are natural and clear in speech.  \nAvoid unnatural collocations and imprecise vocabulary.",
+      "explanation_bn": "মৌখিক উত্তরের জন্য স্বাভাবিক ও স্পষ্ট শব্দ ব্যবহার করুন।  \nঅপ্রাকৃতিক সংমিশ্রণ ও অস্পষ্ট শব্দ এড়িয়ে চলুন।",
+      "why_it_matters_bn": "প্রাকৃতিক শব্দ চয়ন অর্থ স্পষ্ট করে।  \nঅপ্রাকৃতিক শব্দ সংমিশ্রণ অস্পষ্টতা তৈরি করতে পারে।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "শব্দগুলো কি প্রসঙ্গের সাথে মানানসই?",
+        "সংমিশ্রণটি কি স্বাভাবিক?",
+        "আমি কি নিশ্চিত যে শব্দটির অর্থ আমি জানি?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-word-notice",
+          "repair_code": "WORD_CHOICE",
+          "stage": "NOTICE",
+          "task_context": "A sentence uses an unnatural collocation.",
+          "instruction_en": "Read the sentence. Identify the lexical choice problem.",
+          "instruction_bn": "বাক্যটি পড়ুন। শব্দ চয়নের সমস্যাটি চিহ্নিত করুন।",
+          "content_markdown": "**Sentence:**  \n\"There was strong traffic on the way to work.\"",
+          "learner_action": "Choose the problematic phrase.",
+          "answer_or_check_markdown": "Correct answer: \"strong traffic\"",
+          "explanation_bn": "'Strong traffic' একটি অপ্রাকৃতিক সংমিশ্রণ। প্রাকৃতিক হলো 'heavy traffic'।",
+          "why_other_options_fail_bn": "অন্য শব্দগুলো সঠিক প্রসঙ্গে ব্যবহৃত হয়েছে।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-word-repair",
+          "repair_code": "WORD_CHOICE",
+          "stage": "REPAIR",
+          "task_context": "A sentence uses an unnatural collocation. Correct it.",
+          "instruction_en": "The following response uses an unnatural collocation. Correct it.",
+          "instruction_bn": "নিচের উত্তরটি একটি অপ্রাকৃতিক সংমিশ্রণ ব্যবহার করেছে। এটি সংশোধন করুন।",
+          "content_markdown": "**Response:**  \n\"People should do more attention to road safety.\"",
+          "learner_action": "Rewrite the sentence with a natural collocation.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you replace the unnatural phrase?  \n- Is the revised sentence clearer?  \n\n**Acceptable features:**  \n- Using \"pay more attention to\".  \n\n**Sample possible answer:**  \n\"People should pay more attention to road safety.\"",
+          "explanation_bn": "সংশোধিত বাক্যটি বলে শুনে দেখুন collocation-টি স্বাভাবিক শোনাচ্ছে কি না। এখানে লক্ষ্য কঠিন শব্দ নয়, সঠিক ও স্বাভাবিক শব্দ-সংযোগ।",
+          "why_other_options_fail_bn": "",
+          "control_type": "TEXT",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-word-retest",
+          "repair_code": "WORD_CHOICE",
+          "stage": "RETEST",
+          "task_context": "A new speaking prompt. Use natural vocabulary.",
+          "instruction_en": "Record a response to the following question. Use natural collocations.",
+          "instruction_bn": "নিচের প্রশ্নের উত্তর রেকর্ড করুন। স্বাভাবিক শব্দ সংমিশ্রণ ব্যবহার করুন।",
+          "content_markdown": "**Question:**  \n\"What makes a city a good place to live?\"",
+          "learner_action": "Record a response with natural word choice.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Are the words natural for speaking?  \n- Did you avoid unnatural collocations?  \n\n**Acceptable features:**  \n- Simple, everyday collocations.  \n- Clear meaning.  \n\n**Sample possible answer:**  \n\"A city can be a good place to live if it has good public transport, affordable housing, and a safe environment.\"",
+          "explanation_bn": "রেকর্ডিং শুনে এমন কোনো phrase আছে কি না দেখুন যা অর্থে ঠিক হলেও অস্বাভাবিক শোনায়। নিশ্চিত না হলে পরিচিত ও স্বাভাবিক collocation দিয়ে আবার বলুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "Stick to words and collocations you know well. If you are unsure, use a simpler alternative.",
+      "next_retry_action_bn": "যে শব্দ ও সংমিশ্রণগুলো ভালো জানেন, সেগুলো ব্যবহার করুন। অনিশ্চিত হলে সরল বিকল্প ব্যবহার করুন।"
+    },
+    {
+      "order": 8,
+      "repair_code": "GRAMMAR_CHECK_NEEDED",
+      "learner_label_en": "Grammar check needed",
+      "learner_label_bn": "ব্যাকরণ পরীক্ষা প্রয়োজন",
+      "explanation_en": "After speaking, check your own recording for common errors.  \nFocus on subject‑verb agreement, tense, and singular/plural.",
+      "explanation_bn": "বলার পর নিজের রেকর্ডিং শুনে সাধারণ ভুলগুলো চেক করুন।  \nsubject‑verb agreement, tense এবং singular/plural-এর ওপর ফোকাস করুন।",
+      "why_it_matters_bn": "ছোট ব্যাকরণগত ভুল অর্থ বা স্পষ্টতা নষ্ট করতে পারে।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "subject ও verb-এর মিল ঠিক আছে?",
+        "tense-এর সামঞ্জস্য ঠিক আছে?",
+        "singular/plural ঠিক আছে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-grammar-notice",
+          "repair_code": "GRAMMAR_CHECK_NEEDED",
+          "stage": "NOTICE",
+          "task_context": "A spoken sentence has a tense error.",
+          "instruction_en": "Read the sentence. Identify the grammar error.",
+          "instruction_bn": "বাক্যটি পড়ুন। ব্যাকরণগত ভুলটি চিহ্নিত করুন।",
+          "content_markdown": "**Sentence:**  \n\"Last night, she watches a film and went to bed early.\"",
+          "learner_action": "Choose the error.",
+          "answer_or_check_markdown": "Correct answer: \"watches\" should be \"watched\" (past tense).",
+          "explanation_bn": "\"Last night\" past সময় নির্দেশ করে, তাই verb-টি past tense-এ হতে হবে। 'watches' present tense, যা ভুল।",
+          "why_other_options_fail_bn": "অন্যান্য শব্দ সঠিক।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-grammar-repair",
+          "repair_code": "GRAMMAR_CHECK_NEEDED",
+          "stage": "REPAIR",
+          "task_context": "A sentence has a tense error. Correct it.",
+          "instruction_en": "The following sentence has a grammar error. Correct it.",
+          "instruction_bn": "নিচের বাক্যটিতে একটি ব্যাকরণগত ভুল আছে। এটি সংশোধন করুন।",
+          "content_markdown": "**Sentence:**  \n\"Last year, I go to the beach with my family.\"",
+          "learner_action": "Identify and correct the error.",
+          "answer_or_check_markdown": "Correct answer: \"go\" should be \"went\" (past tense).",
+          "explanation_bn": "\"Last year\" past সময় নির্দেশ করে, তাই verb-টি past tense-এ হতে হবে। 'go' present tense, যা ভুল।",
+          "why_other_options_fail_bn": "",
+          "control_type": "TEXT",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-grammar-retest",
+          "repair_code": "GRAMMAR_CHECK_NEEDED",
+          "stage": "RETEST",
+          "task_context": "A new speaking prompt. Speak with attention to grammar.",
+          "instruction_en": "Record a response to the following question. Pay attention to verb tenses.",
+          "instruction_bn": "নিচের প্রশ্নের উত্তর রেকর্ড করুন। verb tense-এর দিকে খেয়াল রাখুন।",
+          "content_markdown": "**Question:**  \n\"Describe a holiday you enjoyed in the past.\"",
+          "learner_action": "Record a response with correct tenses.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Are past events in past tense?  \n- Are present habits in present tense?  \n\n**Acceptable features:**  \n- Consistent past tense for past events.  \n- Clear references to time.  \n\n**Sample possible answer:**  \n\"I enjoyed a holiday at the beach last year. I stayed there for a week, and I spent most of the time swimming and relaxing.\"",
+          "explanation_bn": "রেকর্ডিং শুনে past event-এর verb tense ধারাবাহিক আছে কি না দেখুন। কোনো verb সময়ের সাথে না মিললে সেটি ঠিক করে আবার রেকর্ড করুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "After speaking, check your recording for a few common errors: tense, agreement, and singular/plural.",
+      "next_retry_action_bn": "বলার পর রেকর্ডিং শুনে কয়েকটি সাধারণ ভুল চেক করুন: tense, agreement, এবং singular/plural।"
+    },
+    {
+      "order": 9,
+      "repair_code": "PAUSE_AND_RESTART",
+      "learner_label_en": "Pause and restart",
+      "learner_label_bn": "থামুন ও আবার শুরু করুন",
+      "explanation_en": "Natural pauses are acceptable.  \nIf you get stuck, pause briefly, take a breath, and restart your sentence.  \nUse a simple phrase such as \"What I mean is...\" or \"Let me try again.\"",
+      "explanation_bn": "স্বাভাবিক বিরতি গ্রহণযোগ্য।  \nযদি আটকে যান, একটু থামুন, শ্বাস নিন এবং বাক্যটি আবার শুরু করুন।  \n\"What I mean is...\" বা \"Let me try again.\"-এর মতো সহজ বাক্যাংশ ব্যবহার করুন।",
+      "why_it_matters_bn": "থেমে পুনরায় শুরু করার দক্ষতা ধারাবাহিকতা বজায় রাখে।  \nঅতিরিক্ত দ্বিধা না করে এগিয়ে যাওয়া গুরুত্বপূর্ণ।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "আমি কি আটকে গিয়েছিলাম?",
+        "আমি কি থেমে আবার শুরু করেছি?",
+        "আমি কি একটি সহজ পুনঃশুরু বাক্যাংশ ব্যবহার করেছি?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-pause-notice",
+          "repair_code": "PAUSE_AND_RESTART",
+          "stage": "NOTICE",
+          "task_context": "A response has a stuck moment. Identify the restart phrase.",
+          "instruction_en": "Read the response. Which part shows a restart?",
+          "instruction_bn": "উত্তরটি পড়ুন। কোন অংশটি পুনঃশুরু দেখায়?",
+          "content_markdown": "**Response:**  \n\"I think, um, what I mean is, I prefer to travel by train because it is more comfortable.\"",
+          "learner_action": "Choose the phrase that shows a restart.",
+          "answer_or_check_markdown": "Correct answer: \"what I mean is\"",
+          "explanation_bn": "\"I think, um\" এর পর বক্তা থেমে \"what I mean is\" দিয়ে বাক্যটি পুনরায় শুরু করেছেন।",
+          "why_other_options_fail_bn": "অন্য অংশগুলো মূল বক্তব্য ছিল না।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-pause-repair",
+          "repair_code": "PAUSE_AND_RESTART",
+          "stage": "REPAIR",
+          "task_context": "A sentence gets stuck and needs a restart.",
+          "instruction_en": "The following speaker gets stuck. Record a natural restart and complete the idea.",
+          "instruction_bn": "নিচের বক্তা আটকে গেছেন। একটি স্বাভাবিকভাবে আবার শুরু করা বাক্যাংশ ব্যবহার করে ধারণাটি রেকর্ড করুন।",
+          "content_markdown": "**Stuck moment:**  \n\"I think public transport is... [pause]\"",
+          "learner_action": "Record a natural restart and finish the idea.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Is the restart phrase natural?  \n- Does it lead into a clear idea?  \n\n**Acceptable features:**  \n- Use of \"what I mean is\", \"let me put it another way\", or a simple restart.  \n\n**Sample possible answer:**  \n\"I think public transport is... let me try again. The main reason I use public transport is that it is cheaper than driving.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন restart phrase-টি শুধু আটকে যাওয়ার সময় স্বাভাবিকভাবে ব্যবহার করেছেন কি না। এটি filler হিসেবে বারবার ব্যবহার করার দরকার নেই।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-pause-retest",
+          "repair_code": "PAUSE_AND_RESTART",
+          "stage": "RETEST",
+          "task_context": "A Part 3 question. Practise using a restart phrase if needed.",
+          "instruction_en": "Record a response to the following question. If you get stuck, use a restart phrase.",
+          "instruction_bn": "নিচের প্রশ্নের উত্তর রেকর্ড করুন। যদি আটকে যান, একটি পুনঃশুরু বাক্যাংশ ব্যবহার করুন।",
+          "content_markdown": "**Question:**  \n\"Why do you think some people prefer to live in cities?\"",
+          "learner_action": "Record a response, using a restart phrase if needed.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you answer the question?  \n- Did you use a restart phrase naturally if you paused?  \n\n**Acceptable features:**  \n- A clear answer.  \n- Natural use of a restart phrase if needed.  \n\n**Sample possible answer:**  \n\"I think, um, let me put it this way – some people prefer cities because there are more job opportunities and better facilities.\"",
+          "explanation_bn": "রেকর্ডিং শুনে দেখুন pause-এর পরে আপনি সহজভাবে মূল ধারণায় ফিরেছেন কি না। স্বাভাবিক pause ঠিক আছে; restart phrase কেবল প্রয়োজন হলে ব্যবহার করুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "If you pause and feel stuck, take a breath and say \"What I mean is...\" or \"Let me try again.\" Then continue.",
+      "next_retry_action_bn": "যদি থামেন এবং আটকে যান, শ্বাস নিন এবং \"What I mean is...\" বা \"Let me try again.\" বলুন। তারপর চালিয়ে যান।"
+    },
+    {
+      "order": 10,
+      "repair_code": "PRONUNCIATION_SELF_CHECK",
+      "learner_label_en": "Pronunciation self‑check",
+      "learner_label_bn": "উচ্চারণ স্ব-পরীক্ষা",
+      "explanation_en": "Listen to your own recording and check if your key words are clear.  \nFocus on important words and final sounds, not on copying a particular accent.",
+      "explanation_bn": "নিজের রেকর্ডিং শুনে দেখুন আপনার মূল শব্দগুলো পরিষ্কার কিনা।  \nকোনো নির্দিষ্ট অ্যাকসেন্ট নয়, মূল শব্দ ও শেষের ধ্বনি স্পষ্ট হওয়া গুরুত্বপূর্ণ।",
+      "why_it_matters_bn": "পরিষ্কার উচ্চারণ শ্রোতাকে বুঝতে সাহায্য করে।  \nঅ্যাকসেন্ট নয়, বোধগম্যতা লক্ষ্য।",
+      "applicability": [
+        "PART_2_EXTENDED_TURN",
+        "PART_3_DISCUSSION_RESPONSE"
+      ],
+      "learner_self_check": [
+        "মূল শব্দগুলো পরিষ্কার ছিল?",
+        "শব্দগুলোর শেষাংশ স্পষ্ট ছিল?",
+        "প্রয়োজন হলে আমি কি একটু ধীরে বলে বাক্যটি অর্থপূর্ণ অংশে ভাগ করতে পারি?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6o-pronunciation-notice",
+          "repair_code": "PRONUNCIATION_SELF_CHECK",
+          "stage": "NOTICE",
+          "task_context": "After recording, which action is more useful?",
+          "instruction_en": "Read the two options. Which is more useful for pronunciation self‑check?",
+          "instruction_bn": "দুটি বিকল্প পড়ুন। উচ্চারণ স্ব-পরীক্ষার জন্য কোনটি বেশি কার্যকর?",
+          "content_markdown": "**Options:**  \nA. Try to copy a British accent even though the words are already clear.  \nB. Replay the recording, check whether the important words and final sounds are understandable, then repeat one unclear phrase more slowly.",
+          "learner_action": "Choose the more useful action.",
+          "answer_or_check_markdown": "Correct answer: B",
+          "explanation_bn": "লক্ষ্য হলো বোধগম্যতা, কোনো নির্দিষ্ট অ্যাকসেন্ট নয়। নিজের রেকর্ডিং শুনে অস্পষ্ট অংশ চিহ্নিত করে ধীরে ধীরে পুনরাবৃত্তি করা বেশি কার্যকর।",
+          "why_other_options_fail_bn": "A-তে অ্যাকসেন্ট কপি করার চেষ্টা করা হচ্ছে, যা প্রয়োজন নয়। B বোধগম্যতার ওপর ফোকাস করে।",
+          "control_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "A",
+              "label": "A. Try to copy a British accent even though the words are already clear.  "
+            },
+            {
+              "value": "B",
+              "label": "B. Replay the recording, check whether the important words and final sounds are understandable, then repeat one unclear phrase more slowly."
+            }
+          ]
+        },
+        {
+          "activity_id": "6o-pronunciation-repair",
+          "repair_code": "PRONUNCIATION_SELF_CHECK",
+          "stage": "REPAIR",
+          "task_context": "A sentence with key words. Practise recording and self‑checking.",
+          "instruction_en": "Record the following sentence. Then replay it. Check the stress on important words, the final sounds, and whether you grouped the sentence into meaningful chunks.",
+          "instruction_bn": "নিচের বাক্যটি রেকর্ড করুন। তারপর শুনে দেখুন গুরুত্বপূর্ণ শব্দে stress স্পষ্ট কি না, শেষের ধ্বনিগুলো শোনা যাচ্ছে কি না, এবং বাক্যটি অর্থপূর্ণ অংশে ভাগ করে বলেছেন কি না।",
+          "content_markdown": "**Sentence:**  \n\"I changed my plans because the train was delayed.\"",
+          "learner_action": "Record the sentence. Replay it and check:  \n- Did the important words \"changed\", \"plans\", \"train\", and \"delayed\" stand out clearly?  \n- Were the final sounds of \"changed\" and \"delayed\" understandable?  \n- Did you group it naturally, for example: \"I changed my plans / because the train was delayed\"?  \n- Did you rush any part?",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you record the sentence?  \n- Did you listen back?  \n- Did you identify any unclear part?  \n\n**Acceptable features:**  \n- Clear stress on important content words.  \n- Audible final sounds where they carry part of the word.  \n- Meaningful chunking rather than rushing the whole sentence.  \n- Willingness to rerecord one unclear phrase if needed.",
+          "explanation_bn": "রেকর্ডিং শুনে important word stress, final sounds এবং chunking পরিষ্কার কি না দেখুন। কোনো phrase অস্পষ্ট হলে শুধু সেই অংশটি একটু ধীরে আবার রেকর্ড করুন।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6o-pronunciation-retest",
+          "repair_code": "PRONUNCIATION_SELF_CHECK",
+          "stage": "RETEST",
+          "task_context": "A short speaking practice focusing on clear pronunciation.",
+          "instruction_en": "Record the following sentence clearly. Let the important words carry natural stress and use meaningful chunks instead of rushing.",
+          "instruction_bn": "নিচের বাক্যটি স্পষ্টভাবে রেকর্ড করুন। গুরুত্বপূর্ণ শব্দগুলোতে স্বাভাবিক stress দিন এবং তাড়াহুড়া না করে অর্থপূর্ণ অংশে ভাগ করে বলুন।",
+          "content_markdown": "**Sentence:**  \n\"I think technology / has changed the way / we communicate.\"",
+          "learner_action": "Record the sentence clearly.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did \"technology\", \"changed\", and \"communicate\" stand out clearly?  \n- Was the final sound of \"changed\" understandable?  \n- Did you use meaningful chunks instead of rushing?  \n- Was the whole sentence understandable?  \n\n**Acceptable features:**  \n- Natural stress on important words.  \n- Clear final sounds where relevant.  \n- Meaningful chunking and a comfortable pace.  \n- Overall intelligibility without copying a particular accent.",
+          "explanation_bn": "রেকর্ডিং শুনে key words, final sound এবং meaningful chunks বোধগম্য কি না যাচাই করুন। লক্ষ্য কোনো বিশেষ accent নয়; পুরো বাক্যটি সহজে বোঝা যাচ্ছে কি না সেটিই মূল বিষয়।",
+          "why_other_options_fail_bn": "",
+          "control_type": "RECORD",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "When you record yourself, listen for one or two key words. If they are unclear, slow down and say them again.",
+      "next_retry_action_bn": "রেকর্ডিং শোনার সময় এক বা দুইটি মূল শব্দের ওপর মনোযোগ দিন। যদি অস্পষ্ট হয়, ধীরে ধীরে আবার বলুন।"
+    }
+  ]
+}

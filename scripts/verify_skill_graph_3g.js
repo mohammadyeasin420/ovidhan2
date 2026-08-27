@@ -13,6 +13,10 @@ const coherencePack = require('../data/ielts-writing-coherence-practice-v1.json'
 const visualPack = require('../data/ielts-academic-task1-visual-practice-v1.json');
 const argumentPack = require('../data/ielts-task2-argument-practice-v1.json');
 const readingPack = require('../data/ielts-reading-practice-v1.json');
+const listeningPack = require('../data/ielts-listening-practice-v1.json');
+const speakingPack = require('../data/ielts-speaking-performance-v1.json');
+const gtWritingPack = require('../data/ielts-gt-writing-performance-v1.json');
+const academicWritingPack = require('../data/ielts-academic-writing-performance-v1.json');
 assert.equal(items.length, 30, 'original Mistake Mirror item count');
 assert.equal(reviewedPack.length, 70, 'reviewed practice-pack item count');
 addReviewedPack(reviewedPack);
@@ -24,16 +28,19 @@ addCoherencePack(coherencePack);
 addAcademicTask1VisualPack(visualPack);
 addTask2ArgumentPack(argumentPack);
 addIeltsReadingPack(readingPack);
+items.push(...listeningPack.items,...speakingPack.part2_cue_cards,...speakingPack.part3_prompts,...gtWritingPack.gt_task1_letters,...gtWritingPack.gt_task2_essays,...academicWritingPack.academic_task1,...academicWritingPack.academic_task2);
 const allowedEdges = new Set(['PREREQUISITE_OF','RELATED_TO','OFTEN_CONFUSED_WITH','TRANSFER_PATTERN_FOR','PRACTICED_BY','RELEVANT_TO_EXAM']);
 function unique(values, label) { assert.equal(new Set(values).size, values.length, `duplicate ${label}`); }
 function noDuplicates(values, label) { assert.equal(new Set(values).size, values.length, `duplicate relationship in ${label}`); }
 
 assert.equal(graph.graph_version, 3);
 assert.equal(graph.schema_version, 1);
-assert.equal(graph.families.length, 14);
-assert.equal(graph.skills.length, 68);
-assert.equal(items.length, 440);
-assert.equal(graph.item_mappings.length, 440);
+assert.equal(graph.families.length, 16);
+assert.ok(graph.families.some(family => family.family_id === 'LISTENING_COMPREHENSION'));
+assert.ok(graph.families.some(family => family.family_id === 'SPEAKING_PERFORMANCE'));
+assert.equal(graph.skills.length, 76);
+assert.equal(items.length, 536);
+assert.equal(graph.item_mappings.length, 536);
 unique(graph.families.map(family => family.family_id), 'family ID');
 unique(graph.skills.map(skill => skill.id), 'skill ID');
 unique(graph.item_mappings.map(mapping => mapping.item_id), 'item mapping');
@@ -43,7 +50,7 @@ const familyIds = new Set(graph.families.map(family => family.family_id));
 const skillIds = new Set(graph.skills.map(skill => skill.id));
 const transferIds = new Set(graph.transfer_patterns.map(pattern => pattern.id));
 const itemIds = new Set(items.map(item => item.id));
-assert.equal(itemIds.size, 440);
+assert.equal(itemIds.size, 536);
 assert.equal(items.filter(item => item.id.startsWith('mm-')).length, 30);
 assert.equal(items.filter(item => item.id.startsWith('bcs-smartpath-')).length, 70);
 assert.equal(items.filter(item => item.id.startsWith('bcs-lit-candidate-')).length, 120);
