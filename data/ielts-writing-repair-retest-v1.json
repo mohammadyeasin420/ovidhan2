@@ -1,0 +1,701 @@
+{
+  "schema": "ovidhan-ielts-writing-repair-retest-v1",
+  "phase": "6N",
+  "content_origin": "OVIDHAN_CREATED",
+  "review_status": "CHATGPT_EDITORIALLY_REVIEWED",
+  "approved_source_sha256": "0756331D90A429F579EFBAEDA4785986CBCCC1C99B5679BFB1837B625A8626D2",
+  "official_ielts_questions": false,
+  "automatic_diagnosis": false,
+  "score_generation": false,
+  "raw_response_policy": "SESSION_MEMORY_ONLY",
+  "repair_codes": [
+    {
+      "order": 1,
+      "repair_code": "TASK_NOT_FULLY_ANSWERED",
+      "learner_label_en": "Not fully answering the task",
+      "learner_label_bn": "কাজ সম্পূর্ণ উত্তর দেওয়া হয়নি",
+      "explanation_en": "Make sure you answer every part of the question.  \nIf the prompt has two or three parts, cover them all.",
+      "explanation_bn": "প্রশ্নের প্রতিটি অংশের উত্তর দিতে হবে।  \nযদি প্রশ্নে দুই বা তিনটি অংশ থাকে, তাহলে সব কয়টি কভার করতে হবে।  \nকোনো অংশ বাদ দিলে পুরো প্রশ্নের উত্তর অসম্পূর্ণ থেকে যেতে পারে।",
+      "why_it_matters_bn": "প্রশ্নের সব নির্দেশনা কভার করা গুরুত্বপূর্ণ।  \nকোনো অংশ বাদ পড়লে উত্তর অসম্পূর্ণ থেকে যেতে পারে।",
+      "applicability": [
+        "ACADEMIC_TASK_1",
+        "ACADEMIC_TASK_2",
+        "GT_TASK_1",
+        "GT_TASK_2"
+      ],
+      "learner_self_check": [
+        "আমি কি প্রশ্নের সব অংশের উত্তর দিয়েছি?",
+        "কোনো নির্দেশনা কি বাদ পড়েছে?",
+        "যদি প্রশ্নে দুই বা তিনটি বুলেট পয়েন্ট থাকে, আমি কি সব কভার করেছি?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-task-notice",
+          "repair_code": "TASK_NOT_FULLY_ANSWERED",
+          "stage": "NOTICE",
+          "task_context": "Look at this General Training Task 1 prompt and a learner response. Identify which part of the task is missing.",
+          "instruction_en": "Read the prompt and the learner's answer. Then choose the part of the task that has not been answered.",
+          "instruction_bn": "প্রম্পট এবং শিক্ষার্থীর উত্তর পড়ুন। তারপর কাজের কোন অংশটির উত্তর দেওয়া হয়নি তা বেছে নিন।",
+          "content_markdown": "**Prompt (GT Task 1):**  \nYou have recently started a new job. Write a letter to your friend. In your letter:  \n- explain why you applied for this job  \n- describe the first day at work  \n- ask your friend to meet you next weekend  \n\n**Learner's answer:**  \n\"Dear friend, I started a new job last week. The first day was busy but I enjoyed it. Everyone was friendly. Could we meet next weekend? I would love to catch up.\"",
+          "learner_action": "Choose the missing part.",
+          "answer_or_check_markdown": "Correct answer: The learner did not explain why they applied for the job.  \n**why_correct_bn:**  \nপ্রম্পটে তিনটি অংশ ছিল: (১) চাকরির জন্য আবেদনের কারণ, (২) প্রথম দিনের বর্ণনা, (৩) বন্ধুকে আগামী সপ্তাহান্তে দেখা করতে বলা। শিক্ষার্থী প্রথম দিন বর্ণনা করেছে এবং দেখা করতে বলেছে, কিন্তু আবেদনের কারণ উল্লেখ করেনি। তাই এটি বাদ পড়েছে।  \n**why_other_options_fail_bn:**  \nঅন্য অংশগুলো (প্রথম দিন ও দেখা করার অনুরোধ) উপস্থিত ছিল, তাই সেগুলো বাদ পড়েনি।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-task-repair",
+          "repair_code": "TASK_NOT_FULLY_ANSWERED",
+          "stage": "REPAIR",
+          "task_context": "A Task 2 prompt with two parts.",
+          "instruction_en": "Read the Task 2 question and the learner's response. One part of the question has not been answered. Rewrite the response to include the missing part.",
+          "instruction_bn": "Task 2 প্রশ্ন এবং শিক্ষার্থীর উত্তর পড়ুন। প্রশ্নের একটি অংশের উত্তর দেওয়া হয়নি। উত্তরটি পুনরায় লিখুন যাতে বাদ পড়া অংশটি অন্তর্ভুক্ত থাকে।",
+          "content_markdown": "**Task 2 prompt:**  \nIn many countries, the gap between rich and poor is increasing. What are the main reasons for this? What measures can be taken to reduce this gap?\n\n**Learner's response:**  \n\"The main reason for the increasing gap is unequal access to education. Poor children cannot afford good schools, so they don't get well-paid jobs.\"",
+          "learner_action": "Write a revised response that includes both parts of the question.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you include reasons?  \n- Did you include measures?  \n- Did you develop each part with a short explanation?  \n\n**Acceptable features:**  \n- Mention of reasons (e.g., unequal education, economic policies, etc.)  \n- Mention of measures (e.g., government investment, progressive taxation, job creation, etc.)  \n- Each part has at least one sentence of explanation.  \n\n**Sample possible answer:**  \n\"The main reasons for the increasing gap are unequal access to education and tax policies that favour the rich. Without good education, poor people cannot get well-paid jobs. Also, regressive taxes put more burden on the poor. To reduce this gap, governments should invest in free education and healthcare, and implement progressive taxation to redistribute wealth fairly.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-task-retest",
+          "repair_code": "TASK_NOT_FULLY_ANSWERED",
+          "stage": "RETEST",
+          "task_context": "A GT Task 1 prompt with three bullet points.",
+          "instruction_en": "Below is a letter prompt with three required points. Write a short letter that covers all three points.",
+          "instruction_bn": "নিচে তিনটি অংশবিশিষ্ট একটি চিঠির প্রম্পট দেওয়া আছে। একটি সংক্ষিপ্ত চিঠি লিখুন যা তিনটি অংশই কভার করে।",
+          "content_markdown": "**Prompt:**  \nYou have bought a faulty product online. Write a letter to the company. In your letter:  \n- describe the product and the fault  \n- explain what you want them to do (refund or replacement)  \n- ask how to return the item",
+          "learner_action": "Write a short letter (around 60–80 words) covering all three points.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you describe the product and the fault?  \n- Did you state what you want (refund or replacement)?  \n- Did you ask about the return procedure?  \n\n**Acceptable features:**  \n- Clear description of the product and problem.  \n- Clear request (refund or replacement).  \n- A question about returning the item.  \n\n**Sample possible answer:**  \n\"Dear Customer Service, I bought a pair of headphones from your website last week. The left side does not work. I would like a full refund, please. Could you tell me how to return the item?\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "Before you start your next writing attempt, make a checklist of all the parts the prompt asks for. Tick them off as you write.",
+      "next_retry_action_bn": "পরের বার লেখার আগে, প্রশ্নের সব অংশের একটি চেকলিস্ট তৈরি করুন এবং লেখার সময় সেগুলো টিক দিন।"
+    },
+    {
+      "order": 2,
+      "repair_code": "OVERVIEW_MISSING",
+      "learner_label_en": "Missing an overview",
+      "learner_label_bn": "সারসংক্ষেপ অনুপস্থিত",
+      "explanation_en": "In Academic Task 1, you need a clear overview of the main trends or features.  \nAn overview is not a detail list – it is a summary of the big picture.",
+      "explanation_bn": "Academic Task 1-এ একটি স্পষ্ট সারসংক্ষেপ থাকা জরুরি।  \nসারসংক্ষেপ হলো মূল প্রবণতা বা বৈশিষ্ট্যের সংক্ষিপ্ত বিবরণ, পৃথক ডেটা পয়েন্টের তালিকা নয়।",
+      "why_it_matters_bn": "Task Achievement-এর অন্যতম মানদণ্ড হলো একটি ভালো overview।  \nএটি ছাড়া Task 1 অসম্পূর্ণ থাকে।",
+      "applicability": [
+        "ACADEMIC_TASK_1"
+      ],
+      "learner_self_check": [
+        "আমি কি সামগ্রিক প্রবণতা বা প্রধান বৈশিষ্ট্য উল্লেখ করেছি?",
+        "আমি কি সারসংক্ষেপকে প্রতিটি সংখ্যার তালিকায় পরিণত করেছি?",
+        "আমার সারসংক্ষেপ কি ডেটার পুরো ছবি তুলে ধরছে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-overview-notice",
+          "repair_code": "OVERVIEW_MISSING",
+          "stage": "NOTICE",
+          "task_context": "Look at a mini line chart and two possible overview sentences. Choose which one is a proper overview.",
+          "instruction_en": "Read the data and two sentences. Choose the one that gives a proper overview.",
+          "instruction_bn": "ডেটা ও দুটি বাক্য পড়ুন। কোনটি সঠিক সারসংক্ষেপ তা বেছে নিন।",
+          "content_markdown": "**Data:**  \nSales of a product (in thousands) from 2019 to 2023:  \n2019: 20, 2020: 22, 2021: 25, 2022: 28, 2023: 30\n\n**Sentence A:**  \nSales increased steadily from 20 to 30 over the five years.  \n**Sentence B:**  \nSales were 20 in 2019, 22 in 2020, 25 in 2021, 28 in 2022, and 30 in 2023.",
+          "learner_action": "Choose the correct overview.",
+          "answer_or_check_markdown": "Correct answer: Sentence A  \n**why_correct_bn:**  \nSentence A একটি সারসংক্ষেপ, কারণ এটি সামগ্রিক প্রবণতা (বৃদ্ধি) তুলে ধরেছে। Sentence B প্রতিটি বছর আলাদাভাবে উল্লেখ করছে, যা সারসংক্ষেপ নয়।  \n**why_other_options_fail_bn:**  \nSentence B প্রতিটি সংখ্যা উল্লেখ করেছে, যা বিশদ বর্ণনা, সারসংক্ষেপ নয়।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "Sentence A",
+              "label": "Sentence A: Sales increased steadily from 20 to 30 over the five years."
+            },
+            {
+              "value": "Sentence B",
+              "label": "Sentence B: Sales were 20 in 2019, 22 in 2020, 25 in 2021, 28 in 2022, and 30 in 2023."
+            }
+          ]
+        },
+        {
+          "activity_id": "6n-overview-repair",
+          "repair_code": "OVERVIEW_MISSING",
+          "stage": "REPAIR",
+          "task_context": "Given a mini bar chart, write a one-sentence overview.",
+          "instruction_en": "Look at the data below. Write one sentence that gives an overview of the main features.",
+          "instruction_bn": "নিচের ডেটা দেখুন। একটি বাক্যে প্রধান বৈশিষ্ট্যের সারসংক্ষেপ লিখুন।",
+          "content_markdown": "**Data:**  \nAverage weekly hours spent on different activities by adults in Country X:  \nWork: 40, Sleep: 56, Leisure: 20, Housework: 10, Other: 18",
+          "learner_action": "Write a one‑sentence overview.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Does it mention the highest and lowest categories?  \n- Does it avoid listing all numbers?  \n- Does it capture the key contrast (e.g., sleep and work are highest)?  \n\n**Acceptable features:**  \n- Mention of the top activities (sleep, work) and the lowest (housework).  \n- A comparison, e.g., \"Adults spend most time on sleep and work, while housework takes the least time.\"\n\n**Sample possible answer:**  \n\"Overall, adults spend the most time on sleep and work, with leisure and housework taking much less time.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-overview-retest",
+          "repair_code": "OVERVIEW_MISSING",
+          "stage": "RETEST",
+          "task_context": "Given a new data table, write a two-sentence overview.",
+          "instruction_en": "Write a two-sentence overview for the data below.",
+          "instruction_bn": "নিচের ডেটার জন্য দুই বাক্যের একটি সারসংক্ষেপ লিখুন।",
+          "content_markdown": "**Data:**  \nPercentage of household expenditure on different categories:  \nFood: 35%, Housing: 30%, Transport: 15%, Health: 10%, Entertainment: 10%",
+          "learner_action": "Write a two-sentence overview.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Does it highlight the largest and smallest categories?  \n- Does it avoid listing every percentage?  \n- Does it describe the overall pattern?  \n\n**Acceptable features:**  \n- Mention that food and housing are the largest categories.  \n- Mention that health and entertainment are the smallest.  \n\n**Sample possible answer:**  \n\"Overall, food and housing account for the largest share of household spending, together making up more than half of total expenditure. Health and entertainment, on the other hand, are the smallest categories.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "Before finishing your Task 1 response, check that you have clearly summarised the main patterns or features. Do not turn the overview into a list of every number.",
+      "next_retry_action_bn": "Task 1 লেখা শেষ করার আগে, মূল প্রবণতা বা বৈশিষ্ট্যগুলো স্পষ্টভাবে সারসংক্ষেপ করেছেন কিনা দেখুন। সারসংক্ষেপ যেন প্রতিটি সংখ্যার তালিকা না হয়।"
+    },
+    {
+      "order": 3,
+      "repair_code": "IMPORTANT_FEATURE_MISSED",
+      "learner_label_en": "Missing an important feature",
+      "learner_label_bn": "গুরুত্বপূর্ণ বৈশিষ্ট্য বাদ গেছে",
+      "explanation_en": "In Task 1, you need to select the most notable features – not every detail.  \nFocus on highest, lowest, biggest change, or major contrast.",
+      "explanation_bn": "Task 1-এ সবচেয়ে লক্ষণীয় বৈশিষ্ট্যগুলো নির্বাচন করতে হবে – প্রতিটি বিবরণ নয়।  \nসর্বোচ্চ, সর্বনিম্ন, সবচেয়ে বড় পরিবর্তন বা প্রধান পার্থক্যের ওপর ফোকাস করুন।",
+      "why_it_matters_bn": "সঠিক বৈশিষ্ট্য নির্বাচন Task Achievement-এর একটি গুরুত্বপূর্ণ অংশ।  \nপ্রাসঙ্গিক বৈশিষ্ট্য বাদ দিলে রিপোর্ট অসম্পূর্ণ থাকে।",
+      "applicability": [
+        "ACADEMIC_TASK_1"
+      ],
+      "learner_self_check": [
+        "আমি কি সবচেয়ে বেশি ও সবচেয়ে কম মান উল্লেখ করেছি?",
+        "আমি কি সবচেয়ে বড় পরিবর্তন বা প্রবণতা তুলে ধরেছি?",
+        "কোনো গুরুত্বপূর্ণ পার্থক্য বা তুলনা বাদ পড়েছে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-feature-notice",
+          "repair_code": "IMPORTANT_FEATURE_MISSED",
+          "stage": "NOTICE",
+          "task_context": "Look at a mini table and two descriptions. One misses an important feature.",
+          "instruction_en": "Read the data and two descriptions. Which description misses an important feature?",
+          "instruction_bn": "ডেটা ও দুটি বর্ণনা পড়ুন। কোন বর্ণনাটি একটি গুরুত্বপূর্ণ বৈশিষ্ট্য বাদ দিয়েছে?",
+          "content_markdown": "**Data:**  \nAverage monthly rainfall (mm) in City A and City B over six months:\n\nMonth | City A | City B\nJan | 50 | 60\nFeb | 60 | 70\nMar | 70 | 80\nApr | 80 | 90\nMay | 90 | 100\nJun | 100 | 110\n\n**Description 1:**  \nRainfall in both cities increased steadily from January to June. City B consistently received about 10 mm more rain than City A.\n\n**Description 2:**  \nRainfall in City A increased from 50 to 100 mm, and in City B from 60 to 110 mm. Both cities experienced a steady increase.",
+          "learner_action": "Choose which description misses an important feature.",
+          "answer_or_check_markdown": "Correct answer: Description 2  \n**why_correct_bn:**  \nDescription 1 তুলনাটি গুরুত্বপূর্ণভাবে উল্লেখ করেছে যে City B সবসময় City A-এর চেয়ে ১০ মিমি বেশি বৃষ্টি পেয়েছে, যা একটি গুরুত্বপূর্ণ বৈশিষ্ট্য। Description 2 শুধু পৃথক প্রবণতা বর্ণনা করেছে এবং তুলনাটি বাদ দিয়েছে।  \n**why_other_options_fail_bn:**  \nDescription 1 তুলনা ও প্রবণতা উভয়ই ধরেছে, তাই এটি বৈশিষ্ট্য বাদ দেয়নি।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "Description 1",
+              "label": "Description 1: Rainfall in both cities increased steadily from January to June. City B consistently received about 10 mm more rain than City A."
+            },
+            {
+              "value": "Description 2",
+              "label": "Description 2: Rainfall in City A increased from 50 to 100 mm, and in City B from 60 to 110 mm. Both cities experienced a steady increase."
+            }
+          ]
+        },
+        {
+          "activity_id": "6n-feature-repair",
+          "repair_code": "IMPORTANT_FEATURE_MISSED",
+          "stage": "REPAIR",
+          "task_context": "Given a bar chart data, write a sentence that adds the missing important feature.",
+          "instruction_en": "The following description misses an important feature. Write one sentence that adds the missing feature.",
+          "instruction_bn": "নিচের বর্ণনাটি একটি গুরুত্বপূর্ণ বৈশিষ্ট্য বাদ দিয়েছে। একটি বাক্য লিখুন যা বাদ পড়া বৈশিষ্ট্যটি যোগ করে।",
+          "content_markdown": "**Data:**  \nNumber of students (in hundreds) enrolled in three faculties in 2020 and 2023:\n\nFaculty | 2020 | 2023\nScience | 40 | 50\nArts | 30 | 35\nBusiness | 45 | 55\n\n**Current description:**  \nEnrolment increased in all three faculties from 2020 to 2023, with Business having the highest numbers in both years.",
+          "learner_action": "Write one sentence that adds a missing important feature.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Is the new feature genuinely important (e.g., biggest increase, lowest numbers)?  \n- Does it add new information not already stated?  \n\n**Acceptable features:**  \n- Mention that Science and Business had the joint-largest increase (+10 each).  \n- Mention that Arts had the smallest increase (+5).  \n\n**Sample possible answer:**  \n\"Science and Business recorded the joint-largest increase, with each rising by 1,000 students.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-feature-retest",
+          "repair_code": "IMPORTANT_FEATURE_MISSED",
+          "stage": "RETEST",
+          "task_context": "Given a new data table, identify the missing important feature in a description.",
+          "instruction_en": "Read the data and the description. Then choose the feature that was missed.",
+          "instruction_bn": "ডেটা ও বর্ণনাটি পড়ুন। তারপর বাদ পড়া বৈশিষ্ট্যটি বেছে নিন।",
+          "content_markdown": "**Data:**  \nMonthly visitors (in thousands) to a museum and a gallery in 2023:\n\nMonth | Museum | Gallery\nJan | 20 | 15\nFeb | 25 | 18\nMar | 30 | 20\nApr | 28 | 22\nMay | 35 | 25\n\n**Description:**  \nBoth the museum and the gallery saw an overall increase in visitors from January to May. The museum had higher visitor numbers than the gallery every month.\n\n**Which important feature was missed?**\n\nA. The museum reached a peak in April.  \nB. The gallery had its largest monthly increase in March.  \nC. The museum fell from 30 thousand visitors in March to 28 thousand in April, while gallery visitors continued to rise.  \nD. The number of museum visitors rose from March to April.",
+          "learner_action": "Choose the missed feature.",
+          "answer_or_check_markdown": "Correct answer: C  \n**why_correct_bn:**  \nবর্ণনাটি সামগ্রিক প্রবণতা ও তুলনা উল্লেখ করেছে, কিন্তু মার্চ থেকে এপ্রিলে জাদুঘরের দর্শনার্থী কমেছে (৩০ থেকে ২৮) এবং গ্যালারির দর্শনার্থী বেড়েছে (২০ থেকে ২২) – এটি একটি গুরুত্বপূর্ণ বৈশিষ্ট্য যা বাদ পড়েছে।  \n**why_other_options_fail_bn:**  \nA ভুল, কারণ জাদুঘরের সর্বোচ্চ মান মে মাসে ৩৫ হাজার, এপ্রিলে নয়। B ভুল, কারণ গ্যালারির সবচেয়ে বড় মাসিক বৃদ্ধি ছিল জানুয়ারি→ফেব্রুয়ারি এবং এপ্রিল→মে (+৩ হাজার), মার্চে নয়। D ভুল, কারণ জাদুঘরের দর্শনার্থী মার্চের ৩০ হাজার থেকে এপ্রিলে ২৮ হাজারে কমেছে, বাড়েনি। তাই C-ই একমাত্র সঠিক উত্তর।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "A",
+              "label": "A. The museum reached a peak in April.  "
+            },
+            {
+              "value": "B",
+              "label": "B. The gallery had its largest monthly increase in March.  "
+            },
+            {
+              "value": "C",
+              "label": "C. The museum fell from 30 thousand visitors in March to 28 thousand in April, while gallery visitors continued to rise.  "
+            },
+            {
+              "value": "D",
+              "label": "D. The number of museum visitors rose from March to April."
+            }
+          ]
+        }
+      ],
+      "next_retry_action_en": "Before you submit your Task 1 report, ask yourself: Have I mentioned the most notable point? Is there a highest/lowest or biggest change I should include?",
+      "next_retry_action_bn": "Task 1 জমা দেওয়ার আগে নিজেকে জিজ্ঞাসা করুন: আমি কি সবচেয়ে লক্ষণীয় বৈশিষ্ট্য উল্লেখ করেছি? কোন সর্বোচ্চ/সর্বনিম্ন বা সবচেয়ে বড় পরিবর্তন আছে যা যোগ করা উচিত?"
+    },
+    {
+      "order": 4,
+      "repair_code": "DATA_ERROR",
+      "learner_label_en": "Data error",
+      "learner_label_bn": "তথ্যগত ভুল",
+      "explanation_en": "Check that your numbers, units, years, and categories match the visual exactly.  \nEven a small data error makes the report less accurate.",
+      "explanation_bn": "আপনার উল্লেখিত সংখ্যা, একক, বছর ও বিভাগ যেন চার্ট/ডেটার সাথে মিলে যায় তা যাচাই করুন।  \nএকটি ছোট ভুলও রিপোর্টকে কম সঠিক করে তোলে।",
+      "why_it_matters_bn": "IELTS Task 1-এ সঠিক ডেটা রিপোর্ট করা গুরুত্বপূর্ণ। ভুল তথ্য দিলে বর্ণনাটি কম নির্ভুল ও বিভ্রান্তিকর হতে পারে।",
+      "applicability": [
+        "ACADEMIC_TASK_1"
+      ],
+      "learner_self_check": [
+        "আমি কি সঠিক সংখ্যা ব্যবহার করেছি?",
+        "আমি কি বছর/সময়কাল সঠিকভাবে উল্লেখ করেছি?",
+        "আমি কি বিভাগগুলোর নাম সঠিকভাবে লিখেছি?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-data-notice",
+          "repair_code": "DATA_ERROR",
+          "stage": "NOTICE",
+          "task_context": "A sentence contains a data error. Identify the error.",
+          "instruction_en": "Read the data and the sentence. Find the factual error.",
+          "instruction_bn": "ডেটা ও বাক্যটি পড়ুন। তথ্যগত ভুলটি খুঁজে বের করুন।",
+          "content_markdown": "**Data:**  \nSales figures (in millions) for a company in 2020 and 2021:\n2020: 45, 2021: 52\n\n**Sentence:**  \nSales increased from 45 million in 2020 to 54 million in 2021.",
+          "learner_action": "Choose the error.",
+          "answer_or_check_markdown": "Correct answer: The 2021 figure is wrong (52, not 54).  \n**why_correct_bn:**  \nডেটা অনুযায়ী ২০২১ সালের বিক্রয় ছিল ৫২ মিলিয়ন, কিন্তু বাক্যে ৫৪ বলা হয়েছে – এটি একটি সংখ্যাগত ভুল।  \n**why_other_options_fail_bn:**  \nঅন্য কোনো ভুল নেই; বছর ও একক সঠিক।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-data-repair",
+          "repair_code": "DATA_ERROR",
+          "stage": "REPAIR",
+          "task_context": "A sentence has a wrong number. Rewrite it correctly.",
+          "instruction_en": "The following sentence contains a data error. Rewrite it correctly.",
+          "instruction_bn": "নিচের বাক্যটিতে একটি তথ্যগত ভুল আছে। এটি সঠিকভাবে পুনরায় লিখুন।",
+          "content_markdown": "**Data:**  \nPercentage of people who use public transport by age group:  \n18-25: 40%, 26-35: 35%, 36-50: 25%, 51+: 20%\n\n**Wrong sentence:**  \nThe highest use of public transport is among the 26-35 age group, at 35%.",
+          "learner_action": "Write the corrected sentence.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you identify the correct highest group?  \n- Did you use the correct percentage?  \n\n**Acceptable features:**  \n- Mention that the 18-25 age group has the highest use (40%).  \n\n**Sample possible answer:**  \n\"The highest use of public transport is among the 18-25 age group, at 40%.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-data-retest",
+          "repair_code": "DATA_ERROR",
+          "stage": "RETEST",
+          "task_context": "A description has a reversed comparison error. Identify it.",
+          "instruction_en": "Read the data and the sentence. Choose the error.",
+          "instruction_bn": "ডেটা ও বাক্যটি পড়ুন। ভুলটি বেছে নিন।",
+          "content_markdown": "**Data:**  \nAverage temperatures (°C) in City X and City Y over four months:  \nMonth | City X | City Y\nJan | 12 | 15\nFeb | 14 | 18\nMar | 16 | 20\nApr | 18 | 22\n\n**Sentence:**  \nCity X was consistently warmer than City Y throughout the period.",
+          "learner_action": "Choose the error.",
+          "answer_or_check_markdown": "Correct answer: The comparison is reversed; City Y is warmer.  \n**why_correct_bn:**  \nডেটায় City Y-এর তাপমাত্রা প্রতিটি মাসে City X-এর চেয়ে বেশি। তাই বাক্যটি উল্টো বলছে।  \n**why_other_options_fail_bn:**  \nবছর, একক বা অন্যান্য কোনো ভুল নেই; শুধু তুলনা ভুল।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "After writing your Task 1 report, check every number and comparison against the visual. Use a highlighter if needed.",
+      "next_retry_action_bn": "Task 1 রিপোর্ট লেখার পর, প্রতিটি সংখ্যা ও তুলনা চার্টের সাথে যাচাই করুন। প্রয়োজনে হাইলাইটার ব্যবহার করুন।"
+    },
+    {
+      "order": 5,
+      "repair_code": "POSITION_UNCLEAR",
+      "learner_label_en": "Position unclear",
+      "learner_label_bn": "অবস্থান অস্পষ্ট",
+      "explanation_en": "When the question asks for your opinion, make it clear from the start and keep it consistent.  \nIf the question does not ask for an opinion, do not force one.",
+      "explanation_bn": "যখন প্রশ্ন আপনার মতামত চায়, তখন শুরুতে স্পষ্টভাবে জানান এবং শেষ পর্যন্ত তা ধরে রাখুন।  \nযদি প্রশ্নে মতামত না চায়, তাহলে জোর করে মতামত দেবেন না।",
+      "why_it_matters_bn": "Task Response-এ একটি স্পষ্ট অবস্থান থাকা গুরুত্বপূর্ণ, তবে তা শুধুমাত্র যখন প্রশ্নে চাওয়া হয়।",
+      "applicability": [
+        "ACADEMIC_TASK_2",
+        "GT_TASK_2"
+      ],
+      "learner_self_check": [
+        "প্রশ্নে কি আমার মতামত চাওয়া হয়েছে?",
+        "যদি চাওয়া হয়ে থাকে, আমি কি শুরুতে স্পষ্টভাবে বলেছি?",
+        "আমার পুরো লেখায় কি সেই অবস্থান বজায় আছে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-position-notice",
+          "repair_code": "POSITION_UNCLEAR",
+          "stage": "NOTICE",
+          "task_context": "Two thesis statements – one clear, one unclear.",
+          "instruction_en": "Read the two thesis statements. Choose the one that is clear.",
+          "instruction_bn": "দুটি থিসিস বাক্য পড়ুন। কোনটি স্পষ্ট তা বেছে নিন।",
+          "content_markdown": "**Prompt:**  \nSome people think that schools should teach practical skills. To what extent do you agree or disagree?\n\n**Thesis A:**  \nThere are different views about whether schools should teach practical skills, and this essay will discuss the issue.\n\n**Thesis B:**  \nWhile I acknowledge the value of academic subjects, I strongly agree that schools should include practical skills because they prepare students for adult life.",
+          "learner_action": "Choose the clearer thesis.",
+          "answer_or_check_markdown": "Correct answer: Thesis B  \n**why_correct_bn:**  \nThesis B স্পষ্টভাবে অবস্থান জানায় (strongly agree) এবং একটি কারণ দেয়। Thesis A কোনো স্পষ্ট অবস্থান নেয়নি, শুধু আলোচনা করবে বলে জানিয়েছে।  \n**why_other_options_fail_bn:**  \nThesis A-তে মতামত স্পষ্ট নয়; এটি শুধু আলোচনার কথা বলেছে।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "Thesis A",
+              "label": "Thesis A: There are different views about whether schools should teach practical skills, and this essay will discuss the issue."
+            },
+            {
+              "value": "Thesis B",
+              "label": "Thesis B: While I acknowledge the value of academic subjects, I strongly agree that schools should include practical skills because they prepare students for adult life."
+            }
+          ]
+        },
+        {
+          "activity_id": "6n-position-repair",
+          "repair_code": "POSITION_UNCLEAR",
+          "stage": "REPAIR",
+          "task_context": "A thesis statement is vague. Rewrite it to be clearer.",
+          "instruction_en": "The following thesis is unclear. Rewrite it to make the position clear.",
+          "instruction_bn": "নিচের থিসিসটি অস্পষ্ট। অবস্থান স্পষ্ট করতে এটি পুনরায় লিখুন।",
+          "content_markdown": "**Prompt:**  \nSome people believe that advertising should be banned, while others think it is acceptable. Discuss both views and give your opinion.\n\n**Original thesis:**  \nBoth sides have good points, and I think there are arguments for and against advertising.",
+          "learner_action": "Write a clearer thesis statement.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Does it state a clear opinion?  \n- Does it acknowledge both views?  \n\n**Acceptable features:**  \n- A clear position (e.g., \"I believe advertising should be regulated but not banned\").  \n- Acknowledgment of both sides.\n\n**Sample possible answer:**  \n\"While advertising has clear benefits for businesses, I believe that some forms, especially those targeting children, should be regulated to protect vulnerable audiences.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-position-retest",
+          "repair_code": "POSITION_UNCLEAR",
+          "stage": "RETEST",
+          "task_context": "A question that does NOT require an opinion.",
+          "instruction_en": "Read the prompt and the question. Is a personal opinion required?",
+          "instruction_bn": "প্রম্পট ও প্রশ্নটি পড়ুন। এই প্রশ্নের জন্য একটি ব্যক্তিগত মতামত দেওয়া প্রয়োজন?",
+          "content_markdown": "**Prompt:**  \nWhat are the advantages and disadvantages of online shopping?\n\n**Question:**  \nIs a personal opinion required by this prompt?",
+          "learner_action": "Choose the correct answer.",
+          "answer_or_check_markdown": "Correct answer: No  \n**why_correct_bn:**  \nপ্রম্পটে সুবিধা ও অসুবিধা আলোচনা করতে বলা হয়েছে, মতামত চাওয়া হয়নি। তাই ব্যক্তিগত মতামত দেওয়া প্রয়োজন নয়।  \n**why_other_options_fail_bn:**  \nহ্যাঁ – এটি সঠিক নয়, কারণ প্রশ্নে মতামতের কোনো নির্দেশনা নেই।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "Before you start, identify whether the question asks for your opinion. If it does, make your position clear. If it does not, focus on the parts the prompt actually asks you to discuss; a personal opinion is not required.",
+      "next_retry_action_bn": "লেখা শুরু করার আগে দেখুন প্রশ্নে আপনার মতামত চাওয়া হয়েছে কিনা। চাওয়া হলে অবস্থান স্পষ্ট করুন। না চাওয়া হলে প্রশ্নে যে অংশগুলো আলোচনা করতে বলা হয়েছে সেগুলোতেই ফোকাস করুন; ব্যক্তিগত মতামত দেওয়া বাধ্যতামূলক নয়।"
+    },
+    {
+      "order": 6,
+      "repair_code": "IDEA_NOT_DEVELOPED",
+      "learner_label_en": "Idea not developed",
+      "learner_label_bn": "ধারণা বিকশিত হয়নি",
+      "explanation_en": "Don't just state an idea – explain it and add a reason, support, or relevant example where useful.  \nUse: point → explain → support.",
+      "explanation_bn": "শুধু ধারণা বললেই হয় না – তা ব্যাখ্যা করুন এবং প্রয়োজন অনুযায়ী কারণ, সমর্থন বা প্রাসঙ্গিক উদাহরণ যোগ করুন।  \nপদ্ধতি: point → explain → support।",
+      "why_it_matters_bn": "IELTS Task Response-এ যুক্তি ও উদাহরণ দিয়ে ধারণা বিকাশ করতে হয়। যুক্তি যথেষ্ট বিকশিত না হলে উত্তর অসম্পূর্ণ বা অস্পষ্ট হতে পারে।",
+      "applicability": [
+        "ACADEMIC_TASK_2",
+        "GT_TASK_2"
+      ],
+      "learner_self_check": [
+        "আমি কি শুধু একটি বক্তব্য দিয়েছি, নাকি ব্যাখ্যা দিয়েছি?",
+        "আমি কি প্রয়োজন অনুযায়ী কারণ, সমর্থন বা প্রাসঙ্গিক উদাহরণ দিয়েছি?",
+        "আমার ব্যাখ্যা কি ধারণাটিকে স্পষ্ট করছে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-idea-notice",
+          "repair_code": "IDEA_NOT_DEVELOPED",
+          "stage": "NOTICE",
+          "task_context": "Two versions of the same idea – one developed, one not.",
+          "instruction_en": "Read the two versions. Which one develops the idea?",
+          "instruction_bn": "দুটি সংস্করণ পড়ুন। কোনটি ধারণাটি বিকশিত করেছে?",
+          "content_markdown": "**Topic:** Studying abroad broadens the mind.\n\n**Version A:**  \nStudying abroad broadens the mind because it exposes you to new cultures and ways of thinking. For example, living in a different country helps you understand diverse perspectives.\n\n**Version B:**  \nStudying abroad broadens the mind. It is very beneficial.",
+          "learner_action": "Choose the developed version.",
+          "answer_or_check_markdown": "Correct answer: Version A  \n**why_correct_bn:**  \nVersion A ধারণাটি ব্যাখ্যা করেছে (exposes you to new cultures) এবং একটি উদাহরণ দিয়েছে। Version B শুধু বক্তব্য দিয়েছে, কোনো ব্যাখ্যা বা উদাহরণ নেই।  \n**why_other_options_fail_bn:**  \nVersion B অত্যন্ত সংক্ষিপ্ত এবং কোনো বিকাশ ঘটায়নি।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "Version A",
+              "label": "Version A: Studying abroad broadens the mind because it exposes you to new cultures and ways of thinking. For example, living in a different country helps you understand diverse perspectives."
+            },
+            {
+              "value": "Version B",
+              "label": "Version B: Studying abroad broadens the mind. It is very beneficial."
+            }
+          ]
+        },
+        {
+          "activity_id": "6n-idea-repair",
+          "repair_code": "IDEA_NOT_DEVELOPED",
+          "stage": "REPAIR",
+          "task_context": "A sentence has only a point. Add a sentence that develops it.",
+          "instruction_en": "The following sentence is a point without development. Add one or two sentences that explain or support it.",
+          "instruction_bn": "নিচের বাক্যটি শুধু একটি বক্তব্য, কোনো বিকাশ নেই। এক বা দুই বাক্য যোগ করুন যা ব্যাখ্যা বা সমর্থন করে।",
+          "content_markdown": "**Point:**  \nExercise is good for mental health.",
+          "learner_action": "Write 1–2 sentences that develop this point.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you explain why exercise improves mental health?  \n- Did you add a reason, support, or relevant example where useful?  \n\n**Acceptable features:**  \n- Explanation (e.g., reduces stress or gives a mental break).  \n- Support/example where useful (e.g., a short walk after work).  \n\n**Sample possible answer:**  \n\"Exercise can reduce stress by giving people a break from daily pressure and helping them feel more energetic. For example, a short walk after work can help someone relax.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-idea-retest",
+          "repair_code": "IDEA_NOT_DEVELOPED",
+          "stage": "RETEST",
+          "task_context": "A paragraph has three points; one is not developed.",
+          "instruction_en": "Read the paragraph. Which point is not developed?",
+          "instruction_bn": "অনুচ্ছেদটি পড়ুন। কোন পয়েন্টটি বিকশিত হয়নি?",
+          "content_markdown": "**Paragraph:**  \n\"Firstly, learning a second language improves job prospects. Many international companies prefer bilingual employees. Secondly, it can strengthen cognitive abilities because switching between languages makes learners practise attention and mental flexibility. Thirdly, it allows you to travel more easily.\"",
+          "learner_action": "Choose the point that is not developed.",
+          "answer_or_check_markdown": "Correct answer: Third point – \"it allows you to travel more easily.\"  \n**why_correct_bn:**  \nপ্রথম পয়েন্ট (job prospects) ব্যাখ্যা ও উদাহরণ পেয়েছে (Many international companies...)। দ্বিতীয় পয়েন্ট (cognitive abilities) ব্যাখ্যা পেয়েছে (switching between languages... helps attention and flexibility)। তৃতীয়টি শুধু বক্তব্য, কোনো ব্যাখ্যা বা উদাহরণ নেই।  \n**why_other_options_fail_bn:**  \nপ্রথম ও দ্বিতীয় পয়েন্ট বিকশিত হয়েছে, শুধু তৃতীয়টি বিকশিত হয়নি।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "After you write a main idea, ask yourself: Have I explained or supported it clearly? If not, add a sentence with a reason, explanation, or relevant example.",
+      "next_retry_action_bn": "মূল ধারণা লেখার পর নিজেকে জিজ্ঞাসা করুন: আমি কি সেটি পরিষ্কারভাবে ব্যাখ্যা বা সমর্থন করেছি? না হলে কারণ, ব্যাখ্যা বা প্রাসঙ্গিক উদাহরণ দিয়ে একটি বাক্য যোগ করুন।"
+    },
+    {
+      "order": 7,
+      "repair_code": "PARAGRAPH_ORGANISATION",
+      "learner_label_en": "Paragraph organisation",
+      "learner_label_bn": "অনুচ্ছেদ বিন্যাস",
+      "explanation_en": "Each paragraph should have one clear purpose or main focus.  \nKeep related points together and start a new paragraph when the focus changes.",
+      "explanation_bn": "প্রতি অনুচ্ছেদে একটি স্পষ্ট উদ্দেশ্য বা মূল ফোকাস থাকা উচিত।  \nসম্পর্কিত পয়েন্টগুলো একসাথে রাখুন এবং ফোকাস বদলালে নতুন অনুচ্ছেদ শুরু করুন।",
+      "why_it_matters_bn": "সুসংগঠিত অনুচ্ছেদ Coherence & Cohesion-এর জন্য গুরুত্বপূর্ণ।  \nপাঠক সহজেই আপনার যুক্তি অনুসরণ করতে পারে।",
+      "applicability": [
+        "ACADEMIC_TASK_1",
+        "ACADEMIC_TASK_2",
+        "GT_TASK_1",
+        "GT_TASK_2"
+      ],
+      "learner_self_check": [
+        "প্রতিটি অনুচ্ছেদের কি একটি স্পষ্ট উদ্দেশ্য বা মূল ফোকাস আছে?",
+        "আমি কি নতুন ধারণা শুরু করার সময় নতুন অনুচ্ছেদ শুরু করেছি?",
+        "অনুচ্ছেদগুলোর মধ্যে কি যৌক্তিক ক্রম আছে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-organisation-notice",
+          "repair_code": "PARAGRAPH_ORGANISATION",
+          "stage": "NOTICE",
+          "task_context": "This body paragraph is intended to explain advantages of online learning only, but it mixes different purposes. Identify the organisation problem.",
+          "instruction_en": "Read the paragraph. What is the main organisation problem?",
+          "instruction_bn": "অনুচ্ছেদটি পড়ুন। প্রধান বিন্যাস সমস্যাটি কী?",
+          "content_markdown": "**Paragraph (intended purpose: advantages of online learning):**  \n\"Online learning offers flexibility for students. They can study at their own pace and choose their own schedule. However, it also reduces face-to-face interaction with teachers. Many students also find it hard to stay motivated without a fixed timetable. Furthermore, online courses are often cheaper than traditional classes.\"",
+          "learner_action": "Choose the problem.",
+          "answer_or_check_markdown": "Correct answer: The paragraph does not stay with its intended purpose; it mixes advantages and disadvantages.  \n**why_correct_bn:**  \nএই body paragraph-এর উদ্দেশ্য ছিল শুধু সুবিধা ব্যাখ্যা করা, কিন্তু এতে সুবিধা (flexibility, cheaper) ও অসুবিধা (reduced interaction, motivation difficulty) একসাথে এসেছে। তাই paragraph-এর উদ্দেশ্য বদলে গেছে।  \n**why_other_options_fail_bn:**  \nঅন্যান্য সমস্যা যেমন বানান বা ব্যাকরণ নেই; মূল সমস্যা হলো অনুচ্ছেদের ঐক্য।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-organisation-repair",
+          "repair_code": "PARAGRAPH_ORGANISATION",
+          "stage": "REPAIR",
+          "task_context": "A jumbled set of sentences needs to be grouped into two paragraphs.",
+          "instruction_en": "The following sentences belong to two paragraphs. Group them into two logical paragraphs.",
+          "instruction_bn": "নিচের বাক্যগুলো দুইটি অনুচ্ছেদের। এগুলোকে দুইটি যৌক্তিক অনুচ্ছেদে সাজান।",
+          "content_markdown": "**Sentences:**  \nA. Firstly, recycling reduces waste in landfills.  \nB. On the other hand, reducing consumption can prevent waste before it is created.  \nC. Recycling also saves energy and resources.  \nD. Buying fewer unnecessary products reduces the amount of waste that needs recycling.  \nE. Therefore, combining lower consumption with recycling can address waste in two ways.",
+          "learner_action": "Group the sentences into two paragraphs (indicate which sentences go together).",
+          "answer_or_check_markdown": "**Checklist:**  \n- One paragraph about recycling (A, C).  \n- One paragraph about reducing consumption (B, D, E).  \n\n**Acceptable grouping:**  \nParagraph 1: A, C  \nParagraph 2: B, D, E  \n\n**Sample grouping:**  \nParagraph 1: \"Firstly, recycling reduces waste in landfills. Recycling also saves energy and resources.\"  \nParagraph 2: \"On the other hand, reducing consumption can prevent waste before it is created. Buying fewer unnecessary products reduces the amount of waste that needs recycling. Therefore, combining lower consumption with recycling can address waste in two ways.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-organisation-retest",
+          "repair_code": "PARAGRAPH_ORGANISATION",
+          "stage": "RETEST",
+          "task_context": "A paragraph has mixed ideas. Choose the better reorganised version.",
+          "instruction_en": "Read the paragraph and two reorganised versions. Choose the version that improves organisation.",
+          "instruction_bn": "অনুচ্ছেদ এবং দুটি পুনর্বিন্যাসকৃত সংস্করণ পড়ুন। কোন সংস্করণটি বিন্যাস উন্নত করে?",
+          "content_markdown": "**Original paragraph:**  \n\"Public transport is cheaper than driving. It also reduces traffic congestion. However, it can be crowded and unreliable. Many people prefer cars for convenience. But public transport is better for the environment.\"\n\n**Version 1:**  \n\"Public transport is cheaper than driving. However, it can be crowded. It also reduces traffic congestion. Many people prefer cars for convenience. Public transport is better for the environment, although it can also be unreliable.\"\n\n**Version 2:**  \n\"Public transport has several advantages: it is cheaper, reduces congestion, and is better for the environment. However, it also has drawbacks: it can be crowded and unreliable, which is why many people prefer cars.\"",
+          "learner_action": "Choose the better version.",
+          "answer_or_check_markdown": "Correct answer: Version 2  \n**why_correct_bn:**  \nVersion 2 সুবিধা এবং অসুবিধা আলাদা করে স্পষ্টভাবে উপস্থাপন করেছে, যা সংগঠিত। Version 1-এ সুবিধা ও অসুবিধা মিশে আছে।  \n**why_other_options_fail_bn:**  \nVersion 1 সুবিধা ও অসুবিধার পয়েন্টগুলো বারবার পাল্টে দিয়েছে, তাই মূল ফোকাস অনুসরণ করা কঠিন। Version 2 সুবিধাগুলো একসাথে এবং অসুবিধাগুলো একসাথে রেখেছে।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "Version 1",
+              "label": "Version 1: \"Public transport is cheaper than driving. However, it can be crowded. It also reduces traffic congestion. Many people prefer cars for convenience. Public transport is better for the environment, although it can also be unreliable.\""
+            },
+            {
+              "value": "Version 2",
+              "label": "Version 2: \"Public transport has several advantages: it is cheaper, reduces congestion, and is better for the environment. However, it also has drawbacks: it can be crowded and unreliable, which is why many people prefer cars.\""
+            }
+          ]
+        }
+      ],
+      "next_retry_action_en": "After writing, check whether each paragraph has one clear purpose or focus. If the paragraph shifts to a different purpose, consider starting a new paragraph.",
+      "next_retry_action_bn": "লেখার পর দেখুন প্রতিটি অনুচ্ছেদের একটি স্পষ্ট উদ্দেশ্য বা ফোকাস আছে কিনা। ফোকাস অন্য দিকে চলে গেলে নতুন অনুচ্ছেদ শুরু করার কথা ভাবুন।"
+    },
+    {
+      "order": 8,
+      "repair_code": "LINKING_PROBLEM",
+      "learner_label_en": "Linking problem",
+      "learner_label_bn": "সংযোগ সমস্যা",
+      "explanation_en": "Use linking words to show the relationship between ideas.  \nDon't overuse them – sometimes a simple pronoun or natural flow is enough.",
+      "explanation_bn": "ধারণার মধ্যে সম্পর্ক দেখাতে সংযোগক শব্দ ব্যবহার করুন।  \nঅতিরিক্ত ব্যবহার করবেন না – কখনো কখনো সরল pronoun বা স্বাভাবিক প্রবাহই যথেষ্ট।",
+      "why_it_matters_bn": "সঠিক linking Coherence & Cohesion-এর জন্য গুরুত্বপূর্ণ।  \nঅতিরিক্ত linking শব্দ অপ্রাকৃতিক শোনায়।",
+      "applicability": [
+        "ACADEMIC_TASK_1",
+        "ACADEMIC_TASK_2",
+        "GT_TASK_1",
+        "GT_TASK_2"
+      ],
+      "learner_self_check": [
+        "আমার বাক্যের মধ্যে কি যৌক্তিক সংযোগ আছে?",
+        "আমি কি খুব বেশি linking শব্দ ব্যবহার করেছি?",
+        "অপ্রয়োজনীয় পুনরাবৃত্তি কমাতে pronoun বা reference ব্যবহার করা কি উপকারী হবে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-linking-notice",
+          "repair_code": "LINKING_PROBLEM",
+          "stage": "NOTICE",
+          "task_context": "A sentence uses an unnecessary linking word.",
+          "instruction_en": "Read the sentence. Which linking word is unnecessary?",
+          "instruction_bn": "বাক্যটি পড়ুন। কোন linking শব্দটি অপ্রয়োজনীয়?",
+          "content_markdown": "**Sentence:**  \n\"Sales increased last year. However, profits also increased.\"",
+          "learner_action": "Choose the unnecessary linking word.",
+          "answer_or_check_markdown": "Correct answer: However  \n**why_correct_bn:**  \nপ্রথম বাক্যে sales বেড়েছে এবং দ্বিতীয় বাক্যে profits-ও বেড়েছে; এখানে contrast নেই। তাই \"However\" অপ্রয়োজনীয়। সাধারণ সংযোজন হিসেবে \"and\" বা \"also\" যথেষ্ট।  \n**why_other_options_fail_bn:**  \n\"also\" একই ধরনের আরেকটি বৃদ্ধি যোগ করছে, তাই এটি অর্থের সাথে মানানসই। মূল সমস্যা হলো contrast না থাকা সত্ত্বেও \"However\" ব্যবহার করা।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-linking-repair",
+          "repair_code": "LINKING_PROBLEM",
+          "stage": "REPAIR",
+          "task_context": "A paragraph lacks linking. Add appropriate linking words or pronouns.",
+          "instruction_en": "The following paragraph has no linking between sentences. Add suitable linking words or pronouns to improve flow.",
+          "instruction_bn": "নিচের অনুচ্ছেদে বাক্যগুলোর মধ্যে কোনো সংযোগ নেই। প্রবাহ উন্নত করতে উপযুক্ত linking শব্দ বা pronoun যোগ করুন।",
+          "content_markdown": "**Paragraph:**  \n\"Many people use smartphones daily. Smartphones are useful for communication. Smartphones can also be distracting. People need to manage smartphone use wisely.\"",
+          "learner_action": "Rewrite the paragraph with appropriate linking.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you use pronouns to avoid repetition (e.g., \"they\", \"them\")?  \n- Did you use linking words to show contrast or addition?  \n\n**Acceptable features:**  \n- Replacing repeated \"smartphones\" with \"they\" or \"them\".  \n- Adding linking words like \"however\" or \"but\" for contrast.  \n\n**Sample possible answer:**  \n\"Many people use smartphones daily. They are useful for communication, but they can also be distracting. Therefore, people need to manage their smartphone use wisely.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-linking-retest",
+          "repair_code": "LINKING_PROBLEM",
+          "stage": "RETEST",
+          "task_context": "A short text has overused linking words. Identify the problem.",
+          "instruction_en": "Read the text. What is the main linking problem?",
+          "instruction_bn": "লেখাটি পড়ুন। প্রধান linking সমস্যাটি কী?",
+          "content_markdown": "**Text:**  \n\"Firstly, online learning is convenient. Moreover, it saves time. In addition, it is flexible. However, it lacks face-to-face interaction. Furthermore, it can be isolating. Therefore, students should find a balance.\"",
+          "learner_action": "Choose the problem.",
+          "answer_or_check_markdown": "Correct answer: Overuse of linking words makes the text unnatural.  \n**why_correct_bn:**  \nপ্রতি বাক্যে একটি linking word ব্যবহার করা হয়েছে (Firstly, Moreover, In addition, However, Furthermore, Therefore), যা অপ্রাকৃতিক। কিছু বাক্যে linking ছাড়াই চলতে পারে।  \n**why_other_options_fail_bn:**  \nঅন্যান্য সমস্যা যেমন বানান বা ব্যাকরণ নেই; প্রধান সমস্যা অতিরিক্ত linking।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "When you revise, read your writing aloud. If you hear too many linking words, remove some and let the ideas flow naturally.",
+      "next_retry_action_bn": "পুনরায় পড়ার সময় জোরে জোরে পড়ুন। যদি অনেক linking শব্দ শুনতে পান, তাহলে কিছু বাদ দিন এবং ধারণাগুলো স্বাভাবিকভাবে প্রবাহিত হতে দিন।"
+    },
+    {
+      "order": 9,
+      "repair_code": "WORD_CHOICE",
+      "learner_label_en": "Word choice",
+      "learner_label_bn": "শব্দ চয়ন",
+      "explanation_en": "Choose words that are natural and precise.  \nAvoid unnatural collocations and imprecise vocabulary.",
+      "explanation_bn": "স্বাভাবিক ও সঠিক শব্দ বেছে নিন।  \nঅপ্রাকৃতিক সংমিশ্রণ ও অস্পষ্ট শব্দ এড়িয়ে চলুন।",
+      "why_it_matters_bn": "Lexical Resource-এ প্রাকৃতিক ও সঠিক শব্দ ব্যবহার গুরুত্বপূর্ণ।  \nঅপ্রাকৃতিক শব্দ চয়ন অর্থ অস্পষ্ট করতে পারে।",
+      "applicability": [
+        "ACADEMIC_TASK_1",
+        "ACADEMIC_TASK_2",
+        "GT_TASK_1",
+        "GT_TASK_2"
+      ],
+      "learner_self_check": [
+        "শব্দগুলো কি প্রসঙ্গের সাথে মানানসই?",
+        "আমি কি এমন শব্দ ব্যবহার করেছি যা আমি নিশ্চিতভাবে জানি?",
+        "আমার লেখায় কি কোনো অপ্রাকৃতিক সংমিশ্রণ আছে?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-word-notice",
+          "repair_code": "WORD_CHOICE",
+          "stage": "NOTICE",
+          "task_context": "A sentence uses a word in an unnatural collocation.",
+          "instruction_en": "Read the sentence. Identify the lexical choice problem.",
+          "instruction_bn": "বাক্যটি পড়ুন। শব্দ চয়নের সমস্যাটি চিহ্নিত করুন।",
+          "content_markdown": "**Sentence:**  \n\"The government should make more attention to teacher training.\"",
+          "learner_action": "Choose the problematic word.",
+          "answer_or_check_markdown": "Correct answer: \"make\"  \n**why_correct_bn:**  \nইংরেজিতে স্বাভাবিক collocation হলো \"pay attention\", \"make attention\" নয়। তাই এখানে \"make\" বদলে \"pay\" ব্যবহার করতে হবে।  \n**why_other_options_fail_bn:**  \n\"more attention\" এবং \"teacher training\" এই প্রসঙ্গে ঠিক আছে; সমস্যা হলো verb + noun collocation।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-word-repair",
+          "repair_code": "WORD_CHOICE",
+          "stage": "REPAIR",
+          "task_context": "A sentence uses an unnatural verb. Rewrite it with a more natural verb.",
+          "instruction_en": "The following sentence uses an unnatural verb. Replace it with a more natural word.",
+          "instruction_bn": "নিচের বাক্যটি একটি অপ্রাকৃত ক্রিয়া ব্যবহার করেছে। এটিকে আরও স্বাভাবিক শব্দ দিয়ে প্রতিস্থাপন করুন।",
+          "content_markdown": "**Sentence:**  \n\"The new policy will grow the quality of public transport.\"",
+          "learner_action": "Rewrite the sentence with a more natural verb.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you replace 'grow' with a more natural verb?  \n- Is the revised sentence clearer?  \n\n**Acceptable features:**  \n- Using 'improve' or 'help improve'.  \n\n**Sample possible answer:**  \n\"The new policy will improve the quality of public transport.\" or \"The new policy will help improve public transport.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-word-retest",
+          "repair_code": "WORD_CHOICE",
+          "stage": "RETEST",
+          "task_context": "A sentence has two options for the underlined word. Choose the more natural one.",
+          "instruction_en": "Read the sentence and the two options. Choose the more natural word.",
+          "instruction_bn": "বাক্য ও দুটি বিকল্প পড়ুন। আরও স্বাভাবিক শব্দটি বেছে নিন।",
+          "content_markdown": "**Sentence:**  \n\"The company's profits ______ significantly last year.\"\n\n**Options:**  \nA. increased  \nB. augmented",
+          "learner_action": "Choose the better option.",
+          "answer_or_check_markdown": "Correct answer: A (increased)  \n**why_correct_bn:**  \n'Increased' একটি সাধারণ ও স্বাভাবিক শব্দ। 'Augment' সাধারণত transitive হিসেবে ব্যবহৃত হয় (যেমন: \"The company augmented its revenue with a new service\") এবং এখানে প্রাকৃতিক নয়।  \n**why_other_options_fail_bn:**  \n'Augmented' অস্বাভাবিক এবং এখানে অপ্রাকৃতিক।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": [
+            {
+              "value": "A",
+              "label": "A. increased  "
+            },
+            {
+              "value": "B",
+              "label": "B. augmented"
+            }
+          ]
+        }
+      ],
+      "next_retry_action_en": "Stick to words you are confident about. If you are unsure, use a simpler alternative.",
+      "next_retry_action_bn": "যে শব্দগুলো সম্পর্কে আপনি নিশ্চিত, সেগুলো ব্যবহার করুন। অনিশ্চিত হলে সরল বিকল্প ব্যবহার করুন।"
+    },
+    {
+      "order": 10,
+      "repair_code": "GRAMMAR_CHECK_NEEDED",
+      "learner_label_en": "Grammar check needed",
+      "learner_label_bn": "ব্যাকরণ পরীক্ষা প্রয়োজন",
+      "explanation_en": "A final check for common errors: subject‑verb agreement, tense, articles, plurals, and complete sentences.",
+      "explanation_bn": "সাধারণ ভুলগুলোর একটি চূড়ান্ত পরীক্ষা: subject‑verb agreement, tense, article, plural ও সম্পূর্ণ বাক্য।",
+      "why_it_matters_bn": "Grammatical accuracy IELTS Writing-এর অন্যতম মানদণ্ড।  \nছোট ব্যাকরণগত ভুল অর্থ বা স্পষ্টতা নষ্ট করতে পারে।",
+      "applicability": [
+        "ACADEMIC_TASK_1",
+        "ACADEMIC_TASK_2",
+        "GT_TASK_1",
+        "GT_TASK_2"
+      ],
+      "learner_self_check": [
+        "আমি কি subject এবং verb-এর মিল ঠিক করেছি?",
+        "আমি কি tense-এর সামঞ্জস্য রাখতে পেরেছি?",
+        "আমার বাক্যগুলো কি সম্পূর্ণ?"
+      ],
+      "activities": [
+        {
+          "activity_id": "6n-grammar-notice",
+          "repair_code": "GRAMMAR_CHECK_NEEDED",
+          "stage": "NOTICE",
+          "task_context": "A sentence has a subject-verb agreement error.",
+          "instruction_en": "Read the sentence. Identify the grammar error.",
+          "instruction_bn": "বাক্যটি পড়ুন। ব্যাকরণগত ভুলটি চিহ্নিত করুন।",
+          "content_markdown": "**Sentence:**  \n\"The list of items are on the table.\"",
+          "learner_action": "Choose the error.",
+          "answer_or_check_markdown": "Correct answer: Subject-verb agreement error (list is singular, should be \"is\").  \n**why_correct_bn:**  \n'List' singular, তাই verb 'are' হওয়া উচিত নয়; 'is' হবে।  \n**why_other_options_fail_bn:**  \nঅন্য কোনো ভুল নেই; শুধু agreement.",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-grammar-repair",
+          "repair_code": "GRAMMAR_CHECK_NEEDED",
+          "stage": "REPAIR",
+          "task_context": "A sentence has grammar errors. Rewrite it correctly.",
+          "instruction_en": "The following sentence has grammar errors. Rewrite it correctly.",
+          "instruction_bn": "নিচের বাক্যটিতে ব্যাকরণগত ভুল আছে। এটি সঠিকভাবে পুনরায় লিখুন।",
+          "content_markdown": "**Sentence:**  \n\"She gave me an useful advice.\"",
+          "learner_action": "Write the corrected sentence.",
+          "answer_or_check_markdown": "**Checklist:**  \n- Did you fix the article? (use \"a\" before consonant sound).  \n- Did you correct the uncountable noun? (advice is uncountable).  \n\n**Acceptable features:**  \n- Changing to \"a useful\" and \"some advice\".  \n\n**Sample possible answer:**  \n\"She gave me some useful advice.\" or \"She gave me a useful piece of advice.\"",
+          "activity_type": "PRODUCTIVE",
+          "objective_choices": []
+        },
+        {
+          "activity_id": "6n-grammar-retest",
+          "repair_code": "GRAMMAR_CHECK_NEEDED",
+          "stage": "RETEST",
+          "task_context": "A sentence has a tense consistency error. Identify it.",
+          "instruction_en": "Read the sentence. What is the grammar error?",
+          "instruction_bn": "বাক্যটি পড়ুন। ব্যাকরণগত ভুলটি কী?",
+          "content_markdown": "**Sentence:**  \n\"He went to the store and buys some milk.\"",
+          "learner_action": "Choose the error.",
+          "answer_or_check_markdown": "Correct answer: Tense inconsistency – \"went\" (past) and \"buys\" (present).  \n**why_correct_bn:**  \nদুটি ক্রিয়া একই সময়ে হওয়া উচিত; উভয়েই past বা present হতে হবে।  \n**why_other_options_fail_bn:**  \nঅন্য কোনো ভুল নেই।",
+          "activity_type": "OBJECTIVE",
+          "objective_choices": []
+        }
+      ],
+      "next_retry_action_en": "After writing, read your text slowly and check each sentence for subject-verb agreement, tense, and article mistakes.",
+      "next_retry_action_bn": "লেখার পরে ধীরে ধীরে পড়ুন এবং প্রতিটি বাক্যে subject-verb agreement, tense ও article চেক করুন۔"
+    }
+  ]
+}

@@ -29,7 +29,7 @@ assert.equal(learning.createLearningFoundation({localStorage:storage}).getState(
 const fresh=runtime.createWritingSession(pack,()=>now);assert.equal(fresh.getState().text,'','a refreshed session starts without draft text');
 
 const page=fs.readFileSync(path.join(root,'ielts-writing-practice-bangla.html'),'utf8'),source=fs.readFileSync(path.join(root,'ielts-writing-practice.js'),'utf8');
-assert.match(source,/state\.stage==='review'\?' readonly':''/,'review rendering makes the textarea read-only');
+assert.match(source,/state\.stage\s*===\s*["']review["']\s*\?\s*["'] readonly["']\s*:\s*["']["']/,'review rendering makes the textarea read-only');
 assert.match(page,/https:\/\/ovidhan\.net\/ielts-writing-practice-bangla\.html/);assert.match(page,/href="\/ielts-guide\.html"/);
 assert.ok(page.indexOf('/learning-foundation.js')<page.indexOf('/ielts-writing-practice.js'));
 assert.match(page,/class="announce-bar"/);assert.match(page,/class="site-header"/);assert.match(page,/class="footer-grid"/);
