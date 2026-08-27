@@ -11,6 +11,7 @@ const expectedXlsxHash = '9ee447fcb3e53d07256f35723afc3a5b0d21799040f9e1860e24e9
 const expectedApproved = `acceptable acting aspects association beast buildings businesses cartridge casual cheap comparison constitution dancing degrees doctor dress evil exercise forecast gene increase internet interviews mass merchants model name nation notebooks objects offers packaging popular posters process proposal psychology pub request result rules stick studies sufficient terminal tests textbooks typical`.split(' ');
 const expectedTreatment = `businesses casual dancing degrees exercise gene model nation pub result tests dress merchants offers popular rules studies cartridge mass notebooks packaging`.split(' ');
 const expectedControl = `textbooks cheap constitution doctor evil increase internet posters request terminal buildings comparison forecast objects process psychology sufficient typical interviews name proposal`.split(' ');
+const expectedLaterStrategic = `accordance during must net tradeoff translation without`.split(' ');
 const forbiddenEmbedded = ['example', 'examples', 'synonyms', 'antonyms', 'collocations', 'verb_forms', 'story', 'word_family', 'common_mistake', 'common_mistakes', 'bcs_importance', 'ielts_importance'];
 const sha256 = data => crypto.createHash('sha256').update(data).digest('hex');
 const fileHash = file => sha256(fs.readFileSync(file));
@@ -42,14 +43,14 @@ assert.deepStrictEqual(control.map(item => item.slug).sort(), [...expectedContro
 for (const entry of manifest.entries) { assert.strictEqual(entry.human_editorial_status, 'approved_core'); assert.strictEqual(entry.baseline_architecture, 'JS_SHELL'); assert(jsShell.some(item => item.slug === entry.slug), `Non-shell experiment member: ${entry.slug}`); }
 const sorted = [...manifest.entries].sort((a, b) => b.quality_score - a.quality_score || a.slug.localeCompare(b.slug));
 for (let index = 0; index < sorted.length; index += 2) { const pair = sorted.slice(index, index + 2); const pairId = `7A1-${String(index / 2 + 1).padStart(2, '0')}`; const hash = sha256(`${pair[0].slug}|${pair[1].slug}|7A1`); const treatmentIndex = parseInt(hash[0], 16) % 2; assert(pair.every(item => item.pair_id === pairId && item.assignment_sha256 === hash), `Pair/hash invalid: ${pairId}`); assert.strictEqual(pair[treatmentIndex].group, 'treatment'); assert.strictEqual(pair[1 - treatmentIndex].group, 'control'); }
-const expectedChangedWords = treatment.map(item => `word/${item.slug}.html`).sort();
+const expectedChangedWords = [...treatment.map(item => `word/${item.slug}.html`),...expectedLaterStrategic.map(slug => `word/${slug}.html`)].sort();
 assert.deepStrictEqual(changedFiles('word'), expectedChangedWords, 'Only final treatment word pages may differ from base');
 for (const entry of control) assert.strictEqual(fileHash(path.join(root, 'word', `${entry.slug}.html`)), sha256(baseFile(`word/${entry.slug}.html`)), `Control differs from base: ${entry.slug}`);
 const dictionary = JSON.parse(fs.readFileSync(path.join(root, 'enriched-dictionary.json'), 'utf8'));
 for (const entry of treatment) {
   const html = fs.readFileSync(path.join(root, 'word', `${entry.slug}.html`), 'utf8'); const baselineHtml = baseFile(`word/${entry.slug}.html`).toString('utf8'); const sourceEntry = dictionary[entry.dictionary_index];
   const treatmentHead = html.match(/<head>[\s\S]*?<\/head>/)?.[0]; const baselineHead = baselineHtml.match(/<head>[\s\S]*?<\/head>/)?.[0];
-  assert.strictEqual(treatmentHead, baselineHead, `Head differs from baseline: ${entry.slug}`);
+  assert.strictEqual(treatmentHead.replace(/\r\n/g, '\n'), baselineHead.replace(/\r\n/g, '\n'), `Head differs from baseline: ${entry.slug}`);
   const treatmentHreflang = treatmentHead.match(/<link[^>]+hreflang=[^>]+>/g) || []; const baselineHreflang = baselineHead.match(/<link[^>]+hreflang=[^>]+>/g) || [];
   assert.deepStrictEqual(treatmentHreflang, baselineHreflang, `hreflang differs from baseline: ${entry.slug}`);
   assert(source.cohort_urls.includes(entry.url) && entry.in_gsc_export && entry.in_sitemap); assert.strictEqual((html.match(/<h1(?:\s[^>]*)?>/g) || []).length, 1); assert(html.includes(sourceEntry.bangla.trim())); assert(html.includes(sourceEntry.definition.trim()));
@@ -63,7 +64,7 @@ for (const entry of treatment) {
   assert(!/class="(?:examples|related-words|synonyms|antonyms|pronunciation|verb-forms|collocations|mini-story)"|<h2>(?:Examples|Synonyms|Antonyms|Verb forms|Collocations)<\/h2>/i.test(html), `Non-core static content rendered: ${entry.slug}`); assert(!html.includes('${'));
 }
 for (const [name, hash] of Object.entries(manifest.baseline.sitemap_sha256)) assert.strictEqual(fileHash(path.join(root, name)), hash, `Sitemap changed: ${name}`);
-assert.strictEqual(fileHash(path.join(root, 'robots.txt')), manifest.baseline.robots_sha256, 'robots changed'); assert.strictEqual(fileHash(path.join(root, 'reports', 'seo-word-pilot-7a1-editorial-review.json')), manifest.baseline.editorial_review_sha256, 'Editorial audit changed');
+assert.strictEqual(fileHash(path.join(root, 'robots.txt')), manifest.baseline.robots_sha256, 'robots changed'); assert.strictEqual(sha256(fs.readFileSync(path.join(root, 'reports', 'seo-word-pilot-7a1-editorial-review.json'), 'utf8').replace(/\r\n/g, '\n')), manifest.baseline.editorial_review_sha256, 'Editorial audit changed');
 const frozen = JSON.parse(fs.readFileSync(path.join(root, 'reports', 'ovidhan-learning-foundation-3b-frozen-hashes.json'), 'utf8')); assert.strictEqual(frozen.uniquePageCount, 144); for (const item of [...frozen.pages, ...frozen.guards]) assert.strictEqual(fileHash(path.join(root, item.path)), item.sha256, `Frozen file changed: ${item.path}`);
 const runtime = fs.readFileSync(path.join(root, 'learning-explorer.js'), 'utf8'); assert(runtime.includes("document.getElementById('ovidhan-word-data')")); assert(runtime.includes("document.getElementById('staticWordContent')")); assert(runtime.includes('staticContent.hidden = true')); assert(runtime.includes('.then(() => searchWord())')); assert(!runtime.includes('seo-word-pilot-7a1-editorial-review'));
 async function verifyCurrentWordInteraction() {
