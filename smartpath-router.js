@@ -65,6 +65,16 @@
         if (destination.item_id) return destination.item_id;
         return String(destination.destination_id || '').startsWith('mistake:') ? String(destination.destination_id).slice(8) : null;
     }
+    function productiveUrl(entry, fallback) {
+        return {
+            GT_TASK_1_LETTER: '/ielts-writing-practice-bangla.html?mode=gt-letter',
+            GT_TASK_2_ARGUMENT: '/ielts-writing-practice-bangla.html?mode=gt-essay',
+            ACADEMIC_TASK_1_VISUAL: '/ielts-writing-practice-bangla.html?mode=academic-task1',
+            ACADEMIC_TASK_2_ESSAY: '/ielts-writing-practice-bangla.html?mode=academic-task2',
+            PART_2_EXTENDED_TURN: '/ielts-speaking-practice-bangla.html?mode=part2',
+            PART_3_DISCUSSION_RESPONSE: '/ielts-speaking-practice-bangla.html?mode=part3'
+        }[entry && entry.task_type] || fallback;
+    }
     function actionMatches(actionId, destination, itemId) {
         const id = String(actionId || '').replace(/^mistake-mirror:/, '');
         return id === destination.destination_id || (itemId && id === itemId);
@@ -121,9 +131,9 @@
                 const age = Number.isFinite(Date.parse(entry.last_attempted_at)) ? Math.max(0, nowMs - Date.parse(entry.last_attempted_at)) : 0;
                 const decay = age >= 30*86400000 ? 20 : age >= 7*86400000 ? 10 : 0;
                 let urgency = 0, reason = 'SELF_REPORTED_IMPROVED';
-                if (entry.repair_completed && !entry.retest_completed) { urgency = 85; reason = 'PRODUCTIVE_RETRY'; }
+                if (!entry.retest_completed) { urgency = entry.repair_completed ? 85 : 60; reason = 'PRODUCTIVE_RETRY'; }
                 else if (entry.reflection === 'TRY_AGAIN' || entry.reflection === 'SAME' || entry.resolution_state === 'SELF_REPORTED_UNRESOLVED') { urgency = Math.min(90, 65 + Math.min(20, (entry.retry_count||1)*5)); reason = 'PRODUCTIVE_RETRY'; }
-                else if (entry.resolution_state === 'PENDING_SELF_REVIEW' || !entry.reflection) { urgency = 50; reason = 'PRODUCTIVE_RETRY'; }
+                else if (entry.resolution_state === 'PENDING_SELF_REVIEW' || !entry.reflection) { urgency = 0; reason = 'REINFORCEMENT'; }
                 else if (entry.reflection === 'BETTER') urgency = 8;
                 return {entry, urgency:Math.max(0,urgency-decay), reason};
             }).sort((a,b) => b.urgency-a.urgency || Date.parse(b.entry.last_attempted_at||0)-Date.parse(a.entry.last_attempted_at||0) || a.entry.evidence_id.localeCompare(b.entry.evidence_id))[0];
@@ -186,7 +196,10 @@
                 skill_name_bn: skill.name_bn,
                 family_id: skill.family_id,
                 family_name_bn: family && family.name_bn || '',
-                url: destination.url,
+                url: productive && productive.reason === 'PRODUCTIVE_RETRY' ? productiveUrl(productive.entry, destination.url) : destination.url,
+                productive_task_type: productive && productive.entry.task_type || null,
+                productive_source_id: productive && productive.entry.source_id || null,
+                productive_repair_code: productive && productive.entry.repair_code || null,
                 activity_type: destination.activity_type,
                 estimated_minutes: Number(destination.estimated_minutes) || null,
                 score,
@@ -307,5 +320,5 @@
         }).catch(renderFallback);
     }
 
-    return Object.freeze({ GOAL_IDS, REASONS, safeGoal, evidenceIsSufficient, validTransferEdges, validGoalMappings, mistakeDestinations, recommend, fallbackRecommendation, bindGoalSelector, mount });
+    return Object.freeze({ GOAL_IDS, REASONS, safeGoal, evidenceIsSufficient, validTransferEdges, validGoalMappings, productiveUrl, mistakeDestinations, recommend, fallbackRecommendation, bindGoalSelector, mount });
 });

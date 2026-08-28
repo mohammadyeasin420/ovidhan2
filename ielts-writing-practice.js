@@ -44,7 +44,8 @@
       activeRepair = null,
       repairStageIndex = 0,
       repairResponse = "",
-      repairChecked = false;
+      repairChecked = false,
+      repairReflection = "";
     const list = () =>
         mode === "gt-letter"
           ? gtPack.gt_task1_letters
@@ -85,6 +86,7 @@
         repairStageIndex: repairStageIndex,
         repairResponse: repairResponse,
         repairChecked: repairChecked,
+        repairReflection: repairReflection,
         repairActivity: activity(),
         item: current(),
       }),
@@ -140,6 +142,7 @@
         repairStageIndex = 0;
         repairResponse = "";
         repairChecked = false;
+        repairReflection = "";
         stage = "repair";
         return this.getState();
       },
@@ -157,6 +160,10 @@
         else stage = "repair-complete";
         return this.getState();
       },
+      setRepairReflection(value) {
+        repairReflection = ["BETTER", "TRY_AGAIN", "SAME"].includes(value) ? value : "";
+        return this.getState();
+      },
       returnToWriting() {
         if (stage !== "repair-complete") return this.getState();
         stage = "writing";
@@ -166,6 +173,7 @@
         repairStageIndex = 0;
         repairResponse = "";
         repairChecked = false;
+        repairReflection = "";
         return this.getState();
       },
       revise() {
@@ -184,6 +192,7 @@
         activeRepair = null;
         repairResponse = "";
         repairChecked = false;
+        repairReflection = "";
         return this.getState();
       },
       changeMode(next) {
@@ -198,6 +207,7 @@
         activeRepair = null;
         repairResponse = "";
         repairChecked = false;
+        repairReflection = "";
         return this.getState();
       },
     };
@@ -361,11 +371,11 @@
         );
         return MODES.includes(mode) ? mode : "gt-letter";
       };
-    function recordProductive(stage, repairCode) {
+    function recordProductive(stage, repairCode, reflection) {
       const learning = windowObject.OvidhanLearning, state = session.getState(), item = state.item;
       if (!learning || typeof learning.recordProductiveRetryEvidence !== "function" || !repairCode) return false;
       const skillId = item.task_type === "GT_TASK_1_LETTER" ? "writing_letter_task_response" : item.task_type === "ACADEMIC_TASK_1_VISUAL" ? "writing_visual_information_description" : "writing_argument_development";
-      return learning.recordProductiveRetryEvidence({evidenceId:`ielts-productive-retry:${item.id}:${repairCode.toLowerCase()}`,skillId,taskType:item.task_type,sourceId:item.id,repairCode,stage});
+      return learning.recordProductiveRetryEvidence({evidenceId:`ielts-productive-retry:${item.id}:${repairCode.toLowerCase()}`,skillId,taskType:item.task_type,sourceId:item.id,repairCode,stage,reflection});
     }
     function render() {
       const state = session.getState();
@@ -525,6 +535,11 @@
           render();
           host.querySelector("#writingResponse")?.focus();
         });
+      host.querySelectorAll("input[name=writingReflection]").forEach((input) => input.addEventListener("change", () => {
+        session.setRepairReflection(input.value);
+        recordProductive("REFLECTED", session.getState().activeRepair, input.value);
+        render();
+      }));
       const revise = host.querySelector("[data-action=revise]");
       if (revise)
         revise.onclick = () => {
