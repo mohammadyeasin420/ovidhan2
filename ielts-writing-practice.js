@@ -472,7 +472,6 @@
         (input) =>
           (input.onchange = () => {
             session.toggleRepair(input.dataset.repair, input.checked);
-            if (input.checked) recordProductive("SELECTED", input.dataset.repair);
             render();
           }),
       );
@@ -480,6 +479,7 @@
         (button) =>
           (button.onclick = () => {
             session.startRepair(button.dataset.startRepair);
+            recordProductive("SELECTED", button.dataset.startRepair);
             recordProductive("REPAIR_STARTED", button.dataset.startRepair);
             render();
           }),

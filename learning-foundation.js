@@ -325,13 +325,15 @@
                     !/^[a-z0-9:_-]{1,100}$/.test(entry.source_id || '') || !/^[A-Z0-9_]{1,60}$/.test(entry.repair_code || '') ||
                     entry.provenance !== PRODUCTIVE_PROVENANCE || !PRODUCTIVE_STAGES.includes(entry.stage)) return;
                 const reflection = PRODUCTIVE_REFLECTIONS.includes(entry.reflection) ? entry.reflection : null;
+                const resolutionState = reflection === 'BETTER' ? 'SELF_REPORTED_IMPROVED'
+                    : ['TRY_AGAIN','SAME'].includes(reflection) ? 'SELF_REPORTED_UNRESOLVED' : 'PENDING_SELF_REVIEW';
                 state.productiveRetryEvidence[evidenceId] = {
                     evidence_id: evidenceId, skill_id: entry.skill_id, task_type: entry.task_type,
                     source_id: entry.source_id, repair_code: entry.repair_code, provenance: PRODUCTIVE_PROVENANCE,
                     confidence: 'SELF_REPORTED', stage: entry.stage, repair_started: Boolean(entry.repair_started),
                     repair_completed: Boolean(entry.repair_completed), retest_started: Boolean(entry.retest_started),
                     retest_completed: Boolean(entry.retest_completed), reflection,
-                    resolution_state: reflection === 'BETTER' ? 'SELF_REPORTED_IMPROVED' : 'SELF_REPORTED_UNRESOLVED',
+                    resolution_state: resolutionState,
                     first_seen_at: validIso(entry.first_seen_at) || nowIso,
                     last_attempted_at: validIso(entry.last_attempted_at) || nowIso,
                     retry_count: Math.max(1, Math.min(99, Math.floor(Number(entry.retry_count) || 1))),
@@ -716,16 +718,19 @@
                 !PERFORMANCE_TASK_TYPES.includes(input.taskType) || !/^[a-z0-9:_-]{1,100}$/.test(input.sourceId || '') ||
                 !/^[A-Z0-9_]{1,60}$/.test(input.repairCode || '') || !PRODUCTIVE_STAGES.includes(stage)) return false;
             const timestamp = now().toISOString(), previous = learnerState.productiveRetryEvidence[evidenceId];
-            const reflection = PRODUCTIVE_REFLECTIONS.includes(input.reflection) ? input.reflection : previous && previous.reflection || null;
+            const newCycle = stage === 'SELECTED';
+            const reflection = newCycle ? null : PRODUCTIVE_REFLECTIONS.includes(input.reflection) ? input.reflection : previous && previous.reflection || null;
+            const resolutionState = reflection === 'BETTER' ? 'SELF_REPORTED_IMPROVED'
+                : ['TRY_AGAIN','SAME'].includes(reflection) ? 'SELF_REPORTED_UNRESOLVED' : 'PENDING_SELF_REVIEW';
             learnerState.productiveRetryEvidence[evidenceId] = {
                 evidence_id: evidenceId, skill_id: input.skillId, task_type: input.taskType, source_id: input.sourceId,
                 repair_code: input.repairCode, provenance: PRODUCTIVE_PROVENANCE, confidence: 'SELF_REPORTED', stage,
-                repair_started: stage !== 'SELECTED' || Boolean(previous && previous.repair_started),
-                repair_completed: ['REPAIR_COMPLETED','RETEST_STARTED','RETEST_COMPLETED','REFLECTED'].includes(stage) || Boolean(previous && previous.repair_completed),
-                retest_started: ['RETEST_STARTED','RETEST_COMPLETED','REFLECTED'].includes(stage) || Boolean(previous && previous.retest_started),
-                retest_completed: ['RETEST_COMPLETED','REFLECTED'].includes(stage) || Boolean(previous && previous.retest_completed),
+                repair_started: !newCycle && (stage !== 'SELECTED' || Boolean(previous && previous.repair_started)),
+                repair_completed: !newCycle && (['REPAIR_COMPLETED','RETEST_STARTED','RETEST_COMPLETED','REFLECTED'].includes(stage) || Boolean(previous && previous.repair_completed)),
+                retest_started: !newCycle && (['RETEST_STARTED','RETEST_COMPLETED','REFLECTED'].includes(stage) || Boolean(previous && previous.retest_started)),
+                retest_completed: !newCycle && (['RETEST_COMPLETED','REFLECTED'].includes(stage) || Boolean(previous && previous.retest_completed)),
                 reflection,
-                resolution_state: reflection === 'BETTER' ? 'SELF_REPORTED_IMPROVED' : 'SELF_REPORTED_UNRESOLVED',
+                resolution_state: resolutionState,
                 first_seen_at: previous && previous.first_seen_at || timestamp, last_attempted_at: timestamp,
                 retry_count: Math.min(99, (previous && previous.retry_count || 0) + (stage === 'SELECTED' ? 1 : 0)), source_version: '6P'
             };
