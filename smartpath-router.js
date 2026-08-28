@@ -12,9 +12,9 @@
     'use strict';
 
     const GOAL_IDS = Object.freeze(['BCS','IELTS','BANK','UNIVERSITY_ADMISSION','GENERAL_ENGLISH','SPOKEN_CAREER']);
-    const REASONS = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','WEAK_SKILL','DIAGNOSTIC_GAP','REVIEW_DUE','GOAL_CORE_SKILL','PREREQUISITE_NEEDED','TRANSFER_RISK','GATEWAY_SKILL','NEW_SKILL','REINFORCEMENT']);
+    const REASONS = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','PRODUCTIVE_RETRY','SELF_REPORTED_IMPROVED','WEAK_SKILL','DIAGNOSTIC_GAP','REVIEW_DUE','GOAL_CORE_SKILL','PREREQUISITE_NEEDED','TRANSFER_RISK','GATEWAY_SKILL','NEW_SKILL','REINFORCEMENT']);
     const IMPORTANCE_SCORE = Object.freeze({ CORE: 16, SUPPORTING: 9, OPTIONAL: 4 });
-    const REASON_ORDER = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','WEAK_SKILL','DIAGNOSTIC_GAP','PREREQUISITE_NEEDED','REVIEW_DUE','GOAL_CORE_SKILL','GATEWAY_SKILL','TRANSFER_RISK','NEW_SKILL','REINFORCEMENT']);
+    const REASON_ORDER = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','PRODUCTIVE_RETRY','WEAK_SKILL','DIAGNOSTIC_GAP','PREREQUISITE_NEEDED','REVIEW_DUE','GOAL_CORE_SKILL','GATEWAY_SKILL','TRANSFER_RISK','SELF_REPORTED_IMPROVED','NEW_SKILL','REINFORCEMENT']);
 
     function safeArray(value) { return Array.isArray(value) ? value : []; }
     function safeGoal(value) { return GOAL_IDS.includes(value) ? value : 'GENERAL_ENGLISH'; }
@@ -65,6 +65,16 @@
         if (destination.item_id) return destination.item_id;
         return String(destination.destination_id || '').startsWith('mistake:') ? String(destination.destination_id).slice(8) : null;
     }
+    function productiveUrl(entry, fallback) {
+        return {
+            GT_TASK_1_LETTER: '/ielts-writing-practice-bangla.html?mode=gt-letter',
+            GT_TASK_2_ARGUMENT: '/ielts-writing-practice-bangla.html?mode=gt-essay',
+            ACADEMIC_TASK_1_VISUAL: '/ielts-writing-practice-bangla.html?mode=academic-task1',
+            ACADEMIC_TASK_2_ESSAY: '/ielts-writing-practice-bangla.html?mode=academic-task2',
+            PART_2_EXTENDED_TURN: '/ielts-speaking-practice-bangla.html?mode=part2',
+            PART_3_DISCUSSION_RESPONSE: '/ielts-speaking-practice-bangla.html?mode=part3'
+        }[entry && entry.task_type] || fallback;
+    }
     function actionMatches(actionId, destination, itemId) {
         const id = String(actionId || '').replace(/^mistake-mirror:/, '');
         return id === destination.destination_id || (itemId && id === itemId);
@@ -96,6 +106,8 @@
         const transferSkills = new Set(validTransferEdges(input.transferGraph, skillIds).map(edge => edge.target_skill_id));
         const recentActions = safeArray(state.recentActions).slice(-10);
         const signals = state.mistakeSignals && typeof state.mistakeSignals === 'object' ? state.mistakeSignals : {};
+        const productiveSignals = Object.values(state.productiveRetryEvidence && typeof state.productiveRetryEvidence === 'object' ? state.productiveRetryEvidence : {})
+            .filter(entry => entry && entry.provenance === 'LEARNER_SELECTED');
         const dependencyCounts = new Map(graph.skills.map(skill => [skill.id, 0]));
         graph.skills.forEach(skill => safeArray(skill.prerequisites).forEach(parent => dependencyCounts.set(parent, (dependencyCounts.get(parent) || 0) + 1)));
 
@@ -115,6 +127,16 @@
             const itemId = itemIdFor(destination);
             const signal = itemId ? signals[itemId] || {} : {};
             const counts = signalCounts(signal);
+            const productive = productiveSignals.filter(entry => entry.skill_id === skill.id).map(entry => {
+                const age = Number.isFinite(Date.parse(entry.last_attempted_at)) ? Math.max(0, nowMs - Date.parse(entry.last_attempted_at)) : 0;
+                const decay = age >= 30*86400000 ? 20 : age >= 7*86400000 ? 10 : 0;
+                let urgency = 0, reason = 'SELF_REPORTED_IMPROVED';
+                if (!entry.retest_completed) { urgency = entry.repair_completed ? 85 : 60; reason = 'PRODUCTIVE_RETRY'; }
+                else if (entry.reflection === 'TRY_AGAIN' || entry.reflection === 'SAME' || entry.resolution_state === 'SELF_REPORTED_UNRESOLVED') { urgency = Math.min(90, 65 + Math.min(20, (entry.retry_count||1)*5)); reason = 'PRODUCTIVE_RETRY'; }
+                else if (entry.resolution_state === 'PENDING_SELF_REVIEW' || !entry.reflection) { urgency = 0; reason = 'REINFORCEMENT'; }
+                else if (entry.reflection === 'BETTER') urgency = 8;
+                return {entry, urgency:Math.max(0,urgency-decay), reason};
+            }).sort((a,b) => b.urgency-a.urgency || Date.parse(b.entry.last_attempted_at||0)-Date.parse(a.entry.last_attempted_at||0) || a.entry.evidence_id.localeCompare(b.entry.evidence_id))[0];
             const breakdown = {
                 learner_weakness: 0, diagnostic_gap: 0, review_urgency: 0, goal_relevance: 0, difficulty_fit: 0,
                 prerequisite_readiness: 0, recent_mistake_relevance: 0, curated_transfer_risk: 0,
@@ -128,6 +150,7 @@
             } else if (signal.lastSeenAt && Number.isFinite(Date.parse(signal.lastSeenAt)) && nowMs - Date.parse(signal.lastSeenAt) >= 86400000) {
                 breakdown.review_urgency = 20; reasons.push('REVIEW_DUE');
             }
+            if (productive) { breakdown.review_urgency = Math.max(breakdown.review_urgency, productive.urgency); reasons.push(productive.reason); }
 
             if (evidence && evidence.status === 'NEEDS_PRACTICE') { breakdown.learner_weakness = 35; reasons.push('WEAK_SKILL'); }
             else if (evidence && evidence.status === 'IMPROVING') { breakdown.learner_weakness = 16; reasons.push('REINFORCEMENT'); }
@@ -173,7 +196,10 @@
                 skill_name_bn: skill.name_bn,
                 family_id: skill.family_id,
                 family_name_bn: family && family.name_bn || '',
-                url: destination.url,
+                url: productive && productive.reason === 'PRODUCTIVE_RETRY' ? productiveUrl(productive.entry, destination.url) : destination.url,
+                productive_task_type: productive && productive.entry.task_type || null,
+                productive_source_id: productive && productive.entry.source_id || null,
+                productive_repair_code: productive && productive.entry.repair_code || null,
                 activity_type: destination.activity_type,
                 estimated_minutes: Number(destination.estimated_minutes) || null,
                 score,
@@ -204,6 +230,8 @@
         return {
             FAILED_RETEST: 'আগের retest-এ ভুল হওয়ায় এই skill-টি এখন আবার দেখা সবচেয়ে জরুরি।',
             UNRESOLVED_MISTAKE: 'এই skill-এ একটি ভুল এখনও পুরোপুরি resolve হয়নি।',
+            PRODUCTIVE_RETRY: 'আপনি নিজে এই productive weakness-টি বেছে নিয়ে আবার চেষ্টা করতে চেয়েছেন। এটি automatic diagnosis নয়।',
+            SELF_REPORTED_IMPROVED: 'আপনি দ্বিতীয় প্রচেষ্টাকে ভালো বলেছেন; এটি mastery বা IELTS score নয়।',
             WEAK_SKILL: 'আপনার সাম্প্রতিক evidence এই skill-এ আরও অনুশীলনের প্রয়োজন দেখায়।',
             DIAGNOSTIC_GAP: 'Diagnostic signal অনুযায়ী এই skill-টি practice করে যাচাই করা উপযোগী।',
             REVIEW_DUE: 'আগের evidence-এর পর সময় কেটেছে, তাই এখন সংক্ষিপ্ত review উপযোগী।',
@@ -292,5 +320,5 @@
         }).catch(renderFallback);
     }
 
-    return Object.freeze({ GOAL_IDS, REASONS, safeGoal, evidenceIsSufficient, validTransferEdges, validGoalMappings, mistakeDestinations, recommend, fallbackRecommendation, bindGoalSelector, mount });
+    return Object.freeze({ GOAL_IDS, REASONS, safeGoal, evidenceIsSufficient, validTransferEdges, validGoalMappings, productiveUrl, mistakeDestinations, recommend, fallbackRecommendation, bindGoalSelector, mount });
 });

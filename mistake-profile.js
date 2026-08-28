@@ -104,9 +104,15 @@
         }
         const microSkills = group('micro_skill');
         const families = group('mistake_family');
+        const productiveWeaknesses = Object.values(state && state.productiveRetryEvidence || {}).filter(entry => entry && entry.provenance === 'LEARNER_SELECTED').map(entry => ({
+            evidence_id: entry.evidence_id, skill_id: entry.skill_id, task_type: entry.task_type, repair_code: entry.repair_code,
+            provenance: 'LEARNER_SELECTED', confidence: 'SELF_REPORTED', retry_count: count(entry.retry_count),
+            repair_completed: Boolean(entry.repair_completed), retest_completed: Boolean(entry.retest_completed),
+            reflection: entry.reflection || null, resolution_state: entry.resolution_state, last_attempted_at: entry.last_attempted_at
+        })).sort((a,b) => Date.parse(b.last_attempted_at || 0) - Date.parse(a.last_attempted_at || 0));
         return {
             version: 1, statuses: STATUSES, confidenceBands: CONFIDENCE,
-            microSkills, families,
+            microSkills, families, productiveWeaknesses,
             observedItemCount: Object.keys(signals).filter(id => items.some(item => item.id === id) && evidenceFor([{ signal: signals[id] }]).interactions).length
         };
     }
@@ -178,6 +184,12 @@
                 });
             }
             host.appendChild(summary);
+            if (profile.productiveWeaknesses.length) {
+                const self=win.document.createElement('section'); self.className='mp-group mp-productive';
+                const heading=win.document.createElement('h3'); heading.textContent='Self-identified productive weakness · শিক্ষার্থী নিজে বেছে নিয়েছেন'; self.appendChild(heading);
+                const note=win.document.createElement('p'); note.textContent='এগুলো automatic diagnosis, confirmed mistake, mastery বা IELTS criterion result নয়।'; self.appendChild(note);
+                const list=win.document.createElement('ul'); profile.productiveWeaknesses.slice(0,3).forEach(entry=>{const row=win.document.createElement('li');row.textContent=entry.repair_code.replace(/_/g,' ').toLowerCase()+' — '+(entry.reflection||entry.resolution_state)+' · retries '+entry.retry_count;list.appendChild(row);});self.appendChild(list);host.appendChild(self);
+            }
             const next = recommendNext(mirror.items, state, null, Date.now());
             if (next && shouldRenderLegacyNext(win)) {
                 const nextBox=win.document.createElement('div'); nextBox.className='mp-next';

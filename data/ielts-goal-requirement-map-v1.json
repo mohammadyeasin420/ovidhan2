@@ -465,7 +465,7 @@
       "skill_id": "writing_coherence_cohesion",
       "mapping_class": "ASSESSMENT_CRITERION_ALIGNMENT",
       "coverage_status": "EVIDENCE_GAP",
-      "coverage_note": "The canonical skill, reviewed objective practice and destination now exist, but no productive Writing performance evidence is collected.",
+      "coverage_note": "Reviewed objective practice and productive Writing attempt occurrence now exist, with learner-selected repair/retest history; the full Coherence and Cohesion criterion is not assessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
@@ -555,7 +555,7 @@
       "skill_id": "writing_coherence_cohesion",
       "mapping_class": "ASSESSMENT_CRITERION_ALIGNMENT",
       "coverage_status": "EVIDENCE_GAP",
-      "coverage_note": "The canonical skill, reviewed objective practice and destination now exist, but no productive Writing performance evidence is collected.",
+      "coverage_note": "Reviewed objective practice and productive Writing attempt occurrence now exist, with learner-selected repair/retest history; the full Coherence and Cohesion criterion is not assessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
@@ -725,17 +725,17 @@
     {
       "requirement_id": "speaking_fluency_coherence",
       "coverage_status": "CANONICAL_SKILL_GAP",
-      "gap_note": "No speaking-performance skill or evidence exists."
+      "gap_note": "Recorded speaking-performance occurrence and learner-selected repair/retest history exist, but no evidence assesses the full Fluency and Coherence criterion."
     },
     {
       "requirement_id": "speaking_grammar",
       "coverage_status": "CANONICAL_SKILL_GAP",
-      "gap_note": "Generic grammar is not speaking-performance coverage."
+      "gap_note": "Recorded speaking attempts and learner-selected grammar repair exist; generic grammar and self-report are not criterion-level speaking-performance assessment."
     },
     {
       "requirement_id": "speaking_pronunciation",
       "coverage_status": "CANONICAL_SKILL_GAP",
-      "gap_note": "No pronunciation skill or performance evidence exists."
+      "gap_note": "Recorded speaking attempts and learner-selected pronunciation self-check exist, but pronunciation is not automatically analysed or assessed."
     }
   ]
 }
