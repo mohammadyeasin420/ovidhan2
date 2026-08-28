@@ -16,7 +16,7 @@
 
     const STATE_KEY = 'ovidhan_learning_v1';
     const SESSION_KEY = 'ovidhan_learning_session_v1';
-    const STATE_VERSION = 7;
+    const STATE_VERSION = 8;
     const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
     const MAX_IDENTIFIER_ITEMS = 250;
     const MAX_RECENT_ACTIONS = 50;
@@ -30,6 +30,11 @@
     const PERFORMANCE_DURATION_BUCKETS = Object.freeze(['UNDER_30_SECONDS', '30_TO_59_SECONDS', '60_TO_119_SECONDS', '120_SECONDS_OR_MORE']);
     const MAX_PERFORMANCE_EVIDENCE = 100;
     const MAX_PRODUCTIVE_RETRY_EVIDENCE = 100;
+    const MAX_TASK1_STRUCTURED_EVIDENCE = 100;
+    const TASK1_CHECK_TYPES = Object.freeze(['OVERVIEW', 'IMPORTANT_FEATURES', 'COMPARISON', 'DATA_CHECK']);
+    const TASK1_EVIDENCE_SOURCES = Object.freeze(['SELF_REPORTED_RESPONSE_CHECK', 'OBJECTIVE_VISUAL_PROBE']);
+    const TASK1_LEARNER_ANSWERS = Object.freeze(['YES', 'NO', 'NOT_SURE']);
+    const TASK1_OBJECTIVE_RESULTS = Object.freeze(['CORRECT', 'INCORRECT']);
     const PRODUCTIVE_PROVENANCE = 'LEARNER_SELECTED';
     const PRODUCTIVE_REFLECTIONS = Object.freeze(['BETTER', 'TRY_AGAIN', 'SAME']);
     const PRODUCTIVE_STAGES = Object.freeze(['SELECTED', 'REPAIR_STARTED', 'REPAIR_COMPLETED', 'RETEST_STARTED', 'RETEST_COMPLETED', 'REFLECTED']);
@@ -180,6 +185,7 @@
             skillEvidence: {},
             performanceEvidence: {},
             productiveRetryEvidence: {},
+            task1StructuredEvidence: {},
             recentActions: [],
             retention: {
                 firstSeenAt: nowIso,
@@ -338,6 +344,27 @@
                     last_attempted_at: validIso(entry.last_attempted_at) || nowIso,
                     retry_count: Math.max(1, Math.min(99, Math.floor(Number(entry.retry_count) || 1))),
                     source_version: typeof entry.source_version === 'string' ? entry.source_version.slice(0, 30) : '6P'
+                };
+            });
+        }
+        if (source.task1StructuredEvidence && typeof source.task1StructuredEvidence === 'object' && !Array.isArray(source.task1StructuredEvidence)) {
+            Object.keys(source.task1StructuredEvidence).slice(-MAX_TASK1_STRUCTURED_EVIDENCE).forEach(evidenceId => {
+                if (!/^[a-z0-9:_-]{1,100}$/.test(evidenceId)) return;
+                const entry = source.task1StructuredEvidence[evidenceId] || {};
+                if (!/^[a-z0-9:_-]{1,100}$/.test(entry.task_id || '') || entry.skill_id !== 'writing_visual_information_description' ||
+                    !TASK1_CHECK_TYPES.includes(entry.check_type) || !TASK1_EVIDENCE_SOURCES.includes(entry.evidence_source)) return;
+                const selfReported = entry.evidence_source === 'SELF_REPORTED_RESPONSE_CHECK';
+                if (selfReported ? !TASK1_LEARNER_ANSWERS.includes(entry.learner_answer) : !TASK1_OBJECTIVE_RESULTS.includes(entry.objective_result)) return;
+                state.task1StructuredEvidence[evidenceId] = {
+                    evidence_id: evidenceId, task_id: entry.task_id, skill_id: entry.skill_id,
+                    check_type: entry.check_type, evidence_source: entry.evidence_source,
+                    learner_answer: selfReported ? entry.learner_answer : null,
+                    objective_result: selfReported ? null : entry.objective_result,
+                    provenance: selfReported ? 'LEARNER_SELECTED' : 'OBJECTIVE_DETECTED',
+                    first_seen_at: validIso(entry.first_seen_at) || nowIso,
+                    last_seen_at: validIso(entry.last_seen_at) || nowIso,
+                    attempt_number: Math.max(1, Math.min(99, Math.floor(Number(entry.attempt_number) || 1))),
+                    source_version: typeof entry.source_version === 'string' ? entry.source_version.slice(0, 30) : '6Q'
                 };
             });
         }
@@ -740,6 +767,29 @@
             return true;
         }
 
+        function recordTask1StructuredEvidence(input) {
+            input = input || {};
+            const evidenceId = input.evidenceId, selfReported = input.evidenceSource === 'SELF_REPORTED_RESPONSE_CHECK';
+            if (!/^[a-z0-9:_-]{1,100}$/.test(evidenceId || '') || !/^[a-z0-9:_-]{1,100}$/.test(input.taskId || '') ||
+                input.skillId !== 'writing_visual_information_description' || !TASK1_CHECK_TYPES.includes(input.checkType) ||
+                !TASK1_EVIDENCE_SOURCES.includes(input.evidenceSource) ||
+                (selfReported ? !TASK1_LEARNER_ANSWERS.includes(input.learnerAnswer) : !TASK1_OBJECTIVE_RESULTS.includes(input.objectiveResult))) return false;
+            const timestamp = now().toISOString(), previous = learnerState.task1StructuredEvidence[evidenceId];
+            learnerState.task1StructuredEvidence[evidenceId] = {
+                evidence_id: evidenceId, task_id: input.taskId, skill_id: input.skillId,
+                check_type: input.checkType, evidence_source: input.evidenceSource,
+                learner_answer: selfReported ? input.learnerAnswer : null,
+                objective_result: selfReported ? null : input.objectiveResult,
+                provenance: selfReported ? 'LEARNER_SELECTED' : 'OBJECTIVE_DETECTED',
+                first_seen_at: previous && previous.first_seen_at || timestamp, last_seen_at: timestamp,
+                attempt_number: Math.min(99, (previous && previous.attempt_number || 0) + 1), source_version: '6Q'
+            };
+            const keys = Object.keys(learnerState.task1StructuredEvidence);
+            if (keys.length > MAX_TASK1_STRUCTURED_EVIDENCE) delete learnerState.task1StructuredEvidence[keys[0]];
+            saveState(learnerState);
+            return true;
+        }
+
         function setGoal(goal) {
             if (goal === null || goal === '') learnerState.goal = null;
             else if (GOAL_IDS.includes(goal)) learnerState.goal = goal;
@@ -898,6 +948,7 @@
             recordSkillEvidence,
             recordPerformanceEvidence,
             recordProductiveRetryEvidence,
+            recordTask1StructuredEvidence,
             setGoal,
             getRoutingGoal,
             reset,
@@ -939,6 +990,11 @@
             ,PRODUCTIVE_PROVENANCE
             ,PRODUCTIVE_REFLECTIONS
             ,PRODUCTIVE_STAGES
+            ,MAX_TASK1_STRUCTURED_EVIDENCE
+            ,TASK1_CHECK_TYPES
+            ,TASK1_EVIDENCE_SOURCES
+            ,TASK1_LEARNER_ANSWERS
+            ,TASK1_OBJECTIVE_RESULTS
             ,MAX_RETENTION_COUNT
         })
     };

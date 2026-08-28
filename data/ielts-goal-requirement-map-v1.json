@@ -475,7 +475,7 @@
       "skill_id": "writing_visual_information_description",
       "mapping_class": "DIRECT_TASK_ALIGNMENT",
       "coverage_status": "PARTIALLY_COVERED",
-      "coverage_note": "Productive Ovidhan-created Academic Task 1 visual attempts and self-review now exist; visual-description quality, completeness, score and band are not automatically assessed.",
+      "coverage_note": "Productive Ovidhan-created Academic Task 1 visual attempts now include an explicit learner self-check for overview, important features, relevant comparisons and data checking. Reviewed objective visual-analysis probes remain separate; Task Achievement, visual-description quality, completeness, score and band are not assessed.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
@@ -485,7 +485,7 @@
       "skill_id": "writing_visual_information_description",
       "mapping_class": "DIRECT_TASK_ALIGNMENT",
       "coverage_status": "PARTIALLY_COVERED",
-      "coverage_note": "Every productive Academic Task 1 item supports overview planning and self-review; overview presence and quality, score and band are not automatically assessed.",
+      "coverage_note": "Every productive Academic Task 1 item supports overview planning and an explicit YES/NO/NOT_SURE learner self-check. This does not verify overview presence or quality and does not create Task Achievement, score, band or mastery evidence.",
       "diagnostic_evidence": false,
       "boundary_evidence": false,
       "static_destination": true
