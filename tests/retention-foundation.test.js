@@ -84,7 +84,7 @@ scenario('corrupt storage recovers to bounded current-version retention', () => 
     const localStorage = createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY, '{broken');
     const learner = create({ localStorage });
-    assert.equal(learner.getState().version, 8);
+    assert.equal(learner.getState().version, 9);
     assert.equal(learner.getRetention().meaningfulActionCount, 0);
 });
 

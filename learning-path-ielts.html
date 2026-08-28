@@ -35,20 +35,20 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- ═══ PRIMARY SEO ═══ -->
-<title>Post-Diagnostic IELTS Learning Roadmap | Ovidhan</title>
-<meta content="Use this post-diagnostic IELTS learning roadmap to practise Reading, Writing, Listening, Speaking, Grammar, and Vocabulary." name="description"/>
+<title>Free IELTS Practice in Bangla + Weakness Map | Ovidhan</title>
+<meta content="Free IELTS practice in Bangla with an explainable weakness map based on your real practice evidence and learner-selected retry areas." name="description"/>
 <meta content="IELTS preparation, IELTS learning path, IELTS band score, IELTS reading, IELTS writing, IELTS speaking, IELTS listening, Bangladesh" name="keywords"/>
 <link href="https://ovidhan.net/learning-path-ielts.html" rel="canonical"/>
 <!-- ═══ OPEN GRAPH ═══ -->
 <meta content="website" property="og:type"/>
-<meta content="Post-Diagnostic IELTS Learning Roadmap" property="og:title"/>
-<meta content="Follow this complete IELTS learning path. Master Reading, Writing, Listening, Speaking, Grammar, and Vocabulary." property="og:description"/>
+<meta content="Free IELTS Practice in Bangla + Weakness Map" property="og:title"/>
+<meta content="Practise IELTS and see why Ovidhan recommends each next action. No band prediction or examiner scoring." property="og:description"/>
 <meta content="https://ovidhan.net/learning-path-ielts.html" property="og:url"/>
 <meta content="Ovidhan – English to Bangla Dictionary" property="og:site_name"/>
 <!-- ═══ TWITTER CARD ═══ -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="IELTS Learning Path – Complete Band Score Roadmap" name="twitter:title"/>
-<meta content="Follow this complete IELTS learning path. Master Reading, Writing, Listening, Speaking, Grammar, and Vocabulary." name="twitter:description"/>
+<meta content="Free IELTS Practice + Weakness Map" name="twitter:title"/>
+<meta content="Real practice evidence, explainable next actions, and no invented IELTS band score." name="twitter:description"/>
 <!-- ═══ SCHEMA.ORG – COURSE ═══ -->
 <script type="application/ld+json">
     {
@@ -327,6 +327,18 @@
         .related-path .icon { font-size: 1.8rem; display: block; margin-bottom: 4px; }
         .related-path .name { font-weight: 600; color: #fff; font-size: 0.9rem; }
 
+        .beta-entry,.ielts-next,.weakness-group,.trust-panel { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px; }
+        .test-type-controls { display:flex;gap:10px;flex-wrap:wrap;margin:14px 0; }
+        .test-type-controls button { min-height:44px;padding:9px 16px;border-radius:8px;border:1px solid var(--teal);background:var(--surface2);color:var(--text);font:inherit;cursor:pointer; }
+        .test-type-controls button[aria-pressed="true"] { background:var(--teal);color:#071916;font-weight:700; }
+        .evidence-coverage { padding:14px;background:var(--teal-dim);border-radius:8px;margin-bottom:20px; }
+        .weakness-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px; }
+        .weakness-group h2,.ielts-next h2 { color:var(--gold); }
+        .weakness-card { background:var(--surface2);border-left:4px solid var(--text-soft);padding:14px;margin:12px 0;border-radius:8px; }
+        .weakness-card[data-status="NEEDS_ATTENTION"],.weakness-card[data-status="RETRY_RECOMMENDED"] { border-left-color:var(--gold); }
+        .provenance { color:var(--teal);font-weight:700;font-family:var(--font-en);font-size:.82rem; }
+        .ielts-next a,.weakness-group>a { display:inline-block;color:#071916;background:var(--gold);padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700; }
+
         @media (max-width: 600px) {
             .hero { padding: 32px 16px 40px; }
             .hero h1 { font-size: 1.6rem; }
@@ -335,6 +347,7 @@
             .step-header .step-status { margin-left: 0; }
             .nav-links .hide-mobile { display: none; }
             .related-paths { grid-template-columns: 1fr 1fr; }
+            .weakness-grid { grid-template-columns:1fr; }
         }
     </style>
 <link href="https://ovidhan.net/learning-path-ielts.html" hreflang="en" rel="alternate"/><link href="https://ovidhan.net/learning-path-ielts.html" hreflang="bn" rel="alternate"/><link href="https://ovidhan.net/learning-path-ielts.html" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
@@ -7098,8 +7111,8 @@
 <!-- ══ NAV ══ -->
 <!-- ══ HERO ══ -->
 <section class="hero">
-<h1>🌍 IELTS Learning Path</h1>
-<p class="subtitle">Complete preparation roadmap for <strong>IELTS Academic &amp; General Training</strong>. Achieve your target band score.</p>
+<h1>Free IELTS Practice + Personal Weakness Map</h1>
+<p class="subtitle">ফ্রি IELTS Practice করুন → নিজের দুর্বলতা খুঁজে দেখুন → ছোট Repair করুন → আবার চেষ্টা করুন। Recommendations use your retained practice evidence, not a predicted band.</p>
 <div class="badge-group">
 <span class="badge">📚 8 Steps</span>
 <span class="badge">⏱️ 12 Weeks</span>
@@ -7109,6 +7122,16 @@
 </section>
 <!-- ══ MAIN ══ -->
 <div class="container">
+<section class="beta-entry" aria-labelledby="betaEntryTitle">
+<h2 id="betaEntryTitle">Choose your IELTS test type</h2>
+<p>This changes the writing tasks we suggest. It does not overwrite your unrelated learning goal.</p>
+<div class="test-type-controls" role="group" aria-label="IELTS test type">
+<button type="button" data-ielts-test-type="ACADEMIC" aria-pressed="false">Academic</button>
+<button type="button" data-ielts-test-type="GENERAL_TRAINING" aria-pressed="false">General Training</button>
+</div>
+</section>
+<section aria-labelledby="weaknessMapTitle"><h2 id="weaknessMapTitle">Your explainable IELTS Weakness Map</h2><div id="ieltsWeaknessMap" aria-live="polite"><p>Loading retained practice evidence…</p></div></section>
+<section class="trust-panel" aria-labelledby="trustTitle"><h2 id="trustTitle">How Ovidhan decides what to show</h2><p>Objective practice mistakes come from scored practice interactions. Writing and speaking areas may be weaknesses you selected yourself. When evidence is missing, Ovidhan says so instead of guessing. This map never generates an IELTS band or examiner result.</p></section>
 <!-- Intro -->
 <div class="path-intro">
 <h2>📌 What You'll Learn</h2>
@@ -7116,7 +7139,7 @@
 <div class="time-estimate">
 <span>⏱️ Estimated time: <strong>10-12 weeks</strong></span>
 <span>📋 Steps: <strong>8</strong></span>
-<span>🎯 Goal: <strong>Target Band Score</strong></span>
+<span>🎯 Goal: <strong>Evidence-based practice</strong></span>
 </div>
 </div>
 <!-- Step 1 -->
@@ -7191,7 +7214,7 @@
 <span class="step-status pending">Start →</span>
 </div>
 <div class="step-content">
-<p>Master Task 1 and Task 2 writing: structure, vocabulary, and grammar.</p>
+<p>Practise Task 1 and Task 2 writing, then use self-review and repair without automatic scoring.</p>
 <div class="resources">
 <a href="english-grammar-for-beginners-bangla.html">✏️ Writing Basics</a>
 <a href="100-english-grammar-rules-bangla.html">📝 100 Grammar Rules</a>
@@ -7206,7 +7229,7 @@
 <span class="step-status pending">Start →</span>
 </div>
 <div class="step-content">
-<p>Practice speaking fluently and confidently for all three parts of the IELTS speaking test.</p>
+<p>Record, replay and self-review speaking practice. Ovidhan does not automatically assess speaking quality.</p>
 <div class="resources">
 <a href="english-speaking-practice-bangladeshi-students.html">🗣️ Speaking Practice</a>
 <a href="daily-english.html">🗣️ Daily English</a>
@@ -7287,6 +7310,7 @@
     });
 </script>
 
+<script src="/learning-foundation.js"></script><script src="/mistake-profile.js"></script><script src="/smartpath-router.js"></script><script src="/ielts-weakness-map.js"></script>
 <footer class="site-footer">
 <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
 <p>
