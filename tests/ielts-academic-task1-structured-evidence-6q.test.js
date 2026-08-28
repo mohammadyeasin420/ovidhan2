@@ -71,7 +71,7 @@ assert.strictEqual(writing.persistTask1CheckRecords(yesLearning, yesSession.comp
 const yesState = yesLearning.getState();
 assert.deepStrictEqual(yesState.productiveRetryEvidence, {});
 assert.ok(Object.values(yesState.task1StructuredEvidence).every((entry) => !Object.hasOwn(entry,"mastery") && !Object.hasOwn(entry,"masteryStatus")));
-assert.strictEqual(foundation.constants.STATE_VERSION, 8);
+assert.strictEqual(foundation.constants.STATE_VERSION, 9);
 
 const source = fs.readFileSync(path.join(__dirname, "..", "ielts-writing-practice.js"), "utf8");
 assert.ok(!/innerHTML\s*=.*writingResponse\.value/s.test(source), "no automatic writing inspection path");

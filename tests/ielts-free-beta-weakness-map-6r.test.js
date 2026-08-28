@@ -1,0 +1,38 @@
+"use strict";
+const assert=require("assert"),fs=require("fs"),path=require("path");
+const map=require("../ielts-weakness-map.js"),router=require("../smartpath-router.js"),foundation=require("../learning-foundation.js");
+const load=name=>JSON.parse(fs.readFileSync(path.join(__dirname,"..",name),"utf8"));
+const graph=load("skill-mistake-graph.json"),destinations=load("smartpath-destinations.json"),goals=load("goal-skill-requirements.json");
+const now=Date.parse("2026-08-28T12:00:00Z");
+const empty=map.buildWeaknessMap({},graph,null,"ACADEMIC");
+assert.deepStrictEqual(empty.groups.map(x=>x.id),["READING","LISTENING","WRITING","SPEAKING"]);
+assert.strictEqual(empty.evidenceAreaCount,0);assert.ok(empty.groups.every(x=>x.cards.length===1&&x.cards[0].status==="NOT_ENOUGH_EVIDENCE"));
+assert.ok(empty.groups.every(x=>x.cards[0].provenance==="NOT_ENOUGH_EVIDENCE"),"no fake personalized weaknesses");
+assert.match(empty.disclaimer,/not an IELTS band score/i);
+
+const objectiveState={skillEvidence:{r:{skill_id:"reading_main_idea",result:"incorrect",attempts:1},l:{skill_id:"listening_specific_detail",result:"incorrect",attempts:1}}};
+const objective=map.buildWeaknessMap(objectiveState,graph,null,"ACADEMIC");
+assert.equal(objective.evidenceAreaCount,2);for(const id of ["READING","LISTENING"]){const card=objective.groups.find(x=>x.id===id).cards[0];assert.equal(card.provenance,"OBJECTIVE_EVIDENCE");assert.equal(card.status,"NEEDS_ATTENTION");}
+
+const productive=(skill,task,reflection,resolution,retest=true)=>({evidence_id:`${skill}:${task}`,skill_id:skill,task_type:task,repair_code:"PRACTICE_AGAIN",provenance:"LEARNER_SELECTED",confidence:"SELF_REPORTED",stage:reflection?"REFLECTED":"RETEST_COMPLETED",repair_completed:true,retest_completed:retest,reflection:reflection||null,resolution_state:resolution,last_attempted_at:"2026-08-28T11:00:00Z",retry_count:1});
+const selfState={productiveRetryEvidence:{w:productive("writing_argument_development","ACADEMIC_TASK_2_ESSAY","TRY_AGAIN","SELF_REPORTED_UNRESOLVED"),s:productive("speaking_extended_turn","PART_2_EXTENDED_TURN","SAME","SELF_REPORTED_UNRESOLVED")}};
+const self=map.buildWeaknessMap(selfState,graph,null,"ACADEMIC");for(const id of ["WRITING","SPEAKING"]){const card=self.groups.find(x=>x.id===id).cards[0];assert.equal(card.provenance,"YOU_IDENTIFIED_THIS");assert.equal(card.status,"RETRY_RECOMMENDED");}
+const better=map.buildWeaknessMap({productiveRetryEvidence:{b:productive("speaking_extended_turn","PART_2_EXTENDED_TURN","BETTER","SELF_REPORTED_IMPROVED")}},graph,null,"ACADEMIC").groups.find(x=>x.id==="SPEAKING").cards[0];assert.equal(better.status,"IMPROVING");assert.notEqual(better.status,"STRONG");
+const pending=map.buildWeaknessMap({productiveRetryEvidence:{p:productive("speaking_extended_turn","PART_2_EXTENDED_TURN",null,"PENDING_SELF_REVIEW")}},graph,null,"ACADEMIC").groups.find(x=>x.id==="SPEAKING").cards[0];assert.equal(pending.status,"NO_CURRENT_RETRY");
+
+const task1Entry=(answer,type)=>({evidence_id:`t1:${type}:${answer}`,task_id:"academic-task1-001",skill_id:"writing_visual_information_description",check_type:type,evidence_source:"SELF_REPORTED_RESPONSE_CHECK",learner_answer:answer,objective_result:null,provenance:"LEARNER_SELECTED",confidence:"SELF_REPORTED"});
+for(const answer of ["NO","NOT_SURE"]){const model=map.buildWeaknessMap({task1StructuredEvidence:{x:task1Entry(answer,"OVERVIEW")}},graph,null,"ACADEMIC");assert.equal(model.groups.find(x=>x.id==="WRITING").cards[0].provenance,"YOU_IDENTIFIED_THIS");}
+const yes=map.buildWeaknessMap({task1StructuredEvidence:{x:task1Entry("YES","OVERVIEW")}},graph,null,"ACADEMIC");assert.equal(yes.groups.find(x=>x.id==="WRITING").cards[0].status,"NO_CURRENT_RETRY");assert.equal(yes.evidenceAreaCount,1);assert.ok(!JSON.stringify(yes).match(/MASTER|STRONG/));
+const visualProbe={...task1Entry("YES","DATA_CHECK"),evidence_source:"OBJECTIVE_VISUAL_PROBE",learner_answer:null,objective_result:"INCORRECT",provenance:"OBJECTIVE_DETECTED",confidence:"OBJECTIVE"};const visual=map.buildWeaknessMap({task1StructuredEvidence:{x:visualProbe}},graph,null,"ACADEMIC");assert.equal(visual.groups.find(x=>x.id==="WRITING").cards[0].provenance,"OBJECTIVE_EVIDENCE");assert.match(visual.groups.find(x=>x.id==="WRITING").cards[0].why,/does not prove the written response/i);
+
+const mappedItem=graph.item_mappings.find(x=>x.primary_skill_id==="speaking_extended_turn");
+const priority=map.buildWeaknessMap({mistakeSignals:{[mappedItem.item_id]:{initialResult:"incorrect",retestResult:"incorrect"}},productiveRetryEvidence:{b:productive("speaking_extended_turn","PART_2_EXTENDED_TURN","BETTER","SELF_REPORTED_IMPROVED")}},graph,null,"ACADEMIC");assert.equal(priority.groups.find(x=>x.id==="SPEAKING").cards[0].provenance,"OBJECTIVE_EVIDENCE");
+
+function routeFor(taskType,skillId){const signal=productive(skillId,taskType,"TRY_AGAIN","SELF_REPORTED_UNRESOLVED");return router.recommend({graph,destinations:destinations.destinations,goalGraph:goals,transferGraph:null,state:{goal:"IELTS",productiveRetryEvidence:{x:signal},mistakeSignals:{},recentActions:[]},profile:{microSkills:[]},nowMs:now});}
+for(const [task,skill,url] of [["ACADEMIC_TASK_1_VISUAL","writing_visual_information_description","/ielts-writing-practice-bangla.html?mode=academic-task1"],["ACADEMIC_TASK_2_ESSAY","writing_argument_development","/ielts-writing-practice-bangla.html?mode=academic-task2"],["GT_TASK_1_LETTER","writing_letter_task_response","/ielts-writing-practice-bangla.html?mode=gt-letter"],["GT_TASK_2_ARGUMENT","writing_argument_development","/ielts-writing-practice-bangla.html?mode=gt-essay"],["PART_2_EXTENDED_TURN","speaking_extended_turn","/ielts-speaking-practice-bangla.html?mode=part2"],["PART_3_DISCUSSION_RESPONSE","speaking_discussion_response","/ielts-speaking-practice-bangla.html?mode=part3"]]){const rec=routeFor(task,skill);assert.equal(rec.primary_reason,"PRODUCTIVE_RETRY");assert.equal(rec.url,url);const model=map.buildWeaknessMap({productiveRetryEvidence:{}},graph,rec,"ACADEMIC");assert.equal(model.recommendation.primary_reason,rec.primary_reason);assert.equal(model.recommendation.url,rec.url);assert.equal(map.recommendationProvenance(rec),"YOU_IDENTIFIED_THIS");}
+
+const store=foundation.createMemoryStorage(),events=[],learning=foundation.createLearningFoundation({localStorage:store,sessionStorage:foundation.createMemoryStorage(),transport:(event,properties)=>events.push({event,properties})});
+assert.equal(learning.setIeltsTestType("ACADEMIC"),"ACADEMIC");assert.equal(learning.setIeltsTestType("BAD"),"ACADEMIC");assert.equal(learning.setIeltsTestType("GENERAL_TRAINING"),"GENERAL_TRAINING");assert.equal(learning.getState().goal,null);assert.equal(foundation.createLearningFoundation({localStorage:store,sessionStorage:foundation.createMemoryStorage()}).getState().ieltsTestType,"GENERAL_TRAINING");
+learning.track("ielts_weakness_action_selected",{test_type:"ACADEMIC",skill_id:"writing_argument_development",provenance:"YOU_IDENTIFIED_THIS",reason_code:"PRODUCTIVE_RETRY",destination_id:"safe",writing_text:"secret",audio:"blob",transcript:"words"});assert.ok(!JSON.stringify(events).match(/secret|blob|words/));
+const source=fs.readFileSync(path.join(__dirname,"..","ielts-weakness-map.js"),"utf8"),page=fs.readFileSync(path.join(__dirname,"..","learning-path-ielts.html"),"utf8");assert.doesNotMatch(source,/band_score|criterion_attainment|writing_response|recording_blob|transcript/i);assert.match(page,/id="ieltsWeaknessMap"/);assert.match(page,/aria-pressed/);assert.match(page,/canonical/);
+console.log("PASS Phase 6R IELTS Free Beta weakness map");

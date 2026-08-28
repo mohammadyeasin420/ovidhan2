@@ -16,7 +16,7 @@
 
     const STATE_KEY = 'ovidhan_learning_v1';
     const SESSION_KEY = 'ovidhan_learning_session_v1';
-    const STATE_VERSION = 8;
+    const STATE_VERSION = 9;
     const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
     const MAX_IDENTIFIER_ITEMS = 250;
     const MAX_RECENT_ACTIONS = 50;
@@ -40,6 +40,7 @@
     const PRODUCTIVE_REFLECTIONS = Object.freeze(['BETTER', 'TRY_AGAIN', 'SAME']);
     const PRODUCTIVE_STAGES = Object.freeze(['SELECTED', 'REPAIR_STARTED', 'REPAIR_COMPLETED', 'RETEST_STARTED', 'RETEST_COMPLETED', 'REFLECTED']);
     const GOAL_IDS = Object.freeze(['BCS', 'IELTS', 'BANK', 'UNIVERSITY_ADMISSION', 'GENERAL_ENGLISH', 'SPOKEN_CAREER']);
+    const IELTS_TEST_TYPES = Object.freeze(['ACADEMIC', 'GENERAL_TRAINING']);
 
     const EVENT_PROPERTIES = Object.freeze({
         seo_landing: ['source_category'],
@@ -57,6 +58,10 @@
         learning_session_5_actions: ['action_count'],
         app_cta_view: ['cta_id', 'cta_context', 'install_status'],
         app_cta_click: ['cta_id', 'cta_context', 'install_status']
+        ,ielts_free_entry_view: ['test_type']
+        ,ielts_test_type_selected: ['test_type']
+        ,ielts_weakness_map_view: ['test_type', 'evidence_area_count']
+        ,ielts_weakness_action_selected: ['test_type', 'skill_id', 'provenance', 'reason_code', 'destination_id']
         ,mistake_mirror_start: ['mistake_id', 'mistake_family']
         ,mistake_answer: ['mistake_id', 'mistake_family', 'result', 'option_id', 'attempt_number']
         ,mistake_repair_start: ['mistake_id', 'mistake_family']
@@ -178,6 +183,7 @@
             updatedAt: nowIso,
             goal: null,
             level: null,
+            ieltsTestType: null,
             knownWords: [],
             weakWords: [],
             savedWords: [],
@@ -267,6 +273,7 @@
         state.updatedAt = nowIso;
         state.goal = typeof source.goal === 'string' && source.goal.length <= 50 ? source.goal : null;
         state.level = typeof source.level === 'string' && source.level.length <= 20 ? source.level : null;
+        state.ieltsTestType = IELTS_TEST_TYPES.includes(source.ieltsTestType) ? source.ieltsTestType : null;
         state.knownWords = uniqueIdentifiers(source.knownWords);
         state.weakWords = uniqueIdentifiers(source.weakWords);
         state.savedWords = uniqueIdentifiers(source.savedWords);
@@ -801,6 +808,14 @@
             return learnerState.goal;
         }
 
+        function setIeltsTestType(testType) {
+            if (testType === null || testType === '') learnerState.ieltsTestType = null;
+            else if (IELTS_TEST_TYPES.includes(testType)) learnerState.ieltsTestType = testType;
+            else return learnerState.ieltsTestType;
+            saveState(learnerState);
+            return learnerState.ieltsTestType;
+        }
+
         function getRoutingGoal() {
             return GOAL_IDS.includes(learnerState.goal) ? learnerState.goal : 'GENERAL_ENGLISH';
         }
@@ -953,6 +968,7 @@
             recordProductiveRetryEvidence,
             recordTask1StructuredEvidence,
             setGoal,
+            setIeltsTestType,
             getRoutingGoal,
             reset,
             getState: () => JSON.parse(JSON.stringify(learnerState)),
@@ -982,6 +998,7 @@
             STATE_VERSION,
             SESSION_TIMEOUT_MS,
             GOAL_IDS
+            ,IELTS_TEST_TYPES
             ,MAX_LEARNING_DAYS
             ,MAX_SKILL_EVIDENCE
             ,SKILL_EVIDENCE_TYPES
