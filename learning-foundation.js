@@ -35,6 +35,7 @@
     const TASK1_EVIDENCE_SOURCES = Object.freeze(['SELF_REPORTED_RESPONSE_CHECK', 'OBJECTIVE_VISUAL_PROBE']);
     const TASK1_LEARNER_ANSWERS = Object.freeze(['YES', 'NO', 'NOT_SURE']);
     const TASK1_OBJECTIVE_RESULTS = Object.freeze(['CORRECT', 'INCORRECT']);
+    const TASK1_EVIDENCE_CONFIDENCE = Object.freeze(['SELF_REPORTED', 'OBJECTIVE']);
     const PRODUCTIVE_PROVENANCE = 'LEARNER_SELECTED';
     const PRODUCTIVE_REFLECTIONS = Object.freeze(['BETTER', 'TRY_AGAIN', 'SAME']);
     const PRODUCTIVE_STAGES = Object.freeze(['SELECTED', 'REPAIR_STARTED', 'REPAIR_COMPLETED', 'RETEST_STARTED', 'RETEST_COMPLETED', 'REFLECTED']);
@@ -361,6 +362,7 @@
                     learner_answer: selfReported ? entry.learner_answer : null,
                     objective_result: selfReported ? null : entry.objective_result,
                     provenance: selfReported ? 'LEARNER_SELECTED' : 'OBJECTIVE_DETECTED',
+                    confidence: selfReported ? 'SELF_REPORTED' : 'OBJECTIVE',
                     first_seen_at: validIso(entry.first_seen_at) || nowIso,
                     last_seen_at: validIso(entry.last_seen_at) || nowIso,
                     attempt_number: Math.max(1, Math.min(99, Math.floor(Number(entry.attempt_number) || 1))),
@@ -781,6 +783,7 @@
                 learner_answer: selfReported ? input.learnerAnswer : null,
                 objective_result: selfReported ? null : input.objectiveResult,
                 provenance: selfReported ? 'LEARNER_SELECTED' : 'OBJECTIVE_DETECTED',
+                confidence: selfReported ? 'SELF_REPORTED' : 'OBJECTIVE',
                 first_seen_at: previous && previous.first_seen_at || timestamp, last_seen_at: timestamp,
                 attempt_number: Math.min(99, (previous && previous.attempt_number || 0) + 1), source_version: '6Q'
             };
@@ -995,6 +998,7 @@
             ,TASK1_EVIDENCE_SOURCES
             ,TASK1_LEARNER_ANSWERS
             ,TASK1_OBJECTIVE_RESULTS
+            ,TASK1_EVIDENCE_CONFIDENCE
             ,MAX_RETENTION_COUNT
         })
     };

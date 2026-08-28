@@ -252,6 +252,15 @@
     const ready = TASK1_CHECKS.every((key) => TASK1_ANSWERS.includes(state.task1Checks[key]));
     return `<section class="task1-evidence-check"><h2>Task 1 Evidence Check</h2><p lang="bn">আপনার Task 1 উত্তর যাচাই করুন</p><p><strong>This is learner self-review for practice, not examiner scoring.</strong> It does not assess Task Achievement, inspect your writing, or create a score, band or mastery result.</p>${rows}${state.task1CheckCompleted ? "<p>Self-check saved as bounded learner-selected evidence. Your writing was not saved.</p>" : `<button class="primary" data-action="complete-task1-check"${ready ? "" : " disabled"}>Complete self-check</button>`}</section>`;
   }
+  function persistTask1CheckRecords(learning, records) {
+    if (!learning || !Array.isArray(records)) return false;
+    let persisted = false;
+    records.forEach((record) => {
+      if (typeof learning.recordTask1StructuredEvidence === "function") persisted = learning.recordTask1StructuredEvidence(record) || persisted;
+      if (["NO", "NOT_SURE"].includes(record.learnerAnswer) && record.repairCode && typeof learning.recordProductiveRetryEvidence === "function") learning.recordProductiveRetryEvidence({evidenceId:`ielts-productive-retry:${record.taskId}:${record.repairCode.toLowerCase()}`,skillId:record.skillId,taskType:"ACADEMIC_TASK_1_VISUAL",sourceId:record.taskId,repairCode:record.repairCode,stage:"SELECTED"});
+    });
+    return persisted;
+  }
   function coordinates(values, w = 640, h = 260, p = 42) {
     const max = Math.max(...values),
       min = Math.min(0, ...values),
@@ -521,10 +530,7 @@
         const records = session.completeTask1Check();
         if (!records) return;
         const learning = windowObject.OvidhanLearning;
-        records.forEach((record) => {
-          if (learning && typeof learning.recordTask1StructuredEvidence === "function") learning.recordTask1StructuredEvidence(record);
-          if (["NO", "NOT_SURE"].includes(record.learnerAnswer) && record.repairCode) recordProductive("SELECTED", record.repairCode);
-        });
+        persistTask1CheckRecords(learning, records);
         render();
       });
       host.querySelectorAll("[data-start-repair]").forEach(
@@ -643,6 +649,7 @@
     durationBucket: durationBucket,
     createWritingSession: createWritingSession,
     renderTask1EvidenceCheck: renderTask1EvidenceCheck,
+    persistTask1CheckRecords: persistTask1CheckRecords,
     TASK1_CHECKS: TASK1_CHECKS,
     TASK1_REPAIR_CODES: TASK1_REPAIR_CODES,
     renderVisual: renderVisual,
