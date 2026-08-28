@@ -1,0 +1,22 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const learning=require('../learning-foundation.js'),router=require('../smartpath-router.js');
+const graph=require('../skill-mistake-graph.json'),dest=require('../smartpath-destinations.json'),goals=require('../goal-skill-requirements.json');
+
+const storage=learning.createMemoryStorage();
+let now=Date.parse('2026-08-28T10:00:00Z');
+const first=learning.createLearningFoundation({localStorage:storage,now:()=>new Date(now)});
+const base={evidenceId:'ielts-productive-retry:ielts-speaking-part2-001:structure_unclear',skillId:'speaking_extended_turn',taskType:'PART_2_EXTENDED_TURN',sourceId:'ielts-speaking-part2-001',repairCode:'STRUCTURE_UNCLEAR'};
+for(const stage of ['SELECTED','REPAIR_STARTED','REPAIR_COMPLETED','RETEST_STARTED'])assert.equal(first.recordProductiveRetryEvidence({...base,stage}),true);
+let entry=learning.createLearningFoundation({localStorage:storage,now:()=>new Date(now)}).getState().productiveRetryEvidence[base.evidenceId];
+assert.equal(entry.provenance,'LEARNER_SELECTED');assert.equal(entry.confidence,'SELF_REPORTED');assert.equal(entry.repair_completed,true);assert.equal(entry.retest_completed,false);assert.equal(entry.resolution_state,'SELF_REPORTED_UNRESOLVED');
+assert.doesNotMatch(JSON.stringify(entry),/writing.text|raw.audio|audio.blob|transcript|score|band|diagnos|mastery|response.body/i);
+first.recordProductiveRetryEvidence({...base,stage:'RETEST_COMPLETED'});first.recordProductiveRetryEvidence({...base,stage:'REFLECTED',reflection:'BETTER'});
+entry=first.getState().productiveRetryEvidence[base.evidenceId];assert.equal(entry.reflection,'BETTER');assert.equal(entry.resolution_state,'SELF_REPORTED_IMPROVED');assert.equal(entry.masteryStatus,undefined);
+first.recordProductiveRetryEvidence({...base,stage:'SELECTED'});first.recordProductiveRetryEvidence({...base,stage:'REFLECTED',reflection:'TRY_AGAIN'});entry=first.getState().productiveRetryEvidence[base.evidenceId];assert.equal(entry.retry_count,2);assert.equal(entry.resolution_state,'SELF_REPORTED_UNRESOLVED');
+first.recordSkillEvidence('ielts-diagnostic-v1:q01','speaking_extended_turn','DIAGNOSTIC_OBJECTIVE','incorrect','ielts-diagnostic-v1');assert.equal(first.getState().skillEvidence['ielts-diagnostic-v1:q01'].result,'incorrect');assert.equal(first.getState().productiveRetryEvidence[base.evidenceId].provenance,'LEARNER_SELECTED');
+const recommendation=router.recommend({graph,destinations:dest.destinations,goalGraph:goals,transferGraph:null,state:{...first.getState(),goal:'IELTS'},profile:{microSkills:[]},nowMs:now});assert.equal(recommendation.skill_id,'speaking_extended_turn');assert.equal(recommendation.primary_reason,'PRODUCTIVE_RETRY');
+const writing=fs.readFileSync(path.join(__dirname,'..','ielts-writing-practice.js'),'utf8'),speaking=fs.readFileSync(path.join(__dirname,'..','ielts-speaking-practice.js'),'utf8');
+assert.match(writing,/recordProductiveRetryEvidence/);assert.match(speaking,/recordProductiveRetryEvidence/);assert.doesNotMatch(writing+speaking,/SpeechRecognition|webkitSpeechRecognition|sendBeacon|XMLHttpRequest|FileReader|arrayBuffer\(/i);
+const speakingPack=require('../data/ielts-speaking-repair-retest-v1.json');assert.ok(speakingPack.repair_codes.every(x=>x.applicability.every(y=>y!=='PART_1')));
+console.log('PASS Phase 6P productive evidence history and routing tests');

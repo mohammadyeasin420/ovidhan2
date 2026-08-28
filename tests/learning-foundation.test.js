@@ -58,7 +58,7 @@ function test(name, callback) {
 test('new anonymous learner receives versioned state and random first-party ID', () => {
     const { foundation } = createHarness();
     const state = foundation.getState();
-    assert.equal(state.version, 6);
+    assert.equal(state.version, 7);
     assert.match(state.anonymousLearnerId, /^[0-9a-f-]{36}$/);
     assert.equal(state.progress.learningActions, 0);
 });
@@ -79,7 +79,7 @@ test('corrupted state recovers without breaking initialization', () => {
     const localStorage = createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY, '{not-json');
     const { foundation } = createHarness({ localStorage });
-    assert.equal(foundation.getState().version, 6);
+    assert.equal(foundation.getState().version, 7);
     assert.equal(foundation.getState().progress.learningActions, 0);
 });
 
@@ -93,7 +93,7 @@ test('old foundation schema is normalized without losing identifiers', () => {
     }));
     const { foundation } = createHarness({ localStorage });
     const state = foundation.getState();
-    assert.equal(state.version, 6);
+    assert.equal(state.version, 7);
     assert.equal(state.anonymousLearnerId, '11111111-1111-4111-8111-111111111111');
     assert.deepEqual(state.savedWords, ['language']);
     assert.equal(state.progress.learningActions, 2);
@@ -272,7 +272,7 @@ test('version-2 mistake signals migrate to bounded evidence counters', () => {
     }));
     const { foundation } = createHarness({ localStorage });
     const state = foundation.getState();
-    assert.equal(state.version, 6);
+    assert.equal(state.version, 7);
     assert.equal(state.mistakeSignals['mm-agree-verb'].initialIncorrect, 1);
     assert.equal(state.mistakeSignals['mm-agree-verb'].repairCorrect, 1);
     assert.equal(state.mistakeSignals['mm-agree-verb'].retestCorrect, 1);
@@ -409,7 +409,7 @@ test('version-4 state migrates without manufacturing diagnostic evidence', () =>
     const localStorage=createMemoryStorage();
     localStorage.setItem(constants.STATE_KEY,JSON.stringify({version:4,anonymousLearnerId:'11111111-1111-4111-8111-111111111111',mistakeSignals:{}}));
     const { foundation }=createHarness({localStorage});
-    assert.equal(foundation.getState().version,6);
+    assert.equal(foundation.getState().version,7);
     assert.deepEqual(foundation.getState().skillEvidence,{});
 });
 

@@ -361,6 +361,12 @@
         );
         return MODES.includes(mode) ? mode : "gt-letter";
       };
+    function recordProductive(stage, repairCode) {
+      const learning = windowObject.OvidhanLearning, state = session.getState(), item = state.item;
+      if (!learning || typeof learning.recordProductiveRetryEvidence !== "function" || !repairCode) return false;
+      const skillId = item.task_type === "GT_TASK_1_LETTER" ? "writing_letter_task_response" : item.task_type === "ACADEMIC_TASK_1_VISUAL" ? "writing_visual_information_description" : "writing_argument_development";
+      return learning.recordProductiveRetryEvidence({evidenceId:`ielts-productive-retry:${item.id}:${repairCode.toLowerCase()}`,skillId,taskType:item.task_type,sourceId:item.id,repairCode,stage});
+    }
     function render() {
       const state = session.getState();
       const repairUi = windowObject.OvidhanWritingRepairRetest;
@@ -466,6 +472,7 @@
         (input) =>
           (input.onchange = () => {
             session.toggleRepair(input.dataset.repair, input.checked);
+            if (input.checked) recordProductive("SELECTED", input.dataset.repair);
             render();
           }),
       );
@@ -473,6 +480,7 @@
         (button) =>
           (button.onclick = () => {
             session.startRepair(button.dataset.startRepair);
+            recordProductive("REPAIR_STARTED", button.dataset.startRepair);
             render();
           }),
       );
@@ -500,7 +508,13 @@
       host
         .querySelector("[data-action=continue-repair]")
         ?.addEventListener("click", () => {
+          const before = session.getState();
           session.continueRepair();
+          const after = session.getState();
+          if (before.repairStageIndex === 1 && after.repairStageIndex === 2) {
+            recordProductive("REPAIR_COMPLETED", before.activeRepair);
+            recordProductive("RETEST_STARTED", before.activeRepair);
+          } else if (before.repairStageIndex === 2 && after.stage === "repair-complete") recordProductive("RETEST_COMPLETED", before.activeRepair);
           render();
         });
       host

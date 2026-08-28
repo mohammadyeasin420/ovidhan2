@@ -12,9 +12,9 @@
     'use strict';
 
     const GOAL_IDS = Object.freeze(['BCS','IELTS','BANK','UNIVERSITY_ADMISSION','GENERAL_ENGLISH','SPOKEN_CAREER']);
-    const REASONS = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','WEAK_SKILL','DIAGNOSTIC_GAP','REVIEW_DUE','GOAL_CORE_SKILL','PREREQUISITE_NEEDED','TRANSFER_RISK','GATEWAY_SKILL','NEW_SKILL','REINFORCEMENT']);
+    const REASONS = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','PRODUCTIVE_RETRY','RESUME_RETEST','SELF_REPORTED_IMPROVED','WEAK_SKILL','DIAGNOSTIC_GAP','REVIEW_DUE','GOAL_CORE_SKILL','PREREQUISITE_NEEDED','TRANSFER_RISK','GATEWAY_SKILL','NEW_SKILL','REINFORCEMENT']);
     const IMPORTANCE_SCORE = Object.freeze({ CORE: 16, SUPPORTING: 9, OPTIONAL: 4 });
-    const REASON_ORDER = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','WEAK_SKILL','DIAGNOSTIC_GAP','PREREQUISITE_NEEDED','REVIEW_DUE','GOAL_CORE_SKILL','GATEWAY_SKILL','TRANSFER_RISK','NEW_SKILL','REINFORCEMENT']);
+    const REASON_ORDER = Object.freeze(['FAILED_RETEST','UNRESOLVED_MISTAKE','PRODUCTIVE_RETRY','RESUME_RETEST','WEAK_SKILL','DIAGNOSTIC_GAP','PREREQUISITE_NEEDED','REVIEW_DUE','GOAL_CORE_SKILL','GATEWAY_SKILL','TRANSFER_RISK','SELF_REPORTED_IMPROVED','NEW_SKILL','REINFORCEMENT']);
 
     function safeArray(value) { return Array.isArray(value) ? value : []; }
     function safeGoal(value) { return GOAL_IDS.includes(value) ? value : 'GENERAL_ENGLISH'; }
@@ -96,6 +96,8 @@
         const transferSkills = new Set(validTransferEdges(input.transferGraph, skillIds).map(edge => edge.target_skill_id));
         const recentActions = safeArray(state.recentActions).slice(-10);
         const signals = state.mistakeSignals && typeof state.mistakeSignals === 'object' ? state.mistakeSignals : {};
+        const productiveSignals = Object.values(state.productiveRetryEvidence && typeof state.productiveRetryEvidence === 'object' ? state.productiveRetryEvidence : {})
+            .filter(entry => entry && entry.provenance === 'LEARNER_SELECTED');
         const dependencyCounts = new Map(graph.skills.map(skill => [skill.id, 0]));
         graph.skills.forEach(skill => safeArray(skill.prerequisites).forEach(parent => dependencyCounts.set(parent, (dependencyCounts.get(parent) || 0) + 1)));
 
@@ -115,6 +117,7 @@
             const itemId = itemIdFor(destination);
             const signal = itemId ? signals[itemId] || {} : {};
             const counts = signalCounts(signal);
+            const productive = productiveSignals.filter(entry => entry.skill_id === skill.id).sort((a,b) => Date.parse(b.last_attempted_at || 0) - Date.parse(a.last_attempted_at || 0))[0];
             const breakdown = {
                 learner_weakness: 0, diagnostic_gap: 0, review_urgency: 0, goal_relevance: 0, difficulty_fit: 0,
                 prerequisite_readiness: 0, recent_mistake_relevance: 0, curated_transfer_risk: 0,
@@ -127,6 +130,13 @@
                 breakdown.review_urgency = 110; reasons.push('UNRESOLVED_MISTAKE');
             } else if (signal.lastSeenAt && Number.isFinite(Date.parse(signal.lastSeenAt)) && nowMs - Date.parse(signal.lastSeenAt) >= 86400000) {
                 breakdown.review_urgency = 20; reasons.push('REVIEW_DUE');
+            }
+            if (productive) {
+                const age = Number.isFinite(Date.parse(productive.last_attempted_at)) ? Math.max(0, nowMs - Date.parse(productive.last_attempted_at)) : 0;
+                const decay = age >= 30*86400000 ? 20 : age >= 7*86400000 ? 10 : 0;
+                if (productive.repair_completed && !productive.retest_completed) { breakdown.review_urgency = Math.max(breakdown.review_urgency, 75-decay); reasons.push('RESUME_RETEST'); }
+                else if (productive.reflection === 'TRY_AGAIN' || productive.resolution_state === 'SELF_REPORTED_UNRESOLVED') { breakdown.review_urgency = Math.max(breakdown.review_urgency, Math.min(90, 55 + Math.min(20, (productive.retry_count||1)*5) - decay)); reasons.push('PRODUCTIVE_RETRY'); }
+                else if (productive.reflection === 'BETTER') { breakdown.review_urgency = Math.max(breakdown.review_urgency, 8); reasons.push('SELF_REPORTED_IMPROVED'); }
             }
 
             if (evidence && evidence.status === 'NEEDS_PRACTICE') { breakdown.learner_weakness = 35; reasons.push('WEAK_SKILL'); }
@@ -204,6 +214,9 @@
         return {
             FAILED_RETEST: 'আগের retest-এ ভুল হওয়ায় এই skill-টি এখন আবার দেখা সবচেয়ে জরুরি।',
             UNRESOLVED_MISTAKE: 'এই skill-এ একটি ভুল এখনও পুরোপুরি resolve হয়নি।',
+            PRODUCTIVE_RETRY: 'আপনি নিজে এই productive weakness-টি বেছে নিয়ে আবার চেষ্টা করতে চেয়েছেন। এটি automatic diagnosis নয়।',
+            RESUME_RETEST: 'আপনার learner-selected repair শেষ হয়েছে, কিন্তু retest এখনও বাকি।',
+            SELF_REPORTED_IMPROVED: 'আপনি দ্বিতীয় প্রচেষ্টাকে ভালো বলেছেন; এটি mastery বা IELTS score নয়।',
             WEAK_SKILL: 'আপনার সাম্প্রতিক evidence এই skill-এ আরও অনুশীলনের প্রয়োজন দেখায়।',
             DIAGNOSTIC_GAP: 'Diagnostic signal অনুযায়ী এই skill-টি practice করে যাচাই করা উপযোগী।',
             REVIEW_DUE: 'আগের evidence-এর পর সময় কেটেছে, তাই এখন সংক্ষিপ্ত review উপযোগী।',
