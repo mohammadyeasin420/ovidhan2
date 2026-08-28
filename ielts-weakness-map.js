@@ -27,6 +27,14 @@
       return Object.assign({}, destination, {url});
     });
   }
+  function routingStateForTestType(state, testType) {
+    state = state && typeof state === "object" ? state : {};
+    testType = TEST_TYPES.includes(testType) ? testType : "ACADEMIC";
+    const allowedWritingTasks = new Set(testType === "ACADEMIC" ? ["ACADEMIC_TASK_1_VISUAL","ACADEMIC_TASK_2_ESSAY"] : ["GT_TASK_1_LETTER","GT_TASK_2_ARGUMENT"]);
+    const writingTasks = new Set(["ACADEMIC_TASK_1_VISUAL","ACADEMIC_TASK_2_ESSAY","GT_TASK_1_LETTER","GT_TASK_2_ARGUMENT"]);
+    const productiveRetryEvidence = Object.fromEntries(Object.entries(safeObject(state.productiveRetryEvidence)).filter(([,entry]) => entry && (!writingTasks.has(entry.task_type) || allowedWritingTasks.has(entry.task_type))));
+    return Object.assign({}, state, {productiveRetryEvidence});
+  }
   function buildWeaknessMap(state, graph, recommendation, testType) {
     state = state || {}; graph = graph || {skills:[],item_mappings:[]}; testType = TEST_TYPES.includes(testType) ? testType : TEST_TYPES.includes(state.ieltsTestType) ? state.ieltsTestType : "ACADEMIC";
     const skills = new Map((graph.skills||[]).map(x=>[x.id,x])), mappings = new Map((graph.item_mappings||[]).map(x=>[x.item_id,x]));
@@ -51,9 +59,9 @@
   function mount(win) {
     const host=win.document.getElementById("ieltsWeaknessMap"); if(!host||!win.OvidhanLearning||!win.OvidhanSmartPath||!win.OvidhanMistakeProfile)return;
     Promise.all(["/skill-mistake-graph.json","/goal-skill-requirements.json","/smartpath-destinations.json"].map(url=>win.fetch(url,{credentials:"same-origin"}).then(r=>r.ok?r.json():Promise.reject()))).then(([graph,goals,destinations])=>{
-      const draw=()=>{const state=win.OvidhanLearning.getState(),testType=TEST_TYPES.includes(state.ieltsTestType)?state.ieltsTestType:"ACADEMIC",profile=recommendationProfile(state,graph,win.OvidhanMistakeProfile),rec=win.OvidhanSmartPath.recommend({state:{...state,goal:"IELTS"},profile,graph,goalGraph:goals,transferGraph:null,destinations:destinationsForTestType(destinations.destinations,testType),nowMs:Date.now()}),model=buildWeaknessMap(state,graph,rec,testType);win.document.querySelectorAll("[data-ielts-test-type]").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.ieltsTestType===model.testType)));host.innerHTML=render(model);win.OvidhanLearning.track("ielts_weakness_map_view",{test_type:model.testType,evidence_area_count:model.evidenceAreaCount});host.querySelectorAll("[data-weakness-action]").forEach(link=>link.addEventListener("click",()=>win.OvidhanLearning.track("ielts_weakness_action_selected",{test_type:model.testType,skill_id:link.dataset.skill,provenance:link.dataset.provenance,reason_code:link.dataset.reason,destination_id:link.dataset.destination})));};
+      const draw=()=>{const state=win.OvidhanLearning.getState(),testType=TEST_TYPES.includes(state.ieltsTestType)?state.ieltsTestType:"ACADEMIC",routingState=routingStateForTestType(state,testType),profile=recommendationProfile(routingState,graph,win.OvidhanMistakeProfile),rec=win.OvidhanSmartPath.recommend({state:{...routingState,goal:"IELTS"},profile,graph,goalGraph:goals,transferGraph:null,destinations:destinationsForTestType(destinations.destinations,testType),nowMs:Date.now()}),model=buildWeaknessMap(state,graph,rec,testType);win.document.querySelectorAll("[data-ielts-test-type]").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.ieltsTestType===model.testType)));host.innerHTML=render(model);win.OvidhanLearning.track("ielts_weakness_map_view",{test_type:model.testType,evidence_area_count:model.evidenceAreaCount});host.querySelectorAll("[data-weakness-action]").forEach(link=>link.addEventListener("click",()=>win.OvidhanLearning.track("ielts_weakness_action_selected",{test_type:model.testType,skill_id:link.dataset.skill,provenance:link.dataset.provenance,reason_code:link.dataset.reason,destination_id:link.dataset.destination})));};
       win.document.querySelectorAll("[data-ielts-test-type]").forEach(button=>button.addEventListener("click",()=>{const type=button.dataset.ieltsTestType;if(!TEST_TYPES.includes(type))return;win.OvidhanLearning.setIeltsTestType(type);win.OvidhanLearning.track("ielts_test_type_selected",{test_type:type});win.document.querySelectorAll("[data-ielts-test-type]").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.ieltsTestType===type)));draw();})); win.OvidhanLearning.track("ielts_free_entry_view",{test_type:TEST_TYPES.includes(win.OvidhanLearning.getState().ieltsTestType)?win.OvidhanLearning.getState().ieltsTestType:"ACADEMIC"}); draw();
     }).catch(()=>{host.innerHTML='<p role="alert">The weakness map could not load. Your practice evidence was not changed.</p>';});
   }
-  return Object.freeze({TEST_TYPES,GROUPS,LABELS,skillGroup,activeProductive,destinationsForTestType,buildWeaknessMap,recommendationProfile,recommendationProvenance,render,mount});
+  return Object.freeze({TEST_TYPES,GROUPS,LABELS,skillGroup,activeProductive,destinationsForTestType,routingStateForTestType,buildWeaknessMap,recommendationProfile,recommendationProvenance,render,mount});
 });
