@@ -6,6 +6,9 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   "use strict";
   const MODES = ["academic-task1", "academic-task2", "gt-letter", "gt-essay"];
+  const TASK1_CHECKS = ["OVERVIEW", "IMPORTANT_FEATURES", "COMPARISON", "DATA_CHECK"];
+  const TASK1_ANSWERS = ["YES", "NO", "NOT_SURE"];
+  const TASK1_REPAIR_CODES = Object.freeze({OVERVIEW:"OVERVIEW_MISSING", IMPORTANT_FEATURES:"IMPORTANT_FEATURE_MISSED", DATA_CHECK:"DATA_ERROR"});
   function countWords(text) {
     const value = String(text || "").trim();
     return value ? value.split(/\s+/u).length : 0;
@@ -46,6 +49,7 @@
       repairResponse = "",
       repairChecked = false,
       repairReflection = "";
+    let task1Checks = {}, task1CheckCompleted = false;
     const list = () =>
         mode === "gt-letter"
           ? gtPack.gt_task1_letters
@@ -88,6 +92,8 @@
         repairChecked: repairChecked,
         repairReflection: repairReflection,
         repairActivity: activity(),
+        task1Checks: {...task1Checks},
+        task1CheckCompleted,
         item: current(),
       }),
       setText(value) {
@@ -123,6 +129,16 @@
           durationBucket: durationBucket(finishedDuration),
         };
       },
+      setTask1Check(checkType, answer) {
+        if (mode === "academic-task1" && stage === "review" && TASK1_CHECKS.includes(checkType) && TASK1_ANSWERS.includes(answer)) task1Checks[checkType] = answer;
+        return this.getState();
+      },
+      completeTask1Check() {
+        if (mode !== "academic-task1" || stage !== "review" || TASK1_CHECKS.some((key) => !TASK1_ANSWERS.includes(task1Checks[key]))) return null;
+        task1CheckCompleted = true;
+        const item = current();
+        return TASK1_CHECKS.map((checkType) => ({evidenceId:`ielts-task1-check:${item.id}:${checkType.toLowerCase()}`,taskId:item.id,skillId:"writing_visual_information_description",checkType,evidenceSource:"SELF_REPORTED_RESPONSE_CHECK",learnerAnswer:task1Checks[checkType],repairCode:TASK1_REPAIR_CODES[checkType] || null}));
+      },
       toggleRepair(code, checked) {
         const valid =
           !repairPack ||
@@ -143,6 +159,7 @@
         repairResponse = "";
         repairChecked = false;
         repairReflection = "";
+        task1Checks = {}; task1CheckCompleted = false;
         stage = "repair";
         return this.getState();
       },
@@ -174,12 +191,14 @@
         repairResponse = "";
         repairChecked = false;
         repairReflection = "";
+        task1Checks = {}; task1CheckCompleted = false;
         return this.getState();
       },
       revise() {
         stage = "writing";
         startedAt = null;
         finishedDuration = 0;
+        task1Checks = {}; task1CheckCompleted = false;
         return this.getState();
       },
       next() {
@@ -193,6 +212,7 @@
         repairResponse = "";
         repairChecked = false;
         repairReflection = "";
+        task1Checks = {}; task1CheckCompleted = false;
         return this.getState();
       },
       changeMode(next) {
@@ -208,6 +228,7 @@
         repairResponse = "";
         repairChecked = false;
         repairReflection = "";
+        task1Checks = {}; task1CheckCompleted = false;
         return this.getState();
       },
     };
@@ -224,6 +245,22 @@
           "'": "&#39;",
         })[c],
     );
+  function renderTask1EvidenceCheck(state) {
+    if (state.mode !== "academic-task1" || state.stage !== "review") return "";
+    const labels = {OVERVIEW:"I included a clear overview of the main trends or features.",IMPORTANT_FEATURES:"I selected the most important features instead of describing every point.",COMPARISON:"I made relevant comparisons where this visual supports them.",DATA_CHECK:"I checked figures, categories, units, direction and time labels."};
+    const rows = TASK1_CHECKS.map((checkType) => `<fieldset><legend>${esc(checkType.replaceAll("_", " "))}</legend><p>${esc(labels[checkType])}</p>${TASK1_ANSWERS.map((answer) => `<label><input type="radio" name="task1-${checkType}" data-task1-check="${checkType}" value="${answer}"${state.task1Checks[checkType] === answer ? " checked" : ""}${state.task1CheckCompleted ? " disabled" : ""}> ${answer.replace("_", " ")}</label>`).join("")}</fieldset>`).join("");
+    const ready = TASK1_CHECKS.every((key) => TASK1_ANSWERS.includes(state.task1Checks[key]));
+    return `<section class="task1-evidence-check"><h2>Task 1 Evidence Check</h2><p lang="bn">আপনার Task 1 উত্তর যাচাই করুন</p><p><strong>This is learner self-review for practice, not examiner scoring.</strong> It does not assess Task Achievement, inspect your writing, or create a score, band or mastery result.</p>${rows}${state.task1CheckCompleted ? "<p>Self-check saved as bounded learner-selected evidence. Your writing was not saved.</p>" : `<button class="primary" data-action="complete-task1-check"${ready ? "" : " disabled"}>Complete self-check</button>`}</section>`;
+  }
+  function persistTask1CheckRecords(learning, records) {
+    if (!learning || !Array.isArray(records)) return false;
+    let persisted = false;
+    records.forEach((record) => {
+      if (typeof learning.recordTask1StructuredEvidence === "function") persisted = learning.recordTask1StructuredEvidence(record) || persisted;
+      if (["NO", "NOT_SURE"].includes(record.learnerAnswer) && record.repairCode && typeof learning.recordProductiveRetryEvidence === "function") learning.recordProductiveRetryEvidence({evidenceId:`ielts-productive-retry:${record.taskId}:${record.repairCode.toLowerCase()}`,skillId:record.skillId,taskType:"ACADEMIC_TASK_1_VISUAL",sourceId:record.taskId,repairCode:record.repairCode,stage:"SELECTED"});
+    });
+    return persisted;
+  }
   function coordinates(values, w = 640, h = 260, p = 42) {
     const max = Math.max(...values),
       min = Math.min(0, ...values),
@@ -412,7 +449,7 @@
           "",
         )}</div><article class="writing-prompt"><p class="eyebrow">${academic ? "Academic · Ovidhan-created · Not official IELTS" : esc((item.expected_register || item.reasoning_demand || item.question_type).replaceAll("_", " "))}</p>${item.title ? `<h2>${esc(item.title)}</h2>` : ""}${item.context ? `<p>${esc(item.context)}</p>` : ""}<p class="task-prompt">${esc(item.prompt_en)}</p><p lang="bn">${esc(item.prompt_bn)}</p>${task1 ? renderVisual(item) : ""}${academic ? `<details class="planning-help"><summary>Planning and useful language</summary>${task1 ? `<h3>Overview targets</h3>${list(item.overview_targets)}` : `<h3>Task requirements</h3>${list(item.task_requirements)}<h3>Planning questions</h3>${list(item.planning_questions)}`}<h3>বাংলা planning help</h3>${list(item.bangla_planning_help)}<h3>Useful language</h3>${list(item.useful_language)}<h3>Common mistakes</h3>${list(item.common_mistakes)}</details>` : guidance ? `<details><summary>Register guidance</summary>${list(guidance.guidance)}${guidance.note ? `<p>${esc(guidance.note)}</p>` : ""}</details>` : ""}</article><section class="writing-workspace"><p class="privacy-note">আপনার লেখা শুধু এই page session-এর memory-তে থাকে; এটি save, upload, analytics বা assessment-এর জন্য পাঠানো হয় না।</p><label for="writingResponse">আপনার উত্তর লিখুন</label><textarea id="writingResponse" rows="14" autocomplete="off"${state.stage === "review" ? " readonly" : ""}>${esc(state.text)}</textarea><div class="writing-meta"><span id="wordCount">শব্দ সংখ্যা: ${state.wordCount}</span><span id="writingTimer">সময়: ${elapsed}s</span></div><div class="writing-controls">${state.stage === "review" ? '<button data-action="revise">উত্তর সংশোধন করুন</button><button class="primary" data-action="next">পরবর্তী টাস্ক</button>' : '<button class="primary" data-action="finish">লেখা শেষ করুন</button>'}</div>${
         state.stage === "review"
-          ? `<fieldset class="self-review"><legend>Self-review</legend>${review.map((x) => `<label><input type="checkbox"> ${esc(x)}</label>`).join("")}</fieldset>${
+          ? `${renderTask1EvidenceCheck(state)}<fieldset class="self-review"><legend>Self-review</legend>${review.map((x) => `<label><input type="checkbox"> ${esc(x)}</label>`).join("")}</fieldset>${
               repairRows.length
                 ? `<fieldset class="repair-review"><legend>Choose weakness(es) for your retry · দুর্বলতা নিজে বেছে নিন</legend>${repairRows.map((x) => `<label><input type="checkbox" data-repair="${x.repair_code}"${state.repairs.includes(x.repair_code) ? " checked" : ""}> <strong>${esc(x.learner_label_en)}</strong> — ${esc(x.learner_label_bn)}</label>`).join("")}</fieldset><div class="repair-guidance">${
                     repairRows
@@ -485,6 +522,17 @@
             render();
           }),
       );
+      host.querySelectorAll("[data-task1-check]").forEach((input) => input.onchange = () => {
+        session.setTask1Check(input.dataset.task1Check, input.value);
+        render();
+      });
+      host.querySelector("[data-action=complete-task1-check]")?.addEventListener("click", () => {
+        const records = session.completeTask1Check();
+        if (!records) return;
+        const learning = windowObject.OvidhanLearning;
+        persistTask1CheckRecords(learning, records);
+        render();
+      });
       host.querySelectorAll("[data-start-repair]").forEach(
         (button) =>
           (button.onclick = () => {
@@ -600,6 +648,10 @@
     countWords: countWords,
     durationBucket: durationBucket,
     createWritingSession: createWritingSession,
+    renderTask1EvidenceCheck: renderTask1EvidenceCheck,
+    persistTask1CheckRecords: persistTask1CheckRecords,
+    TASK1_CHECKS: TASK1_CHECKS,
+    TASK1_REPAIR_CODES: TASK1_REPAIR_CODES,
     renderVisual: renderVisual,
     mount: mount,
   };
