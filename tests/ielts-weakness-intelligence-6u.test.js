@@ -8,6 +8,7 @@ assert.ok(map.buildWeaknessMap({},graph,null,"ACADEMIC").groups.every(x=>x.cards
 let cards=intelligence.aggregate({skillEvidence:{one:evidence("item-1")}},graph);assert.equal(cards[0].state,"SINGLE_OBJECTIVE_SIGNAL");
 cards=intelligence.aggregate({skillEvidence:{one:evidence("item-1"),two:evidence("item-2")}},graph);assert.equal(cards[0].state,"REPEATED_OBJECTIVE_PATTERN");assert.equal(cards[0].distinct_evidence_count,2);
 let model=map.buildWeaknessMap({skillEvidence:{one:evidence("item-1"),two:evidence("item-2")}},graph,null,"ACADEMIC"),reading=model.groups.find(x=>x.id==="READING");assert.equal(reading.cards.length,1);assert.equal(reading.cards[0].intelligence_status,"REPEATED_OBJECTIVE_PATTERN");
+let rendered=map.render(model);assert.equal(rendered.split(reading.cards[0].why).length-1,1);assert.equal((rendered.match(/Why am I seeing this\?/g)||[]).length,4);
 cards=intelligence.aggregate({skillEvidence:{copy1:evidence("same-item"),copy2:evidence("same-item")}},graph);assert.equal(cards[0].state,"SINGLE_OBJECTIVE_SIGNAL");assert.equal(cards[0].distinct_evidence_count,1);
 cards=intelligence.aggregate({skillEvidence:{copy1:{...evidence("attempt-1"),source_id:"shared-source"},copy2:{...evidence("attempt-2"),source_id:"shared-source"}}},graph);assert.equal(cards[0].state,"SINGLE_OBJECTIVE_SIGNAL");assert.equal(cards[0].distinct_evidence_count,1);
 const mapped=graph.item_mappings.find(x=>x.primary_skill_id===skill);
