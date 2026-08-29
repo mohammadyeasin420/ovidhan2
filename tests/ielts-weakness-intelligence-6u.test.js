@@ -1,0 +1,22 @@
+"use strict";
+const assert=require("assert"),fs=require("fs"),path=require("path"),crypto=require("crypto");
+const intelligence=require("../ielts-weakness-intelligence.js"),map=require("../ielts-weakness-map.js"),graph=require("../skill-mistake-graph.json");
+const root=path.join(__dirname,".."),skill="reading_main_idea";
+const evidence=(id,result="incorrect")=>({evidence_id:id,skill_id:skill,evidence_type:"DIAGNOSTIC_OBJECTIVE",result,source_id:id});
+assert.equal(intelligence.aggregate({},graph).length,0);
+assert.ok(map.buildWeaknessMap({},graph,null,"ACADEMIC").groups.every(x=>x.cards[0].status==="NOT_ENOUGH_EVIDENCE"));
+let cards=intelligence.aggregate({skillEvidence:{one:evidence("item-1")}},graph);assert.equal(cards[0].state,"SINGLE_OBJECTIVE_SIGNAL");
+cards=intelligence.aggregate({skillEvidence:{one:evidence("item-1"),two:evidence("item-2")}},graph);assert.equal(cards[0].state,"REPEATED_OBJECTIVE_PATTERN");assert.equal(cards[0].distinct_evidence_count,2);
+let model=map.buildWeaknessMap({skillEvidence:{one:evidence("item-1"),two:evidence("item-2")}},graph,null,"ACADEMIC"),reading=model.groups.find(x=>x.id==="READING");assert.equal(reading.cards.length,1);assert.equal(reading.cards[0].intelligence_status,"REPEATED_OBJECTIVE_PATTERN");
+cards=intelligence.aggregate({skillEvidence:{copy1:evidence("same-item"),copy2:evidence("same-item")}},graph);assert.equal(cards[0].state,"SINGLE_OBJECTIVE_SIGNAL");assert.equal(cards[0].distinct_evidence_count,1);
+const mapped=graph.item_mappings.find(x=>x.primary_skill_id===skill);
+cards=intelligence.aggregate({mistakeSignals:{[mapped.item_id]:{initialResult:"incorrect",retestResult:"incorrect"}}},graph);assert.equal(cards[0].state,"FAILED_RETEST");
+cards=intelligence.aggregate({mistakeSignals:{[mapped.item_id]:{initialResult:"incorrect",retestResult:"correct"}}},graph);assert.equal(cards[0].state,"RESOLVED_ON_RETEST");assert.doesNotMatch(cards[0].explanation,/master|strong|ready|score|band/i);
+const productive=(skillId,reflection,resolution)=>({evidence_id:`p-${skillId}`,skill_id:skillId,task_type:skillId.startsWith("writing")?"ACADEMIC_TASK_2_ESSAY":"PART_2_EXTENDED_TURN",provenance:"LEARNER_SELECTED",retest_completed:true,reflection,resolution_state:resolution});
+for(const skillId of ["writing_argument_development","speaking_extended_turn"]){cards=intelligence.aggregate({productiveRetryEvidence:{p:productive(skillId,"TRY_AGAIN","SELF_REPORTED_UNRESOLVED")}},graph);assert.equal(cards[0].provenance,"LEARNER_SELECTED");assert.equal(cards[0].state,"SELF_REPORTED_UNRESOLVED");}
+cards=intelligence.aggregate({productiveRetryEvidence:{p:productive("speaking_extended_turn","BETTER","SELF_REPORTED_IMPROVED")}},graph);assert.equal(cards[0].state,"SELF_REPORTED_IMPROVED");assert.equal(cards[0].provenance,"LEARNER_SELECTED");assert.doesNotMatch(JSON.stringify(cards),/objective improvement|master|strong|ready|score|band/i);
+const page=fs.readFileSync(path.join(root,"learning-path-ielts.html"),"utf8");assert.equal((page.match(/ielts-weakness-intelligence\.js/g)||[]).length,1);assert.ok(page.indexOf("ielts-weakness-intelligence.js")<page.indexOf("ielts-weakness-map.js"));
+for(const type of map.TEST_TYPES){const filtered=map.destinationsForTestType(require("../smartpath-destinations.json").destinations,type),urls=filtered.map(x=>x.url);assert.ok(type==="ACADEMIC"?urls.every(x=>!x.includes("mode=gt-")):urls.every(x=>!x.includes("mode=academic-")));}
+const source=fs.readFileSync(path.join(root,"ielts-weakness-intelligence.js"),"utf8");assert.doesNotMatch(source,/learner_text|writing_response|recording_blob|audio_blob|transcript/i);assert.doesNotMatch(source,/Math\.random|fetch\(|XMLHttpRequest|openai|anthropic/i);
+const frozen=require("../reports/ovidhan-learning-foundation-3b-frozen-hashes.json");assert.equal(frozen.aggregateSha256,"202cc8c85317ff57756c7167b1bfb1c99f784497525f3fb633d2c81757148ce0");for(const x of [...frozen.pages,...frozen.guards])assert.equal(crypto.createHash("sha256").update(fs.readFileSync(path.join(root,x.path))).digest("hex"),x.sha256);
+console.log("PASS Phase 6U empirical IELTS weakness intelligence");
