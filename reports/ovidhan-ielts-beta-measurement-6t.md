@@ -19,6 +19,10 @@ Objective Reading/Listening and objective visual probes use `OBJECTIVE`. Writing
 
 Major product decisions require at least 7 full days and preferably 100+ Free IELTS entry sessions. Below that threshold the finding is **INSUFFICIENT TRAFFIC**, not product failure. Real-world funnel data is not yet available in this implementation phase.
 
+## Manual GA4 setup
+
+GA4 requires an administrator to manually create event-scoped custom dimensions for `test_type`, `skill_area`, `task_type`, `evidence_kind`, `provenance`, `outcome`, `learner_state`, and `evidence_area_count`. The JavaScript emits these bounded event parameters but does not and cannot create the GA4 custom-dimension configuration.
+
 ## Privacy
 
 Writing/repair text, audio, transcript, names, email, phone, free-form responses, anonymous learner/session identifiers as GA properties, band scores, and criterion scores are excluded by event allowlists and stripped by the existing sanitizer. Analytics transport failures are caught and cannot interrupt evidence persistence or learner flow.

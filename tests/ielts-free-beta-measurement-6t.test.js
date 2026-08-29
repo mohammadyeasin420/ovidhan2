@@ -21,6 +21,12 @@ returning.recordLearningAction("phase6t:return","ielts-practice","correct");
 returning.trackIeltsFunnel("ielts_practice_started",{skill_area:"READING",task_type:"READING_MISTAKE_MIRROR"});
 assert.equal(returningEvents.at(-1).properties.learner_state,"NEW_NO_EVIDENCE");
 
+// Raw attempts alone are not Weakness Map evidence coverage.
+const attemptsOnly=foundation.createLearningFoundation({localStorage:foundation.createMemoryStorage(),sessionStorage:foundation.createMemoryStorage()});
+assert.equal(attemptsOnly.recordPerformanceEvidence("attempt:speaking","speaking_extended_turn","SPEAKING_PERFORMANCE_ATTEMPT","PART_2_EXTENDED_TURN","part2","30_TO_59_SECONDS"),true);
+assert.equal(attemptsOnly.recordPerformanceEvidence("attempt:writing","writing_argument_development","WRITING_PERFORMANCE_ATTEMPT","ACADEMIC_TASK_2_ESSAY","task2","120_SECONDS_OR_MORE"),true);
+assert.deepEqual(attemptsOnly.getIeltsAnalyticsContext(),{test_type:"ACADEMIC",evidence_area_count:0,learner_state:"NEW_NO_EVIDENCE"});
+
 // All writing task types plus Reading/Listening/Speaking metadata.
 for(const task of ["ACADEMIC_TASK_1_VISUAL","ACADEMIC_TASK_2_ESSAY","GT_TASK_1_LETTER","GT_TASK_2_ARGUMENT"])
   assert.equal(learning.recordPerformanceEvidence(`ielts-writing:${task.toLowerCase()}`,task.includes("TASK_1_VISUAL")?"writing_visual_information_description":task==="GT_TASK_1_LETTER"?"writing_letter_task_response":"writing_argument_development","WRITING_PERFORMANCE_ATTEMPT",task,"source","UNDER_30_SECONDS"),true);
@@ -29,13 +35,15 @@ assert.equal(learning.recordSkillEvidence("ielts-listening:item","listening_sign
 assert.equal(learning.recordSkillEvidence("bad","listening_signposting","OBJECTIVE_AUDIO_COMPREHENSION","maybe","item"),false);
 assert.ok(events.some(x=>x.event==="ielts_evidence_created"&&x.properties.skill_area==="LISTENING"&&x.properties.provenance==="OBJECTIVE"));
 assert.ok(events.some(x=>x.event==="ielts_evidence_created"&&x.properties.skill_area==="SPEAKING"&&x.properties.provenance==="LEARNER_SELECTED"));
-assert.deepEqual(learning.getIeltsAnalyticsContext(),{test_type:"ACADEMIC",evidence_area_count:3,learner_state:"RETURNING_WITH_EVIDENCE"});
+assert.deepEqual(learning.getIeltsAnalyticsContext(),{test_type:"ACADEMIC",evidence_area_count:1,learner_state:"RETURNING_WITH_EVIDENCE"});
 
 // Task 1 self-report versus objective probe; YES and BETTER never become mastery.
 assert.equal(learning.recordTask1StructuredEvidence({evidenceId:"task1:self",taskId:"academic-task1-001",skillId:"writing_visual_information_description",checkType:"OVERVIEW",evidenceSource:"SELF_REPORTED_RESPONSE_CHECK",learnerAnswer:"YES"}),true);
 assert.equal(learning.recordTask1StructuredEvidence({evidenceId:"task1:probe",taskId:"academic-task1-001",skillId:"writing_visual_information_description",checkType:"DATA_CHECK",evidenceSource:"OBJECTIVE_VISUAL_PROBE",objectiveResult:"CORRECT"}),true);
 assert.ok(events.some(x=>x.properties.evidence_kind==="SELF_REPORTED_RESPONSE_CHECK"&&x.properties.provenance==="LEARNER_SELECTED"));
-assert.ok(events.some(x=>x.properties.evidence_kind==="OBJECTIVE_VISUAL_PROBE"&&x.properties.provenance==="OBJECTIVE"));
+const objectiveProbeEvent=events.find(x=>x.event==="ielts_evidence_created"&&x.properties.evidence_kind==="OBJECTIVE_VISUAL_PROBE"&&x.properties.provenance==="OBJECTIVE");
+assert.ok(objectiveProbeEvent);assert.equal(objectiveProbeEvent.properties.outcome,"OBJECTIVE_CORRECT");
+assert.equal(learning.getState().task1StructuredEvidence["task1:probe"].objective_result,"CORRECT");
 
 // Real repair and completed self-review outcomes only.
 const productive=(stage,reflection)=>learning.recordProductiveRetryEvidence({evidenceId:"ielts-productive-retry:part2:fluency",skillId:"speaking_extended_turn",taskType:"PART_2_EXTENDED_TURN",sourceId:"part2",repairCode:"FLUENCY_PAUSE_CONTROL",stage,reflection});

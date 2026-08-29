@@ -633,10 +633,10 @@
         function ieltsAnalyticsContext() {
             const areas = new Set();
             Object.values(learnerState.skillEvidence).forEach(entry => { const area = ieltsSkillArea(entry && entry.skill_id); if (area) areas.add(area); });
-            Object.values(learnerState.performanceEvidence).forEach(entry => { const area = ieltsSkillArea(entry && entry.skill_id); if (area) areas.add(area); });
             Object.values(learnerState.productiveRetryEvidence).forEach(entry => { const area = ieltsSkillArea(entry && entry.skill_id); if (area) areas.add(area); });
             if (Object.keys(learnerState.task1StructuredEvidence).length) areas.add('WRITING');
-            if (Object.keys(learnerState.mistakeSignals).some(id => id.startsWith('ielts-reading-'))) areas.add('READING');
+            if (Object.entries(learnerState.mistakeSignals).some(([id, signal]) => id.startsWith('ielts-reading-') && signal &&
+                (signal.retestResult === 'incorrect' || (signal.initialResult === 'incorrect' && signal.retestResult !== 'correct')))) areas.add('READING');
             const evidenceAreaCount = areas.size;
             return {
                 test_type: IELTS_TEST_TYPES.includes(learnerState.ieltsTestType) ? learnerState.ieltsTestType : 'ACADEMIC',
@@ -883,7 +883,7 @@
             trackIeltsFunnel('ielts_evidence_created', {
                 skill_area: 'WRITING', task_type: 'ACADEMIC_TASK_1_VISUAL',
                 evidence_kind: input.evidenceSource, provenance: selfReported ? 'LEARNER_SELECTED' : 'OBJECTIVE',
-                outcome: selfReported ? input.learnerAnswer : input.objectiveResult
+                outcome: selfReported ? input.learnerAnswer : input.objectiveResult === 'CORRECT' ? 'OBJECTIVE_CORRECT' : 'OBJECTIVE_INCORRECT'
             });
             return true;
         }
