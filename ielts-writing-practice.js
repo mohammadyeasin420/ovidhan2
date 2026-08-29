@@ -28,6 +28,7 @@
     now,
     initialMode,
     repairPack,
+    onMinimumStart,
   ) {
     if (typeof academicPack === "function") {
       repairPack =
@@ -170,6 +171,7 @@
         const definition = result && result.provenance === "LEARNER_SELECTED" && result.task_type === current().task_type && repairPack && repairPack.repair_codes.find((x) => x.repair_code === result.repair_code && x.applicability.includes(taskType()));
         if (!definition) return this.getState();
         repairs = [result.repair_code]; activeRepair = result.repair_code; repairStageIndex = 0; repairResponse = ""; repairChecked = false; repairReflection = ""; minimumMode = true; stage = "repair";
+        if (typeof onMinimumStart === "function") onMinimumStart(result.repair_code);
         return this.getState();
       },
       checkRepair() {
@@ -182,7 +184,7 @@
           return this.getState();
         repairResponse = "";
         repairChecked = false;
-        if (minimumMode && repairStageIndex === 1) { stage = "writing"; activeRepair = null; repairStageIndex = 0; minimumMode = false; startedAt = null; finishedDuration = 0; }
+        if (minimumMode && repairStageIndex === 1) { stage = "writing"; repairs = []; activeRepair = null; repairStageIndex = 0; minimumMode = false; startedAt = null; finishedDuration = 0; }
         else if (repairStageIndex < 2) repairStageIndex++;
         else stage = "repair-complete";
         return this.getState();
@@ -649,6 +651,7 @@
           Date.now,
           modeFromUrl(),
           repairPack,
+          (repairCode) => recordProductive("REPAIR_STARTED", repairCode),
         );
         if (pendingMinimum && minimumRepair) {
           const validated = minimumRepair.validateHandoff(pendingMinimum, repairPack, session.getState().item.task_type);
