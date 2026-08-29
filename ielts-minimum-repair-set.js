@@ -6,6 +6,8 @@
 })(typeof window !== "undefined" ? window : null, function () {
   "use strict";
   const STATUS = Object.freeze({READY:"MINIMUM_REPAIR_SET",EMPTY:"NO_SPECIFIC_REPAIR"});
+  const HANDOFF_KEY = "ovidhan:ielts:minimum-repair:6v";
+  const HANDOFF_MAX_AGE_MS = 5*60*1000;
   const PACKS = Object.freeze({WRITING:"/data/ielts-writing-repair-retest-v1.json",SPEAKING:"/data/ielts-speaking-repair-retest-v1.json"});
   const TASKS = Object.freeze({
     ACADEMIC_TASK_1_VISUAL:{group:"WRITING",applicability:"ACADEMIC_TASK_1"},
@@ -38,5 +40,23 @@
     const path=PACKS[TASKS[recommendation.productive_task_type].group];
     return Promise.resolve(fetcher(path,{credentials:"same-origin"})).then(response=>response&&response.ok?response.json():Promise.reject(new Error("repair metadata unavailable"))).then(pack=>resolve(recommendation,pack)).catch(()=>empty(recommendation));
   }
-  return Object.freeze({STATUS,PACKS,TASKS,empty,eligible,resolve,load});
+  function storeHandoff(storage, result, now) {
+    if (!storage||!result||result.status!==STATUS.READY||result.provenance!=="LEARNER_SELECTED"||!TASKS[result.task_type]) return false;
+    const value={repair_code:result.repair_code,task_type:result.task_type,skill_id:result.skill_id,provenance:"LEARNER_SELECTED",created_at:Number((now||Date.now)())};
+    try { storage.setItem(HANDOFF_KEY,JSON.stringify(value)); return true; } catch (_) { return false; }
+  }
+  function consumeHandoff(storage, now) {
+    let raw=null;
+    try { raw=storage&&storage.getItem(HANDOFF_KEY); if(storage)storage.removeItem(HANDOFF_KEY); } catch (_) { return null; }
+    if (!raw) return null;
+    try { const value=JSON.parse(raw),keys=Object.keys(value).sort(),expected=["created_at","provenance","repair_code","skill_id","task_type"].sort(),age=Number((now||Date.now)())-value.created_at;if(JSON.stringify(keys)!==JSON.stringify(expected)||value.provenance!=="LEARNER_SELECTED"||typeof value.repair_code!=="string"||typeof value.skill_id!=="string"||!TASKS[value.task_type]||!Number.isFinite(age)||age<0||age>HANDOFF_MAX_AGE_MS)return null;return Object.freeze(value); } catch (_) { return null; }
+  }
+  function validateHandoff(handoff, pack, expectedTaskType) {
+    if (!handoff||handoff.task_type!==expectedTaskType||handoff.provenance!=="LEARNER_SELECTED") return null;
+    const result=resolve({primary_reason:"PRODUCTIVE_RETRY",productive_repair_code:handoff.repair_code,productive_task_type:handoff.task_type,skill_id:handoff.skill_id,url:null},pack);
+    return result.status===STATUS.READY?result:null;
+  }
+  function storeWindowHandoff(win, result, now) { try { return storeHandoff(win.sessionStorage,result,now); } catch (_) { return false; } }
+  function consumeWindowHandoff(win, now) { try { return consumeHandoff(win.sessionStorage,now); } catch (_) { return null; } }
+  return Object.freeze({STATUS,PACKS,TASKS,HANDOFF_KEY,HANDOFF_MAX_AGE_MS,empty,eligible,resolve,load,storeHandoff,consumeHandoff,validateHandoff,storeWindowHandoff,consumeWindowHandoff});
 });

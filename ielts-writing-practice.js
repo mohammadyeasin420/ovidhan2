@@ -48,7 +48,8 @@
       repairStageIndex = 0,
       repairResponse = "",
       repairChecked = false,
-      repairReflection = "";
+      repairReflection = "",
+      minimumMode = false;
     let task1Checks = {}, task1CheckCompleted = false;
     const list = () =>
         mode === "gt-letter"
@@ -91,6 +92,7 @@
         repairResponse: repairResponse,
         repairChecked: repairChecked,
         repairReflection: repairReflection,
+        minimumMode: minimumMode,
         repairActivity: activity(),
         task1Checks: {...task1Checks},
         task1CheckCompleted,
@@ -154,6 +156,7 @@
       },
       startRepair(code) {
         if (!repairs.includes(code)) return this.getState();
+        minimumMode = false;
         activeRepair = code;
         repairStageIndex = 0;
         repairResponse = "";
@@ -161,6 +164,12 @@
         repairReflection = "";
         task1Checks = {}; task1CheckCompleted = false;
         stage = "repair";
+        return this.getState();
+      },
+      startMinimumRepair(result) {
+        const definition = result && result.provenance === "LEARNER_SELECTED" && result.task_type === current().task_type && repairPack && repairPack.repair_codes.find((x) => x.repair_code === result.repair_code && x.applicability.includes(taskType()));
+        if (!definition) return this.getState();
+        repairs = [result.repair_code]; activeRepair = result.repair_code; repairStageIndex = 0; repairResponse = ""; repairChecked = false; repairReflection = ""; minimumMode = true; stage = "repair";
         return this.getState();
       },
       checkRepair() {
@@ -173,7 +182,8 @@
           return this.getState();
         repairResponse = "";
         repairChecked = false;
-        if (repairStageIndex < 2) repairStageIndex++;
+        if (minimumMode && repairStageIndex === 1) { stage = "writing"; activeRepair = null; repairStageIndex = 0; minimumMode = false; startedAt = null; finishedDuration = 0; }
+        else if (repairStageIndex < 2) repairStageIndex++;
         else stage = "repair-complete";
         return this.getState();
       },
@@ -191,6 +201,7 @@
         repairResponse = "";
         repairChecked = false;
         repairReflection = "";
+        minimumMode = false;
         task1Checks = {}; task1CheckCompleted = false;
         return this.getState();
       },
@@ -212,6 +223,7 @@
         repairResponse = "";
         repairChecked = false;
         repairReflection = "";
+        minimumMode = false;
         task1Checks = {}; task1CheckCompleted = false;
         return this.getState();
       },
@@ -228,6 +240,7 @@
         repairResponse = "";
         repairChecked = false;
         repairReflection = "";
+        minimumMode = false;
         task1Checks = {}; task1CheckCompleted = false;
         return this.getState();
       },
@@ -390,6 +403,9 @@
   function mount(documentObject, windowObject) {
     const host = documentObject.getElementById("writingPractice");
     if (!host) return;
+    const minimumRepair = windowObject.OvidhanIeltsMinimumRepairSet;
+    let pendingMinimum = null;
+    if (minimumRepair) pendingMinimum = minimumRepair.consumeWindowHandoff(windowObject);
     let gtPack,
       academicPack,
       repairPack,
@@ -571,7 +587,9 @@
           const before = session.getState();
           session.continueRepair();
           const after = session.getState();
-          if (before.repairStageIndex === 1 && after.repairStageIndex === 2) {
+          if (before.minimumMode && before.repairStageIndex === 1 && after.stage === "writing") {
+            recordProductive("REPAIR_COMPLETED", before.activeRepair);
+          } else if (before.repairStageIndex === 1 && after.repairStageIndex === 2) {
             recordProductive("REPAIR_COMPLETED", before.activeRepair);
             recordProductive("RETEST_STARTED", before.activeRepair);
           } else if (before.repairStageIndex === 2 && after.stage === "repair-complete") recordProductive("RETEST_COMPLETED", before.activeRepair);
@@ -632,6 +650,10 @@
           modeFromUrl(),
           repairPack,
         );
+        if (pendingMinimum && minimumRepair) {
+          const validated = minimumRepair.validateHandoff(pendingMinimum, repairPack, session.getState().item.task_type);
+          if (validated) session.startMinimumRepair(validated);
+        }
         render();
       })
       .catch(() => {

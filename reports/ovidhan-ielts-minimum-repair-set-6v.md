@@ -12,6 +12,9 @@ The Free IELTS Weakness Map now shows a bounded pre-retry plan only when SmartPa
 - Return `NO_SPECIFIC_REPAIR` for missing, unknown, duplicate, task-inapplicable, objective Reading/Listening, or `SELF_REPORTED_IMPROVED` recommendations.
 - Return bounded labels and identifiers only. No learner writing, audio, transcript, diagnosis, score, band, readiness, or mastery data is introduced.
 - Fetch only the relevant Writing or Speaking pack after an eligible productive recommendation exists. Fetch or metadata failure preserves the normal SmartPath action.
+- On the READY SmartPath CTA only, write a five-field, five-minute, same-origin `sessionStorage` handoff containing `repair_code`, `task_type`, `skill_id`, `provenance`, and `created_at`. The destination consumes and clears it immediately, then revalidates the exact task, applicability, and reviewed repair definition.
+- The handoff mode enters the exact `NOTICE` activity, continues through `REPAIR`, and then returns to the normal SmartPath-selected practice mode. It never enters the pack `RETEST`. Missing storage, malformed/stale data, task mismatch, or invalid metadata safely falls back to normal practice.
+- Existing manual Writing and Speaking repair flows remain `NOTICE → REPAIR → RETEST`; the two-stage rule applies only to a validated Phase 6V handoff.
 
 ## UI and routing
 
