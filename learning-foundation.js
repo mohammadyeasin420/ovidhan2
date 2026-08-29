@@ -62,6 +62,10 @@
         ,ielts_test_type_selected: ['test_type']
         ,ielts_weakness_map_view: ['test_type', 'evidence_area_count']
         ,ielts_weakness_action_selected: ['test_type', 'skill_id', 'provenance', 'reason_code', 'destination_id']
+        ,ielts_practice_started: ['test_type', 'skill_area', 'task_type', 'learner_state']
+        ,ielts_evidence_created: ['test_type', 'skill_area', 'task_type', 'evidence_kind', 'provenance', 'outcome', 'learner_state']
+        ,ielts_repair_started: ['test_type', 'skill_area', 'task_type', 'provenance', 'repair_code', 'learner_state']
+        ,ielts_retry_completed: ['test_type', 'skill_area', 'task_type', 'provenance', 'repair_code', 'outcome', 'learner_state']
         ,mistake_mirror_start: ['mistake_id', 'mistake_family']
         ,mistake_answer: ['mistake_id', 'mistake_family', 'result', 'option_id', 'attempt_number']
         ,mistake_repair_start: ['mistake_id', 'mistake_family']
@@ -602,6 +606,26 @@
             return true;
         }
 
+        function ieltsLearnerState() {
+            return learnerState.retention.sessionCount > 1 ? 'RETURNING' : 'NEW';
+        }
+
+        function trackIeltsFunnel(eventName, properties, settings) {
+            const source = Object.assign({}, properties || {});
+            source.test_type = IELTS_TEST_TYPES.includes(source.test_type) ? source.test_type
+                : IELTS_TEST_TYPES.includes(learnerState.ieltsTestType) ? learnerState.ieltsTestType : 'ACADEMIC';
+            source.learner_state = ieltsLearnerState();
+            try { return track(eventName, source, settings); } catch (error) { return false; }
+        }
+
+        function ieltsSkillArea(skillId) {
+            if (String(skillId).startsWith('reading_')) return 'READING';
+            if (String(skillId).startsWith('listening_')) return 'LISTENING';
+            if (String(skillId).startsWith('writing_')) return 'WRITING';
+            if (String(skillId).startsWith('speaking_')) return 'SPEAKING';
+            return null;
+        }
+
         function recordLearningAction(actionId, actionType, result) {
             if (typeof actionId !== 'string' || !actionId || learningSession.actionIds.includes(actionId)) return false;
             const actionTime = now();
@@ -705,6 +729,13 @@
                 : previous.repairResult === 'correct' ? 'improving' : 'needs-repair';
             learnerState.mistakeSignals[mistakeId] = previous;
             saveState(learnerState);
+            if (mistakeId.startsWith('ielts-reading-')) {
+                if (stage === 'initial') {
+                    trackIeltsFunnel('ielts_practice_started', { skill_area: 'READING', task_type: 'READING_MISTAKE_MIRROR' }, { dedupeKey: mistakeId });
+                    trackIeltsFunnel('ielts_evidence_created', { skill_area: 'READING', task_type: 'READING_MISTAKE_MIRROR', evidence_kind: 'OBJECTIVE', provenance: 'OBJECTIVE', outcome: result === 'correct' ? 'CORRECT' : 'INCORRECT' });
+                }
+                if (stage === 'retest') trackIeltsFunnel('ielts_retry_completed', { skill_area: 'READING', task_type: 'READING_MISTAKE_MIRROR', provenance: 'OBJECTIVE', repair_code: 'REVIEW_EXPLANATION', outcome: result === 'correct' ? 'CORRECT' : 'INCORRECT' });
+            }
             return true;
         }
 
@@ -727,6 +758,11 @@
             const keys = Object.keys(learnerState.skillEvidence);
             if (keys.length > MAX_SKILL_EVIDENCE) delete learnerState.skillEvidence[keys[0]];
             saveState(learnerState);
+            const skillArea = ieltsSkillArea(skillId);
+            if (skillArea) trackIeltsFunnel('ielts_evidence_created', {
+                skill_area: skillArea, task_type: evidenceType, evidence_kind: 'OBJECTIVE',
+                provenance: 'OBJECTIVE', outcome: result === 'correct' ? 'CORRECT' : 'INCORRECT'
+            });
             return true;
         }
 
@@ -744,6 +780,11 @@
             const keys = Object.keys(learnerState.performanceEvidence);
             if (keys.length > MAX_PERFORMANCE_EVIDENCE) delete learnerState.performanceEvidence[keys[0]];
             saveState(learnerState);
+            const skillArea = ieltsSkillArea(skillId);
+            if (skillArea) trackIeltsFunnel('ielts_evidence_created', {
+                skill_area: skillArea, task_type: taskType, evidence_kind: evidenceType,
+                provenance: 'LEARNER_SELECTED', outcome: 'CREATED'
+            });
             return true;
         }
 
@@ -773,6 +814,13 @@
             const keys = Object.keys(learnerState.productiveRetryEvidence);
             if (keys.length > MAX_PRODUCTIVE_RETRY_EVIDENCE) delete learnerState.productiveRetryEvidence[keys[0]];
             saveState(learnerState);
+            const skillArea = ieltsSkillArea(input.skillId);
+            if (skillArea && stage === 'REPAIR_STARTED') trackIeltsFunnel('ielts_repair_started', {
+                skill_area: skillArea, task_type: input.taskType, provenance: 'LEARNER_SELECTED', repair_code: input.repairCode
+            });
+            if (skillArea && stage === 'REFLECTED' && PRODUCTIVE_REFLECTIONS.includes(reflection)) trackIeltsFunnel('ielts_retry_completed', {
+                skill_area: skillArea, task_type: input.taskType, provenance: 'LEARNER_SELECTED', repair_code: input.repairCode, outcome: reflection
+            });
             return true;
         }
 
@@ -797,6 +845,11 @@
             const keys = Object.keys(learnerState.task1StructuredEvidence);
             if (keys.length > MAX_TASK1_STRUCTURED_EVIDENCE) delete learnerState.task1StructuredEvidence[keys[0]];
             saveState(learnerState);
+            trackIeltsFunnel('ielts_evidence_created', {
+                skill_area: 'WRITING', task_type: 'ACADEMIC_TASK_1_VISUAL',
+                evidence_kind: input.evidenceSource, provenance: selfReported ? 'LEARNER_SELECTED' : 'OBJECTIVE',
+                outcome: selfReported ? input.learnerAnswer : input.objectiveResult
+            });
             return true;
         }
 
@@ -848,6 +901,10 @@
             return anchor && anchor.dataset && anchor.dataset.learningCta
                 ? anchor.dataset.learningCta
                 : 'app-link';
+        }
+
+        function ctaContext(anchor, fallback) {
+            return anchor && anchor.dataset && anchor.dataset.ctaContext ? anchor.dataset.ctaContext : fallback;
         }
 
         function initPilotInstrumentation() {
@@ -921,7 +978,7 @@
                             }, { dedupeKey: id });
                             track('dakho_cta_view', {
                                 cta_id: id,
-                                cta_context: id,
+                                cta_context: ctaContext(entry.target, id),
                                 trigger: 'common-mistakes-guide',
                                 install_status: 'unknown'
                             }, { dedupeKey: id });
@@ -942,7 +999,7 @@
                     }, { dedupeKey: id });
                     track('dakho_cta_click', {
                         cta_id: id,
-                        cta_context: id,
+                        cta_context: ctaContext(anchor, id),
                         trigger: 'common-mistakes-guide',
                         install_status: 'unknown'
                     }, { dedupeKey: id });
@@ -959,6 +1016,7 @@
         return Object.freeze({
             version: STATE_VERSION,
             track,
+            trackIeltsFunnel,
             recordLearningAction,
             saveWord,
             saveMistake,

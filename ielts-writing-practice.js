@@ -487,12 +487,14 @@
         const wasEmpty = session.getState().startedAt === null,
           words = session.setText(area.value);
         host.querySelector("#wordCount").textContent = `শব্দ সংখ্যা: ${words}`;
-        if (wasEmpty && session.getState().startedAt !== null)
+        if (wasEmpty && session.getState().startedAt !== null) {
+          windowObject.OvidhanLearning?.trackIeltsFunnel?.("ielts_practice_started", {skill_area:"WRITING", task_type:session.getState().item.task_type}, {dedupeKey:session.getState().item.id});
           timer = windowObject.setInterval(() => {
             elapsed++;
             const node = host.querySelector("#writingTimer");
             if (node) node.textContent = `সময়: ${elapsed}s`;
           }, 1e3);
+        }
       };
       const finish = host.querySelector("[data-action=finish]");
       if (finish)
