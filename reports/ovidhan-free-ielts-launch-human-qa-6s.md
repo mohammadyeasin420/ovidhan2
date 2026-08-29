@@ -25,6 +25,9 @@ Automated verification does not mark these human checks complete. Record device/
 
 ## Mobile
 
+- [ ] **NOT TESTED** — Confirm the added Bangla is natural and understandable to a Bangladeshi IELTS learner.
+- [ ] **NOT TESTED** — Confirm Bangla glyphs render correctly and English IELTS terms remain clear.
+- [ ] **NOT TESTED** — Confirm bilingual copy does not overcrowd cards, hero, or controls at 360px, 390px, and 412px.
 - [ ] **NOT TESTED** — 360px: no horizontal overflow; Bangla and provenance labels wrap.
 - [ ] **NOT TESTED** — 390px: controls and CTAs remain usable and at least 44px high.
 - [ ] **NOT TESTED** — 412px: Weakness Map is one column and navigation remains usable.

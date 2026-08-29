@@ -29,4 +29,23 @@ const events=[],store=foundation.createMemoryStorage(),learning=foundation.creat
 // 30–31: single init and mobile single column.
 assert.equal(count(/<script src="\/ielts-weakness-map\.js"><\/script>/g),1);assert.equal(count(/<script src="\/learning-foundation\.js"><\/script>/g),1);assert.equal(count(/MOBILE MENU TOGGLE SCRIPT/g),1);assert.equal(count(/MOBILE MENU STYLES/g),1);assert.equal(count(/function toggleMenu/g),1);assert.match(page,/@media \(max-width: 600px\)[\s\S]*?\.weakness-grid \{ grid-template-columns:1fr; \}/);assert.match(source,/let mapViewTracked=false/);assert.match(source,/if\(!mapViewTracked\)/);assert.doesNotMatch(map.render(empty),/GOAL NEW CONTENT|PRODUCTIVE RETRY/);
 
-failureTest().then(()=>console.log("PASS Phase 6S Free IELTS launch hardening (31 requirements)")).catch(error=>{console.error(error);process.exitCode=1;});
+// Final Bangla-first launch cleanup: 18 requested guarantees.
+assert.match(page,/আপনার Practice Result ও Self-review থেকে Weakness Map তৈরি হয়/);
+assert.match(page,/আপনি Academic নাকি General Training IELTS দেবেন/);
+assert.match(emptyHtml,/৪টি Skill-এর কোনো Skill-এ Evidence পাওয়া যায়নি/);
+assert.match(emptyHtml,/এখনও এই Skill-এ আপনার Practice Result নেই/);
+assert.match(page,/Ovidhan আপনার Practice Result ও Self-review দিয়ে এই Weakness Map তৈরি করে/);
+assert.doesNotMatch(page,/achieve (?:your )?(?:target )?band|Band 7\+|guaranteed/i);
+assert.match(page,/কোনো IELTS Band Score, Examiner Score বা official result তৈরি করে না/);
+assert.match(page,/Writing-এ automatic score দেয় না/);
+assert.match(page,/pronunciation বা Speaking quality স্বয়ংক্রিয়ভাবে বিচার করে না/);
+for(const support of ["IELTS পরীক্ষার format","Grammar foundation শক্ত করুন","প্রয়োজনীয় Vocabulary ধীরে ধীরে তৈরি করুন","Reading question বুঝে","Task 1 ও Task 2 লিখুন","নিজের Speaking record","diagnostic ব্যবহার করুন","exam-day routine তৈরি করুন"])assert.match(page,new RegExp(support));
+assert.doesNotMatch(page,/Master grammar for IELTS/i);
+assert.match(page,/Dakho install করা বাধ্যতামূলক নয়/);
+assert.ok(count(/lang="bn"/g)>=12);
+assert.match(emptyHtml,/NOT ENOUGH EVIDENCE YET · এখনও যথেষ্ট প্রমাণ নেই/);
+assert.match(emptyHtml,/Start Reading practice · ছোট Reading Practice শুরু করুন/);
+assert.doesNotMatch(emptyHtml,/GOAL_NEW_CONTENT|FAILED_RETEST|DIAGNOSTIC_GAP|PRODUCTIVE_RETRY/);
+assert.match(source,/এই সংখ্যা IELTS Band Score নয়/);
+
+failureTest().then(()=>console.log("PASS Phase 6S Free IELTS launch hardening (31 core + 18 Bangla-first requirements)")).catch(error=>{console.error(error);process.exitCode=1;});
