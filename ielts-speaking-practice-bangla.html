@@ -81,6 +81,7 @@
         document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.mega-menu > li').forEach(function(li){const link=li.children[0],dropdown=li.querySelector('.dropdown');if(!link)return;link.addEventListener('click',function(event){if(window.innerWidth<=900&&dropdown){event.preventDefault();const willOpen=!li.classList.contains('active');document.querySelectorAll('.mega-menu > li.active').forEach(function(item){if(item!==li)item.classList.remove('active');});li.classList.toggle('active',willOpen);setMenuOpen(true);return;}setMenuOpen(false);});});});
     </script>
     <script src="/learning-foundation.js"></script>
+    <script src="/ielts-minimum-repair-set.js"></script>
     <script src="/ielts-speaking-repair-retest.js"></script>
     <script src="/ielts-speaking-practice.js"></script>
 </body>
