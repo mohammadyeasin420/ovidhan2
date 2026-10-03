@@ -204,3 +204,25 @@ a { color: var(--gold); text-decoration: none; }
     color: var(--gold);
 }
 .btn-outline:hover { background: var(--gold); color: #0B1F1A; }
+
+/* Learning Explorer specific styles */
+.explorer-container { max-width: 880px; margin: 0 auto; padding: 2rem; }
+.search-box { display: flex; gap: 0.5rem; margin-bottom: 2rem; }
+.search-box input { flex: 1; padding: 0.8rem; border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.search-box button { padding: 0.8rem 1.5rem; }
+.result-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+.result-card .word { font-size: 2rem; font-weight: 700; color: var(--gold); }
+.result-card .pronunciation { color: var(--text-mid); font-size: 0.9rem; }
+.result-card .meaning { margin: 0.5rem 0; }
+.result-card .bangla { color: var(--text-mid); font-size: 1.1rem; }
+.result-card .examples { margin-top: 1rem; }
+.result-card .examples li { margin: 0.3rem 0; }
+.learn-more-btn { background: transparent; border: none; color: var(--gold); cursor: pointer; text-decoration: underline; padding: 0; }
+.extra-sections { display: none; margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.extra-sections.open { display: block; }
+.related-words { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.related-words a { background: var(--surface2); padding: 0.2rem 0.8rem; border-radius: 12px; color: var(--text-mid); text-decoration: none; }
+.related-words a:hover { color: var(--gold); }
+@media (max-width: 600px) {
+    .search-box { flex-direction: column; }
+}
