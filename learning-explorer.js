@@ -5,6 +5,92 @@ let currentWord = null;
 let embeddedWord = null;
 let fullDictionaryLoaded = false;
 let dictionaryLoadPromise = null;
+let approvedWordSlugsPromise = null;
+
+function approvedSlug(word) {
+    return String(word == null ? '' : word).trim().toLowerCase();
+}
+
+function approvedPagePath(slug) {
+    return '/word/' + encodeURIComponent(slug) + '.html';
+}
+
+function normalizePathname(pathname) {
+    const path = String(pathname || '/');
+    if (path.length > 1 && path.endsWith('/')) return path.slice(0, -1);
+    return path;
+}
+
+function slugFromPath(pathname) {
+    const match = normalizePathname(pathname).match(/^\/word\/([^/]+)\.html$/i);
+    if (!match) return '';
+    try {
+        return decodeURIComponent(match[1]).toLowerCase();
+    } catch (err) {
+        return String(match[1]).toLowerCase();
+    }
+}
+
+function resolveExplorerRoute(word, pathname, search, approvedSet) {
+    const slug = approvedSlug(word);
+    const path = normalizePathname(pathname);
+    const approved = approvedSet instanceof Set ? approvedSet : new Set(approvedSet || []);
+    const currentSlug = slugFromPath(path);
+    const onApprovedPage = Boolean(currentSlug) && approved.has(currentSlug);
+    const params = new URLSearchParams(String(search || '').replace(/^\?/, ''));
+    const legacyQuery = params.has('word');
+    const target = approvedPagePath(slug);
+
+    if (!slug) return { action: 'empty' };
+
+    if (approved.has(slug)) {
+        if (path === target) {
+            if (legacyQuery) return { action: 'clean', target: target, replace: true };
+            return { action: 'stay' };
+        }
+        return { action: 'static', target: target, replace: legacyQuery };
+    }
+
+    if (onApprovedPage) {
+        return {
+            action: 'explorer',
+            target: '/explorer.html?word=' + encodeURIComponent(slug),
+            replace: legacyQuery
+        };
+    }
+
+    return { action: 'render' };
+}
+
+function loadApprovedWordSlugs() {
+    if (!approvedWordSlugsPromise) {
+        approvedWordSlugsPromise = fetch('/data/approved-static-word-slugs.json')
+            .then(function (res) {
+                if (!res.ok) throw new Error('Approved word registry unavailable');
+                return res.json();
+            })
+            .then(function (data) {
+                const slugs = Array.isArray(data) ? data : [];
+                return new Set(slugs.map(function (slug) {
+                    return approvedSlug(slug);
+                }));
+            })
+            .catch(function () {
+                return new Set();
+            });
+    }
+    return approvedWordSlugsPromise;
+}
+
+function followExplorerRoute(word, approved) {
+    const decision = resolveExplorerRoute(word, window.location.pathname, window.location.search, approved);
+    if (decision.action === 'stay') return true;
+    if (decision.action === 'clean' || decision.action === 'static' || decision.action === 'explorer') {
+        window.location[decision.replace ? 'replace' : 'assign'](decision.target);
+        return true;
+    }
+    return false;
+}
 
 function indexDictionary(data) {
     const indexed = {};
@@ -51,24 +137,45 @@ function loadInitialDictionary() {
         }
     }
 
+    const params = new URLSearchParams(window.location.search);
+    const wordParam = params.get('word');
+    if (wordParam && document.getElementById('wordInput')) {
+        document.getElementById('wordInput').value = wordParam;
+        loadApprovedWordSlugs().then(function (approved) {
+            if (followExplorerRoute(approvedSlug(wordParam), approved)) return;
+            loadFullDictionary()
+                .then(function () { searchWord(); })
+                .catch(function (err) {
+                    console.error('Dictionary load error:', err);
+                    document.getElementById('resultArea').innerHTML = '<p style="color: var(--red);">❌ Failed to load dictionary.</p>';
+                });
+        });
+        return;
+    }
+
     loadFullDictionary()
-    .then(() => {
-        const params = new URLSearchParams(window.location.search);
-        const wordParam = params.get('word');
-        if (wordParam) {
-            document.getElementById('wordInput').value = wordParam;
-            searchWord();
-        }
-    })
     .catch(err => {
         console.error('Dictionary load error:', err);
         document.getElementById('resultArea').innerHTML = '<p style="color: var(--red);">❌ Failed to load dictionary.</p>';
     });
 }
 
-loadInitialDictionary();
-
 function searchWord() {
+    const word = approvedSlug(document.getElementById('wordInput').value);
+    const resultArea = document.getElementById('resultArea');
+    if (!word) {
+        resultArea.innerHTML = '<p style="color: var(--text-soft);">Please enter a word.</p>';
+        return;
+    }
+    loadApprovedWordSlugs().then(function (approved) {
+        if (followExplorerRoute(word, approved)) return;
+        renderExplorerSearch();
+    }).catch(function () {
+        renderExplorerSearch();
+    });
+}
+
+function renderExplorerSearch() {
     const word = document.getElementById('wordInput').value.trim().toLowerCase();
     const resultArea = document.getElementById('resultArea');
     if (!word) {
@@ -353,6 +460,16 @@ function submitChallenge(word) {
     }
 }
 
-document.getElementById('wordInput').addEventListener('keydown', e => {
-    if (e.key === 'Enter') searchWord();
-});
+if (typeof document !== 'undefined') {
+    loadInitialDictionary();
+    const wordInput = document.getElementById('wordInput');
+    if (wordInput) {
+        wordInput.addEventListener('keydown', e => {
+            if (e.key === 'Enter') searchWord();
+        });
+    }
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { resolveExplorerRoute, approvedSlug, approvedPagePath };
+}
