@@ -83,9 +83,9 @@ scenario('registry fetch failure preserves explorer rendering', () => {
     assert.equal(resolveExplorerRoute('school', '/word/waist.html', '', empty).action, 'render');
 });
 
-scenario('all 73 approved slugs route to their static pages and never stay as explorer results', () => {
-    assert.equal(registry.length, 73);
-    assert.equal(new Set(registry).size, 73);
+scenario('all approved slugs route to their static pages and never stay as explorer results', () => {
+    assert.equal(registry.length, 573);
+    assert.equal(new Set(registry).size, 573);
     for (const slug of registry) {
         const page = '/word/' + slug + '.html';
         assert.equal(fs.existsSync(path.join(__dirname, '../word', slug + '.html')), true);
@@ -104,5 +104,5 @@ scenario('all 73 approved slugs route to their static pages and never stay as ex
     }
 });
 
-console.log('APPROVED ROUTING 73/73');
+console.log('APPROVED ROUTING ' + registry.length + '/' + registry.length);
 console.log('UNAPPROVED EXPLORER TESTS ' + unapproved.length + '/' + unapproved.length);
