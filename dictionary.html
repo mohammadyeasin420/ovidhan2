@@ -6993,12 +6993,42 @@
 </div>
 <script>
     // ─── Search Function ──────────────────────────────────────
-    function goSearch() {
+    let approvedWordSlugsPromise = null;
+
+    function loadApprovedWordSlugs() {
+        if (!approvedWordSlugsPromise) {
+            approvedWordSlugsPromise = fetch('/data/approved-static-word-slugs.json')
+                .then(function (res) {
+                    if (!res.ok) throw new Error('Approved word registry unavailable');
+                    return res.json();
+                })
+                .then(function (data) {
+                    const slugs = Array.isArray(data) ? data : [];
+                    return new Set(slugs.map(function (slug) {
+                        return String(slug).trim().toLowerCase();
+                    }));
+                })
+                .catch(function () {
+                    return new Set();
+                });
+        }
+        return approvedWordSlugsPromise;
+    }
+
+    loadApprovedWordSlugs();
+
+    async function goSearch() {
         const query = document.getElementById('dictSearch').value.trim();
-        if (query) {
-            window.location.href = `/explorer.html?word=${encodeURIComponent(query)}`;
-        } else {
+        if (!query) {
             window.location.href = '/explorer.html';
+            return;
+        }
+        const slug = query.toLowerCase();
+        const approved = await loadApprovedWordSlugs();
+        if (approved.has(slug)) {
+            window.location.href = '/word/' + encodeURIComponent(slug) + '.html';
+        } else {
+            window.location.href = '/explorer.html?word=' + encodeURIComponent(query);
         }
     }
     document.getElementById('dictSearch').addEventListener('keydown', function(e) {
