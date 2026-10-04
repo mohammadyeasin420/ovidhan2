@@ -20,7 +20,7 @@
     }
   },
   "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -32,17 +32,22 @@
         "origin": "OVIDHAN_EDITORIAL"
       },
       "definition": {
-        "contamination": [
-          {
-            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
-            "quoted_examples": [
-              "I cuddled the baby"
-            ]
-          }
-        ],
         "oewn_definition": "hold (a person or thing) close, as for affection, comfort, or warmth",
         "origin": "OEWN_GLOSS",
-        "text": "hold (a person or thing) close, as for affection, comfort, or warmth; \"I cuddled the baby\""
+        "text": "hold (a person or thing) close, as for affection, comfort, or warmth",
+        "v1_original": {
+          "cleanup_manifest": "dictionary-v2/definition-cleanup-manifest.json",
+          "contamination": [
+            {
+              "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+              "quoted_examples": [
+                "I cuddled the baby"
+              ]
+            }
+          ],
+          "removed_material": "; \"I cuddled the baby\"",
+          "text": "hold (a person or thing) close, as for affection, comfort, or warmth; \"I cuddled the baby\""
+        }
       },
       "examples": [
         {

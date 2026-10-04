@@ -13,11 +13,20 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const lib = require('./lib');
+const cleanup = require('./definition-cleanup');
 
 const TOOL = 'scripts/dictionary-v2/migrate-v1.js@1.0.0';
 const PROVENANCE_FILE = 'dictionary-v2/oewn-2025-provenance.json';
 
-function buildRecord({ slug, html, oewn, archiveSha256 }) {
+// cleanupEntry (optional, SEO-R6B): the verified definition-cleanup manifest entry for this word. When given, the
+// record is emitted as schema 1.1.0 with the clean OEWN definition and an auditable v1_original block. This works
+// whether the V1 page still shows the contaminated text or has already been cleaned, so the record is reproducible both ways.
+function buildRecord({ slug, html, oewn, archiveSha256, cleanupEntry }) {
+    const record = buildBaseRecord({ slug, html, oewn, archiveSha256 });
+    return cleanupEntry ? cleanup.applyEntryToRecord(record, cleanupEntry) : record;
+}
+
+function buildBaseRecord({ slug, html, oewn, archiveSha256 }) {
     const page = lib.extractV1Page(html);
     if (page.problems.length) throw new Error(slug + ': V1 page not parseable: ' + page.problems.join('; '));
     const h1 = /^(.+) meaning in Bangla$/.exec(page.h1 || '');
@@ -97,12 +106,14 @@ function buildReport({ cohort, records, oewn, researchDir }) {
     }
     const words = cohort.words.map((slug) => {
         const sense = records.get(slug).senses[0];
+        // The report describes the live V1 page as audited, so a cleaned record reports its v1_original contamination.
+        const contamination = sense.definition.contamination || (sense.definition.v1_original && sense.definition.v1_original.contamination) || [];
         const entry = {
             slug,
             synset_id: sense.source.synset_id,
             pos: sense.pos,
-            definition_alignment: sense.definition.contamination ? 'RAW_OEWN_GLOSS' : 'EXACT_OEWN_DEFINITION',
-            definition_contamination: (sense.definition.contamination || []).map((c) => c.kind)
+            definition_alignment: contamination.length ? 'RAW_OEWN_GLOSS' : 'EXACT_OEWN_DEFINITION',
+            definition_contamination: contamination.map((c) => c.kind)
         };
         if (lineage.has(slug)) entry.editorial_lineage_static_origin = lineage.get(slug);
         const claim = claims.get(slug);
@@ -165,9 +176,11 @@ function main() {
     const archiveSha256 = provenance.source.archive_sha256.toLowerCase();
     const records = new Map();
     const differences = [];
+    const manifestPath = path.join(lib.V2_DIR, 'definition-cleanup-manifest.json');
+    const cleanupEntries = new Map(fs.existsSync(manifestPath) ? lib.readJson(manifestPath).entries.map((e) => [e.slug, e]) : []);
     for (const slug of cohort.words) {
         const html = fs.readFileSync(path.join(lib.ROOT, 'word', slug + '.html'), 'utf8');
-        const record = buildRecord({ slug, html, oewn, archiveSha256 });
+        const record = buildRecord({ slug, html, oewn, archiveSha256, cleanupEntry: cleanupEntries.get(slug) });
         records.set(slug, record);
         const target = path.join(lib.V2_DIR, 'records', slug + '.json');
         const text = lib.canonicalJson(record);

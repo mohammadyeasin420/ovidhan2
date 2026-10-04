@@ -20,7 +20,7 @@
     }
   },
   "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -32,26 +32,31 @@
         "origin": "OVIDHAN_EDITORIAL"
       },
       "definition": {
-        "contamination": [
-          {
-            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
-            "quoted_examples": [
-              "good news from the hospital",
-              "a good report card",
-              "when she was good she was very very good",
-              "a good knife is one good for cutting",
-              "this stump will make a good picnic table",
-              "a good check",
-              "a good joke",
-              "a good exterior paint",
-              "a good secretary",
-              "a good dress for the office"
-            ]
-          }
-        ],
         "oewn_definition": "having desirable or positive qualities especially those suitable for a thing specified",
         "origin": "OEWN_GLOSS",
-        "text": "having desirable or positive qualities especially those suitable for a thing specified; \"good news from the hospital\"; \"a good report card\"; \"when she was good she was very very good\"; \"a good knife is one good for cutting\"; \"this stump will make a good picnic table\"; \"a good check\"; \"a good joke\"; \"a good exterior paint\"; \"a good secretary\"; \"a good dress for the office\""
+        "text": "having desirable or positive qualities especially those suitable for a thing specified",
+        "v1_original": {
+          "cleanup_manifest": "dictionary-v2/definition-cleanup-manifest.json",
+          "contamination": [
+            {
+              "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+              "quoted_examples": [
+                "good news from the hospital",
+                "a good report card",
+                "when she was good she was very very good",
+                "a good knife is one good for cutting",
+                "this stump will make a good picnic table",
+                "a good check",
+                "a good joke",
+                "a good exterior paint",
+                "a good secretary",
+                "a good dress for the office"
+              ]
+            }
+          ],
+          "removed_material": "; \"good news from the hospital\"; \"a good report card\"; \"when she was good she was very very good\"; \"a good knife is one good for cutting\"; \"this stump will make a good picnic table\"; \"a good check\"; \"a good joke\"; \"a good exterior paint\"; \"a good secretary\"; \"a good dress for the office\"",
+          "text": "having desirable or positive qualities especially those suitable for a thing specified; \"good news from the hospital\"; \"a good report card\"; \"when she was good she was very very good\"; \"a good knife is one good for cutting\"; \"this stump will make a good picnic table\"; \"a good check\"; \"a good joke\"; \"a good exterior paint\"; \"a good secretary\"; \"a good dress for the office\""
+        }
       },
       "examples": [
         {

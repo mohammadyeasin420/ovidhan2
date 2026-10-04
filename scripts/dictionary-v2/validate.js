@@ -12,6 +12,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const lib = require('./lib');
 const { buildLock } = require('./build-oewn-lock');
+const cleanup = require('./definition-cleanup');
 
 const PLACEHOLDER_EXACT = /^(tbd|todo|fixme|n\/a|na|none|null|undefined|unknown|placeholder|lorem ipsum.*|x{2,}|\?+|-+|\.+|…+)$/i;
 const PLACEHOLDER_CONTAINS = /\b(TODO|TBD|FIXME)\b|lorem ipsum|\{\{|\}\}|<placeholder>|\[placeholder\]/i;
@@ -31,6 +32,7 @@ function loadContext(options = {}) {
         registry: lib.loadRegistry(root),
         frozen: lib.loadFrozenWords(root),
         cohort: lib.readJson(path.join(v2, 'prototype-cohort.json')),
+        cleanupManifest: fs.existsSync(path.join(v2, 'definition-cleanup-manifest.json')) ? lib.readJson(path.join(v2, 'definition-cleanup-manifest.json')) : null,
         exceptionForms: null
     };
     if (options.source) {
@@ -137,10 +139,29 @@ function validateRecord(record, ctx) {
             if (!synset.words.some((w) => w.toLowerCase() === slug)) fail(where + ': headword "' + slug + '" is not a lemma of synset ' + synset.id);
             if (sense.definition.origin !== 'OEWN_GLOSS') fail(where + ': definition of an OEWN sense must have origin OEWN_GLOSS');
             if (sense.definition.oewn_definition !== synset.definition) fail(where + ': definition.oewn_definition differs from OEWN');
-            const { alignment, contamination } = lib.classifyDefinition(sense.definition.text, synset);
-            if (alignment === 'MISMATCH') fail(where + ': definition.text matches neither the OEWN definition nor the raw OEWN gloss');
-            const declared = JSON.stringify(sense.definition.contamination || []);
-            if (alignment !== 'MISMATCH' && declared !== JSON.stringify(contamination)) fail(where + ': definition contamination is not declared exactly (expected ' + JSON.stringify(contamination) + ')');
+            const original = sense.definition.v1_original;
+            if (original) {
+                // SEO-R6B cleaned definition: text is exactly the OEWN definition; v1_original is the audit trail.
+                if (record.schema_version !== '1.1.0') fail(where + ': definition.v1_original requires schema_version 1.1.0');
+                if ('contamination' in sense.definition) fail(where + ': a cleaned definition must not also declare contamination');
+                if (sense.definition.text !== synset.definition) fail(where + ': cleaned definition.text must be exactly the OEWN definition');
+                const classified = cleanup.classifyAgainstSynset(original.text, synset);
+                if (!classified || classified.type === cleanup.TYPES.CLEAN) fail(where + ': v1_original.text is not provable OEWN contamination of this synset');
+                else {
+                    if (!original.text.startsWith(sense.definition.text) || original.removed_material !== original.text.slice(sense.definition.text.length)) fail(where + ': v1_original.removed_material is not exactly the removed contamination');
+                    if (JSON.stringify(original.contamination) !== JSON.stringify(cleanup.contaminationFor(classified.type, classified.removed))) fail(where + ': v1_original.contamination is not declared exactly');
+                }
+                const entry = ctx.cleanupManifest && ctx.cleanupManifest.entries.find((e) => e.slug === slug);
+                if (!entry) fail(where + ': no entry for this word in the cleanup manifest');
+                else if (entry.source_synset_id !== sense.source.synset_id || entry.before_definition !== original.text || entry.after_definition !== sense.definition.text || entry.removed_material !== original.removed_material) fail(where + ': record disagrees with the cleanup manifest entry');
+            } else {
+                if (record.schema_version === '1.0.0' || sense.definition.contamination) {
+                    const { alignment, contamination } = lib.classifyDefinition(sense.definition.text, synset);
+                    if (alignment === 'MISMATCH') fail(where + ': definition.text matches neither the OEWN definition nor the raw OEWN gloss');
+                    const declared = JSON.stringify(sense.definition.contamination || []);
+                    if (alignment !== 'MISMATCH' && declared !== JSON.stringify(contamination)) fail(where + ': definition contamination is not declared exactly (expected ' + JSON.stringify(contamination) + ')');
+                } else if (sense.definition.text !== synset.definition) fail(where + ': definition.text must equal the OEWN definition');
+            }
         } else if (sense.definition.contamination || sense.definition.oewn_definition) {
             if (sense.source.type === 'OVIDHAN_EDITORIAL') fail(where + ': editorial definition must not carry OEWN fields');
         }

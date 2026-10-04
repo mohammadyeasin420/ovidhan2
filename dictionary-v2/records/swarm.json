@@ -20,7 +20,7 @@
     }
   },
   "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -32,19 +32,24 @@
         "origin": "OVIDHAN_EDITORIAL"
       },
       "definition": {
-        "contamination": [
-          {
-            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
-            "quoted_examples": [
-              "a swarm of insects obscured the light",
-              "clouds of blossoms",
-              "it discharged a cloud of spores"
-            ]
-          }
-        ],
         "oewn_definition": "a group of many things in the air or on the ground",
         "origin": "OEWN_GLOSS",
-        "text": "a group of many things in the air or on the ground; \"a swarm of insects obscured the light\"; \"clouds of blossoms\"; \"it discharged a cloud of spores\""
+        "text": "a group of many things in the air or on the ground",
+        "v1_original": {
+          "cleanup_manifest": "dictionary-v2/definition-cleanup-manifest.json",
+          "contamination": [
+            {
+              "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+              "quoted_examples": [
+                "a swarm of insects obscured the light",
+                "clouds of blossoms",
+                "it discharged a cloud of spores"
+              ]
+            }
+          ],
+          "removed_material": "; \"a swarm of insects obscured the light\"; \"clouds of blossoms\"; \"it discharged a cloud of spores\"",
+          "text": "a group of many things in the air or on the ground; \"a swarm of insects obscured the light\"; \"clouds of blossoms\"; \"it discharged a cloud of spores\""
+        }
       },
       "examples": [
         {

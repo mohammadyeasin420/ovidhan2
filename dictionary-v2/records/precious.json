@@ -20,7 +20,7 @@
     }
   },
   "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -32,17 +32,22 @@
         "origin": "OVIDHAN_EDITORIAL"
       },
       "definition": {
-        "contamination": [
-          {
-            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
-            "quoted_examples": [
-              "diamonds, sapphires, rubies, and emeralds are precious stones"
-            ]
-          }
-        ],
         "oewn_definition": "of high worth or cost",
         "origin": "OEWN_GLOSS",
-        "text": "of high worth or cost; \"diamonds, sapphires, rubies, and emeralds are precious stones\""
+        "text": "of high worth or cost",
+        "v1_original": {
+          "cleanup_manifest": "dictionary-v2/definition-cleanup-manifest.json",
+          "contamination": [
+            {
+              "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+              "quoted_examples": [
+                "diamonds, sapphires, rubies, and emeralds are precious stones"
+              ]
+            }
+          ],
+          "removed_material": "; \"diamonds, sapphires, rubies, and emeralds are precious stones\"",
+          "text": "of high worth or cost; \"diamonds, sapphires, rubies, and emeralds are precious stones\""
+        }
       },
       "examples": [
         {

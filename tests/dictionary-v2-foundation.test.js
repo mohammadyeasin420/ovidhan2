@@ -106,10 +106,21 @@ scenario('invalid source synset is rejected (unknown id, wrong lemma, wrong POS)
 });
 
 scenario('definition/source alignment and contamination are enforced, never repaired', () => {
+    // SEO-R6B: the 9 contaminated prototype records now carry the clean OEWN definition plus an auditable v1_original.
     const tough = readRecord('tough').senses[0].definition;
-    assert.equal(tough.contamination[0].kind, 'OEWN_QUOTED_EXAMPLES_IN_DEFINITION');
-    assert.ok(tough.text.includes('"a rugged competitive examination"'), 'V1 contamination preserved verbatim');
-    const hidden = clone(readRecord('tough')); delete hidden.senses[0].definition.contamination;
+    assert.equal(tough.v1_original.contamination[0].kind, 'OEWN_QUOTED_EXAMPLES_IN_DEFINITION');
+    assert.ok(tough.v1_original.text.includes('"a rugged competitive examination"'), 'V1 contamination preserved verbatim in the audit trail');
+    assert.equal(tough.text, tough.oewn_definition);
+    assert.ok(!tough.text.includes('"'));
+    // The legacy (schema 1.0.0) contamination rules still apply to any record that keeps contamination in definition.text.
+    const legacy = clone(readRecord('tough'));
+    const legacyDefinition = legacy.senses[0].definition;
+    legacy.schema_version = '1.0.0';
+    legacyDefinition.text = legacyDefinition.v1_original.text;
+    legacyDefinition.contamination = legacyDefinition.v1_original.contamination;
+    delete legacyDefinition.v1_original;
+    assert.deepEqual(validateRecord(legacy, ctx), []);
+    const hidden = clone(legacy); delete hidden.senses[0].definition.contamination;
     assert.ok(hasError(validateRecord(hidden, ctx), 'contamination is not declared exactly'));
     const falseFlag = clone(readRecord('chaos'));
     falseFlag.senses[0].definition.contamination = [{ kind: 'OEWN_QUOTED_EXAMPLES_IN_DEFINITION', quoted_examples: ['x'] }];
@@ -118,7 +129,8 @@ scenario('definition/source alignment and contamination are enforced, never repa
     assert.ok(hasError(validateRecord(rewritten, ctx), 'matches neither'));
     const wrongSource = clone(readRecord('chaos')); wrongSource.senses[0].definition.oewn_definition = 'something else';
     assert.ok(hasError(validateRecord(wrongSource, ctx), 'oewn_definition differs'));
-    const contaminated = cohortWords.filter((w) => readRecord(w).senses[0].definition.contamination);
+    const contaminated = cohortWords.filter((w) => readRecord(w).senses[0].definition.v1_original);
+    assert.ok(cohortWords.every((w) => !readRecord(w).senses[0].definition.contamination), 'no record keeps contamination in definition.text');
     assert.deepEqual(contaminated, ['creepy', 'cuddle', 'good', 'grateful', 'precious', 'repeat', 'swarm', 'tough', 'word']);
 });
 
@@ -215,8 +227,9 @@ scenario('duplicate senses and duplicate examples are rejected', () => {
 scenario('records are deterministic: rebuilding from live V1 HTML + the lock reproduces committed bytes', () => {
     const oewn = lib.oewnFromLock(ctx.lock);
     const sha = ctx.provenance.source.archive_sha256.toLowerCase();
+    const cleanupEntries = new Map(ctx.cleanupManifest.entries.map((e) => [e.slug, e]));
     for (const word of cohortWords) {
-        const rebuilt = lib.canonicalJson(buildRecord({ slug: word, html: readPage(word), oewn, archiveSha256: sha }));
+        const rebuilt = lib.canonicalJson(buildRecord({ slug: word, html: readPage(word), oewn, archiveSha256: sha, cleanupEntry: cleanupEntries.get(word) }));
         const committed = lib.toLf(fs.readFileSync(path.join(root, 'dictionary-v2', 'records', word + '.json'), 'utf8'));
         assert.equal(rebuilt, committed, word);
     }
@@ -231,12 +244,14 @@ scenario('migration refuses to guess an ambiguous or unmatched sense', () => {
     assert.throws(() => buildRecord({ slug: 'chaos', html, oewn, archiveSha256: '0'.repeat(64) }), /matches 0 OEWN synsets/);
 });
 
-scenario('V1 parity: 28/28 records match the live pages (known contamination flagged, not failed)', () => {
+scenario('V1 parity: 28/28 records match the live pages (cleanup-pending records are flagged, not failed)', () => {
     const report = runParity();
     assert.equal(report.records, 28);
     assert.equal(report.fail, 0);
     assert.equal(report.pass, 19);
-    assert.equal(report.pass_known_contamination, 9);
+    assert.equal(report.pass_known_contamination, 0);
+    assert.equal(report.pass_pending_cleanup, 9);
+    assert.equal(report.pass_cleaned, 0);
 });
 
 scenario('V1 parity detects any learner-facing drift', () => {

@@ -62,7 +62,24 @@ The validator fails closed (any error or exception exits 1). It checks: schema; 
 
 `node scripts/dictionary-v2/migrate-v1.js [--archive <zip> | --oewn-dir <dir>] [--research-dir research] [--check]`
 
-The synset is the unique OEWN synset for (headword, POS) whose definition, or raw gloss, equals the text on the page. Ambiguity or no match aborts; nothing is guessed. Migration copies, it does not clean: where the page definition includes OEWN quoted examples (9 of the 28 words), the record keeps the text verbatim and declares `contamination`; the 276-page cleanup is a separate, later phase.
+The synset is the unique OEWN synset for (headword, POS) whose definition, or raw gloss, equals the text on the page. Ambiguity or no match aborts; nothing is guessed. Migration copies, it does not clean the pages: where the page definition includes OEWN quoted examples (9 of the 28 words), the record carries the clean OEWN definition and keeps the page text in `definition.v1_original` (see the R6B section); the page cleanup itself is a separate, later phase.
+
+## V1 definition cleanup proof (SEO-R6B; proposal only, nothing applied)
+
+`dictionary-v2/definition-cleanup-manifest.json` proves, for every approved page whose definition carries OEWN contamination, BEFORE (live page) -> OEWN source definition -> AFTER (exactly the OEWN definition). It is not deployed and no page has been edited.
+
+```
+node scripts/dictionary-v2/definition-cleanup.js audit --archive <zip> [--write]   # independent re-audit of all approved pages
+node scripts/dictionary-v2/definition-cleanup.js validate                          # fail-closed manifest validation against current pages (offline)
+node scripts/dictionary-v2/definition-cleanup.js dry-run [--archive <zip>] [--list] # what WOULD change; never writes
+node tests/dictionary-v2-definition-cleanup.test.js
+```
+
+- `RAW_OEWN_EXAMPLE_CONTAMINATION`: the page shows OEWN definition + `; "quoted example"...` copied from the gloss.
+- `CITATION_RESIDUE`: the page shows OEWN definition + `; - <attribution>` fragments, each of which follows a quoted example in the gloss.
+- AFTER is never written by hand: it is the text before the first `; "` of the gloss. Only the visible `.definition` span and the JSON-LD description change; the tool proves every other byte (POS, Bangla fields, examples, canonical, title, structure) is unchanged.
+- Frozen experiment pages are documented but never applicable. Anything unprovable goes to `manual_review`; it is never edited automatically.
+- Records with a cleaned definition use `schema_version` `1.1.0`: `definition.text` is the clean OEWN definition and `definition.v1_original` keeps the auditable contamination record (text, contamination, removed material). Parity reports them as `PASS_PENDING_CLEANUP` until the page is cleaned, then `PASS_CLEANED`.
 
 ## Future enrichment process (not part of this phase)
 

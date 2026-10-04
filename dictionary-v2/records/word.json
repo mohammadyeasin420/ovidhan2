@@ -20,7 +20,7 @@
     }
   },
   "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -32,18 +32,23 @@
         "origin": "OVIDHAN_EDITORIAL"
       },
       "definition": {
-        "contamination": [
-          {
-            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
-            "quoted_examples": [
-              "words are the blocks from which sentences are made",
-              "he hardly said ten words all morning"
-            ]
-          }
-        ],
         "oewn_definition": "a unit of language that native speakers can identify",
         "origin": "OEWN_GLOSS",
-        "text": "a unit of language that native speakers can identify; \"words are the blocks from which sentences are made\"; \"he hardly said ten words all morning\""
+        "text": "a unit of language that native speakers can identify",
+        "v1_original": {
+          "cleanup_manifest": "dictionary-v2/definition-cleanup-manifest.json",
+          "contamination": [
+            {
+              "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+              "quoted_examples": [
+                "words are the blocks from which sentences are made",
+                "he hardly said ten words all morning"
+              ]
+            }
+          ],
+          "removed_material": "; \"words are the blocks from which sentences are made\"; \"he hardly said ten words all morning\"",
+          "text": "a unit of language that native speakers can identify; \"words are the blocks from which sentences are made\"; \"he hardly said ten words all morning\""
+        }
       },
       "examples": [
         {

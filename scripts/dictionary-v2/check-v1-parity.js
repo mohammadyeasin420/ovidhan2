@@ -9,7 +9,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const lib = require('./lib');
 
-function checkParity(record, html) {
+function checkParity(record, html, cleanupEntry = null) {
     const differences = [];
     const flags = [];
     const page = lib.extractV1Page(html);
@@ -21,7 +21,15 @@ function checkParity(record, html) {
     compare('h1', page.h1, record.headword + ' meaning in Bangla');
     compare('part_of_speech', page.part_of_speech, sense.pos);
     compare('bangla_meaning', page.bangla_meaning, sense.bangla_meaning.display);
-    compare('definition', page.definition, sense.definition.text);
+    // SEO-R6B: a cleaned record (v1_original) is in one of two honest states. The live page still shows the audited
+    // contaminated definition (PASS_PENDING_CLEANUP) or has been cleaned to exactly the record's definition (PASS_CLEANED).
+    const original = sense.definition.v1_original;
+    let cleanupState = null;
+    if (original) {
+        if (page.definition === original.text) cleanupState = 'PENDING';
+        else if (page.definition === sense.definition.text) cleanupState = 'CLEANED';
+        else differences.push({ field: 'definition', page: page.definition, record: sense.definition.text, detail: 'page definition is neither the audited V1 text nor the cleaned definition' });
+    } else compare('definition', page.definition, sense.definition.text);
     compare('bangla_explanation', page.bangla_explanation, sense.bangla_explanation.text);
     compare('example_en', page.example_en, sense.examples[0].en);
     compare('example_bn', page.example_bn, sense.examples[0].bn);
@@ -33,24 +41,31 @@ function checkParity(record, html) {
         if (!page.source_line_hrefs.includes(href)) differences.push({ field: 'attribution_link', detail: 'source line lacks link ' + href });
     }
     const pageHash = lib.sha256Lf(Buffer.from(html, 'utf8'));
-    if (pageHash !== record.provenance.v1_migration.source_page_sha256_lf) differences.push({ field: 'page_sha256_lf', page: pageHash, record: record.provenance.v1_migration.source_page_sha256_lf, detail: 'page changed since migration' });
-    if (sense.definition.contamination) {
+    const expectedHash = cleanupState === 'CLEANED' ? (cleanupEntry && cleanupEntry.page.sha256_lf_after_expected) : record.provenance.v1_migration.source_page_sha256_lf;
+    if (pageHash !== expectedHash) differences.push({ field: 'page_sha256_lf', page: pageHash, record: expectedHash || null, detail: cleanupState === 'CLEANED' ? 'cleaned page differs from the manifest AFTER hash' : 'page changed since migration' });
+    if (cleanupState === 'PENDING') flags.push('PENDING_CLEANUP:' + original.contamination.map((c) => c.kind).join(','));
+    else if (cleanupState === 'CLEANED') flags.push('CLEANED:' + original.contamination.map((c) => c.kind).join(','));
+    else if (sense.definition.contamination) {
         flags.push(...sense.definition.contamination.map((c) => 'KNOWN_V1_CONTAMINATION:' + c.kind));
     } else if (sense.definition.oewn_definition !== sense.definition.text) {
         differences.push({ field: 'definition', detail: 'definition differs from OEWN definition but no contamination is declared' });
     }
     let status = 'PASS';
     if (differences.length) status = 'FAIL';
+    else if (cleanupState === 'PENDING') status = 'PASS_PENDING_CLEANUP';
+    else if (cleanupState === 'CLEANED') status = 'PASS_CLEANED';
     else if (flags.length) status = 'PASS_KNOWN_CONTAMINATION';
     return { slug: record.slug, status, differences, flags };
 }
 
 function runParity(root = lib.ROOT) {
     const cohort = lib.readJson(path.join(root, 'dictionary-v2', 'prototype-cohort.json'));
+    const manifestPath = path.join(root, 'dictionary-v2', 'definition-cleanup-manifest.json');
+    const entries = new Map(fs.existsSync(manifestPath) ? lib.readJson(manifestPath).entries.map((e) => [e.slug, e]) : []);
     const results = cohort.words.map((slug) => {
         const record = lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
         const html = fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8');
-        return checkParity(record, html);
+        return checkParity(record, html, entries.get(slug) || null);
     });
     const count = (s) => results.filter((r) => r.status === s).length;
     return {
@@ -58,6 +73,8 @@ function runParity(root = lib.ROOT) {
         records: results.length,
         pass: count('PASS'),
         pass_known_contamination: count('PASS_KNOWN_CONTAMINATION'),
+        pass_pending_cleanup: count('PASS_PENDING_CLEANUP'),
+        pass_cleaned: count('PASS_CLEANED'),
         fail: count('FAIL'),
         results
     };
@@ -74,7 +91,7 @@ function main() {
     for (const r of report.results) {
         console.log(r.status.padEnd(26) + r.slug.padEnd(14) + (r.flags.join(',') || '') + (r.differences.length ? ' DIFFS=' + JSON.stringify(r.differences) : ''));
     }
-    console.log('PARITY: ' + report.pass + ' pass, ' + report.pass_known_contamination + ' pass with known V1 contamination, ' + report.fail + ' fail, of ' + report.records);
+    console.log('PARITY: ' + report.pass + ' pass, ' + report.pass_known_contamination + ' pass with known V1 contamination, ' + report.pass_pending_cleanup + ' pass pending cleanup, ' + report.pass_cleaned + ' pass cleaned, ' + report.fail + ' fail, of ' + report.records);
     if (jsonPath) fs.writeFileSync(jsonPath, lib.canonicalJson(report), 'utf8');
     if (report.fail) process.exit(1);
 }

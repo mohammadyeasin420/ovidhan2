@@ -1,13 +1,16 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:ovidhan:dictionary-v2:record:1.0.0",
+  "$id": "urn:ovidhan:dictionary-v2:record:1.1.0",
   "title": "Ovidhan Dictionary V2 record",
   "description": "One approved headword. Optional blocks are omitted when there is no sourced or approved data: never an empty array, empty string, null or placeholder. Sourced content carries an OEWN origin and synset id; Ovidhan-written content carries origin OVIDHAN_EDITORIAL.",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "record_status", "slug", "headword", "attribution", "provenance", "senses"],
   "properties": {
-    "schema_version": { "const": "1.0.0" },
+    "schema_version": {
+      "description": "1.0.0 records carry no cleanup audit. 1.1.0 additionally allows definition.v1_original (SEO-R6B).",
+      "enum": ["1.0.0", "1.1.0"]
+    },
     "record_status": {
       "description": "V1_MIGRATION is a lossless copy of the live approved V1 page. EDITORIAL_ENRICHED is reserved for later phases.",
       "enum": ["V1_MIGRATION", "EDITORIAL_ENRICHED"]
@@ -147,6 +150,19 @@
     "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
     "synsetId": { "type": "string", "pattern": "^[0-9]{8}-[nvar]$" },
     "pos": { "enum": ["noun", "verb", "adjective", "adverb"] },
+    "contamination": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind"],
+        "properties": {
+          "kind": { "enum": ["OEWN_QUOTED_EXAMPLES_IN_DEFINITION", "OEWN_ATTRIBUTION_IN_DEFINITION"] },
+          "quoted_examples": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } }
+        }
+      }
+    },
     "sense": {
       "type": "object",
       "additionalProperties": false,
@@ -175,17 +191,17 @@
             "text": { "$ref": "#/$defs/text" },
             "origin": { "enum": ["OEWN_GLOSS", "OVIDHAN_EDITORIAL"] },
             "oewn_definition": { "$ref": "#/$defs/text" },
-            "contamination": {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": ["kind"],
-                "properties": {
-                  "kind": { "enum": ["OEWN_QUOTED_EXAMPLES_IN_DEFINITION", "OEWN_ATTRIBUTION_IN_DEFINITION"] },
-                  "quoted_examples": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } }
-                }
+            "contamination": { "$ref": "#/$defs/contamination" },
+            "v1_original": {
+              "description": "Audit trail of a cleaned V1 definition (schema 1.1.0 only). text is the clean OEWN definition; v1_original.text is what the V1 page showed; removed_material is exactly the contamination removed.",
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["text", "contamination", "removed_material", "cleanup_manifest"],
+              "properties": {
+                "text": { "$ref": "#/$defs/text" },
+                "contamination": { "$ref": "#/$defs/contamination" },
+                "removed_material": { "$ref": "#/$defs/text" },
+                "cleanup_manifest": { "const": "dictionary-v2/definition-cleanup-manifest.json" }
               }
             }
           }

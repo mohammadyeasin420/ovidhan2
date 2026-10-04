@@ -20,7 +20,7 @@
     }
   },
   "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -32,18 +32,23 @@
         "origin": "OVIDHAN_EDITORIAL"
       },
       "definition": {
-        "contamination": [
-          {
-            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
-            "quoted_examples": [
-              "a creepy story",
-              "I had a creepy-crawly feeling"
-            ]
-          }
-        ],
         "oewn_definition": "causing a sensation as of things crawling on your skin",
         "origin": "OEWN_GLOSS",
-        "text": "causing a sensation as of things crawling on your skin; \"a creepy story\"; \"I had a creepy-crawly feeling\""
+        "text": "causing a sensation as of things crawling on your skin",
+        "v1_original": {
+          "cleanup_manifest": "dictionary-v2/definition-cleanup-manifest.json",
+          "contamination": [
+            {
+              "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+              "quoted_examples": [
+                "a creepy story",
+                "I had a creepy-crawly feeling"
+              ]
+            }
+          ],
+          "removed_material": "; \"a creepy story\"; \"I had a creepy-crawly feeling\"",
+          "text": "causing a sensation as of things crawling on your skin; \"a creepy story\"; \"I had a creepy-crawly feeling\""
+        }
       },
       "examples": [
         {

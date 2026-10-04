@@ -20,7 +20,7 @@
     }
   },
   "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -32,19 +32,24 @@
         "origin": "OVIDHAN_EDITORIAL"
       },
       "definition": {
-        "contamination": [
-          {
-            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
-            "quoted_examples": [
-              "a grateful heart",
-              "grateful for the tree's shade",
-              "a thankful smile"
-            ]
-          }
-        ],
         "oewn_definition": "feeling or showing gratitude",
         "origin": "OEWN_GLOSS",
-        "text": "feeling or showing gratitude; \"a grateful heart\"; \"grateful for the tree's shade\"; \"a thankful smile\""
+        "text": "feeling or showing gratitude",
+        "v1_original": {
+          "cleanup_manifest": "dictionary-v2/definition-cleanup-manifest.json",
+          "contamination": [
+            {
+              "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+              "quoted_examples": [
+                "a grateful heart",
+                "grateful for the tree's shade",
+                "a thankful smile"
+              ]
+            }
+          ],
+          "removed_material": "; \"a grateful heart\"; \"grateful for the tree's shade\"; \"a thankful smile\"",
+          "text": "feeling or showing gratitude; \"a grateful heart\"; \"grateful for the tree's shade\"; \"a thankful smile\""
+        }
       },
       "examples": [
         {
