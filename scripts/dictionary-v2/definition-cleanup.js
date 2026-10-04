@@ -8,6 +8,9 @@
 //   audit    --archive <zip> [--write]   full independent re-audit of all approved pages from the verified OEWN archive
 //   validate                             fail-closed validation of the committed manifest against current pages (offline)
 //   dry-run  [--archive <zip>] [--list] [--json <path>]   show exactly what WOULD change; no writes to pages
+//   apply    --archive <zip> --confirm APPLY_275_DEFINITION_CLEANUPS   (SEO-R6B.1 engine; NOT authorised yet)
+//            all-or-nothing preflight of every page, staged writes, hash verification, rollback on failure
+// The --validate / --dry-run / --apply spellings are accepted as aliases of the subcommands.
 //
 // Contamination types (a page definition is compared with the OEWN synset it was taken from):
 //   CLEAN                              text equals the OEWN definition
@@ -79,12 +82,13 @@ const learnerFieldsHash = (page) => lib.sha256(Buffer.from(lib.canonicalJson(lea
 
 // ---------------------------------------------------------------- page edit plan (in memory only)
 // The definition appears in exactly two places: the visible .definition span and the JSON-LD DefinedTerm description.
-function planPageCleanup(html, entry) {
+// locateEdit finds the two byte ranges that a cleanup may touch. No fuzzy matching: exact text, exactly once.
+function locateEdit(html, entry) {
     const errors = [];
     const before = entry.before_definition;
     const after = entry.after_definition;
     const blocks = [...html.matchAll(/(<p class="definition"[^>]*>[\s\S]*?<span[^>]*>)([\s\S]*?)(<\/span>)/g)];
-    if (blocks.length !== 1) { errors.push('expected exactly one .definition block, found ' + blocks.length); return { html: null, errors }; }
+    if (blocks.length !== 1) { errors.push('expected exactly one .definition block, found ' + blocks.length); return { ranges: null, errors }; }
     // Two escaping styles exist in the corpus: quotes as &quot; (entity) or literal quotes. Both are valid HTML;
     // the page's own style is preserved so the edit stays minimal.
     const styles = [escapeHtml, escapeText];
@@ -93,11 +97,27 @@ function planPageCleanup(html, entry) {
     const ldBefore = '"description": ' + JSON.stringify(before);
     const ldAfter = '"description": ' + JSON.stringify(after);
     if (countOccurrences(html, ldBefore) !== 1) errors.push('JSON-LD description literal found ' + countOccurrences(html, ldBefore) + ' times (expected exactly 1)');
+    if (errors.length) return { ranges: null, errors };
+    const visibleStart = blocks[0].index + blocks[0][1].length;
+    const ldStart = html.indexOf(ldBefore);
+    // the JSON-LD literal must live inside the DefinedTerm script, nowhere else
+    const scriptStart = html.lastIndexOf('<script type="application/ld+json">', ldStart);
+    const scriptEnd = html.indexOf('</script>', ldStart);
+    if (scriptStart < 0 || scriptEnd < 0 || !html.slice(scriptStart, scriptEnd).includes('"@type": "DefinedTerm"')) errors.push('JSON-LD description literal is not inside the DefinedTerm script');
+    const ranges = [
+        { kind: 'VISIBLE_DEFINITION', start: visibleStart, end: visibleStart + blocks[0][2].length, old: blocks[0][2], neu: escape(after), style: escape === escapeHtml ? 'ENTITY_QUOTES' : 'LITERAL_QUOTES' },
+        { kind: 'JSON_LD_DESCRIPTION', start: ldStart, end: ldStart + ldBefore.length, old: ldBefore, neu: ldAfter }
+    ].sort((x, y) => x.start - y.start);
+    if (ranges[0].end > ranges[1].start) errors.push('the two mutation locations overlap');
+    return { ranges, errors };
+}
+
+// Applies the two replacements in memory: the only code path that produces an AFTER page.
+function planPageCleanup(html, entry) {
+    const { ranges, errors } = locateEdit(html, entry);
     if (errors.length) return { html: null, errors };
-    const start = blocks[0].index + blocks[0][1].length;
-    const end = start + blocks[0][2].length;
-    let next = html.slice(0, start) + escape(after) + html.slice(end);
-    next = next.replace(ldBefore, () => ldAfter);
+    const [first, second] = ranges;
+    const next = html.slice(0, first.start) + first.neu + html.slice(first.end, second.start) + second.neu + html.slice(second.end);
     return { html: next, errors };
 }
 
@@ -356,11 +376,370 @@ function dryRun(manifest, ctx) {
     return { summary: manifest.summary, rows };
 }
 
+// ================================================================ guarded apply engine (SEO-R6B.1)
+// CURRENT PAGE -> verify exact expected state -> replace exactly two locations -> verify result -> nothing else changes.
+// Preflight is all-or-nothing and side-effect free. Writing is staged, verified and rolled back on any failure.
+// The replacement text is always entry.after_definition, i.e. the verified OEWN definition from the R6B manifest.
+// Hashes are LF-normalised full-page SHA-256 (checkout independent); byte proofs run on the raw text, so CRLF
+// working trees are preserved exactly.
+
+const APPLY_CONFIRMATION = 'APPLY_275_DEFINITION_CLEANUPS';
+const STAGING_SUFFIX = '.r6b1-staging';
+const pageHash = (text) => lib.sha256Lf(Buffer.from(text, 'utf8'));
+
+// Number of bytes in which two texts differ (0 when identical): length of the window between common prefix and suffix.
+function differingBytes(a, b) {
+    const x = Buffer.from(a, 'utf8'), y = Buffer.from(b, 'utf8');
+    if (x.equals(y)) return 0;
+    let p = 0;
+    while (p < x.length && p < y.length && x[p] === y[p]) p++;
+    let s = 0;
+    while (s < x.length - p && s < y.length - p && x[x.length - 1 - s] === y[y.length - 1 - s]) s++;
+    return Math.max(x.length, y.length) - p - s;
+}
+
+// Everything structural and learner-facing, extracted independently of the two mutation ranges.
+function structureOf(html) {
+    const grab = (re) => { const m = re.exec(html); return m ? m[0] : null; };
+    const all = (re, pick = (m) => m[0]) => [...html.matchAll(re)].map(pick).join('\n\u0000\n');
+    const ldBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]);
+    let definedTerm = null;
+    const otherLd = [];
+    for (const block of ldBlocks) {
+        let parsed = null;
+        try { parsed = JSON.parse(block); } catch { parsed = null; }
+        if (parsed && parsed['@type'] === 'DefinedTerm') { definedTerm = parsed; } else otherLd.push(block);
+    }
+    const definedTermRest = definedTerm ? JSON.stringify(Object.fromEntries(Object.entries(definedTerm).filter(([k]) => k !== 'description'))) : null;
+    const surrounding = html
+        .replace(/(<p class="definition"[^>]*>[\s\S]*?<span[^>]*>)[\s\S]*?(<\/span>)/, '$1\u00a7$2')
+        .replace(/("description": )"(?:[^"\\]|\\.)*"/, '$1\u00a7');
+    return {
+        title: grab(/<title>[\s\S]*?<\/title>/),
+        meta_description: grab(/<meta name="description"[^>]*>/),
+        canonical: grab(/<link rel="canonical"[^>]*>/),
+        breadcrumbs: otherLd.join('\n'),
+        defined_term_other_fields: definedTermRest,
+        h1: grab(/<h1>[\s\S]*?<\/h1>/),
+        bangla_meaning: grab(/<p class="bangla-meaning"[\s\S]*?<\/p>/),
+        part_of_speech: grab(/<p class="part-of-speech"[\s\S]*?<\/p>/),
+        bangla_explanation: grab(/<p class="bangla-explanation"[\s\S]*?<\/p>/),
+        english_example: grab(/<p class="example"[\s\S]*?<\/p>/),
+        bangla_example: grab(/<p class="bangla-example"[\s\S]*?<\/p>/),
+        attribution: grab(/<p class="lexical-source"[\s\S]*?<\/p>/),
+        learning_explorer: grab(/<div class="explorer-container"[\s\S]*?<\/main>/),
+        links: all(/\b(?:href|src)="([^"]*)"/g, (m) => m[1]),
+        scripts: all(/<script(?![^>]*ld\+json)[\s\S]*?<\/script>/g),
+        styles: all(/<style[\s\S]*?<\/style>/g),
+        classes_and_styles: all(/\b(?:class|style)="([^"]*)"/g, (m) => m[0]),
+        surrounding_html: surrounding
+    };
+}
+
+function compareStructure(beforeHtml, afterHtml) {
+    const b = structureOf(beforeHtml), a = structureOf(afterHtml);
+    return Object.keys(b).map((name) => ({ name, unchanged: b[name] === a[name] && b[name] !== undefined }));
+}
+
+// Exhaustive proof that afterHtml is beforeHtml with exactly the two expected locations replaced.
+function verifyAfterState(beforeHtml, afterHtml, entry) {
+    const errors = [];
+    const located = locateEdit(beforeHtml, entry);
+    if (located.errors.length) return { errors: located.errors.map((e) => 'before-state: ' + e), visible_mutations: 0, json_ld_mutations: 0, unrelated_byte_changes: null, structure: [] };
+    const [first, second] = located.ranges;
+    const expected = beforeHtml.slice(0, first.start) + first.neu + beforeHtml.slice(first.end, second.start) + second.neu + beforeHtml.slice(second.end);
+    // byte-range proof: every byte outside the two ranges is identical, and the ranges hold exactly the clean definition
+    const unrelated = differingBytes(afterHtml, expected);
+    if (unrelated) errors.push('UNRELATED_BYTE_CHANGES: ' + unrelated + ' byte(s) differ from the only permitted mutation');
+    // semantic location counts measured on the AFTER page itself
+    const visibleBlocks = [...afterHtml.matchAll(/<p class="definition"[^>]*>[\s\S]*?<span[^>]*>([\s\S]*?)<\/span>/g)];
+    const visibleNew = visibleBlocks.filter((m) => m[1] === located.ranges.find((r) => r.kind === 'VISIBLE_DEFINITION').neu).length;
+    const visibleOld = visibleBlocks.length - visibleNew;
+    const ldNewLiteral = located.ranges.find((r) => r.kind === 'JSON_LD_DESCRIPTION').neu;
+    const ldOldLiteral = located.ranges.find((r) => r.kind === 'JSON_LD_DESCRIPTION').old;
+    const ldNew = countOccurrences(afterHtml, ldNewLiteral);
+    const ldOld = countOccurrences(afterHtml, ldOldLiteral);
+    if (visibleBlocks.length !== 1) errors.push('visible definition block count after cleanup is ' + visibleBlocks.length + ' (expected 1)');
+    if (visibleNew !== 1 || visibleOld !== 0) errors.push('visible definition is not exactly the clean OEWN definition');
+    if (ldNew !== 1) errors.push('JSON-LD description carries the clean OEWN definition ' + ldNew + ' times (expected 1)');
+    if (ldOld !== 0) errors.push('old JSON-LD description still present ' + ldOld + ' times');
+    // the same locations in the BEFORE page must have held the old text exactly once
+    if (countOccurrences(beforeHtml, ldOldLiteral) !== 1) errors.push('old JSON-LD description not found exactly once in the BEFORE page');
+    const structure = compareStructure(beforeHtml, afterHtml);
+    for (const s of structure) if (!s.unchanged) errors.push('STRUCTURE_CHANGED: ' + s.name);
+    errors.push(...verifyCleanupDiff(beforeHtml, afterHtml, entry).map((e) => 'diff: ' + e));
+    const changedLines = [];
+    const bl = beforeHtml.split('\n'), al = afterHtml.split('\n');
+    if (bl.length !== al.length) errors.push('line count changed (' + bl.length + ' -> ' + al.length + ')');
+    else bl.forEach((line, i) => { if (line !== al[i]) changedLines.push(i + 1); });
+    if (!errors.length && changedLines.length !== 2) errors.push('expected exactly 2 changed lines, found ' + changedLines.length);
+    return {
+        errors,
+        visible_mutations: visibleNew === 1 && visibleOld === 0 ? 1 : 0,
+        json_ld_mutations: ldNew === 1 && ldOld === 0 ? 1 : 0,
+        unrelated_byte_changes: unrelated,
+        changed_lines: changedLines,
+        structure
+    };
+}
+
+// BEFORE-state lock plus derived AFTER state for one applicable entry; no writing.
+function deriveLock(entry, html) {
+    const located = locateEdit(html, entry);
+    if (located.errors.length) return { lock: null, errors: located.errors };
+    const visible = located.ranges.find((r) => r.kind === 'VISIBLE_DEFINITION');
+    const json = located.ranges.find((r) => r.kind === 'JSON_LD_DESCRIPTION');
+    return {
+        errors: [],
+        lock: {
+            slug: entry.slug,
+            page_path: entry.page.path,
+            contamination_type: entry.contamination_type,
+            source_synset_id: entry.source_synset_id,
+            expected_before_sha256_lf: entry.page.sha256_lf_before,
+            expected_after_sha256_lf: entry.page.sha256_lf_after_expected,
+            old_visible_definition: visible.old,
+            new_visible_definition: visible.neu,
+            visible_escaping: visible.style,
+            old_json_ld_description: json.old.slice('"description": '.length),
+            new_json_ld_description: json.neu.slice('"description": '.length),
+            clean_oewn_definition: entry.after_definition
+        }
+    };
+}
+
+// The synset id must resolve, in the VERIFIED OEWN source, to exactly the words, gloss and definition the entry carries.
+// (Offline the entry is only self-consistent; this binds the id to the verified source.)
+function verifySynsetAgainstSource(entry, oewn) {
+    const s = oewn.get(entry.source_synset_id);
+    if (!s) return ['SYNSET_UNVERIFIED: ' + entry.source_synset_id + ' does not exist in the verified OEWN source'];
+    const errors = [];
+    if (s.pos !== entry.pos) errors.push('SYNSET_UNVERIFIED: POS differs from the verified source synset');
+    if (s.gloss !== entry.oewn.gloss) errors.push('SYNSET_UNVERIFIED: gloss differs from the verified source synset ' + entry.source_synset_id);
+    if (s.definition !== entry.oewn.definition || s.definition !== entry.after_definition) errors.push('SYNSET_UNVERIFIED: clean definition is not the verified source definition');
+    if (JSON.stringify(s.words) !== JSON.stringify(entry.oewn.words)) errors.push('SYNSET_UNVERIFIED: words differ from the verified source synset');
+    if (s.line_sha256 !== entry.oewn.line_sha256) errors.push('SYNSET_UNVERIFIED: source line hash differs from the verified source synset');
+    if (!s.words.some((w) => w.toLowerCase() === entry.slug)) errors.push('SYNSET_UNVERIFIED: headword is not a lemma of the verified source synset');
+    return errors;
+}
+
+// Full preflight of ONE entry against the CURRENT page. Never writes.
+// options.oewn: verified OEWN lookup ({ get(id) }). Required before anything may be written.
+function preflightEntry(entry, ctx, io, options = {}) {
+    const errors = [];
+    const fail = (m) => errors.push(entry.slug + ': ' + m);
+    const result = { slug: entry.slug, errors, lock: null, beforeRaw: null, afterRaw: null, visible_mutations: 0, json_ld_mutations: 0, unrelated_byte_changes: 0 };
+    if (!ctx.registry.has(entry.slug)) fail('NOT_APPROVED: slug is not in the approved registry');
+    if (ctx.frozen.has(entry.slug) || entry.frozen !== false) fail('FROZEN_REJECTED: frozen experiment pages can never be applied');
+    if (!entry.page || entry.page.path !== 'word/' + entry.slug + '.html') fail('page path does not match slug');
+    if (!entry.page || !/^[0-9a-f]{64}$/.test(entry.page.sha256_lf_before || '') || !/^[0-9a-f]{64}$/.test(entry.page.sha256_lf_after_expected || '')) { fail('BEFORE/AFTER hash lock is missing or malformed'); return result; }
+    let html;
+    try { html = io.read(entry.slug); } catch (error) { fail('page cannot be read: ' + error.message); return result; }
+    result.beforeRaw = html;
+    if (pageHash(html) !== entry.page.sha256_lf_before) { fail('BEFORE_HASH_MISMATCH: current page hash is not the audited BEFORE hash (changed, or already cleaned)'); return result; }
+    for (const e of validateEntry(entry, { ...ctx, readPage: io.read }, { applicable: true })) errors.push(e);
+    if (options.oewn) for (const e of verifySynsetAgainstSource(entry, options.oewn)) fail(e);
+    if (errors.length) return result;
+    const derived = deriveLock(entry, html);
+    if (derived.errors.length) { derived.errors.forEach((e) => fail('MUTATION_LOCATION: ' + e)); return result; }
+    result.lock = derived.lock;
+    const plan = planPageCleanup(html, entry);
+    if (plan.errors.length) { plan.errors.forEach((e) => fail('MUTATION_LOCATION: ' + e)); return result; }
+    result.afterRaw = plan.html;
+    if (pageHash(plan.html) !== entry.page.sha256_lf_after_expected) fail('AFTER_HASH_MISMATCH: the mechanical result does not equal the expected AFTER hash');
+    const proof = verifyAfterState(html, plan.html, entry);
+    proof.errors.forEach((e) => fail(e));
+    result.visible_mutations = proof.visible_mutations;
+    result.json_ld_mutations = proof.json_ld_mutations;
+    result.unrelated_byte_changes = proof.unrelated_byte_changes;
+    result.changed_lines = proof.changed_lines;
+    if (proof.visible_mutations !== 1 || proof.json_ld_mutations !== 1) fail('MUTATION_COUNT: expected exactly one visible and one JSON-LD mutation');
+    return result;
+}
+
+// All-or-nothing preflight of the whole manifest. Returns ok=false (with every error) if ANY page fails.
+// options.requestedSlugs: when given, must be exactly the set of applicable entries (no partial batches, no extras).
+function preflightAll(manifest, ctx, io, options = {}) {
+    const errors = [];
+    if (manifest.status !== 'PROPOSED_NOT_APPLIED') errors.push('manifest status is "' + manifest.status + '" (expected PROPOSED_NOT_APPLIED)');
+    errors.push(...validateManifest(manifest, { ...ctx, readPage: io.read }));
+    if (io.listStale && io.listStale().length) errors.push('stale staging files present: ' + io.listStale().join(', '));
+    const applicable = new Set(manifest.entries.map((e) => e.slug));
+    if (options.requestedSlugs) {
+        for (const slug of options.requestedSlugs) {
+            if (ctx.frozen.has(slug)) errors.push(slug + ': FROZEN_REJECTED: frozen pages cannot be included in an apply batch');
+            else if (!ctx.registry.has(slug)) errors.push(slug + ': NOT_APPROVED: not in the approved registry');
+            else if (!applicable.has(slug)) errors.push(slug + ': NOT_IN_MANIFEST: not an applicable cleanup entry');
+        }
+        const requested = new Set(options.requestedSlugs);
+        for (const slug of applicable) if (!requested.has(slug)) errors.push(slug + ': PARTIAL_BATCH_REFUSED: applicable entry missing from the requested batch');
+    }
+    if (options.expectedApplicable !== undefined && manifest.entries.length !== options.expectedApplicable) errors.push('applicable entries = ' + manifest.entries.length + ' (expected ' + options.expectedApplicable + ')');
+    const plan = [];
+    for (const entry of manifest.entries) {
+        const r = preflightEntry(entry, ctx, io, options);
+        errors.push(...r.errors);
+        plan.push(r);
+    }
+    const sum = (key) => plan.reduce((total, p) => total + (p[key] || 0), 0);
+    const clean = errors.length === 0;
+    return {
+        ok: clean,
+        synsets_verified: Boolean(options.oewn),
+        errors: [...new Set(errors)],
+        plan: clean ? plan : [],
+        locks: plan.map((p) => p.lock).filter(Boolean),
+        counts: {
+            applicable: manifest.entries.length,
+            would_change: plan.filter((p) => p.afterRaw && p.afterRaw !== p.beforeRaw).length,
+            visible_definition_mutations: sum('visible_mutations'),
+            json_ld_mutations: sum('json_ld_mutations'),
+            unrelated_byte_changes: sum('unrelated_byte_changes'),
+            before_hash_locked: manifest.entries.filter((e) => /^[0-9a-f]{64}$/.test(e.page.sha256_lf_before)).length,
+            after_hash_locked: manifest.entries.filter((e) => /^[0-9a-f]{64}$/.test(e.page.sha256_lf_after_expected || '')).length
+        }
+    };
+}
+
+// Staged, verified, rollback-capable write of a successful preflight result.
+// io: { read, stage, readStaged, commit, discard, restore }. Returns { ok, written, failed, rolled_back, unrestored, errors }.
+function applyPreflighted(preflight, io) {
+    const outcome = { ok: false, written: [], failed: [], rolled_back: [], unrestored: [], errors: [] };
+    if (!preflight.ok || !preflight.plan.length) { outcome.errors.push('refusing to write: preflight did not pass'); return outcome; }
+    if (!preflight.synsets_verified) { outcome.errors.push('refusing to write: source synsets were not verified against the OEWN source'); return outcome; }
+    const plan = preflight.plan;
+    const staged = [];
+    const cleanupStaging = () => { for (const p of plan) { try { io.discard(p.slug); } catch { /* best effort; reported by the stale-file check */ } } };
+    try {
+        // B + C: construct and validate every staged output before touching any real page
+        for (const p of plan) { io.stage(p.slug, p.afterRaw); staged.push(p.slug); }
+        for (const p of plan) {
+            const text = io.readStaged(p.slug);
+            if (text !== p.afterRaw || pageHash(text) !== p.lock.expected_after_sha256_lf) outcome.errors.push(p.slug + ': staged output does not equal the expected AFTER page');
+        }
+        if (outcome.errors.length) { cleanupStaging(); outcome.failed = plan.map((p) => p.slug); return outcome; }
+    } catch (error) {
+        outcome.errors.push('staging failed before any page was written: ' + error.message);
+        cleanupStaging();
+        return outcome;
+    }
+    // D: commit (atomic rename per file)
+    const committed = [];
+    let writeError = null;
+    for (const p of plan) {
+        try { io.commit(p.slug); committed.push(p.slug); } catch (error) { writeError = p.slug + ': commit failed: ' + error.message; break; }
+    }
+    // E: immediate verification of every written page
+    const mismatched = [];
+    if (!writeError) {
+        for (const p of plan) {
+            let now = null;
+            try { now = io.read(p.slug); } catch (error) { now = null; }
+            if (now !== p.afterRaw || pageHash(now || '') !== p.lock.expected_after_sha256_lf) mismatched.push(p.slug);
+        }
+    }
+    if (!writeError && !mismatched.length) {
+        cleanupStaging();
+        outcome.ok = true;
+        outcome.written = plan.map((p) => p.slug);
+        return outcome;
+    }
+    // failure: restore every page that may have been touched, then verify the restore
+    if (writeError) outcome.errors.push(writeError);
+    if (mismatched.length) outcome.errors.push('post-write verification failed for: ' + mismatched.join(', '));
+    outcome.failed = writeError ? [writeError.split(':')[0]] : mismatched;
+    const touched = new Set([...committed, ...mismatched]);
+    for (const p of plan) {
+        if (!touched.has(p.slug)) continue;
+        try {
+            io.restore(p.slug, p.beforeRaw);
+            if (io.read(p.slug) === p.beforeRaw) outcome.rolled_back.push(p.slug); else outcome.unrestored.push(p.slug);
+        } catch (error) { outcome.unrestored.push(p.slug); }
+    }
+    cleanupStaging();
+    if (outcome.unrestored.length) outcome.errors.push('ROLLBACK INCOMPLETE; restore from git: ' + outcome.unrestored.join(', '));
+    return outcome;
+}
+
+// Filesystem-backed IO for the word directory. Pages are read/written as UTF-8 text with line endings untouched.
+function makeFsIo(wordDir) {
+    const target = (slug) => path.join(wordDir, slug + '.html');
+    const staging = (slug) => target(slug) + STAGING_SUFFIX;
+    return {
+        read(slug) {
+            const buffer = fs.readFileSync(target(slug));
+            const text = buffer.toString('utf8');
+            if (!Buffer.from(text, 'utf8').equals(buffer)) throw new Error('page is not round-trippable UTF-8');
+            return text;
+        },
+        stage(slug, text) { fs.writeFileSync(staging(slug), text, { encoding: 'utf8', flag: 'wx' }); },
+        readStaged(slug) { return fs.readFileSync(staging(slug), 'utf8'); },
+        commit(slug) { fs.renameSync(staging(slug), target(slug)); },
+        discard(slug) { fs.rmSync(staging(slug), { force: true }); },
+        restore(slug, text) { fs.writeFileSync(target(slug), text, 'utf8'); },
+        listStale() { return fs.readdirSync(wordDir).filter((f) => f.endsWith(STAGING_SUFFIX)); }
+    };
+}
+
+// Read-only snapshot used to prove a command did not change any page.
+function snapshotPages(io, slugs) {
+    const out = new Map();
+    for (const slug of slugs) out.set(slug, pageHash(io.read(slug)));
+    return out;
+}
+
+// Dry-run: preflight everything, simulate the result, report. Writes nothing.
+function guardedDryRun(manifest, ctx, io, options = {}) {
+    const root = ctx.root || lib.ROOT;
+    const before = snapshotPages(io, [...ctx.registry]);
+    const preflight = preflightAll(manifest, ctx, io, options);
+    const simulatedParity = [];
+    if (preflight.ok) {
+        const cohortFile = path.join(root, 'dictionary-v2', 'prototype-cohort.json');
+        const cohort = fs.existsSync(cohortFile) ? lib.readJson(cohortFile).words : [];
+        const { checkParity } = require('./check-v1-parity');
+        const byslug = new Map(preflight.plan.map((p) => [p.slug, p]));
+        for (const slug of cohort) {
+            const p = byslug.get(slug);
+            if (!p) continue;
+            const entry = manifest.entries.find((e) => e.slug === slug);
+            const record = lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
+            const result = checkParity(record, p.afterRaw, entry);
+            simulatedParity.push({ slug, status_now: checkParity(record, p.beforeRaw, entry).status, status_after_apply: result.status, differences: result.differences });
+        }
+    }
+    const afterSnapshot = snapshotPages(io, [...ctx.registry]);
+    const changedByRun = [...before].filter(([slug, hash]) => afterSnapshot.get(slug) !== hash).map(([slug]) => slug);
+    const s = manifest.summary;
+    return {
+        ok: preflight.ok,
+        synsets_verified: preflight.synsets_verified,
+        errors: preflight.errors,
+        summary: {
+            approved_corpus: s.approved_corpus,
+            total_contamination: s.raw_oewn_example_contamination + s.citation_residue,
+            applicable_cleanup: manifest.entries.length,
+            frozen_excluded: s.frozen_excluded,
+            manual_review: s.manual_review,
+            files_that_would_change: preflight.counts.would_change,
+            actual_word_html_changed: changedByRun.length,
+            visible_definition_mutations: preflight.counts.visible_definition_mutations,
+            json_ld_mutations: preflight.counts.json_ld_mutations,
+            unrelated_byte_changes: preflight.counts.unrelated_byte_changes,
+            before_hash_locked: preflight.counts.before_hash_locked,
+            after_hash_locked: preflight.counts.after_hash_locked
+        },
+        locks: preflight.locks,
+        simulated_parity: simulatedParity
+    };
+}
+
 // ---------------------------------------------------------------- CLI
 function parseArgs(argv) {
-    const args = { cmd: argv[0], list: false, write: false };
+    const args = { cmd: (argv[0] || '').replace(/^--/, ''), list: false, write: false };
     for (let i = 1; i < argv.length; i++) {
-        if (argv[i] === '--archive') args.archive = argv[++i];
+        if (argv[i] === '--confirm') args.confirm = argv[++i];
+        else if (argv[i] === '--archive') args.archive = argv[++i];
         else if (argv[i] === '--oewn-dir') args.dir = argv[++i];
         else if (argv[i] === '--write') args.write = true;
         else if (argv[i] === '--list') args.list = true;
@@ -381,11 +760,14 @@ function printSummary(s) {
     console.log('manual review                = ' + s.manual_review);
 }
 
-function freshManifest(args, ctx) {
+function loadVerifiedOewn(args, ctx) {
     const source = lib.openOewnSource({ archive: args.archive, dir: args.dir });
     const sourceErrors = lib.verifyOewnSource(source, ctx.provenance);
     if (sourceErrors.length) throw new Error('OEWN source verification FAILED:\n' + sourceErrors.join('\n'));
-    const oewn = lib.oewnFromSynsets(lib.parseOewnData(source.getFile));
+    return lib.oewnFromSynsets(lib.parseOewnData(source.getFile));
+}
+
+function freshManifest(args, ctx, oewn = loadVerifiedOewn(args, ctx)) {
     return buildManifest({ registry: ctx.registry, readPage: ctx.readPage, oewn, frozen: ctx.frozen, provenance: ctx.provenance });
 }
 
@@ -414,8 +796,10 @@ function main() {
     }
     if (args.cmd === 'dry-run') {
         if (errors.length) { console.error('Refusing dry-run: manifest invalid (' + errors.length + ')'); errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
+        let verifiedOewn = null;
         if (args.archive || args.dir) {
-            const fresh = lib.canonicalJson(freshManifest(args, ctx));
+            verifiedOewn = loadVerifiedOewn(args, ctx);
+            const fresh = lib.canonicalJson(freshManifest(args, ctx, verifiedOewn));
             if (fresh !== lib.canonicalJson(manifest)) { console.error('Independent re-audit from the verified OEWN source differs from the manifest.'); process.exit(1); }
             console.log('Independent re-audit from the verified OEWN source: IDENTICAL to the manifest.');
         } else console.log('(offline: manifest verified against current pages; add --archive for the independent re-audit)');
@@ -427,17 +811,56 @@ function main() {
             }
         }
         printSummary(report.summary);
-        if (args.json) fs.writeFileSync(args.json, lib.canonicalJson(report), 'utf8');
+        const guarded = guardedDryRun(manifest, ctx, makeFsIo(path.join(ctx.root, 'word')), { oewn: verifiedOewn || undefined });
+        console.log('source synsets verified against the OEWN archive: ' + (verifiedOewn ? 'yes' : 'no (offline; apply would require it)'));
+        if (!guarded.ok) { console.error('GUARDED PREFLIGHT FAILED (' + guarded.errors.length + ')'); guarded.errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
+        printGuardedSummary(guarded);
+        if (args.json) fs.writeFileSync(args.json, lib.canonicalJson({ ...report, guarded }), 'utf8');
         console.log('DRY RUN ONLY: no page was modified.');
         return;
     }
-    throw new Error('Unknown subcommand "' + args.cmd + '" (use audit | validate | dry-run)');
+    if (args.cmd === 'apply') {
+        // The real mutation entry point. Everything is verified before the first byte is written.
+        if (args.confirm !== APPLY_CONFIRMATION) throw new Error('apply requires --confirm ' + APPLY_CONFIRMATION);
+        if (!args.archive && !args.dir) throw new Error('apply requires --archive <zip> (or --oewn-dir) for the independent re-audit');
+        if (errors.length) { console.error('Refusing apply: manifest invalid (' + errors.length + ')'); errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
+        const verifiedOewn = loadVerifiedOewn(args, ctx);
+        if (lib.canonicalJson(freshManifest(args, ctx, verifiedOewn)) !== lib.canonicalJson(manifest)) throw new Error('Independent re-audit from the verified OEWN source differs from the manifest.');
+        const io = makeFsIo(path.join(ctx.root, 'word'));
+        const preflight = preflightAll(manifest, ctx, io, { expectedApplicable: manifest.summary.safe_non_frozen_cleanup, oewn: verifiedOewn });
+        if (!preflight.ok) { console.error('PREFLIGHT FAILED: no page was written (' + preflight.errors.length + ' errors)'); preflight.errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
+        const outcome = applyPreflighted(preflight, io);
+        if (!outcome.ok) { console.error('APPLY FAILED'); outcome.errors.forEach((e) => console.error('  - ' + e)); console.error('failed: ' + outcome.failed.join(', ') + ' | rolled back: ' + outcome.rolled_back.length + ' | unrestored: ' + outcome.unrestored.join(', ')); process.exit(1); }
+        console.log('APPLIED and verified: ' + outcome.written.length + ' pages.');
+        return;
+    }
+    throw new Error('Unknown subcommand "' + args.cmd + '" (use audit | validate | dry-run | apply)');
+}
+
+function printGuardedSummary(g) {
+    const s = g.summary;
+    console.log('--- guarded dry-run');
+    console.log('approved corpus: ' + s.approved_corpus);
+    console.log('total contamination: ' + s.total_contamination);
+    console.log('applicable cleanup: ' + s.applicable_cleanup);
+    console.log('frozen excluded: ' + s.frozen_excluded);
+    console.log('manual review: ' + s.manual_review);
+    console.log('files that WOULD change: ' + s.files_that_would_change);
+    console.log('actual word/*.html changed: ' + s.actual_word_html_changed);
+    console.log('BEFORE-hash locks: ' + s.before_hash_locked + ' | AFTER-hash locks: ' + s.after_hash_locked);
+    console.log('expected visible-definition mutations: ' + s.visible_definition_mutations);
+    console.log('expected JSON-LD mutations: ' + s.json_ld_mutations);
+    console.log('unrelated byte changes: ' + s.unrelated_byte_changes);
+    for (const p of g.simulated_parity) console.log('simulated parity ' + p.slug.padEnd(10) + p.status_now + ' -> ' + p.status_after_apply);
 }
 
 module.exports = {
     TYPES, MANIFEST_PATH, MANIFEST_REF, escapeHtml, classifyAgainstSynset, contaminationFor, synsetFromEntry,
     learnerFieldsHash, planPageCleanup, verifyCleanupDiff, auditPage, buildEntry, buildManifest, fingerprint,
-    validateEntry, validateManifest, applyEntryToRecord, loadManifest, makeContext, dryRun
+    validateEntry, validateManifest, applyEntryToRecord, loadManifest, makeContext, dryRun,
+    // SEO-R6B.1 guarded apply engine
+    APPLY_CONFIRMATION, STAGING_SUFFIX, locateEdit, differingBytes, structureOf, compareStructure, verifyAfterState,
+    deriveLock, verifySynsetAgainstSource, preflightEntry, preflightAll, applyPreflighted, makeFsIo, snapshotPages, guardedDryRun, pageHash
 };
 if (require.main === module) {
     try { main(); } catch (error) { console.error('FAILED (fail closed): ' + error.message); process.exit(1); }

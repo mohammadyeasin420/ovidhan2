@@ -81,6 +81,21 @@ node tests/dictionary-v2-definition-cleanup.test.js
 - Frozen experiment pages are documented but never applicable. Anything unprovable goes to `manual_review`; it is never edited automatically.
 - Records with a cleaned definition use `schema_version` `1.1.0`: `definition.text` is the clean OEWN definition and `definition.v1_original` keeps the auditable contamination record (text, contamination, removed material). Parity reports them as `PASS_PENDING_CLEANUP` until the page is cleaned, then `PASS_CLEANED`.
 
+### Guarded apply engine (SEO-R6B.1; implemented and tested, NOT yet authorised)
+
+`definition-cleanup.js` also contains the mechanical apply path: `--validate`, `--dry-run` and `apply` (`--apply` alias).
+
+```
+node scripts/dictionary-v2/definition-cleanup.js --dry-run --archive <zip>     # full guarded preflight + report, writes nothing
+node scripts/dictionary-v2/definition-cleanup.js apply --archive <zip> --confirm APPLY_275_DEFINITION_CLEANUPS   # NOT authorised
+node tests/dictionary-v2-definition-apply.test.js                               # never writes to the real pages
+```
+
+- Per page it locks slug, path, full-page BEFORE and AFTER SHA-256 (LF-normalised), old/new visible definition, old/new JSON-LD description, source synset, contamination type and the clean OEWN definition. No fuzzy matching and no recovery: any deviation refuses the page.
+- Exactly two locations may change (the visible `.definition` span and the DefinedTerm `description`). The result is proven by a byte-range comparison (zero unrelated bytes) plus named structure checks (title, meta description, canonical, breadcrumbs, H1, Bangla meaning, POS, Bangla explanation, examples, attribution, Learning Explorer, links, scripts, styles, classes, surrounding HTML).
+- Preflight is all-or-nothing across all 275 pages (hash, frozen, registry, synset against the verified OEWN archive, old definition, JSON-LD, mutation counts, after-state). Only then are outputs staged, verified, committed by atomic rename, re-verified, and rolled back on any failure (non-zero exit, affected files listed).
+- Frozen and non-approved pages are rejected; a second run refuses because pages are no longer at the BEFORE hash.
+
 ## Future enrichment process (not part of this phase)
 
 1. Pin first: new synset ids enter via `build-oewn-lock.js`, so every sourced claim is verifiable offline.
