@@ -49,6 +49,56 @@
       ]
     },
     {
+      "definition": "promoting or enhancing well-being",
+      "gloss": "promoting or enhancing well-being; \"an arms limitation agreement beneficial to all countries\"; \"the beneficial effects of a temperate climate\"; \"the experience was good for her\"",
+      "id": "00065152-a",
+      "line_sha256": "e4c239635107f451ce04bace7bca2b8b6a3976f31df99d3c4ed0ebfad2244007",
+      "offset": "00065152",
+      "pos": "adjective",
+      "quoted_examples": [
+        "an arms limitation agreement beneficial to all countries",
+        "the beneficial effects of a temperate climate",
+        "the experience was good for her"
+      ],
+      "ss_type": "s",
+      "words": [
+        "beneficial",
+        "good"
+      ]
+    },
+    {
+      "definition": "the act of designating or identifying something",
+      "gloss": "the act of designating or identifying something",
+      "id": "00147836-n",
+      "line_sha256": "a506787685344756c6c578e3caf91a6d07d2afb2a6cf18445052f0ad3a65edc7",
+      "offset": "00147836",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "designation",
+        "identification"
+      ]
+    },
+    {
+      "definition": "the act of putting a person into a non-elective position",
+      "gloss": "the act of putting a person into a non-elective position; \"the appointment had to be approved by the whole committee\"",
+      "id": "00159791-n",
+      "line_sha256": "5b22d9f25963c3c72a0ce0809f6896d065a7bf52da92fa63f7e67128261e0b9d",
+      "offset": "00159791",
+      "pos": "noun",
+      "quoted_examples": [
+        "the appointment had to be approved by the whole committee"
+      ],
+      "ss_type": "n",
+      "words": [
+        "appointment",
+        "assignment",
+        "designation",
+        "naming"
+      ]
+    },
+    {
       "definition": "causing a sensation as of things crawling on your skin",
       "gloss": "causing a sensation as of things crawling on your skin; \"a creepy story\"; \"I had a creepy-crawly feeling\"",
       "id": "00197091-a",
@@ -85,6 +135,22 @@
       ]
     },
     {
+      "definition": "happen or occur again",
+      "gloss": "happen or occur again; \"This is a recurring story\"",
+      "id": "00356508-v",
+      "line_sha256": "6729370384783f12b2960ca1c2f3d55f2430c5228887cc0f95f80d538fa3b2f1",
+      "offset": "00356508",
+      "pos": "verb",
+      "quoted_examples": [
+        "This is a recurring story"
+      ],
+      "ss_type": "v",
+      "words": [
+        "recur",
+        "repeat"
+      ]
+    },
+    {
       "definition": "marked by blithe unconcern",
       "gloss": "marked by blithe unconcern; \"an ability to interest casual students\"; \"showed a casual disregard for cold weather\"; \"an utterly insouciant financial policy\"; \"an elegantly insouciant manner\"; \"drove his car with nonchalant abandon\"; \"was polite in a teasing nonchalant manner\"",
       "id": "00550760-a",
@@ -107,6 +173,67 @@
       ]
     },
     {
+      "definition": "expect, believe, or suppose",
+      "gloss": "expect, believe, or suppose; \"I imagine she earned a lot of money with her new novel\"; \"I thought to find her in a bad state\"; \"he didn't think to find her in the kitchen\"; \"I guess she is angry at me for standing her up\"",
+      "id": "00661042-v",
+      "line_sha256": "0cbb010fa192137f3bcb91dc98a226d87b142be969efc2825fce3c4c7a72bb32",
+      "offset": "00661042",
+      "pos": "verb",
+      "quoted_examples": [
+        "I imagine she earned a lot of money with her new novel",
+        "I thought to find her in a bad state",
+        "he didn't think to find her in the kitchen",
+        "I guess she is angry at me for standing her up"
+      ],
+      "ss_type": "v",
+      "words": [
+        "think",
+        "opine",
+        "suppose",
+        "imagine",
+        "reckon",
+        "guess"
+      ]
+    },
+    {
+      "definition": "judge tentatively or form an estimate of (quantities or time)",
+      "gloss": "judge tentatively or form an estimate of (quantities or time); \"I estimate this chicken to weigh three pounds\"",
+      "id": "00703659-v",
+      "line_sha256": "b1f2e241e2635408fea5449476eebceb93bb6fd8ce36c19eea9173047bdfec1b",
+      "offset": "00703659",
+      "pos": "verb",
+      "quoted_examples": [
+        "I estimate this chicken to weigh three pounds"
+      ],
+      "ss_type": "v",
+      "words": [
+        "estimate",
+        "gauge",
+        "approximate",
+        "guess",
+        "judge"
+      ]
+    },
+    {
+      "definition": "substantially made or constructed",
+      "gloss": "substantially made or constructed; \"sturdy steel shelves\"; \"sturdy canvas\"; \"a tough all-weather fabric\"; \"some plastics are as tough as metal\"",
+      "id": "00714724-a",
+      "line_sha256": "35b46351c6d8878e21ed8a6f53de4b0b753f52fe558b047f4ba0ae2121a61aba",
+      "offset": "00714724",
+      "pos": "adjective",
+      "quoted_examples": [
+        "sturdy steel shelves",
+        "sturdy canvas",
+        "a tough all-weather fabric",
+        "some plastics are as tough as metal"
+      ],
+      "ss_type": "s",
+      "words": [
+        "sturdy",
+        "tough"
+      ]
+    },
+    {
       "definition": "very difficult; severely testing stamina or resolution",
       "gloss": "very difficult; severely testing stamina or resolution; \"a rugged competitive examination\"; \"the rugged conditions of frontier life\"; \"the competition was tough\"; \"it's a tough life\"; \"it was a tough job\"",
       "id": "00755165-a",
@@ -124,6 +251,25 @@
       "words": [
         "rugged",
         "tough"
+      ]
+    },
+    {
+      "definition": "criticize harshly or violently",
+      "gloss": "criticize harshly or violently; \"The press savaged the new President\"; \"The critics crucified the author for plagiarizing a famous passage\"",
+      "id": "00859201-v",
+      "line_sha256": "5b4cde23fcf56bc4977e43545257e4a5308a36b95ca14161c0ebad7504588627",
+      "offset": "00859201",
+      "pos": "verb",
+      "quoted_examples": [
+        "The press savaged the new President",
+        "The critics crucified the author for plagiarizing a famous passage"
+      ],
+      "ss_type": "v",
+      "words": [
+        "savage",
+        "blast",
+        "pillory",
+        "crucify"
       ]
     },
     {
@@ -203,6 +349,19 @@
       ]
     },
     {
+      "definition": "attack brutally and fiercely",
+      "gloss": "attack brutally and fiercely",
+      "id": "01166056-v",
+      "line_sha256": "78357c1644f7e52ab5144a267d3ca8b9b894193a33709d8b0e44bf89d8777a66",
+      "offset": "01166056",
+      "pos": "verb",
+      "quoted_examples": [],
+      "ss_type": "v",
+      "words": [
+        "savage"
+      ]
+    },
+    {
       "definition": "(of persons or their actions) able or disposed to inflict pain or suffering",
       "gloss": "(of persons or their actions) able or disposed to inflict pain or suffering; \"a barbarous crime\"; \"brutal beatings\"; \"cruel tortures\"; \"Stalin's roughshod treatment of the kulaks\"; \"a savage slap\"; \"vicious kicks\"",
       "id": "01271347-a",
@@ -259,6 +418,43 @@
       ]
     },
     {
+      "definition": "to compress with violence, out of natural shape or condition",
+      "gloss": "to compress with violence, out of natural shape or condition; \"crush an aluminum can\"; \"squeeze a lemon\"",
+      "id": "01646506-v",
+      "line_sha256": "47b793a5ea484a7935b8a93e59f92c1ea61b9adf442fdaece41d1cda7c04d178",
+      "offset": "01646506",
+      "pos": "verb",
+      "quoted_examples": [
+        "crush an aluminum can",
+        "squeeze a lemon"
+      ],
+      "ss_type": "v",
+      "words": [
+        "squash",
+        "crush",
+        "squelch",
+        "mash",
+        "squeeze"
+      ]
+    },
+    {
+      "definition": "humiliate or depress completely",
+      "gloss": "humiliate or depress completely; \"She was crushed by his refusal of her invitation\"; \"The death of her son smashed her\"",
+      "id": "01858229-v",
+      "line_sha256": "54b472e43b5660423230188aa17048faa315cec41191f791b08d9956d837598f",
+      "offset": "01858229",
+      "pos": "verb",
+      "quoted_examples": [
+        "She was crushed by his refusal of her invitation",
+        "The death of her son smashed her"
+      ],
+      "ss_type": "v",
+      "words": [
+        "crush",
+        "smash"
+      ]
+    },
+    {
       "definition": "expected to become or be; in prospect",
       "gloss": "expected to become or be; in prospect; \"potential clients\"",
       "id": "01897352-a",
@@ -272,6 +468,115 @@
       "words": [
         "likely",
         "potential"
+      ]
+    },
+    {
+      "definition": "of moral excellence",
+      "gloss": "of moral excellence; \"a genuinely good person\"; \"a just cause\"; \"an upright and respectable man\"",
+      "id": "02052395-a",
+      "line_sha256": "20a88c321cef1d83f666751c00f95def40618a3564e6588ccab0736b1465cc6e",
+      "offset": "02052395",
+      "pos": "adjective",
+      "quoted_examples": [
+        "a genuinely good person",
+        "a just cause",
+        "an upright and respectable man"
+      ],
+      "ss_type": "s",
+      "words": [
+        "good",
+        "just",
+        "upright"
+      ]
+    },
+    {
+      "definition": "move in large numbers",
+      "gloss": "move in large numbers; \"people were pouring out of the theater\"; \"beggars pullulated in the plaza\"",
+      "id": "02090118-v",
+      "line_sha256": "58b0c1a8db5dc7ff06920019858136221c6379435164e907f28b94dea2d32522",
+      "offset": "02090118",
+      "pos": "verb",
+      "quoted_examples": [
+        "people were pouring out of the theater",
+        "beggars pullulated in the plaza"
+      ],
+      "ss_type": "v",
+      "words": [
+        "pour",
+        "swarm",
+        "stream",
+        "teem",
+        "pullulate"
+      ]
+    },
+    {
+      "definition": "having or showing knowledge and skill and aptitude",
+      "gloss": "having or showing knowledge and skill and aptitude; \"adept in handicrafts\"; \"an adept juggler\"; \"an expert job\"; \"a good mechanic\"; \"a practiced marksman\"; \"a proficient engineer\"; \"a lesser-known but no less skillful composer\"; \"the effect was achieved by skillful retouching\"",
+      "id": "02242939-a",
+      "line_sha256": "3f36c7a199467fa8f51d321ad5c9cdaa8b5e3439f5878a6ccddcf961226cf6c4",
+      "offset": "02242939",
+      "pos": "adjective",
+      "quoted_examples": [
+        "adept in handicrafts",
+        "an adept juggler",
+        "an expert job",
+        "a good mechanic",
+        "a practiced marksman",
+        "a proficient engineer",
+        "a lesser-known but no less skillful composer",
+        "the effect was achieved by skillful retouching"
+      ],
+      "ss_type": "s",
+      "words": [
+        "adept",
+        "expert",
+        "good",
+        "practiced",
+        "proficient",
+        "skillful",
+        "skilful"
+      ]
+    },
+    {
+      "definition": "resistant to cutting or chewing",
+      "gloss": "resistant to cutting or chewing",
+      "id": "02464114-a",
+      "lexical_antonyms": [
+        {
+          "from_word": "tough",
+          "to_synset_id": "02465129-a",
+          "to_word": "tender"
+        }
+      ],
+      "line_sha256": "05ee2db1958eb223bf18b632218678ce4590d6416b43a8f47880e34cdd649a0b",
+      "offset": "02464114",
+      "pos": "adjective",
+      "quoted_examples": [],
+      "ss_type": "a",
+      "words": [
+        "tough"
+      ]
+    },
+    {
+      "definition": "not given to gentleness or sentimentality",
+      "gloss": "not given to gentleness or sentimentality; \"a tough character\"",
+      "id": "02466962-a",
+      "lexical_antonyms": [
+        {
+          "from_word": "tough",
+          "to_synset_id": "02467414-a",
+          "to_word": "tender"
+        }
+      ],
+      "line_sha256": "9ac1f6e6e6cb509ef76d23cf8a8d62c0df4147b02fa99a7a5cdb625159b9237a",
+      "offset": "02466962",
+      "pos": "adjective",
+      "quoted_examples": [
+        "a tough character"
+      ],
+      "ss_type": "a",
+      "words": [
+        "tough"
       ]
     },
     {
@@ -309,6 +614,25 @@
       "ss_type": "s",
       "words": [
         "precious"
+      ]
+    },
+    {
+      "definition": "be teeming, be abuzz",
+      "gloss": "be teeming, be abuzz; \"The garden was swarming with bees\"; \"The plaza is teeming with undercover policemen\"; \"her mind pullulated with worries\"",
+      "id": "02799106-v",
+      "line_sha256": "40c7427312244eaf767eb4ed5b4a1e49c99b0033c7bc4813754dcb49966156e0",
+      "offset": "02799106",
+      "pos": "verb",
+      "quoted_examples": [
+        "The garden was swarming with bees",
+        "The plaza is teeming with undercover policemen",
+        "her mind pullulated with worries"
+      ],
+      "ss_type": "v",
+      "words": [
+        "teem",
+        "pullulate",
+        "swarm"
       ]
     },
     {
@@ -387,6 +711,22 @@
         "recommendation",
         "testimonial",
         "good_word"
+      ]
+    },
+    {
+      "definition": "an event that repeats",
+      "gloss": "an event that repeats; \"the events today were a repeat of yesterday's\"",
+      "id": "06728539-n",
+      "line_sha256": "a900d82f860d6d0c6464b03e7a2eace3ec41f3e8919866dce78c8b734521d3a8",
+      "offset": "06728539",
+      "pos": "noun",
+      "quoted_examples": [
+        "the events today were a repeat of yesterday's"
+      ],
+      "ss_type": "n",
+      "words": [
+        "repeat",
+        "repetition"
       ]
     },
     {
@@ -524,6 +864,21 @@
         "bedlam",
         "topsy-turvydom",
         "topsy-turvyness"
+      ]
+    },
+    {
+      "definition": "the inherent capacity for coming into being",
+      "gloss": "the inherent capacity for coming into being",
+      "id": "11784386-n",
+      "line_sha256": "6c010c88e1ea76c85dfb2ae1438d8fa8dc80294febb3da5df697d92babdf7d81",
+      "offset": "11784386",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "potential",
+        "potentiality",
+        "potency"
       ]
     }
   ]

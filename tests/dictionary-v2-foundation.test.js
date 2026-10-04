@@ -11,6 +11,7 @@ const zlib = require('node:zlib');
 const lib = require('../scripts/dictionary-v2/lib');
 const { loadContext, validateRecord, validateAll, validateLock } = require('../scripts/dictionary-v2/validate');
 const { buildRecord } = require('../scripts/dictionary-v2/migrate-v1');
+const r6cEnrich = require('../scripts/dictionary-v2/r6c-enrich');
 const { checkParity, runParity } = require('../scripts/dictionary-v2/check-v1-parity');
 
 const root = lib.ROOT;
@@ -26,12 +27,33 @@ function scenario(name, fn) {
 }
 const hasError = (errors, fragment) => errors.some((e) => e.includes(fragment));
 
-// An enriched variant built from real data, so optional-field tests use genuine OEWN content.
-function enrichedTough() {
-    const record = clone(readRecord('tough'));
-    record.record_status = 'EDITORIAL_ENRICHED';
-    return record;
+// SEO-R6C enriched 8 of the cohort records (extra senses, V1 sense possibly not first). The R6A/R6B logic below is about
+// the lossless V1 form, so v1Form() reduces a record to exactly the single-sense V1_MIGRATION record it was migrated as.
+function v1Form(record) {
+    if (record.record_status !== 'EDITORIAL_ENRICHED') return clone(record);
+    const out = clone(record);
+    const v1 = out.senses.find((s) => s.v1_primary === true);
+    out.senses = [{ ...r6cEnrich.restoreV1Learner(v1), sense_id: 's1' }];
+    out.record_status = 'V1_MIGRATION';
+    out.schema_version = v1.definition.v1_original ? '1.1.0' : '1.0.0';
+    delete out.editorial_enrichment;
+    delete out.usage_notes;
+    return out;
 }
+const readV1 = (slug) => v1Form(readRecord(slug));
+// A valid EDITORIAL_ENRICHED variant of a single-sense record (schema 1.2.0 + editorial_enrichment), for optional-field tests.
+function asEnriched(record) {
+    const out = clone(record);
+    out.record_status = 'EDITORIAL_ENRICHED';
+    out.schema_version = '1.2.0';
+    out.editorial_enrichment = {
+        phase: 'SEO-R6C', report: 'dictionary-v2/r6c-editorial-report.json', v1_sense_id: 's1', v1_synset_id: out.senses[0].source.synset_id,
+        order_changed: false, order_rationale: 'Test fixture: the V1 sense stays first.', origin: 'OVIDHAN_EDITORIAL'
+    };
+    return out;
+}
+// An enriched variant built from real data, so optional-field tests use genuine OEWN content.
+function enrichedTough() { return asEnriched(readV1('tough')); }
 
 scenario('cohort is exactly the 28 R5C words, approved and not frozen', () => {
     assert.equal(cohortWords.length, 28);
@@ -113,7 +135,7 @@ scenario('definition/source alignment and contamination are enforced, never repa
     assert.equal(tough.text, tough.oewn_definition);
     assert.ok(!tough.text.includes('"'));
     // The legacy (schema 1.0.0) contamination rules still apply to any record that keeps contamination in definition.text.
-    const legacy = clone(readRecord('tough'));
+    const legacy = readV1('tough');
     const legacyDefinition = legacy.senses[0].definition;
     legacy.schema_version = '1.0.0';
     legacyDefinition.text = legacyDefinition.v1_original.text;
@@ -155,15 +177,15 @@ scenario('registry membership and frozen-word protection', () => {
 });
 
 scenario('V1_MIGRATION stays lossless: no enrichment, one primary sense', () => {
-    const enriched = clone(readRecord('tough'));
+    const enriched = readV1('tough');
     enriched.forms = [{ form: 'tougher', kind: 'comparative', pos: 'adjective', origin: 'OVIDHAN_EDITORIAL' }];
     assert.ok(hasError(validateRecord(enriched, ctx), 'must not contain "forms"'));
-    const syn = clone(readRecord('tough')); syn.senses[0].synonyms = [{ word: 'rugged', origin: 'OEWN_SYNSET' }];
+    const syn = readV1('tough'); syn.senses[0].synonyms = [{ word: 'rugged', origin: 'OEWN_SYNSET' }];
     assert.ok(hasError(validateRecord(syn, ctx), 'must not contain "synonyms"'));
 });
 
 scenario('optional fields are genuinely optional and validate when properly sourced', () => {
-    const plain = readRecord('tough');
+    const plain = readV1('tough');
     for (const key of ['forms', 'phrases', 'collocations', 'usage_notes', 'related_words']) assert.ok(!(key in plain));
     assert.deepEqual(validateRecord(plain, ctx), []);
 
@@ -188,7 +210,7 @@ scenario('optional fields are genuinely optional and validate when properly sour
 scenario('antonyms must be real OEWN lexical antonyms or editorial', () => {
     const lockNephew = ctx.lockById.get(readRecord('nephew').senses[0].source.synset_id);
     assert.ok((lockNephew.lexical_antonyms || []).some((a) => a.to_word === 'niece'));
-    const ok = clone(readRecord('nephew')); ok.record_status = 'EDITORIAL_ENRICHED';
+    const ok = asEnriched(readRecord('nephew'));
     ok.senses[0].antonyms = [{ word: 'niece', approved_slug: 'niece', origin: 'OEWN_LEXICAL_POINTER' }];
     ok.related_words = [{ slug: 'niece', relation: 'LEXICAL_ANTONYM', origin: 'OEWN_POINTER' }];
     assert.deepEqual(validateRecord(ok, ctx), []);
@@ -228,8 +250,12 @@ scenario('records are deterministic: rebuilding from live V1 HTML + the lock rep
     const oewn = lib.oewnFromLock(ctx.lock);
     const sha = ctx.provenance.source.archive_sha256.toLowerCase();
     const cleanupEntries = new Map(ctx.cleanupManifest.entries.map((e) => [e.slug, e]));
+    const editorial = r6cEnrich.loadSource();
     for (const word of cohortWords) {
-        const rebuilt = lib.canonicalJson(buildRecord({ slug: word, html: readPage(word), oewn, archiveSha256: sha, cleanupEntry: cleanupEntries.get(word) }));
+        const migrated = buildRecord({ slug: word, html: readPage(word), oewn, archiveSha256: sha, cleanupEntry: cleanupEntries.get(word) });
+        // SEO-R6C: the 12-word editorial cohort is migration + authored enrichment; every other word is the plain migration.
+        const wordSource = r6cEnrich.wordSource(editorial, word);
+        const rebuilt = lib.canonicalJson(wordSource ? r6cEnrich.enrichRecord({ base: migrated, word: wordSource, oewn }) : migrated);
         const committed = lib.toLf(fs.readFileSync(path.join(root, 'dictionary-v2', 'records', word + '.json'), 'utf8'));
         assert.equal(rebuilt, committed, word);
     }

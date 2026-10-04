@@ -8,12 +8,27 @@
   "required": ["schema_version", "record_status", "slug", "headword", "attribution", "provenance", "senses"],
   "properties": {
     "schema_version": {
-      "description": "1.0.0 records carry no cleanup audit. 1.1.0 additionally allows definition.v1_original (SEO-R6B).",
-      "enum": ["1.0.0", "1.1.0"]
+      "description": "1.0.0 records carry no cleanup audit. 1.1.0 additionally allows definition.v1_original (SEO-R6B). 1.2.0 is required for, and only for, EDITORIAL_ENRICHED records (SEO-R6C): it allows editorial_enrichment and a V1 sense that is not first.",
+      "enum": ["1.0.0", "1.1.0", "1.2.0"]
     },
     "record_status": {
-      "description": "V1_MIGRATION is a lossless copy of the live approved V1 page. EDITORIAL_ENRICHED is reserved for later phases.",
+      "description": "V1_MIGRATION is a lossless copy of the live approved V1 page. EDITORIAL_ENRICHED (SEO-R6C) adds editor-selected senses and keeps the V1 sense, verbatim and marked v1_primary.",
       "enum": ["V1_MIGRATION", "EDITORIAL_ENRICHED"]
+    },
+    "editorial_enrichment": {
+      "description": "Present only on EDITORIAL_ENRICHED records. Makes the V1 sense traceable even when it is not first: which sense and synset V1 showed, whether the order changed, and why.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["phase", "report", "v1_sense_id", "v1_synset_id", "order_changed", "order_rationale", "origin"],
+      "properties": {
+        "phase": { "const": "SEO-R6C" },
+        "report": { "const": "dictionary-v2/r6c-editorial-report.json" },
+        "v1_sense_id": { "$ref": "#/$defs/senseId" },
+        "v1_synset_id": { "$ref": "#/$defs/synsetId" },
+        "order_changed": { "type": "boolean" },
+        "order_rationale": { "$ref": "#/$defs/text" },
+        "origin": { "const": "OVIDHAN_EDITORIAL" }
+      }
     },
     "slug": { "$ref": "#/$defs/slug" },
     "headword": { "$ref": "#/$defs/text" },
@@ -58,7 +73,7 @@
       }
     },
     "senses": {
-      "description": "Display order. senses[0] is the V1 primary sense. sense_id values are s1, s2, ... strictly increasing in array order.",
+      "description": "Display order. In a V1_MIGRATION record senses[0] is the V1 primary sense; in an EDITORIAL_ENRICHED record the V1 sense is the one marked v1_primary and may be placed later. sense_id values are s1, s2, ... strictly increasing in array order.",
       "type": "array",
       "minItems": 1,
       "items": { "$ref": "#/$defs/sense" }
@@ -171,6 +186,26 @@
         "sense_id": { "$ref": "#/$defs/senseId" },
         "pos": { "$ref": "#/$defs/pos" },
         "v1_primary": { "const": true },
+        "v1_revision": {
+          "description": "SEO-R6C challenge pass. Only on the v1_primary sense of an EDITORIAL_ENRICHED record. The V2 learner text was deliberately improved over V1; v1_original keeps exactly what the live V1 page shows for each revised field, so V1 parity and traceability are preserved without treating weak V1 wording as the preferred V2 text.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["reason", "v1_original", "origin"],
+          "properties": {
+            "reason": { "$ref": "#/$defs/text" },
+            "origin": { "const": "OVIDHAN_EDITORIAL" },
+            "v1_original": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "bangla_meaning": { "$ref": "#/$defs/text" },
+                "bangla_explanation": { "$ref": "#/$defs/text" },
+                "example_en": { "$ref": "#/$defs/text" },
+                "example_bn": { "$ref": "#/$defs/text" }
+              }
+            }
+          }
+        },
         "source": {
           "description": "OEWN_2025 requires synset_id. OVIDHAN_EDITORIAL (a sense not in OEWN) requires rationale and forbids synset_id.",
           "type": "object",

@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": false,
+    "order_rationale": "The V1 verb stays first: it is the dominant use (repeat the sentence, repeat the test). The recurrence verb follows, then the noun.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s1",
+    "v1_synset_id": "00998302-v"
+  },
   "headword": "repeat",
   "provenance": {
     "oewn": {
@@ -19,8 +28,8 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.1.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -63,6 +72,62 @@
         "type": "OEWN_2025"
       },
       "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো ঘটনা বা অবস্থা যখন নিজে থেকেই আরেকবার ঘটে, তখন সেটিকে repeat করছে বলা হয়। এখানে কেউ ইচ্ছা করে কিছু আবার করছে না; ঘটনাটিই ফিরে আসছে, যেমন history repeats itself।"
+      },
+      "bangla_meaning": {
+        "display": "আবার ঘটা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "happen or occur again",
+        "origin": "OEWN_GLOSS",
+        "text": "happen or occur again"
+      },
+      "examples": [
+        {
+          "bn": "নালা মেরামত না করলে আগামী বর্ষায় এ বছরের জলাবদ্ধতা আবার ঘটবে।",
+          "en": "Unless the drain is repaired, this year's waterlogging will repeat itself next monsoon.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00356508-v",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আগে ঘটে যাওয়া কোনো ঘটনা যখন আবার ঘটে, সেই পুনরাবৃত্তিটিকে বিশেষ্য repeat বলে। এখানে repeat কোনো কাজ নয়, একটি ঘটনার নাম; এই অর্থে সাধারণত a repeat of ... আকারে আসে।"
+      },
+      "bangla_meaning": {
+        "display": "পুনরাবৃত্তি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "an event that repeats",
+        "origin": "OEWN_GLOSS",
+        "text": "an event that repeats"
+      },
+      "examples": [
+        {
+          "bn": "পরীক্ষার সময় গত বছরের মতো লোডশেডিংয়ের পুনরাবৃত্তি কেউ চায় না।",
+          "en": "Nobody wants a repeat of last year's power cuts during the exams.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "06728539-n",
+        "type": "OEWN_2025"
+      }
     }
   ],
   "slug": "repeat"

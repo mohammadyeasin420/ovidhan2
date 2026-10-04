@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": false,
+    "order_rationale": "The V1 adjective stays first (potential buyers, potential problems); the noun follows.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s1",
+    "v1_synset_id": "01897352-a"
+  },
   "headword": "potential",
   "provenance": {
     "oewn": {
@@ -19,8 +28,8 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -50,7 +59,42 @@
         "type": "OEWN_2025"
       },
       "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কারও বা কোনো কিছুর ভেতরে যে ক্ষমতা লুকিয়ে আছে এবং ভবিষ্যতে বিকশিত হতে পারে, তাকে বিশেষ্য potential বলে। এখানে 'সম্ভাব্য' নয়, বরং ভেতরের সুপ্ত সামর্থ্যটাই আসল কথা।"
+      },
+      "bangla_meaning": {
+        "display": "সম্ভাবনা, সুপ্ত সামর্থ্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the inherent capacity for coming into being",
+        "origin": "OEWN_GLOSS",
+        "text": "the inherent capacity for coming into being"
+      },
+      "examples": [
+        {
+          "bn": "কোচ বিশ্বাস করেন, তরুণ বোলারটির জাতীয় দলে খেলার সম্ভাবনা আছে।",
+          "en": "The coach believes the young bowler has the potential to play for the national team.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "11784386-n",
+        "type": "OEWN_2025"
+      }
     }
   ],
-  "slug": "potential"
+  "slug": "potential",
+  "usage_notes": [
+    {
+      "origin": "OVIDHAN_EDITORIAL",
+      "sense_id": "s2",
+      "text": "কীসের সামর্থ্য তা বোঝাতে potential-এর পর to + ক্রিয়া বসতে পারে, যেমন the potential to win।"
+    }
+  ]
 }

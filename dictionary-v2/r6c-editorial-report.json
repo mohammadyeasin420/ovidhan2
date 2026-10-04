@@ -1,0 +1,2432 @@
+{
+  "base_commit": "380176337a63a9b40fc5e91c31143a62b36845d0",
+  "cohort_id": "SEO_R6C_EDITORIAL_12",
+  "method": "For every cohort lemma the full OEWN 2025 candidate set (all parts of speech) was read from the verified archive. Each candidate is either SELECTED (a learner sense for a Bangladeshi English learner) or REJECTED with a reason. Definitions are the exact OEWN definitions; OEWN examples are listed as evidence only and are never reused. Bangla meanings, explanations and English/Bangla examples are Ovidhan editorial text (origin OVIDHAN_EDITORIAL).",
+  "oewn": {
+    "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+    "provider": "Open English WordNet",
+    "release": "2025",
+    "source_url": "https://en-word.net/"
+  },
+  "phase": "SEO-R6C",
+  "report": "ovidhan.dictionary-v2.r6c-editorial-report/1",
+  "source_file": "dictionary-v2/r6c-editorial-source.json",
+  "totals": {
+    "candidates_inspected": 91,
+    "editorial_risk": {
+      "HIGH": 1,
+      "LOW": 4,
+      "MEDIUM": 7
+    },
+    "new_senses_added": 19,
+    "rejected_candidates": 60,
+    "selected_senses": 31,
+    "selected_senses_by_pos": {
+      "adjective": 10,
+      "noun": 11,
+      "verb": 10
+    },
+    "v1_senses_retained": 12,
+    "words": 12,
+    "words_enriched": 9,
+    "words_unchanged": 3,
+    "words_with_meaningful_v1_gap": 9,
+    "words_with_more_than_three_senses": 2,
+    "words_with_order_change": 2
+  },
+  "words": [
+    {
+      "candidates": [
+        {
+          "decision": "SELECTED",
+          "definition": "a group of many things in the air or on the ground",
+          "gloss": "a group of many things in the air or on the ground; \"a swarm of insects obscured the light\"; \"clouds of blossoms\"; \"it discharged a cloud of spores\"",
+          "pos": "noun",
+          "quoted_examples": [
+            "a swarm of insects obscured the light",
+            "clouds of blossoms",
+            "it discharged a cloud of spores"
+          ],
+          "ss_type": "n",
+          "synset_id": "07382354-n",
+          "words": [
+            "swarm",
+            "cloud"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "a moving crowd",
+          "gloss": "a moving crowd",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "07527726-n",
+          "words": [
+            "drove",
+            "horde",
+            "swarm"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "move in large numbers",
+          "gloss": "move in large numbers; \"people were pouring out of the theater\"; \"beggars pullulated in the plaza\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "people were pouring out of the theater",
+            "beggars pullulated in the plaza"
+          ],
+          "ss_type": "v",
+          "synset_id": "02090118-v",
+          "words": [
+            "pour",
+            "swarm",
+            "stream",
+            "teem",
+            "pullulate"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "be teeming, be abuzz",
+          "gloss": "be teeming, be abuzz; \"The garden was swarming with bees\"; \"The plaza is teeming with undercover policemen\"; \"her mind pullulated with worries\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "The garden was swarming with bees",
+            "The plaza is teeming with undercover policemen",
+            "her mind pullulated with worries"
+          ],
+          "ss_type": "v",
+          "synset_id": "02799106-v",
+          "words": [
+            "teem",
+            "pullulate",
+            "swarm"
+          ]
+        }
+      ],
+      "candidates_inspected": 4,
+      "editorial_risk": "MEDIUM",
+      "final_sense_order": [
+        "s1 07382354-n",
+        "s2 02090118-v",
+        "s3 02799106-v"
+      ],
+      "lemma": "swarm",
+      "order_changed": false,
+      "order_rationale": "The V1 noun stays first: a swarm of insects is the concrete, basic meaning. The two verb uses follow, movement first and the 'full of' state second.",
+      "record_file": "dictionary-v2/records/swarm.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "A moving crowd: overlaps the retained noun sense and the selected movement verb, and its Bangla rendering (ঝাঁক/ভিড়) would duplicate them.",
+          "synset_id": "07527726-n"
+        }
+      ],
+      "risk_note": "The two verb senses are close in meaning; they are kept apart because they use different frames (swarm + direction versus be swarming with) and different Bangla renderings.",
+      "selected": [
+        {
+          "pos": "noun",
+          "reason": "V1 primary sense: the core noun meaning (a swarm of bees). Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "07382354-n",
+          "v1_source": true
+        },
+        {
+          "pos": "verb",
+          "reason": "Common verb use for crowds and insects moving in large numbers (fans swarmed around, people swarmed into the street).",
+          "sense_id": "s2",
+          "synset_id": "02090118-v",
+          "v1_source": false
+        },
+        {
+          "pos": "verb",
+          "reason": "Distinct, very common frame 'be swarming with': a place crowded or full of people, insects or animals.",
+          "sense_id": "s3",
+          "synset_id": "02799106-v",
+          "v1_source": false
+        }
+      ],
+      "selected_count": 3,
+      "v1_learner_gap": {
+        "description": "V1 teaches only the noun (a swarm of bees). The verb is at least as common for learners (crowds swarm around a person; a place is swarming with insects or people) and was missing.",
+        "meaningful": true
+      },
+      "v1_source": {
+        "pos": "noun",
+        "sense_id_in_record": "s1",
+        "synset_id": "07382354-n",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "REJECTED",
+          "definition": "a raw material that is sold in large quantities, usually to other businesses for manufacturing or production purposes",
+          "gloss": "a raw material that is sold in large quantities, usually to other businesses for manufacturing or production purposes",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "02453111-n",
+          "words": [
+            "commodity",
+            "trade_good",
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "moral excellence or admirableness",
+          "gloss": "moral excellence or admirableness; \"there is much good to be found in people\"",
+          "pos": "noun",
+          "quoted_examples": [
+            "there is much good to be found in people"
+          ],
+          "ss_type": "n",
+          "synset_id": "04220090-n",
+          "words": [
+            "good",
+            "goodness"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "that which is pleasing or valuable or useful",
+          "gloss": "that which is pleasing or valuable or useful; \"weigh the good against the bad\"; \"among the highest goods of all are happiness and self-realization\"",
+          "pos": "noun",
+          "quoted_examples": [
+            "weigh the good against the bad",
+            "among the highest goods of all are happiness and self-realization"
+          ],
+          "ss_type": "n",
+          "synset_id": "04519443-n",
+          "words": [
+            "good",
+            "goodness"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "benefit",
+          "gloss": "benefit; \"for your own good\"; \"what's the good of worrying?\"",
+          "pos": "noun",
+          "quoted_examples": [
+            "for your own good",
+            "what's the good of worrying?"
+          ],
+          "ss_type": "n",
+          "synset_id": "04537155-n",
+          "words": [
+            "good"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "promoting or enhancing well-being",
+          "gloss": "promoting or enhancing well-being; \"an arms limitation agreement beneficial to all countries\"; \"the beneficial effects of a temperate climate\"; \"the experience was good for her\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "an arms limitation agreement beneficial to all countries",
+            "the beneficial effects of a temperate climate",
+            "the experience was good for her"
+          ],
+          "ss_type": "s",
+          "synset_id": "00065152-a",
+          "words": [
+            "beneficial",
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "having the normally expected amount",
+          "gloss": "having the normally expected amount; \"gives full measure\"; \"gives good measure\"; \"a good mile from here\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "gives full measure",
+            "gives good measure",
+            "a good mile from here"
+          ],
+          "ss_type": "s",
+          "synset_id": "00106722-a",
+          "words": [
+            "full",
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "with or in a close or intimate relationship",
+          "gloss": "with or in a close or intimate relationship; \"a good friend\"; \"my sisters and brothers are near and dear\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a good friend",
+            "my sisters and brothers are near and dear"
+          ],
+          "ss_type": "s",
+          "synset_id": "00457518-a",
+          "words": [
+            "dear",
+            "good",
+            "near"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "thorough",
+          "gloss": "thorough; \"had a good workout\"; \"gave the house a good cleaning\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "had a good workout",
+            "gave the house a good cleaning"
+          ],
+          "ss_type": "s",
+          "synset_id": "00528203-a",
+          "words": [
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "generally admired",
+          "gloss": "generally admired; \"good taste\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "good taste"
+          ],
+          "ss_type": "s",
+          "synset_id": "00782753-a",
+          "words": [
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "exerting force or influence",
+          "gloss": "exerting force or influence; \"the law is effective immediately\"; \"a warranty good for two years\"; \"the law is already in effect (or in force)\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "the law is effective immediately",
+            "a warranty good for two years",
+            "the law is already in effect (or in force)"
+          ],
+          "ss_type": "s",
+          "synset_id": "00840159-a",
+          "words": [
+            "effective",
+            "good",
+            "in_effect",
+            "in_force"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "resulting favorably",
+          "gloss": "resulting favorably; \"it's a good thing that I wasn't there\"; \"it is good that you stayed\"; \"it is well that no one saw you\"; \"all's well that ends well\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "it's a good thing that I wasn't there",
+            "it is good that you stayed",
+            "it is well that no one saw you",
+            "all's well that ends well"
+          ],
+          "ss_type": "s",
+          "synset_id": "01056816-a",
+          "words": [
+            "good",
+            "well"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "not left to spoil",
+          "gloss": "not left to spoil; \"the meat is still good\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "the meat is still good"
+          ],
+          "ss_type": "s",
+          "synset_id": "01076403-a",
+          "words": [
+            "good",
+            "unspoiled",
+            "unspoilt"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "not forged",
+          "gloss": "not forged; \"a good dollar bill\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a good dollar bill"
+          ],
+          "ss_type": "s",
+          "synset_id": "01124347-a",
+          "words": [
+            "good",
+            "honest"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "having desirable or positive qualities especially those suitable for a thing specified",
+          "gloss": "having desirable or positive qualities especially those suitable for a thing specified; \"good news from the hospital\"; \"a good report card\"; \"when she was good she was very very good\"; \"a good knife is one good for cutting\"; \"this stump will make a good picnic table\"; \"a good check\"; \"a good joke\"; \"a good exterior paint\"; \"a good secretary\"; \"a good dress for the office\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "good news from the hospital",
+            "a good report card",
+            "when she was good she was very very good",
+            "a good knife is one good for cutting",
+            "this stump will make a good picnic table",
+            "a good check",
+            "a good joke",
+            "a good exterior paint",
+            "a good secretary",
+            "a good dress for the office"
+          ],
+          "ss_type": "a",
+          "synset_id": "01131475-a",
+          "words": [
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "morally admirable",
+          "gloss": "morally admirable",
+          "pos": "adjective",
+          "quoted_examples": [],
+          "ss_type": "a",
+          "synset_id": "01138097-a",
+          "words": [
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "tending to promote physical well-being; beneficial to health",
+          "gloss": "tending to promote physical well-being; beneficial to health; \"beneficial effects of a balanced diet\"; \"a good night's sleep\"; \"the salutary influence of pure air\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "beneficial effects of a balanced diet",
+            "a good night's sleep",
+            "the salutary influence of pure air"
+          ],
+          "ss_type": "s",
+          "synset_id": "01174885-a",
+          "words": [
+            "good",
+            "salutary"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "in excellent physical condition",
+          "gloss": "in excellent physical condition; \"good teeth\"; \"I still have one good leg\"; \"a sound mind in a sound body\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "good teeth",
+            "I still have one good leg",
+            "a sound mind in a sound body"
+          ],
+          "ss_type": "s",
+          "synset_id": "01179703-a",
+          "words": [
+            "good",
+            "sound"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "appealing to the mind",
+          "gloss": "appealing to the mind; \"good music\"; \"a serious book\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "good music",
+            "a serious book"
+          ],
+          "ss_type": "s",
+          "synset_id": "01341720-a",
+          "words": [
+            "good",
+            "serious"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "agreeable or pleasing",
+          "gloss": "agreeable or pleasing; \"we all had a good time\"; \"good manners\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "we all had a good time",
+            "good manners"
+          ],
+          "ss_type": "s",
+          "synset_id": "01598030-a",
+          "words": [
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "most suitable or right for a particular purpose",
+          "gloss": "most suitable or right for a particular purpose; \"a good time to plant tomatoes\"; \"the right time to act\"; \"the time is ripe for great sociological changes\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a good time to plant tomatoes",
+            "the right time to act",
+            "the time is ripe for great sociological changes"
+          ],
+          "ss_type": "s",
+          "synset_id": "01672360-a",
+          "words": [
+            "good",
+            "right",
+            "ripe"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "capable of pleasing",
+          "gloss": "capable of pleasing; \"good looks\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "good looks"
+          ],
+          "ss_type": "s",
+          "synset_id": "01820371-a",
+          "words": [
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "deserving of esteem and respect",
+          "gloss": "deserving of esteem and respect; \"all respectable companies give guarantees\"; \"ruined the family's good name\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "all respectable companies give guarantees",
+            "ruined the family's good name"
+          ],
+          "ss_type": "s",
+          "synset_id": "01997917-a",
+          "words": [
+            "estimable",
+            "good",
+            "honorable",
+            "respectable",
+            "admirable"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "of moral excellence",
+          "gloss": "of moral excellence; \"a genuinely good person\"; \"a just cause\"; \"an upright and respectable man\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a genuinely good person",
+            "a just cause",
+            "an upright and respectable man"
+          ],
+          "ss_type": "s",
+          "synset_id": "02052395-a",
+          "words": [
+            "good",
+            "just",
+            "upright"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "having or showing knowledge and skill and aptitude",
+          "gloss": "having or showing knowledge and skill and aptitude; \"adept in handicrafts\"; \"an adept juggler\"; \"an expert job\"; \"a good mechanic\"; \"a practiced marksman\"; \"a proficient engineer\"; \"a lesser-known but no less skillful composer\"; \"the effect was achieved by skillful retouching\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "adept in handicrafts",
+            "an adept juggler",
+            "an expert job",
+            "a good mechanic",
+            "a practiced marksman",
+            "a proficient engineer",
+            "a lesser-known but no less skillful composer",
+            "the effect was achieved by skillful retouching"
+          ],
+          "ss_type": "s",
+          "synset_id": "02242939-a",
+          "words": [
+            "adept",
+            "expert",
+            "good",
+            "practiced",
+            "proficient",
+            "skillful",
+            "skilful"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "financially safe",
+          "gloss": "financially safe; \"a good investment\"; \"a secure investment\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a good investment",
+            "a secure investment"
+          ],
+          "ss_type": "s",
+          "synset_id": "02290571-a",
+          "words": [
+            "dependable",
+            "good",
+            "safe",
+            "secure"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "(often used as a combining form) in a good or proper or satisfactory manner or to a high standard (‘good’ is a nonstandard dialectal variant for ‘well’)",
+          "gloss": "(often used as a combining form) in a good or proper or satisfactory manner or to a high standard (‘good’ is a nonstandard dialectal variant for ‘well’); \"the children behaved well\"; \"a task well done\"; \"the party went well\"; \"he slept well\"; \"a well-argued thesis\"; \"a well-seasoned dish\"; \"a well-planned party\"; \"the baby can walk pretty good\"",
+          "pos": "adverb",
+          "quoted_examples": [
+            "the children behaved well",
+            "a task well done",
+            "the party went well",
+            "he slept well",
+            "a well-argued thesis",
+            "a well-seasoned dish",
+            "a well-planned party",
+            "the baby can walk pretty good"
+          ],
+          "ss_type": "r",
+          "synset_id": "00011498-r",
+          "words": [
+            "well",
+            "good"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "completely and absolutely (‘good’ is sometimes used informally for ‘thoroughly’)",
+          "gloss": "completely and absolutely (‘good’ is sometimes used informally for ‘thoroughly’); \"he was soundly defeated\"; \"we beat him good\"",
+          "pos": "adverb",
+          "quoted_examples": [
+            "he was soundly defeated",
+            "we beat him good"
+          ],
+          "ss_type": "r",
+          "synset_id": "00057973-r",
+          "words": [
+            "thoroughly",
+            "soundly",
+            "good"
+          ]
+        }
+      ],
+      "candidates_inspected": 27,
+      "editorial_risk": "HIGH",
+      "final_sense_order": [
+        "s1 01131475-a",
+        "s2 02242939-a",
+        "s3 02052395-a",
+        "s4 00065152-a"
+      ],
+      "lemma": "good",
+      "more_than_three_justification": "Challenge pass: all four selected senses are materially distinct and each is a high-frequency learner use. They differ in what is judged (quality of a thing, skill of a person, moral character, benefit to someone), in the Bangla word a learner needs (ভালো, দক্ষ/পটু, সৎ ও নীতিবান, উপকারী) and in the English frame (good + noun, good at, a good person, good for). Merging any two would hide a pattern. The other 23 candidates were re-read against these four and are redundant, idiomatic, narrow or nonstandard (see the per-candidate reasons).",
+      "order_changed": false,
+      "order_rationale": "The V1 general sense stays first: it is the broadest and most frequent meaning. The skill, moral and beneficial senses follow in order of learner frequency.",
+      "record_file": "dictionary-v2/records/good.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "Trade/commerce noun (a commodity); technical and not what learners mean by 'good'.",
+          "synset_id": "02453111-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "Abstract noun counterpart of the selected moral-character sense (goodness); low independent learner value.",
+          "synset_id": "04220090-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "Abstract philosophical noun ('the good'); low learner value.",
+          "synset_id": "04519443-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "Idiomatic noun use ('for your own good', 'what is the good of'); overlaps the selected beneficial sense and is better taught as a phrase.",
+          "synset_id": "04537155-n"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Quantifier use ('a good mile'); idiomatic and rare for learners.",
+          "synset_id": "00106722-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Close-relationship reading ('a good friend'): learners understand it from the general sense (ভালো বন্ধু); the 'close/intimate' nuance is better taught with 'close friend'.",
+          "synset_id": "00457518-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Narrow intensifier use ('a good cleaning'); low priority.",
+          "synset_id": "00528203-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Vague 'generally admired' gloss ('good taste'); overlaps the general V1 sense.",
+          "synset_id": "00782753-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Validity sense ('a warranty good for two years'); administrative and rare for general learners.",
+          "synset_id": "00840159-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Pattern 'it is a good thing that'; covered by the general V1 sense.",
+          "synset_id": "01056816-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Food-freshness use ('the milk is still good'): real but a narrow collocation of the general 'acceptable condition' meaning, and not a distinct pattern learners need to be taught.",
+          "synset_id": "01076403-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Not forged (counterfeit money); specialist and rare.",
+          "synset_id": "01124347-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Duplicates the selected moral sense (02052395-a); the selected synset is the richer one.",
+          "synset_id": "01138097-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Near-duplicate of the selected beneficial sense; 'good for health' is shown in that sense's usage.",
+          "synset_id": "01174885-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Excellent physical condition ('good teeth'); covered by the general V1 sense.",
+          "synset_id": "01179703-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Vague 'appealing to the mind' gloss ('good music'); covered by the general V1 sense.",
+          "synset_id": "01341720-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Agreeable or pleasing ('a good time', 'good weather'): frequent, but it is the general 'desirable' meaning applied to experiences; the OEWN gloss is vague and it needs no different English frame or Bangla word (ভালো).",
+          "synset_id": "01598030-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Suitability use ('a good time to plant'); covered by the general V1 sense.",
+          "synset_id": "01672360-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Capable of pleasing ('good looks'); narrow, collocation-driven.",
+          "synset_id": "01820371-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Formal 'deserving of esteem' cluster ('a good name'); low learner frequency.",
+          "synset_id": "01997917-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Financially safe ('a good investment'); finance-specific.",
+          "synset_id": "02290571-a"
+        },
+        {
+          "pos": "adverb",
+          "reason": "OEWN itself marks this adverb as a nonstandard dialectal variant of 'well'; not taught as standard.",
+          "synset_id": "00011498-r"
+        },
+        {
+          "pos": "adverb",
+          "reason": "Informal intensifier ('beat him good'); informal and nonstandard.",
+          "synset_id": "00057973-r"
+        }
+      ],
+      "risk_note": "27 OEWN candidates; four senses are kept and 23 are rejected. The exclusion choices are judgement calls a reviewer may want to revisit. Challenge pass: the V1 Bangla example translation was unnatural ('প্রতিরাত পড়ে সে ভালো ফল করেছিল'); V2 now teaches an improved translation and keeps the exact V1 text only as the parity/traceability record (v1_revision), so V1 wording is not preferred merely for parity.",
+      "selected": [
+        {
+          "pos": "adjective",
+          "reason": "V1 primary sense: the general 'desirable or positive qualities' meaning. OEWN definition and synset retained verbatim; the Bangla example translation is improved (v1_revision).",
+          "sense_id": "s1",
+          "synset_id": "01131475-a",
+          "v1_source": true
+        },
+        {
+          "pos": "adjective",
+          "reason": "The 'good at' skill sense: high frequency and a different Bangla word from the general sense.",
+          "sense_id": "s2",
+          "synset_id": "02242939-a",
+          "v1_source": false
+        },
+        {
+          "pos": "adjective",
+          "reason": "A good person: moral character, clearly separate from quality or skill.",
+          "sense_id": "s3",
+          "synset_id": "02052395-a",
+          "v1_source": false
+        },
+        {
+          "pos": "adjective",
+          "reason": "The 'good for' beneficial sense (good for your health): the general OEWN synset for benefit, preferred over the narrower health-only synset.",
+          "sense_id": "s4",
+          "synset_id": "00065152-a",
+          "v1_source": false
+        }
+      ],
+      "selected_count": 4,
+      "v1_learner_gap": {
+        "description": "V1 teaches only the general 'having desirable qualities' adjective. It misses the three high-frequency frames good at (skill), a good person (moral character) and good for (beneficial), each of which needs a different Bangla word.",
+        "meaningful": true
+      },
+      "v1_sense_revision": {
+        "fields_revised": [
+          "example_bn"
+        ],
+        "reason": "The V1 Bangla example translation ('প্রতিরাত পড়ে সে ভালো ফল করেছিল') is unnatural Bangla ('প্রতিরাত' is not used with 'পড়ে' like this). V2 teaches the natural translation; the exact V1 text is kept only so V1 parity and traceability remain provable."
+      },
+      "v1_source": {
+        "pos": "adjective",
+        "sense_id_in_record": "s1",
+        "synset_id": "01131475-a",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "REJECTED",
+          "definition": "(physics) a dynamical system that is extremely sensitive to its initial conditions",
+          "gloss": "(physics) a dynamical system that is extremely sensitive to its initial conditions",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "05635259-n",
+          "words": [
+            "chaos"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "the formless and disordered state of matter before the creation of the cosmos",
+          "gloss": "the formless and disordered state of matter before the creation of the cosmos",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "09330310-n",
+          "words": [
+            "chaos"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "a state of extreme confusion and disorder",
+          "gloss": "a state of extreme confusion and disorder",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "11275622-n",
+          "words": [
+            "chaos",
+            "pandemonium",
+            "bedlam",
+            "topsy-turvydom",
+            "topsy-turvyness"
+          ]
+        }
+      ],
+      "candidates_inspected": 3,
+      "editorial_risk": "LOW",
+      "final_sense_order": [
+        "s1 11275622-n"
+      ],
+      "lemma": "chaos",
+      "order_changed": false,
+      "order_rationale": "Single sense; the V1 sense is retained unchanged.",
+      "record_file": "dictionary-v2/records/chaos.json",
+      "record_outcome": "UNCHANGED_V1_RETAINED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "Physics/mathematics term (chaos theory); technical, not a learner sense.",
+          "synset_id": "05635259-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "Cosmogony/mythology sense (the formless state before creation); literary and rare.",
+          "synset_id": "09330310-n"
+        }
+      ],
+      "selected": [
+        {
+          "pos": "noun",
+          "reason": "V1 primary sense and the only general-English sense. Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "11275622-n",
+          "v1_source": true
+        }
+      ],
+      "selected_count": 1,
+      "v1_learner_gap": {
+        "description": "None. V1 already carries the only general-English sense (extreme confusion and disorder). The other two OEWN senses are a physics term and a mythological term.",
+        "meaningful": false
+      },
+      "v1_source": {
+        "pos": "noun",
+        "sense_id_in_record": "s1",
+        "synset_id": "11275622-n",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "SELECTED",
+          "definition": "the act of designating or identifying something",
+          "gloss": "the act of designating or identifying something",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "00147836-n",
+          "words": [
+            "designation",
+            "identification"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "the act of putting a person into a non-elective position",
+          "gloss": "the act of putting a person into a non-elective position; \"the appointment had to be approved by the whole committee\"",
+          "pos": "noun",
+          "quoted_examples": [
+            "the appointment had to be approved by the whole committee"
+          ],
+          "ss_type": "n",
+          "synset_id": "00159791-n",
+          "words": [
+            "appointment",
+            "assignment",
+            "designation",
+            "naming"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "identifying word or words by which someone or something is called and classified or distinguished from others",
+          "gloss": "identifying word or words by which someone or something is called and classified or distinguished from others",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "05730691-n",
+          "words": [
+            "appellation",
+            "denomination",
+            "designation",
+            "appellative"
+          ]
+        }
+      ],
+      "candidates_inspected": 3,
+      "editorial_risk": "MEDIUM",
+      "final_sense_order": [
+        "s1 05730691-n",
+        "s2 00159791-n",
+        "s3 00147836-n"
+      ],
+      "lemma": "designation",
+      "order_changed": false,
+      "order_rationale": "The V1 title/name sense stays first: it is the use Bangladeshi learners meet most (forms, job letters). The appointment sense follows because it also concerns offices and posts, then the general act of officially designating a place or thing.",
+      "record_file": "dictionary-v2/records/designation.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [],
+      "risk_note": "Challenge pass: both OEWN action senses were added after re-reading all three candidates. The first rejection reason ('derivational, better taught with the verb') was withdrawn because the act senses are a different, genuinely used pattern (designation of X as Y). OEWN has no separate 'position/post' synset: the title sense (V1) is the one that covers an official title or name, and the position idea is carried by the appointment sense.",
+      "selected": [
+        {
+          "pos": "noun",
+          "reason": "V1 primary sense: the title/name meaning (an official title or name by which someone or something is called and classified) that Bangladeshi learners meet on forms and job documents. Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "05730691-n",
+          "v1_source": true
+        },
+        {
+          "pos": "noun",
+          "reason": "The act of putting a person into a non-elective post (designation as director). Materially distinct from the title noun: it names an action done to a person, with a different Bangla word (নিয়োগ, মনোনয়ন).",
+          "sense_id": "s2",
+          "synset_id": "00159791-n",
+          "v1_source": false
+        },
+        {
+          "pos": "noun",
+          "reason": "The act of designating or identifying something (designation of a place as protected). Distinct from both the title noun and the person-appointment sense: its object is a thing or place, with its own Bangla rendering (ঘোষণা, চিহ্নিতকরণ).",
+          "sense_id": "s3",
+          "synset_id": "00147836-n",
+          "v1_source": false
+        }
+      ],
+      "selected_count": 3,
+      "v1_learner_gap": {
+        "description": "V1 teaches only the title/name noun (পদবি), which is the dominant sense on forms and job documents. It misses the two action uses that appear in formal and news English: appointing someone to a post ('her designation as director') and officially naming or declaring something ('the designation of the fort as a protected site').",
+        "meaningful": true
+      },
+      "v1_source": {
+        "pos": "noun",
+        "sense_id_in_record": "s1",
+        "synset_id": "05730691-n",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "SELECTED",
+          "definition": "(psychology) a person who tends to shrink from social contacts and to become preoccupied with their own thoughts",
+          "gloss": "(psychology) a person who tends to shrink from social contacts and to become preoccupied with their own thoughts",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "08733148-n",
+          "words": [
+            "introvert"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "turn inside",
+          "gloss": "turn inside; \"He introverted his feelings\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "He introverted his feelings"
+          ],
+          "ss_type": "v",
+          "synset_id": "00556915-v",
+          "words": [
+            "introvert"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "fold inwards",
+          "gloss": "fold inwards; \"some organs can invaginate\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "some organs can invaginate"
+          ],
+          "ss_type": "v",
+          "synset_id": "01557441-v",
+          "words": [
+            "invaginate",
+            "introvert"
+          ]
+        }
+      ],
+      "candidates_inspected": 3,
+      "editorial_risk": "LOW",
+      "final_sense_order": [
+        "s1 08733148-n"
+      ],
+      "lemma": "introvert",
+      "order_changed": false,
+      "order_rationale": "Single sense; the V1 sense is retained unchanged.",
+      "record_file": "dictionary-v2/records/introvert.json",
+      "record_outcome": "UNCHANGED_V1_RETAINED",
+      "rejected": [
+        {
+          "pos": "verb",
+          "reason": "Rare psychological/technical verb (turn inward); not used in everyday learner English.",
+          "synset_id": "00556915-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Anatomical/biological verb (fold inwards, invaginate); technical.",
+          "synset_id": "01557441-v"
+        }
+      ],
+      "selected": [
+        {
+          "pos": "noun",
+          "reason": "V1 primary sense and the only learner-relevant sense. Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "08733148-n",
+          "v1_source": true
+        }
+      ],
+      "selected_count": 1,
+      "v1_learner_gap": {
+        "description": "None. V1 carries the only learner-relevant sense (the personality noun). The verb senses are technical.",
+        "meaningful": false
+      },
+      "v1_source": {
+        "pos": "noun",
+        "sense_id_in_record": "s1",
+        "synset_id": "08733148-n",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "REJECTED",
+          "definition": "a cruel and brutal fellow",
+          "gloss": "a cruel and brutal fellow",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "08413919-n",
+          "words": [
+            "bully",
+            "tough",
+            "hooligan",
+            "ruffian",
+            "roughneck",
+            "rowdy",
+            "yob",
+            "yobo",
+            "yobbo"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "an aggressive and violent young criminal",
+          "gloss": "an aggressive and violent young criminal",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "08704370-n",
+          "words": [
+            "hood",
+            "hoodlum",
+            "goon",
+            "punk",
+            "thug",
+            "tough",
+            "toughie",
+            "strong-armer"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "someone who learned to fight in the streets rather than being formally trained in the sport of boxing",
+          "gloss": "someone who learned to fight in the streets rather than being formally trained in the sport of boxing",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "09157758-n",
+          "words": [
+            "street_fighter",
+            "tough"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "feeling physical discomfort or pain (‘tough’ is occasionally used colloquially for ‘bad’)",
+          "gloss": "feeling physical discomfort or pain (‘tough’ is occasionally used colloquially for ‘bad’); \"my throat feels bad\"; \"she felt bad all over\"; \"he was feeling tough after a restless night\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "my throat feels bad",
+            "she felt bad all over",
+            "he was feeling tough after a restless night"
+          ],
+          "ss_type": "s",
+          "synset_id": "00483053-a",
+          "words": [
+            "bad",
+            "tough"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "substantially made or constructed",
+          "gloss": "substantially made or constructed; \"sturdy steel shelves\"; \"sturdy canvas\"; \"a tough all-weather fabric\"; \"some plastics are as tough as metal\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "sturdy steel shelves",
+            "sturdy canvas",
+            "a tough all-weather fabric",
+            "some plastics are as tough as metal"
+          ],
+          "ss_type": "s",
+          "synset_id": "00714724-a",
+          "words": [
+            "sturdy",
+            "tough"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "making great mental demands; hard to comprehend or solve or believe",
+          "gloss": "making great mental demands; hard to comprehend or solve or believe; \"a baffling problem\"; \"I faced the knotty problem of what to have for breakfast\"; \"a problematic situation at home\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a baffling problem",
+            "I faced the knotty problem of what to have for breakfast",
+            "a problematic situation at home"
+          ],
+          "ss_type": "s",
+          "synset_id": "00753575-a",
+          "words": [
+            "baffling",
+            "elusive",
+            "knotty",
+            "problematic",
+            "problematical",
+            "tough"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "very difficult; severely testing stamina or resolution",
+          "gloss": "very difficult; severely testing stamina or resolution; \"a rugged competitive examination\"; \"the rugged conditions of frontier life\"; \"the competition was tough\"; \"it's a tough life\"; \"it was a tough job\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a rugged competitive examination",
+            "the rugged conditions of frontier life",
+            "the competition was tough",
+            "it's a tough life",
+            "it was a tough job"
+          ],
+          "ss_type": "s",
+          "synset_id": "00755165-a",
+          "words": [
+            "rugged",
+            "tough"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "unfortunate or hard to bear",
+          "gloss": "unfortunate or hard to bear; \"had hard luck\"; \"a tough break\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "had hard luck",
+            "a tough break"
+          ],
+          "ss_type": "s",
+          "synset_id": "01135734-a",
+          "words": [
+            "hard",
+            "tough"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "resistant to cutting or chewing",
+          "gloss": "resistant to cutting or chewing",
+          "pos": "adjective",
+          "quoted_examples": [],
+          "ss_type": "a",
+          "synset_id": "02464114-a",
+          "words": [
+            "tough"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "physically toughened",
+          "gloss": "physically toughened; \"the tough bottoms of his feet\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "the tough bottoms of his feet"
+          ],
+          "ss_type": "a",
+          "synset_id": "02465827-a",
+          "words": [
+            "tough",
+            "toughened"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "not given to gentleness or sentimentality",
+          "gloss": "not given to gentleness or sentimentality; \"a tough character\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a tough character"
+          ],
+          "ss_type": "a",
+          "synset_id": "02466962-a",
+          "words": [
+            "tough"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "violent and lawless",
+          "gloss": "violent and lawless; \"the more ruffianly element\"; \"tough street gangs\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "the more ruffianly element",
+            "tough street gangs"
+          ],
+          "ss_type": "s",
+          "synset_id": "02531986-a",
+          "words": [
+            "ruffianly",
+            "tough"
+          ]
+        }
+      ],
+      "candidates_inspected": 12,
+      "editorial_risk": "MEDIUM",
+      "final_sense_order": [
+        "s1 00755165-a",
+        "s2 02466962-a",
+        "s3 00714724-a",
+        "s4 02464114-a"
+      ],
+      "lemma": "tough",
+      "more_than_three_justification": "Challenge pass: 'tough' has four common, materially distinct learner senses with four different Bangla renderings and four different things being described: a hard task or situation (কঠিন), a person's temperament (কঠোর ও শক্ত মনের), a well-made object (মজবুত, টেকসই) and food that is hard to chew (শক্ত, চিবানো কঠিন). The sturdy/durable sense is supported by OEWN synset 00714724-a ('substantially made or constructed'; sturdy, tough) and is not covered by any other selected sense.",
+      "order_changed": false,
+      "order_rationale": "The V1 'difficult' sense stays first: it is the most frequent use (a tough exam, a tough decision). The personality sense follows, then the strong/durable object sense, then the food sense.",
+      "record_file": "dictionary-v2/records/tough.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "Informal noun for a cruel, brutal person; overlaps the personality sense and is rare as a noun.",
+          "synset_id": "08413919-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "Slang noun for a violent young criminal; informal and potentially stigmatising.",
+          "synset_id": "08704370-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "Boxing-specific noun (a street fighter).",
+          "synset_id": "09157758-n"
+        },
+        {
+          "pos": "adjective",
+          "reason": "OEWN marks this as an occasional colloquial use for 'bad' (feeling unwell); not a standard learner sense.",
+          "synset_id": "00483053-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Hard to comprehend or solve ('a tough question'): the V1 'difficult' sense and its exam example already teach this use, and both render as কঠিন; not materially distinct.",
+          "synset_id": "00753575-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Unfortunate or hard to bear ('tough luck', 'a tough break'): the hardship meaning is already in the V1 sense ('a tough life'); the fixed expressions are better taught as phrases.",
+          "synset_id": "01135734-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Physically toughened (tough soles of the feet); narrow and rare.",
+          "synset_id": "02465827-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Violent and lawless (tough street gangs); overlaps the personality sense and risks stereotyping.",
+          "synset_id": "02531986-a"
+        }
+      ],
+      "risk_note": "Challenge pass: the strong/sturdy/durable physical sense was reconsidered and added; the earlier 'stay within three' reason was removed because the three-sense target is not a limit. Eight of twelve candidates remain rejected, each on its own merits.",
+      "selected": [
+        {
+          "pos": "adjective",
+          "reason": "V1 primary sense: difficult or demanding. Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "00755165-a",
+          "v1_source": true
+        },
+        {
+          "pos": "adjective",
+          "reason": "A tough person: not gentle or sentimental. Different from 'difficult' and common in everyday English.",
+          "sense_id": "s2",
+          "synset_id": "02466962-a",
+          "v1_source": false
+        },
+        {
+          "pos": "adjective",
+          "reason": "Strong, durable, well-made things (tough boots, tough fabric). Materially distinct from difficulty, temperament and food texture; OEWN lists tough with 'sturdy' in this synset.",
+          "sense_id": "s3",
+          "synset_id": "00714724-a",
+          "v1_source": false
+        },
+        {
+          "pos": "adjective",
+          "reason": "Tough meat: resistant to cutting or chewing. A classic learner sense that no other selected sense covers.",
+          "sense_id": "s4",
+          "synset_id": "02464114-a",
+          "v1_source": false
+        }
+      ],
+      "selected_count": 4,
+      "v1_learner_gap": {
+        "description": "V1 teaches only 'difficult / demanding'. It misses the personality sense (a tough, unsentimental person), the strong/durable physical sense (tough boots, tough fabric) and the food sense (tough meat), all common and with different Bangla words.",
+        "meaningful": true
+      },
+      "v1_source": {
+        "pos": "adjective",
+        "sense_id_in_record": "s1",
+        "synset_id": "00755165-a",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "REJECTED",
+          "definition": "a cruelly rapacious person",
+          "gloss": "a cruelly rapacious person",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "08380456-n",
+          "words": [
+            "beast",
+            "wolf",
+            "savage",
+            "brute",
+            "wildcat"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "a member of an uncivilized people",
+          "gloss": "a member of an uncivilized people",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "09052360-n",
+          "words": [
+            "savage",
+            "barbarian"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "criticize harshly or violently",
+          "gloss": "criticize harshly or violently; \"The press savaged the new President\"; \"The critics crucified the author for plagiarizing a famous passage\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "The press savaged the new President",
+            "The critics crucified the author for plagiarizing a famous passage"
+          ],
+          "ss_type": "v",
+          "synset_id": "00859201-v",
+          "words": [
+            "savage",
+            "blast",
+            "pillory",
+            "crucify"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "attack brutally and fiercely",
+          "gloss": "attack brutally and fiercely",
+          "pos": "verb",
+          "quoted_examples": [],
+          "ss_type": "v",
+          "synset_id": "01166056-v",
+          "words": [
+            "savage"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "without civilizing influences",
+          "gloss": "without civilizing influences; \"barbarian invaders\"; \"barbaric practices\"; \"a savage people\"; \"fighting is crude and uncivilized especially if the weapons are efficient\" - Margaret Meade; \"wild tribes\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "barbarian invaders",
+            "barbaric practices",
+            "a savage people",
+            "fighting is crude and uncivilized especially if the weapons are efficient",
+            "wild tribes"
+          ],
+          "ss_type": "s",
+          "synset_id": "00416181-a",
+          "words": [
+            "barbarian",
+            "barbaric",
+            "savage",
+            "uncivilized",
+            "uncivilised",
+            "wild"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "(of persons or their actions) able or disposed to inflict pain or suffering",
+          "gloss": "(of persons or their actions) able or disposed to inflict pain or suffering; \"a barbarous crime\"; \"brutal beatings\"; \"cruel tortures\"; \"Stalin's roughshod treatment of the kulaks\"; \"a savage slap\"; \"vicious kicks\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a barbarous crime",
+            "brutal beatings",
+            "cruel tortures",
+            "Stalin's roughshod treatment of the kulaks",
+            "a savage slap",
+            "vicious kicks"
+          ],
+          "ss_type": "s",
+          "synset_id": "01271347-a",
+          "words": [
+            "barbarous",
+            "brutal",
+            "cruel",
+            "fell",
+            "roughshod",
+            "savage",
+            "vicious"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "wild and menacing",
+          "gloss": "wild and menacing; \"a pack of feral dogs\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a pack of feral dogs"
+          ],
+          "ss_type": "s",
+          "synset_id": "02407436-a",
+          "words": [
+            "feral",
+            "ferine",
+            "savage"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "marked by extreme and violent energy",
+          "gloss": "marked by extreme and violent energy; \"a ferocious beating\"; \"fierce fighting\"; \"a furious battle\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a ferocious beating",
+            "fierce fighting",
+            "a furious battle"
+          ],
+          "ss_type": "s",
+          "synset_id": "02530872-a",
+          "words": [
+            "ferocious",
+            "fierce",
+            "furious",
+            "savage"
+          ]
+        }
+      ],
+      "candidates_inspected": 8,
+      "editorial_risk": "MEDIUM",
+      "final_sense_order": [
+        "s1 01271347-a",
+        "s2 01166056-v",
+        "s3 00859201-v"
+      ],
+      "lemma": "savage",
+      "order_changed": false,
+      "order_rationale": "The V1 adjective stays first. The physical-attack verb follows because it is the verb counterpart of the V1 meaning; the figurative criticism verb comes last.",
+      "record_file": "dictionary-v2/records/savage.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "Rare noun for a cruelly rapacious person; low learner frequency.",
+          "synset_id": "08380456-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "Dated, derogatory noun for a member of an 'uncivilized' people; deliberately not taught.",
+          "synset_id": "09052360-n"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Dated, ethnocentric 'without civilizing influences' sense; deliberately not taught.",
+          "synset_id": "00416181-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Wild and menacing, said of animals ('feral dogs'): the animal-violence use is already taught by the selected attack verb (a stray dog savaged the boy), and 'feral' is the standard word for wild animals; not materially distinct.",
+          "synset_id": "02407436-a"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Extreme violent energy (savage fighting, a savage storm): the same learner meaning as the V1 cruelty/violence adjective and the same Bangla rendering; a separate sense would not be materially distinct.",
+          "synset_id": "02530872-a"
+        }
+      ],
+      "risk_note": "Two OEWN senses (an 'uncivilized' people / without civilizing influences) are deliberately excluded because they are dated and derogatory. The exclusion is a sensitivity decision, not a frequency one. Challenge pass: the 'criticize harshly' verb was re-compared with every other candidate and kept (see its selection reason).",
+      "selected": [
+        {
+          "pos": "adjective",
+          "reason": "V1 primary sense: cruel, violent (adjective). Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "01271347-a",
+          "v1_source": true
+        },
+        {
+          "pos": "verb",
+          "reason": "Verb: to attack brutally and fiercely (a dog savaged a child). Common in news English and absent from V1.",
+          "sense_id": "s2",
+          "synset_id": "01166056-v",
+          "v1_source": false
+        },
+        {
+          "pos": "verb",
+          "reason": "Challenge pass, kept: verb 'criticize harshly' (critics savaged the film). Compared with every other modern candidate (the V1 cruelty adjective, the attack verb, the wild/menacing and fierce-intensity adjectives), it is the only one that adds a distinct meaning, a distinct English frame (savage + a work, person or decision) and a distinct Bangla rendering. It is a standard, frequent usage in reviews and news, so it earns learner-facing inclusion.",
+          "sense_id": "s3",
+          "synset_id": "00859201-v",
+          "v1_source": false
+        }
+      ],
+      "selected_count": 3,
+      "v1_learner_gap": {
+        "description": "V1 teaches only the adjective (cruel, violent). The verb uses (to attack brutally; to criticize harshly) are common in news English and were missing.",
+        "meaningful": true
+      },
+      "v1_source": {
+        "pos": "adjective",
+        "sense_id_in_record": "s1",
+        "synset_id": "01271347-a",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "SELECTED",
+          "definition": "an event that repeats",
+          "gloss": "an event that repeats; \"the events today were a repeat of yesterday's\"",
+          "pos": "noun",
+          "quoted_examples": [
+            "the events today were a repeat of yesterday's"
+          ],
+          "ss_type": "n",
+          "synset_id": "06728539-n",
+          "words": [
+            "repeat",
+            "repetition"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "happen or occur again",
+          "gloss": "happen or occur again; \"This is a recurring story\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "This is a recurring story"
+          ],
+          "ss_type": "v",
+          "synset_id": "00356508-v",
+          "words": [
+            "recur",
+            "repeat"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "to say again or imitate",
+          "gloss": "to say again or imitate; \"followers echoing the cries of their leaders\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "followers echoing the cries of their leaders"
+          ],
+          "ss_type": "v",
+          "synset_id": "00997647-v",
+          "words": [
+            "repeat",
+            "echo"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "to say, state, or perform again",
+          "gloss": "to say, state, or perform again; \"She kept reiterating her request\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "She kept reiterating her request"
+          ],
+          "ss_type": "v",
+          "synset_id": "00998302-v",
+          "words": [
+            "repeat",
+            "reiterate",
+            "ingeminate",
+            "iterate",
+            "restate",
+            "retell"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "repeat an earlier theme of a composition",
+          "gloss": "repeat an earlier theme of a composition",
+          "pos": "verb",
+          "quoted_examples": [],
+          "ss_type": "v",
+          "synset_id": "01784292-v",
+          "words": [
+            "reprise",
+            "reprize",
+            "repeat",
+            "recapitulate"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "make or do or perform again",
+          "gloss": "make or do or perform again; \"He could never replicate his brilliant performance of the magic trick\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "He could never replicate his brilliant performance of the magic trick"
+          ],
+          "ss_type": "v",
+          "synset_id": "01791499-v",
+          "words": [
+            "duplicate",
+            "reduplicate",
+            "double",
+            "repeat",
+            "replicate"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "do over",
+          "gloss": "do over; \"They would like to take it over again\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "They would like to take it over again"
+          ],
+          "ss_type": "v",
+          "synset_id": "02676371-v",
+          "words": [
+            "repeat",
+            "take_over"
+          ]
+        }
+      ],
+      "candidates_inspected": 7,
+      "editorial_risk": "MEDIUM",
+      "final_sense_order": [
+        "s1 00998302-v",
+        "s2 00356508-v",
+        "s3 06728539-n"
+      ],
+      "lemma": "repeat",
+      "order_changed": false,
+      "order_rationale": "The V1 verb stays first: it is the dominant use (repeat the sentence, repeat the test). The recurrence verb follows, then the noun.",
+      "pos_notes": "Adjective: no OEWN 2025 adjective synset lists 'repeat'; none is claimed. Verb and noun were evaluated; verb (say or do again), verb (recur) and noun (an event that repeats) are selected.",
+      "record_file": "dictionary-v2/records/repeat.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [
+        {
+          "pos": "verb",
+          "reason": "Say again or imitate (echo): overlaps the V1 'say again' sense; the 'imitate' reading is peripheral.",
+          "synset_id": "00997647-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Music-composition term (repeat an earlier theme); technical.",
+          "synset_id": "01784292-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Make or do again (replicate): overlaps the V1 'do again' sense; 'replicate' is the better word to teach.",
+          "synset_id": "01791499-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Informal 'do over'; unclear gloss and low frequency.",
+          "synset_id": "02676371-v"
+        }
+      ],
+      "risk_note": "OEWN has no adjective synset for 'repeat'. The attributive use (repeat customer, repeat offender) is a noun modifier and was not added as an adjective sense.",
+      "selected": [
+        {
+          "pos": "verb",
+          "reason": "V1 primary sense: to say or do again. Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "00998302-v",
+          "v1_source": true
+        },
+        {
+          "pos": "verb",
+          "reason": "Intransitive 'happen again' (history repeats itself): a different sentence structure from the V1 verb.",
+          "sense_id": "s2",
+          "synset_id": "00356508-v",
+          "v1_source": false
+        },
+        {
+          "pos": "noun",
+          "reason": "Noun: a repeat of something (a repeat of last year's problem). A different part of speech that V1 lacked.",
+          "sense_id": "s3",
+          "synset_id": "06728539-n",
+          "v1_source": false
+        }
+      ],
+      "selected_count": 3,
+      "v1_learner_gap": {
+        "description": "V1 teaches only the transitive verb 'say or do again'. It misses the recurring sense (history repeats itself) and the noun (a repeat of last year's problem).",
+        "meaningful": true
+      },
+      "v1_source": {
+        "pos": "verb",
+        "sense_id_in_record": "s1",
+        "synset_id": "00998302-v",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "REJECTED",
+          "definition": "the act of crushing",
+          "gloss": "the act of crushing",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "00355895-n",
+          "words": [
+            "crush",
+            "crunch",
+            "compaction"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "temporary love of an adolescent",
+          "gloss": "temporary love of an adolescent",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "06932945-n",
+          "words": [
+            "puppy_love",
+            "calf_love",
+            "crush",
+            "infatuation"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "a dense crowd of people",
+          "gloss": "a dense crowd of people",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "07526907-n",
+          "words": [
+            "crush",
+            "jam",
+            "press"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "leather that has had its grain pattern accentuated",
+          "gloss": "leather that has had its grain pattern accentuated",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "12066632-n",
+          "words": [
+            "crushed_leather",
+            "crush"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "break into small pieces",
+          "gloss": "break into small pieces; \"The car crushed the toy\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "The car crushed the toy"
+          ],
+          "ss_type": "v",
+          "synset_id": "00352274-v",
+          "words": [
+            "crush"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "become injured, broken, or distorted by pressure",
+          "gloss": "become injured, broken, or distorted by pressure; \"The plastic bottle crushed against the wall\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "The plastic bottle crushed against the wall"
+          ],
+          "ss_type": "v",
+          "synset_id": "00583641-v",
+          "words": [
+            "crush"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "come out better in a competition, race, or conflict",
+          "gloss": "come out better in a competition, race, or conflict; \"Agassi beat Becker in the tennis championship\"; \"We beat the competition\"; \"Harvard defeated Yale in the last football game\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "Agassi beat Becker in the tennis championship",
+            "We beat the competition",
+            "Harvard defeated Yale in the last football game"
+          ],
+          "ss_type": "v",
+          "synset_id": "01146550-v",
+          "words": [
+            "beat",
+            "beat_out",
+            "crush",
+            "shell",
+            "trounce",
+            "vanquish"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "make ineffective",
+          "gloss": "make ineffective; \"Martin Luther King tried to break down racial discrimination\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "Martin Luther King tried to break down racial discrimination"
+          ],
+          "ss_type": "v",
+          "synset_id": "01148455-v",
+          "words": [
+            "break_down",
+            "crush"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "crush or bruise",
+          "gloss": "crush or bruise; \"jam a toe\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "jam a toe"
+          ],
+          "ss_type": "v",
+          "synset_id": "01543445-v",
+          "words": [
+            "jam",
+            "crush"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "to compress with violence, out of natural shape or condition",
+          "gloss": "to compress with violence, out of natural shape or condition; \"crush an aluminum can\"; \"squeeze a lemon\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "crush an aluminum can",
+            "squeeze a lemon"
+          ],
+          "ss_type": "v",
+          "synset_id": "01646506-v",
+          "words": [
+            "squash",
+            "crush",
+            "squelch",
+            "mash",
+            "squeeze"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "humiliate or depress completely",
+          "gloss": "humiliate or depress completely; \"She was crushed by his refusal of her invitation\"; \"The death of her son smashed her\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "She was crushed by his refusal of her invitation",
+            "The death of her son smashed her"
+          ],
+          "ss_type": "v",
+          "synset_id": "01858229-v",
+          "words": [
+            "crush",
+            "smash"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "come down on or keep down by unjust use of one's authority",
+          "gloss": "come down on or keep down by unjust use of one's authority; \"The government oppresses political activists\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "The government oppresses political activists"
+          ],
+          "ss_type": "v",
+          "synset_id": "02497733-v",
+          "words": [
+            "oppress",
+            "suppress",
+            "crush"
+          ]
+        }
+      ],
+      "candidates_inspected": 12,
+      "editorial_risk": "MEDIUM",
+      "final_sense_order": [
+        "s1 01646506-v",
+        "s2 06932945-n",
+        "s3 01858229-v"
+      ],
+      "lemma": "crush",
+      "order_changed": true,
+      "order_rationale": "The physical verb is the root meaning every learner meets first and is the most transferable (cans, garlic, ice). The V1 noun (a crush on someone) is informal and narrower, so it moves to second place with its V1 identity preserved; the emotional verb is third.",
+      "record_file": "dictionary-v2/records/crush.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "Action noun (the act of crushing); low independent value, derivable from the verb.",
+          "synset_id": "00355895-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "A dense crowd ('a crush of people'): real but infrequent for learners; deferred.",
+          "synset_id": "07526907-n"
+        },
+        {
+          "pos": "noun",
+          "reason": "Leather-trade term (crushed leather); technical.",
+          "synset_id": "12066632-n"
+        },
+        {
+          "pos": "verb",
+          "reason": "Break into small pieces: covered by the selected physical sense, whose explanation names crushing garlic and ice; a separate entry would duplicate the learner meaning.",
+          "synset_id": "00352274-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Intransitive variant of the selected physical sense (become injured, broken or distorted by pressure).",
+          "synset_id": "00583641-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Beat or vanquish: the OEWN gloss ('come out better') does not express the force of 'crush'; better taught with 'defeat' and 'beat'.",
+          "synset_id": "01146550-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Abstract 'make ineffective' use; rare.",
+          "synset_id": "01148455-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Narrow bruising sense (jam a toe); rare.",
+          "synset_id": "01543445-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Suppress or oppress (crush a protest): important later but outside the three learner priorities; deferred.",
+          "synset_id": "02497733-v"
+        }
+      ],
+      "risk_note": "The V1 noun sense moves from first to second place; the physical verb is promoted to primary. Nine of twelve candidates are rejected, including crush = defeat and crush = suppress.",
+      "selected": [
+        {
+          "pos": "verb",
+          "reason": "Core physical verb: to compress or flatten with force. The root meaning and the most useful for learners.",
+          "sense_id": "s1",
+          "synset_id": "01646506-v",
+          "v1_source": false
+        },
+        {
+          "pos": "noun",
+          "reason": "V1 primary sense: the noun 'a crush' (a temporary infatuation). Retained verbatim; no longer first.",
+          "sense_id": "s2",
+          "synset_id": "06932945-n",
+          "v1_source": true
+        },
+        {
+          "pos": "verb",
+          "reason": "Figurative verb: to humiliate or depress completely (she was crushed by the news). Common in everyday and news English.",
+          "sense_id": "s3",
+          "synset_id": "01858229-v",
+          "v1_source": false
+        }
+      ],
+      "selected_count": 3,
+      "v1_learner_gap": {
+        "description": "V1 teaches only the informal noun (a teenage crush). The core physical verb (to press, flatten or break) and the emotional verb (to devastate) were missing, so a learner would not understand 'crush the can' or 'she was crushed'.",
+        "meaningful": true
+      },
+      "v1_source": {
+        "pos": "noun",
+        "sense_id_in_record": "s2",
+        "synset_id": "06932945-n",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "SELECTED",
+          "definition": "an estimate based on little or no information",
+          "gloss": "an estimate based on little or no information",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "05187326-n",
+          "words": [
+            "guess",
+            "guesswork",
+            "guessing",
+            "shot",
+            "dead_reckoning"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "a message expressing an opinion based on incomplete evidence",
+          "gloss": "a message expressing an opinion based on incomplete evidence",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "06148237-n",
+          "words": [
+            "guess",
+            "conjecture",
+            "supposition",
+            "surmise",
+            "surmisal",
+            "speculation",
+            "hypothesis"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "expect, believe, or suppose",
+          "gloss": "expect, believe, or suppose; \"I imagine she earned a lot of money with her new novel\"; \"I thought to find her in a bad state\"; \"he didn't think to find her in the kitchen\"; \"I guess she is angry at me for standing her up\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "I imagine she earned a lot of money with her new novel",
+            "I thought to find her in a bad state",
+            "he didn't think to find her in the kitchen",
+            "I guess she is angry at me for standing her up"
+          ],
+          "ss_type": "v",
+          "synset_id": "00661042-v",
+          "words": [
+            "think",
+            "opine",
+            "suppose",
+            "imagine",
+            "reckon",
+            "guess"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "guess correctly; solve by guessing",
+          "gloss": "guess correctly; solve by guessing; \"He guessed the right number of beans in the jar and won the prize\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "He guessed the right number of beans in the jar and won the prize"
+          ],
+          "ss_type": "v",
+          "synset_id": "00665605-v",
+          "words": [
+            "guess",
+            "infer"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "judge tentatively or form an estimate of (quantities or time)",
+          "gloss": "judge tentatively or form an estimate of (quantities or time); \"I estimate this chicken to weigh three pounds\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "I estimate this chicken to weigh three pounds"
+          ],
+          "ss_type": "v",
+          "synset_id": "00703659-v",
+          "words": [
+            "estimate",
+            "gauge",
+            "approximate",
+            "guess",
+            "judge"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "put forward, of a guess, in spite of possible refutation",
+          "gloss": "put forward, of a guess, in spite of possible refutation; \"I am guessing that the price of real estate will rise again\"; \"I cannot pretend to say that you are wrong\"",
+          "pos": "verb",
+          "quoted_examples": [
+            "I am guessing that the price of real estate will rise again",
+            "I cannot pretend to say that you are wrong"
+          ],
+          "ss_type": "v",
+          "synset_id": "00955437-v",
+          "words": [
+            "guess",
+            "venture",
+            "pretend",
+            "hazard"
+          ]
+        }
+      ],
+      "candidates_inspected": 6,
+      "editorial_risk": "MEDIUM",
+      "final_sense_order": [
+        "s1 00703659-v",
+        "s2 00661042-v",
+        "s3 05187326-n"
+      ],
+      "lemma": "guess",
+      "order_changed": true,
+      "order_rationale": "Learners meet 'guess' first as a verb (estimate, then 'I guess'). The V1 noun ('my guess is...') is the derived form, so it moves to third place with its V1 identity preserved.",
+      "record_file": "dictionary-v2/records/guess.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "Formal near-synonym noun (conjecture, supposition); overlaps the V1 noun and its gloss is awkward for learners.",
+          "synset_id": "06148237-n"
+        },
+        {
+          "pos": "verb",
+          "reason": "Narrow success variant (guess correctly, solve by guessing); covered by the selected estimate verb.",
+          "synset_id": "00665605-v"
+        },
+        {
+          "pos": "verb",
+          "reason": "Formal 'put forward a guess' variant (venture, hazard); covered by the selected supposition verb.",
+          "synset_id": "00955437-v"
+        }
+      ],
+      "risk_note": "The V1 noun sense moves from first to third; the two verb senses are promoted. A reviewer may prefer to keep the V1 noun first.",
+      "selected": [
+        {
+          "pos": "verb",
+          "reason": "Core verb: to estimate a quantity or time without exact information.",
+          "sense_id": "s1",
+          "synset_id": "00703659-v",
+          "v1_source": false
+        },
+        {
+          "pos": "verb",
+          "reason": "Spoken 'I guess ...': to suppose something is probably true. Very common in conversation.",
+          "sense_id": "s2",
+          "synset_id": "00661042-v",
+          "v1_source": false
+        },
+        {
+          "pos": "noun",
+          "reason": "V1 primary sense: the noun (an estimate based on little information). Retained verbatim; no longer first.",
+          "sense_id": "s3",
+          "synset_id": "05187326-n",
+          "v1_source": true
+        }
+      ],
+      "selected_count": 3,
+      "v1_learner_gap": {
+        "description": "V1 teaches only the noun (my guess is...). Learners meet 'guess' mainly as a verb (guess the answer, I guess so), which was missing.",
+        "meaningful": true
+      },
+      "v1_source": {
+        "pos": "noun",
+        "sense_id_in_record": "s3",
+        "synset_id": "05187326-n",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "REJECTED",
+          "definition": "the difference in electrical charge between two points in a circuit expressed in volts",
+          "gloss": "the difference in electrical charge between two points in a circuit expressed in volts",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "09389656-n",
+          "words": [
+            "electric_potential",
+            "potential",
+            "potential_difference",
+            "potential_drop",
+            "voltage"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "the inherent capacity for coming into being",
+          "gloss": "the inherent capacity for coming into being",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "11784386-n",
+          "words": [
+            "potential",
+            "potentiality",
+            "potency"
+          ]
+        },
+        {
+          "decision": "REJECTED",
+          "definition": "existing in possibility",
+          "gloss": "existing in possibility; \"a potential problem\"; \"possible uses of nuclear power\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "a potential problem",
+            "possible uses of nuclear power"
+          ],
+          "ss_type": "a",
+          "synset_id": "00044511-a",
+          "words": [
+            "potential",
+            "possible"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "expected to become or be; in prospect",
+          "gloss": "expected to become or be; in prospect; \"potential clients\"",
+          "pos": "adjective",
+          "quoted_examples": [
+            "potential clients"
+          ],
+          "ss_type": "s",
+          "synset_id": "01897352-a",
+          "words": [
+            "likely",
+            "potential"
+          ]
+        }
+      ],
+      "candidates_inspected": 4,
+      "editorial_risk": "LOW",
+      "final_sense_order": [
+        "s1 01897352-a",
+        "s2 11784386-n"
+      ],
+      "lemma": "potential",
+      "order_changed": false,
+      "order_rationale": "The V1 adjective stays first (potential buyers, potential problems); the noun follows.",
+      "pos_notes": "Adjective and noun both evaluated. The second OEWN adjective synset is rejected as a duplicate of the V1 adjective.",
+      "record_file": "dictionary-v2/records/potential.json",
+      "record_outcome": "ENRICHED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "Physics term (electric potential, voltage); technical.",
+          "synset_id": "09389656-n"
+        },
+        {
+          "pos": "adjective",
+          "reason": "Existing in possibility: the same learner meaning and the same Bangla rendering (সম্ভাব্য) as the V1 sense; a separate entry would be a duplicate.",
+          "synset_id": "00044511-a"
+        }
+      ],
+      "selected": [
+        {
+          "pos": "adjective",
+          "reason": "V1 primary sense: adjective, expected to become or be. Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "01897352-a",
+          "v1_source": true
+        },
+        {
+          "pos": "noun",
+          "reason": "Noun: inherent capacity to develop (has potential). A different part of speech and Bangla word from the V1 adjective.",
+          "sense_id": "s2",
+          "synset_id": "11784386-n",
+          "v1_source": false
+        }
+      ],
+      "selected_count": 2,
+      "v1_learner_gap": {
+        "description": "V1 teaches only the adjective (potential buyers). The noun (has great potential; the potential to win) is very common and was missing.",
+        "meaningful": true
+      },
+      "v1_source": {
+        "pos": "adjective",
+        "sense_id_in_record": "s1",
+        "synset_id": "01897352-a",
+        "v1_position": 1
+      }
+    },
+    {
+      "candidates": [
+        {
+          "decision": "REJECTED",
+          "definition": "the narrow part of the shoe connecting the heel and the wide part of the sole",
+          "gloss": "the narrow part of the shoe connecting the heel and the wide part of the sole",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "03557169-n",
+          "words": [
+            "shank",
+            "waist"
+          ]
+        },
+        {
+          "decision": "SELECTED",
+          "definition": "the narrowing of the body between the ribs and hips",
+          "gloss": "the narrowing of the body between the ribs and hips",
+          "pos": "noun",
+          "quoted_examples": [],
+          "ss_type": "n",
+          "synset_id": "04936258-n",
+          "words": [
+            "waist",
+            "waistline"
+          ]
+        }
+      ],
+      "candidates_inspected": 2,
+      "editorial_risk": "LOW",
+      "final_sense_order": [
+        "s1 04936258-n"
+      ],
+      "lemma": "waist",
+      "order_changed": false,
+      "order_rationale": "Single sense; the V1 sense is retained unchanged.",
+      "record_file": "dictionary-v2/records/waist.json",
+      "record_outcome": "UNCHANGED_V1_RETAINED",
+      "rejected": [
+        {
+          "pos": "noun",
+          "reason": "Specialist shoemaking term (the narrow part of a shoe sole).",
+          "synset_id": "03557169-n"
+        }
+      ],
+      "selected": [
+        {
+          "pos": "noun",
+          "reason": "V1 primary sense and the only learner-relevant sense. Retained verbatim.",
+          "sense_id": "s1",
+          "synset_id": "04936258-n",
+          "v1_source": true
+        }
+      ],
+      "selected_count": 1,
+      "v1_learner_gap": {
+        "description": "None. V1 carries the only learner-relevant sense (the body part). The other OEWN sense is a shoemaking term.",
+        "meaningful": false
+      },
+      "v1_source": {
+        "pos": "noun",
+        "sense_id_in_record": "s1",
+        "synset_id": "04936258-n",
+        "v1_position": 1
+      }
+    }
+  ]
+}

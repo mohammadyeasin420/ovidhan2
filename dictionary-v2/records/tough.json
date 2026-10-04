@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": false,
+    "order_rationale": "The V1 'difficult' sense stays first: it is the most frequent use (a tough exam, a tough decision). The personality sense follows, then the strong/durable object sense, then the food sense.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s1",
+    "v1_synset_id": "00755165-a"
+  },
   "headword": "tough",
   "provenance": {
     "oewn": {
@@ -19,8 +28,8 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.1.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -67,6 +76,90 @@
         "type": "OEWN_2025"
       },
       "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যে মানুষ কোমল স্বভাবের নয় এবং সহজে আবেগে গলে না, তাকে tough বলা হয়। এখানে tough গায়ের জোর নয়, স্বভাব ও মনোভাবের কঠোরতা বোঝায়।"
+      },
+      "bangla_meaning": {
+        "display": "কঠোর ও শক্ত মনের",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "not given to gentleness or sentimentality",
+        "origin": "OEWN_GLOSS",
+        "text": "not given to gentleness or sentimentality"
+      },
+      "examples": [
+        {
+          "bn": "আমাদের কোচ কঠোর মানুষ; সেরা খেলোয়াড়দের কাছ থেকেও তিনি কোনো অজুহাত মানেন না।",
+          "en": "Our coach is tough and never accepts excuses, even from his best players.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02466962-a",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো জিনিস এমনভাবে বানানো যে সহজে ভাঙে না বা ছিঁড়ে যায় না এবং কঠিন ব্যবহারেও টিকে থাকে, তাকে tough বলা হয়। কাপড়, জুতা বা যন্ত্রের শক্তপোক্ত গঠনই এখানে মূল কথা; কাজ কঠিন হওয়া বা মাংস শক্ত হওয়া নয়।"
+      },
+      "bangla_meaning": {
+        "display": "মজবুত, টেকসই",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "substantially made or constructed",
+        "origin": "OEWN_GLOSS",
+        "text": "substantially made or constructed"
+      },
+      "examples": [
+        {
+          "bn": "সে এমন মজবুত রাবারের বুট কিনেছে, যা পুরো বর্ষা টিকে যায়।",
+          "en": "She bought tough rubber boots that last through the whole monsoon.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "00714724-a",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো খাবার, বিশেষ করে মাংস, এমন শক্ত যে কাটতে বা চিবাতে কষ্ট হয়, তাকে tough বলা হয়। এখানে 'কঠিন' মানে পরিশ্রমসাধ্য নয়, বরং জিনিসটির নিজের গঠনই শক্ত।"
+      },
+      "bangla_meaning": {
+        "display": "শক্ত, চিবানো কঠিন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "resistant to cutting or chewing",
+        "origin": "OEWN_GLOSS",
+        "text": "resistant to cutting or chewing"
+      },
+      "examples": [
+        {
+          "bn": "মাংসটা এত শক্ত ছিল যে চিবানো যাচ্ছিল না, তাই বাচ্চারা সেটা প্লেটেই রেখে দিল।",
+          "en": "The meat was too tough to chew, so the children left it on their plates.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s4",
+      "source": {
+        "synset_id": "02464114-a",
+        "type": "OEWN_2025"
+      }
     }
   ],
   "slug": "tough"

@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": false,
+    "order_rationale": "The V1 title/name sense stays first: it is the use Bangladeshi learners meet most (forms, job letters). The appointment sense follows because it also concerns offices and posts, then the general act of officially designating a place or thing.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s1",
+    "v1_synset_id": "05730691-n"
+  },
   "headword": "designation",
   "provenance": {
     "oewn": {
@@ -19,8 +28,8 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -50,6 +59,62 @@
         "type": "OEWN_2025"
       },
       "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কাউকে নির্বাচন ছাড়াই কোনো পদে বসানো বা মনোনীত করার কাজকে designation বলে। এখানে designation পদবির নাম নয়, বরং ব্যক্তিটিকে সেই পদে দেওয়ার কাজ; তাই সাধারণত designation as + পদ আকারে বসে।"
+      },
+      "bangla_meaning": {
+        "display": "নিয়োগ, মনোনয়ন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the act of putting a person into a non-elective position",
+        "origin": "OEWN_GLOSS",
+        "text": "the act of putting a person into a non-elective position"
+      },
+      "examples": [
+        {
+          "bn": "মন্ত্রণালয় গত সপ্তাহে প্রকল্পের নতুন পরিচালক হিসেবে তাঁর নিয়োগ নিশ্চিত করেছে।",
+          "en": "The ministry confirmed her designation as the new project director last week.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00159791-n",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো জায়গা, জিনিস বা বিষয়কে আনুষ্ঠানিকভাবে কোনো নাম বা মর্যাদা দিয়ে চিহ্নিত করার কাজকে designation বলে। যেমন কোনো এলাকাকে সংরক্ষিত স্থান হিসেবে ঘোষণা করা। এখানে শব্দটি একটি কাজের নাম, কোনো নামের বা পদের নয়।"
+      },
+      "bangla_meaning": {
+        "display": "ঘোষণা, চিহ্নিতকরণ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the act of designating or identifying something",
+        "origin": "OEWN_GLOSS",
+        "text": "the act of designating or identifying something"
+      },
+      "examples": [
+        {
+          "bn": "পুরোনো দুর্গটিকে সংরক্ষিত স্থান হিসেবে সরকারের ঘোষণাকে ইতিহাসবিদরা স্বাগত জানালেন।",
+          "en": "The government's designation of the old fort as a protected site was welcomed by historians.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "00147836-n",
+        "type": "OEWN_2025"
+      }
     }
   ],
   "slug": "designation"

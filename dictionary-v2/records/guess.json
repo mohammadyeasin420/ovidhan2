@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": true,
+    "order_rationale": "Learners meet 'guess' first as a verb (estimate, then 'I guess'). The V1 noun ('my guess is...') is the derived form, so it moves to third place with its V1 identity preserved.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s3",
+    "v1_synset_id": "05187326-n"
+  },
   "headword": "guess",
   "provenance": {
     "oewn": {
@@ -19,9 +28,65 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নিশ্চিত তথ্য না থাকলেও আন্দাজের ভিত্তিতে কোনো সংখ্যা, পরিমাণ বা সময় বলাকে ক্রিয়া হিসেবে guess বলে। উত্তরটা ঠিক না-ও হতে পারে; মূল কথা হলো মাপ বা হিসাবটা আন্দাজে ধরে বলা।"
+      },
+      "bangla_meaning": {
+        "display": "আন্দাজ করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "judge tentatively or form an estimate of (quantities or time)",
+        "origin": "OEWN_GLOSS",
+        "text": "judge tentatively or form an estimate of (quantities or time)"
+      },
+      "examples": [
+        {
+          "bn": "বিয়েতে কতজন অতিথি এসেছিল, আন্দাজ করতে পারো?",
+          "en": "Can you guess how many guests came to the wedding?",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00703659-v",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "পুরোপুরি নিশ্চিত না হয়েও কোনো কথাকে সম্ভবত সত্য বলে ধরে নেওয়াকে guess বলে। কথাবার্তায় I guess দিয়ে নরমভাবে নিজের মত জানানো হয়, অনেকটা 'আমার মনে হয়' বলার মতো।"
+      },
+      "bangla_meaning": {
+        "display": "মনে করা, ধারণা করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "expect, believe, or suppose",
+        "origin": "OEWN_GLOSS",
+        "text": "expect, believe, or suppose"
+      },
+      "examples": [
+        {
+          "bn": "আমার মনে হয় দোকানটা বন্ধ, কারণ সবগুলো বাতি নেভানো।",
+          "en": "I guess the shop is closed because all the lights are off.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00661042-v",
+        "type": "OEWN_2025"
+      }
+    },
     {
       "bangla_explanation": {
         "origin": "OVIDHAN_EDITORIAL",
@@ -44,7 +109,7 @@
         }
       ],
       "pos": "noun",
-      "sense_id": "s1",
+      "sense_id": "s3",
       "source": {
         "synset_id": "05187326-n",
         "type": "OEWN_2025"
@@ -52,5 +117,12 @@
       "v1_primary": true
     }
   ],
-  "slug": "guess"
+  "slug": "guess",
+  "usage_notes": [
+    {
+      "origin": "OVIDHAN_EDITORIAL",
+      "sense_id": "s2",
+      "text": "I guess + পূর্ণ বাক্য: কথা বলার সময় নিজের ধারণা নরমভাবে জানাতে ব্যবহার হয়।"
+    }
+  ]
 }

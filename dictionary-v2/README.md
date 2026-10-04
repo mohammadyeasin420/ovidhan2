@@ -33,7 +33,7 @@ Today the approved lexical content (Bangla meaning, explanation, examples, chose
 
 - Open English WordNet **2025**, WNDB format, `english-wordnet-2025.zip`, license **CC BY 4.0**, from the OEWN downloads page.
 - Archive SHA-256 `38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93` (recorded first in `research/SEO_R3B_OEWN_2025_PILOT_PROVENANCE.json`, re-verified in R6A against the actual archive; none of it is invented).
-- The full distribution is **not** committed. Only the lock (28 synsets) is. The lock is verifiable: `build-oewn-lock.js --archive <zip>` first checks the archive SHA-256 and size and every member's SHA-256 and size against `oewn-2025-provenance.json`, aborting on any mismatch, and only then derives the lock. `--check` makes no writes and fails if the committed lock differs.
+- The full distribution is **not** committed. Only the lock (47 synsets after SEO-R6C) is. The lock is verifiable: `build-oewn-lock.js --archive <zip>` first checks the archive SHA-256 and size and every member's SHA-256 and size against `oewn-2025-provenance.json`, aborting on any mismatch, and only then derives the lock. `--check` makes no writes and fails if the committed lock differs.
 - Attribution on every page that uses OEWN definitions: name Open English WordNet 2025, link <https://en-word.net/>, state CC BY 4.0 with link to <https://creativecommons.org/licenses/by/4.0/>. Records carry this in `attribution` and the validator enforces it.
 - Known OEWN limits: no pronunciation data; sense frequency counts are all zero, so choosing which senses matter to learners is an editorial decision.
 
@@ -108,6 +108,35 @@ node scripts/dictionary-v2/definition-cleanup.js verify --archive <zip>  # + rev
 - Any drift from an AFTER hash fails closed; a changed frozen page fails as `FROZEN_CHANGED`.
 - `apply` refuses an APPLIED manifest (`ALREADY_APPLIED`); the pre-application view cannot be replayed because the BEFORE-hash protection is unchanged. `audit --write` refuses to overwrite an APPLIED manifest.
 - Tests never depend on the live pages being contaminated: `tests/dictionary-v2-cleanup-fixture.js` rebuilds the BEFORE pages by swapping the two replacements back (accepted only if the hash equals the audited BEFORE hash).
+
+## Editorial enrichment prototype (SEO-R6C; data only, 12 words)
+
+R6C enriches exactly 12 existing records (`swarm good chaos designation introvert tough savage repeat crush guess potential waist`) with editor-selected learner senses. It changes **data only**: no `word/*.html`, registry, sitemap, `robots.txt`, dictionary page or deploy file is touched, and nothing is rendered.
+
+| Path | Purpose |
+|---|---|
+| `r6c-editorial-source.json` | Authored decisions: which OEWN senses to teach, in which order, why each other candidate was rejected, and the Ovidhan-written Bangla/English learner layer. Definitions are never written here. |
+| `r6c-editorial-report.json` | Generated audit: every OEWN candidate synset of every lemma (all POS) with SELECTED/REJECTED, reasons, V1 source, final order, V1 learner gap, editorial risk and totals. |
+| `../scripts/dictionary-v2/r6c-enrich.js` | Pure source-to-record enrichment (used by `migrate-v1.js`, so records stay reproducible). |
+| `../scripts/dictionary-v2/r6c-candidates.js` | Lists every OEWN candidate synset of a lemma from the verified archive. |
+| `../scripts/dictionary-v2/r6c.js` | `report` (build/check), `validate`, `guard`. |
+| `../tests/dictionary-v2-r6c.test.js` | Tests, including fail-closed tampering scenarios. |
+
+Rules enforced by the validator and tests:
+
+- A learner definition is always the exact OEWN 2025 definition of the selected synset (`definition.origin: OEWN_GLOSS`, `oewn_definition`, `source.synset_id`); Bangla meaning, explanation and the English/Bangla example are `OVIDHAN_EDITORIAL`. No OEWN example is reused; examples are unique across the dictionary.
+- The V1 sense is kept verbatim and marked `v1_primary` even when it is no longer first. Schema 1.2.0 adds the record-level `editorial_enrichment` block (`v1_sense_id`, `v1_synset_id`, `order_changed`, `order_rationale`) so V1 parity and provenance stay traceable (`check-v1-parity.js` checks the `v1_primary` sense against the live page). Only `crush` and `guess` change the order.
+- When the V1 learner text is deliberately improved, the sense carries `v1_revision` (`reason`, `v1_original`): V2 teaches the improved text, the exact V1 text is kept as the parity/traceability record and `check-v1-parity.js` compares the live page against it. Only `good` (the unnatural V1 Bangla example translation) uses this.
+- A word whose only learner sense is the V1 sense (`chaos introvert waist`) stays a byte-identical `V1_MIGRATION` record; the report records the review.
+- Selection is by learner value, not by filling a number: 1-3 senses, 4 only with an explicit `more_than_three_justification` (`good`, `tough`). The three-sense target is not a limit. Dated or derogatory OEWN senses (savage: "uncivilized people") are deliberately rejected. No synonyms, antonyms, IPA or pronunciation were added.
+
+```
+node scripts/dictionary-v2/migrate-v1.js --archive <zip>           # regenerate records (migration + enrichment)
+node scripts/dictionary-v2/build-oewn-lock.js --archive <zip>      # regenerate the lock (47 synsets)
+node scripts/dictionary-v2/r6c.js report --archive <zip> [--check] # build / byte-check the audit report
+node scripts/dictionary-v2/r6c.js validate [--archive <zip>]       # source + report + records + OEWN + V1 traceability
+node scripts/dictionary-v2/r6c.js guard [--base <sha>]             # only dictionary-v2 data/tools/tests changed
+```
 
 ## Future enrichment process (not part of this phase)
 

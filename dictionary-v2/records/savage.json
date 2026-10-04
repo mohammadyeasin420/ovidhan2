@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": false,
+    "order_rationale": "The V1 adjective stays first. The physical-attack verb follows because it is the verb counterpart of the V1 meaning; the figurative criticism verb comes last.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s1",
+    "v1_synset_id": "01271347-a"
+  },
   "headword": "savage",
   "provenance": {
     "oewn": {
@@ -19,8 +28,8 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -50,6 +59,62 @@
         "type": "OEWN_2025"
       },
       "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কেউ বা কোনো প্রাণী যখন নির্মম ও প্রচণ্ড হিংস্রতায় অন্যকে আক্রমণ করে গুরুতর আঘাত করে, সেই কাজকে ক্রিয়া হিসেবে savage বলে। এখানে savage বিশেষণ নয়, ক্রিয়া; এর অতীত রূপ savaged।"
+      },
+      "bangla_meaning": {
+        "display": "হিংস্রভাবে আক্রমণ করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "attack brutally and fiercely",
+        "origin": "OEWN_GLOSS",
+        "text": "attack brutally and fiercely"
+      },
+      "examples": [
+        {
+          "bn": "প্রতিবেশীরা তাড়িয়ে দেওয়ার আগে একটি পথের কুকুর ছেলেটির ওপর হিংস্রভাবে ঝাঁপিয়ে পড়েছিল।",
+          "en": "A stray dog savaged the boy before the neighbours drove it away.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01166056-v",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "গায়ে হাত না তুলে বরং কোনো সিনেমা, বই, নেতা বা সিদ্ধান্তকে অত্যন্ত তীব্র ও নির্মম ভাষায় সমালোচনা করাকে savage বলা হয়। শারীরিক আক্রমণ নয়, কথার আঘাতই এখানে বিষয়।"
+      },
+      "bangla_meaning": {
+        "display": "কড়া ভাষায় সমালোচনা করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "criticize harshly or violently",
+        "origin": "OEWN_GLOSS",
+        "text": "criticize harshly or violently"
+      },
+      "examples": [
+        {
+          "bn": "সমালোচকেরা সিনেমাটির কড়া সমালোচনা করে একে একঘেয়ে আর খারাপভাবে লেখা বললেন।",
+          "en": "Critics savaged the film, calling it dull and badly written.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "00859201-v",
+        "type": "OEWN_2025"
+      }
     }
   ],
   "slug": "savage"

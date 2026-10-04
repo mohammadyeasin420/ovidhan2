@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": false,
+    "order_rationale": "The V1 general sense stays first: it is the broadest and most frequent meaning. The skill, moral and beneficial senses follow in order of learner frequency.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s1",
+    "v1_synset_id": "01131475-a"
+  },
   "headword": "good",
   "provenance": {
     "oewn": {
@@ -19,8 +28,8 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.1.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -60,7 +69,7 @@
       },
       "examples": [
         {
-          "bn": "প্রতিরাত পড়ে সে ভালো ফল করেছিল।",
+          "bn": "প্রতি রাতে পড়াশোনা করে সে ভালো ফল করেছিল।",
           "en": "She got a good result after studying every night.",
           "origin": "OVIDHAN_EDITORIAL"
         }
@@ -71,8 +80,111 @@
         "synset_id": "01131475-a",
         "type": "OEWN_2025"
       },
-      "v1_primary": true
+      "v1_primary": true,
+      "v1_revision": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "reason": "The V1 Bangla example translation ('প্রতিরাত পড়ে সে ভালো ফল করেছিল') is unnatural Bangla ('প্রতিরাত' is not used with 'পড়ে' like this). V2 teaches the natural translation; the exact V1 text is kept only so V1 parity and traceability remain provable.",
+        "v1_original": {
+          "example_bn": "প্রতিরাত পড়ে সে ভালো ফল করেছিল।"
+        }
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো কাজ বা বিষয়ে যার জ্ঞান ও দক্ষতা আছে, তার সম্পর্কে good বলা হয়। এখানে good মানে 'ভালো মানুষ' নয়, বরং 'কাজটা ভালো পারে'।"
+      },
+      "bangla_meaning": {
+        "display": "দক্ষ, পটু",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "having or showing knowledge and skill and aptitude",
+        "origin": "OEWN_GLOSS",
+        "text": "having or showing knowledge and skill and aptitude"
+      },
+      "examples": [
+        {
+          "bn": "তানিয়া ছবি আঁকায় পটু, তাই স্কুলে তার পোস্টার প্রায়ই পুরস্কার পায়।",
+          "en": "Tania is good at drawing, and her posters often win prizes at school.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02242939-a",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যার চরিত্র ও আচরণ নৈতিকভাবে উঁচু মানের, অর্থাৎ যে ন্যায্য ও সৎ পথে চলে, তাকে good person বলা হয়। এখানে good দক্ষতা বা সুবিধা নয়, মানুষের নৈতিক গুণ বোঝায়।"
+      },
+      "bangla_meaning": {
+        "display": "সৎ ও নীতিবান",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "of moral excellence",
+        "origin": "OEWN_GLOSS",
+        "text": "of moral excellence"
+      },
+      "examples": [
+        {
+          "bn": "তিনি একজন সৎ মানুষ; হারানো মানিব্যাগটি তিনি সব টাকাসহ ফেরত দিয়েছিলেন।",
+          "en": "He is a good man; he returned the lost wallet with all the money still inside.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "02052395-a",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো কিছু যখন কারও শরীর, মন বা জীবনের জন্য ভালো ফল বয়ে আনে, তখন সেটিকে তার জন্য good বলা হয়। এখানে লক্ষ্য হলো উপকার, কোনো জিনিসের মান নয়।"
+      },
+      "bangla_meaning": {
+        "display": "উপকারী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "promoting or enhancing well-being",
+        "origin": "OEWN_GLOSS",
+        "text": "promoting or enhancing well-being"
+      },
+      "examples": [
+        {
+          "bn": "প্রতিদিন সকালে আধঘণ্টা হাঁটা তোমার হৃদযন্ত্রের জন্য উপকারী।",
+          "en": "Walking for half an hour every morning is good for your heart.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s4",
+      "source": {
+        "synset_id": "00065152-a",
+        "type": "OEWN_2025"
+      }
     }
   ],
-  "slug": "good"
+  "slug": "good",
+  "usage_notes": [
+    {
+      "origin": "OVIDHAN_EDITORIAL",
+      "sense_id": "s2",
+      "text": "কীসে দক্ষ তা বোঝাতে good at + বিষয় বা -ing রূপ বসে, যেমন good at cooking।"
+    },
+    {
+      "origin": "OVIDHAN_EDITORIAL",
+      "sense_id": "s4",
+      "text": "কার উপকার হচ্ছে তা বোঝাতে good for + ব্যক্তি বা অঙ্গ বসে, যেমন good for children।"
+    }
+  ]
 }

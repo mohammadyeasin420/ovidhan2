@@ -95,6 +95,20 @@ function validateRecord(record, ctx) {
         for (const sense of record.senses) for (const key of ['synonyms', 'antonyms']) if (key in sense) fail('V1_MIGRATION sense must not contain "' + key + '"');
     }
 
+    // SEO-R6C: an EDITORIAL_ENRICHED record is schema 1.2.0, carries editorial_enrichment and keeps its V1 sense (marked v1_primary).
+    const enriched = record.record_status === 'EDITORIAL_ENRICHED';
+    if (enriched !== (record.schema_version === '1.2.0')) fail('schema_version 1.2.0 is required for, and only for, EDITORIAL_ENRICHED records');
+    if (enriched !== ('editorial_enrichment' in record)) fail('editorial_enrichment is required for, and only for, EDITORIAL_ENRICHED records');
+    const v1Indexes = record.senses.map((s, i) => (s.v1_primary === true ? i : -1)).filter((i) => i >= 0);
+    if (v1Indexes.length !== 1) fail('exactly one sense must be the V1 primary sense (found ' + v1Indexes.length + ')');
+    if (enriched && v1Indexes.length === 1 && record.editorial_enrichment) {
+        const ee = record.editorial_enrichment;
+        const v1 = record.senses[v1Indexes[0]];
+        if (ee.v1_sense_id !== v1.sense_id) fail('editorial_enrichment.v1_sense_id does not point at the v1_primary sense');
+        if (ee.v1_synset_id !== (v1.source && v1.source.synset_id)) fail('editorial_enrichment.v1_synset_id differs from the V1 sense synset');
+        if (ee.order_changed !== (v1Indexes[0] !== 0)) fail('editorial_enrichment.order_changed disagrees with the position of the V1 sense');
+    }
+
     // senses: order, ids, primary
     let lastIndex = 0;
     const senseIds = new Set();
@@ -108,8 +122,18 @@ function validateRecord(record, ctx) {
         lastIndex = index;
         if (senseIds.has(sense.sense_id)) fail(where + ': duplicate sense_id');
         senseIds.add(sense.sense_id);
-        if (i === 0 && sense.v1_primary !== true) fail(where + ': first sense must be the V1 primary sense');
-        if (i > 0 && sense.v1_primary) fail(where + ': only the first sense may be v1_primary');
+        if (!enriched && i === 0 && sense.v1_primary !== true) fail(where + ': first sense must be the V1 primary sense');
+        if (!enriched && i > 0 && sense.v1_primary) fail(where + ': only the first sense may be v1_primary');
+
+        // SEO-R6C challenge pass: a deliberately revised V1 learner text must be declared, justified and traceable.
+        if (sense.v1_revision) {
+            const original = sense.v1_revision.v1_original;
+            const current = { bangla_meaning: sense.bangla_meaning.display, bangla_explanation: sense.bangla_explanation.text, example_en: sense.examples[0] && sense.examples[0].en, example_bn: sense.examples[0] && sense.examples[0].bn };
+            if (!enriched || sense.v1_primary !== true) fail(where + ': v1_revision is only allowed on the v1_primary sense of an EDITORIAL_ENRICHED record');
+            if (!Object.keys(original).length) fail(where + ': v1_revision.v1_original must list at least one revised field');
+            for (const [field, value] of Object.entries(original)) if (value === current[field]) fail(where + ': v1_revision.v1_original.' + field + ' equals the current text (nothing was revised)');
+            if (sense.v1_revision.reason.length < 20) fail(where + ': v1_revision.reason must explain the revision');
+        }
 
         const defKey = norm(sense.definition.text) + '|' + sense.pos;
         if (seenDefinitions.has(defKey)) fail(where + ': duplicate sense (same definition and POS)');
@@ -142,7 +166,7 @@ function validateRecord(record, ctx) {
             const original = sense.definition.v1_original;
             if (original) {
                 // SEO-R6B cleaned definition: text is exactly the OEWN definition; v1_original is the audit trail.
-                if (record.schema_version !== '1.1.0') fail(where + ': definition.v1_original requires schema_version 1.1.0');
+                if (record.schema_version === '1.0.0') fail(where + ': definition.v1_original requires schema_version 1.1.0 or later');
                 if ('contamination' in sense.definition) fail(where + ': a cleaned definition must not also declare contamination');
                 if (sense.definition.text !== synset.definition) fail(where + ': cleaned definition.text must be exactly the OEWN definition');
                 const classified = cleanup.classifyAgainstSynset(original.text, synset);

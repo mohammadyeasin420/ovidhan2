@@ -41,4 +41,19 @@ function beforeContext() {
     return ctx;
 }
 
-module.exports = { root, appliedManifest, proposedManifest, appliedEntries, livePage, beforePage, beforeContext };
+// SEO-R6C enriched 8 cohort records (extra senses, V1 sense possibly not first). The cleanup logic is about the
+// single-sense V1 form, so v1Form() reduces a record to exactly the V1_MIGRATION record it was migrated as.
+function v1Form(record) {
+    const out = JSON.parse(JSON.stringify(record));
+    if (out.record_status !== 'EDITORIAL_ENRICHED') return out;
+    const v1 = out.senses.find((s) => s.v1_primary === true);
+    out.senses = [{ ...require('../scripts/dictionary-v2/r6c-enrich').restoreV1Learner(v1), sense_id: 's1' }];
+    out.record_status = 'V1_MIGRATION';
+    out.schema_version = v1.definition.v1_original ? '1.1.0' : '1.0.0';
+    delete out.editorial_enrichment;
+    delete out.usage_notes;
+    return out;
+}
+const v1Record = (slug) => v1Form(lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json')));
+
+module.exports = { root, appliedManifest, proposedManifest, appliedEntries, livePage, beforePage, beforeContext, v1Form, v1Record };

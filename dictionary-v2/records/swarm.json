@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": false,
+    "order_rationale": "The V1 noun stays first: a swarm of insects is the concrete, basic meaning. The two verb uses follow, movement first and the 'full of' state second.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s1",
+    "v1_synset_id": "07382354-n"
+  },
   "headword": "swarm",
   "provenance": {
     "oewn": {
@@ -19,8 +28,8 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.1.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
     {
       "bangla_explanation": {
@@ -65,7 +74,70 @@
         "type": "OEWN_2025"
       },
       "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অনেক মানুষ, পোকা বা প্রাণী যখন একসঙ্গে দল বেঁধে কোনো দিকে ছুটে যায় বা কোনো জায়গায় ঢুকে পড়ে, সেই চলাকে ক্রিয়া হিসেবে swarm বলে। কোথায় বা কার দিকে যাচ্ছে বোঝাতে সাধারণত into, around বা out of-এর মতো শব্দ সঙ্গে বসে।"
+      },
+      "bangla_meaning": {
+        "display": "দলবেঁধে ভিড় করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "move in large numbers",
+        "origin": "OEWN_GLOSS",
+        "text": "move in large numbers"
+      },
+      "examples": [
+        {
+          "bn": "ক্রিকেটারটি হোটেল থেকে বের হতেই ভক্তরা দলবেঁধে তাঁকে ঘিরে ধরল।",
+          "en": "Fans swarmed around the cricketer as soon as he stepped out of the hotel.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02090118-v",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো জায়গা যখন অনেক মানুষ, পোকা বা প্রাণীতে ঠাসা হয়ে থাকে, সেই অবস্থাকে swarm দিয়ে বোঝানো হয়। এখানে চলাফেরার চেয়ে জায়গাটির ভরে থাকাটাই আসল কথা; জায়গাটি যেন তাদের দিয়ে গিজগিজ করছে।"
+      },
+      "bangla_meaning": {
+        "display": "গিজগিজ করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "be teeming, be abuzz",
+        "origin": "OEWN_GLOSS",
+        "text": "be teeming, be abuzz"
+      },
+      "examples": [
+        {
+          "bn": "সন্ধ্যা নামতেই গ্রামের পুকুরপাড় মশায় গিজগিজ করছিল।",
+          "en": "By evening, the area around the village pond was swarming with mosquitoes.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "02799106-v",
+        "type": "OEWN_2025"
+      }
     }
   ],
-  "slug": "swarm"
+  "slug": "swarm",
+  "usage_notes": [
+    {
+      "origin": "OVIDHAN_EDITORIAL",
+      "sense_id": "s3",
+      "text": "এই অর্থে সাধারণ গঠন: be swarming with + যা দিয়ে জায়গাটি ভরা, যেমন swarming with tourists।"
+    }
+  ]
 }

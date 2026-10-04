@@ -14,6 +14,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const lib = require('./lib');
 const cleanup = require('./definition-cleanup');
+const r6c = require('./r6c-enrich');
 
 const TOOL = 'scripts/dictionary-v2/migrate-v1.js@1.0.0';
 const PROVENANCE_FILE = 'dictionary-v2/oewn-2025-provenance.json';
@@ -105,7 +106,7 @@ function buildReport({ cohort, records, oewn, researchDir }) {
         lineage = new Map(lib.readJson(r5bFile).candidates.filter((c) => slugs.has(c.slug)).map((c) => [c.slug, c.static_origin]));
     }
     const words = cohort.words.map((slug) => {
-        const sense = records.get(slug).senses[0];
+        const sense = records.get(slug).senses.find((s) => s.v1_primary === true);
         // The report describes the live V1 page as audited, so a cleaned record reports its v1_original contamination.
         const contamination = sense.definition.contamination || (sense.definition.v1_original && sense.definition.v1_original.contamination) || [];
         const entry = {
@@ -177,10 +178,14 @@ function main() {
     const records = new Map();
     const differences = [];
     const manifestPath = path.join(lib.V2_DIR, 'definition-cleanup-manifest.json');
+    const r6cSource = fs.existsSync(path.join(lib.ROOT, r6c.SOURCE_FILE)) ? r6c.loadSource() : null;
     const cleanupEntries = new Map(fs.existsSync(manifestPath) ? lib.readJson(manifestPath).entries.map((e) => [e.slug, e]) : []);
     for (const slug of cohort.words) {
         const html = fs.readFileSync(path.join(lib.ROOT, 'word', slug + '.html'), 'utf8');
-        const record = buildRecord({ slug, html, oewn, archiveSha256, cleanupEntry: cleanupEntries.get(slug) });
+        const migrated = buildRecord({ slug, html, oewn, archiveSha256, cleanupEntry: cleanupEntries.get(slug) });
+        // SEO-R6C: the 12-word editorial cohort is reproduced as migration + authored enrichment (single-sense words stay unchanged).
+        const editorial = r6cSource && r6c.wordSource(r6cSource, slug);
+        const record = editorial ? r6c.enrichRecord({ base: migrated, word: editorial, oewn }) : migrated;
         records.set(slug, record);
         const target = path.join(lib.V2_DIR, 'records', slug + '.json');
         const text = lib.canonicalJson(record);

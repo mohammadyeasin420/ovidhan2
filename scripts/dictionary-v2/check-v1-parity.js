@@ -14,13 +14,18 @@ function checkParity(record, html, cleanupEntry = null) {
     const flags = [];
     const page = lib.extractV1Page(html);
     for (const problem of page.problems) differences.push({ field: 'page_structure', detail: problem });
-    const sense = record.senses[0];
+    // SEO-R6C: an enriched record may place the V1 sense after other senses; parity is always checked against the v1_primary sense.
+    const v1Senses = record.senses.filter((s) => s.v1_primary === true);
+    if (v1Senses.length !== 1) return { slug: record.slug, status: 'FAIL', differences: [{ field: 'v1_primary', detail: 'expected exactly one v1_primary sense, found ' + v1Senses.length }], flags };
+    const sense = v1Senses[0];
+    // A deliberately revised V1 learner field (v1_revision) is compared by its preserved V1 original, never by the new text.
+    const v1Text = sense.v1_revision ? sense.v1_revision.v1_original : {};
     const compare = (field, pageValue, recordValue) => {
         if (pageValue !== recordValue) differences.push({ field, page: pageValue, record: recordValue });
     };
     compare('h1', page.h1, record.headword + ' meaning in Bangla');
     compare('part_of_speech', page.part_of_speech, sense.pos);
-    compare('bangla_meaning', page.bangla_meaning, sense.bangla_meaning.display);
+    compare('bangla_meaning', page.bangla_meaning, v1Text.bangla_meaning !== undefined ? v1Text.bangla_meaning : sense.bangla_meaning.display);
     // SEO-R6B: a cleaned record (v1_original) is in one of two honest states. The live page still shows the audited
     // contaminated definition (PASS_PENDING_CLEANUP) or has been cleaned to exactly the record's definition (PASS_CLEANED).
     const original = sense.definition.v1_original;
@@ -30,9 +35,9 @@ function checkParity(record, html, cleanupEntry = null) {
         else if (page.definition === sense.definition.text) cleanupState = 'CLEANED';
         else differences.push({ field: 'definition', page: page.definition, record: sense.definition.text, detail: 'page definition is neither the audited V1 text nor the cleaned definition' });
     } else compare('definition', page.definition, sense.definition.text);
-    compare('bangla_explanation', page.bangla_explanation, sense.bangla_explanation.text);
-    compare('example_en', page.example_en, sense.examples[0].en);
-    compare('example_bn', page.example_bn, sense.examples[0].bn);
+    compare('bangla_explanation', page.bangla_explanation, v1Text.bangla_explanation !== undefined ? v1Text.bangla_explanation : sense.bangla_explanation.text);
+    compare('example_en', page.example_en, v1Text.example_en !== undefined ? v1Text.example_en : sense.examples[0].en);
+    compare('example_bn', page.example_bn, v1Text.example_bn !== undefined ? v1Text.example_bn : sense.examples[0].bn);
     const sourceText = page.source_line_text || '';
     for (const needle of [record.attribution.definition_source, record.attribution.license, record.attribution.editorial_statement]) {
         if (!sourceText.includes(needle)) differences.push({ field: 'attribution_text', detail: 'source line lacks "' + needle + '"' });

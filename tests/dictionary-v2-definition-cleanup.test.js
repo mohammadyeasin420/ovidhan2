@@ -97,10 +97,13 @@ scenario('citation residue: deterministic cleanup for vengeance, disastrous, sel
 
 scenario('V2 cohort records for the 9 contaminated words match the manifest and validate', () => {
     for (const slug of NINE) {
-        const record = lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
+        const committed = lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
+        const record = fixture.v1Record(slug);
         const sense = record.senses[0];
         const entry = entryOf(slug);
         assert.equal(record.schema_version, '1.1.0');
+        assert.deepEqual(validateRecord(committed, vctx), [], slug + ' (committed, possibly R6C-enriched)');
+        assert.deepEqual(committed.senses.find((s) => s.v1_primary).definition, sense.definition, slug + ': the V1 sense keeps its cleaned definition');
         assert.equal(sense.definition.text, entry.after_definition);
         assert.equal(sense.definition.v1_original.text, entry.before_definition);
         assert.equal(sense.definition.v1_original.removed_material, entry.removed_material);
@@ -112,7 +115,7 @@ scenario('V2 cohort records for the 9 contaminated words match the manifest and 
 });
 
 scenario('cleaned record validation fails closed on tampering', () => {
-    const base = lib.readJson(path.join(root, 'dictionary-v2', 'records', 'tough.json'));
+    const base = fixture.v1Record('tough');
     const mutate = (fn) => { const r = clone(base); fn(r.senses[0].definition, r); return validateRecord(r, vctx); };
     assert.ok(hasError(mutate((d) => { d.text = d.text + ' extra'; }), 'exactly the OEWN definition'));
     assert.ok(hasError(mutate((d) => { d.v1_original.removed_material = '; "x"'; }), 'removed_material'));
@@ -143,7 +146,7 @@ scenario('frozen pages are rejected: documented only, never applicable', () => {
     const nonFrozenAsFrozen = clone(entryOf('tough')); nonFrozenAsFrozen.frozen = true;
     assert.ok(cleanup.validateEntry(nonFrozenAsFrozen, cctx, { applicable: false }).length > 0);
     // a cleaned V2 record for a frozen word is refused by the record validator
-    const record = clone(lib.readJson(path.join(root, 'dictionary-v2', 'records', 'tough.json')));
+    const record = clone(fixture.v1Record('tough'));
     record.slug = 'sad'; record.headword = 'sad'; record.provenance.v1_migration.source_page = 'word/sad.html';
     assert.ok(hasError(validateRecord(record, vctx), 'frozen experiment set'));
 });
@@ -298,7 +301,7 @@ scenario('dry run lists slug, old/new definition, synset, reason and frozen stat
 
 scenario('parity: a record is flagged pending until the page is cleaned, then verified against the AFTER hash', () => {
     const entry = entryOf('tough');
-    const record = lib.readJson(path.join(root, 'dictionary-v2', 'records', 'tough.json'));
+    const record = fixture.v1Record('tough');
     const before = readPage('tough');
     assert.equal(checkParity(record, before, entry).status, 'PASS_PENDING_CLEANUP');
     const after = cleanup.planPageCleanup(before, entry).html;

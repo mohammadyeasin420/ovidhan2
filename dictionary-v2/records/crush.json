@@ -6,6 +6,15 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "source_url": "https://en-word.net/"
   },
+  "editorial_enrichment": {
+    "order_changed": true,
+    "order_rationale": "The physical verb is the root meaning every learner meets first and is the most transferable (cans, garlic, ice). The V1 noun (a crush on someone) is informal and narrower, so it moves to second place with its V1 identity preserved; the emotional verb is third.",
+    "origin": "OVIDHAN_EDITORIAL",
+    "phase": "SEO-R6C",
+    "report": "dictionary-v2/r6c-editorial-report.json",
+    "v1_sense_id": "s2",
+    "v1_synset_id": "06932945-n"
+  },
   "headword": "crush",
   "provenance": {
     "oewn": {
@@ -19,9 +28,37 @@
       "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
     }
   },
-  "record_status": "V1_MIGRATION",
-  "schema_version": "1.0.0",
+  "record_status": "EDITORIAL_ENRICHED",
+  "schema_version": "1.2.0",
   "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "প্রবল চাপ দিয়ে কোনো জিনিসের আকার নষ্ট করে ফেলা, অর্থাৎ চ্যাপ্টা করা, দুমড়ানো বা থেঁতলানো, এই সবই crush। এই অর্থেই খালি ক্যান চেপে দুমড়ানো, রসুন থেঁতো করা কিংবা বরফ গুঁড়ো করা বোঝাতে crush চলে।"
+      },
+      "bangla_meaning": {
+        "display": "চেপে থেঁতলে ফেলা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "to compress with violence, out of natural shape or condition",
+        "origin": "OEWN_GLOSS",
+        "text": "to compress with violence, out of natural shape or condition"
+      },
+      "examples": [
+        {
+          "bn": "সে পা দিয়ে খালি ক্যানটা চেপে দুমড়ে ময়লার ঝুড়িতে ফেলল।",
+          "en": "He crushed the empty can under his foot and dropped it in the bin.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01646506-v",
+        "type": "OEWN_2025"
+      }
+    },
     {
       "bangla_explanation": {
         "origin": "OVIDHAN_EDITORIAL",
@@ -44,13 +81,48 @@
         }
       ],
       "pos": "noun",
-      "sense_id": "s1",
+      "sense_id": "s2",
       "source": {
         "synset_id": "06932945-n",
         "type": "OEWN_2025"
       },
       "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো ঘটনা, কথা বা প্রত্যাখ্যান যখন কাউকে এতটাই অপমানিত বা হতাশ করে যে তার মন ভেঙে যায়, তখন বলা হয় ঘটনাটি তাকে crush করেছে। তাই ভেঙে পড়া ব্যক্তিকে বোঝাতে অনেক সময় was crushed বলা হয়।"
+      },
+      "bangla_meaning": {
+        "display": "মনোবল ভেঙে দেওয়া, ভেঙে পড়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "humiliate or depress completely",
+        "origin": "OEWN_GLOSS",
+        "text": "humiliate or depress completely"
+      },
+      "examples": [
+        {
+          "bn": "সবার সামনে শিক্ষক তার উত্তর নিয়ে হাসলে সে একেবারে ভেঙে পড়ল।",
+          "en": "He was crushed when the teacher laughed at his answer in front of everyone.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "01858229-v",
+        "type": "OEWN_2025"
+      }
     }
   ],
-  "slug": "crush"
+  "slug": "crush",
+  "usage_notes": [
+    {
+      "origin": "OVIDHAN_EDITORIAL",
+      "sense_id": "s2",
+      "text": "কারও প্রতি এমন টান থাকলে বলা হয় have a crush on + ব্যক্তি।"
+    }
+  ]
 }
