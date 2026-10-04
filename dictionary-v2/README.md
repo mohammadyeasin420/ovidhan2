@@ -138,6 +138,27 @@ node scripts/dictionary-v2/r6c.js validate [--archive <zip>]       # source + re
 node scripts/dictionary-v2/r6c.js guard [--base <sha>]             # only dictionary-v2 data/tools/tests changed
 ```
 
+## V2 renderer and local visual pilot (SEO-R6D; local only, not deployed)
+
+`scripts/dictionary-v2/render.js` is the first deterministic V2 HTML renderer. It turns a validated V2 record into a word page inside the existing Ovidhan shell and generates a **local-only** pilot for the 12 R6C words into `dictionary-v2/previews/<word>.html`. Nothing here replaces `word/*.html`.
+
+```
+node scripts/dictionary-v2/render.js build          # write the 12 previews
+node scripts/dictionary-v2/render.js check          # fail unless disk == freshly rendered (also fails on missing/extra files)
+node scripts/dictionary-v2/render.js guard          # only previews, renderer, tests and README changed since the R6C checkpoint
+node scripts/dictionary-v2/render.js list           # cohort, preview paths, sense counts
+node tests/dictionary-v2-r6d.test.js
+```
+
+View locally from the repository root with any static server (the Learning Explorer fetches `/enriched-dictionary.json`), e.g. `python -m http.server 8080` then `http://localhost:8080/dictionary-v2/previews/good.html`. Opening the file directly works for the static answer, but the Explorer reports "Failed to load dictionary" because `file://` cannot fetch.
+
+- **Previews are not pages.** `noindex,nofollow`, no canonical, a development comment, a visible banner and a `[V2 preview]` title. They are not in any sitemap, the approved registry or `robots.txt`, are linked from nothing, and `dictionary-v2/` is not in the deploy whitelist.
+- **Content only from records.** The renderer contains no lexical text; it reads `dictionary-v2/records/<word>.json` (validated first, refused if invalid), keeps `record.senses` order (R6C learner-first; V1 order is never restored), and never shows provenance (no synset ids, `v1_original`, record status or hashes). A `v1_revision` text is a traceability record and never learner-facing.
+- **Design reuse.** The header/mega-menu, mobile menu script, footer, `styles.css` tokens and the Learning Explorer block come from the production shell (`word/lunch.html` is the shell source; its header/footer SHA-256 are pinned in `render.js`, so a production shell change fails the build until reviewed). The V2 result area adds one scoped `<style id="dictionary-v2-entry-styles">` that uses only existing tokens; nothing in `styles.css` changes.
+- **Page structure.** breadcrumb, one H1 `<word> meaning in Bangla`, a quick-answer panel (primary Bangla meaning + POS, and a jump list when there are several senses), numbered sense cards (POS + concise Bangla meaning, English definition, Bangla explanation, bilingual example, optional usage note), a compact source line, then the Learning Explorer. Single-sense words (`chaos introvert waist`) render one definition card, with no numbering, jump list or empty framework.
+- **Structured data (decision).** One `BreadcrumbList` plus one JSON-LD `@graph`: a schema.org `DefinedTermSet` for the entry and **one `DefinedTerm` per rendered sense**, in visible order (`name` = headword, `description` = the sense's English definition, `alternateName` = its concise Bangla meaning, `termCode` = the visible sense number, `@id`/`url` = page URL + `#sense-N`, `inLanguage` en/bn). Every value is on the page; no ratings, FAQ, pronunciation, synonyms or POS invention (schema.org has no POS property on `DefinedTerm`). Single-sense words use the same shape with one term. URLs use the intended production address; previews carry no canonical.
+- **Production mode.** `renderPage(record, { mode: 'production' })` produces the eventual contract (canonical, indexable, `../` asset paths) with a byte-identical answer body and identical structured data. It is tested but not used to write any production page in this phase.
+
 ## Future enrichment process (not part of this phase)
 
 1. Pin first: new synset ids enter via `build-oewn-lock.js`, so every sourced claim is verifiable offline.
