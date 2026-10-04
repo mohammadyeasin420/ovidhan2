@@ -14,7 +14,7 @@ $workerConfig = Join-Path $workerDirectory 'wrangler.jsonc'
 $workerName = 'ovidhan'
 $maximumAssetCount = 100000
 $maximumAssetBytes = 25MB
-$expectedWordCount = 49698
+$expectedWordCount = 49706
 $expectedUnicodeWordCount = 114
 $requiredDirectories = @(
     'audio', 'bcs', 'content', 'data', 'grammar', 'graph_data', 'listening',
