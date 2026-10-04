@@ -1,0 +1,530 @@
+{
+  "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+  "license": "CC BY 4.0",
+  "oewn_release": "2025",
+  "purpose": "Compact, hash-pinned extract of the OEWN synsets referenced by dictionary-v2 records, so validation works offline. Regenerate or check with scripts/dictionary-v2/build-oewn-lock.js.",
+  "schema": "ovidhan.oewn-synset-lock/1",
+  "synsets": [
+    {
+      "definition": "in a kind manner or out of kindness",
+      "gloss": "in a kind manner or out of kindness; \"He spoke kindly to the boy\"; \"she kindly overlooked the mistake\"",
+      "id": "00004739-r",
+      "lexical_antonyms": [
+        {
+          "from_word": "kindly",
+          "to_synset_id": "00004912-r",
+          "to_word": "unkindly"
+        }
+      ],
+      "line_sha256": "2c11c333a6bbadc100780e7171e6f90304ae312e0d2827f1a4cb92704fd15855",
+      "offset": "00004739",
+      "pos": "adverb",
+      "quoted_examples": [
+        "He spoke kindly to the boy",
+        "she kindly overlooked the mistake"
+      ],
+      "ss_type": "r",
+      "words": [
+        "kindly"
+      ]
+    },
+    {
+      "definition": "in truth (often tends to intensify)",
+      "gloss": "in truth (often tends to intensify); \"they said the car would break down and indeed it did\"; \"it is very cold indeed\"; \"was indeed grateful\"; \"indeed, the rain may still come\"; \"he did so do it!\"",
+      "id": "00037984-r",
+      "line_sha256": "e59db73bc2c85a9f059a7299f40f7dc2df3b63d9915f4453ef76b072f917afb0",
+      "offset": "00037984",
+      "pos": "adverb",
+      "quoted_examples": [
+        "they said the car would break down and indeed it did",
+        "it is very cold indeed",
+        "was indeed grateful",
+        "indeed, the rain may still come",
+        "he did so do it!"
+      ],
+      "ss_type": "r",
+      "words": [
+        "indeed",
+        "so"
+      ]
+    },
+    {
+      "definition": "causing a sensation as of things crawling on your skin",
+      "gloss": "causing a sensation as of things crawling on your skin; \"a creepy story\"; \"I had a creepy-crawly feeling\"",
+      "id": "00197091-a",
+      "line_sha256": "f80cd453da09e1db9d046d4103a71e07eb2fa8f61cab7b985709cff9301a7f85",
+      "offset": "00197091",
+      "pos": "adjective",
+      "quoted_examples": [
+        "a creepy story",
+        "I had a creepy-crawly feeling"
+      ],
+      "ss_type": "s",
+      "words": [
+        "creepy",
+        "creepy-crawly"
+      ]
+    },
+    {
+      "definition": "grow vigorously",
+      "gloss": "grow vigorously; \"The deer population in this town is thriving\"; \"business is booming\"",
+      "id": "00322795-v",
+      "line_sha256": "d9bde3ba96db5e44ad36648c1c5392b25fbae879e6f903653b8ecec431ca8fee",
+      "offset": "00322795",
+      "pos": "verb",
+      "quoted_examples": [
+        "The deer population in this town is thriving",
+        "business is booming"
+      ],
+      "ss_type": "v",
+      "words": [
+        "boom",
+        "thrive",
+        "flourish",
+        "expand"
+      ]
+    },
+    {
+      "definition": "marked by blithe unconcern",
+      "gloss": "marked by blithe unconcern; \"an ability to interest casual students\"; \"showed a casual disregard for cold weather\"; \"an utterly insouciant financial policy\"; \"an elegantly insouciant manner\"; \"drove his car with nonchalant abandon\"; \"was polite in a teasing nonchalant manner\"",
+      "id": "00550760-a",
+      "line_sha256": "76f03bbde3fb28498c649e47b6a080e832b066b2d5572efee582bdff8e4f5ac7",
+      "offset": "00550760",
+      "pos": "adjective",
+      "quoted_examples": [
+        "an ability to interest casual students",
+        "showed a casual disregard for cold weather",
+        "an utterly insouciant financial policy",
+        "an elegantly insouciant manner",
+        "drove his car with nonchalant abandon",
+        "was polite in a teasing nonchalant manner"
+      ],
+      "ss_type": "s",
+      "words": [
+        "casual",
+        "insouciant",
+        "nonchalant"
+      ]
+    },
+    {
+      "definition": "very difficult; severely testing stamina or resolution",
+      "gloss": "very difficult; severely testing stamina or resolution; \"a rugged competitive examination\"; \"the rugged conditions of frontier life\"; \"the competition was tough\"; \"it's a tough life\"; \"it was a tough job\"",
+      "id": "00755165-a",
+      "line_sha256": "2261527435daa07c3f70551034c47a6100629265e8e331cb1254614871576afe",
+      "offset": "00755165",
+      "pos": "adjective",
+      "quoted_examples": [
+        "a rugged competitive examination",
+        "the rugged conditions of frontier life",
+        "the competition was tough",
+        "it's a tough life",
+        "it was a tough job"
+      ],
+      "ss_type": "s",
+      "words": [
+        "rugged",
+        "tough"
+      ]
+    },
+    {
+      "definition": "to say, state, or perform again",
+      "gloss": "to say, state, or perform again; \"She kept reiterating her request\"",
+      "id": "00998302-v",
+      "line_sha256": "46c4a0ea744e23a0e57ec9afd6e3d6a59e61dbbc9527c392f01fb28ba7eac3f3",
+      "offset": "00998302",
+      "pos": "verb",
+      "quoted_examples": [
+        "She kept reiterating her request"
+      ],
+      "ss_type": "v",
+      "words": [
+        "repeat",
+        "reiterate",
+        "ingeminate",
+        "iterate",
+        "restate",
+        "retell"
+      ]
+    },
+    {
+      "definition": "having desirable or positive qualities especially those suitable for a thing specified",
+      "gloss": "having desirable or positive qualities especially those suitable for a thing specified; \"good news from the hospital\"; \"a good report card\"; \"when she was good she was very very good\"; \"a good knife is one good for cutting\"; \"this stump will make a good picnic table\"; \"a good check\"; \"a good joke\"; \"a good exterior paint\"; \"a good secretary\"; \"a good dress for the office\"",
+      "id": "01131475-a",
+      "lexical_antonyms": [
+        {
+          "from_word": "good",
+          "to_synset_id": "01133897-a",
+          "to_word": "bad"
+        }
+      ],
+      "line_sha256": "d745139044e868356e7bf654ffeed694c9b98377cb78ad3102e87e815c5f7905",
+      "offset": "01131475",
+      "pos": "adjective",
+      "quoted_examples": [
+        "good news from the hospital",
+        "a good report card",
+        "when she was good she was very very good",
+        "a good knife is one good for cutting",
+        "this stump will make a good picnic table",
+        "a good check",
+        "a good joke",
+        "a good exterior paint",
+        "a good secretary",
+        "a good dress for the office"
+      ],
+      "ss_type": "a",
+      "words": [
+        "good"
+      ]
+    },
+    {
+      "definition": "feeling or showing gratitude",
+      "gloss": "feeling or showing gratitude; \"a grateful heart\"; \"grateful for the tree's shade\"; \"a thankful smile\"",
+      "id": "01154783-a",
+      "lexical_antonyms": [
+        {
+          "from_word": "grateful",
+          "to_synset_id": "01155334-a",
+          "to_word": "thankless"
+        }
+      ],
+      "line_sha256": "77a9c57cb6efdcb9924a85eebbf691b6e068b92b5ccd18024391cf63c893644e",
+      "offset": "01154783",
+      "pos": "adjective",
+      "quoted_examples": [
+        "a grateful heart",
+        "grateful for the tree's shade",
+        "a thankful smile"
+      ],
+      "ss_type": "a",
+      "words": [
+        "grateful",
+        "thankful"
+      ]
+    },
+    {
+      "definition": "(of persons or their actions) able or disposed to inflict pain or suffering",
+      "gloss": "(of persons or their actions) able or disposed to inflict pain or suffering; \"a barbarous crime\"; \"brutal beatings\"; \"cruel tortures\"; \"Stalin's roughshod treatment of the kulaks\"; \"a savage slap\"; \"vicious kicks\"",
+      "id": "01271347-a",
+      "line_sha256": "7e7293f593b90329d3676dde94a362ba46f03c6a5a9ca5dd293a1d6a8619351d",
+      "offset": "01271347",
+      "pos": "adjective",
+      "quoted_examples": [
+        "a barbarous crime",
+        "brutal beatings",
+        "cruel tortures",
+        "Stalin's roughshod treatment of the kulaks",
+        "a savage slap",
+        "vicious kicks"
+      ],
+      "ss_type": "s",
+      "words": [
+        "barbarous",
+        "brutal",
+        "cruel",
+        "fell",
+        "roughshod",
+        "savage",
+        "vicious"
+      ]
+    },
+    {
+      "definition": "lovable especially in a childlike or naive way",
+      "gloss": "lovable especially in a childlike or naive way",
+      "id": "01468762-a",
+      "line_sha256": "5313334ccca2f50b6d1508ed4269e066545ea936bc4030cc443d4f777b7845a1",
+      "offset": "01468762",
+      "pos": "adjective",
+      "quoted_examples": [],
+      "ss_type": "s",
+      "words": [
+        "adorable",
+        "endearing",
+        "lovely"
+      ]
+    },
+    {
+      "definition": "hold (a person or thing) close, as for affection, comfort, or warmth",
+      "gloss": "hold (a person or thing) close, as for affection, comfort, or warmth; \"I cuddled the baby\"",
+      "id": "01475344-v",
+      "line_sha256": "73a4a384a1eb4cf14adc4f1fb7edf3f6427d8e4bece20213a60f0e32d3da6f35",
+      "offset": "01475344",
+      "pos": "verb",
+      "quoted_examples": [
+        "I cuddled the baby"
+      ],
+      "ss_type": "v",
+      "words": [
+        "cuddle"
+      ]
+    },
+    {
+      "definition": "expected to become or be; in prospect",
+      "gloss": "expected to become or be; in prospect; \"potential clients\"",
+      "id": "01897352-a",
+      "line_sha256": "ddc224cbcfecdeab629651988c8f62604fc49a456eed20d81ee07818891cd7c7",
+      "offset": "01897352",
+      "pos": "adjective",
+      "quoted_examples": [
+        "potential clients"
+      ],
+      "ss_type": "s",
+      "words": [
+        "likely",
+        "potential"
+      ]
+    },
+    {
+      "definition": "of or relating to or caused by a toxin or poison",
+      "gloss": "of or relating to or caused by a toxin or poison; \"suffering from exposure to toxic substances\"",
+      "id": "02467955-a",
+      "lexical_antonyms": [
+        {
+          "from_word": "toxic",
+          "to_synset_id": "02469183-a",
+          "to_word": "atoxic"
+        }
+      ],
+      "line_sha256": "29a90b0bb460fab560974500de2d2435767f78caa9bcba03c6d2cc396ccccfd3",
+      "offset": "02467955",
+      "pos": "adjective",
+      "quoted_examples": [
+        "suffering from exposure to toxic substances"
+      ],
+      "ss_type": "a",
+      "words": [
+        "toxic"
+      ]
+    },
+    {
+      "definition": "of high worth or cost",
+      "gloss": "of high worth or cost; \"diamonds, sapphires, rubies, and emeralds are precious stones\"",
+      "id": "02520787-a",
+      "line_sha256": "51a6b06ee0e2a40f709cc452e9a37779890503cf9eca94f204996d053a0eb42c",
+      "offset": "02520787",
+      "pos": "adjective",
+      "quoted_examples": [
+        "diamonds, sapphires, rubies, and emeralds are precious stones"
+      ],
+      "ss_type": "s",
+      "words": [
+        "precious"
+      ]
+    },
+    {
+      "definition": "the narrowing of the body between the ribs and hips",
+      "gloss": "the narrowing of the body between the ribs and hips",
+      "id": "04936258-n",
+      "line_sha256": "51d10626240904c6da84ceee51579a2e2937c2b0caf4ba8b796f0c864aaf3411",
+      "offset": "04936258",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "waist",
+        "waistline"
+      ]
+    },
+    {
+      "definition": "an estimate based on little or no information",
+      "gloss": "an estimate based on little or no information",
+      "id": "05187326-n",
+      "line_sha256": "98c7f4e09e0333ab4f9d297339e805d13987126928f843a7bf080d97e289e12d",
+      "offset": "05187326",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "guess",
+        "guesswork",
+        "guessing",
+        "shot",
+        "dead_reckoning"
+      ]
+    },
+    {
+      "definition": "a unit of language that native speakers can identify",
+      "gloss": "a unit of language that native speakers can identify; \"words are the blocks from which sentences are made\"; \"he hardly said ten words all morning\"",
+      "id": "05676066-n",
+      "line_sha256": "b87d0ce1c13bd9bd3ee63a473d84d6f6eed3427735d95bc5c52dbaa5ec817f40",
+      "offset": "05676066",
+      "pos": "noun",
+      "quoted_examples": [
+        "words are the blocks from which sentences are made",
+        "he hardly said ten words all morning"
+      ],
+      "ss_type": "n",
+      "words": [
+        "word"
+      ]
+    },
+    {
+      "definition": "identifying word or words by which someone or something is called and classified or distinguished from others",
+      "gloss": "identifying word or words by which someone or something is called and classified or distinguished from others",
+      "id": "05730691-n",
+      "line_sha256": "01ea1f2068ace76fbaa67f3f537e69cc58a1ffad44ee6520157b869cd1ba8d4e",
+      "offset": "05730691",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "appellation",
+        "denomination",
+        "designation",
+        "appellative"
+      ]
+    },
+    {
+      "definition": "something that recommends (or expresses commendation of) a person or thing as worthy or desirable",
+      "gloss": "something that recommends (or expresses commendation of) a person or thing as worthy or desirable",
+      "id": "06052485-n",
+      "line_sha256": "a3fd60dd1c9211736fe08383002679e9d90ad418414ce5efa99b2ef6980d05af",
+      "offset": "06052485",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "recommendation",
+        "testimonial",
+        "good_word"
+      ]
+    },
+    {
+      "definition": "temporary love of an adolescent",
+      "gloss": "temporary love of an adolescent",
+      "id": "06932945-n",
+      "line_sha256": "d06c9e6b465a1d371df63fa7278065d5c71e200220ba811b181340d647e57555",
+      "offset": "06932945",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "puppy_love",
+        "calf_love",
+        "crush",
+        "infatuation"
+      ]
+    },
+    {
+      "definition": "a midday meal",
+      "gloss": "a midday meal",
+      "id": "06964470-n",
+      "line_sha256": "268c6380c01eaa37a4eeb2e8c9b9a82d0f522dc4572fe538fe800561737e51e7",
+      "offset": "06964470",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "lunch",
+        "luncheon",
+        "tiffin",
+        "dejeuner"
+      ]
+    },
+    {
+      "definition": "a group of many things in the air or on the ground",
+      "gloss": "a group of many things in the air or on the ground; \"a swarm of insects obscured the light\"; \"clouds of blossoms\"; \"it discharged a cloud of spores\"",
+      "id": "07382354-n",
+      "line_sha256": "d71fc8d838aecc7d077ff22daa8c14946eff32d26c81907119d83e8f87e0627f",
+      "offset": "07382354",
+      "pos": "noun",
+      "quoted_examples": [
+        "a swarm of insects obscured the light",
+        "clouds of blossoms",
+        "it discharged a cloud of spores"
+      ],
+      "ss_type": "n",
+      "words": [
+        "swarm",
+        "cloud"
+      ]
+    },
+    {
+      "definition": "(psychology) a person who tends to shrink from social contacts and to become preoccupied with their own thoughts",
+      "gloss": "(psychology) a person who tends to shrink from social contacts and to become preoccupied with their own thoughts",
+      "id": "08733148-n",
+      "lexical_antonyms": [
+        {
+          "from_word": "introvert",
+          "to_synset_id": "08598234-n",
+          "to_word": "extravert"
+        }
+      ],
+      "line_sha256": "e004f53b0abd2791fcc8e17b4437516ba7033140b5852a53bf97bf859e04bd0e",
+      "offset": "08733148",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "introvert"
+      ]
+    },
+    {
+      "definition": "a son of your brother or sister",
+      "gloss": "a son of your brother or sister",
+      "id": "08871169-n",
+      "lexical_antonyms": [
+        {
+          "from_word": "nephew",
+          "to_synset_id": "08875293-n",
+          "to_word": "niece"
+        }
+      ],
+      "line_sha256": "4eb486a2b22eb5a3cbe6f4c7b879eae1868a74d3ba6ab81f0ce86ddbba6db6a2",
+      "offset": "08871169",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "nephew"
+      ]
+    },
+    {
+      "definition": "a young child who is just beginning to walk",
+      "gloss": "a young child who is just beginning to walk",
+      "id": "09207787-n",
+      "line_sha256": "4a70fc217262d92221a00214c5e0cecd0c534aca62406311813e2a7c7dbc81c5",
+      "offset": "09207787",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "toddler",
+        "yearling",
+        "tot",
+        "bambino"
+      ]
+    },
+    {
+      "definition": "the principal bad character in a film or work of fiction",
+      "gloss": "the principal bad character in a film or work of fiction",
+      "id": "09247363-n",
+      "line_sha256": "a1f625b5977756a5b8766c280d88bc244cfcbfcdd26acb763843dc592ff623fe",
+      "offset": "09247363",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "villain",
+        "baddie"
+      ]
+    },
+    {
+      "definition": "a state of extreme confusion and disorder",
+      "gloss": "a state of extreme confusion and disorder",
+      "id": "11275622-n",
+      "line_sha256": "690694da44bb7849a8200321ca714846b7933db8c04ce5849d297ee20fb27823",
+      "offset": "11275622",
+      "pos": "noun",
+      "quoted_examples": [],
+      "ss_type": "n",
+      "words": [
+        "chaos",
+        "pandemonium",
+        "bedlam",
+        "topsy-turvydom",
+        "topsy-turvyness"
+      ]
+    }
+  ]
+}

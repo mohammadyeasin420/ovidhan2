@@ -1,0 +1,368 @@
+{
+  "cohort_id": "SEO_R5C_PROTOTYPE_28",
+  "report": "ovidhan.dictionary-v2.migration-report/1",
+  "source_of_truth_rule": "Live V1 page is authoritative. The OEWN synset is the unique synset (headword, POS) whose definition or raw gloss equals the displayed definition. Research artifacts are compared and reported only.",
+  "totals": {
+    "artifact_disagreements": 4,
+    "definition_contaminated_not_fixed": 9,
+    "definition_exact_oewn": 19,
+    "records": 28
+  },
+  "words": [
+    {
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "adjective",
+      "slug": "adorable",
+      "synset_id": "01468762-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R4_BATCH3_TOP1000_FINAL_EDITORIAL.json",
+        "offset": "09247363"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "R4_BATCH3",
+      "pos": "noun",
+      "slug": "baddie",
+      "synset_id": "09247363-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R4_BATCH3_TOP1000_FINAL_EDITORIAL.json",
+        "offset": "11275622"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "R4_BATCH3",
+      "pos": "noun",
+      "slug": "chaos",
+      "synset_id": "11275622-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "00197091"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "adjective",
+      "slug": "creepy",
+      "synset_id": "00197091-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": false,
+        "claimed_definition": "to compress with violence, out of natural shape or condition",
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "01646506",
+        "resolution": "LIVE_PAGE_WINS"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "crush",
+      "synset_id": "06932945-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "01475344"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "verb",
+      "slug": "cuddle",
+      "synset_id": "01475344-v"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "05730691"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "designation",
+      "synset_id": "05730691-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "01131475"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "adjective",
+      "slug": "good",
+      "synset_id": "01131475-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "01154783"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "adjective",
+      "slug": "grateful",
+      "synset_id": "01154783-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "05187326"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "guess",
+      "synset_id": "05187326-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R4_BATCH3_TOP1000_FINAL_EDITORIAL.json",
+        "offset": "00037984"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "R4_BATCH3",
+      "pos": "adverb",
+      "slug": "indeed",
+      "synset_id": "00037984-r"
+    },
+    {
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "introvert",
+      "synset_id": "08733148-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R4_BATCH3_TOP1000_FINAL_EDITORIAL.json",
+        "offset": "00004739"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "R4_BATCH3",
+      "pos": "adverb",
+      "slug": "kindly",
+      "synset_id": "00004739-r"
+    },
+    {
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "lunch",
+      "synset_id": "06964470-n"
+    },
+    {
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "nephew",
+      "synset_id": "08871169-n"
+    },
+    {
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "adjective",
+      "slug": "nonchalant",
+      "synset_id": "00550760-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R4_BATCH3_TOP1000_FINAL_EDITORIAL.json",
+        "offset": "01897352"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "R4_BATCH3",
+      "pos": "adjective",
+      "slug": "potential",
+      "synset_id": "01897352-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "02520787"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "adjective",
+      "slug": "precious",
+      "synset_id": "02520787-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": false,
+        "claimed_definition": "an event that repeats",
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "06728539",
+        "resolution": "LIVE_PAGE_WINS"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "verb",
+      "slug": "repeat",
+      "synset_id": "00998302-v"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R4_BATCH3_TOP1000_FINAL_EDITORIAL.json",
+        "offset": "01271347"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "R4_BATCH3",
+      "pos": "adjective",
+      "slug": "savage",
+      "synset_id": "01271347-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "07382354"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "swarm",
+      "synset_id": "07382354-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": false,
+        "claimed_definition": "something that serves as evidence",
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "06005802",
+        "resolution": "LIVE_PAGE_WINS"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "testimonial",
+      "synset_id": "06052485-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R4_BATCH4_FINAL_EDITORIAL.json",
+        "offset": "00322795"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "R4_BATCH4",
+      "pos": "verb",
+      "slug": "thrive",
+      "synset_id": "00322795-v"
+    },
+    {
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "toddler",
+      "synset_id": "09207787-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": false,
+        "claimed_definition": "not given to gentleness or sentimentality",
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "02466962",
+        "resolution": "LIVE_PAGE_WINS"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "adjective",
+      "slug": "tough",
+      "synset_id": "00755165-a"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R4_BATCH3_TOP1000_FINAL_EDITORIAL.json",
+        "offset": "02467955"
+      },
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "R4_BATCH3",
+      "pos": "adjective",
+      "slug": "toxic",
+      "synset_id": "02467955-a"
+    },
+    {
+      "definition_alignment": "EXACT_OEWN_DEFINITION",
+      "definition_contamination": [],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "waist",
+      "synset_id": "04936258-n"
+    },
+    {
+      "artifact_claim": {
+        "agrees_with_live_page": true,
+        "file": "SEO_R3C_AHREFS_2500_MASTER_FINAL.json",
+        "offset": "05676066"
+      },
+      "definition_alignment": "RAW_OEWN_GLOSS",
+      "definition_contamination": [
+        "OEWN_QUOTED_EXAMPLES_IN_DEFINITION"
+      ],
+      "editorial_lineage_static_origin": "PRE_R4_BATCH3 (R3C/earlier)",
+      "pos": "noun",
+      "slug": "word",
+      "synset_id": "05676066-n"
+    }
+  ]
+}

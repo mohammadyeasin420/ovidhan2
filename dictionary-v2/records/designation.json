@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "designation",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/designation.html",
+      "source_page_sha256_lf": "501fb1a0368712f6e5c86944ec352d04356e9cb3b7ca28f11e21fd5a8632ea6c",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "চাকরি বা পরিচয়ে একজনকে যে নামে চেনা যায়, সেই নামই তার designation।"
+      },
+      "bangla_meaning": {
+        "display": "পদবি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "identifying word or words by which someone or something is called and classified or distinguished from others",
+        "origin": "OEWN_GLOSS",
+        "text": "identifying word or words by which someone or something is called and classified or distinguished from others"
+      },
+      "examples": [
+        {
+          "bn": "ফর্মে তার পদবি লেখা আছে হিসাবরক্ষণ কর্মকর্তা।",
+          "en": "Her designation on the form is accounts officer.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05730691-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "designation"
+}

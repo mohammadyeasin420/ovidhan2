@@ -1,0 +1,85 @@
+'use strict';
+// SEO-R6A: compares every Dictionary V2 record with the CURRENT live V1 HTML page.
+// Read-only: it never writes to word/*.html.
+//
+// Usage: node scripts/dictionary-v2/check-v1-parity.js [--json <report-path>]
+// Exit 1 if any record fails parity. Known V1 contamination (declared in the record) is reported, not failed.
+
+const fs = require('node:fs');
+const path = require('node:path');
+const lib = require('./lib');
+
+function checkParity(record, html) {
+    const differences = [];
+    const flags = [];
+    const page = lib.extractV1Page(html);
+    for (const problem of page.problems) differences.push({ field: 'page_structure', detail: problem });
+    const sense = record.senses[0];
+    const compare = (field, pageValue, recordValue) => {
+        if (pageValue !== recordValue) differences.push({ field, page: pageValue, record: recordValue });
+    };
+    compare('h1', page.h1, record.headword + ' meaning in Bangla');
+    compare('part_of_speech', page.part_of_speech, sense.pos);
+    compare('bangla_meaning', page.bangla_meaning, sense.bangla_meaning.display);
+    compare('definition', page.definition, sense.definition.text);
+    compare('bangla_explanation', page.bangla_explanation, sense.bangla_explanation.text);
+    compare('example_en', page.example_en, sense.examples[0].en);
+    compare('example_bn', page.example_bn, sense.examples[0].bn);
+    const sourceText = page.source_line_text || '';
+    for (const needle of [record.attribution.definition_source, record.attribution.license, record.attribution.editorial_statement]) {
+        if (!sourceText.includes(needle)) differences.push({ field: 'attribution_text', detail: 'source line lacks "' + needle + '"' });
+    }
+    for (const href of [record.attribution.source_url, record.attribution.license_url]) {
+        if (!page.source_line_hrefs.includes(href)) differences.push({ field: 'attribution_link', detail: 'source line lacks link ' + href });
+    }
+    const pageHash = lib.sha256Lf(Buffer.from(html, 'utf8'));
+    if (pageHash !== record.provenance.v1_migration.source_page_sha256_lf) differences.push({ field: 'page_sha256_lf', page: pageHash, record: record.provenance.v1_migration.source_page_sha256_lf, detail: 'page changed since migration' });
+    if (sense.definition.contamination) {
+        flags.push(...sense.definition.contamination.map((c) => 'KNOWN_V1_CONTAMINATION:' + c.kind));
+    } else if (sense.definition.oewn_definition !== sense.definition.text) {
+        differences.push({ field: 'definition', detail: 'definition differs from OEWN definition but no contamination is declared' });
+    }
+    let status = 'PASS';
+    if (differences.length) status = 'FAIL';
+    else if (flags.length) status = 'PASS_KNOWN_CONTAMINATION';
+    return { slug: record.slug, status, differences, flags };
+}
+
+function runParity(root = lib.ROOT) {
+    const cohort = lib.readJson(path.join(root, 'dictionary-v2', 'prototype-cohort.json'));
+    const results = cohort.words.map((slug) => {
+        const record = lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
+        const html = fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8');
+        return checkParity(record, html);
+    });
+    const count = (s) => results.filter((r) => r.status === s).length;
+    return {
+        report: 'ovidhan.dictionary-v2.v1-parity/1',
+        records: results.length,
+        pass: count('PASS'),
+        pass_known_contamination: count('PASS_KNOWN_CONTAMINATION'),
+        fail: count('FAIL'),
+        results
+    };
+}
+
+function main() {
+    const argv = process.argv.slice(2);
+    let jsonPath = null;
+    for (let i = 0; i < argv.length; i++) {
+        if (argv[i] === '--json') jsonPath = argv[++i];
+        else throw new Error('Unknown argument: ' + argv[i]);
+    }
+    const report = runParity();
+    for (const r of report.results) {
+        console.log(r.status.padEnd(26) + r.slug.padEnd(14) + (r.flags.join(',') || '') + (r.differences.length ? ' DIFFS=' + JSON.stringify(r.differences) : ''));
+    }
+    console.log('PARITY: ' + report.pass + ' pass, ' + report.pass_known_contamination + ' pass with known V1 contamination, ' + report.fail + ' fail, of ' + report.records);
+    if (jsonPath) fs.writeFileSync(jsonPath, lib.canonicalJson(report), 'utf8');
+    if (report.fail) process.exit(1);
+}
+
+module.exports = { checkParity, runParity };
+if (require.main === module) {
+    try { main(); } catch (error) { console.error('FAILED: ' + error.message); process.exit(1); }
+}

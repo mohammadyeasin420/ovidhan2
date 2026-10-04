@@ -1,0 +1,65 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "word",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/word.html",
+      "source_page_sha256_lf": "bcfce42913aa27d2953e206b28c2aa4f9480ccf2b3209c52e1cf5c1f98d9d418",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ভাষার যে একক দিয়ে বাক্য গড়ে, তাকে word বলে।"
+      },
+      "bangla_meaning": {
+        "display": "শব্দ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "contamination": [
+          {
+            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+            "quoted_examples": [
+              "words are the blocks from which sentences are made",
+              "he hardly said ten words all morning"
+            ]
+          }
+        ],
+        "oewn_definition": "a unit of language that native speakers can identify",
+        "origin": "OEWN_GLOSS",
+        "text": "a unit of language that native speakers can identify; \"words are the blocks from which sentences are made\"; \"he hardly said ten words all morning\""
+      },
+      "examples": [
+        {
+          "bn": "গল্প থেকে প্রতিদিন একটি নতুন শব্দ শেখো।",
+          "en": "Learn one new word from the story each day.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05676066-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "word"
+}

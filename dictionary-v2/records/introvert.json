@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "introvert",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/introvert.html",
+      "source_page_sha256_lf": "7c978fc0733d37ea828a303f531e1b46318d5717f6082b547ca3d394811d22c6",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যে মানুষ সামাজিক মেলামেশা এড়িয়ে নিজের চিন্তায় বেশি সময় কাটান, তাকে introvert বলা হয়।"
+      },
+      "bangla_meaning": {
+        "display": "অন্তর্মুখী ব্যক্তি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(psychology) a person who tends to shrink from social contacts and to become preoccupied with their own thoughts",
+        "origin": "OEWN_GLOSS",
+        "text": "(psychology) a person who tends to shrink from social contacts and to become preoccupied with their own thoughts"
+      },
+      "examples": [
+        {
+          "bn": "অন্তর্মুখী মানুষ হিসেবে সে ভিড়ের আসরের চেয়ে বই নিয়ে শান্ত সন্ধ্যা পছন্দ করতেন।",
+          "en": "As an introvert, he preferred a quiet evening with a book to a crowded party.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08733148-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "introvert"
+}

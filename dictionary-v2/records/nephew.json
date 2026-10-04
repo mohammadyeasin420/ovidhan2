@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "nephew",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/nephew.html",
+      "source_page_sha256_lf": "10245542f37f4c5da12d5f545860a04f587b2b788a2fc4278b0a6af5647f775d",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নিজের ভাই বা বোনের ছেলেকে nephew বলা হয়। ভাইয়ের ছেলে ভাতিজা, আর বোনের ছেলে ভাগ্নে।"
+      },
+      "bangla_meaning": {
+        "display": "ভাতিজা বা ভাগ্নে",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a son of your brother or sister",
+        "origin": "OEWN_GLOSS",
+        "text": "a son of your brother or sister"
+      },
+      "examples": [
+        {
+          "bn": "আমার বোনের ছেলে ও আমার ভাইয়ের ছেলে দুজনেই আমার nephew, অর্থাৎ একজন ভাগ্নে ও অন্যজন ভাতিজা।",
+          "en": "My sister's son and my brother's son are both my nephews.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08871169-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "nephew"
+}

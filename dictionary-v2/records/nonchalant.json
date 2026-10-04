@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "nonchalant",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/nonchalant.html",
+      "source_page_sha256_lf": "28f9ba013d2c358e98ac833c7ddd78f7449e48d11e19ea0ac86057faf4e733c1",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো পরিস্থিতি নিয়ে উদ্বেগ, উত্তেজনা বা বিশেষ আগ্রহ না দেখিয়ে শান্ত ও উদাসীনভাবে আচরণ করা বোঝাতে ব্যবহৃত হয়।"
+      },
+      "bangla_meaning": {
+        "display": "নির্বিকার; উদাসীন; ভাবলেশহীন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "marked by blithe unconcern",
+        "origin": "OEWN_GLOSS",
+        "text": "marked by blithe unconcern"
+      },
+      "examples": [
+        {
+          "bn": "হঠাৎ পরীক্ষার ঘোষণা শুনে সে নির্বিকারভাবে কাঁধ ঝাঁকাল।",
+          "en": "She gave a nonchalant shrug when she heard the sudden test announcement.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00550760-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "nonchalant"
+}

@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ovidhan:dictionary-v2:record:1.0.0",
+  "title": "Ovidhan Dictionary V2 record",
+  "description": "One approved headword. Optional blocks are omitted when there is no sourced or approved data: never an empty array, empty string, null or placeholder. Sourced content carries an OEWN origin and synset id; Ovidhan-written content carries origin OVIDHAN_EDITORIAL.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_status", "slug", "headword", "attribution", "provenance", "senses"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "record_status": {
+      "description": "V1_MIGRATION is a lossless copy of the live approved V1 page. EDITORIAL_ENRICHED is reserved for later phases.",
+      "enum": ["V1_MIGRATION", "EDITORIAL_ENRICHED"]
+    },
+    "slug": { "$ref": "#/$defs/slug" },
+    "headword": { "$ref": "#/$defs/text" },
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["definition_source", "source_url", "license", "license_url", "editorial_statement"],
+      "properties": {
+        "definition_source": { "$ref": "#/$defs/text" },
+        "source_url": { "$ref": "#/$defs/url" },
+        "license": { "$ref": "#/$defs/text" },
+        "license_url": { "$ref": "#/$defs/url" },
+        "editorial_statement": { "$ref": "#/$defs/text" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["oewn", "v1_migration"],
+      "properties": {
+        "oewn": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["release", "archive_sha256", "provenance_file"],
+          "properties": {
+            "release": { "const": "2025" },
+            "archive_sha256": { "$ref": "#/$defs/sha256" },
+            "provenance_file": { "const": "dictionary-v2/oewn-2025-provenance.json" }
+          }
+        },
+        "v1_migration": {
+          "description": "Where the learner-facing core was copied from. Present for V1_MIGRATION and EDITORIAL_ENRICHED records.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_page", "source_page_sha256_lf", "tool"],
+          "properties": {
+            "source_page": { "type": "string", "pattern": "^word/[a-z]+(-[a-z]+)*\\.html$" },
+            "source_page_sha256_lf": { "$ref": "#/$defs/sha256" },
+            "tool": { "const": "scripts/dictionary-v2/migrate-v1.js@1.0.0" }
+          }
+        }
+      }
+    },
+    "senses": {
+      "description": "Display order. senses[0] is the V1 primary sense. sense_id values are s1, s2, ... strictly increasing in array order.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/sense" }
+    },
+    "forms": {
+      "description": "Optional word forms.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["form", "kind", "pos", "origin"],
+        "properties": {
+          "form": { "$ref": "#/$defs/text" },
+          "kind": { "enum": ["plural", "third_person_singular", "past", "past_participle", "present_participle", "comparative", "superlative"] },
+          "pos": { "$ref": "#/$defs/pos" },
+          "origin": { "enum": ["OEWN_EXCEPTION_LIST", "OVIDHAN_EDITORIAL"] }
+        }
+      }
+    },
+    "phrases": {
+      "description": "Optional phrases. Only editor-approved entries; never an automatic list.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["phrase", "origin"],
+        "properties": {
+          "phrase": { "$ref": "#/$defs/text" },
+          "bangla_meaning": { "$ref": "#/$defs/text" },
+          "sense_id": { "$ref": "#/$defs/senseId" },
+          "origin": { "const": "OVIDHAN_EDITORIAL" }
+        }
+      }
+    },
+    "collocations": {
+      "description": "Optional collocations. No corpus exists in the repository, so these can only be Ovidhan-written.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "origin"],
+        "properties": {
+          "text": { "$ref": "#/$defs/text" },
+          "bangla": { "$ref": "#/$defs/text" },
+          "sense_id": { "$ref": "#/$defs/senseId" },
+          "origin": { "const": "OVIDHAN_EDITORIAL" }
+        }
+      }
+    },
+    "usage_notes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "origin"],
+        "properties": {
+          "text": { "$ref": "#/$defs/text" },
+          "sense_id": { "$ref": "#/$defs/senseId" },
+          "origin": { "const": "OVIDHAN_EDITORIAL" }
+        }
+      }
+    },
+    "related_words": {
+      "description": "Optional links to APPROVED Ovidhan words only (data/approved-static-word-slugs.json).",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug", "relation", "origin"],
+        "properties": {
+          "slug": { "$ref": "#/$defs/slug" },
+          "relation": { "enum": ["SAME_SYNSET", "LEXICAL_ANTONYM", "EDITORIAL"] },
+          "sense_id": { "$ref": "#/$defs/senseId" },
+          "origin": { "enum": ["OEWN_POINTER", "OVIDHAN_EDITORIAL"] }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "slug": { "type": "string", "pattern": "^[a-z]+(-[a-z]+)*$" },
+    "senseId": { "type": "string", "pattern": "^s[1-9][0-9]*$" },
+    "text": { "type": "string", "pattern": "^\\S(?:[\\s\\S]*\\S)?$" },
+    "url": { "type": "string", "pattern": "^https://[^\\s]+$" },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "synsetId": { "type": "string", "pattern": "^[0-9]{8}-[nvar]$" },
+    "pos": { "enum": ["noun", "verb", "adjective", "adverb"] },
+    "sense": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sense_id", "pos", "source", "definition", "bangla_meaning", "bangla_explanation", "examples"],
+      "properties": {
+        "sense_id": { "$ref": "#/$defs/senseId" },
+        "pos": { "$ref": "#/$defs/pos" },
+        "v1_primary": { "const": true },
+        "source": {
+          "description": "OEWN_2025 requires synset_id. OVIDHAN_EDITORIAL (a sense not in OEWN) requires rationale and forbids synset_id.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": { "enum": ["OEWN_2025", "OVIDHAN_EDITORIAL"] },
+            "synset_id": { "$ref": "#/$defs/synsetId" },
+            "rationale": { "$ref": "#/$defs/text" }
+          }
+        },
+        "definition": {
+          "description": "text is exactly what the learner sees. oewn_definition is the definition part of the OEWN gloss with quoted examples removed. When text differs from oewn_definition, contamination must say why; migration never fixes it.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text", "origin"],
+          "properties": {
+            "text": { "$ref": "#/$defs/text" },
+            "origin": { "enum": ["OEWN_GLOSS", "OVIDHAN_EDITORIAL"] },
+            "oewn_definition": { "$ref": "#/$defs/text" },
+            "contamination": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["kind"],
+                "properties": {
+                  "kind": { "enum": ["OEWN_QUOTED_EXAMPLES_IN_DEFINITION", "OEWN_ATTRIBUTION_IN_DEFINITION"] },
+                  "quoted_examples": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } }
+                }
+              }
+            }
+          }
+        },
+        "bangla_meaning": {
+          "description": "display is the verbatim learner-facing string (it may already list several meanings). parts is optional and only for later, editor-confirmed splitting.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["display", "origin"],
+          "properties": {
+            "display": { "$ref": "#/$defs/text" },
+            "parts": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+            "origin": { "const": "OVIDHAN_EDITORIAL" }
+          }
+        },
+        "bangla_explanation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text", "origin"],
+          "properties": {
+            "text": { "$ref": "#/$defs/text" },
+            "origin": { "const": "OVIDHAN_EDITORIAL" }
+          }
+        },
+        "examples": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["en", "bn", "origin"],
+            "properties": {
+              "en": { "$ref": "#/$defs/text" },
+              "bn": { "$ref": "#/$defs/text" },
+              "origin": { "const": "OVIDHAN_EDITORIAL" }
+            }
+          }
+        },
+        "synonyms": {
+          "description": "Optional, by sense, sorted by word. Never padded for completeness.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["word", "origin"],
+            "properties": {
+              "word": { "$ref": "#/$defs/text" },
+              "approved_slug": { "$ref": "#/$defs/slug" },
+              "origin": { "enum": ["OEWN_SYNSET", "OVIDHAN_EDITORIAL"] }
+            }
+          }
+        },
+        "antonyms": {
+          "description": "Optional, by sense, sorted by word, only where an editor justifies them.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["word", "origin"],
+            "properties": {
+              "word": { "$ref": "#/$defs/text" },
+              "approved_slug": { "$ref": "#/$defs/slug" },
+              "origin": { "enum": ["OEWN_LEXICAL_POINTER", "OVIDHAN_EDITORIAL"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

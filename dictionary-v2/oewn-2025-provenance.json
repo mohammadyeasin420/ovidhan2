@@ -1,0 +1,106 @@
+{
+  "attribution_requirements": {
+    "current_v1_page_wording": "English definition source: Open English WordNet 2025, CC BY 4.0. Bangla explanation and examples adapted and written for Ovidhan.",
+    "editorial_boundary": "Only definition text and sense identity come from OEWN. Bangla meanings, explanations and bilingual examples are Ovidhan editorial work and are labelled as such in every record.",
+    "license": "CC BY 4.0 (attribution required)",
+    "required_on_pages_deriving_definitions": "Name Open English WordNet 2025, link to https://en-word.net/, state the license CC BY 4.0 with link to https://creativecommons.org/licenses/by/4.0/."
+  },
+  "committed_in_repository": "Only the compact synset lock (dictionary-v2/oewn-2025-synset-lock.json). The full OEWN archive and extracted data files are NOT committed.",
+  "extraction_and_lock_procedure": [
+    "1. Download english-wordnet-2025.zip from the OEWN downloads page and keep it outside the repository (for example in a Downloads folder).",
+    "2. Run: node scripts/dictionary-v2/build-oewn-lock.js --archive <path-to-zip>. The tool first verifies the archive SHA-256 and size against this file, then verifies the SHA-256 and size of every archive member listed under \"files\". Any mismatch aborts with a non-zero exit code and nothing is written.",
+    "3. The tool parses data.noun, data.verb, data.adj and data.adv and writes the compact lock for exactly the synset ids referenced by dictionary-v2/records/*.json.",
+    "4. To check that the committed lock is still exact, run the same command with --check (writes nothing, fails on any difference).",
+    "5. Instead of the archive, an already extracted directory may be supplied with --oewn-dir <dir>; each member file is then verified by SHA-256 and size, but the archive hash itself cannot be verified in that mode.",
+    "6. Day-to-day validation (scripts/dictionary-v2/validate.js) runs offline against the committed lock; add --archive or --oewn-dir to additionally re-derive and compare every locked synset from the real source."
+  ],
+  "files": [
+    {
+      "bytes": 18231,
+      "name": "adj.exc",
+      "sha256": "17bd79dbae17636fb4cd9b692b4945c19e5acd2e23b8e372268b5fb89e975531"
+    },
+    {
+      "bytes": 85,
+      "name": "adv.exc",
+      "sha256": "e7291461b629abfe63301bbe1998cee09fd575ed7107abd7ea9763adb05bf0a8"
+    },
+    {
+      "bytes": 3166133,
+      "name": "data.adj",
+      "sha256": "98651304f90602352120dffdd27dfeb8a3fa4dadfc712391934ad5f466601059"
+    },
+    {
+      "bytes": 522340,
+      "name": "data.adv",
+      "sha256": "c40c0bf2eb0c0ba682663a1ad8f62c4eb7cd581189a8f19368b93c6dda8e04d7"
+    },
+    {
+      "bytes": 13339217,
+      "name": "data.noun",
+      "sha256": "97c1c4e4f323e2b29bba5ac52b64aca5b91df9f7661dbc65cf64f28ea36e98d3"
+    },
+    {
+      "bytes": 2868258,
+      "name": "data.verb",
+      "sha256": "2ef76318838583e5cb0d04d019fd7200c629d7aed8cc5cfea41122d3d67c866c"
+    },
+    {
+      "bytes": 827163,
+      "name": "index.adj",
+      "sha256": "85e1e08cc4fc8ac5a8f9d32564799e5e67f04812165dcc8de354797ab53c6492"
+    },
+    {
+      "bytes": 163176,
+      "name": "index.adv",
+      "sha256": "bdd918323bcd816e59564abc2a707c37fad6ccb66b1daf28567a16bef8f4dbd8"
+    },
+    {
+      "bytes": 3903825,
+      "name": "index.noun",
+      "sha256": "b833126645b2f43ddeddf2e3038264b6be09980d37d6740d02e5df625a6cce34"
+    },
+    {
+      "bytes": 6497917,
+      "name": "index.sense",
+      "sha256": "dd12973335613642af035c1174c42a10cf5daa3a301e0497aaf7619045842fee"
+    },
+    {
+      "bytes": 530063,
+      "name": "index.verb",
+      "sha256": "2186bf15fae5100d6220e55bd2af3079849e2f1e82d473642d1c5d0becda54ea"
+    },
+    {
+      "bytes": 24647,
+      "name": "noun.exc",
+      "sha256": "c976744abeb6e99792f8c74fb8f1a2d4da13c7c4227c914d80fe39f596a476bc"
+    },
+    {
+      "bytes": 28359,
+      "name": "verb.exc",
+      "sha256": "bd999f2b30b9126aab9aaa9cb895b92bca72cb6797da41b7b308994716e7ab03"
+    }
+  ],
+  "hash_origin": {
+    "first_recorded_in": "research/SEO_R3B_OEWN_2025_PILOT_PROVENANCE.json",
+    "reverified": "SEO-R6A: archive hashed again with SHA-256 and matched the previously recorded value; every archive member below hashed after in-memory extraction."
+  },
+  "known_limits": [
+    "OEWN 2025 contains no pronunciation data.",
+    "OEWN 2025 index.sense tag counts are all zero (no sense frequency)."
+  ],
+  "schema": "ovidhan.oewn-provenance/1",
+  "source": {
+    "archive_bytes": 9616299,
+    "archive_filename": "english-wordnet-2025.zip",
+    "archive_root_directory": "oewn2025/",
+    "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+    "download_page": "https://en-word.net/downloads",
+    "format": "WNDB",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "name": "Open English WordNet",
+    "project_url": "https://en-word.net/",
+    "release": "2025"
+  }
+}

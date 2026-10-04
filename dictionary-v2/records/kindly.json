@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "kindly",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/kindly.html",
+      "source_page_sha256_lf": "1bc8e2f0cc3e9079236c126eb59e710ddbe524ba7f48e300c6cf3aa9e6851a87",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ভালো ব্যবহার বা দয়া থেকে কোনো কাজ করলে বলা যায় kindly।"
+      },
+      "bangla_meaning": {
+        "display": "সদয়ভাবে",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "in a kind manner or out of kindness",
+        "origin": "OEWN_GLOSS",
+        "text": "in a kind manner or out of kindness"
+      },
+      "examples": [
+        {
+          "bn": "ফার্মগেটে বৃদ্ধ ভদ্রলোক গাড়িতে উঠলে তিনি সদয়ভাবে নিজের আসন ছেড়ে দিলেন।",
+          "en": "She kindly offered her seat when the old man boarded at Farmgate.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00004739-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "kindly"
+}

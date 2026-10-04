@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "potential",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/potential.html",
+      "source_page_sha256_lf": "d319133cd2cc5ee541ca90a73b061a7bf93af4cb74c71a3729a7b874df20367e",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা এখনো হয়নি, কিন্তু পরে হতে পারে বলে আশা করা যায়, তাকে potential বলে।"
+      },
+      "bangla_meaning": {
+        "display": "সম্ভাব্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "expected to become or be; in prospect",
+        "origin": "OEWN_GLOSS",
+        "text": "expected to become or be; in prospect"
+      },
+      "examples": [
+        {
+          "bn": "সম্ভাব্য ক্রেতারা খাতা খুলে বাড়ি দুবার ঘুরে দেখলেন।",
+          "en": "Potential buyers toured the house twice with notebooks open.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01897352-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "potential"
+}

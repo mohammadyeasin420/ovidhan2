@@ -1,0 +1,68 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "tough",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/tough.html",
+      "source_page_sha256_lf": "61a8a07618772c2d5e0a2a0fd797d766897ce2f407f57fdd374352a7dcb40192",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা সামলাতে অনেক ধৈর্য বা শক্তি লাগে, তাকে tough বলে।"
+      },
+      "bangla_meaning": {
+        "display": "কঠিন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "contamination": [
+          {
+            "kind": "OEWN_QUOTED_EXAMPLES_IN_DEFINITION",
+            "quoted_examples": [
+              "a rugged competitive examination",
+              "the rugged conditions of frontier life",
+              "the competition was tough",
+              "it's a tough life",
+              "it was a tough job"
+            ]
+          }
+        ],
+        "oewn_definition": "very difficult; severely testing stamina or resolution",
+        "origin": "OEWN_GLOSS",
+        "text": "very difficult; severely testing stamina or resolution; \"a rugged competitive examination\"; \"the rugged conditions of frontier life\"; \"the competition was tough\"; \"it's a tough life\"; \"it was a tough job\""
+      },
+      "examples": [
+        {
+          "bn": "গণিতের প্রশ্নপত্র কঠিন ছিল, তবু সে শেষ করল।",
+          "en": "The maths paper was tough, but she finished it.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00755165-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "tough"
+}

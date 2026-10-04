@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "crush",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/crush.html",
+      "source_page_sha256_lf": "f7fb93f553183ef14b0a0f462d4265886995572dcfbdc1264aa3d78c944c73bb",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কিশোর বয়সে কারও প্রতি সাময়িক ভালো লাগাকে crush বলে।"
+      },
+      "bangla_meaning": {
+        "display": "সাময়িক মুগ্ধতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "temporary love of an adolescent",
+        "origin": "OEWN_GLOSS",
+        "text": "temporary love of an adolescent"
+      },
+      "examples": [
+        {
+          "bn": "লাইব্রেরির ছেলেটির প্রতি তার সাময়িক মুগ্ধতা আছে।",
+          "en": "She has a crush on the boy in the library.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06932945-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "crush"
+}

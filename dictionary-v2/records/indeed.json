@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "indeed",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/indeed.html",
+      "source_page_sha256_lf": "93d7656cb3c1b08cc8e40d63d0384b142c9ae6341610e8709935177989982b20",
+      "tool": "scripts/dictionary-v2/migrate-v1.js@1.0.0"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "সত্যি বোঝাতে, প্রায়ই জোর দিতে, বলা হয় indeed।"
+      },
+      "bangla_meaning": {
+        "display": "সত্যিই",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "in truth (often tends to intensify)",
+        "origin": "OEWN_GLOSS",
+        "text": "in truth (often tends to intensify)"
+      },
+      "examples": [
+        {
+          "bn": "সত্যিই সন্ধ্যার আগে ফিসফিসানি সত্য প্রমাণিত হল।",
+          "en": "Indeed the whisper proved true before evening.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00037984-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "indeed"
+}
