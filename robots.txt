@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ovidhan.net/sitemap.xml
+Sitemap: https://ovidhan.net/sitemap-approved-words.xml
