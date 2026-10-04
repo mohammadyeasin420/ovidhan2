@@ -159,6 +159,23 @@ View locally from the repository root with any static server (the Learning Explo
 - **Structured data (decision).** One `BreadcrumbList` plus one JSON-LD `@graph`: a schema.org `DefinedTermSet` for the entry and **one `DefinedTerm` per rendered sense**, in visible order (`name` = headword, `description` = the sense's English definition, `alternateName` = its concise Bangla meaning, `termCode` = the visible sense number, `@id`/`url` = page URL + `#sense-N`, `inLanguage` en/bn). Every value is on the page; no ratings, FAQ, pronunciation, synonyms or POS invention (schema.org has no POS property on `DefinedTerm`). Single-sense words use the same shape with one term. URLs use the intended production address; previews carry no canonical.
 - **Production mode.** `renderPage(record, { mode: 'production' })` produces the eventual contract (canonical, indexable, `../` asset paths) with a byte-identical answer body and identical structured data. It is tested but not used to write any production page in this phase.
 
+## Controlled V2 production pilot (SEO-R6E; 12 existing pages, local only until reviewed)
+
+`scripts/dictionary-v2/r6e.js` replaces exactly 12 existing `word/<word>.html` pages (`swarm good chaos designation introvert tough savage repeat crush guess potential waist`) with the production-mode output of the R6D renderer. It is **not** a migration framework: the allowlist is the literal list `PRODUCTION_COHORT` in `render.js`; there is no globbing, fuzzy matching or fallback word, and `render.productionPath()` refuses every other slug.
+
+```
+node scripts/dictionary-v2/r6e.js manifest [--check]     # BEFORE/AFTER proof file: dictionary-v2/r6e-production-manifest.json
+node scripts/dictionary-v2/r6e.js plan                   # full preflight, in memory, writes nothing
+node scripts/dictionary-v2/r6e.js apply --confirm APPLY_R6E_12_V2_PILOT
+node scripts/dictionary-v2/r6e.js verify                 # post-application proof
+node tests/dictionary-v2-r6e.test.js
+```
+
+- **Guarded apply.** Preflight checks: the allowlist is exactly the 12 words and equals the R6C/R6D cohort; none is frozen and all are in the approved registry; the records validate; the pages render deterministically and satisfy `render.productionContractProblems()` (self canonical, title, meta description, one H1, static answer, all senses in order, explorer below the answer, JSON-LD equal to the structured-data builder, no preview markers or hidden hooks); every live page is byte-for-byte its audited V1 baseline (SHA-256 of the LF-normalised page, recorded in the manifest, with the shared shell, one canonical, two JSON-LD blocks, one H1 and one explorer verified); protected files are unmodified. Writing needs the exact token, stages all 12 files, verifies the staged bytes, commits, re-reads and verifies, and rolls everything back on any failure. The page's existing line endings (CRLF in the working tree) are preserved; hashes are LF-normalised. Once the pages equal their expected output a second apply is refused.
+- **Preview/production separation.** Previews stay `noindex,nofollow`, canonical-less and under `dictionary-v2/previews/`; production pages are indexable with exactly one self canonical. `render.js build` refuses to write into `word/`, and a preview-mode page fails the production contract.
+- **V1 view.** After the pilot the 12 pages are V2 pages, so the V1-based tools (`migrate-v1.js`, `check-v1-parity.js`, the R6B cleanup evidence and the R6C traceability checks) read the V1 page from git at the pinned baseline commit (`lib.readV1Page`). R6D/R6C `guard` runs use closed committed ranges (`--base ... --head ...`).
+- **Not touched.** The approved registry, all sitemaps, `robots.txt`, `dictionary.html`/A-Z pages, `learning-explorer.js`, `deploy-production.ps1`, every other word page (the five frozen pages included) and every R6C record.
+
 ## Future enrichment process (not part of this phase)
 
 1. Pin first: new synset ids enter via `build-oewn-lock.js`, so every sourced claim is verifiable offline.

@@ -8,6 +8,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
+const R6D_HEAD = 'b023002b5c15b1e579c35d7bebf41032a4fdc0ae'; // the R6D commit that closes the R6D range
 const lib = require('../scripts/dictionary-v2/lib');
 const r6c = require('../scripts/dictionary-v2/r6c');
 const render = require('../scripts/dictionary-v2/render');
@@ -541,9 +542,10 @@ scenario('scope guard: R6D may only add previews, the renderer, its tests and RE
         'dictionary-v2/previews/sub/good.html', 'scripts/dictionary-v2/migrate-v1.js', 'research/x.json', 'reports/x.json'
     ]) assert.equal(guard([bad]).length, 1, 'must reject ' + bad);
     // the real repository state
-    const changed = r6c.changedSince(root, render.BASE_COMMIT);
-    assert.deepEqual(guard(changed), [], 'real changes since the R6C checkpoint are inside the R6D scope: ' + changed.join(', '));
-    assert.ok(changed.every((p) => !p.startsWith('word/')), 'zero word/*.html changes');
+    // R6D is a closed, committed range (R6C checkpoint..R6D commit); later phases (R6E) have their own guards.
+    const changed = r6c.changedSince(root, render.BASE_COMMIT, R6D_HEAD);
+    assert.deepEqual(guard(changed), [], 'real changes in the R6D range are inside the R6D scope: ' + changed.join(', '));
+    assert.ok(changed.every((p) => !p.startsWith('word/')), 'zero word/*.html changes in the R6D range');
 });
 
 scenario('frozen scope: the five frozen pages are not in the cohort and are byte-identical to the checkpoint', () => {
@@ -554,8 +556,7 @@ scenario('frozen scope: the five frozen pages are not in the cohort and are byte
         assert.equal(git(['diff', '--name-only', render.BASE_COMMIT, '--', 'word/' + slug + '.html']), '', slug + ' unchanged vs checkpoint');
         assert.equal(git(['status', '--porcelain', '--', 'word/' + slug + '.html']), '');
     }
-    assert.equal(git(['diff', '--name-only', render.BASE_COMMIT, '--', 'word']), '', 'zero word/ changes');
-    assert.equal(git(['status', '--porcelain', '--', 'word']), '');
+    assert.equal(git(['diff', '--name-only', render.BASE_COMMIT, R6D_HEAD, '--', 'word']), '', 'zero word/ changes in the R6D range');
 });
 
 console.log('All dictionary-v2 R6D renderer tests passed.');

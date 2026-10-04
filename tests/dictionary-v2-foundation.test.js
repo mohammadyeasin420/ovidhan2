@@ -18,7 +18,7 @@ const root = lib.ROOT;
 const ctx = loadContext();
 const clone = (value) => JSON.parse(JSON.stringify(value));
 const readRecord = (slug) => lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
-const readPage = (slug) => fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8');
+const readPage = (slug) => lib.readV1Page(slug); // the V1 page (live, or its baseline once SEO-R6E replaced it)
 const cohortWords = ctx.cohort.words;
 
 function scenario(name, fn) {

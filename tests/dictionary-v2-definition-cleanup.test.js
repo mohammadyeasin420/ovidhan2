@@ -445,7 +445,7 @@ scenario('post-application: manifest state is internally consistent and fail-clo
 });
 
 scenario('post-application: a second application is prohibited and writes nothing', () => {
-    const io = cleanup.makeFsIo(path.join(root, 'word'));
+    const io = cleanup.makeFsIo(path.join(root, 'word'), { v1View: true });
     const before = new Map(appliedManifest.entries.map((e) => [e.slug, sha(io.read(e.slug))]));
     const again = cleanup.preflightAll(appliedManifest, realCtx, io, { expectedApplicable: 275 });
     assert.equal(again.ok, false);

@@ -3,7 +3,10 @@
 //
 //   node scripts/dictionary-v2/render.js build   [--out <dir>]   write the 12 preview pages (default dictionary-v2/previews)
 //   node scripts/dictionary-v2/render.js check   [--out <dir>]   fail unless the pages on disk equal the freshly rendered pages
-//   node scripts/dictionary-v2/render.js guard   [--base <sha>]   prove R6D changed nothing outside the preview scope
+//   node scripts/dictionary-v2/render.js guard   [--base <sha>] [--head <sha>]
+//                                                prove R6D changed nothing outside the preview scope. With --head the
+//                                                committed range base..head is checked (the closed R6D range is
+//                                                1dcae77a9d..b023002b5c); without it the working tree is checked.
 //   node scripts/dictionary-v2/render.js list                    print the cohort, preview paths and sense counts
 //
 // The renderer is a pure function of (a V2 record, the production page shell). It never reads or writes word/*.html
@@ -46,15 +49,22 @@ const SHELL = Object.freeze({
     footerSha256: 'f5abc6d0a1407ca8593de84f2308f1b1109ba2be6c81266b2e3aa90a91cd147a'
 });
 
-function loadShell(root = lib.ROOT) {
-    const html = lib.toLf(lib.readText(path.join(root, SHELL.source)));
+// The shared header/footer regions of any production word page (LF-normalised), or null when the markers are absent.
+function extractShell(rawHtml) {
+    const html = lib.toLf(rawHtml);
     const hStart = html.indexOf(SHELL.headerStart);
     const mStart = html.indexOf(SHELL.mainStart);
     const fStart = html.indexOf(SHELL.footerStart);
     const fEnd = html.indexOf(SHELL.footerEnd, fStart);
-    if (hStart < 0 || mStart < hStart || fStart < mStart || fEnd < fStart) throw new Error('production shell markers not found in ' + SHELL.source);
-    const header = html.slice(hStart, mStart);
-    const footer = html.slice(fStart, fEnd + SHELL.footerEnd.length) + '\n';
+    if (hStart < 0 || mStart < hStart || fStart < mStart || fEnd < fStart) return null;
+    return { header: html.slice(hStart, mStart), footer: html.slice(fStart, fEnd + SHELL.footerEnd.length) + '\n' };
+}
+const shellHashes = (shell) => ({ header: lib.sha256(Buffer.from(shell.header, 'utf8')), footer: lib.sha256(Buffer.from(shell.footer, 'utf8')) });
+
+function loadShell(root = lib.ROOT) {
+    const shell = extractShell(lib.readText(path.join(root, SHELL.source)));
+    if (!shell) throw new Error('production shell markers not found in ' + SHELL.source);
+    const { header, footer } = shell;
     const headerSha = lib.sha256(Buffer.from(header, 'utf8'));
     const footerSha = lib.sha256(Buffer.from(footer, 'utf8'));
     if (headerSha !== SHELL.headerSha256) throw new Error('production header shell changed (sha256 ' + headerSha + '); review it and update SHELL.headerSha256');
@@ -307,6 +317,86 @@ function renderPage(record, { mode = 'preview', shell = loadShell() } = {}) {
     return out.join('\n') + '\n';
 }
 
+// ------------------------------------------------------------------ production mode (SEO-R6E)
+// Production pages are generated ONLY for the explicit 12-word R6E allowlist below, by the same renderPage() that writes the
+// R6D previews (mode 'production'); there is no second generator. The allowlist is a literal on purpose: it must not widen
+// just because the preview cohort does.
+const PRODUCTION_COHORT = Object.freeze(['swarm', 'good', 'chaos', 'designation', 'introvert', 'tough', 'savage', 'repeat', 'crush', 'guess', 'potential', 'waist']);
+const PRODUCTION_DIR = 'word';
+function productionPath(slug) {
+    if (!PRODUCTION_COHORT.includes(slug)) throw new Error('R6E production allowlist: ' + slug + ' is not one of the 12 pilot words');
+    return PRODUCTION_DIR + '/' + slug + '.html';
+}
+
+const DEV_MARKERS = /noindex|nofollow|DEVELOPMENT PREVIEW|ovidhan-dev-preview|v2-devbar|\[V2 preview\]|R6D|<meta name="robots"/;
+const FORBIDDEN_LD_KEYS = ['aggregateRating', 'review', 'rating', 'mainEntity', 'acceptedAnswer', 'pronunciation', 'synonym', 'antonym', 'sameAs', 'speakable', 'author', 'datePublished'];
+const textOf = (html) => html.replace(/<script\b[\s\S]*?<\/script>/g, '').replace(/<style\b[\s\S]*?<\/style>/g, '').replace(/<[^>]+>/g, ' ')
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+
+// Everything a production word page must satisfy; returns a list of problems (empty = the page meets the R6E contract).
+function productionContractProblems(html, record) {
+    const problems = [];
+    const need = (condition, message) => { if (!condition) problems.push(message); };
+    const count = (re) => (html.match(re) || []).length;
+    const url = pageUrl(record);
+    const senses = record.senses;
+    need(html.startsWith('<!DOCTYPE html>\n<html lang="en">\n<head>'), 'document must start with the production head (no development comment)');
+    need(html.endsWith('</html>\n') && !html.includes('\r'), 'LF output with one trailing newline');
+    need(!DEV_MARKERS.test(html), 'contains a development/preview/noindex marker');
+    need(count(/<link rel="canonical"/g) === 1 && html.includes('<link rel="canonical" href="' + url + '">'), 'exactly one self-referencing canonical ' + url);
+    need(count(/<title>/g) === 1 && html.includes('<title>' + capitalize(record.headword) + ' Meaning in Bangla | Ovidhan</title>'), 'production title contract');
+    need(html.includes('<meta name="description" content="' + esc(metaDescription(record)) + '">'), 'meta description from the structured record');
+    need(html.includes('<link rel="stylesheet" href="../styles.css">') && count(/<script src="\.\.\/learning-explorer\.js"><\/script>/g) === 1, 'production asset paths');
+    const h1s = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
+    need(h1s.length === 1 && textOf(h1s[0][1]) === record.headword + ' meaning in Bangla', 'exactly one H1 "<word> meaning in Bangla"');
+    const quick = /class="v2-quick-meaning" lang="bn">([^<]*)</.exec(html);
+    need(quick && quick[1] === esc(senses[0].bangla_meaning.display), 'primary Bangla answer is the first sense');
+    need(html.includes('<span class="v2-pos">' + esc(senses[0].pos) + '</span>'), 'primary part of speech');
+    need(count(/class="v2-sense" id="sense-\d+"/g) === senses.length, 'every approved sense is rendered (' + senses.length + ')');
+    need(senses.length === 1 ? !html.includes('class="v2-jump"') && !html.includes('class="v2-senses"') : html.includes('class="v2-jump"') && html.includes(senses.length + ' meanings'), 'sense overview present only for multi-sense words');
+    let cursor = -1;
+    senses.forEach((sense, i) => {
+        const checks = [sense.definition.text, sense.bangla_explanation.text, ...sense.examples.flatMap((e) => [e.en, e.bn])];
+        const start = html.indexOf('id="sense-' + (i + 1) + '"');
+        need(start > cursor, 'sense ' + (i + 1) + ' is rendered in approved order');
+        cursor = start;
+        for (const part of checks) need(html.indexOf(esc(part), start) > start, 'sense ' + (i + 1) + ' is missing: ' + part);
+        if (senses.length > 1) need(html.indexOf('class="v2-sense-bn" lang="bn">' + esc(sense.bangla_meaning.display), start) > start, 'sense ' + (i + 1) + ' Bangla meaning');
+    });
+    for (const note of record.usage_notes || []) need(html.includes(esc(note.text)), 'usage note present: ' + note.text);
+    need(!/class="v2-note"/.test(html) || (record.usage_notes || []).length === count(/class="v2-note"/g), 'no usage line unless the record has one');
+    need(count(/class="lexical-source v2-source"/g) === 1 && html.includes('English definition source: <a href="https://en-word.net/" rel="noopener">Open English WordNet 2025</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>.'), 'one compact OEWN attribution');
+    need(html.indexOf('</article>') > 0 && html.indexOf('</article>') < html.indexOf('class="explorer-container"') && html.includes('<h2>🔍 Learning Explorer</h2>') && html.includes('id="wordInput"') && html.includes('value="' + esc(record.headword) + '"') && html.includes('<div id="resultArea"></div>'), 'Learning Explorer below the complete static answer');
+    need(html.indexOf('</main>') < html.indexOf('learning-explorer.js'), 'explorer script placement matches the production pages');
+    need(!/staticWordContent|ovidhan-word-data/.test(html), 'no explorer-hiding hook');
+    need(!/\b\d{8}-[nvasr]\b/.test(html) && !/synset|OEWN_|OVIDHAN_EDITORIAL|v1_original|v1_revision|v1_primary|provenance|archive_sha256|record_status| data-/.test(html), 'no internal provenance or synset ids');
+    need(!/\bFAQ|aggregateRating|ratingValue|pronunciation|IPA\b/.test(html), 'no fake FAQ, rating or pronunciation');
+    const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]);
+    need(blocks.length === 2, 'exactly two JSON-LD blocks (breadcrumb + definitions)');
+    let parsed = [];
+    try { parsed = blocks.map((b) => JSON.parse(b)); } catch (error) { problems.push('JSON-LD is not valid JSON: ' + error.message); }
+    if (parsed.length === 2) {
+        const expected = buildStructuredData(record);
+        need(JSON.stringify(parsed[0]) === JSON.stringify(expected.breadcrumb), 'BreadcrumbList equals the deterministic breadcrumb');
+        need(JSON.stringify(parsed[1]) === JSON.stringify(expected.definedTerms), 'DefinedTermSet/DefinedTerm data equals the deterministic structured data');
+        const keys = new Set(); (function walk(v) { if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) { keys.add(k); walk(x); } })(parsed[1]);
+        for (const key of FORBIDDEN_LD_KEYS) need(!keys.has(key), 'JSON-LD must not contain ' + key);
+        const graph = parsed[1]['@graph'] || [];
+        need(graph.filter((n) => n['@type'] === 'DefinedTerm').length === senses.length && graph.filter((n) => n['@type'] === 'DefinedTermSet').length === 1, 'one DefinedTermSet and one DefinedTerm per sense');
+        need(graph.filter((n) => n['@type'] === 'DefinedTerm').every((n, i) => n.description === senses[i].definition.text && n.alternateName === senses[i].bangla_meaning.display && n.termCode === String(i + 1)), 'DefinedTerms are ordered and equal the visible text');
+    }
+    return problems;
+}
+
+// The only production renderer entry point: allowlist + production mode + contract check.
+function renderProductionPage(record, { shell = loadShell() } = {}) {
+    productionPath(record.slug); // throws unless the slug is on the R6E allowlist
+    const html = renderPage(record, { mode: 'production', shell });
+    const problems = productionContractProblems(html, record);
+    if (problems.length) throw new Error('production page for ' + record.slug + ' violates the R6E contract: ' + problems.join('; '));
+    return html;
+}
+
 // ------------------------------------------------------------------ build / check
 function previewPath(slug) { return PREVIEW_DIR + '/' + slug + '.html'; }
 
@@ -325,8 +415,17 @@ function renderCohort({ root = lib.ROOT, ctx = loadContext({ root }), records = 
     return rendered;
 }
 
+// Writes PREVIEW pages only. It refuses any output directory inside the production word/ namespace, so a preview-mode page
+// (noindex, no canonical, development banner) can never be written into word/.
+function assertNotProductionDir(out, root = lib.ROOT) {
+    const resolved = path.resolve(out);
+    const word = path.resolve(root, PRODUCTION_DIR);
+    if (resolved === word || resolved.startsWith(word + path.sep)) throw new Error('refusing to write preview pages into the production word/ namespace: ' + resolved);
+}
+
 function build({ root = lib.ROOT, out = path.join(root, PREVIEW_DIR) } = {}) {
-    const rendered = renderCohort({ root });
+    assertNotProductionDir(out, root);
+    const rendered = renderCohort({ root, mode: 'preview' });
     fs.mkdirSync(out, { recursive: true });
     for (const [slug, html] of rendered) fs.writeFileSync(path.join(out, slug + '.html'), html, 'utf8');
     return rendered;
@@ -378,6 +477,7 @@ function main() {
     for (let i = 0; i < argv.length; i++) {
         if (argv[i] === '--out') args.out = path.resolve(argv[++i]);
         else if (argv[i] === '--base') args.base = argv[++i];
+        else if (argv[i] === '--head') args.head = argv[++i];
         else throw new Error('Unknown argument: ' + argv[i]);
     }
     const out = args.out || path.join(lib.ROOT, PREVIEW_DIR);
@@ -389,7 +489,7 @@ function main() {
         if (problems.length) { console.error('R6D CHECK FAILED'); for (const p of problems) console.error('  - ' + p); process.exit(1); }
         console.log('R6D check OK: ' + COHORT.length + ' preview pages are byte-identical to the freshly rendered output.');
     } else if (command === 'guard') {
-        const changed = r6c.changedSince(lib.ROOT, args.base);
+        const changed = r6c.changedSince(lib.ROOT, args.base, args.head);
         const errors = r6dGuardCheck(changed);
         if (errors.length) { console.error('R6D GUARD FAILED'); for (const e of errors) console.error('  - ' + e); process.exit(1); }
         console.log('R6D GUARD OK: ' + changed.length + ' changed/new paths since ' + args.base.slice(0, 10) + ', all inside the R6D scope; zero word/*.html, registry, sitemap, robots.txt, dictionary page, deploy script, R6C data or frozen artifact changes.');
@@ -404,7 +504,8 @@ function main() {
 
 module.exports = {
     COHORT, PREVIEW_DIR, BASE_COMMIT, SHELL, CSS, DEV_CSS, RENDERER_VERSION,
-    loadShell, renderPage, renderCohort, buildStructuredData, metaDescription, build, check, previewPath, r6dGuardCheck, R6D_ALLOWED, R6D_NEVER, pageUrl
+    PRODUCTION_COHORT, PRODUCTION_DIR, productionPath, productionContractProblems, renderProductionPage, assertNotProductionDir,
+    extractShell, shellHashes, loadShell, renderPage, renderCohort, buildStructuredData, metaDescription, build, check, previewPath, r6dGuardCheck, R6D_ALLOWED, R6D_NEVER, pageUrl
 };
 if (require.main === module) {
     try { main(); } catch (error) { console.error('FAILED: ' + error.message); process.exit(1); }

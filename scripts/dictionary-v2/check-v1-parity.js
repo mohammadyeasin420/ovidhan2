@@ -69,7 +69,7 @@ function runParity(root = lib.ROOT) {
     const entries = new Map(fs.existsSync(manifestPath) ? lib.readJson(manifestPath).entries.map((e) => [e.slug, e]) : []);
     const results = cohort.words.map((slug) => {
         const record = lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
-        const html = fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8');
+        const html = lib.readV1Page(slug, root); // the V1 page: the live page, or its baseline once SEO-R6E replaced it with a V2 page
         return checkParity(record, html, entries.get(slug) || null);
     });
     const count = (s) => results.filter((r) => r.status === s).length;

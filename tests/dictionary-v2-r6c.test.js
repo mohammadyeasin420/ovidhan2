@@ -21,7 +21,7 @@ const clone = (value) => JSON.parse(JSON.stringify(value));
 const source = enrich.loadSource();
 const report = lib.readJson(path.join(root, r6c.REPORT_PATH));
 const records = r6c.loadRecords(ctx.v2);
-const readPage = (slug) => fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8');
+const readPage = (slug) => lib.readV1Page(slug); // the V1 page (live, or its baseline once SEO-R6E replaced it)
 const hasError = (errors, fragment) => errors.some((e) => e.includes(fragment));
 const validateWith = (overrides = {}) => r6c.validateEditorial({ ctx, source, report, records, ...overrides });
 const withRecord = (slug, fn) => { const copy = new Map([...records].map(([k, v]) => [k, clone(v)])); fn(copy.get(slug)); return copy; };

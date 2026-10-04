@@ -509,7 +509,7 @@ function makeContext(root = lib.ROOT) {
         registry: lib.loadRegistry(root),
         frozen: lib.loadFrozenWords(root),
         provenance: lib.readJson(path.join(root, 'dictionary-v2', 'oewn-2025-provenance.json')),
-        readPage: (slug) => fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8'),
+        readPage: (slug) => lib.readV1Page(slug, root), // the V1 page: live, or its baseline once SEO-R6E replaced it with a V2 page
         checkClean: true
     };
 }
@@ -819,11 +819,17 @@ function applyPreflighted(preflight, io) {
 }
 
 // Filesystem-backed IO for the word directory. Pages are read/written as UTF-8 text with line endings untouched.
-function makeFsIo(wordDir) {
+// options.v1View: true makes read() return the V1 page of a word whose live page has been replaced by a V2 production
+// page (SEO-R6E); the guarded apply engine itself never sets it.
+function makeFsIo(wordDir, options = {}) {
     const target = (slug) => path.join(wordDir, slug + '.html');
     const staging = (slug) => target(slug) + STAGING_SUFFIX;
     return {
         read(slug) {
+            if (options.v1View) {
+                const live = fs.readFileSync(target(slug), 'utf8');
+                if (lib.isV2ProductionPage(live)) return lib.readV1Page(slug, path.dirname(wordDir));
+            }
             const buffer = fs.readFileSync(target(slug));
             const text = buffer.toString('utf8');
             if (!Buffer.from(text, 'utf8').equals(buffer)) throw new Error('page is not round-trippable UTF-8');
@@ -1016,7 +1022,7 @@ function main() {
             }
         }
         printSummary(report.summary);
-        const guarded = guardedDryRun(manifest, ctx, makeFsIo(path.join(ctx.root, 'word')), { oewn: verifiedOewn || undefined });
+        const guarded = guardedDryRun(manifest, ctx, makeFsIo(path.join(ctx.root, 'word'), { v1View: true }), { oewn: verifiedOewn || undefined });
         console.log('source synsets verified against the OEWN archive: ' + (verifiedOewn ? 'yes' : 'no (offline; apply would require it)'));
         if (!guarded.ok) { console.error('GUARDED PREFLIGHT FAILED (' + guarded.errors.length + ')'); guarded.errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
         printGuardedSummary(guarded);

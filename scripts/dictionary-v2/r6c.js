@@ -4,7 +4,8 @@
 // Usage:
 //   node scripts/dictionary-v2/r6c.js report   --archive <zip> [--check]   build (or byte-check) dictionary-v2/r6c-editorial-report.json
 //   node scripts/dictionary-v2/r6c.js validate [--archive <zip>]           validate source, report, records, OEWN alignment and V1 traceability
-//   node scripts/dictionary-v2/r6c.js guard [--base <sha>]                 prove that only R6C files changed since the base commit
+//   node scripts/dictionary-v2/r6c.js guard [--base <sha>] [--head <sha>]  prove that only R6C files changed since the base commit
+//                                                                          (with --head: within the committed range base..head, e.g. 380176337a..1dcae77a9d)
 //
 // Records themselves are produced by scripts/dictionary-v2/migrate-v1.js (migration + r6c-enrich.js); this tool never
 // writes a record and never writes anywhere outside dictionary-v2/r6c-editorial-report.json.
@@ -229,7 +230,7 @@ function validateEditorial({ root = lib.ROOT, ctx = loadContext({ root }), sourc
         if (entry.order_changed !== changedOrder) here('order_changed disagrees with the record');
         if (enriched && (!record.editorial_enrichment || record.editorial_enrichment.order_rationale !== entry.order_rationale)) here('editorial_enrichment.order_rationale differs from the report');
         const pagePath = path.join(root, 'word', slug + '.html');
-        const parityResult = fs.existsSync(pagePath) ? checkParity(record, fs.readFileSync(pagePath, 'utf8'), cleanupEntries.get(slug) || null) : null;
+        const parityResult = fs.existsSync(pagePath) ? checkParity(record, lib.readV1Page(slug, root), cleanupEntries.get(slug) || null) : null;
         if (!parityResult || parityResult.status === 'FAIL') here('V1 parity failed: the V1 sense no longer equals the live V1 page' + (parityResult ? ' (' + parityResult.differences.map((d) => d.field).join(', ') + ')' : ''));
 
         // 6. per-sense learner quality
@@ -310,8 +311,10 @@ function guardCheck(changedPaths) {
 // Untracked local material that has existed since before R6C and must stay untracked (it is not part of any commit).
 const PREEXISTING_UNTRACKED = ['.wrangler/', 'OVIDHAN_APPROVED_2326_WORDS.txt', 'research/'];
 
-function changedSince(root, base) {
+// head (optional): check the committed range base..head only (a closed phase); without it the working tree is checked.
+function changedSince(root, base, head) {
     const git = (args) => execFileSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }).split('\n').map((s) => s.trim()).filter(Boolean);
+    if (head) return git(['diff', '--name-only', base, head]).sort();
     const untracked = git(['ls-files', '--others', '--exclude-standard']).filter((p) => !PREEXISTING_UNTRACKED.some((prefix) => p === prefix || p.startsWith(prefix)));
     return [...new Set([
         ...git(['diff', '--name-only', base]),
@@ -329,6 +332,7 @@ function main() {
         if (argv[i] === '--archive') args.archive = argv[++i];
         else if (argv[i] === '--check') args.check = true;
         else if (argv[i] === '--base') args.base = argv[++i];
+        else if (argv[i] === '--head') args.head = argv[++i];
         else throw new Error('Unknown argument: ' + argv[i]);
     }
     if (command === 'report') {
@@ -354,7 +358,7 @@ function main() {
         const t = report.totals;
         console.log('R6C VALID: ' + t.words + ' words, ' + t.candidates_inspected + ' OEWN candidates inspected, ' + t.selected_senses + ' senses selected (' + t.new_senses_added + ' new, ' + t.v1_senses_retained + ' V1 retained), ' + t.rejected_candidates + ' rejected' + (oewn ? ', verified against the OEWN archive' : ', offline lock mode'));
     } else if (command === 'guard') {
-        const changed = changedSince(lib.ROOT, args.base);
+        const changed = changedSince(lib.ROOT, args.base, args.head);
         const errors = guardCheck(changed);
         if (errors.length) { console.error('R6C GUARD FAILED'); for (const e of errors) console.error('  - ' + e); process.exit(1); }
         console.log('R6C GUARD OK: ' + changed.length + ' changed/new paths since ' + args.base.slice(0, 10) + ', all inside the R6C scope; zero word/*.html, registry, sitemap, robots.txt, dictionary page, deploy script or frozen artifact changes.');

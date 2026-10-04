@@ -18,7 +18,7 @@ const proposedManifest = cleanup.asProposed(appliedManifest);
 const appliedEntries = new Map(appliedManifest.entries.map((e) => [e.slug, e]));
 const cache = new Map();
 
-const livePage = (slug) => fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8');
+const livePage = (slug) => lib.readV1Page(slug); // the live V1 page, or its baseline once SEO-R6E replaced it with a V2 page
 
 // The page as it was before the cleanup (clean/frozen pages are returned unchanged).
 function beforePage(slug) {

@@ -181,7 +181,7 @@ function main() {
     const r6cSource = fs.existsSync(path.join(lib.ROOT, r6c.SOURCE_FILE)) ? r6c.loadSource() : null;
     const cleanupEntries = new Map(fs.existsSync(manifestPath) ? lib.readJson(manifestPath).entries.map((e) => [e.slug, e]) : []);
     for (const slug of cohort.words) {
-        const html = fs.readFileSync(path.join(lib.ROOT, 'word', slug + '.html'), 'utf8');
+        const html = lib.readV1Page(slug); // the V1 page: the live page, or its baseline once SEO-R6E replaced it with a V2 page
         const migrated = buildRecord({ slug, html, oewn, archiveSha256, cleanupEntry: cleanupEntries.get(slug) });
         // SEO-R6C: the 12-word editorial cohort is reproduced as migration + authored enrichment (single-sense words stay unchanged).
         const editorial = r6cSource && r6c.wordSource(r6cSource, slug);

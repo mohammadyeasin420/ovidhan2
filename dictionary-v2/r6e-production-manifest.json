@@ -1,0 +1,143 @@
+{
+  "allowlist": [
+    "swarm",
+    "good",
+    "chaos",
+    "designation",
+    "introvert",
+    "tough",
+    "savage",
+    "repeat",
+    "crush",
+    "guess",
+    "potential",
+    "waist"
+  ],
+  "apply_confirmation": "APPLY_R6E_12_V2_PILOT",
+  "description": "BEFORE/AFTER proof for the 12-word Dictionary V2 production pilot. BEFORE = the V1 page at v1_baseline_commit; AFTER = the page rendered by scripts/dictionary-v2/render.js (production mode) from the listed record. Hashes are SHA-256 of the LF-normalised page.",
+  "pages": [
+    {
+      "path": "word/swarm.html",
+      "record": "dictionary-v2/records/swarm.json",
+      "record_sha256_lf": "2d0c7bbfbcb59bfe3617c7ed7d3635b2df79cbf97d3c31e7c29b4b7ee34633d6",
+      "senses": 3,
+      "slug": "swarm",
+      "v1_before_sha256_lf": "51eb197323928b6caf4ece3f72d09825ca108053dab29662d1d50df3682aecf7",
+      "v2_after_sha256_lf": "45433b40980a40d9dbced95668a2b8e1bd441b17eed472437fd1373b850ca123"
+    },
+    {
+      "path": "word/good.html",
+      "record": "dictionary-v2/records/good.json",
+      "record_sha256_lf": "e3829dfa2fd472a95dd2d8ac7937ed999571dcdc338c25c7caaf4cae9ab6fae7",
+      "senses": 4,
+      "slug": "good",
+      "v1_before_sha256_lf": "3c713bdd45b199a31e53198b5f8748a2a7f52d28df33fa0c1ca649d0dfd607e4",
+      "v2_after_sha256_lf": "d0889e5ad32c1e28d08333aff067b230b4791df50a3e800737f9d5b01a4ee805"
+    },
+    {
+      "path": "word/chaos.html",
+      "record": "dictionary-v2/records/chaos.json",
+      "record_sha256_lf": "1ef962a2391632eb662b19c0116b16b05d4f6323e5cf356cfa0d88c571bc1c7e",
+      "senses": 1,
+      "slug": "chaos",
+      "v1_before_sha256_lf": "4a9de51179c317d239c6a0dd8d28189d98704f83e2887888e0f3b1cb696940f1",
+      "v2_after_sha256_lf": "013bb7bfa0e21da60b9e7b8aaa473dffc58594e57dc265e831dd03b624035a4b"
+    },
+    {
+      "path": "word/designation.html",
+      "record": "dictionary-v2/records/designation.json",
+      "record_sha256_lf": "18c22bdb262096737d8ef42f2837ed38d02afe5dfd89d57c66ebbc38aeb7c8c4",
+      "senses": 3,
+      "slug": "designation",
+      "v1_before_sha256_lf": "501fb1a0368712f6e5c86944ec352d04356e9cb3b7ca28f11e21fd5a8632ea6c",
+      "v2_after_sha256_lf": "cf4223ac0783c4a6bdb20a7f014b26cb0f710c9916afcde52346c40d6057cf75"
+    },
+    {
+      "path": "word/introvert.html",
+      "record": "dictionary-v2/records/introvert.json",
+      "record_sha256_lf": "4c2ead066e8997127d390c18ab28b71968993310f89ea6d9e013dddee6ac66e2",
+      "senses": 1,
+      "slug": "introvert",
+      "v1_before_sha256_lf": "7c978fc0733d37ea828a303f531e1b46318d5717f6082b547ca3d394811d22c6",
+      "v2_after_sha256_lf": "8a9b2b3f74debbdae2b1740e48c306900864bca7aa35ea9f6a650d5e88892ebf"
+    },
+    {
+      "path": "word/tough.html",
+      "record": "dictionary-v2/records/tough.json",
+      "record_sha256_lf": "ac00620aa9fad3dd27d3e1071284c63d9e97f5dd6b3ac36f632fda42303d7e5a",
+      "senses": 4,
+      "slug": "tough",
+      "v1_before_sha256_lf": "6a30b4570dc03700a45ac05f620e28a46ab6d1c15d10172775de219150421cce",
+      "v2_after_sha256_lf": "dabf463986e06160c9457e6905809228e87fa31024f6f503b85210115f48a953"
+    },
+    {
+      "path": "word/savage.html",
+      "record": "dictionary-v2/records/savage.json",
+      "record_sha256_lf": "8160551e8bdb2ba78a7efb6120533a91dabcc14241e585323d922ae2bd456365",
+      "senses": 3,
+      "slug": "savage",
+      "v1_before_sha256_lf": "5437eed29bb46f673014613fe13f7c51fd61b2a9a3954cb201f7b1c3a8c25ad7",
+      "v2_after_sha256_lf": "30b8d3d3303629511a4670aeb681e3830b7868373c765a56865ae798f0fb1f80"
+    },
+    {
+      "path": "word/repeat.html",
+      "record": "dictionary-v2/records/repeat.json",
+      "record_sha256_lf": "9cfb815edd2029f6e4cf00aa42c488b0ff9cbf60c8f13d05d0a1b1bf93b9263b",
+      "senses": 3,
+      "slug": "repeat",
+      "v1_before_sha256_lf": "1432ea310c29903a176947b347054d882492df78b0ecf33c81f8bcaf3361ed6f",
+      "v2_after_sha256_lf": "45e385ff47f730f64b73b00d793f4b4f31522c90dab0b4b40fb5025be08aa270"
+    },
+    {
+      "path": "word/crush.html",
+      "record": "dictionary-v2/records/crush.json",
+      "record_sha256_lf": "cefe4479b029d96050651ce146d7240cdfb22c241e12ee732008da8d390f7762",
+      "senses": 3,
+      "slug": "crush",
+      "v1_before_sha256_lf": "f7fb93f553183ef14b0a0f462d4265886995572dcfbdc1264aa3d78c944c73bb",
+      "v2_after_sha256_lf": "19112a5ee2f2fd2e5dd68b574987e4e47b134508ebaab02b744ca0e2a0da29d8"
+    },
+    {
+      "path": "word/guess.html",
+      "record": "dictionary-v2/records/guess.json",
+      "record_sha256_lf": "8205a05e0eba9483f85a08754255002e9dd60e3f49a73e61466482fe63131eb5",
+      "senses": 3,
+      "slug": "guess",
+      "v1_before_sha256_lf": "6641b1b3ea5d3f27e22c13fcb90bba7b1dfb7c77a186bc59303e4d3c52641a8c",
+      "v2_after_sha256_lf": "d5e4a4e0ed02c4b555734a9b62f393125022a1fed3d83a01352b9086aba9af8d"
+    },
+    {
+      "path": "word/potential.html",
+      "record": "dictionary-v2/records/potential.json",
+      "record_sha256_lf": "24f273354f202a472d15b1dd125a4c1eaca66a9883bb8365bded15b57b6c83a0",
+      "senses": 2,
+      "slug": "potential",
+      "v1_before_sha256_lf": "d319133cd2cc5ee541ca90a73b061a7bf93af4cb74c71a3729a7b874df20367e",
+      "v2_after_sha256_lf": "959d86d1ffbada0ef18d369bf9b2a05a59a12da8560500e881bfeafe9579317e"
+    },
+    {
+      "path": "word/waist.html",
+      "record": "dictionary-v2/records/waist.json",
+      "record_sha256_lf": "843346b1c6be09ccd4f2c1fd2720925b07c8189a70f599db4d0f03289f3028bb",
+      "senses": 1,
+      "slug": "waist",
+      "v1_before_sha256_lf": "2ae0d1fcaf204c17583f3d9ab3ecfbc377a2b7d5319e73ecf435e7fa7ffa7e8b",
+      "v2_after_sha256_lf": "8376ed9d9da86ca96cbc4fcfd00cb918e460b8bb224948bda2e0a19177f5556e"
+    }
+  ],
+  "phase": "SEO-R6E",
+  "renderer": {
+    "mode": "production",
+    "name": "scripts/dictionary-v2/render.js",
+    "shell_footer_sha256": "f5abc6d0a1407ca8593de84f2308f1b1109ba2be6c81266b2e3aa90a91cd147a",
+    "shell_header_sha256": "15cdf6417643daf3836ed5bdc2deeb3c5945023c64a71f8289ba3b001049cdf5",
+    "shell_source": "word/lunch.html",
+    "version": "r6d-1"
+  },
+  "schema": "ovidhan.dictionary-v2.r6e-production-manifest/1",
+  "totals": {
+    "pages": 12,
+    "senses": 31
+  },
+  "v1_baseline_commit": "b023002b5c15b1e579c35d7bebf41032a4fdc0ae"
+}

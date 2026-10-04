@@ -32,7 +32,7 @@ function scenario(name, fn) {
 }
 
 // ---- pre-application corpus (raw text, CRLF preserved), reconstructed from the live pages ----------------------------
-const realIo = cleanup.makeFsIo(path.join(root, 'word'));
+const realIo = cleanup.makeFsIo(path.join(root, 'word'), { v1View: true });
 const registrySlugs = [...cctx.registry].sort();
 const liveHashes = new Map(registrySlugs.map((slug) => [slug, cleanup.pageHash(realIo.read(slug))]));
 const basePages = new Map(registrySlugs.map((slug) => [slug, fixture.beforePage(slug)]));

@@ -253,6 +253,32 @@ function extractV1Page(html) {
     return page;
 }
 
+// ---------------------------------------------------------------- V1 view of a word page (SEO-R6E)
+// Once a word page has been replaced by its Dictionary V2 production page (SEO-R6E), the V1 page that the migration,
+// parity and definition-cleanup evidence refer to no longer exists in the working tree. readV1Page returns that V1 page:
+// the live page while it is still a V1 page, otherwise the V1 page from the pinned baseline commit (the last commit in
+// which every approved page was a V1 page). The git blob is LF; callers hash with sha256Lf, so this is checkout independent.
+const V2_PAGE_MARKER = 'id="dictionary-v2-entry-styles"';
+const V1_BASELINE_COMMIT = 'b023002b5c15b1e579c35d7bebf41032a4fdc0ae';
+const isV2ProductionPage = (html) => html.includes(V2_PAGE_MARKER);
+const v1GitCache = new Map();
+
+function readV1Page(slug, root = ROOT) {
+    const live = fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8');
+    if (!isV2ProductionPage(live)) return live;
+    const key = root + '|' + slug;
+    if (!v1GitCache.has(key)) {
+        try {
+            const blob = require('node:child_process').execFileSync('git', ['show', V1_BASELINE_COMMIT + ':word/' + slug + '.html'], { cwd: root, maxBuffer: 1 << 26 }).toString('utf8');
+            if (isV2ProductionPage(blob)) throw new Error('the baseline page is itself a V2 page');
+            v1GitCache.set(key, blob);
+        } catch (error) {
+            throw new Error('word/' + slug + '.html is a V2 production page and its V1 baseline (' + V1_BASELINE_COMMIT.slice(0, 10) + ') is not readable from git: ' + error.message.split('\n')[0]);
+        }
+    }
+    return v1GitCache.get(key);
+}
+
 // ---------------------------------------------------------------- registry and frozen sets
 function loadRegistry(root = ROOT) {
     const list = readJson(path.join(root, 'data', 'approved-static-word-slugs.json'));
@@ -351,5 +377,5 @@ module.exports = {
     sha256, sha256Lf, stripBom, toLf, readText, readJson, sortKeys, canonicalJson,
     readZipEntries, splitGloss, synsetId, parseOewnData, lexicalAntonyms,
     openOewnSource, verifyOewnSource, oewnFromSynsets, oewnFromLock, classifyDefinition,
-    decodeEntities, extractV1Page, loadRegistry, loadFrozenWords, validateSchema
+    decodeEntities, extractV1Page, V2_PAGE_MARKER, V1_BASELINE_COMMIT, isV2ProductionPage, readV1Page, loadRegistry, loadFrozenWords, validateSchema
 };
