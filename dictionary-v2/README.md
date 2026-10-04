@@ -96,6 +96,19 @@ node tests/dictionary-v2-definition-apply.test.js                               
 - Preflight is all-or-nothing across all 275 pages (hash, frozen, registry, synset against the verified OEWN archive, old definition, JSON-LD, mutation counts, after-state). Only then are outputs staged, verified, committed by atomic rename, re-verified, and rolled back on any failure (non-zero exit, affected files listed).
 - Frozen and non-approved pages are rejected; a second run refuses because pages are no longer at the BEFORE hash.
 
+### Applied state (SEO-R6B.2 / R6B.3)
+
+The 275 cleanups were applied with the guarded engine and the manifest is now `APPLIED`. All BEFORE evidence (hashes, definitions, synset ids, classifications) is preserved; each entry carries `application_state` (`APPLIED`, or `NOT_APPLIED_FROZEN` for the five frozen pages) and `applied.before_state_commit` names the commit that holds the BEFORE pages.
+
+```
+node scripts/dictionary-v2/definition-cleanup.js --validate              # APPLIED mode: pages must be at AFTER, frozen at BEFORE
+node scripts/dictionary-v2/definition-cleanup.js verify --archive <zip>  # + reverse proof, git proof, synsets vs the OEWN archive
+```
+
+- Any drift from an AFTER hash fails closed; a changed frozen page fails as `FROZEN_CHANGED`.
+- `apply` refuses an APPLIED manifest (`ALREADY_APPLIED`); the pre-application view cannot be replayed because the BEFORE-hash protection is unchanged. `audit --write` refuses to overwrite an APPLIED manifest.
+- Tests never depend on the live pages being contaminated: `tests/dictionary-v2-cleanup-fixture.js` rebuilds the BEFORE pages by swapping the two replacements back (accepted only if the hash equals the audited BEFORE hash).
+
 ## Future enrichment process (not part of this phase)
 
 1. Pin first: new synset ids enter via `build-oewn-lock.js`, so every sourced claim is verifiable offline.

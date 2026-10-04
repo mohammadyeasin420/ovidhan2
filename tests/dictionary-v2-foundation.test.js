@@ -244,14 +244,21 @@ scenario('migration refuses to guess an ambiguous or unmatched sense', () => {
     assert.throws(() => buildRecord({ slug: 'chaos', html, oewn, archiveSha256: '0'.repeat(64) }), /matches 0 OEWN synsets/);
 });
 
-scenario('V1 parity: 28/28 records match the live pages (cleanup-pending records are flagged, not failed)', () => {
+scenario('V1 parity: 28/28 records match the live pages (19 PASS + 9 PASS_CLEANED after the SEO-R6B.2 cleanup)', () => {
     const report = runParity();
     assert.equal(report.records, 28);
     assert.equal(report.fail, 0);
     assert.equal(report.pass, 19);
+    assert.equal(report.pass_cleaned, 9);
     assert.equal(report.pass_known_contamination, 0);
-    assert.equal(report.pass_pending_cleanup, 9);
-    assert.equal(report.pass_cleaned, 0);
+    assert.equal(report.pass_pending_cleanup, 0);
+    // PASS_PENDING_CLEANUP stays a supported pre-application state: checked on the isolated BEFORE fixture, not on production
+    const fixture = require('./dictionary-v2-cleanup-fixture');
+    for (const word of ['creepy', 'cuddle', 'good', 'grateful', 'precious', 'repeat', 'swarm', 'tough', 'word']) {
+        const entry = fixture.appliedEntries.get(word);
+        assert.equal(checkParity(readRecord(word), fixture.beforePage(word), entry).status, 'PASS_PENDING_CLEANUP', word);
+        assert.equal(checkParity(readRecord(word), readPage(word), entry).status, 'PASS_CLEANED', word);
+    }
 });
 
 scenario('V1 parity detects any learner-facing drift', () => {

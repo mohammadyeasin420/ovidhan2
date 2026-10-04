@@ -10,7 +10,11 @@
 //   dry-run  [--archive <zip>] [--list] [--json <path>]   show exactly what WOULD change; no writes to pages
 //   apply    --archive <zip> --confirm APPLY_275_DEFINITION_CLEANUPS   (SEO-R6B.1 engine; NOT authorised yet)
 //            all-or-nothing preflight of every page, staged writes, hash verification, rollback on failure
-// The --validate / --dry-run / --apply spellings are accepted as aliases of the subcommands.
+//   verify   [--archive <zip>] [--no-git]   post-application verification (manifest APPLIED): AFTER hashes, frozen untouched,
+//            reverse proof of BEFORE, optional git proof against applied.before_state_commit (SEO-R6B.3)
+//   mark-applied --before-commit <sha> --archive <zip>   one-time PROPOSED -> APPLIED transition, only after verification
+// The --validate / --dry-run / --apply / --verify spellings are accepted as aliases of the subcommands.
+// A manifest with status APPLIED can never be applied again; audit --write refuses to overwrite it.
 //
 // Contamination types (a page definition is compared with the OEWN synset it was taken from):
 //   CLEAN                              text equals the OEWN definition
@@ -218,7 +222,7 @@ function buildManifest({ registry, readPage, oewn, frozen, provenance }) {
         schema: MANIFEST_SCHEMA,
         phase: 'SEO-R6B',
         status: 'PROPOSED_NOT_APPLIED',
-        description: 'Proof of the V1 definition cleanup: BEFORE (live page) -> OEWN source definition -> AFTER (exactly the OEWN definition). Nothing in this file has been applied to word/*.html.',
+        description: DESCRIPTION_PROPOSED,
         oewn: { release: provenance.source.release, archive_sha256: provenance.source.archive_sha256.toLowerCase() },
         rules: [
             'AFTER definition is exactly the OEWN definition of the verified source synset (text before the first \'; "\' of the gloss). No paraphrase, no enrichment.',
@@ -248,7 +252,7 @@ function buildManifest({ registry, readPage, oewn, frozen, provenance }) {
 }
 
 // ---------------------------------------------------------------- manifest validation (fail closed)
-function validateEntry(entry, ctx, { applicable }) {
+function validateEntry(entry, ctx, { applicable, mode = 'PROPOSED' }) {
     const errors = [];
     const where = (entry.slug || '?') + ': ';
     const fail = (m) => errors.push(where + m);
@@ -277,7 +281,18 @@ function validateEntry(entry, ctx, { applicable }) {
         const hash = lib.sha256Lf(Buffer.from(html, 'utf8'));
         const page = lib.extractV1Page(html);
         if (learnerFieldsHash(page) !== entry.learner_fields_sha256) fail('learner-facing fields (POS, Bangla meaning, Bangla explanation, examples) differ from the audited page');
-        if (hash === entry.page.sha256_lf_before) {
+        if (mode === 'APPLIED') {
+            // Post-application verification: applicable pages must be exactly at the AFTER hash, frozen pages exactly at BEFORE.
+            if (applicable) {
+                if (hash !== entry.page.sha256_lf_after_expected) fail('AFTER_HASH_MISMATCH: page drifted from the applied state (fail closed)');
+                else {
+                    if (page.definition !== entry.after_definition) fail('applied page definition is not the clean OEWN definition');
+                    const reversed = reverseCleanup(html, entry);
+                    if (reversed.errors.length) fail('applied page is not provably BEFORE plus the two replacements: ' + reversed.errors.join('; '));
+                }
+            } else if (hash !== entry.page.sha256_lf_before) fail('FROZEN_CHANGED: frozen page differs from its audited BEFORE state');
+            else if (page.definition !== entry.before_definition) fail('frozen page definition differs from the documented contaminated definition');
+        } else if (hash === entry.page.sha256_lf_before) {
             if (applicable) {
                 const plan = planPageCleanup(html, entry);
                 if (plan.errors.length) fail('edit not provable: ' + plan.errors.join('; '));
@@ -287,7 +302,7 @@ function validateEntry(entry, ctx, { applicable }) {
                 }
             }
         } else if (applicable && hash === entry.page.sha256_lf_after_expected) {
-            if (page.definition !== entry.after_definition) fail('page already at AFTER hash but definition differs');
+            fail('page is already at the AFTER state but the manifest status is PROPOSED_NOT_APPLIED (inconsistent)');
         } else fail('page changed since the audit (hash mismatch)');
     }
     return errors;
@@ -300,8 +315,10 @@ function validateManifest(manifest, ctx) {
     if (manifest.oewn.archive_sha256 !== ctx.provenance.source.archive_sha256.toLowerCase()) errors.push('manifest: archive_sha256 differs from provenance');
     const sorted = (list) => list.every((e, i) => i === 0 || list[i - 1].slug < e.slug);
     for (const key of ['entries', 'frozen_documented', 'manual_review']) if (!sorted(manifest[key])) errors.push(key + ': must be sorted by slug without duplicates');
-    for (const e of manifest.entries) errors.push(...validateEntry(e, ctx, { applicable: true }));
-    for (const e of manifest.frozen_documented) errors.push(...validateEntry(e, ctx, { applicable: false }));
+    const mode = manifest.status === 'APPLIED' ? 'APPLIED' : 'PROPOSED';
+    errors.push(...validateApplicationState(manifest));
+    for (const e of manifest.entries) errors.push(...validateEntry(e, ctx, { applicable: true, mode }));
+    for (const e of manifest.frozen_documented) errors.push(...validateEntry(e, ctx, { applicable: false, mode }));
     for (const m of manifest.manual_review) {
         if (!ctx.registry.has(m.slug)) errors.push(m.slug + ': manual-review slug is not approved');
         if (!m.reasons || !m.reasons.length) errors.push(m.slug + ': manual-review entry needs a reason');
@@ -318,6 +335,145 @@ function validateManifest(manifest, ctx) {
         if (fingerprint(rows).clean_definitions_sha256 !== manifest.corpus_fingerprint.clean_definitions_sha256) errors.push('manifest: clean pages no longer match the audited definitions');
     }
     return errors;
+}
+
+// ---------------------------------------------------------------- applied state (SEO-R6B.3)
+// A manifest is either PROPOSED_NOT_APPLIED (pages must be at BEFORE) or APPLIED (pages must be at AFTER; frozen pages
+// still at BEFORE). All BEFORE evidence is preserved in both states. APPLIED manifests can never be applied again.
+const DESCRIPTION_PROPOSED = 'Proof of the V1 definition cleanup: BEFORE (live page) -> OEWN source definition -> AFTER (exactly the OEWN definition). Nothing in this file has been applied to word/*.html.';
+const DESCRIPTION_APPLIED = 'Record of the applied V1 definition cleanup: BEFORE (page at applied.before_state_commit) -> OEWN source definition -> AFTER (exactly the OEWN definition, now live in word/*.html). The five frozen experiment pages were deliberately NOT applied.';
+const APPLICATION_STATE = Object.freeze({ APPLIED: 'APPLIED', FROZEN: 'NOT_APPLIED_FROZEN' });
+
+function validateApplicationState(manifest) {
+    const errors = [];
+    const applied = manifest.status === 'APPLIED';
+    const states = [...manifest.entries, ...manifest.frozen_documented].map((e) => e.application_state);
+    if (applied) {
+        const a = manifest.applied;
+        if (!a || !/^[0-9a-f]{40}$/.test(a.before_state_commit || '')) errors.push('manifest: applied.before_state_commit is missing or not a full commit SHA');
+        else {
+            if (a.phase !== 'SEO-R6B.3') errors.push('manifest: applied.phase is wrong');
+            if (a.pages_applied !== manifest.entries.length) errors.push('manifest: applied.pages_applied disagrees with entries');
+            if (JSON.stringify(a.frozen_not_applied) !== JSON.stringify(manifest.frozen_documented.map((e) => e.slug))) errors.push('manifest: applied.frozen_not_applied disagrees with the frozen entries');
+        }
+        if (manifest.entries.some((e) => e.application_state !== APPLICATION_STATE.APPLIED)) errors.push('manifest: every applicable entry must be application_state APPLIED');
+        if (manifest.frozen_documented.some((e) => e.application_state !== APPLICATION_STATE.FROZEN)) errors.push('manifest: every frozen entry must be application_state NOT_APPLIED_FROZEN');
+        if (manifest.manual_review.length) errors.push('manifest: an APPLIED manifest cannot carry manual-review pages');
+        if (manifest.summary.applied_non_frozen_cleanup !== manifest.entries.length || manifest.summary.frozen_not_applied !== manifest.frozen_documented.length) errors.push('manifest: applied summary counts disagree with the lists');
+        if (manifest.description !== DESCRIPTION_APPLIED) errors.push('manifest: description does not describe the APPLIED state');
+    } else {
+        if (manifest.applied !== undefined || states.some((s) => s !== undefined) || manifest.summary.applied_non_frozen_cleanup !== undefined || manifest.summary.frozen_not_applied !== undefined) errors.push('manifest: a PROPOSED_NOT_APPLIED manifest must not carry application state');
+    }
+    return errors;
+}
+
+// PROPOSED -> APPLIED. Pure transformation; preserves every BEFORE/AFTER/synset/classification field.
+function markApplied(manifest, beforeStateCommit) {
+    if (manifest.status !== 'PROPOSED_NOT_APPLIED') throw new Error('only a PROPOSED_NOT_APPLIED manifest can be marked APPLIED (status is "' + manifest.status + '")');
+    const next = JSON.parse(JSON.stringify(manifest));
+    next.status = 'APPLIED';
+    next.description = DESCRIPTION_APPLIED;
+    next.applied = {
+        phase: 'SEO-R6B.3',
+        before_state_commit: beforeStateCommit,
+        applied_with: 'scripts/dictionary-v2/definition-cleanup.js apply (SEO-R6B.2)',
+        pages_applied: next.entries.length,
+        frozen_not_applied: next.frozen_documented.map((e) => e.slug)
+    };
+    next.entries.forEach((e) => { e.application_state = APPLICATION_STATE.APPLIED; });
+    next.frozen_documented.forEach((e) => { e.application_state = APPLICATION_STATE.FROZEN; });
+    next.summary.applied_non_frozen_cleanup = next.entries.length;
+    next.summary.frozen_not_applied = next.frozen_documented.length;
+    return next;
+}
+
+// APPLIED -> PROPOSED (exact inverse of markApplied). Used to rebuild the pre-application view for fixtures and tests.
+function asProposed(manifest) {
+    const next = JSON.parse(JSON.stringify(manifest));
+    next.status = 'PROPOSED_NOT_APPLIED';
+    next.description = DESCRIPTION_PROPOSED;
+    delete next.applied;
+    for (const e of [...next.entries, ...next.frozen_documented]) delete e.application_state;
+    delete next.summary.applied_non_frozen_cleanup;
+    delete next.summary.frozen_not_applied;
+    return next;
+}
+
+// Reconstructs the BEFORE page from an applied page by swapping the two replacements back, and proves it by hash.
+// The visible span's escaping style cannot be inferred from the clean text, so both known styles are tried;
+// only the one that reproduces the audited BEFORE hash is accepted.
+function reverseCleanup(html, entry) {
+    const located = locateEdit(html, { before_definition: entry.after_definition, after_definition: entry.before_definition });
+    if (located.errors.length) return { html: null, errors: located.errors.map((e) => 'reverse: ' + e) };
+    const [first, second] = located.ranges;
+    for (const style of [escapeHtml, escapeText]) {
+        const text = (range) => (range.kind === 'VISIBLE_DEFINITION' ? style(entry.before_definition) : range.neu);
+        const candidate = html.slice(0, first.start) + text(first) + html.slice(first.end, second.start) + text(second) + html.slice(second.end);
+        if (lib.sha256Lf(Buffer.from(candidate, 'utf8')) === entry.page.sha256_lf_before) return { html: candidate, errors: [] };
+    }
+    return { html: null, errors: ['reverse: the reconstructed page does not equal the audited BEFORE hash'] };
+}
+
+function gitReader(root = lib.ROOT) {
+    const { execFileSync } = require('node:child_process');
+    return (ref, relPath) => execFileSync('git', ['show', ref + ':' + relPath], { cwd: root, maxBuffer: 1 << 26 }).toString('utf8');
+}
+
+// Fail-closed verification of the applied state. options.oewn: verified OEWN lookup. options.gitRead(ref, path): optional
+// independent proof against the pre-application commit (full byte-range and structure comparison).
+function verifyApplied(manifest, ctx, options = {}) {
+    const errors = [];
+    if (manifest.status !== 'APPLIED') errors.push('manifest status is "' + manifest.status + '" (expected APPLIED)');
+    errors.push(...validateManifest(manifest, ctx));
+    const counts = {
+        approved_corpus: ctx.registry.size,
+        applied_non_frozen_cleanup: manifest.entries.length,
+        frozen_excluded: manifest.frozen_documented.length,
+        frozen_unchanged: 0,
+        manual_review: manifest.manual_review.length,
+        clean_unchanged: manifest.corpus_fingerprint.clean_slugs.length,
+        after_hash_matches: 0,
+        visible_definition_changes: 0,
+        json_ld_changes: 0,
+        reverse_proofs: 0,
+        git_proof: Boolean(options.gitRead),
+        git_unrelated_changed_lines: options.gitRead ? 0 : null,
+        git_pages_proven: 0
+    };
+    for (const entry of manifest.entries) {
+        let html;
+        try { html = ctx.readPage(entry.slug); } catch (error) { errors.push(entry.slug + ': page cannot be read'); continue; }
+        if (lib.sha256Lf(Buffer.from(html, 'utf8')) === entry.page.sha256_lf_after_expected) counts.after_hash_matches++;
+        if (lib.extractV1Page(html).definition === entry.after_definition) counts.visible_definition_changes++;
+        if (countOccurrences(html, '"description": ' + JSON.stringify(entry.after_definition)) === 1 && countOccurrences(html, '"description": ' + JSON.stringify(entry.before_definition)) === 0) counts.json_ld_changes++;
+        if (!reverseCleanup(html, entry).errors.length) counts.reverse_proofs++;
+        if (options.oewn) for (const e of verifySynsetAgainstSource(entry, options.oewn)) errors.push(entry.slug + ': ' + e);
+        if (options.gitRead) {
+            const ref = manifest.applied && manifest.applied.before_state_commit;
+            try {
+                const before = lib.toLf(options.gitRead(ref, entry.page.path));
+                const after = lib.toLf(html);
+                if (lib.sha256Lf(Buffer.from(before, 'utf8')) !== entry.page.sha256_lf_before) errors.push(entry.slug + ': page at ' + ref.slice(0, 10) + ' does not have the audited BEFORE hash');
+                else {
+                    const proof = verifyAfterState(before, after, entry);
+                    proof.errors.forEach((e) => errors.push(entry.slug + ': ' + e));
+                    counts.git_unrelated_changed_lines += proof.unrelated_byte_changes || 0;
+                    counts.git_pages_proven++;
+                }
+            } catch (error) { errors.push(entry.slug + ': git proof failed: ' + error.message.split('\n')[0]); }
+        }
+    }
+    for (const entry of manifest.frozen_documented) {
+        let html;
+        try { html = ctx.readPage(entry.slug); } catch (error) { errors.push(entry.slug + ': frozen page cannot be read'); continue; }
+        if (lib.sha256Lf(Buffer.from(html, 'utf8')) === entry.page.sha256_lf_before) counts.frozen_unchanged++;
+        if (options.oewn) for (const e of verifySynsetAgainstSource(entry, options.oewn)) errors.push(entry.slug + ': ' + e);
+    }
+    const n = manifest.entries.length;
+    for (const key of ['after_hash_matches', 'visible_definition_changes', 'json_ld_changes', 'reverse_proofs']) if (counts[key] !== n) errors.push('applied verification: ' + key + ' = ' + counts[key] + ' (expected ' + n + ')');
+    if (counts.frozen_unchanged !== manifest.frozen_documented.length) errors.push('applied verification: frozen_unchanged = ' + counts.frozen_unchanged + ' (expected ' + manifest.frozen_documented.length + ')');
+    if (options.gitRead && counts.git_pages_proven !== n) errors.push('applied verification: git proof covered ' + counts.git_pages_proven + ' of ' + n + ' pages');
+    return { ok: errors.length === 0, errors: [...new Set(errors)], counts };
 }
 
 // ---------------------------------------------------------------- structured-record support
@@ -561,7 +717,8 @@ function preflightEntry(entry, ctx, io, options = {}) {
 // options.requestedSlugs: when given, must be exactly the set of applicable entries (no partial batches, no extras).
 function preflightAll(manifest, ctx, io, options = {}) {
     const errors = [];
-    if (manifest.status !== 'PROPOSED_NOT_APPLIED') errors.push('manifest status is "' + manifest.status + '" (expected PROPOSED_NOT_APPLIED)');
+    if (manifest.status === 'APPLIED') errors.push('ALREADY_APPLIED: manifest status is APPLIED (expected PROPOSED_NOT_APPLIED); a second application is prohibited');
+    else if (manifest.status !== 'PROPOSED_NOT_APPLIED') errors.push('manifest status is "' + manifest.status + '" (expected PROPOSED_NOT_APPLIED)');
     errors.push(...validateManifest(manifest, { ...ctx, readPage: io.read }));
     if (io.listStale && io.listStale().length) errors.push('stale staging files present: ' + io.listStale().join(', '));
     const applicable = new Set(manifest.entries.map((e) => e.slug));
@@ -741,6 +898,8 @@ function parseArgs(argv) {
         if (argv[i] === '--confirm') args.confirm = argv[++i];
         else if (argv[i] === '--archive') args.archive = argv[++i];
         else if (argv[i] === '--oewn-dir') args.dir = argv[++i];
+        else if (argv[i] === '--before-commit') args.beforeCommit = argv[++i];
+        else if (argv[i] === '--no-git') args.noGit = true;
         else if (argv[i] === '--write') args.write = true;
         else if (argv[i] === '--list') args.list = true;
         else if (argv[i] === '--json') args.json = argv[++i];
@@ -771,9 +930,45 @@ function freshManifest(args, ctx, oewn = loadVerifiedOewn(args, ctx)) {
     return buildManifest({ registry: ctx.registry, readPage: ctx.readPage, oewn, frozen: ctx.frozen, provenance: ctx.provenance });
 }
 
+function runVerify(manifest, ctx, args) {
+    const oewn = args.archive || args.dir ? loadVerifiedOewn(args, ctx) : null;
+    const result = verifyApplied(manifest, ctx, { oewn: oewn || undefined, gitRead: args.noGit ? undefined : gitReader(ctx.root) });
+    if (!result.ok) { console.error('APPLIED-STATE VERIFICATION FAILED (' + result.errors.length + ')'); result.errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
+    const c = result.counts;
+    console.log('--- applied-state verification');
+    console.log('approved corpus: ' + c.approved_corpus);
+    console.log('applied non-frozen cleanup: ' + c.applied_non_frozen_cleanup);
+    console.log('frozen excluded (not applied): ' + c.frozen_excluded + ' | frozen pages unchanged: ' + c.frozen_unchanged);
+    console.log('manual review: ' + c.manual_review);
+    console.log('clean pages unchanged (fingerprint): ' + c.clean_unchanged);
+    console.log('AFTER hash matches: ' + c.after_hash_matches + '/' + c.applied_non_frozen_cleanup);
+    console.log('visible-definition changes: ' + c.visible_definition_changes + ' | JSON-LD changes: ' + c.json_ld_changes + ' | BEFORE reconstructed by reverse proof: ' + c.reverse_proofs);
+    console.log(c.git_proof ? 'git proof vs ' + manifest.applied.before_state_commit.slice(0, 10) + ': ' + c.git_pages_proven + ' pages byte-range/structure proven, unrelated bytes = ' + c.git_unrelated_changed_lines : 'git proof: skipped (--no-git)');
+    console.log('source synsets verified against the OEWN archive: ' + (oewn ? 'yes' : 'no (add --archive)'));
+    console.log('second application: PROHIBITED (manifest status APPLIED)');
+}
+
 function main() {
     const args = parseArgs(process.argv.slice(2));
     const ctx = makeContext();
+    if (args.cmd === 'mark-applied') {
+        // One-time PROPOSED -> APPLIED transition, only after the pages are verified at their AFTER state.
+        if (!/^[0-9a-f]{40}$/.test(args.beforeCommit || '')) throw new Error('mark-applied requires --before-commit <full 40-hex SHA of the pre-application commit>');
+        if (!args.archive && !args.dir) throw new Error('mark-applied requires --archive <zip>');
+        const candidate = markApplied(loadManifest(), args.beforeCommit);
+        const result = verifyApplied(candidate, ctx, { oewn: loadVerifiedOewn(args, ctx), gitRead: gitReader(ctx.root) });
+        if (!result.ok) { console.error('Refusing to mark APPLIED (' + result.errors.length + ')'); result.errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
+        fs.writeFileSync(MANIFEST_PATH, lib.canonicalJson(candidate), 'utf8');
+        console.log('Manifest marked APPLIED (' + candidate.entries.length + ' pages applied, ' + candidate.frozen_documented.length + ' frozen NOT applied).');
+        return;
+    }
+    if (args.cmd === 'audit' && fs.existsSync(MANIFEST_PATH) && loadManifest().status === 'APPLIED') {
+        // Pages are no longer in the BEFORE state, so the audit cannot be regenerated from them; verify the applied state instead.
+        if (args.write) throw new Error('refusing to regenerate an APPLIED manifest (the BEFORE evidence must be preserved)');
+        if (!args.archive && !args.dir) throw new Error('audit requires --archive <zip> or --oewn-dir <dir>');
+        runVerify(loadManifest(), ctx, args);
+        return;
+    }
     if (args.cmd === 'audit') {
         if (!args.archive && !args.dir) throw new Error('audit requires --archive <zip> or --oewn-dir <dir>');
         const manifest = freshManifest(args, ctx);
@@ -794,8 +989,18 @@ function main() {
         console.log('CLEANUP MANIFEST VALID: ' + manifest.entries.length + ' safe entries, ' + manifest.frozen_documented.length + ' frozen documented, ' + manifest.manual_review.length + ' manual review.');
         return;
     }
+    if (args.cmd === 'verify') {
+        if (errors.length) { console.error('APPLIED-STATE VERIFICATION FAILED (' + errors.length + ')'); errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
+        runVerify(manifest, ctx, args);
+        return;
+    }
     if (args.cmd === 'dry-run') {
         if (errors.length) { console.error('Refusing dry-run: manifest invalid (' + errors.length + ')'); errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
+        if (manifest.status === 'APPLIED') {
+            console.log('Manifest is APPLIED: nothing left to apply (files that WOULD change: 0). Verifying the applied state instead.');
+            runVerify(manifest, ctx, args);
+            return;
+        }
         let verifiedOewn = null;
         if (args.archive || args.dir) {
             verifiedOewn = loadVerifiedOewn(args, ctx);
@@ -821,6 +1026,7 @@ function main() {
     }
     if (args.cmd === 'apply') {
         // The real mutation entry point. Everything is verified before the first byte is written.
+        if (manifest.status !== 'PROPOSED_NOT_APPLIED') throw new Error('ALREADY_APPLIED: manifest status is "' + manifest.status + '"; a second application is prohibited and nothing was written');
         if (args.confirm !== APPLY_CONFIRMATION) throw new Error('apply requires --confirm ' + APPLY_CONFIRMATION);
         if (!args.archive && !args.dir) throw new Error('apply requires --archive <zip> (or --oewn-dir) for the independent re-audit');
         if (errors.length) { console.error('Refusing apply: manifest invalid (' + errors.length + ')'); errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
@@ -834,7 +1040,7 @@ function main() {
         console.log('APPLIED and verified: ' + outcome.written.length + ' pages.');
         return;
     }
-    throw new Error('Unknown subcommand "' + args.cmd + '" (use audit | validate | dry-run | apply)');
+    throw new Error('Unknown subcommand "' + args.cmd + '" (use audit | validate | verify | dry-run | apply | mark-applied)');
 }
 
 function printGuardedSummary(g) {
@@ -860,6 +1066,8 @@ module.exports = {
     validateEntry, validateManifest, applyEntryToRecord, loadManifest, makeContext, dryRun,
     // SEO-R6B.1 guarded apply engine
     APPLY_CONFIRMATION, STAGING_SUFFIX, locateEdit, differingBytes, structureOf, compareStructure, verifyAfterState,
+    DESCRIPTION_PROPOSED, DESCRIPTION_APPLIED, APPLICATION_STATE, validateApplicationState, markApplied, asProposed,
+    reverseCleanup, gitReader, verifyApplied,
     deriveLock, verifySynsetAgainstSource, preflightEntry, preflightAll, applyPreflighted, makeFsIo, snapshotPages, guardedDryRun, pageHash
 };
 if (require.main === module) {

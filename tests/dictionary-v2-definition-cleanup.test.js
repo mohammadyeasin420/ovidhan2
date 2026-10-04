@@ -1,7 +1,10 @@
 'use strict';
-// SEO-R6B: focused tests for the V1 definition-contamination cleanup proof.
+// SEO-R6B / R6B.3: focused tests for the V1 definition-contamination cleanup proof.
 // Run: node tests/dictionary-v2-definition-cleanup.test.js
 // Offline by design (committed manifest, committed lock, live word/*.html read-only).
+// The real repository is in the POST-APPLICATION state. Every test that needs PRE-APPLICATION input uses the isolated
+// BEFORE fixture (tests/dictionary-v2-cleanup-fixture.js: live pages with the two replacements swapped back, accepted
+// only when the hash equals the audited BEFORE hash), never the live contaminated text. Nothing is written to disk.
 // The full independent re-audit runs only when the OEWN archive is present (see OVIDHAN_OEWN_ARCHIVE).
 
 const assert = require('node:assert/strict');
@@ -15,11 +18,13 @@ const { checkParity } = require('../scripts/dictionary-v2/check-v1-parity');
 
 const { TYPES } = cleanup;
 const root = lib.ROOT;
-const manifest = cleanup.loadManifest();
-const cctx = cleanup.makeContext();
+const fixture = require('./dictionary-v2-cleanup-fixture');
+const appliedManifest = fixture.appliedManifest;  // what is committed (status APPLIED)
+const manifest = fixture.proposedManifest;        // the same evidence in its pre-application (PROPOSED_NOT_APPLIED) view
+const cctx = fixture.beforeContext();             // pages in the BEFORE state
 const vctx = loadContext();
 const clone = (value) => JSON.parse(JSON.stringify(value));
-const readPage = (slug) => fs.readFileSync(path.join(root, 'word', slug + '.html'), 'utf8');
+const readPage = fixture.beforePage;
 const entryOf = (slug) => manifest.entries.find((e) => e.slug === slug);
 const hasError = (errors, fragment) => errors.some((e) => e.includes(fragment));
 const sha = (html) => lib.sha256Lf(Buffer.from(html, 'utf8'));
@@ -263,7 +268,10 @@ scenario('fail closed: unprovable edit locations, changed pages and malformed ma
 
 scenario('manifest is deterministic and canonical', () => {
     const text = lib.toLf(fs.readFileSync(cleanup.MANIFEST_PATH, 'utf8'));
-    assert.equal(text, lib.canonicalJson(manifest));
+    assert.equal(text, lib.canonicalJson(appliedManifest));
+    assert.equal(appliedManifest.status, 'APPLIED');
+    // the pre-application view is an exact, lossless inverse of the applied transition
+    assert.equal(lib.canonicalJson(cleanup.markApplied(manifest, appliedManifest.applied.before_state_commit)), lib.canonicalJson(appliedManifest));
     const oewn = lib.oewnFromLock(vctx.lock);
     const a = cleanup.auditPage('tough', readPage('tough'), oewn);
     const b = cleanup.auditPage('tough', readPage('tough'), oewn);
@@ -322,6 +330,143 @@ scenario('production safety: no production file references the cleanup and dicti
     assert.ok(!/dictionary-v2/.test(deploy));
     const hits = fs.readdirSync(path.join(root, 'word')).filter((f) => f.endsWith('.html')).filter((f) => fs.readFileSync(path.join(root, 'word', f), 'utf8').includes('definition-cleanup'));
     assert.deepEqual(hits, []);
+});
+
+// ---- POST-APPLICATION state of the real repository (SEO-R6B.3) ------------------------------------------------------
+const realCtx = cleanup.makeContext(); // live pages
+const withPages = (overrides) => ({ ...realCtx, readPage: (slug) => (slug in overrides ? overrides[slug] : realCtx.readPage(slug)) });
+const FROZEN = ['exercise', 'rudimentary', 'sad', 'sufficient', 'weird'];
+
+scenario('BEFORE fixture: all 275 pages reconstruct to the audited BEFORE hash (both escaping styles)', () => {
+    let literal = 0, entity = 0;
+    for (const e of appliedManifest.entries) {
+        const before = fixture.beforePage(e.slug);
+        assert.equal(sha(before), e.page.sha256_lf_before, e.slug);
+        assert.equal(lib.extractV1Page(before).definition, e.before_definition, e.slug);
+        assert.notEqual(before, fixture.livePage(e.slug), e.slug + ': live page is the cleaned one');
+        if (before.includes('<span>' + cleanup.escapeHtml(e.before_definition) + '</span>')) entity++; else literal++;
+    }
+    assert.equal(entity + literal, 275);
+    assert.ok(entity > 0 && literal > 0, 'both quote-escaping styles are exercised');
+});
+
+scenario('post-application: real repository verifies as APPLIED (275 cleaned, 5 frozen untouched)', () => {
+    assert.equal(appliedManifest.status, 'APPLIED');
+    assert.deepEqual(cleanup.validateManifest(appliedManifest, realCtx), []);
+    const result = cleanup.verifyApplied(appliedManifest, realCtx);
+    assert.deepEqual(result.errors, []);
+    assert.equal(result.counts.approved_corpus, 2326);
+    assert.equal(result.counts.applied_non_frozen_cleanup, 275);
+    assert.equal(result.counts.frozen_excluded, 5);
+    assert.equal(result.counts.frozen_unchanged, 5);
+    assert.equal(result.counts.manual_review, 0);
+    assert.equal(result.counts.after_hash_matches, 275);
+    assert.equal(result.counts.visible_definition_changes, 275);
+    assert.equal(result.counts.json_ld_changes, 275);
+    assert.equal(result.counts.reverse_proofs, 275);
+    for (const e of appliedManifest.entries) {
+        assert.equal(sha(fixture.livePage(e.slug)), e.page.sha256_lf_after_expected, e.slug);
+        assert.equal(lib.extractV1Page(fixture.livePage(e.slug)).definition, e.oewn.definition, e.slug);
+        assert.equal(e.application_state, 'APPLIED');
+    }
+    // frozen pages: documented as NOT applied, still contaminated, still at their audited BEFORE hash
+    assert.deepEqual(appliedManifest.frozen_documented.map((e) => e.slug), FROZEN);
+    for (const e of appliedManifest.frozen_documented) {
+        assert.equal(e.application_state, 'NOT_APPLIED_FROZEN');
+        assert.equal(sha(fixture.livePage(e.slug)), e.page.sha256_lf_before, e.slug);
+        assert.equal(lib.extractV1Page(fixture.livePage(e.slug)).definition, e.before_definition, e.slug);
+        assert.equal(e.page.sha256_lf_after_expected, undefined);
+    }
+    assert.deepEqual(appliedManifest.applied.frozen_not_applied, FROZEN);
+    assert.equal(appliedManifest.applied.pages_applied, 275);
+});
+
+scenario('post-application: all BEFORE evidence is preserved in the APPLIED manifest', () => {
+    for (const e of appliedManifest.entries) {
+        const p = manifest.entries.find((x) => x.slug === e.slug);
+        for (const key of ['before_definition', 'after_definition', 'removed_material', 'source_synset_id', 'contamination_type', 'oewn', 'learner_fields_sha256', 'pos']) assert.deepEqual(e[key], p[key], e.slug + '.' + key);
+        assert.equal(e.page.sha256_lf_before, p.page.sha256_lf_before);
+        assert.equal(e.page.sha256_lf_after_expected, p.page.sha256_lf_after_expected);
+        assert.match(e.page.sha256_lf_before, /^[0-9a-f]{64}$/);
+        assert.notEqual(e.before_definition, e.after_definition);
+    }
+    assert.deepEqual(appliedManifest.summary.frozen_excluded_slugs, FROZEN);
+    assert.equal(appliedManifest.summary.raw_oewn_example_contamination + appliedManifest.summary.citation_residue, 280);
+});
+
+scenario('post-application: any drift from the applied state fails closed', () => {
+    const slug = appliedManifest.entries[3].slug;
+    const live = fixture.livePage(slug);
+    // one-byte drift of an applied page
+    let errors = cleanup.validateManifest(appliedManifest, withPages({ [slug]: live.replace('</body>', ' </body>') }));
+    assert.ok(hasError(errors, slug + ': AFTER_HASH_MISMATCH'));
+    // re-contaminated (reverted to BEFORE) page
+    errors = cleanup.validateManifest(appliedManifest, withPages({ [slug]: fixture.beforePage(slug) }));
+    assert.ok(hasError(errors, slug + ': AFTER_HASH_MISMATCH'));
+    // frozen page changed in any way
+    const frozenLive = fixture.livePage('sad');
+    errors = cleanup.validateManifest(appliedManifest, withPages({ sad: frozenLive + '\n<!-- drift -->' }));
+    assert.ok(hasError(errors, 'sad: FROZEN_CHANGED'));
+    // frozen page "cleaned" by mistake
+    const sadEntry = appliedManifest.frozen_documented.find((e) => e.slug === 'sad');
+    const wrongClean = frozenLive.split(cleanup.escapeHtml(sadEntry.before_definition)).join(cleanup.escapeHtml(sadEntry.after_definition));
+    errors = cleanup.validateManifest(appliedManifest, withPages({ sad: wrongClean }));
+    assert.ok(hasError(errors, 'sad: FROZEN_CHANGED'));
+    // verifyApplied reports the same
+    const result = cleanup.verifyApplied(appliedManifest, withPages({ [slug]: live + ' ' }));
+    assert.equal(result.ok, false);
+    // the clean-page fingerprint still guards the 2046 untouched pages
+    const clean = appliedManifest.corpus_fingerprint.clean_slugs[0];
+    errors = cleanup.validateManifest(appliedManifest, withPages({ [clean]: fixture.livePage(clean).replace(/(<p class="definition"[^>]*>[\s\S]*?<span[^>]*>)/, '$1X') }));
+    assert.ok(hasError(errors, 'clean pages no longer match'));
+});
+
+scenario('post-application: manifest state is internally consistent and fail-closed', () => {
+    const mutate = (fn) => { const m = clone(appliedManifest); fn(m); return cleanup.validateManifest(m, realCtx); };
+    assert.ok(hasError(mutate((m) => { m.entries[0].application_state = 'NOT_APPLIED_FROZEN'; }), 'application_state APPLIED'));
+    assert.ok(hasError(mutate((m) => { m.frozen_documented[0].application_state = 'APPLIED'; }), 'NOT_APPLIED_FROZEN'));
+    assert.ok(hasError(mutate((m) => { delete m.applied; }), 'before_state_commit'));
+    assert.ok(hasError(mutate((m) => { m.applied.before_state_commit = 'abc'; }), 'before_state_commit'));
+    assert.ok(hasError(mutate((m) => { m.applied.pages_applied = 274; }), 'pages_applied'));
+    assert.ok(hasError(mutate((m) => { m.summary.applied_non_frozen_cleanup = 274; }), 'applied summary counts'));
+    assert.ok(hasError(mutate((m) => { m.description = DESC(); }), 'description'));
+    // the PROPOSED view may not carry applied state, and cannot pass while the pages are already cleaned
+    const proposedWithState = clone(manifest); proposedWithState.entries[0].application_state = 'APPLIED';
+    assert.ok(hasError(cleanup.validateManifest(proposedWithState, cctx), 'must not carry application state'));
+    const inconsistent = cleanup.validateManifest(manifest, realCtx);
+    assert.ok(hasError(inconsistent, 'already at the AFTER state but the manifest status is PROPOSED_NOT_APPLIED'));
+    // transitions
+    assert.throws(() => cleanup.markApplied(appliedManifest, appliedManifest.applied.before_state_commit), /only a PROPOSED_NOT_APPLIED manifest/);
+    assert.equal(lib.canonicalJson(cleanup.asProposed(appliedManifest)), lib.canonicalJson(manifest));
+    function DESC() { return cleanup.DESCRIPTION_PROPOSED; }
+});
+
+scenario('post-application: a second application is prohibited and writes nothing', () => {
+    const io = cleanup.makeFsIo(path.join(root, 'word'));
+    const before = new Map(appliedManifest.entries.map((e) => [e.slug, sha(io.read(e.slug))]));
+    const again = cleanup.preflightAll(appliedManifest, realCtx, io, { expectedApplicable: 275 });
+    assert.equal(again.ok, false);
+    assert.ok(hasError(again.errors, 'ALREADY_APPLIED'));
+    assert.deepEqual(again.plan, []);
+    const refused = cleanup.applyPreflighted(again, io);
+    assert.equal(refused.ok, false);
+    assert.deepEqual(refused.written, []);
+    // the proposed (pre-application) manifest cannot be replayed on the cleaned pages either: BEFORE hash protection stays
+    const replay = cleanup.preflightAll(manifest, realCtx, io, { expectedApplicable: 275 });
+    assert.equal(replay.ok, false);
+    assert.equal(replay.errors.filter((e) => e.includes('BEFORE_HASH_MISMATCH')).length, 275);
+    assert.equal(cleanup.applyPreflighted(replay, io).ok, false);
+    assert.deepEqual(io.listStale(), []);
+    for (const [slug, hash] of before) assert.equal(sha(io.read(slug)), hash, slug + ' untouched by the refused runs');
+});
+
+scenario('post-application: independent git proof against the pre-application commit (skipped when unavailable)', () => {
+    let gitRead;
+    try { gitRead = cleanup.gitReader(root); gitRead(appliedManifest.applied.before_state_commit, 'word/tough.html'); } catch (error) { console.log('  SKIP pre-application commit not available in this clone'); return; }
+    const result = cleanup.verifyApplied(appliedManifest, realCtx, { gitRead });
+    assert.deepEqual(result.errors, []);
+    assert.equal(result.counts.git_pages_proven, 275);
+    assert.equal(result.counts.git_unrelated_changed_lines, 0);
 });
 
 scenario('archive-dependent: independent re-audit from the verified OEWN archive reproduces the manifest byte-for-byte (skipped when archive absent)', () => {

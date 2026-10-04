@@ -1,9 +1,11 @@
 'use strict';
-// SEO-R6B.1: tests for the guarded definition-cleanup apply engine.
+// SEO-R6B.1 / R6B.3: tests for the guarded definition-cleanup apply engine.
 // Run: node tests/dictionary-v2-definition-apply.test.js
 //
-// SAFETY: these tests NEVER write to the real word/*.html. Mutations are exercised on an in-memory copy of the pages
-// (with fault injection) and on a throw-away copy in the OS temp directory. The real pages are only read.
+// SAFETY: these tests NEVER write to the real word/*.html. The real repository is now in the POST-APPLICATION state, so
+// every application test runs on an isolated PRE-APPLICATION corpus: an in-memory copy (with fault injection) or a
+// throw-away copy in the OS temp directory, built from the BEFORE fixture (tests/dictionary-v2-cleanup-fixture.js).
+// The real pages are only read, and the real post-application state is verified separately at the end.
 
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -14,8 +16,10 @@ const cleanup = require('../scripts/dictionary-v2/definition-cleanup');
 const { checkParity } = require('../scripts/dictionary-v2/check-v1-parity');
 
 const root = lib.ROOT;
-const manifest = cleanup.loadManifest();
-const cctx = cleanup.makeContext();
+const fixture = require('./dictionary-v2-cleanup-fixture');
+const appliedManifest = fixture.appliedManifest; // committed, status APPLIED
+const manifest = fixture.proposedManifest;       // pre-application view of the same evidence (status PROPOSED_NOT_APPLIED)
+const cctx = fixture.beforeContext();
 const clone = (value) => JSON.parse(JSON.stringify(value));
 const hasError = (errors, fragment) => errors.some((e) => e.includes(fragment));
 const entryOf = (slug, mf = manifest) => mf.entries.find((e) => e.slug === slug);
@@ -27,9 +31,11 @@ function scenario(name, fn) {
     catch (error) { console.error('FAIL', name); throw error; }
 }
 
-// ---- real pages, read once (raw text, CRLF preserved) -------------------------------------------------------------
+// ---- pre-application corpus (raw text, CRLF preserved), reconstructed from the live pages ----------------------------
 const realIo = cleanup.makeFsIo(path.join(root, 'word'));
-const basePages = new Map([...cctx.registry].sort().map((slug) => [slug, realIo.read(slug)]));
+const registrySlugs = [...cctx.registry].sort();
+const liveHashes = new Map(registrySlugs.map((slug) => [slug, cleanup.pageHash(realIo.read(slug))]));
+const basePages = new Map(registrySlugs.map((slug) => [slug, fixture.beforePage(slug)]));
 const baseHashes = new Map([...basePages].map(([slug, text]) => [slug, cleanup.pageHash(text)]));
 
 // In-memory IO with fault injection. Never touches the disk.
@@ -114,11 +120,13 @@ scenario('dry-run writes nothing: memory and real-disk page hashes are identical
         files_that_would_change: 275, actual_word_html_changed: 0, visible_definition_mutations: 275, json_ld_mutations: 275,
         unrelated_byte_changes: 0, before_hash_locked: 275, after_hash_locked: 275
     });
-    // real disk: guarded dry-run through the filesystem IO changes nothing and leaves no staging files
-    const real = cleanup.guardedDryRun(manifest, cctx, realIo);
+    // real disk (post-application state): the dry-run refuses an APPLIED manifest, writes nothing and leaves no staging files
+    const real = cleanup.guardedDryRun(appliedManifest, fixture.beforeContext(), realIo);
+    assert.equal(real.ok, false);
+    assert.ok(hasError(real.errors, 'ALREADY_APPLIED'));
     assert.equal(real.summary.actual_word_html_changed, 0);
     assert.deepEqual(realIo.listStale(), []);
-    for (const [slug, hash] of baseHashes) assert.equal(cleanup.pageHash(realIo.read(slug)), hash, slug);
+    for (const [slug, hash] of liveHashes) assert.equal(cleanup.pageHash(realIo.read(slug)), hash, slug);
 });
 
 scenario('every non-applicable page is untouched by the plan (frozen and clean pages never appear)', () => {
@@ -409,6 +417,14 @@ scenario('simulated apply (in memory): 275 pages become exactly the expected AFT
     const second = run(io);
     assert.equal(second.ok, false);
     assert.ok(hasError(second.errors, 'BEFORE_HASH_MISMATCH'));
+    // with the APPLIED manifest the second application is refused outright, and the applied state itself verifies
+    const third = run(io, appliedManifest);
+    assert.equal(third.ok, false);
+    assert.ok(hasError(third.errors, 'ALREADY_APPLIED'));
+    assert.equal(third.errors.filter((e) => !e.includes('ALREADY_APPLIED') && !e.includes('BEFORE_HASH_MISMATCH')).length, 0, JSON.stringify(third.errors.slice(0, 3)));
+    assert.equal(cleanup.applyPreflighted(third, io).ok, false);
+    const memCtx = { ...cctx, readPage: (slug) => io.files.get(slug) };
+    assert.equal(cleanup.verifyApplied(appliedManifest, memCtx).ok, true, 'the simulated applied corpus verifies as APPLIED');
     // the 9 prototype records now report PASS_CLEANED against the applied pages
     for (const slug of NINE) {
         const record = lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
@@ -472,7 +488,8 @@ scenario('filesystem IO on a throw-away copy: staged, verified writes preserve b
     try {
         const wordDir = path.join(dir, 'word');
         fs.mkdirSync(wordDir);
-        for (const slug of basePages.keys()) fs.copyFileSync(path.join(root, 'word', slug + '.html'), path.join(wordDir, slug + '.html'));
+        // the throw-away corpus is in the PRE-application state (live pages with the two replacements swapped back)
+        for (const [slug, text] of basePages) fs.writeFileSync(path.join(wordDir, slug + '.html'), text, 'utf8');
         const io = cleanup.makeFsIo(wordDir);
         // a stale staging file blocks the batch, then is removed
         fs.writeFileSync(path.join(wordDir, 'tough.html' + cleanup.STAGING_SUFFIX), 'x');
@@ -496,7 +513,7 @@ scenario('filesystem IO on a throw-away copy: staged, verified writes preserve b
         fs.rmSync(dir, { recursive: true, force: true });
     }
     // the real pages were not touched by this test
-    for (const [slug, hash] of baseHashes) assert.equal(cleanup.pageHash(realIo.read(slug)), hash, slug);
+    for (const [slug, hash] of liveHashes) assert.equal(cleanup.pageHash(realIo.read(slug)), hash, slug);
 });
 
 scenario('non-round-trippable page bytes are refused', () => {
@@ -513,6 +530,30 @@ scenario('production safety: real pages, deploy script and engine wiring', () =>
     assert.equal(cleanup.APPLY_CONFIRMATION, 'APPLY_275_DEFINITION_CLEANUPS');
     assert.deepEqual(manifest.frozen_documented.map((e) => e.slug), FROZEN);
     for (const slug of FROZEN) assert.equal(cleanup.pageHash(realIo.read(slug)), entryOf(slug, { entries: manifest.frozen_documented }).page.sha256_lf_before, slug + ' real page still at its audited BEFORE hash');
+});
+
+scenario('REAL repository is in the post-application state: 275 cleaned, 5 frozen untouched, 9 prototypes PASS_CLEANED', () => {
+    assert.equal(appliedManifest.status, 'APPLIED');
+    const real = cleanup.makeContext();
+    const result = cleanup.verifyApplied(appliedManifest, real);
+    assert.deepEqual(result.errors, []);
+    assert.equal(result.counts.after_hash_matches, 275);
+    assert.equal(result.counts.frozen_unchanged, 5);
+    for (const e of appliedManifest.entries) assert.equal(liveHashes.get(e.slug), e.page.sha256_lf_after_expected, e.slug);
+    for (const e of appliedManifest.frozen_documented) assert.equal(liveHashes.get(e.slug), e.page.sha256_lf_before, e.slug);
+    const { runParity } = require('../scripts/dictionary-v2/check-v1-parity');
+    const parity = runParity();
+    assert.equal(parity.records, 28);
+    assert.equal(parity.fail, 0);
+    assert.equal(parity.pass, 19);
+    assert.equal(parity.pass_cleaned, 9);
+    assert.equal(parity.pass_pending_cleanup, 0);
+    assert.deepEqual(parity.results.filter((r) => r.status === 'PASS_CLEANED').map((r) => r.slug), NINE);
+    // PASS_PENDING_CLEANUP remains a supported pre-application state
+    for (const slug of NINE) {
+      const record = lib.readJson(path.join(root, 'dictionary-v2', 'records', slug + '.json'));
+      assert.equal(checkParity(record, basePages.get(slug), entryOf(slug)).status, 'PASS_PENDING_CLEANUP', slug);
+    }
 });
 
 console.log('All dictionary-v2 guarded apply tests passed.');
