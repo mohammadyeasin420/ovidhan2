@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "rationale",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/rationale.html",
+      "source_page_sha256_lf": "259adf813226d567bac9b8712637a3ecb1f945041c657cef7bf96876b9ba8142",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো সিদ্ধান্ত বা ব্যবস্থার গোড়ার কারণগুলোর ব্যাখ্যা।"
+      },
+      "bangla_meaning": {
+        "display": "মূল যুক্তি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(law) an explanation of the fundamental reasons (especially an explanation of the working of some device in terms of laws of nature)",
+        "origin": "OEWN_GLOSS",
+        "text": "(law) an explanation of the fundamental reasons (especially an explanation of the working of some device in terms of laws of nature)"
+      },
+      "examples": [
+        {
+          "bn": "নতুন ঘণ্টার সময়ের মূল যুক্তি ছিল গেটে লাইন ছোট করা।",
+          "en": "The rationale for the new bell times was shorter queues at the gate.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05176523-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "rationale"
+}

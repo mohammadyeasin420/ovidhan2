@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "pie",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/pie.html",
+      "source_page_sha256_lf": "b66053d10fba66678fd90a0f8601e0e333e825cca776a1c6e670e13d17615a8c",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ময়দার খোলে, প্রায়ই ওপরের আস্তরণসহ, বেক করা খাবার।"
+      },
+      "bangla_meaning": {
+        "display": "পাই",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "dish baked in pastry-lined pan often with a pastry top",
+        "origin": "OEWN_GLOSS",
+        "text": "dish baked in pastry-lined pan often with a pastry top"
+      },
+      "examples": [
+        {
+          "bn": "বেকারির জানালায় সোনালি আস্তরণের একটা আমের পাই সাজানো ছিল।",
+          "en": "The bakery window showed a mango pie under a golden crust.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07014924-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "pie"
+}

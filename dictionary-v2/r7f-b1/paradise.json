@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "paradise",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/paradise.html",
+      "source_page_sha256_lf": "bccc61e607f96ff37df71c2a99b68c01af1aabc512a3b53358b84ae0ff61e0c6",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যেখানে আনন্দ, তৃপ্তি ও শান্তি পূর্ণমাত্রায় মেলে।"
+      },
+      "bangla_meaning": {
+        "display": "পরম সুখের জায়গা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "any place of complete bliss and delight and peace",
+        "origin": "OEWN_GLOSS",
+        "text": "any place of complete bliss and delight and peace"
+      },
+      "examples": [
+        {
+          "bn": "ক্লান্ত পথিকদের কাছে শান্ত চা-দোকানটি পরম সুখের জায়গার মতো লাগছিল।",
+          "en": "To the tired travelers, the quiet tea stall felt like paradise.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07876939-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "paradise"
+}

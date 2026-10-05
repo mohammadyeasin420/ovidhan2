@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "vicinity",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/vicinity.html",
+      "source_page_sha256_lf": "f7481b7876dbdf9361746a5dd04cbf3768df750ae7b47178c8ced6588a10470a",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো জায়গার চারপাশ বা কাছের এলাকা।"
+      },
+      "bangla_meaning": {
+        "display": "আশপাশ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a surrounding or nearby region",
+        "origin": "OEWN_GLOSS",
+        "text": "a surrounding or nearby region"
+      },
+      "examples": [
+        {
+          "bn": "নতুন সেতুর আশপাশে দুটি চা-দোকান খুলল।",
+          "en": "Two tea shops opened in the vicinity of the new bridge.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07932208-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "vicinity"
+}

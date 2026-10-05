@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "conjugal",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/conjugal.html",
+      "source_page_sha256_lf": "f1014c1c629fdcc269f828311552d03f8f3c9431659ce067243960610b079b3c",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বিয়ে বা স্বামী-স্ত্রীর সম্পর্ক সংক্রান্ত।"
+      },
+      "bangla_meaning": {
+        "display": "দাম্পত্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "of or relating to marriage or to the relationship between a wife and husband",
+        "origin": "OEWN_GLOSS",
+        "text": "of or relating to marriage or to the relationship between a wife and husband"
+      },
+      "examples": [
+        {
+          "bn": "ফোন রান্নাঘরে রেখে রোববার সন্ধ্যা তাঁরা শান্ত দাম্পত্য কথাবার্তার জন্য আলাদা করতেন।",
+          "en": "Sunday evenings were kept for quiet conjugal talk, with phones left in the kitchen.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02887361-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "conjugal"
+}

@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "beverage",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/beverage.html",
+      "source_page_sha256_lf": "75fc4bacf86aee0cda3c94d0cfda0c086dc0ad1d7eeac88bc4c2a5f99e84b9e6",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "পান করার উপযোগী যেকোনো তরল।"
+      },
+      "bangla_meaning": {
+        "display": "পানীয়",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "any liquid suitable for drinking",
+        "origin": "OEWN_GLOSS",
+        "text": "any liquid suitable for drinking"
+      },
+      "examples": [
+        {
+          "bn": "ক্যান্টিন দুপুরের প্রতিটি থালার পাশে এক গ্লাস ঠান্ডা পানীয় রাখল।",
+          "en": "The canteen set a cold beverage beside each lunch plate.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07271603-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "beverage"
+}

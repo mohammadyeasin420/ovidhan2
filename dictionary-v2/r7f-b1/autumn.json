@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "autumn",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/autumn.html",
+      "source_page_sha256_lf": "7bf902aa7e98addcc848315a2e9eac5117286d420e6add3e400f5fe7b5b06e78",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "গাছের পাতা ঝরে পড়ার মৌসুম।"
+      },
+      "bangla_meaning": {
+        "display": "পাতাঝরার ঋতু",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the season when the leaves fall from the trees",
+        "origin": "OEWN_GLOSS",
+        "text": "the season when the leaves fall from the trees"
+      },
+      "examples": [
+        {
+          "bn": "পাতাঝরার মৌসুমে স্কুলের উঠোনে শুকনো পাতা জমল।",
+          "en": "Autumn left dry leaves across the schoolyard.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "12538150-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "autumn"
+}

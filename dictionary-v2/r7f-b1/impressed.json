@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "impressed",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/impressed.html",
+      "source_page_sha256_lf": "2fdcde1be64a962bf4c1220d1aaffced0be599f0f145f8ac1956583f8363569e",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কারও কথা বা কাজ এত গভীরে লাগে যে সিদ্ধান্ত বা মনোভাব বদলে যায়।"
+      },
+      "bangla_meaning": {
+        "display": "প্রভাবিত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "deeply or markedly affected or influenced",
+        "origin": "OEWN_GLOSS",
+        "text": "deeply or markedly affected or influenced"
+      },
+      "examples": [
+        {
+          "bn": "মিস্ত্রির সততায় প্রভাবিত হয়ে তিনি পরের সব মেরামত তাঁর দোকানেই নিয়ে আসতেন।",
+          "en": "Impressed by the mechanic's honesty, she brought every later repair to his shop.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00071889-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "impressed"
+}

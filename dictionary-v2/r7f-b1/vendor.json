@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "vendor",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/vendor.html",
+      "source_page_sha256_lf": "ee51aa1da78d25db3e99f4a27d006e6309f469efbcdcc384a09773c2b3b10973",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "টাকার বদলে পণ্য বা সেবা দেন বা সেগুলোর কথা বলেন।"
+      },
+      "bangla_meaning": {
+        "display": "বিক্রেতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "someone who promotes or exchanges goods or services for money",
+        "origin": "OEWN_GLOSS",
+        "text": "someone who promotes or exchanges goods or services for money"
+      },
+      "examples": [
+        {
+          "bn": "প্ল্যাটফর্মের এক বিক্রেতা বোতলের পানি আর ভাপা বাদাম বিক্রি করছিলেন।",
+          "en": "A vendor on the platform sold bottled water and steamed peanuts.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "09075718-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "vendor"
+}

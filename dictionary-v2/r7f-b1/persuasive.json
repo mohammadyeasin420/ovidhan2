@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "persuasive",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/persuasive.html",
+      "source_page_sha256_lf": "021344750eb5abe2949bd1541aa54ef798f041d7e3838903e16171ed2a86aedc",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কথা বা যুক্তি শুনে মানুষ কাজ করতে বা বিশ্বাস করতে ঝোঁকে।"
+      },
+      "bangla_meaning": {
+        "display": "বিশ্বাস জাগাতে সক্ষম",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "intended or having the power to induce action or belief",
+        "origin": "OEWN_GLOSS",
+        "text": "intended or having the power to induce action or belief"
+      },
+      "examples": [
+        {
+          "bn": "একটি ছোট চিঠি এত জোরালো ছিল যে কমিটির ভোট উলটে গেল।",
+          "en": "One short note was persuasive enough to flip the committee vote.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01780890-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "persuasive"
+}

@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "resentment",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/resentment.html",
+      "source_page_sha256_lf": "ea6e2459576c12a9ff20eab67f39d34d0c74f03cafeb8305e7c555f22232a2a7",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মনে জমা তিক্ত রাগ ও অসন্তোষ।"
+      },
+      "bangla_meaning": {
+        "display": "ক্ষোভ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a feeling of deep and bitter anger and ill-will",
+        "origin": "OEWN_GLOSS",
+        "text": "a feeling of deep and bitter anger and ill-will"
+      },
+      "examples": [
+        {
+          "bn": "বিনা পারিশ্রমিকের বাড়তি শিফটে স্টাফরুমে চাপা ক্ষোভ জমেছিল।",
+          "en": "Unpaid extra shifts left a quiet resentment in the staff room.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06937668-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "resentment"
+}

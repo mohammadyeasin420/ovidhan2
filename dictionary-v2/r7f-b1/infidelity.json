@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "infidelity",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/infidelity.html",
+      "source_page_sha256_lf": "1e9d5399c84c96fd2a1e5da4e5a17e7a82f44de5440f8d400a791fdb72f33181",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বিশ্বাস না রাখা, দেওয়া কথা ভেঙে ফেলার গুণ।"
+      },
+      "bangla_meaning": {
+        "display": "অবিশ্বস্ততা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the quality of being unfaithful",
+        "origin": "OEWN_GLOSS",
+        "text": "the quality of being unfaithful"
+      },
+      "examples": [
+        {
+          "bn": "জীবনীতে তাঁর অবিশ্বস্ততাকে বিশ্বাস করা মানুষদের সঙ্গে কথা না রাখা হিসেবে দেখানো হয়েছে।",
+          "en": "The biography treats his infidelity as a failure to keep faith with people who trusted him.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04250313-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "infidelity"
+}

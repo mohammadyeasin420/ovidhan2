@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "reimbursement",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/reimbursement.html",
+      "source_page_sha256_lf": "597fb7e5b43656bb346e389097b948fc02194227055b3e988629629fcd2c326f",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আগে করা খরচ, ক্ষতি বা লোকসানের বদলে দেওয়া অর্থ।"
+      },
+      "bangla_meaning": {
+        "display": "ব্যয়ফেরত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "compensation paid (to someone) for damages or losses or money already spent etc.",
+        "origin": "OEWN_GLOSS",
+        "text": "compensation paid (to someone) for damages or losses or money already spent etc."
+      },
+      "examples": [
+        {
+          "bn": "পাইপ ফেটে যাওয়ার পর বাড়িওয়ালা কলমিস্ত্রির বিলের টাকা ফেরত পাঠালেন।",
+          "en": "After the pipe burst, the landlord sent reimbursement for the plumber's bill.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "10578215-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "reimbursement"
+}

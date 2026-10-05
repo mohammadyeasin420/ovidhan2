@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "imposter",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/imposter.html",
+      "source_page_sha256_lf": "75318fec4bc8048847ac789877f65c77e25105e7f90f094b788ff1755acae26d",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "পরিচয় বা যোগ্যতা নিয়ে মিথ্যা ভান করে অন্যদের ঠকায়।"
+      },
+      "bangla_meaning": {
+        "display": "ছদ্মবেশী প্রতারক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a person who makes deceitful pretenses",
+        "origin": "OEWN_GLOSS",
+        "text": "a person who makes deceitful pretenses"
+      },
+      "examples": [
+        {
+          "bn": "পাহারাদারের পোশাক পরে এক প্রতারক গুদামে ঢুকল।",
+          "en": "An imposter in a guard's uniform entered the storehouse.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08721920-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "imposter"
+}

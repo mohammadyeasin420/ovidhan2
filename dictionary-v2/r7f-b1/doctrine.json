@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "doctrine",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/doctrine.html",
+      "source_page_sha256_lf": "30ad8dbe7d6b65518f1b3679612886b957a747d2f5ea8efec3052f1405b3ca1e",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো দল বা ঘরানা যে বিশ্বাসকে কর্তৃত্ব হিসেবে মানে।"
+      },
+      "bangla_meaning": {
+        "display": "মতবাদ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a belief (or system of beliefs) accepted as authoritative by some group or school",
+        "origin": "OEWN_GLOSS",
+        "text": "a belief (or system of beliefs) accepted as authoritative by some group or school"
+      },
+      "examples": [
+        {
+          "bn": "প্রশিক্ষণের বইয়ে ন্যায্য নম্বর দেওয়া নিয়ে স্কুলের মতবাদ লেখা আছে।",
+          "en": "The training manual states the school's doctrine on fair marking.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05328570-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "doctrine"
+}

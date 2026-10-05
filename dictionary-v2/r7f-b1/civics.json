@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "civics",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/civics.html",
+      "source_page_sha256_lf": "3a830d0ba1765520be686f0c6378f8179cb36e10f2e01ec5b29120acf0559d8c",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নাগরিক জীবন, অধিকার ও স্থানীয় শাসনের কাজকর্ম নিয়ে পড়াশোনা।"
+      },
+      "bangla_meaning": {
+        "display": "নাগরিকবিদ্যা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the social science of civic affairs",
+        "origin": "OEWN_GLOSS",
+        "text": "the social science of civic affairs"
+      },
+      "examples": [
+        {
+          "bn": "নাগরিকবিদ্যার ক্লাসে ইউনিয়ন পরিষদ কীভাবে নির্বাচিত হয়, সেটা বোঝানো হলো।",
+          "en": "Civics class explained how a union council is elected.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05530754-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "civics"
+}

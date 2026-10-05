@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "solidarity",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/solidarity.html",
+      "source_page_sha256_lf": "0589432fef8db8280b3ddd061f339b878045662ba04f7e543f9c1ee29936d377",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দলের মানুষের স্বার্থ, উদ্দেশ্য বা সহানুভূতি এক হয়ে যে ঐক্য দাঁড়ায়।"
+      },
+      "bangla_meaning": {
+        "display": "সংহতি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a union of interests or purposes or sympathies among members of a group",
+        "origin": "OEWN_GLOSS",
+        "text": "a union of interests or purposes or sympathies among members of a group"
+      },
+      "examples": [
+        {
+          "bn": "বন্যার পর পাড়ার লোকেরা চাল ভাগ করে একসঙ্গে কাজ করল—সেটাই ছিল তাদের সংহতি।",
+          "en": "After the flood, neighbors sharing rice and labor was an act of solidarity.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04134857-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "solidarity"
+}

@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "allegedly",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/allegedly.html",
+      "source_page_sha256_lf": "fdabd352a95756bc9e2e87b44512756324bb2e4dea6b5b404480d902a05e16b2",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা দাবি করা হয়েছে সেই অনুসারে, এখনো প্রমাণিত নয়।"
+      },
+      "bangla_meaning": {
+        "display": "অভিযোগ অনুসারে",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "according to what has been alleged",
+        "origin": "OEWN_GLOSS",
+        "text": "according to what has been alleged"
+      },
+      "examples": [
+        {
+          "bn": "বিক্রেতা নাকি নতুন বস্তার সঙ্গে পুরোনো শস্য মিশিয়েছিলেন—এটা এখনো অভিযোগ।",
+          "en": "The vendor allegedly mixed old grain into the new sacks.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00155642-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "allegedly"
+}

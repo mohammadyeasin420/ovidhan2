@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "subsequent",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/subsequent.html",
+      "source_page_sha256_lf": "1f0ef1f30d7b47f5138940cca331cdbc7bf3b72106fac67a4007eeb348e69cb2",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "সময় বা ধারায় আগেরটির পরে যা আসে।"
+      },
+      "bangla_meaning": {
+        "display": "পরবর্তী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "following in time or order",
+        "origin": "OEWN_GLOSS",
+        "text": "following in time or order"
+      },
+      "examples": [
+        {
+          "bn": "প্রথম কুইজ সহজ ছিল, তার পরের প্রতিটি পত্র কঠিন হয়েছে।",
+          "en": "The opening quiz was easy, but each subsequent paper was harder.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00123539-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "subsequent"
+}

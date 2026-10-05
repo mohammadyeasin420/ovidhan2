@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "statistics",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/statistics.html",
+      "source_page_sha256_lf": "5ac403d0096611333d0286efbb7ac0825d1e84880c35f02a0ed695d0ce3cfcbb",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "সংখ্যাসংবলিত তথ্য জোগাড় ও ব্যাখ্যা করার গণিতের শাখা, যেখানে সম্ভাবনা দিয়ে সমষ্টির বৈশিষ্ট্য আন্দাজ করা হয়।"
+      },
+      "bangla_meaning": {
+        "display": "পরিসংখ্যান",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a branch of applied mathematics concerned with the collection and interpretation of quantitative data and the use of probability theory to estimate population parameters",
+        "origin": "OEWN_GLOSS",
+        "text": "a branch of applied mathematics concerned with the collection and interpretation of quantitative data and the use of probability theory to estimate population parameters"
+      },
+      "examples": [
+        {
+          "bn": "জুনে কত রোগী আসতে পারেন, ক্লিনিক সেটা পরিসংখ্যান দিয়ে আন্দাজ করল।",
+          "en": "Statistics let the clinic estimate how many patients might come in June.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05404927-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "statistics"
+}

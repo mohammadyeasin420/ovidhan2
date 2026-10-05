@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "humorous",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/humorous.html",
+      "source_page_sha256_lf": "fbbefc0c1f175946390d917803490f22d36911a2d0df21bdf10f27d975a43018",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "হাসি বা রসিকতায় ভরা।"
+      },
+      "bangla_meaning": {
+        "display": "রসাত্মক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "full of or characterized by humor",
+        "origin": "OEWN_GLOSS",
+        "text": "full of or characterized by humor"
+      },
+      "examples": [
+        {
+          "bn": "বাস দেরি হওয়ার গল্প তিনি রসিকতার সঙ্গে বলাতে লাইনের রাগ কমে গেল।",
+          "en": "His humorous account of the bus delay softened the queue.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01272670-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "humorous"
+}

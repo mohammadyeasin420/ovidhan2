@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "geography",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/geography.html",
+      "source_page_sha256_lf": "efb2ffff753c2e6b15eefe0b3db86ec9489e1cf1e753eef22d04488a5359e1d7",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ভূপৃষ্ঠ, আর জলবায়ু, মাটি, গাছপালা ও মানুষের বসতি নিয়ে পড়াশোনা।"
+      },
+      "bangla_meaning": {
+        "display": "ভূগোল",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "study of the earth's surface; includes people's responses to topography and climate and soil and vegetation",
+        "origin": "OEWN_GLOSS",
+        "text": "study of the earth's surface; includes people's responses to topography and climate and soil and vegetation"
+      },
+      "examples": [
+        {
+          "bn": "ভূগোলের ক্লাসে দেখানো হলো বর্ষার বৃষ্টি বদ্বীপ গড়ে তোলে কীভাবে।",
+          "en": "Geography class mapped how monsoon rain builds the delta.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05509297-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "geography"
+}

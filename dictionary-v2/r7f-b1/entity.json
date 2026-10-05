@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "entity",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/entity.html",
+      "source_page_sha256_lf": "a48cf47d5734afc87fd540cd7a618e59a6b28b1356d1db889fc02639335e2feb",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "জীবিত বা নির্জীব যাই হোক, যাকে নিজের আলাদা অস্তিত্ব হিসেবে ধরা হয়।"
+      },
+      "bangla_meaning": {
+        "display": "স্বতন্ত্র সত্তা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "that which is perceived or known or inferred to have its own distinct existence (living or nonliving)",
+        "origin": "OEWN_GLOSS",
+        "text": "that which is perceived or known or inferred to have its own distinct existence (living or nonliving)"
+      },
+      "examples": [
+        {
+          "bn": "কমিটি লাইব্রেরিকে স্কুল অফিস থেকে আলাদা এক সত্তা হিসেবে দেখল।",
+          "en": "The committee treated the library as an entity separate from the school office.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00001740-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "entity"
+}

@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "competence",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/competence.html",
+      "source_page_sha256_lf": "c5ba005effe5168ae408d00faaa7a29cb6c655d75325de14a43825f8c5f7feba",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "শরীর ও বুদ্ধি দুদিক থেকেই কাজের উপযুক্ত হওয়ার গুণ।"
+      },
+      "bangla_meaning": {
+        "display": "যোগ্যতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the quality of being adequately or well qualified physically and intellectually",
+        "origin": "OEWN_GLOSS",
+        "text": "the quality of being adequately or well qualified physically and intellectually"
+      },
+      "examples": [
+        {
+          "bn": "উদ্ধারকাজে স্থির মাথার পাশাপাশি যোগ্যতাও লাগত।",
+          "en": "The rescue needed competence as much as a steady nerve.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04530663-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "competence"
+}

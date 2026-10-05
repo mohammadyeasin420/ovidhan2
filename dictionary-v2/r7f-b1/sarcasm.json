@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "sarcasm",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/sarcasm.html",
+      "source_page_sha256_lf": "33ddc95f26268a4af7b2aaf98e4bee9f45f3059a74d780198b79dd180733447d",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "চতুর কথায় অপমান বা তাচ্ছিল্য বোঝানো।"
+      },
+      "bangla_meaning": {
+        "display": "ব্যঙ্গ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "witty language used to convey insults or scorn",
+        "origin": "OEWN_GLOSS",
+        "text": "witty language used to convey insults or scorn"
+      },
+      "examples": [
+        {
+          "bn": "তথাকথিত নিখুঁত পরিকল্পনা নিয়ে তাঁর ব্যঙ্গে সবাই অস্বস্তিতে হেসে উঠল।",
+          "en": "Her sarcasm about the so-called perfect plan drew a nervous laugh.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06142634-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "sarcasm"
+}

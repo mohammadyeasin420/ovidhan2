@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "guardian",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/guardian.html",
+      "source_page_sha256_lf": "c7f670ca8daf96079b30968460e3cada5d0da5f9279ab71ddc7d207a0113fff9",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মানুষ বা সম্পত্তির দেখভাল যাঁর দায়িত্ব।"
+      },
+      "bangla_meaning": {
+        "display": "অভিভাবক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a person who cares for persons or property",
+        "origin": "OEWN_GLOSS",
+        "text": "a person who cares for persons or property"
+      },
+      "examples": [
+        {
+          "bn": "আদালত পারিবারিক জমির দেখাশোনার ভার তাঁর খালার ওপর দিল।",
+          "en": "The court named her aunt guardian of the family plot.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08158043-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "guardian"
+}

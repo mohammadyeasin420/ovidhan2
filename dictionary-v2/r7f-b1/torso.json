@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "torso",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/torso.html",
+      "source_page_sha256_lf": "0dfb70e8ac6d779baf2b49b19605c6f5e9964fde3fd2a6f0b8bea4b470c6de48",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মাথা, ঘাড় ও হাত-পা বাদ দিয়ে শরীরের মূল অংশ।"
+      },
+      "bangla_meaning": {
+        "display": "ধড়",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the body excluding the head and neck and limbs",
+        "origin": "OEWN_GLOSS",
+        "text": "the body excluding the head and neck and limbs"
+      },
+      "examples": [
+        {
+          "bn": "পাঞ্জাবি কাটার আগে দরজি তাঁর ধড় মেপে নিলেন।",
+          "en": "The tailor measured his torso before cutting the panjabi.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04930268-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "torso"
+}

@@ -59,9 +59,11 @@ scenario('the closed cleanup corpus stays 2326 and the R7E cohort sits outside i
     for (const slug of PROOF) assert.equal(COHORT.includes(slug), true, slug);
     assert.equal(corpus.size, 2326);
     assert.equal(manifest.summary.approved_corpus, 2326);
-    assert.equal(registry.size, 2374);
+    const r7f = lib.readJson(path.join(root, 'research', 'SEO_R7F_BATCH1_97_FINAL_EDITORIAL.json')).entries.map((entry) => entry.word);
+    assert.equal(r7f.length, 97);
+    assert.equal(registry.size, 2471);
     const outside = [...registry].filter((slug) => !corpus.has(slug)).sort();
-    assert.deepEqual(outside, [...COHORT].sort());
+    assert.deepEqual(outside, [...COHORT, ...r7f].sort());
     for (const slug of COHORT) {
         assert.equal(corpus.has(slug), false, slug);
         assert.equal(frozen.has(slug), false, slug);
@@ -128,44 +130,14 @@ scenario('the historical renderer default stays Meaning in Bangla', () => {
     assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'sitemap.xml']).length, 0);
 });
 
-scenario('working tree word changes are only the frozen 48-page cohort', () => {
-    const wordDiff = gitLines(['diff', '--name-only', 'HEAD', '--', 'word']).sort();
-    assert.deepEqual(wordDiff, COHORT.map((slug) => 'word/' + slug + '.html').sort());
-    const allowed = new Set([
-        'data/approved-static-word-slugs.json',
-        'dictionary-az-a.html',
-        'dictionary-az-b.html',
-        'dictionary-az-c.html',
-        'dictionary-az-d.html',
-        'dictionary-az-e.html',
-        'dictionary-az-f.html',
-        'dictionary-az-g.html',
-        'dictionary-az-h.html',
-        'dictionary-az-i.html',
-        'dictionary-az-m.html',
-        'dictionary-az-o.html',
-        'dictionary-az-p.html',
-        'dictionary-az-r.html',
-        'dictionary-az-s.html',
-        'dictionary-az-u.html',
-        'dictionary-az-v.html',
-        'dictionary-az-w.html',
-        'dictionary-az.html',
-        'scripts/dictionary-v2/definition-cleanup.js',
-        'scripts/dictionary-v2/render.js',
-        'sitemap-approved-words.xml',
-        'tests/approved-explorer-routing.test.js',
-        'tests/dictionary-v2-cleanup-fixture.js',
-        'tests/dictionary-v2-definition-apply.test.js',
-        'tests/dictionary-v2-definition-cleanup.test.js',
-        'tests/dictionary-v2-r6e.test.js',
-        ...COHORT.map((slug) => 'word/' + slug + '.html')
-    ]);
-    const changed = gitLines(['diff', '--name-only', 'HEAD']);
-    for (const file of changed) assert.equal(allowed.has(file), true, 'unexpected change: ' + file);
+scenario('the committed R7E 48 pages stay untouched', () => {
+    for (const slug of COHORT) {
+        assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'word/' + slug + '.html']).length, 0, slug);
+    }
     for (const slug of ['exercise', 'rudimentary', 'sad', 'sufficient', 'weird']) {
         assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'word/' + slug + '.html']).length, 0, slug);
     }
+    assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'sitemap.xml']).length, 0);
 });
 
 console.log('All dictionary-v2 R7E-P1 forward checks passed.');

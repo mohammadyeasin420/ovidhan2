@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "concurrent",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-100E",
+      "source_page": "word/concurrent.html",
+      "source_page_sha256_lf": "e1ac373f436c4449126d1f7c37de94ba7c8e134996f98af6b6fb6efc853b7f56",
+      "tool": "scripts/dictionary-v2/r7f-b1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "একই সময়ে ঘটে বা চলে।"
+      },
+      "bangla_meaning": {
+        "display": "সমসাময়িক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "occurring or operating at the same time",
+        "origin": "OEWN_GLOSS",
+        "text": "occurring or operating at the same time"
+      },
+      "examples": [
+        {
+          "bn": "দুটি কর্মশালা পাশের দুই ঘরে একই সময়ে ক্লাস চালাচ্ছিল।",
+          "en": "Two workshops held concurrent sessions in adjoining rooms.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02396300-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "concurrent"
+}
