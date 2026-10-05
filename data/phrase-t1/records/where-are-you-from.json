@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0.0",
+  "cohort": "PHRASE-T1-30",
+  "status": "REVIEWED",
+  "slug": "where-are-you-from",
+  "rank": 4,
+  "phrase": "Where are you from",
+  "phrase_display": "Where Are You From",
+  "seo": {
+    "title": "Where Are You From Meaning in Bengali – বাংলা অর্থ ও ব্যবহার | Ovidhan",
+    "meta_description": "Where are you from meaning in Bengali: আপনি কোথা থেকে এসেছেন বা তুমি কোথা থেকে এসেছ। Origin/home background, polite forms ও example sentences শিখুন।",
+    "h1": "Where Are You From Meaning in Bengali",
+    "learning_resource_description": "A learner guide to the English question Where are you from, with Bengali meanings by context, natural English alternatives, and example sentences."
+  },
+  "quick_answer": {
+    "bangla_meanings": [
+      "আপনি কোথা থেকে এসেছেন?",
+      "তুমি কোথা থেকে এসেছ?",
+      "তোমার বাড়ি কোথায়?"
+    ],
+    "bangla_display": "আপনি কোথা থেকে এসেছেন? / তুমি কোথা থেকে এসেছ?",
+    "context_note_bn": "এই প্রশ্ন সাধারণত কারও দেশ, শহর বা আসল বাড়ির পরিচয় জানতে চায়। তুমি/আপনি ভদ্রতা অনুযায়ী বেছে নিন।"
+  },
+  "overview": {
+    "paragraphs": [
+      {
+        "text": "Where are you from asks about a person’s origin or background: country, city, district, or community. In polite Bangla it is আপনি কোথা থেকে এসেছেন?; with friends it is often তুমি কোথা থেকে এসেছ?",
+        "bold": [
+          "Where are you from"
+        ],
+        "bn_spans": [
+          "আপনি কোথা থেকে এসেছেন?",
+          "তুমি কোথা থেকে এসেছ?"
+        ]
+      },
+      {
+        "text": "It is not the same as Where do you live? One asks about origin or home background; the other asks about current residence."
+      }
+    ]
+  },
+  "contexts": [
+    {
+      "id": "polite-origin",
+      "title_en": "Polite question about origin",
+      "bangla": "আপনি কোথা থেকে এসেছেন?",
+      "natural_alternatives": [
+        "Where are you from?",
+        "Which country are you from?"
+      ],
+      "example": {
+        "en": "Welcome to Dhaka. Where are you from?",
+        "bn": "ঢাকায় স্বাগতম। আপনি কোথা থেকে এসেছেন?"
+      }
+    },
+    {
+      "id": "informal-origin",
+      "title_en": "Informal question among peers",
+      "bangla": "তুমি কোথা থেকে এসেছ?",
+      "natural_alternatives": [
+        "Where are you from?",
+        "Whereabouts are you from?"
+      ],
+      "example": {
+        "en": "Your accent sounds familiar. Where are you from?",
+        "bn": "তোমার উচ্চারণ চেনা লাগছে। তুমি কোথা থেকে এসেছ?"
+      }
+    },
+    {
+      "id": "home-district",
+      "title_en": "Asking about home town or district",
+      "bangla": "তোমার বাড়ি কোথায়?",
+      "natural_alternatives": [
+        "Where is your hometown?",
+        "Where are you from originally?"
+      ],
+      "example": {
+        "en": "I study in Chattogram, but I am from Sylhet originally.",
+        "bn": "আমি চট্টগ্রামে পড়ি, কিন্তু আসলে সিলেটের।"
+      }
+    }
+  ],
+  "alternatives_intro": "Use a form that matches how specific and how polite you need to be:",
+  "alternatives": [
+    {
+      "en": "Where are you from?",
+      "use_when_en": "the standard question about origin or background"
+    },
+    {
+      "en": "Which country are you from?",
+      "use_when_en": "when you clearly mean nationality or country"
+    },
+    {
+      "en": "Where is your hometown?",
+      "use_when_en": "when you mean the place someone grew up"
+    },
+    {
+      "en": "Where are you from originally?",
+      "use_when_en": "when the person may live elsewhere now"
+    },
+    {
+      "en": "Where do you live?",
+      "use_when_en": "only when you mean current address, not origin"
+    }
+  ],
+  "examples": [
+    {
+      "en": "Where are you from? I have not heard that accent before.",
+      "bn": "আপনি কোথা থেকে এসেছেন? এই উচ্চারণ আগে শুনিনি।"
+    },
+    {
+      "en": "I am from Khulna, but I work in Dhaka now.",
+      "bn": "আমি খুলনার, তবে এখন ঢাকায় কাজ করি।"
+    },
+    {
+      "en": "Where do you live these days?",
+      "bn": "এখনকার দিনে তুমি কোথায় থাকো?"
+    },
+    {
+      "en": "She is from Japan and is visiting her university friends.",
+      "bn": "সে জাপানের এবং বিশ্ববিদ্যালয়ের বন্ধুদের দেখতে এসেছে।"
+    }
+  ],
+  "usage_when": {
+    "paragraphs": [
+      {
+        "text": "People ask Where are you from in travel, campus life, international meetings, and first conversations with strangers.",
+        "bold": [
+          "Where are you from"
+        ]
+      },
+      {
+        "text": "In Bangladesh, the Bangla version often asks for district or home area as well as country. Listen to the situation before answering with only a country name."
+      }
+    ]
+  },
+  "usage_prefer_other": {
+    "bullets": [
+      {
+        "text": "If you mean present residence, ask Where do you live?",
+        "bold": [
+          "Where do you live?"
+        ]
+      },
+      {
+        "text": "If you mean home district after migration, Where are you from originally? is clearer.",
+        "bold": [
+          "Where are you from originally?"
+        ]
+      },
+      {
+        "text": "In very formal settings, add a soft lead-in such as May I ask where you are from?"
+      }
+    ]
+  },
+  "learner_warning": {
+    "paragraphs": [
+      {
+        "text": "Do not mix Where are you from with Where do you live. One points to origin; the other points to current home.",
+        "bold": [
+          "Where are you from",
+          "Where do you live"
+        ]
+      },
+      {
+        "text": "Also choose আপনি or তুমি carefully in Bangla. The English question stays the same, but Bangla politeness changes."
+      }
+    ]
+  },
+  "related_phrases": [
+    {
+      "slug": "where-do-you-live",
+      "label": "where do you live",
+      "note": "asks about current residence, not origin"
+    }
+  ],
+  "dictionary_links": [
+    {
+      "slug": "from",
+      "label": "from",
+      "note": "the key preposition in the question"
+    },
+    {
+      "slug": "origin",
+      "label": "origin",
+      "note": "useful when explaining hometown or background"
+    },
+    {
+      "slug": "country",
+      "label": "country",
+      "note": "one common kind of answer"
+    },
+    {
+      "slug": "city",
+      "label": "city",
+      "note": "another common kind of answer"
+    },
+    {
+      "slug": "live",
+      "label": "live",
+      "note": "useful for contrasting Where do you live?"
+    }
+  ],
+  "learning_links": [
+    {
+      "href": "/real-life-english.html",
+      "label": "Real-Life English",
+      "note": "practical conversation patterns"
+    },
+    {
+      "href": "/speaking.html",
+      "label": "Speaking",
+      "note": "spoken English practice paths"
+    },
+    {
+      "href": "/bangladesh.html",
+      "label": "Bangladesh English",
+      "note": "local usage and common mistakes"
+    },
+    {
+      "href": "/dictionary.html",
+      "label": "Dictionary",
+      "note": "look up related English words"
+    },
+    {
+      "href": "/vocabulary-builder.html",
+      "label": "Vocabulary Builder",
+      "note": "build related word groups"
+    },
+    {
+      "href": "/grammar.html",
+      "label": "Grammar",
+      "note": "strengthen question forms and word order"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Bangla meaning of “Where are you from”?",
+      "answer": {
+        "text": "ভদ্রভাবে আপনি কোথা থেকে এসেছেন?; চলতি ভাষায় তুমি কোথা থেকে এসেছ?",
+        "lang": "bn"
+      }
+    },
+    {
+      "question": "Does it mean the same as “Where do you live”?",
+      "answer": {
+        "text": "No. Where are you from asks about origin or background. Where do you live asks about current residence.",
+        "bold": [
+          "Where are you from",
+          "Where do you live"
+        ]
+      }
+    },
+    {
+      "question": "How should I answer this question?",
+      "answer": {
+        "text": "Give a useful place: country, city, or home district. Add currently live in… if your present city is different."
+      }
+    },
+    {
+      "question": "Is the question rude?",
+      "answer": {
+        "text": "Usually it is ordinary small talk. Tone and timing matter; ask after a greeting, not as the first blunt line."
+      }
+    }
+  ]
+}

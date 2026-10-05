@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0.0",
+  "cohort": "PHRASE-T1-30",
+  "status": "REVIEWED",
+  "slug": "my-pleasure",
+  "rank": 5,
+  "phrase": "My pleasure",
+  "phrase_display": "My Pleasure",
+  "seo": {
+    "title": "My Pleasure Meaning in Bengali – বাংলা অর্থ ও ব্যবহার | Ovidhan",
+    "meta_description": "My pleasure meaning in Bengali: আমার আনন্দ, এটা আমার জন্য আনন্দের বা স্বাগতম। Thank you-র জবাব, natural alternatives ও example sentences শিখুন।",
+    "h1": "My Pleasure Meaning in Bengali",
+    "learning_resource_description": "A learner guide to the English expression My pleasure, with Bengali meanings by context, natural English alternatives, and example sentences."
+  },
+  "quick_answer": {
+    "bangla_meanings": [
+      "আমার আনন্দ",
+      "এটা আমার জন্য আনন্দের",
+      "স্বাগতম"
+    ],
+    "bangla_display": "আমার আনন্দ / এটা আমার জন্য আনন্দের / স্বাগতম",
+    "context_note_bn": "সাধারণত ধন্যবাদের ভদ্র জবাব। প্রতিটি পরিস্থিতিতে pleasure শব্দটাকে আক্ষরিক অনুবাদ করতে হয় না।"
+  },
+  "overview": {
+    "paragraphs": [
+      {
+        "text": "My pleasure is a polite reply after Thank you. It tells the other person you were glad to help. Bangla may be আমার আনন্দ, এটা আমার জন্য আনন্দের, or simply স্বাগতম, depending on how formal the moment is.",
+        "bold": [
+          "My pleasure",
+          "Thank you"
+        ],
+        "bn_spans": [
+          "আমার আনন্দ",
+          "এটা আমার জন্য আনন্দের",
+          "স্বাগতম"
+        ]
+      },
+      {
+        "text": "You're welcome, No problem, and Glad to help are nearby alternatives. They share the same social job, but My pleasure often sounds a little more polished."
+      }
+    ]
+  },
+  "contexts": [
+    {
+      "id": "thanks-reply",
+      "title_en": "Replying to thank you",
+      "bangla": "আমার আনন্দ",
+      "natural_alternatives": [
+        "My pleasure",
+        "You're welcome"
+      ],
+      "example": {
+        "en": "Thank you for holding my bag. My pleasure.",
+        "bn": "ব্যাগটা ধরে রাখার জন্য ধন্যবাদ। আমার আনন্দ।"
+      }
+    },
+    {
+      "id": "service-help",
+      "title_en": "After helping someone",
+      "bangla": "এটা আমার জন্য আনন্দের",
+      "natural_alternatives": [
+        "Glad to help",
+        "My pleasure"
+      ],
+      "example": {
+        "en": "Thanks for explaining the form. Glad to help.",
+        "bn": "ফর্মটা বুঝিয়ে দেওয়ার জন্য ধন্যবাদ। এটা আমার জন্য আনন্দের।"
+      }
+    },
+    {
+      "id": "casual-ack",
+      "title_en": "Casual acknowledgement",
+      "bangla": "স্বাগতম",
+      "natural_alternatives": [
+        "You're welcome",
+        "No problem"
+      ],
+      "example": {
+        "en": "Thanks for the seat. No problem.",
+        "bn": "সিটটা দেওয়ার জন্য ধন্যবাদ। স্বাগতম।"
+      }
+    }
+  ],
+  "alternatives_intro": "All of these can answer Thank you. Choose by formality:",
+  "alternatives": [
+    {
+      "en": "My pleasure",
+      "use_when_en": "a polished, polite reply after thanks"
+    },
+    {
+      "en": "You're welcome",
+      "use_when_en": "the most common all-purpose reply"
+    },
+    {
+      "en": "No problem",
+      "use_when_en": "friendly and casual"
+    },
+    {
+      "en": "Glad to help",
+      "use_when_en": "when you want to stress willingness"
+    },
+    {
+      "en": "Don't mention it",
+      "use_when_en": "a softer, slightly old-fashioned reply"
+    }
+  ],
+  "examples": [
+    {
+      "en": "Thank you for the notes. My pleasure.",
+      "bn": "নোটগুলোর জন্য ধন্যবাদ। আমার আনন্দ।"
+    },
+    {
+      "en": "Thanks for waiting with me. You're welcome.",
+      "bn": "আমার সঙ্গে অপেক্ষা করার জন্য ধন্যবাদ। স্বাগতম।"
+    },
+    {
+      "en": "Thank you for fixing the printer. Glad to help.",
+      "bn": "প্রিন্টার ঠিক করে দেওয়ার জন্য ধন্যবাদ। এটা আমার জন্য আনন্দের।"
+    },
+    {
+      "en": "Thanks for the ride. No problem.",
+      "bn": "পৌঁছে দেওয়ার জন্য ধন্যবাদ। কোনো সমস্যা নেই।"
+    }
+  ],
+  "usage_when": {
+    "paragraphs": [
+      {
+        "text": "Use My pleasure after someone thanks you for a favour, service, or small kindness.",
+        "bold": [
+          "My pleasure"
+        ]
+      },
+      {
+        "text": "It fits customer service, campus help, office support, and careful conversation with seniors. With close friends, You're welcome or No problem may sound more natural."
+      }
+    ]
+  },
+  "usage_prefer_other": {
+    "bullets": [
+      {
+        "text": "For everyday replies, You're welcome is enough.",
+        "bold": [
+          "You're welcome"
+        ]
+      },
+      {
+        "text": "With classmates or siblings, No problem often sounds lighter.",
+        "bold": [
+          "No problem"
+        ]
+      },
+      {
+        "text": "Do not answer Hello or How are you with My pleasure. It belongs after thanks.",
+        "bold": [
+          "My pleasure"
+        ]
+      }
+    ]
+  },
+  "learner_warning": {
+    "paragraphs": [
+      {
+        "text": "Do not translate My pleasure as আমার আনন্দ in every sentence. In casual talk, স্বাগতম or কোনো সমস্যা নেই can be more natural Bangla.",
+        "bold": [
+          "My pleasure"
+        ],
+        "bn_spans": [
+          "আমার আনন্দ",
+          "স্বাগতম",
+          "কোনো সমস্যা নেই"
+        ]
+      },
+      {
+        "text": "Also remember the social trigger: this phrase answers gratitude. Without a thank-you, it can sound odd."
+      }
+    ]
+  },
+  "related_phrases": [],
+  "dictionary_links": [
+    {
+      "slug": "pleasure",
+      "label": "pleasure",
+      "note": "the key noun in the expression"
+    },
+    {
+      "slug": "thank",
+      "label": "thank",
+      "note": "useful for the thank-you exchange"
+    },
+    {
+      "slug": "thanks",
+      "label": "thanks",
+      "note": "the common short form that comes before this reply"
+    },
+    {
+      "slug": "welcome",
+      "label": "welcome",
+      "note": "useful when comparing You're welcome"
+    },
+    {
+      "slug": "help",
+      "label": "help",
+      "note": "useful when comparing Glad to help"
+    }
+  ],
+  "learning_links": [
+    {
+      "href": "/real-life-english.html",
+      "label": "Real-Life English",
+      "note": "practical conversation patterns"
+    },
+    {
+      "href": "/speaking.html",
+      "label": "Speaking",
+      "note": "spoken English practice paths"
+    },
+    {
+      "href": "/bangladesh.html",
+      "label": "Bangladesh English",
+      "note": "local usage and common mistakes"
+    },
+    {
+      "href": "/dictionary.html",
+      "label": "Dictionary",
+      "note": "look up related English words"
+    },
+    {
+      "href": "/vocabulary-builder.html",
+      "label": "Vocabulary Builder",
+      "note": "build related word groups"
+    },
+    {
+      "href": "/grammar.html",
+      "label": "Grammar",
+      "note": "strengthen polite replies after thank you"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Bangla meaning of “My pleasure”?",
+      "answer": {
+        "text": "ধন্যবাদের জবাবে সাধারণত আমার আনন্দ, এটা আমার জন্য আনন্দের বা স্বাগতম বোঝায়।",
+        "lang": "bn"
+      }
+    },
+    {
+      "question": "When do I use “My pleasure”?",
+      "answer": {
+        "text": "Use it after someone says thank you for help or a favour.",
+        "bold": [
+          "thank you"
+        ]
+      }
+    },
+    {
+      "question": "Is “My pleasure” more formal than “You're welcome”?",
+      "answer": {
+        "text": "Often yes. You're welcome is broader; My pleasure sounds a little more polished.",
+        "bold": [
+          "You're welcome",
+          "My pleasure"
+        ]
+      }
+    },
+    {
+      "question": "Can I say “My pleasures”?",
+      "answer": {
+        "text": "No. Keep the fixed form My pleasure.",
+        "bold": [
+          "My pleasure"
+        ]
+      }
+    }
+  ]
+}

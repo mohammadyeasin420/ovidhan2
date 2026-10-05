@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.0.0",
+  "cohort": "PHRASE-T1-30",
+  "status": "REVIEWED",
+  "slug": "mind-it",
+  "rank": 1,
+  "phrase": "Mind it",
+  "phrase_display": "Mind It",
+  "seo": {
+    "title": "Mind It Meaning in Bengali – বাংলা অর্থ ও ব্যবহার | Ovidhan",
+    "meta_description": "Mind it meaning in Bengali: মনে রেখো, খেয়াল রেখো বা সাবধান। Context অনুযায়ী সঠিক বাংলা অর্থ, natural English alternatives ও example sentences শিখুন।",
+    "h1": "Mind It Meaning in Bengali",
+    "learning_resource_description": "A learner guide to the English expression Mind it, with Bengali meanings by context, natural English alternatives, and example sentences."
+  },
+  "quick_answer": {
+    "bangla_meanings": [
+      "মনে রেখো",
+      "খেয়াল রেখো",
+      "সাবধান"
+    ],
+    "bangla_display": "মনে রেখো / খেয়াল রেখো / সাবধান",
+    "context_note_bn": "সবচেয়ে ভালো বাংলা অনুবাদ নির্ভর করে speaker কী বোঝাতে চেয়েছেন তার উপর। একটাই fixed meaning নেই।"
+  },
+  "overview": {
+    "paragraphs": [
+      {
+        "text": "Mind it is an English expression many Bangladeshi learners hear in conversation, classrooms, offices, and local media. In those settings it can mean “remember this,” “pay attention,” or “be careful,” depending on tone and situation.",
+        "bold": [
+          "Mind it"
+        ]
+      },
+      {
+        "text": "It is useful to recognise. It is not always the most natural choice in international standard English. When your meaning is clear, a more common alternative usually sounds smoother."
+      }
+    ]
+  },
+  "contexts": [
+    {
+      "id": "remember",
+      "title_en": "Remembering something",
+      "bangla": "মনে রেখো",
+      "natural_alternatives": [
+        "Keep that in mind",
+        "Remember that"
+      ],
+      "example": {
+        "en": "The form closes at 5 pm. Keep that in mind.",
+        "bn": "ফর্ম জমা দেওয়ার সময় বিকেল ৫টায় শেষ। মনে রেখো।"
+      }
+    },
+    {
+      "id": "warning",
+      "title_en": "Warning someone",
+      "bangla": "সাবধান",
+      "natural_alternatives": [
+        "Watch it",
+        "Be careful"
+      ],
+      "example": {
+        "en": "Watch it — that step is wet.",
+        "bn": "সাবধান — ওই ধাপটা ভেজা।"
+      }
+    },
+    {
+      "id": "attention",
+      "title_en": "Asking someone to pay attention",
+      "bangla": "খেয়াল রেখো",
+      "natural_alternatives": [
+        "Pay attention",
+        "Keep an eye on it"
+      ],
+      "example": {
+        "en": "Keep an eye on the milk so it does not boil over.",
+        "bn": "দুধটা যাতে উথলে না যায়, খেয়াল রেখো।"
+      }
+    }
+  ],
+  "alternatives_intro": "If you want to say the same idea in clearer everyday English, choose the alternative that matches your intention:",
+  "alternatives": [
+    {
+      "en": "Keep that in mind",
+      "use_when_en": "when you want someone to remember a point"
+    },
+    {
+      "en": "Remember that",
+      "use_when_en": "when the fact itself matters"
+    },
+    {
+      "en": "Watch it",
+      "use_when_en": "when there is sudden risk or annoyance"
+    },
+    {
+      "en": "Be careful",
+      "use_when_en": "when you want a clear safety warning"
+    },
+    {
+      "en": "Pay attention",
+      "use_when_en": "when focus is the issue"
+    },
+    {
+      "en": "Keep an eye on it",
+      "use_when_en": "when someone should watch something for a while"
+    }
+  ],
+  "examples": [
+    {
+      "en": "Mind it: the viva starts after the written test.",
+      "bn": "মনে রেখো: লিখিত পরীক্ষার পর ভাইভা শুরু হবে।"
+    },
+    {
+      "en": "Mind it while crossing — rickshaws come from both sides.",
+      "bn": "পার হওয়ার সময় সাবধান — দুই দিক থেকেই রিকশা আসে।"
+    },
+    {
+      "en": "Mind it during the meeting and note every deadline.",
+      "bn": "মিটিংয়ের সময় খেয়াল রেখো আর প্রতিটা ডেডলাইন লিখে নাও।"
+    },
+    {
+      "en": "Keep that in mind before you send the email.",
+      "bn": "ইমেইল পাঠানোর আগে বিষয়টা মনে রেখো।"
+    }
+  ],
+  "usage_when": {
+    "paragraphs": [
+      {
+        "text": "In Bangladesh and nearby South Asian English settings, you may hear Mind it from teachers, seniors, colleagues, or relatives. It often works as a short spoken reminder: remember this, stay alert, or take care.",
+        "bold": [
+          "Mind it"
+        ]
+      },
+      {
+        "text": "Understanding it helps you follow local conversation. Using a clearer alternative helps you sound natural with international speakers, exams, and formal writing."
+      }
+    ]
+  },
+  "usage_prefer_other": {
+    "bullets": [
+      {
+        "text": "For exams, emails, or presentations, prefer Keep that in mind or Please remember that.",
+        "bold": [
+          "Keep that in mind",
+          "Please remember that"
+        ]
+      },
+      {
+        "text": "For sudden danger, prefer Watch out, Watch it, or Be careful.",
+        "bold": [
+          "Watch out",
+          "Watch it",
+          "Be careful"
+        ]
+      },
+      {
+        "text": "For ongoing observation, prefer Keep an eye on it.",
+        "bold": [
+          "Keep an eye on it"
+        ]
+      },
+      {
+        "text": "If you only mean the verb mind as “object to,” that is a different use: Do you mind if I sit here?",
+        "italic": [
+          "mind",
+          "Do you mind if I sit here?"
+        ]
+      }
+    ]
+  },
+  "learner_warning": {
+    "paragraphs": [
+      {
+        "text": "Do not treat Mind it as one fixed Bangla word. Learners sometimes translate every case as মনে রেখো, even when the speaker is giving a warning. Check the situation first: memory, attention, or caution.",
+        "bold": [
+          "Mind it"
+        ],
+        "bn_spans": [
+          "মনে রেখো"
+        ]
+      },
+      {
+        "text": "Also avoid overusing it in writing. One clear alternative usually teaches the meaning better than repeating the same phrase."
+      }
+    ]
+  },
+  "related_phrases": [],
+  "dictionary_links": [
+    {
+      "slug": "mind",
+      "label": "mind",
+      "note": "the base verb and noun in the Ovidhan dictionary"
+    },
+    {
+      "slug": "remember",
+      "label": "remember",
+      "note": "useful when the idea is “মনে রেখো”"
+    },
+    {
+      "slug": "attention",
+      "label": "attention",
+      "note": "useful when the idea is “খেয়াল রেখো”"
+    },
+    {
+      "slug": "careful",
+      "label": "careful",
+      "note": "useful when the idea is “সাবধান”"
+    },
+    {
+      "slug": "watch",
+      "label": "watch",
+      "note": "connected to “Watch it / Keep an eye on it”"
+    },
+    {
+      "slug": "caution",
+      "label": "caution",
+      "note": "a related warning word"
+    }
+  ],
+  "learning_links": [
+    {
+      "href": "/real-life-english.html",
+      "label": "Real-Life English",
+      "note": "practical conversation patterns"
+    },
+    {
+      "href": "/speaking.html",
+      "label": "Speaking",
+      "note": "spoken English practice paths"
+    },
+    {
+      "href": "/bangladesh.html",
+      "label": "Bangladesh English",
+      "note": "local usage and common mistakes"
+    },
+    {
+      "href": "/dictionary.html",
+      "label": "Dictionary",
+      "note": "look up related English words"
+    },
+    {
+      "href": "/vocabulary-builder.html",
+      "label": "Vocabulary Builder",
+      "note": "build related word groups"
+    },
+    {
+      "href": "/grammar.html",
+      "label": "Grammar",
+      "note": "strengthen sentence control around these phrases"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Bangla meaning of “Mind it”?",
+      "answer": {
+        "text": "Context অনুযায়ী সাধারণত মনে রেখো, খেয়াল রেখো বা সাবধান বোঝায়।",
+        "lang": "bn"
+      }
+    },
+    {
+      "question": "Is “Mind it” wrong English?",
+      "answer": {
+        "text": "It is widely understood in South Asian English. For international or formal use, a clearer alternative is usually better."
+      }
+    },
+    {
+      "question": "What should I say instead in an exam or email?",
+      "answer": {
+        "text": "Use Keep that in mind, Remember that, Be careful, or Pay attention, according to your meaning.",
+        "bold": [
+          "Keep that in mind",
+          "Remember that",
+          "Be careful",
+          "Pay attention"
+        ]
+      }
+    },
+    {
+      "question": "Does “Mind it” always mean “সাবধান”?",
+      "answer": {
+        "text": "No. That is only one possible reading. Many speakers use it as a reminder to remember or notice something."
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+.phrase-entry { max-width: 880px; margin: 0 auto; padding: 1.25rem 1.25rem 2rem; }
+.phrase-breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.15rem 0.5rem; font-family: var(--font-en); font-size: 0.85rem; color: var(--text-mid); margin: 0 0 0.9rem; }
+.phrase-breadcrumb li + li::before { content: "\203A"; margin-right: 0.5rem; color: var(--text-mid); }
+.phrase-breadcrumb a { color: var(--teal); }
+.phrase-breadcrumb a:hover { color: var(--gold); }
+.phrase-entry h1 { font-family: var(--font-en); font-size: clamp(1.45rem, 4.2vw, 1.9rem); line-height: 1.3; font-weight: 700; color: var(--text); margin: 0 0 0.85rem; }
+.phrase-headword { color: var(--gold); }
+.phrase-quick { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: var(--radius); padding: 0.95rem 1.25rem 1.05rem; margin: 0 0 1.4rem; }
+.phrase-kicker { font-family: var(--font-en); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-mid); margin: 0 0 0.25rem; }
+.phrase-term { font-family: var(--font-en); font-size: clamp(1.55rem, 5vw, 2.1rem); line-height: 1.25; font-weight: 700; color: var(--text); margin: 0 0 0.55rem; }
+.phrase-bn-label { font-family: var(--font-en); font-size: 0.82rem; color: var(--text-mid); margin: 0 0 0.15rem; }
+.phrase-bn { font-size: clamp(1.45rem, 4.8vw, 1.95rem); line-height: 1.4; font-weight: 700; color: var(--gold); margin: 0 0 0.55rem; }
+.phrase-note { font-size: 1rem; line-height: 1.55; color: var(--text); margin: 0; }
+.phrase-section { margin: 0 0 1.35rem; }
+.phrase-section h2 { font-family: var(--font-en); font-size: 1.15rem; font-weight: 600; color: var(--text); margin: 0 0 0.7rem; }
+.phrase-section p, .phrase-section li { line-height: 1.65; color: var(--text); }
+.phrase-section p { margin: 0 0 0.75rem; }
+.phrase-section ul, .phrase-section ol { margin: 0 0 0.75rem; padding-left: 1.2rem; }
+.phrase-grid { list-style: none; display: grid; gap: 0.85rem; margin: 0; padding: 0; }
+.phrase-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.95rem 1.1rem 1rem; }
+.phrase-card h3 { font-family: var(--font-en); font-size: 1rem; font-weight: 600; color: var(--teal); margin: 0 0 0.45rem; }
+.phrase-card p { margin: 0 0 0.45rem; }
+.phrase-card p:last-child { margin-bottom: 0; }
+.phrase-label { font-family: var(--font-en); font-size: 0.78rem; letter-spacing: 0.03em; color: var(--text-mid); }
+.phrase-alt { color: var(--gold); font-weight: 600; }
+.phrase-example { border-left: 3px solid var(--gold); padding-left: 0.8rem; margin: 0.7rem 0; }
+.phrase-example-en { font-family: var(--font-en); color: var(--text); margin: 0 0 0.2rem; }
+.phrase-example-bn { color: var(--text-mid); margin: 0; }
+.phrase-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; }
+.phrase-links a { color: var(--teal); }
+.phrase-links a:hover { color: var(--gold); }
+.phrase-faq details { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem 1rem; margin: 0 0 0.55rem; }
+.phrase-faq summary { cursor: pointer; font-family: var(--font-en); font-weight: 600; color: var(--text); }
+.phrase-faq details[open] summary { color: var(--gold); margin-bottom: 0.45rem; }
+.phrase-faq p { margin: 0; }
+.phrase-entry a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+@media (min-width: 640px) {
+    .phrase-entry { padding-top: 1.75rem; }
+    .phrase-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+    .phrase-entry { padding-left: 0.9rem; padding-right: 0.9rem; }
+    .phrase-quick, .phrase-card { padding-left: 0.95rem; padding-right: 0.95rem; }
+}

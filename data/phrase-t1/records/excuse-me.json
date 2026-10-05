@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.0.0",
+  "cohort": "PHRASE-T1-30",
+  "status": "REVIEWED",
+  "slug": "excuse-me",
+  "rank": 6,
+  "phrase": "Excuse me",
+  "phrase_display": "Excuse Me",
+  "seo": {
+    "title": "Excuse Me Meaning in Bengali – বাংলা অর্থ ও ব্যবহার | Ovidhan",
+    "meta_description": "Excuse me meaning in Bengali: মাফ করবেন, একটু শুনবেন, দুঃখিত বা কী বললেন। Attention, path, interruption ও example sentences শিখুন।",
+    "h1": "Excuse Me Meaning in Bengali",
+    "learning_resource_description": "A learner guide to the English expression Excuse me, with Bengali meanings by context, natural English alternatives, and example sentences."
+  },
+  "quick_answer": {
+    "bangla_meanings": [
+      "মাফ করবেন",
+      "একটু শুনবেন",
+      "দুঃখিত",
+      "কী বললেন?"
+    ],
+    "bangla_display": "মাফ করবেন / একটু শুনবেন / দুঃখিত / কী বললেন?",
+    "context_note_bn": "একই ইংরেজি বাক্য অনেক কাজে লাগে: মনোযোগ চাওয়া, পথ চাওয়া, বাধা দেওয়া, বা শুনতে না পাওয়া। বাংলা অর্থ context দেখে নিন।"
+  },
+  "overview": {
+    "paragraphs": [
+      {
+        "text": "Excuse me is a polite multi-purpose phrase. It can get someone’s attention, ask for space to pass, soften an interruption, or check what was said.",
+        "bold": [
+          "Excuse me"
+        ]
+      },
+      {
+        "text": "Because the jobs are different, Bangla changes: মাফ করবেন, একটু শুনবেন, দুঃখিত, or কী বললেন? Do not force one Bangla line onto every English use.",
+        "bn_spans": [
+          "মাফ করবেন",
+          "একটু শুনবেন",
+          "দুঃখিত",
+          "কী বললেন?"
+        ]
+      }
+    ]
+  },
+  "contexts": [
+    {
+      "id": "attention",
+      "title_en": "Getting someone's attention",
+      "bangla": "একটু শুনবেন",
+      "natural_alternatives": [
+        "Excuse me",
+        "Pardon me"
+      ],
+      "example": {
+        "en": "Excuse me, is this the line for platform 3?",
+        "bn": "একটু শুনবেন, এটা কি তিন নম্বর প্ল্যাটফর্মের লাইন?"
+      }
+    },
+    {
+      "id": "passing",
+      "title_en": "Asking someone to let you pass",
+      "bangla": "মাফ করবেন",
+      "natural_alternatives": [
+        "Excuse me",
+        "May I please get through?"
+      ],
+      "example": {
+        "en": "Excuse me, may I please get through?",
+        "bn": "মাফ করবেন, একটু পথ দেবেন কি?"
+      }
+    },
+    {
+      "id": "interrupt",
+      "title_en": "Interrupting politely",
+      "bangla": "দুঃখিত",
+      "natural_alternatives": [
+        "Excuse me",
+        "Sorry to interrupt"
+      ],
+      "example": {
+        "en": "Excuse me for interrupting, but the guest has arrived.",
+        "bn": "মাঝখানে কেটে দিয়ে দুঃখিত, কিন্তু অতিথি এসে গেছেন।"
+      }
+    },
+    {
+      "id": "repetition",
+      "title_en": "Asking for repetition or showing surprise",
+      "bangla": "কী বললেন?",
+      "natural_alternatives": [
+        "Pardon?",
+        "Sorry, could you repeat that?"
+      ],
+      "example": {
+        "en": "Excuse me? I did not catch the last price.",
+        "bn": "কী বললেন? শেষ দামটা ধরতে পারিনি।"
+      }
+    }
+  ],
+  "alternatives_intro": "Match the English form to the social job you need:",
+  "alternatives": [
+    {
+      "en": "Excuse me",
+      "use_when_en": "attention, path, polite interruption, or a soft check"
+    },
+    {
+      "en": "Pardon me",
+      "use_when_en": "a slightly more formal attention or apology cue"
+    },
+    {
+      "en": "Sorry to interrupt",
+      "use_when_en": "when you must break into a conversation"
+    },
+    {
+      "en": "Could you repeat that?",
+      "use_when_en": "when you missed the words"
+    },
+    {
+      "en": "I'm sorry",
+      "use_when_en": "when you need a clear apology for a mistake or harm"
+    }
+  ],
+  "examples": [
+    {
+      "en": "Excuse me, do you know where the ticket counter is?",
+      "bn": "একটু শুনবেন, টিকিট কাউন্টার কোথায় জানেন কি?"
+    },
+    {
+      "en": "Excuse me, I need to step past your chair.",
+      "bn": "মাফ করবেন, আপনার চেয়ারের পাশ দিয়ে যেতে হবে।"
+    },
+    {
+      "en": "Sorry to interrupt, but your phone is ringing.",
+      "bn": "মাঝখানে কেটে দিয়ে দুঃখিত, কিন্তু আপনার ফোন বাজছে।"
+    },
+    {
+      "en": "Excuse me? Did you say the class starts at nine?",
+      "bn": "কী বললেন? ক্লাস কি নয়টায় শুরু?"
+    }
+  ],
+  "usage_when": {
+    "paragraphs": [
+      {
+        "text": "Use Excuse me in crowded places, offices, classrooms, shops, and transport when you need a polite social signal.",
+        "bold": [
+          "Excuse me"
+        ]
+      },
+      {
+        "text": "Rising intonation can turn it into a request for repetition. Falling or firm tone more often means attention, path, or interruption."
+      }
+    ]
+  },
+  "usage_prefer_other": {
+    "bullets": [
+      {
+        "text": "For a real apology after causing trouble, prefer I'm sorry.",
+        "bold": [
+          "I'm sorry"
+        ]
+      },
+      {
+        "text": "If you only missed the words, Could you repeat that? is clearer than a bare Excuse me?",
+        "bold": [
+          "Could you repeat that?",
+          "Excuse me?"
+        ]
+      },
+      {
+        "text": "If you need urgent help, add the request: Excuse me, can you help me find gate 2?",
+        "bold": [
+          "Excuse me"
+        ]
+      }
+    ]
+  },
+  "learner_warning": {
+    "paragraphs": [
+      {
+        "text": "Do not collapse every Excuse me into দুঃখিত. That Bangla word is closer to an apology, while Excuse me often only opens a polite request.",
+        "bold": [
+          "Excuse me"
+        ],
+        "bn_spans": [
+          "দুঃখিত"
+        ]
+      },
+      {
+        "text": "Also separate Excuse me from I'm sorry. One manages social space and attention; the other accepts fault or expresses regret.",
+        "bold": [
+          "Excuse me",
+          "I'm sorry"
+        ]
+      }
+    ]
+  },
+  "related_phrases": [],
+  "dictionary_links": [
+    {
+      "slug": "excuse",
+      "label": "excuse",
+      "note": "the base verb/noun in the expression"
+    },
+    {
+      "slug": "sorry",
+      "label": "sorry",
+      "note": "useful when comparing I'm sorry"
+    },
+    {
+      "slug": "interrupt",
+      "label": "interrupt",
+      "note": "useful for the interruption context"
+    },
+    {
+      "slug": "pass",
+      "label": "pass",
+      "note": "useful when asking someone to make way"
+    },
+    {
+      "slug": "repeat",
+      "label": "repeat",
+      "note": "useful when you did not hear clearly"
+    },
+    {
+      "slug": "polite",
+      "label": "polite",
+      "note": "useful for discussing tone and manners"
+    }
+  ],
+  "learning_links": [
+    {
+      "href": "/real-life-english.html",
+      "label": "Real-Life English",
+      "note": "practical conversation patterns"
+    },
+    {
+      "href": "/speaking.html",
+      "label": "Speaking",
+      "note": "spoken English practice paths"
+    },
+    {
+      "href": "/bangladesh.html",
+      "label": "Bangladesh English",
+      "note": "local usage and common mistakes"
+    },
+    {
+      "href": "/dictionary.html",
+      "label": "Dictionary",
+      "note": "look up related English words"
+    },
+    {
+      "href": "/vocabulary-builder.html",
+      "label": "Vocabulary Builder",
+      "note": "build related word groups"
+    },
+    {
+      "href": "/grammar.html",
+      "label": "Grammar",
+      "note": "strengthen polite request and interruption forms"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Bangla meaning of “Excuse me”?",
+      "answer": {
+        "text": "Context অনুযায়ী মাফ করবেন, একটু শুনবেন, দুঃখিত বা কী বললেন? হতে পারে।",
+        "lang": "bn"
+      }
+    },
+    {
+      "question": "Is “Excuse me” the same as “I'm sorry”?",
+      "answer": {
+        "text": "Not always. Excuse me often manages attention or space. I'm sorry is stronger when you apologise for a mistake.",
+        "bold": [
+          "Excuse me",
+          "I'm sorry"
+        ]
+      }
+    },
+    {
+      "question": "How do I ask someone to move in a crowded bus?",
+      "answer": {
+        "text": "Say Excuse me or Excuse me, may I please get through?",
+        "bold": [
+          "Excuse me",
+          "Excuse me, may I please get through?"
+        ]
+      }
+    },
+    {
+      "question": "What if I did not hear the person?",
+      "answer": {
+        "text": "Use Excuse me? with rising tone, or say Sorry, could you repeat that?",
+        "bold": [
+          "Excuse me?",
+          "Sorry, could you repeat that?"
+        ]
+      }
+    }
+  ]
+}

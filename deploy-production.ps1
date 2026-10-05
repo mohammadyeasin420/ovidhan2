@@ -18,7 +18,7 @@ $expectedWordCount = 49710
 $expectedUnicodeWordCount = 114
 $requiredDirectories = @(
     'audio', 'bcs', 'content', 'data', 'grammar', 'graph_data', 'listening',
-    'listening-exams', 'mock-tests', 'real-life-english', 'speaking',
+    'listening-exams', 'mock-tests', 'phrase', 'real-life-english', 'speaking',
     'templates', 'tools', 'word'
 )
 $excludedDirectories = @(

@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0.0",
+  "cohort": "PHRASE-T1-30",
+  "status": "REVIEWED",
+  "slug": "best-of-luck",
+  "rank": 3,
+  "phrase": "Best of luck",
+  "phrase_display": "Best of Luck",
+  "seo": {
+    "title": "Best of Luck Meaning in Bengali – বাংলা অর্থ ও ব্যবহার | Ovidhan",
+    "meta_description": "Best of luck meaning in Bengali: শুভকামনা, তোমার জন্য শুভকামনা বা সাফল্য কামনা করছি। Context, natural alternatives ও example sentences শিখুন।",
+    "h1": "Best of Luck Meaning in Bengali",
+    "learning_resource_description": "A learner guide to the English expression Best of luck, with Bengali meanings by context, natural English alternatives, and example sentences."
+  },
+  "quick_answer": {
+    "bangla_meanings": [
+      "শুভকামনা",
+      "তোমার জন্য শুভকামনা",
+      "সাফল্য কামনা করছি"
+    ],
+    "bangla_display": "শুভকামনা / তোমার জন্য শুভকামনা",
+    "context_note_bn": "কেউ পরীক্ষা, সাক্ষাৎকার বা নতুন কাজে যাওয়ার আগে শুভেচ্ছা জানালে এই অর্থ বোঝায়।"
+  },
+  "overview": {
+    "paragraphs": [
+      {
+        "text": "Best of luck is a warm wish for someone who is about to face a test, interview, competition, or new challenge. In Bangla it is usually শুভকামনা or তোমার জন্য শুভকামনা.",
+        "bold": [
+          "Best of luck"
+        ],
+        "bn_spans": [
+          "শুভকামনা",
+          "তোমার জন্য শুভকামনা"
+        ]
+      },
+      {
+        "text": "Good luck, All the best, and Wishing you the best are close alternatives. They are not always different in meaning; choose the one that fits the relationship and formality."
+      }
+    ]
+  },
+  "contexts": [
+    {
+      "id": "exam-interview",
+      "title_en": "Before an exam or interview",
+      "bangla": "শুভকামনা",
+      "natural_alternatives": [
+        "Good luck",
+        "Best of luck"
+      ],
+      "example": {
+        "en": "Your viva is tomorrow. Best of luck!",
+        "bn": "কাল তোমার ভাইভা। শুভকামনা!"
+      }
+    },
+    {
+      "id": "new-work",
+      "title_en": "Starting a job or project",
+      "bangla": "তোমার জন্য শুভকামনা",
+      "natural_alternatives": [
+        "All the best",
+        "Wishing you the best"
+      ],
+      "example": {
+        "en": "All the best in your new teaching post.",
+        "bn": "নতুন শিক্ষকতা পদে তোমার জন্য শুভকামনা।"
+      }
+    },
+    {
+      "id": "competition",
+      "title_en": "Before a competition or hard challenge",
+      "bangla": "সাফল্য কামনা করছি",
+      "natural_alternatives": [
+        "Best of luck",
+        "Good luck"
+      ],
+      "example": {
+        "en": "The debate final starts at noon. Best of luck to your team.",
+        "bn": "দ্বিপাক্ষিক বিতর্কের ফাইনাল দুপুরে। তোমাদের দলের সাফল্য কামনা করছি।"
+      }
+    }
+  ],
+  "alternatives_intro": "These wishes are close in meaning. Use the one that matches tone and relationship:",
+  "alternatives": [
+    {
+      "en": "Good luck",
+      "use_when_en": "the most common short wish before a difficult moment"
+    },
+    {
+      "en": "Best of luck",
+      "use_when_en": "a warm, slightly fuller wish in speech or messages"
+    },
+    {
+      "en": "All the best",
+      "use_when_en": "common in farewell, transfer, or new-beginning contexts"
+    },
+    {
+      "en": "Wishing you the best",
+      "use_when_en": "a little more formal in cards, emails, or speeches"
+    }
+  ],
+  "examples": [
+    {
+      "en": "Best of luck with the BCS written exam.",
+      "bn": "বিসিএস লিখিত পরীক্ষায় শুভকামনা।"
+    },
+    {
+      "en": "Good luck in your bank-job interview this morning.",
+      "bn": "আজ সকালের ব্যাংক চাকরির সাক্ষাৎকারে শুভকামনা।"
+    },
+    {
+      "en": "All the best as you start the new research project.",
+      "bn": "নতুন গবেষণা প্রকল্প শুরু করতে তোমার জন্য শুভকামনা।"
+    },
+    {
+      "en": "Wishing you the best in the football final.",
+      "bn": "ফুটবল ফাইনালে তোমার সাফল্য কামনা করছি।"
+    }
+  ],
+  "usage_when": {
+    "paragraphs": [
+      {
+        "text": "Use Best of luck when someone is about to do something uncertain or demanding: an exam, interview, match, presentation, or first day at work.",
+        "bold": [
+          "Best of luck"
+        ]
+      },
+      {
+        "text": "It is friendly and positive. You can say it face to face, in a text, or at the end of a short note."
+      }
+    ]
+  },
+  "usage_prefer_other": {
+    "bullets": [
+      {
+        "text": "For the shortest everyday wish, Good luck is enough.",
+        "bold": [
+          "Good luck"
+        ]
+      },
+      {
+        "text": "For someone leaving a class, job, or city, All the best often fits well.",
+        "bold": [
+          "All the best"
+        ]
+      },
+      {
+        "text": "Do not use Best of luck for ordinary greetings such as hello or goodbye with no challenge ahead.",
+        "bold": [
+          "Best of luck"
+        ]
+      }
+    ]
+  },
+  "learner_warning": {
+    "paragraphs": [
+      {
+        "text": "Do not invent a deep difference between Best of luck and Good luck when the situation is the same. Both can translate as শুভকামনা.",
+        "bold": [
+          "Best of luck",
+          "Good luck"
+        ],
+        "bn_spans": [
+          "শুভকামনা"
+        ]
+      },
+      {
+        "text": "Avoid the word-for-word Bangla calque that sounds like a dictionary line. Prefer a natural wish such as শুভকামনা or তোমার জন্য শুভকামনা.",
+        "bn_spans": [
+          "শুভকামনা",
+          "তোমার জন্য শুভকামনা"
+        ]
+      }
+    ]
+  },
+  "related_phrases": [
+    {
+      "slug": "all-the-best",
+      "label": "all the best",
+      "note": "a closely related good-wish expression"
+    }
+  ],
+  "dictionary_links": [
+    {
+      "slug": "luck",
+      "label": "luck",
+      "note": "the key noun in the expression"
+    },
+    {
+      "slug": "best",
+      "label": "best",
+      "note": "useful when comparing Best of luck and All the best"
+    },
+    {
+      "slug": "success",
+      "label": "success",
+      "note": "useful when the Bangla idea is সাফল্য কামনা"
+    },
+    {
+      "slug": "exam",
+      "label": "exam",
+      "note": "a common context for this wish"
+    }
+  ],
+  "learning_links": [
+    {
+      "href": "/real-life-english.html",
+      "label": "Real-Life English",
+      "note": "practical conversation patterns"
+    },
+    {
+      "href": "/speaking.html",
+      "label": "Speaking",
+      "note": "spoken English practice paths"
+    },
+    {
+      "href": "/bangladesh.html",
+      "label": "Bangladesh English",
+      "note": "local usage and common mistakes"
+    },
+    {
+      "href": "/dictionary.html",
+      "label": "Dictionary",
+      "note": "look up related English words"
+    },
+    {
+      "href": "/exam-prep.html",
+      "label": "Exam Prep",
+      "note": "exam-focused English support"
+    },
+    {
+      "href": "/grammar.html",
+      "label": "Grammar",
+      "note": "strengthen short wishes and farewell formulas"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Bangla meaning of “Best of luck”?",
+      "answer": {
+        "text": "সাধারণত শুভকামনা বা তোমার জন্য শুভকামনা বোঝায়।",
+        "lang": "bn"
+      }
+    },
+    {
+      "question": "Is “Best of luck” different from “Good luck”?",
+      "answer": {
+        "text": "In many situations they are almost the same. Best of luck can sound a little fuller; Good luck is shorter and very common.",
+        "bold": [
+          "Best of luck",
+          "Good luck"
+        ]
+      }
+    },
+    {
+      "question": "Can I use “Best of luck” before a job interview?",
+      "answer": {
+        "text": "Yes. It is natural before interviews, exams, matches, and other challenges."
+      }
+    },
+    {
+      "question": "Should I say “Best of lucks”?",
+      "answer": {
+        "text": "No. Keep luck uncountable here: Best of luck.",
+        "bold": [
+          "Best of luck"
+        ]
+      }
+    }
+  ]
+}

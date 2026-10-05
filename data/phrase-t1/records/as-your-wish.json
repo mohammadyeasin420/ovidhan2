@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.0.0",
+  "cohort": "PHRASE-T1-30",
+  "status": "REVIEWED",
+  "slug": "as-your-wish",
+  "rank": 2,
+  "phrase": "As your wish",
+  "phrase_display": "As Your Wish",
+  "seo": {
+    "title": "As Your Wish Meaning in Bengali – বাংলা অর্থ ও ব্যবহার | Ovidhan",
+    "meta_description": "As your wish meaning in Bengali: আপনার ইচ্ছা অনুযায়ী বা তোমার যেমন খুশি। South Asian usage, natural English alternatives ও example sentences শিখুন।",
+    "h1": "As Your Wish Meaning in Bengali",
+    "learning_resource_description": "A learner guide to the English expression As your wish, with Bengali meanings by context, natural English alternatives, and example sentences."
+  },
+  "quick_answer": {
+    "bangla_meanings": [
+      "আপনার ইচ্ছা অনুযায়ী",
+      "তোমার যেমন খুশি",
+      "তুমি যা চাও"
+    ],
+    "bangla_display": "আপনার ইচ্ছা অনুযায়ী / তোমার যেমন খুশি",
+    "context_note_bn": "এখানে speaker অন্যের পছন্দ মেনে নিচ্ছেন। বাংলায় ভদ্র বা চলতি রূপ পরিস্থিতি অনুযায়ী বদলায়।"
+  },
+  "overview": {
+    "paragraphs": [
+      {
+        "text": "As your wish is often heard in South Asian English when someone accepts another person’s choice. In Bangla it usually means আপনার ইচ্ছা অনুযায়ী or তোমার যেমন খুশি.",
+        "bold": [
+          "As your wish"
+        ],
+        "bn_spans": [
+          "আপনার ইচ্ছা অনুযায়ী",
+          "তোমার যেমন খুশি"
+        ]
+      },
+      {
+        "text": "Learners should recognise the phrase because it appears in local conversation. In international standard English, As you wish, It's up to you, or Whatever you prefer often sounds more natural."
+      }
+    ]
+  },
+  "contexts": [
+    {
+      "id": "accept-choice",
+      "title_en": "Accepting someone’s choice",
+      "bangla": "আপনার ইচ্ছা অনুযায়ী",
+      "natural_alternatives": [
+        "As you wish",
+        "Whatever you prefer"
+      ],
+      "example": {
+        "en": "We can leave now or after lunch. As you wish.",
+        "bn": "এখনও যেতে পারি, দুপুরের খাবারের পরেও যেতে পারি। আপনার ইচ্ছা অনুযায়ী।"
+      }
+    },
+    {
+      "id": "leave-decision",
+      "title_en": "Leaving the decision to someone",
+      "bangla": "তোমার যেমন খুশি",
+      "natural_alternatives": [
+        "It's up to you",
+        "You decide"
+      ],
+      "example": {
+        "en": "Tea or coffee? It's up to you.",
+        "bn": "চা না কফি? তোমার যেমন খুশি।"
+      }
+    },
+    {
+      "id": "reluctant-agreement",
+      "title_en": "Agreeing, sometimes with soft reluctance",
+      "bangla": "তুমি যা চাও",
+      "natural_alternatives": [
+        "If that's what you want",
+        "As you wish"
+      ],
+      "example": {
+        "en": "If that's what you want, we will change the plan.",
+        "bn": "তুমি যা চাও, আমরা পরিকল্পনা বদলাব।"
+      }
+    }
+  ],
+  "alternatives_intro": "Choose the English form that matches how freely you are handing over the choice:",
+  "alternatives": [
+    {
+      "en": "As you wish",
+      "use_when_en": "when you politely accept another person’s preference"
+    },
+    {
+      "en": "It's up to you",
+      "use_when_en": "when the other person should decide"
+    },
+    {
+      "en": "Whatever you prefer",
+      "use_when_en": "when several options are equally fine"
+    },
+    {
+      "en": "If that's what you want",
+      "use_when_en": "when you agree, sometimes with mild hesitation"
+    },
+    {
+      "en": "You decide",
+      "use_when_en": "in short, direct conversation"
+    }
+  ],
+  "examples": [
+    {
+      "en": "As your wish — we can book the morning train.",
+      "bn": "আপনার ইচ্ছা অনুযায়ী — সকালের ট্রেন বুক করতে পারি।"
+    },
+    {
+      "en": "Stay here or come with us. It's up to you.",
+      "bn": "এখানে থাকো বা আমাদের সঙ্গে এসো। তোমার যেমন খুশি।"
+    },
+    {
+      "en": "Whatever you prefer is fine for the seating arrangement.",
+      "bn": "বসার ব্যবস্থায় আপনি যা পছন্দ করেন, সেটাই ঠিক আছে।"
+    },
+    {
+      "en": "If that's what you want, I will send the file tonight.",
+      "bn": "তুমি যদি সেটাই চাও, আজ রাতেই ফাইলটা পাঠাব।"
+    }
+  ],
+  "usage_when": {
+    "paragraphs": [
+      {
+        "text": "In Bangladesh and nearby South Asian settings, As your wish can sound polite, formal, or slightly old-fashioned. Speakers use it to accept a choice without arguing.",
+        "bold": [
+          "As your wish"
+        ]
+      },
+      {
+        "text": "With international listeners, exams, and careful writing, a clearer alternative usually carries the same meaning with less risk of sounding translated."
+      }
+    ]
+  },
+  "usage_prefer_other": {
+    "bullets": [
+      {
+        "text": "For polite acceptance, prefer As you wish.",
+        "bold": [
+          "As you wish"
+        ]
+      },
+      {
+        "text": "For everyday decisions among friends, prefer It's up to you.",
+        "bold": [
+          "It's up to you"
+        ]
+      },
+      {
+        "text": "When offering equal options, prefer Whatever you prefer.",
+        "bold": [
+          "Whatever you prefer"
+        ]
+      },
+      {
+        "text": "Do not use this phrase when you still disagree strongly; say that clearly instead."
+      }
+    ]
+  },
+  "learner_warning": {
+    "paragraphs": [
+      {
+        "text": "Do not treat As your wish as the only correct English form. Many speakers in South Asia use it, but As you wish is the standard word order.",
+        "bold": [
+          "As your wish",
+          "As you wish"
+        ]
+      },
+      {
+        "text": "Also check your tone. Said sharply, the same idea can sound cold or dismissive even when the Bangla meaning is soft."
+      }
+    ]
+  },
+  "related_phrases": [],
+  "dictionary_links": [
+    {
+      "slug": "wish",
+      "label": "wish",
+      "note": "the base word behind the expression"
+    },
+    {
+      "slug": "prefer",
+      "label": "prefer",
+      "note": "useful when the idea is “যা পছন্দ করো”"
+    },
+    {
+      "slug": "decide",
+      "label": "decide",
+      "note": "useful when you hand the choice to someone"
+    }
+  ],
+  "learning_links": [
+    {
+      "href": "/real-life-english.html",
+      "label": "Real-Life English",
+      "note": "practical conversation patterns"
+    },
+    {
+      "href": "/speaking.html",
+      "label": "Speaking",
+      "note": "spoken English practice paths"
+    },
+    {
+      "href": "/bangladesh.html",
+      "label": "Bangladesh English",
+      "note": "local usage and common mistakes"
+    },
+    {
+      "href": "/dictionary.html",
+      "label": "Dictionary",
+      "note": "look up related English words"
+    },
+    {
+      "href": "/vocabulary-builder.html",
+      "label": "Vocabulary Builder",
+      "note": "build related word groups"
+    },
+    {
+      "href": "/grammar.html",
+      "label": "Grammar",
+      "note": "strengthen choice expressions and polite agreement"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Bangla meaning of “As your wish”?",
+      "answer": {
+        "text": "সাধারণত আপনার ইচ্ছা অনুযায়ী বা তোমার যেমন খুশি বোঝায়।",
+        "lang": "bn"
+      }
+    },
+    {
+      "question": "Is “As your wish” wrong English?",
+      "answer": {
+        "text": "It is widely understood in South Asian English. In international or formal use, As you wish or It's up to you is usually safer.",
+        "bold": [
+          "As you wish",
+          "It's up to you"
+        ]
+      }
+    },
+    {
+      "question": "What is a safer alternative in careful English?",
+      "answer": {
+        "text": "Use As you wish, It's up to you, or Whatever you prefer, according to the situation.",
+        "bold": [
+          "As you wish",
+          "It's up to you",
+          "Whatever you prefer"
+        ]
+      }
+    },
+    {
+      "question": "Does “As your wish” always sound polite?",
+      "answer": {
+        "text": "No. Soft tone sounds cooperative. Sharp tone can sound unwilling or distant."
+      }
+    }
+  ]
+}
