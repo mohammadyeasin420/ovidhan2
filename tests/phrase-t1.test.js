@@ -146,7 +146,7 @@ scenario('approved pages exist under phrase/ and check passes without touching w
 
 scenario('unknown slug, path escape, and full T1 build all fail closed', () => {
     assert.throws(() => build.build({ slug: 'not-a-phrase', root }), /allowlisted|unknown/i);
-    assert.throws(() => build.build({ slug: '../word/mind', root }), /unsafe slug|allowlisted|unknown/i);
+    assert.throws(() => build.build({ slug: '../outside-path', root }), /unsafe slug|allowlisted|unknown/i);
     assert.throws(() => lib.assertOutputPath(path.join(root, 'word', 'mind.html'), root), /word|escapes|phrase/i);
     assert.throws(() => build.build({ all: true, root }), /missing reviewed records for 24/);
     assert.equal(lib.listRecordSlugs(root).length, 6);
