@@ -1,48 +1,34 @@
 'use strict';
 
 /**
- * Ovidhan production Worker — Phase A.
+ * Ovidhan production Worker — Phase B.
  * Intercepts /api/* only; all other requests fall through to static Assets.
- * Translation upstream is intentionally not configured yet.
+ * Translation uses a deterministic offline mock provider (no Google, no secrets).
  */
 
-function jsonResponse(status, body) {
-    return new Response(JSON.stringify(body), {
-        status,
-        headers: {
-            'content-type': 'application/json; charset=utf-8',
-            'cache-control': 'no-store'
-        }
-    });
+import { handleApi, jsonResponse } from './lib/api.js';
+import { createMemoryCache } from './lib/cache.js';
+import { createCacheApiRateLimitStore, createMemoryRateLimitStore } from './lib/rate-limit.js';
+import { createPrivacyLogger } from './lib/privacy-log.js';
+import { errorBody } from './lib/validate.js';
+
+function resolveCache(env) {
+    if (env && env.__testCache) return env.__testCache;
+    if (typeof caches !== 'undefined' && caches.default) return caches.default;
+    return createMemoryCache();
 }
 
-function handleApi(request, url) {
-    if (url.pathname === '/api/translate' || url.pathname === '/api/translate/') {
-        if (request.method !== 'POST') {
-            return jsonResponse(405, {
-                ok: false,
-                error: {
-                    code: 'method_not_allowed',
-                    message: 'Only POST is allowed for /api/translate.'
-                }
-            });
-        }
-        return jsonResponse(503, {
-            ok: false,
-            error: {
-                code: 'translator_not_configured',
-                message: 'Translation service is not configured yet.'
-            }
-        });
+function resolveRateLimitStore(env, cache) {
+    if (env && env.__testRateLimitStore) return env.__testRateLimitStore;
+    if (cache && typeof cache.match === 'function' && typeof cache.put === 'function') {
+        return createCacheApiRateLimitStore(cache);
     }
+    return createMemoryRateLimitStore();
+}
 
-    return jsonResponse(404, {
-        ok: false,
-        error: {
-            code: 'not_found',
-            message: 'API route not found.'
-        }
-    });
+function resolveLogger(env) {
+    if (env && env.__testLogger) return env.__testLogger;
+    return createPrivacyLogger();
 }
 
 export default {
@@ -51,15 +37,15 @@ export default {
 
         if (url.pathname === '/api' || url.pathname.startsWith('/api/')) {
             try {
-                return handleApi(request, url);
+                const cache = resolveCache(env);
+                const deps = {
+                    cache,
+                    rateLimitStore: resolveRateLimitStore(env, cache),
+                    logger: resolveLogger(env)
+                };
+                return await handleApi(request, url, deps);
             } catch {
-                return jsonResponse(500, {
-                    ok: false,
-                    error: {
-                        code: 'internal_error',
-                        message: 'Unexpected API error.'
-                    }
-                });
+                return jsonResponse(500, errorBody('internal_error', 'Unexpected API error.'));
             }
         }
 

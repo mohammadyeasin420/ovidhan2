@@ -14,6 +14,14 @@ $workerDirectory = 'C:\deploy\ovidhan-worker'
 $workerConfig = Join-Path $workerDirectory 'wrangler.jsonc'
 $workerName = 'ovidhan'
 $requiredWorkerFiles = @('index.js', 'wrangler.jsonc')
+$requiredWorkerLibFiles = @(
+    'api.js',
+    'validate.js',
+    'mock-translate.js',
+    'cache.js',
+    'rate-limit.js',
+    'privacy-log.js'
+)
 $maximumAssetCount = 100000
 $maximumAssetBytes = 25MB
 $expectedWordCount = 49710
@@ -158,6 +166,15 @@ try {
             throw "Versioned Worker source file is missing: worker\$workerFile"
         }
     }
+    $workerLibSource = Join-Path $workerSourceDirectory 'lib'
+    if (-not (Test-Path -LiteralPath $workerLibSource -PathType Container)) {
+        throw 'Versioned Worker lib directory is missing: worker\lib'
+    }
+    foreach ($libFile in $requiredWorkerLibFiles) {
+        if (-not (Test-Path -LiteralPath (Join-Path $workerLibSource $libFile) -PathType Leaf)) {
+            throw "Versioned Worker lib file is missing: worker\lib\$libFile"
+        }
+    }
     $versionedWorkerConfig = Join-Path $workerSourceDirectory 'wrangler.jsonc'
     $versionedConfigText = Get-Content -LiteralPath $versionedWorkerConfig -Raw
     if ($versionedConfigText -notmatch '"name"\s*:\s*"ovidhan"') { throw "Worker config does not name '$workerName'." }
@@ -177,11 +194,21 @@ try {
     foreach ($workerFile in $requiredWorkerFiles) {
         Copy-Item -LiteralPath (Join-Path $workerSourceDirectory $workerFile) -Destination (Join-Path $workerDirectory $workerFile) -Force
     }
+    $workerLibDestination = Join-Path $workerDirectory 'lib'
+    if (Test-Path -LiteralPath $workerLibDestination -PathType Container) {
+        Remove-Item -LiteralPath $workerLibDestination -Recurse -Force
+    }
+    Copy-Item -LiteralPath $workerLibSource -Destination $workerLibDestination -Recurse -Force
     if (-not (Test-Path -LiteralPath $workerConfig -PathType Leaf)) {
         throw "Cloudflare Worker config is missing after sync: $workerConfig"
     }
     if (-not (Test-Path -LiteralPath (Join-Path $workerDirectory 'index.js') -PathType Leaf)) {
         throw "Cloudflare Worker entry is missing after sync: $(Join-Path $workerDirectory 'index.js')"
+    }
+    foreach ($libFile in $requiredWorkerLibFiles) {
+        if (-not (Test-Path -LiteralPath (Join-Path $workerLibDestination $libFile) -PathType Leaf)) {
+            throw "Worker lib file missing after sync: lib\$libFile"
+        }
     }
     $configText = Get-Content -LiteralPath $workerConfig -Raw
     if ($configText -ne $versionedConfigText) { throw 'Synced Worker config does not match versioned worker/wrangler.jsonc.' }

@@ -63,18 +63,22 @@ async function readJson(response) {
     return JSON.parse(text);
 }
 
-await scenario('POST /api/translate returns controlled 503 stub', async () => {
+await scenario('POST /api/translate remains a local JSON API without Google/credentials', async () => {
     const response = await invoke('/api/translate', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ text: 'hello', source: 'en', target: 'bn' })
     });
-    assert.equal(response.status, 503);
+    assert.equal(response.status, 200);
     const body = await readJson(response);
-    assert.equal(body.ok, false);
-    assert.equal(body.error.code, 'translator_not_configured');
-    assert.equal(typeof body.error.message, 'string');
+    assert.equal(body.ok, true);
+    assert.equal(body.provider, 'mock');
     assert.equal(response.headers.get('cache-control'), 'no-store');
+
+    const source = fs.readFileSync(path.join(root, 'worker', 'index.js'), 'utf8');
+    const libs = fs.readdirSync(path.join(root, 'worker', 'lib')).sort().join(',');
+    assert.equal(/translate\.googleapis\.com|@google-cloud\/translate|GOOGLE_TRANSLATE/i.test(source), false);
+    assert.equal(/google-translate/i.test(libs), false);
 });
 
 await scenario('unsupported /api route returns controlled JSON 404', async () => {
