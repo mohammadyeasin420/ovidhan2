@@ -43,14 +43,15 @@ function readJsonc(filePath) {
     return JSON.parse(stripped);
 }
 
-async function invoke(pathname, init = {}, assetsHandler) {
+async function invoke(pathname, init = {}, assetsHandler, envExtra = {}) {
     const env = {
         ASSETS: {
             fetch: assetsHandler || (async (request) => new Response('ASSET:' + new URL(request.url).pathname, {
                 status: 200,
                 headers: { 'content-type': 'text/plain' }
             }))
-        }
+        },
+        ...envExtra
     };
     const request = new Request('https://ovidhan.net' + pathname, init);
     return worker.fetch(request, env);
@@ -63,22 +64,26 @@ async function readJson(response) {
     return JSON.parse(text);
 }
 
-await scenario('POST /api/translate remains a local JSON API without Google/credentials', async () => {
+await scenario('POST /api/translate fails closed without secret and never embeds credentials', async () => {
     const response = await invoke('/api/translate', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ text: 'hello', source: 'en', target: 'bn' })
     });
-    assert.equal(response.status, 200);
+    assert.equal(response.status, 503);
     const body = await readJson(response);
-    assert.equal(body.ok, true);
-    assert.equal(body.provider, 'mock');
+    assert.equal(body.ok, false);
+    assert.equal(body.error.code, 'translator_not_configured');
     assert.equal(response.headers.get('cache-control'), 'no-store');
 
-    const source = fs.readFileSync(path.join(root, 'worker', 'index.js'), 'utf8');
-    const libs = fs.readdirSync(path.join(root, 'worker', 'lib')).sort().join(',');
-    assert.equal(/translate\.googleapis\.com|@google-cloud\/translate|GOOGLE_TRANSLATE/i.test(source), false);
-    assert.equal(/google-translate/i.test(libs), false);
+    const config = readJsonc(path.join(root, 'worker', 'wrangler.jsonc'));
+    assert.equal('vars' in config, false);
+    const workerText = [
+        fs.readFileSync(path.join(root, 'worker', 'index.js'), 'utf8'),
+        fs.readFileSync(path.join(root, 'worker', 'wrangler.jsonc'), 'utf8')
+    ].join('\n');
+    assert.equal(/AIza[0-9A-Za-z_\-]{20,}/.test(workerText), false);
+    assert.equal(/GOOGLE_TRANSLATE_API_KEY\s*[:=]\s*['"][^'"]+['"]/.test(workerText), false);
 });
 
 await scenario('unsupported /api route returns controlled JSON 404', async () => {
@@ -100,17 +105,14 @@ await scenario('non-API request delegates to ASSETS', async () => {
     assert.equal(await response.text(), 'WORD');
 });
 
-await scenario('API errors are JSON and no credential requirement exists yet', async () => {
+await scenario('API errors are JSON and Worker config remains assets-safe', async () => {
     const response = await invoke('/api/translate', { method: 'GET' });
     assert.equal(response.status, 405);
     const body = await readJson(response);
     assert.equal(body.ok, false);
     assert.equal(body.error.code, 'method_not_allowed');
 
-    const source = fs.readFileSync(path.join(root, 'worker', 'index.js'), 'utf8');
-    assert.equal(/GOOGLE_|API_KEY|translate\.googleapis\.com|@google-cloud\/translate/i.test(source), false);
-    assert.equal(fs.existsSync(path.join(root, 'worker', 'lib', 'google-translate.js')), false);
-
+    assert.equal(fs.existsSync(path.join(root, 'worker', 'lib', 'google-translate.js')), true);
     const config = readJsonc(path.join(root, 'worker', 'wrangler.jsonc'));
     assert.equal(config.main, 'index.js');
     assert.equal(config.assets.binding, 'ASSETS');
@@ -118,7 +120,6 @@ await scenario('API errors are JSON and no credential requirement exists yet', a
     assert.equal(config.assets.not_found_handling, 'none');
     assert.deepEqual(config.assets.run_worker_first, ['/api/*']);
     assert.equal('vars' in config, false);
-    assert.equal('secrets' in config, false);
 });
 
 await scenario('static production invariance anchors remain intact', () => {

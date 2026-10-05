@@ -1,9 +1,9 @@
 'use strict';
 
 import { MAX_BODY_BYTES, errorBody, validateTranslateRequest } from './validate.js';
-import { mockTranslate, MOCK_PROVIDER } from './mock-translate.js';
 import { readCachedTranslation, writeCachedTranslation, buildCacheKey, CACHE_TTL_SECONDS } from './cache.js';
 import { consumeRateLimit, getClientIdFromRequest } from './rate-limit.js';
+import { googleTranslate, GOOGLE_PROVIDER, ProviderError } from './google-translate.js';
 
 export function jsonResponse(status, body) {
     return new Response(JSON.stringify(body), {
@@ -22,30 +22,34 @@ function contentTypeIsJson(request) {
     return /^application\/json\s*(;|$)/i.test(value.trim());
 }
 
+function providerErrorResponse(error) {
+    const code = error && error.code ? error.code : 'internal_error';
+    const status = error && error.httpStatus ? error.httpStatus : 500;
+    const message = error && typeof error.message === 'string' && error.code
+        ? error.message
+        : 'Unexpected API error.';
+    return jsonResponse(status, errorBody(code, message));
+}
+
 export async function handleTranslatePost(request, deps) {
     const started = Date.now();
-    const { cache, rateLimitStore, logger } = deps;
+    const {
+        cache,
+        rateLimitStore,
+        logger,
+        apiKey = null,
+        translateProvider = googleTranslate
+    } = deps;
 
     if (!contentTypeIsJson(request)) {
         logger.log({
             route: 'translate',
             status: 415,
             errorCode: 'invalid_content_type',
-            cached: false
+            cached: false,
+            providerCalls: 0
         });
         return jsonResponse(415, errorBody('invalid_content_type', 'Content-Type must be application/json.'));
-    }
-
-    const rate = await consumeRateLimit(rateLimitStore, getClientIdFromRequest(request));
-    if (!rate.allowed) {
-        logger.log({
-            route: 'translate',
-            status: 429,
-            errorCode: 'rate_limited',
-            cached: false,
-            clientPrefix: rate.hashedClientPrefix
-        });
-        return jsonResponse(429, errorBody('rate_limited', 'Too many requests. Please wait and try again.'));
     }
 
     const raw = await request.arrayBuffer();
@@ -55,7 +59,7 @@ export async function handleTranslatePost(request, deps) {
             status: 400,
             errorCode: 'text_too_long',
             cached: false,
-            clientPrefix: rate.hashedClientPrefix
+            providerCalls: 0
         });
         return jsonResponse(400, errorBody('text_too_long', 'Request body exceeds the 4096-byte limit.'));
     }
@@ -73,7 +77,7 @@ export async function handleTranslatePost(request, deps) {
             status: 400,
             errorCode: 'invalid_json',
             cached: false,
-            clientPrefix: rate.hashedClientPrefix
+            providerCalls: 0
         });
         return jsonResponse(400, errorBody('invalid_json', 'Request body must be valid JSON.'));
     }
@@ -85,9 +89,22 @@ export async function handleTranslatePost(request, deps) {
             status: validated.status,
             errorCode: validated.body.error.code,
             cached: false,
-            clientPrefix: rate.hashedClientPrefix
+            providerCalls: 0
         });
         return jsonResponse(validated.status, validated.body);
+    }
+
+    const rate = await consumeRateLimit(rateLimitStore, getClientIdFromRequest(request));
+    if (!rate.allowed) {
+        logger.log({
+            route: 'translate',
+            status: 429,
+            errorCode: 'rate_limited',
+            cached: false,
+            providerCalls: 0,
+            clientPrefix: rate.hashedClientPrefix
+        });
+        return jsonResponse(429, errorBody('rate_limited', 'Too many requests. Please wait and try again.'));
     }
 
     const { text, source, target } = validated.value;
@@ -96,10 +113,14 @@ export async function handleTranslatePost(request, deps) {
     const cachedBody = await readCachedTranslation(cache, text, source, target);
     if (cachedBody) {
         const responseBody = {
-            ...cachedBody,
-            cached: true,
-            provider: MOCK_PROVIDER,
+            ok: true,
+            source: cachedBody.source,
+            target: cachedBody.target,
+            text: cachedBody.text,
+            translation: cachedBody.translation,
             detectedSource: null,
+            provider: GOOGLE_PROVIDER,
+            cached: true,
             enrichment: {
                 dictionaryLinks: [],
                 phraseLinks: []
@@ -112,20 +133,73 @@ export async function handleTranslatePost(request, deps) {
             cached: true,
             pair,
             latencyMs: Date.now() - started,
-            clientPrefix: rate.hashedClientPrefix
+            clientPrefix: rate.hashedClientPrefix,
+            providerCalls: 0,
+            provider: GOOGLE_PROVIDER
         });
         return jsonResponse(200, responseBody);
     }
 
-    const translation = mockTranslate(text, source, target);
+    let providerResult;
+    try {
+        providerResult = await translateProvider({
+            text,
+            source,
+            target,
+            apiKey
+        });
+    } catch (error) {
+        if (error instanceof ProviderError) {
+            logger.log({
+                route: 'translate',
+                status: error.httpStatus,
+                errorCode: error.code,
+                cached: false,
+                pair,
+                latencyMs: Date.now() - started,
+                clientPrefix: rate.hashedClientPrefix,
+                providerCalls: 1,
+                providerStatus: error.code
+            });
+            return providerErrorResponse(error);
+        }
+        logger.log({
+            route: 'translate',
+            status: 500,
+            errorCode: 'internal_error',
+            cached: false,
+            pair,
+            latencyMs: Date.now() - started,
+            clientPrefix: rate.hashedClientPrefix,
+            providerCalls: 1,
+            providerStatus: 'internal_error'
+        });
+        return jsonResponse(500, errorBody('internal_error', 'Unexpected API error.'));
+    }
+
+    if (!providerResult || typeof providerResult.translation !== 'string' || !providerResult.translation) {
+        logger.log({
+            route: 'translate',
+            status: 503,
+            errorCode: 'translator_unavailable',
+            cached: false,
+            pair,
+            latencyMs: Date.now() - started,
+            clientPrefix: rate.hashedClientPrefix,
+            providerCalls: 1,
+            providerStatus: 'translator_unavailable'
+        });
+        return jsonResponse(503, errorBody('translator_unavailable', 'Translation service is temporarily unavailable.'));
+    }
+
     const responseBody = {
         ok: true,
         source,
         target,
         text,
-        translation,
+        translation: providerResult.translation,
         detectedSource: null,
-        provider: MOCK_PROVIDER,
+        provider: GOOGLE_PROVIDER,
         cached: false,
         enrichment: {
             dictionaryLinks: [],
@@ -138,9 +212,9 @@ export async function handleTranslatePost(request, deps) {
         source,
         target,
         text,
-        translation,
+        translation: providerResult.translation,
         detectedSource: null,
-        provider: MOCK_PROVIDER,
+        provider: GOOGLE_PROVIDER,
         enrichment: {
             dictionaryLinks: [],
             phraseLinks: []
@@ -155,7 +229,9 @@ export async function handleTranslatePost(request, deps) {
         pair,
         latencyMs: Date.now() - started,
         clientPrefix: rate.hashedClientPrefix,
-        cacheTtlSeconds: CACHE_TTL_SECONDS
+        cacheTtlSeconds: CACHE_TTL_SECONDS,
+        providerCalls: 1,
+        provider: GOOGLE_PROVIDER
     });
 
     return jsonResponse(200, responseBody);
@@ -168,7 +244,8 @@ export async function handleApi(request, url, deps) {
                 route: 'translate',
                 status: 405,
                 errorCode: 'method_not_allowed',
-                cached: false
+                cached: false,
+                providerCalls: 0
             });
             return jsonResponse(405, errorBody('method_not_allowed', 'Only POST is allowed for /api/translate.'));
         }
@@ -178,5 +255,4 @@ export async function handleApi(request, url, deps) {
     return jsonResponse(404, errorBody('not_found', 'API route not found.'));
 }
 
-// Re-export for tests that inspect cache-key construction.
-export { buildCacheKey, CACHE_TTL_SECONDS };
+export { buildCacheKey, CACHE_TTL_SECONDS, GOOGLE_PROVIDER };

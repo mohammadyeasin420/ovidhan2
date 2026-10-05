@@ -1,9 +1,10 @@
 'use strict';
 
 /**
- * Ovidhan production Worker — Phase B.
+ * Ovidhan production Worker — Phase C.
  * Intercepts /api/* only; all other requests fall through to static Assets.
- * Translation uses a deterministic offline mock provider (no Google, no secrets).
+ * Translation uses Google Cloud Translation v2 via env.GOOGLE_TRANSLATE_API_KEY.
+ * No production fallback to mock translations.
  */
 
 import { handleApi, jsonResponse } from './lib/api.js';
@@ -11,6 +12,7 @@ import { createMemoryCache } from './lib/cache.js';
 import { createCacheApiRateLimitStore, createMemoryRateLimitStore } from './lib/rate-limit.js';
 import { createPrivacyLogger } from './lib/privacy-log.js';
 import { errorBody } from './lib/validate.js';
+import { googleTranslate } from './lib/google-translate.js';
 
 function resolveCache(env) {
     if (env && env.__testCache) return env.__testCache;
@@ -31,6 +33,17 @@ function resolveLogger(env) {
     return createPrivacyLogger();
 }
 
+function resolveTranslateProvider(env) {
+    if (env && typeof env.__testTranslateProvider === 'function') return env.__testTranslateProvider;
+    return googleTranslate;
+}
+
+function resolveApiKey(env) {
+    if (env && Object.prototype.hasOwnProperty.call(env, '__testApiKey')) return env.__testApiKey;
+    if (env && typeof env.GOOGLE_TRANSLATE_API_KEY === 'string') return env.GOOGLE_TRANSLATE_API_KEY;
+    return null;
+}
+
 export default {
     async fetch(request, env) {
         const url = new URL(request.url);
@@ -41,7 +54,9 @@ export default {
                 const deps = {
                     cache,
                     rateLimitStore: resolveRateLimitStore(env, cache),
-                    logger: resolveLogger(env)
+                    logger: resolveLogger(env),
+                    apiKey: resolveApiKey(env),
+                    translateProvider: resolveTranslateProvider(env)
                 };
                 return await handleApi(request, url, deps);
             } catch {

@@ -18,6 +18,7 @@ $requiredWorkerLibFiles = @(
     'api.js',
     'validate.js',
     'mock-translate.js',
+    'google-translate.js',
     'cache.js',
     'rate-limit.js',
     'privacy-log.js'
@@ -318,6 +319,24 @@ try {
     }
     foreach ($file in $excludedDataFiles) {
         if (Test-Path -LiteralPath (Join-Path $outputFull $file)) { throw "Internal audit file leaked: $file" }
+    }
+    if (Test-Path -LiteralPath (Join-Path $outputFull 'worker') -PathType Container) {
+        throw 'Worker source directory leaked into the static production package.'
+    }
+    $credentialLeakFiles = @()
+    Get-ChildItem -LiteralPath $outputFull -File | Where-Object {
+        $_.Extension.ToLowerInvariant() -in @('.js', '.json', '.html', '.jsonc', '.txt', '.xml')
+    } | ForEach-Object {
+        $text = Get-Content -LiteralPath $_.FullName -Raw
+        if ($text -match 'GOOGLE_TRANSLATE_API_KEY\s*[:=]\s*[''"][^''"]+[''"]') {
+            $credentialLeakFiles += $_.Name
+        }
+        if ($text -match 'AIza[0-9A-Za-z_\-]{20,}') {
+            $credentialLeakFiles += $_.Name
+        }
+    }
+    if ((Get-CollectionSize $credentialLeakFiles) -gt 0) {
+        throw "Credential-looking material leaked into static package root: $($credentialLeakFiles -join ', ')"
     }
     $allAssets = @(Get-ChildItem -LiteralPath $outputFull -File -Recurse)
     $assetCount = Get-CollectionSize $allAssets

@@ -13,6 +13,7 @@ import { buildCacheKey, CACHE_TTL_SECONDS, createMemoryCache } from '../worker/l
 import { createMemoryRateLimitStore, RATE_LIMIT_MAX } from '../worker/lib/rate-limit.js';
 import { createPrivacyLogger } from '../worker/lib/privacy-log.js';
 import { codePointLength, MAX_CODE_POINTS, MAX_BODY_BYTES } from '../worker/lib/validate.js';
+import { mockTranslate } from '../worker/lib/mock-translate.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -49,11 +50,24 @@ function sha256File(filePath) {
     return createHash('sha256').update(fs.readFileSync(filePath)).digest('hex');
 }
 
+function createOfflineProvider(counter) {
+    return async ({ text, source, target }) => {
+        counter.calls += 1;
+        return {
+            translation: mockTranslate(text, source, target),
+            provider: 'google'
+        };
+    };
+}
+
 function createDeps() {
+    const providerCalls = { calls: 0 };
     return {
         cache: createMemoryCache(),
         rateLimitStore: createMemoryRateLimitStore(),
-        logger: createPrivacyLogger()
+        logger: createPrivacyLogger(),
+        providerCalls,
+        translateProvider: createOfflineProvider(providerCalls)
     };
 }
 
@@ -67,7 +81,9 @@ async function invoke(pathname, init = {}, deps = createDeps(), assetsHandler) {
         },
         __testCache: deps.cache,
         __testRateLimitStore: deps.rateLimitStore,
-        __testLogger: deps.logger
+        __testLogger: deps.logger,
+        __testTranslateProvider: deps.translateProvider,
+        __testApiKey: 'test-not-a-real-secret'
     };
     return {
         response: await worker.fetch(new Request('https://ovidhan.net' + pathname, init), env),
@@ -104,7 +120,7 @@ function assertSuccessShape(body, expected) {
     assert.equal(body.text, expected.text);
     assert.equal(body.translation, expected.translation);
     assert.equal(body.detectedSource, null);
-    assert.equal(body.provider, 'mock');
+    assert.equal(body.provider, 'google');
     assert.equal(typeof body.cached, 'boolean');
     assert.deepEqual(body.enrichment, { dictionaryLinks: [], phraseLinks: [] });
     assert.deepEqual(Object.keys(body).sort(), [
@@ -275,7 +291,7 @@ await scenario('privacy logger forbids raw text/translation/ip fields', async ()
     assert.equal(deps.logger.entries.some((e) => e.pair === 'en>bn'), true);
 });
 
-await scenario('worker source contains no Google/network translation provider', () => {
+await scenario('no hardcoded credentials and mock remains test-only infrastructure', () => {
     const files = [];
     function walk(dir) {
         for (const name of fs.readdirSync(dir)) {
@@ -286,10 +302,11 @@ await scenario('worker source contains no Google/network translation provider', 
     }
     walk(path.join(root, 'worker'));
     const joined = files.map((file) => fs.readFileSync(file, 'utf8')).join('\n');
-    assert.equal(/translate\.googleapis\.com/i.test(joined), false);
-    assert.equal(/@google-cloud\/translate/i.test(joined), false);
-    assert.equal(/GOOGLE_TRANSLATE_API_KEY/i.test(joined), false);
-    assert.equal(/fetch\(\s*['"`]https?:\/\//i.test(joined), false);
+    assert.equal(/AIza[0-9A-Za-z_\-]{20,}/.test(joined), false);
+    assert.equal(/GOOGLE_TRANSLATE_API_KEY\s*[:=]\s*['"][^'"]+['"]/.test(joined), false);
+    assert.equal(fs.existsSync(path.join(root, 'worker', 'lib', 'mock-translate.js')), true);
+    assert.equal(fs.existsSync(path.join(root, 'worker', 'lib', 'google-translate.js')), true);
+    assert.match(joined, /Translation service is temporarily unavailable/);
 });
 
 await scenario('static production invariance anchors remain intact', () => {
