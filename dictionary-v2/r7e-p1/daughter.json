@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "daughter",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/daughter.html",
+      "source_page_sha256_lf": "cb23e2eaf15688c5cb2df458b22d61d4b8eb6dc7a3f4c3d2a478308cb233768a",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মা ও বাবার যে সন্তান মেয়ে, তিনি তাঁদের কন্যা।"
+      },
+      "bangla_meaning": {
+        "display": "কন্যা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a female human offspring",
+        "origin": "OEWN_GLOSS",
+        "text": "a female human offspring"
+      },
+      "examples": [
+        {
+          "bn": "উপজেলা স্কুল মেলার বানান প্রতিযোগিতায় তাঁদের কন্যা পুরস্কার পেলেন।",
+          "en": "Their daughter won the spelling prize at the upazila school fair.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08521064-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "daughter"
+}

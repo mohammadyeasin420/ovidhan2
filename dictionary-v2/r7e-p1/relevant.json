@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "relevant",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/relevant.html",
+      "source_page_sha256_lf": "280dfe46479a773eea449011052607a020fe93d1e4615edbdd3bcb592443c542",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যে তথ্য আলোচ্য প্রশ্নের সঙ্গে সরাসরি যুক্ত, তা প্রাসঙ্গিক।"
+      },
+      "bangla_meaning": {
+        "display": "প্রাসঙ্গিক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "having a bearing on or connection with the subject at issue",
+        "origin": "OEWN_GLOSS",
+        "text": "having a bearing on or connection with the subject at issue"
+      },
+      "examples": [
+        {
+          "bn": "ভাঙা বাঁধ নিয়ে প্রশ্নের সঙ্গে পুরোনো বন্যার মানচিত্র প্রাসঙ্গিক ছিল।",
+          "en": "An old flood map was relevant to the question about the broken embankment.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01989733-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "relevant"
+}

@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "interact",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/interact.html",
+      "source_page_sha256_lf": "5ea8f1710c8eceae879174c15fd948320c816c03f42a18a55fd972c0b1f31625",
+      "tool": "scripts/dictionary-v2/r7e-p1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দুজন মানুষ বা দুটি দল যখন কথা বলে, একসঙ্গে কাজ করে, বা একে অপরের আচরণে সাড়া দেয়, তখন এই ক্রিয়াটি ঘটে।"
+      },
+      "bangla_meaning": {
+        "display": "পরস্পরের সঙ্গে কথা বলা ও কাজ করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "act together or towards others or with others",
+        "origin": "OEWN_GLOSS",
+        "text": "act together or towards others or with others"
+      },
+      "examples": [
+        {
+          "bn": "নতুন শিক্ষক উত্তর লেখার আগে শিক্ষার্থীদের সঙ্গীর সঙ্গে কথা বলতে ও একসঙ্গে কাজ করতে বললেন।",
+          "en": "The new teacher asked the students to interact with a partner before writing their answers.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02449149-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "interact"
+}

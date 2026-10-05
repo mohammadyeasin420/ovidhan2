@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "premises",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/premises.html",
+      "source_page_sha256_lf": "8f3a713e09c35c782d032fd02f94c4dd3faf1680b89a24326630116655e6f00d",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "একটি প্রতিষ্ঠানের জমি এবং সেই জমিতে দাঁড়ানো ভবন মিলিয়ে প্রাঙ্গণ।"
+      },
+      "bangla_meaning": {
+        "display": "প্রাঙ্গণ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "land and the buildings on it",
+        "origin": "OEWN_GLOSS",
+        "text": "land and the buildings on it"
+      },
+      "examples": [
+        {
+          "bn": "সরবরাহের ভ্যান স্কুল প্রাঙ্গণে ঢুকতে পারে শুধু উত্তর গেট দিয়ে।",
+          "en": "Delivery vans may enter the school premises only through the north gate.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07922682-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "premises"
+}

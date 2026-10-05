@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "seldom",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/seldom.html",
+      "source_page_sha256_lf": "7a9a35d0af2d8f0256dc17c53bf9b84c87d733c415c8246b50f2f6093954139a",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বছরের প্রায় সব দিন যা দেখা যায় না, তা কদাচিৎ ঘটে।"
+      },
+      "bangla_meaning": {
+        "display": "কদাচিৎ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "not often",
+        "origin": "OEWN_GLOSS",
+        "text": "not often"
+      },
+      "examples": [
+        {
+          "bn": "ভোরের গাড়ি সময়ে কলে পৌঁছায় বলে পরের ট্রেন তিনি কদাচিৎ ধরেন।",
+          "en": "He seldom takes the later train, because the dawn coach reaches the mill on time.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00035721-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "seldom"
+}

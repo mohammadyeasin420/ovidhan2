@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "funeral",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/funeral.html",
+      "source_page_sha256_lf": "ee4fdf557fa5ef3f6aa55b58964022539242b0bea8c6f6b83435d7c8221f2083",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মৃত্যুর পর দাফন বা সৎকারকে ঘিরে আত্মীয় ও প্রতিবেশীরা যে অনুষ্ঠানে আসেন, সেটি অন্ত্যেষ্টিক্রিয়া।"
+      },
+      "bangla_meaning": {
+        "display": "অন্ত্যেষ্টিক্রিয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a ceremony at which a dead person is buried or cremated",
+        "origin": "OEWN_GLOSS",
+        "text": "a ceremony at which a dead person is buried or cremated"
+      },
+      "examples": [
+        {
+          "bn": "গ্রামে মামার অন্ত্যেষ্টিক্রিয়ায় সিলেট থেকে ভাইবোনেরা রাতভর পথ পাড়ি দিলেন।",
+          "en": "Cousins from Sylhet travelled overnight for their uncle's funeral in the village.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06838732-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "funeral"
+}

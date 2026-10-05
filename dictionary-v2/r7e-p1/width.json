@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "width",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/width.html",
+      "source_page_sha256_lf": "60ec86b263809266077f8576fa70f4903e9088b2e01400e04f506ec586d92680",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো বস্তু এক পাশ থেকে উল্টো পাশ পর্যন্ত যতটা জায়গা নেয়, সেই মাপই প্রস্থ।"
+      },
+      "bangla_meaning": {
+        "display": "প্রস্থ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the extent of something from side to side",
+        "origin": "OEWN_GLOSS",
+        "text": "the extent of something from side to side"
+      },
+      "examples": [
+        {
+          "bn": "স্কুলের উর্দি কাটার আগে দর্জি নীল কাপড়ের প্রস্থ দেখে নিলেন।",
+          "en": "The tailor checked the width of the blue cloth before cutting the school uniform.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04513356-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "width"
+}

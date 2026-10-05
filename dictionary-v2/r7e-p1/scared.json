@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "scared",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/scared.html",
+      "source_page_sha256_lf": "923e56d62f21fc5a78d0b7e36d52a9a0cf13bec8d852308cba62945f6d965a1f",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "হঠাৎ বিপদ বা গভীর অন্ধকারে ভয় শরীরে চেপে বসলে মানুষ ভীত হয়ে পড়ে।"
+      },
+      "bangla_meaning": {
+        "display": "ভীত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "made afraid",
+        "origin": "OEWN_GLOSS",
+        "text": "made afraid"
+      },
+      "examples": [
+        {
+          "bn": "মাঝরাতে বজ্রপাতে টিনের চাল কেঁপে উঠলে ছোট ছেলেটি ভয় পেয়ে গেল।",
+          "en": "The little boy was scared when thunder shook the tin roof at midnight.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00080378-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "scared"
+}

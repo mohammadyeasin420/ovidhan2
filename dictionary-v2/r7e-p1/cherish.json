@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "cherish",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/cherish.html",
+      "source_page_sha256_lf": "bdf78253bf463c3ef6c5c1d81afc67d4a92e88a4588ccc2b3f3dbd49fed1f147",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "হারিয়ে যেতে দিতে চান না, তাই কোনো স্মৃতি বা মানুষকে যত্নে ধরে রাখেন।"
+      },
+      "bangla_meaning": {
+        "display": "আগলে রাখা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "be fond of; be attached to",
+        "origin": "OEWN_GLOSS",
+        "text": "be fond of; be attached to"
+      },
+      "examples": [
+        {
+          "bn": "দাদু যে ছোট রেডিওটি সারিয়ে দিয়েছিলেন, সেটি তিনি আগলে রাখেন।",
+          "en": "He cherishes the small radio his grandfather repaired for him.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01833811-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "cherish"
+}

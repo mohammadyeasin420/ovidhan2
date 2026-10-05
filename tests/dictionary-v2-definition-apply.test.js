@@ -535,6 +535,7 @@ scenario('production safety: real pages, deploy script and engine wiring', () =>
 scenario('REAL repository is in the post-application state: 275 cleaned, 5 frozen untouched, 9 prototypes PASS_CLEANED', () => {
     assert.equal(appliedManifest.status, 'APPLIED');
     const real = cleanup.makeContext();
+    real.registry = cleanup.corpusRegistry(appliedManifest);
     const result = cleanup.verifyApplied(appliedManifest, real);
     assert.deepEqual(result.errors, []);
     assert.equal(result.counts.after_hash_matches, 275);

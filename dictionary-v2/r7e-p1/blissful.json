@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "blissful",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/blissful.html",
+      "source_page_sha256_lf": "f2531885fcd15f21e7d5022d489fc9a2f83d5e0110bf7a678f2eecc9f4fcbe50",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দুশ্চিন্তা সরে গিয়ে শুধু গভীর তৃপ্তি থাকলে মুহূর্তটি পরম সুখী।"
+      },
+      "bangla_meaning": {
+        "display": "পরম সুখী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "completely happy and contented",
+        "origin": "OEWN_GLOSS",
+        "text": "completely happy and contented"
+      },
+      "examples": [
+        {
+          "bn": "লঞ্চে মায়ের কাঁধে ঘুমোনো শিশুটিকে পরম সুখী দেখাচ্ছিল।",
+          "en": "The baby looked blissful, asleep against his mother's shoulder on the launch.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01157188-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "blissful"
+}

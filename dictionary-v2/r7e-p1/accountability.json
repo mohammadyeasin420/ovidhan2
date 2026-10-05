@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "accountability",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/accountability.html",
+      "source_page_sha256_lf": "243b0ecf332b3cb46e27a284e2c49eef585d47ff194df1d44a13a938f9c70b09",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "খরচ বা সিদ্ধান্তের ব্যাখ্যা নির্দিষ্ট কারো কাছে জমা দিতে হলে সেখানে জবাবদিহি থাকে।"
+      },
+      "bangla_meaning": {
+        "display": "জবাবদিহি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "responsibility to someone or for some activity",
+        "origin": "OEWN_GLOSS",
+        "text": "responsibility to someone or for some activity"
+      },
+      "examples": [
+        {
+          "bn": "পিকনিকের জমানো টাকার জবাবদিহি শ্রেণির দলনেতা নিলেন।",
+          "en": "The class captain accepted accountability for the money collected for the picnic.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04036875-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "accountability"
+}

@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "perish",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/perish.html",
+      "source_page_sha256_lf": "4d25df9f1b58ae8ae6b0d1427adf07530b8f49bd707c2f138510f22ac1e6b341",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "শরীর আর তার দরকারি কাজ চালাতে পারে না, তাই প্রাণ চলে যায়।"
+      },
+      "bangla_meaning": {
+        "display": "প্রাণ হারানো",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "pass from physical life and lose all bodily attributes and functions necessary to sustain life",
+        "origin": "OEWN_GLOSS",
+        "text": "pass from physical life and lose all bodily attributes and functions necessary to sustain life"
+      },
+      "examples": [
+        {
+          "bn": "টানা ছয় সপ্তাহ পুকুর শুকিয়ে থাকায় আমের চারাগুলো প্রাণ হারাল।",
+          "en": "The young mango saplings perished when the pond dried for six weeks.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00371958-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "perish"
+}

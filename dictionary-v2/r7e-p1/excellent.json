@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "excellent",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/excellent.html",
+      "source_page_sha256_lf": "7e3d9150746926a33cae4941be1e8c848aff2009fcf205740374b00d8ae2815c",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মান এত উঁচু যে সেটিকে সাধারণ ভালো কাজের সঙ্গে গুলিয়ে ফেলা যায় না।"
+      },
+      "bangla_meaning": {
+        "display": "উৎকৃষ্ট",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "very good; of the highest quality",
+        "origin": "OEWN_GLOSS",
+        "text": "very good; of the highest quality"
+      },
+      "examples": [
+        {
+          "bn": "তার উৎকৃষ্ট চিত্রে পুরো শ্রেণির কাছে পানির চক্র সহজ হয়ে গেল।",
+          "en": "His excellent diagram made the water cycle easy for the whole class.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02360266-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "excellent"
+}

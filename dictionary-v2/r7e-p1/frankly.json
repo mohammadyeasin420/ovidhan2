@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "frankly",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/frankly.html",
+      "source_page_sha256_lf": "dfc4d970bf0150423386332c223f4f9740a04810f8c93ec3d1e615b3ff97146a",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বক্তা বাক্যের শুরুতেই নিজের সত্য মত সরাসরি রেখে দেন।"
+      },
+      "bangla_meaning": {
+        "display": "অকপটে বলতে গেলে",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(used as intensives reflecting the speaker's attitude) it is sincerely the case that",
+        "origin": "OEWN_GLOSS",
+        "text": "(used as intensives reflecting the speaker's attitude) it is sincerely the case that"
+      },
+      "examples": [
+        {
+          "bn": "অকপটে বলতে গেলে, খসড়াটি পাঠানোর আগে আমার আরও একদিন দরকার।",
+          "en": "Frankly, the draft needs one more day before I can send it.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00316517-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "frankly"
+}

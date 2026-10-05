@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "pious",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/pious.html",
+      "source_page_sha256_lf": "a647ee0d1d1d724c209cd9959ce55976dd009be1378049924857aecc242e1bb4",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নামাজ বা পূজায়, এবং রোজকার কথায়, ঈশ্বরের প্রতি শ্রদ্ধা স্পষ্ট থাকলে মানুষ ধর্মভক্ত।"
+      },
+      "bangla_meaning": {
+        "display": "ধর্মভক্ত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "having or showing or expressing reverence for a deity",
+        "origin": "OEWN_GLOSS",
+        "text": "having or showing or expressing reverence for a deity"
+      },
+      "examples": [
+        {
+          "bn": "আমার দাদি প্রতিদিন সূর্য ওঠার আগে ভক্তিভরে নামাজ পড়ে দিন শুরু করেন।",
+          "en": "My grandmother begins each morning with a pious prayer before sunrise.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01792565-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "pious"
+}

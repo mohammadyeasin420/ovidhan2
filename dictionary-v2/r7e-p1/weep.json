@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "weep",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/weep.html",
+      "source_page_sha256_lf": "9d6c91e0ed63d4f797749f531104950a6a24a07ff140e8c45a67bde6f617b546",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দুঃখ, রাগ বা ব্যথায় চোখ বেয়ে জল নামে।"
+      },
+      "bangla_meaning": {
+        "display": "চোখের জল ফেলা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "shed tears because of sadness, rage, or pain",
+        "origin": "OEWN_GLOSS",
+        "text": "shed tears because of sadness, rage, or pain"
+      },
+      "examples": [
+        {
+          "bn": "ব্যাগ থেকে ছিঁড়ে যাওয়া প্রবেশপত্র বেরিয়ে পড়লে তার চোখের জল নেমে এল।",
+          "en": "She began to weep when the torn admit card fell out of her bag.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00068768-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "weep"
+}

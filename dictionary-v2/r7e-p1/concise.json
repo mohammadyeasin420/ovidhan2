@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "concise",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/concise.html",
+      "source_page_sha256_lf": "4291f9bfbf29cddffc5cae3c93c31e99d3f26b731dd22dc705d429353c5a988b",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বাড়তি বাক্য বাদ দিয়ে মূল তথ্য কম কথায় শেষ হলে লেখা সংক্ষিপ্ত হয়।"
+      },
+      "bangla_meaning": {
+        "display": "সংক্ষিপ্ত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "expressing much in few words",
+        "origin": "OEWN_GLOSS",
+        "text": "expressing much in few words"
+      },
+      "examples": [
+        {
+          "bn": "সংক্ষিপ্ত সময়সূচিতে ছিল শুধু কক্ষ, বিষয় ও শুরুর সময়।",
+          "en": "The concise timetable listed only the room, the subject, and the start time.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00551661-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "concise"
+}

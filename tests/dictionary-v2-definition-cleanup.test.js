@@ -336,7 +336,8 @@ scenario('production safety: no production file references the cleanup and dicti
 });
 
 // ---- POST-APPLICATION state of the real repository (SEO-R6B.3) ------------------------------------------------------
-const realCtx = cleanup.makeContext(); // live pages
+const realCtx = cleanup.makeContext(); // live pages of the closed cleanup corpus
+realCtx.registry = cleanup.corpusRegistry(appliedManifest);
 const withPages = (overrides) => ({ ...realCtx, readPage: (slug) => (slug in overrides ? overrides[slug] : realCtx.readPage(slug)) });
 const FROZEN = ['exercise', 'rudimentary', 'sad', 'sufficient', 'weird'];
 

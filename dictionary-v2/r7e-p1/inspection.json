@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "inspection",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/inspection.html",
+      "source_page_sha256_lf": "35b16e678f9899b2628f6ad0faa68a02715fcffd6c5b22945441d284e7d69666",
+      "tool": "scripts/dictionary-v2/r7e-p1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো দপ্তর, কারখানা বা প্রতিষ্ঠান যখন নিয়ম মেনে একটি জায়গা, নথি বা কাজ খুঁটিয়ে দেখে, সেই আনুষ্ঠানিক পরীক্ষাই পরিদর্শন।"
+      },
+      "bangla_meaning": {
+        "display": "পরিদর্শন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a formal or official examination",
+        "origin": "OEWN_GLOSS",
+        "text": "a formal or official examination"
+      },
+      "examples": [
+        {
+          "bn": "রেস্তোরাঁ সন্ধ্যার জন্য খোলার আগে নিরাপত্তা কর্মকর্তা রান্নাঘরের পরিদর্শন শেষ করলেন।",
+          "en": "The safety officer finished the kitchen inspection before the restaurant opened for dinner.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00885273-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "inspection"
+}

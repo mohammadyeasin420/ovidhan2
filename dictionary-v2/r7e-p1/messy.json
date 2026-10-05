@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "messy",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/messy.html",
+      "source_page_sha256_lf": "71c199575f33d88b1c54fd6316d556368f1d8903f96ffc5902616fc225495b0b",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কাপড়, থালা আর ধুলো জায়গা না মেনে পড়ে থাকলে ঘর এলোমেলো ও নোংরা হয়ে যায়।"
+      },
+      "bangla_meaning": {
+        "display": "এলোমেলো ও নোংরা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "dirty and disorderly",
+        "origin": "OEWN_GLOSS",
+        "text": "dirty and disorderly"
+      },
+      "examples": [
+        {
+          "bn": "জন্মদিনের পর মোড়কের কাগজ আর নোংরা থালায় বসার ঘর এলোমেলো হয়ে গেল।",
+          "en": "Wrapping paper and dirty plates left the living room messy after the birthday party.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02444270-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "messy"
+}

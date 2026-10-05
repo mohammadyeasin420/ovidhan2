@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "sustainable",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/sustainable.html",
+      "source_page_sha256_lf": "63653cbab376d1afedf653c328588018b03ee04fa0959977e86663ff82165129",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো কাজ, চলন বা ব্যবস্থা পরেও আগের মতো চালিয়ে নেওয়া গেলে, সেটি এই অর্থে বজায় থাকে।"
+      },
+      "bangla_meaning": {
+        "display": "চালিয়ে যাওয়া যায় এমন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "capable of being sustained",
+        "origin": "OEWN_GLOSS",
+        "text": "capable of being sustained"
+      },
+      "examples": [
+        {
+          "bn": "নদীর ধারের পুরো পথ হাঁটতে পারে, এমন একটু ধীর গতি তারা রাখল।",
+          "en": "They chose a slower pace that was sustainable for the whole riverside walk.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02821897-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "sustainable"
+}

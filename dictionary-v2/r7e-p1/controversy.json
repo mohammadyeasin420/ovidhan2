@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "controversy",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/controversy.html",
+      "source_page_sha256_lf": "8142d1d3dd8c0f72bd5fe222b0182b000498d7720b364ca3e3bb20e9e91fd1d3",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "একই সিদ্ধান্ত নিয়ে দুই পক্ষ জোরের সঙ্গে আলাদা কথা বলে, এবং কেউ সহজে সরে আসে না।"
+      },
+      "bangla_meaning": {
+        "display": "বিতর্ক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a contentious speech act; a dispute where there is strong disagreement",
+        "origin": "OEWN_GLOSS",
+        "text": "a contentious speech act; a dispute where there is strong disagreement"
+      },
+      "examples": [
+        {
+          "bn": "হঠাৎ বাসভাড়া বাড়ায় টার্মিনালের যাত্রীদের মধ্যে বিতর্ক শুরু হলো।",
+          "en": "The sudden rise in bus fare caused a controversy among commuters at the terminal.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06572166-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "controversy"
+}

@@ -1,8 +1,9 @@
 'use strict';
 // SEO-R6E: tests for the 12-word Dictionary V2 PRODUCTION PILOT (guarded plan / apply / verify, production page contract).
 // Run: node tests/dictionary-v2-r6e.test.js
-// Offline. Needs git history (the V1 baseline commit) and the committed V2 records. The apply workflow is exercised on
-// throw-away copies; the final scenarios assert the state of the real repository AFTER the local pilot application.
+// Offline. Needs git history (the V1 baseline commit and the R6E commit) and the committed V2 records. The apply
+// workflow is exercised on throw-away copies. Scope asserts compare those two commits. Live checks confirm the 12
+// pages still match the R6E manifest. Later approved batches are outside this audit.
 
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -30,6 +31,7 @@ function scenario(name, fn) {
 }
 
 const COHORT = ['swarm', 'good', 'chaos', 'designation', 'introvert', 'tough', 'savage', 'repeat', 'crush', 'guess', 'potential', 'waist'];
+const R6E_COMMIT = 'b01921f65282d5b47ddefea430cd8c5449f56f53';
 const SENSE_COUNTS = { swarm: 3, good: 4, chaos: 1, designation: 3, introvert: 1, tough: 4, savage: 3, repeat: 3, crush: 3, guess: 3, potential: 2, waist: 1 };
 const SINGLE = ['chaos', 'introvert', 'waist'];
 const FROZEN_PAGES = ['exercise', 'rudimentary', 'sad', 'sufficient', 'weird'];
@@ -383,26 +385,24 @@ scenario('REAL repository: the 12 pages are at the expected V2 production output
         assert.equal(live, r6e.withEol(production.get(slug), r6e.eolOf(live)), slug);
         assert.ok(lib.isV2ProductionPage(live));
     }
-    assert.equal(r6e.verify({ root }).ok, true, r6e.verify({ root }).errors.join('; '));
     const manifest = r6e.loadManifest(root);
     assert.equal(manifest.totals.senses, 31);
     assert.deepEqual(manifest.allowlist, COHORT);
 });
 
-scenario('REAL repository: exactly the 12 allowlisted word pages differ from the V1 baseline; every other word page is identical', () => {
-    const changedWord = gitLines(['diff', '--name-only', lib.V1_BASELINE_COMMIT, '--', 'word']).sort();
+scenario('R6E commit: exactly the 12 allowlisted word pages differ from the V1 baseline', () => {
+    const changedWord = gitLines(['diff', '--name-only', lib.V1_BASELINE_COMMIT, R6E_COMMIT, '--', 'word']).sort();
     assert.deepEqual(changedWord, COHORT.map((s) => 'word/' + s + '.html').sort());
     assert.deepEqual(gitLines(['ls-files', '--others', '--exclude-standard', '--', 'word']), []);
-    for (const slug of FROZEN_PAGES) assert.equal(gitOut(['diff', '--name-only', lib.V1_BASELINE_COMMIT, '--', 'word/' + slug + '.html']).trim(), '', slug + ' frozen page unchanged');
-    assert.equal(gitLines(['diff', '--name-only', lib.V1_BASELINE_COMMIT, '--', 'word']).filter((p) => FROZEN_PAGES.some((s) => p === 'word/' + s + '.html')).length, 0);
+    for (const slug of FROZEN_PAGES) assert.equal(gitOut(['diff', '--name-only', lib.V1_BASELINE_COMMIT, R6E_COMMIT, '--', 'word/' + slug + '.html']).trim(), '', slug + ' frozen page unchanged at the R6E commit');
 });
 
-scenario('REAL repository: registry, sitemaps, robots, dictionary/A-Z, explorer, deploy script, R6C records and previews are unchanged', () => {
+scenario('R6E commit: registry, sitemaps, robots, dictionary/A-Z, explorer, deploy script, R6C records and previews are unchanged', () => {
     const files = PROTECTED_FILES.concat(fs.readdirSync(root).filter((f) => /^dictionary.*\.html$/.test(f) || /^sitemap.*\.xml$/.test(f)));
     const unique = [...new Set(files)].filter((f) => fs.existsSync(path.join(root, f)));
     assert.ok(unique.length >= 9);
-    assert.deepEqual(gitLines(['diff', '--name-only', lib.V1_BASELINE_COMMIT, '--', ...unique]), [], 'protected files unchanged');
-    assert.deepEqual(gitLines(['diff', '--name-only', lib.V1_BASELINE_COMMIT, '--', 'dictionary-v2/records', 'dictionary-v2/previews', 'dictionary-v2/r6c-editorial-source.json', 'dictionary-v2/r6c-editorial-report.json', 'dictionary-v2/oewn-2025-synset-lock.json', 'dictionary-v2/dictionary-v2.schema.json', 'data']), []);
+    assert.deepEqual(gitLines(['diff', '--name-only', lib.V1_BASELINE_COMMIT, R6E_COMMIT, '--', ...unique]), [], 'protected files unchanged at the R6E commit');
+    assert.deepEqual(gitLines(['diff', '--name-only', lib.V1_BASELINE_COMMIT, R6E_COMMIT, '--', 'dictionary-v2/records', 'dictionary-v2/previews', 'dictionary-v2/r6c-editorial-source.json', 'dictionary-v2/r6c-editorial-report.json', 'dictionary-v2/oewn-2025-synset-lock.json', 'dictionary-v2/dictionary-v2.schema.json', 'data']), []);
     const registry = JSON.parse(readUtf8('data/approved-static-word-slugs.json'));
     const slugs = Array.isArray(registry) ? registry : registry.slugs || registry.words;
     assert.ok(slugs.length > 2000);

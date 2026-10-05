@@ -38,6 +38,8 @@ function beforePage(slug) {
 function beforeContext() {
     const ctx = cleanup.makeContext();
     ctx.readPage = beforePage;
+    // The manifest is the closed 2,326-page V1 audit. Do not validate it against later approvals.
+    ctx.registry = cleanup.corpusRegistry(appliedManifest);
     return ctx;
 }
 

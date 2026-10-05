@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "solely",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/solely.html",
+      "source_page_sha256_lf": "4e6be55b456677fec437fda8ae8c2e7f6b61a878d859ed7e584999d20ef8f85c",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অন্য লোক বা অন্য কারণ বাদ দিয়ে কেবল একটি বিষয় কাজ করে।"
+      },
+      "bangla_meaning": {
+        "display": "শুধুমাত্র",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "without any others being included or involved",
+        "origin": "OEWN_GLOSS",
+        "text": "without any others being included or involved"
+      },
+      "examples": [
+        {
+          "bn": "শোনার অংশ অনুশীলনের জন্যই তিনি শুধুমাত্র বাড়তি ক্লাসে বসলেন।",
+          "en": "She sat the extra class solely to practise the listening section.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00008999-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "solely"
+}

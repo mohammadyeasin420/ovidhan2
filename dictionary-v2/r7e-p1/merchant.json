@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "merchant",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/merchant.html",
+      "source_page_sha256_lf": "3e00181fa83cc8712e392233f64c7f585d1a50aa382e175fe61c1bd3b6d8410f",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "পণ্য কিনে নিজের দোকান থেকে সরাসরি ক্রেতার কাছে বিক্রি করেন, এমন মানুষ খুচরা ব্যবসায়ী।"
+      },
+      "bangla_meaning": {
+        "display": "খুচরা ব্যবসায়ী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a businessperson engaged in retail trade",
+        "origin": "OEWN_GLOSS",
+        "text": "a businessperson engaged in retail trade"
+      },
+      "examples": [
+        {
+          "bn": "সন্ধ্যার আজানের আগে চালের ব্যবসায়ী শেষ বস্তাটি মাপলেন।",
+          "en": "The rice merchant weighed the last sack before the evening call to prayer.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08828740-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "merchant"
+}

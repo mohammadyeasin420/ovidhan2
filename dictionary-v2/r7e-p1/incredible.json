@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "incredible",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/incredible.html",
+      "source_page_sha256_lf": "08280c1d6212960915dc72ea5dadc2249f53af48356d84915db2948eed373f5e",
+      "tool": "scripts/dictionary-v2/r7e-p1.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "এত বেশি, এত ভালো বা এত অদ্ভুত যে প্রথমবার শুনলে বিশ্বাস করতে কষ্ট হয়।"
+      },
+      "bangla_meaning": {
+        "display": "অবিশ্বাস্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "beyond belief or understanding",
+        "origin": "OEWN_GLOSS",
+        "text": "beyond belief or understanding"
+      },
+      "examples": [
+        {
+          "bn": "উদ্বোধনের সকালে বইমেলায় অবিশ্বাস্য সংখ্যক মানুষ ভিড় করেছিল।",
+          "en": "An incredible number of people filled the book fair on its opening morning.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00651650-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "incredible"
+}

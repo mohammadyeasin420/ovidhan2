@@ -1,0 +1,56 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "wrist",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "source_page": "word/wrist.html",
+      "source_page_sha256_lf": "4abe0e3d3c648f27ca3b7cd3c695fdb8303ba33c5f33db575a500e8e47048036",
+      "tool": "scripts/dictionary-v2/r7e-p3.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "হাতের তালু আর বাহু যে সন্ধিতে নড়ে, সেই জায়গাই কব্জি।"
+      },
+      "bangla_meaning": {
+        "display": "কব্জি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a joint between the distal end of the radius and the proximal row of carpal bones",
+        "origin": "OEWN_GLOSS",
+        "text": "a joint between the distal end of the radius and the proximal row of carpal bones"
+      },
+      "examples": [
+        {
+          "bn": "পুকুরের সিঁড়ি দিয়ে পানির কলসি তুলে আনার পর সে কব্জি ঘষল।",
+          "en": "She rubbed her wrist after carrying the water pot up the pond steps.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04965787-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "wrist"
+}

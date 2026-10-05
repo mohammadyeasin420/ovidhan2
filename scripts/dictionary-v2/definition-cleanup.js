@@ -503,6 +503,16 @@ function applyEntryToRecord(record, entry) {
 
 function loadManifest() { return lib.readJson(MANIFEST_PATH); }
 
+// The slug set the closed V1 cleanup manifest accounts for. Later approvals are outside this audit.
+function corpusRegistry(manifest) {
+    const slugs = []
+        .concat(manifest.corpus_fingerprint.clean_slugs)
+        .concat(manifest.entries.map((e) => e.slug))
+        .concat(manifest.frozen_documented.map((e) => e.slug))
+        .concat(manifest.manual_review.map((e) => e.slug));
+    return new Set(slugs);
+}
+
 function makeContext(root = lib.ROOT) {
     return {
         root,
@@ -972,7 +982,9 @@ function main() {
         // Pages are no longer in the BEFORE state, so the audit cannot be regenerated from them; verify the applied state instead.
         if (args.write) throw new Error('refusing to regenerate an APPLIED manifest (the BEFORE evidence must be preserved)');
         if (!args.archive && !args.dir) throw new Error('audit requires --archive <zip> or --oewn-dir <dir>');
-        runVerify(loadManifest(), ctx, args);
+        const applied = loadManifest();
+        ctx.registry = corpusRegistry(applied);
+        runVerify(applied, ctx, args);
         return;
     }
     if (args.cmd === 'audit') {
@@ -989,6 +1001,8 @@ function main() {
         return;
     }
     const manifest = loadManifest();
+    // An APPLIED manifest is the closed corpus. Later approvals are a separate registry fact.
+    if (manifest.status === 'APPLIED') ctx.registry = corpusRegistry(manifest);
     const errors = validateManifest(manifest, ctx);
     if (args.cmd === 'validate') {
         if (errors.length) { console.error('CLEANUP MANIFEST INVALID (' + errors.length + ')'); errors.slice(0, 50).forEach((e) => console.error('  - ' + e)); process.exit(1); }
@@ -1069,7 +1083,7 @@ function printGuardedSummary(g) {
 module.exports = {
     TYPES, MANIFEST_PATH, MANIFEST_REF, escapeHtml, classifyAgainstSynset, contaminationFor, synsetFromEntry,
     learnerFieldsHash, planPageCleanup, verifyCleanupDiff, auditPage, buildEntry, buildManifest, fingerprint,
-    validateEntry, validateManifest, applyEntryToRecord, loadManifest, makeContext, dryRun,
+    validateEntry, validateManifest, applyEntryToRecord, loadManifest, corpusRegistry, makeContext, dryRun,
     // SEO-R6B.1 guarded apply engine
     APPLY_CONFIRMATION, STAGING_SUFFIX, locateEdit, differingBytes, structureOf, compareStructure, verifyAfterState,
     DESCRIPTION_PROPOSED, DESCRIPTION_APPLIED, APPLICATION_STATE, validateApplicationState, markApplied, asProposed,
