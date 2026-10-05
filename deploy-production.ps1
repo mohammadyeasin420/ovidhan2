@@ -9,9 +9,11 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $sourceRoot = $PSScriptRoot
+$workerSourceDirectory = Join-Path $sourceRoot 'worker'
 $workerDirectory = 'C:\deploy\ovidhan-worker'
 $workerConfig = Join-Path $workerDirectory 'wrangler.jsonc'
 $workerName = 'ovidhan'
+$requiredWorkerFiles = @('index.js', 'wrangler.jsonc')
 $maximumAssetCount = 100000
 $maximumAssetBytes = 25MB
 $expectedWordCount = 49710
@@ -148,19 +150,57 @@ try {
             throw "Required source file is missing: $file"
         }
     }
+    if (-not (Test-Path -LiteralPath $workerSourceDirectory -PathType Container)) {
+        throw "Versioned Worker source directory is missing: worker"
+    }
+    foreach ($workerFile in $requiredWorkerFiles) {
+        if (-not (Test-Path -LiteralPath (Join-Path $workerSourceDirectory $workerFile) -PathType Leaf)) {
+            throw "Versioned Worker source file is missing: worker\$workerFile"
+        }
+    }
+    $versionedWorkerConfig = Join-Path $workerSourceDirectory 'wrangler.jsonc'
+    $versionedConfigText = Get-Content -LiteralPath $versionedWorkerConfig -Raw
+    if ($versionedConfigText -notmatch '"name"\s*:\s*"ovidhan"') { throw "Worker config does not name '$workerName'." }
+    if ($versionedConfigText -notmatch '"main"\s*:\s*"index\.js"') { throw 'Worker config must set main to index.js.' }
+    if ($versionedConfigText -notmatch '"binding"\s*:\s*"ASSETS"') { throw 'Worker config must bind static assets as ASSETS.' }
+    if ($versionedConfigText -notmatch '"html_handling"\s*:\s*"none"') { throw 'Worker config must keep html_handling set to none.' }
+    if ($versionedConfigText -notmatch '"not_found_handling"\s*:\s*"none"') { throw 'Worker config must keep not_found_handling set to none.' }
+    if ($versionedConfigText -notmatch '"run_worker_first"\s*:\s*\[\s*"/api/\*"\s*\]') {
+        throw 'Worker config must run Worker first for /api/* only.'
+    }
+
+    # Keep C:\deploy\ovidhan-worker as the Wrangler launch directory, but make
+    # Git-versioned worker/ the source of truth for entry + config.
+    if (-not (Test-Path -LiteralPath $workerDirectory -PathType Container)) {
+        New-Item -ItemType Directory -Path $workerDirectory | Out-Null
+    }
+    foreach ($workerFile in $requiredWorkerFiles) {
+        Copy-Item -LiteralPath (Join-Path $workerSourceDirectory $workerFile) -Destination (Join-Path $workerDirectory $workerFile) -Force
+    }
     if (-not (Test-Path -LiteralPath $workerConfig -PathType Leaf)) {
-        throw "Cloudflare Worker config is missing: $workerConfig"
+        throw "Cloudflare Worker config is missing after sync: $workerConfig"
+    }
+    if (-not (Test-Path -LiteralPath (Join-Path $workerDirectory 'index.js') -PathType Leaf)) {
+        throw "Cloudflare Worker entry is missing after sync: $(Join-Path $workerDirectory 'index.js')"
     }
     $configText = Get-Content -LiteralPath $workerConfig -Raw
+    if ($configText -ne $versionedConfigText) { throw 'Synced Worker config does not match versioned worker/wrangler.jsonc.' }
     if ($configText -notmatch '"name"\s*:\s*"ovidhan"') { throw "Worker config does not name '$workerName'." }
+    if ($configText -notmatch '"main"\s*:\s*"index\.js"') { throw 'Synced Worker config must set main to index.js.' }
+    if ($configText -notmatch '"binding"\s*:\s*"ASSETS"') { throw 'Synced Worker config must bind static assets as ASSETS.' }
     if ($configText -notmatch '"html_handling"\s*:\s*"none"') { throw 'Worker config must keep html_handling set to none.' }
     if ($configText -notmatch '"not_found_handling"\s*:\s*"none"') { throw 'Worker config must keep not_found_handling set to none.' }
+    if ($configText -notmatch '"run_worker_first"\s*:\s*\[\s*"/api/\*"\s*\]') {
+        throw 'Synced Worker config must run Worker first for /api/* only.'
+    }
     $npx = Get-Command npx -ErrorAction Stop
     $node = Get-Command node -ErrorAction Stop
     if ($Deploy) { [void](Get-Command curl.exe -ErrorAction Stop) }
     Write-Host "BRANCH: $branch"
     Write-Host "GIT SHA: $gitSha"
     Write-Host "WORKTREE: $(if ((Get-CollectionSize $gitStatus) -eq 0) { 'CLEAN' } else { 'DIRTY (explicitly allowed)' })"
+    Write-Host "WORKER SOURCE: $workerSourceDirectory"
+    Write-Host "WORKER CONFIG: $workerConfig"
     Write-Host "WRANGLER LAUNCHER: $($npx.Source)"
 
     Write-Stage 'CLEAN PRODUCTION BUILD'
@@ -265,14 +305,29 @@ try {
     if ((Get-CollectionSize $leakedRootDevelopment) -gt 0) { throw "Root development file leaked: $($leakedRootDevelopment[0].Name)" }
 
     Write-Stage 'WRANGLER DRY RUN'
-    $wranglerVersionText = (& $npx.Source wrangler --version 2>&1 | Out-String).Trim()
-    if ($LASTEXITCODE -ne 0) { throw 'Wrangler is unavailable through npx.' }
+    # npx may write non-fatal npm warnings to stderr; do not treat those as terminating errors.
+    $previousEap = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+        $wranglerVersionText = (& $npx.Source wrangler --version 2>&1 | Out-String).Trim()
+        $wranglerVersionExit = $LASTEXITCODE
+    } finally {
+        $ErrorActionPreference = $previousEap
+    }
+    if ($wranglerVersionExit -ne 0) { throw 'Wrangler is unavailable through npx.' }
     $versionMatch = [regex]::Match($wranglerVersionText, '(\d+)\.(\d+)\.(\d+)')
     if (-not $versionMatch.Success) { throw "Unable to parse Wrangler version: $wranglerVersionText" }
     $wranglerVersion = [version]$versionMatch.Value
     if ($wranglerVersion -lt [version]'4.34.0') { throw "Wrangler $wranglerVersion is too old for the 100,000-asset limit." }
     $wranglerArgs = @('wrangler', 'deploy', '--config', $workerConfig, '--assets', $outputFull, '--dry-run')
-    Invoke-Checked $npx.Source $wranglerArgs 'Wrangler dry run failed'
+    $ErrorActionPreference = 'Continue'
+    try {
+        & $npx.Source @wranglerArgs
+        $wranglerDryRunExit = $LASTEXITCODE
+    } finally {
+        $ErrorActionPreference = $previousEap
+    }
+    if ($wranglerDryRunExit -ne 0) { throw "Wrangler dry run failed (exit code $wranglerDryRunExit)" }
 
     $deploymentStatus = 'NOT RUN'
     if ($Deploy) {
@@ -282,9 +337,15 @@ try {
         Write-Host "WORD COUNT: $wordCount"
         Write-Host "DICTIONARY HASH: $dictionaryHash"
         Write-Host "WORKER: $workerName"
-        $deployOutput = @(& $npx.Source wrangler deploy --config $workerConfig --assets $outputFull 2>&1)
+        $ErrorActionPreference = 'Continue'
+        try {
+            $deployOutput = @(& $npx.Source wrangler deploy --config $workerConfig --assets $outputFull 2>&1)
+            $deployExit = $LASTEXITCODE
+        } finally {
+            $ErrorActionPreference = $previousEap
+        }
         $deployOutput | ForEach-Object { Write-Host $_ }
-        if ($LASTEXITCODE -ne 0) { throw "Cloudflare deployment failed (exit code $LASTEXITCODE)" }
+        if ($deployExit -ne 0) { throw "Cloudflare deployment failed (exit code $deployExit)" }
         $versionIdMatch = [regex]::Match(($deployOutput -join "`n"), 'Version ID:\s*([a-f0-9-]+)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
         $versionId = if ($versionIdMatch.Success) { $versionIdMatch.Groups[1].Value } else { 'not reported by Wrangler' }
 

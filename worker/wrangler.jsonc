@@ -1,0 +1,12 @@
+{
+  "name": "ovidhan",
+  "main": "index.js",
+  "compatibility_date": "2026-08-25",
+  "assets": {
+    "directory": "../ovidhan-production",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "run_worker_first": ["/api/*"]
+  }
+}
