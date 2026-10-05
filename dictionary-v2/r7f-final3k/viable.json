@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "viable",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/viable.html",
+      "source_page_sha256_lf": "fc98e853ac05dad407e423eb363b754f0f500e2a0179892ed0bdf5a41d3066dd",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "হাতের সম্পদ দিয়ে করা যায় এমন।"
+      },
+      "bangla_meaning": {
+        "display": "কার্যকর",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "capable of being done with means at hand and circumstances as they are",
+        "origin": "OEWN_GLOSS",
+        "text": "capable of being done with means at hand and circumstances as they are"
+      },
+      "examples": [
+        {
+          "bn": "বন্দরে পৌঁছানোর কার্যকর উপায় রাতের বাস।",
+          "en": "A night bus is a viable way to reach the port.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01834982-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বেঁচে থাকতে বা স্বাভাবিক বাড়তে পারে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "বাঁচার যোগ্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "capable of life or normal growth and development",
+        "origin": "OEWN_GLOSS",
+        "text": "capable of life or normal growth and development"
+      },
+      "examples": [
+        {
+          "bn": "ছানাগুলোর মধ্যে একটিই বাঁচার যোগ্য ছিল।",
+          "en": "Only one of the chicks was viable.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00095994-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "viable"
+}

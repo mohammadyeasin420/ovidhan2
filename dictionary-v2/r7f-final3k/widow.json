@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "widow",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/widow.html",
+      "source_page_sha256_lf": "0a018444b1a598e86cf5681415052b74f400c312b845c48a6e29271d388ce31a",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যার স্বামী মারা গেছেন এবং যিনি আবার বিয়ে করেননি।"
+      },
+      "bangla_meaning": {
+        "display": "বিধবা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a woman whose husband is dead especially one who has not remarried",
+        "origin": "OEWN_GLOSS",
+        "text": "a woman whose husband is dead especially one who has not remarried"
+      },
+      "examples": [
+        {
+          "bn": "শেষকৃত্যের পরও বিধবা দোকান খোলা রাখলেন।",
+          "en": "The widow kept the shop open after the funeral.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "09274040-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "widow"
+}

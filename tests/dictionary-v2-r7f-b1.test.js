@@ -48,7 +48,7 @@ scenario('the frozen batch is 97 upgrades outside the closed corpus, R7E, frozen
     assert.equal(COHORT.length, 97);
     assert.equal(new Set(COHORT).size, 97);
     assert.equal(corpus.size, 2326);
-    assert.equal(registry.size, 2645);
+    assert.equal(registry.size, 3065);
     assert.equal(frozen.size, 186);
     assert.equal(R7E.size, 48);
     for (const slug of EXCLUDED) {
@@ -69,7 +69,7 @@ scenario('the frozen batch is 97 upgrades outside the closed corpus, R7E, frozen
         assert.equal(HOLDOUT.has(slug), false, slug);
     }
     const outside = [...registry].filter((slug) => !corpus.has(slug));
-    assert.equal(outside.length, 319);
+    assert.equal(outside.length, 739);
 });
 
 scenario('each R7F page matches its record and the Bengali one-sense contract', () => {
@@ -138,7 +138,7 @@ scenario('the committed R7F batch 1 pages and records stay untouched', () => {
     assert.equal(fs.readdirSync(path.join(root, 'dictionary-v2', 'r7f-b1')).filter((name) => name.endsWith('.json')).length, 97);
     const sitemap = fs.readFileSync(path.join(root, 'sitemap-approved-words.xml'), 'utf8');
     for (const slug of COHORT) assert.ok(sitemap.includes('/word/' + slug + '.html'), slug);
-    assert.equal((sitemap.match(/<loc>/g) || []).length, 2645);
+    assert.equal((sitemap.match(/<loc>/g) || []).length, 3065);
 });
 
 console.log('All dictionary-v2 R7F batch-1 forward checks passed.');

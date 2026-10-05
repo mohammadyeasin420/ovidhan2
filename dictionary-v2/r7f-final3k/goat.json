@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "goat",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/goat.html",
+      "source_page_sha256_lf": "e6c45809d4aa24e08e0213afab4f32e4af00d2d9d9f6d96174c92ac9433a6b81",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দাড়ি ও সোজা শিংওয়ালা চতুষ্পদ প্রাণী।"
+      },
+      "bangla_meaning": {
+        "display": "ছাগল",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "any of numerous agile ruminants related to sheep but having a beard and straight horns",
+        "origin": "OEWN_GLOSS",
+        "text": "any of numerous agile ruminants related to sheep but having a beard and straight horns"
+      },
+      "examples": [
+        {
+          "bn": "ছাগল সিঁড়ির ধারের গাঁদা খেয়ে ফেলল।",
+          "en": "The goat ate the marigolds by the step.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01902616-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যাকে ঠাট্টা বা দোষের লক্ষ্য বানানো হয়।"
+      },
+      "bangla_meaning": {
+        "display": "বলির পাঁঠা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a victim of ridicule or pranks",
+        "origin": "OEWN_GLOSS",
+        "text": "a victim of ridicule or pranks"
+      },
+      "examples": [
+        {
+          "bn": "প্রতিটি ক্লাসের রসিকতায় সে বলির পাঁঠা হত।",
+          "en": "He was the goat of every classroom joke.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "08419380-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "goat"
+}

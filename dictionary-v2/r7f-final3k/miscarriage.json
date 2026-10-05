@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "miscarriage",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/miscarriage.html",
+      "source_page_sha256_lf": "261589691f05f35848bdd10eb200ce0ee04dddc862888abcfd3f706eb0e01526",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "গর্ভের সন্তান আপনা থেকে নষ্ট হয়ে যাওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "গর্ভপাত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a natural loss of the products of conception",
+        "origin": "OEWN_GLOSS",
+        "text": "a natural loss of the products of conception"
+      },
+      "examples": [
+        {
+          "bn": "গর্ভপাতের পর সে তাড়াতাড়ি কাজ ছেড়ে বাড়ি গেল।",
+          "en": "She left work early after the miscarriage.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00226813-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো পরিকল্পনা বা বিচার ভেস্তে যাওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "ব্যর্থতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "failure of a plan",
+        "origin": "OEWN_GLOSS",
+        "text": "failure of a plan"
+      },
+      "examples": [
+        {
+          "bn": "বিচারটা ন্যায়ের ব্যর্থতা ছিল।",
+          "en": "The trial was a miscarriage of justice.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "06706418-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "miscarriage"
+}

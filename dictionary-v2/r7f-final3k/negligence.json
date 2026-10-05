@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "negligence",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/negligence.html",
+      "source_page_sha256_lf": "8f58ca9b606ac1d4d4f84bc66a78c132aaabdd33d925e42d4f2a2ca1bb95d8a3",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যে যত্ন একজন সাবধান মানুষ নিত, তা না নেওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "অবহেলা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "failure to act with the prudence that a reasonable person would exercise under the same circumstances",
+        "origin": "OEWN_GLOSS",
+        "text": "failure to act with the prudence that a reasonable person would exercise under the same circumstances"
+      },
+      "examples": [
+        {
+          "bn": "অবহেলায় সারারাত ফটক খোলা ছিল।",
+          "en": "Negligence left the gate unlocked all night.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00740519-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কর্তব্যে মন না দেওয়ার স্বভাব।"
+      },
+      "bangla_meaning": {
+        "display": "দায়িত্বহীনতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the trait of neglecting responsibilities and lacking concern",
+        "origin": "OEWN_GLOSS",
+        "text": "the trait of neglecting responsibilities and lacking concern"
+      },
+      "examples": [
+        {
+          "bn": "হিসাবে তার দায়িত্বহীনতায় দোকানের ক্ষতি হল।",
+          "en": "His negligence with the accounts cost the shop.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "04032860-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "negligence"
+}

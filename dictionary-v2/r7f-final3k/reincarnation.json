@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "reincarnation",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/reincarnation.html",
+      "source_page_sha256_lf": "0422ad3da78a854bb701172d473ab073d980ed3e77408984d1c43cd7a821740c",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কর্ম অনুযায়ী আবার জন্ম নেওয়ার বিশ্বাস।"
+      },
+      "bangla_meaning": {
+        "display": "পুনর্জন্ম",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the Hindu or Buddhist doctrine that a person may be reborn successively into one of five classes of living beings (god or human or animal or hungry ghost or denizen of Hell) depending on the person's own actions",
+        "origin": "OEWN_GLOSS",
+        "text": "the Hindu or Buddhist doctrine that a person may be reborn successively into one of five classes of living beings (god or human or animal or hungry ghost or denizen of Hell) depending on the person's own actions"
+      },
+      "examples": [
+        {
+          "bn": "পাঠে পুনর্জন্ম এক অনুচ্ছেদে বোঝানো হল।",
+          "en": "The lesson explained reincarnation in one paragraph.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05579358-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "reincarnation"
+}

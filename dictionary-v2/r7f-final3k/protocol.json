@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "protocol",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/protocol.html",
+      "source_page_sha256_lf": "6dc156f7bbd3891901d059f6e055064706cc7b025739d4e3e97cc6b206f37a24",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ঠিক আচরণের নিয়ম।"
+      },
+      "bangla_meaning": {
+        "display": "রীতি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "code of correct conduct",
+        "origin": "OEWN_GLOSS",
+        "text": "code of correct conduct"
+      },
+      "examples": [
+        {
+          "bn": "রীতি অনুযায়ী অতিথিরা সংগীতের সময় দাঁড়ায়।",
+          "en": "The protocol requires guests to stand for the anthem.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05050304-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "তথ্য কীভাবে যাবে, তার কম্পিউটার নিয়ম।"
+      },
+      "bangla_meaning": {
+        "display": "প্রোটোকল",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(computer science) rules determining the format and transmission of data",
+        "origin": "OEWN_GLOSS",
+        "text": "(computer science) rules determining the format and transmission of data"
+      },
+      "examples": [
+        {
+          "bn": "দুই দপ্তর ফাইলের জন্য একই প্রোটোকল ব্যবহার করে।",
+          "en": "The two offices use the same protocol for the files.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "06022739-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "protocol"
+}

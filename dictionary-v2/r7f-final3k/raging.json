@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "raging",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/raging.html",
+      "source_page_sha256_lf": "af5c16441328a2fdda571ec9007b247f5c009e9956aa9d92299e9c26bd73a8f2",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "খুব জোরালো ও উগ্র।"
+      },
+      "bangla_meaning": {
+        "display": "প্রচণ্ড",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "characterized by violent and forceful activity or movement; very intense",
+        "origin": "OEWN_GLOSS",
+        "text": "characterized by violent and forceful activity or movement; very intense"
+      },
+      "examples": [
+        {
+          "bn": "প্রচণ্ড আগুন শুকনো মাঠ পার হল।",
+          "en": "A raging fire crossed the dry field.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02531144-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "raging"
+}

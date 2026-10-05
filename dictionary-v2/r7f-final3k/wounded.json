@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "wounded",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/wounded.html",
+      "source_page_sha256_lf": "dbc0d29f4bbdef186ce371439566adbecc18aabbdfa17b3813775f3e7bd40fd9",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "শরীরে জখম হয়েছে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "আহত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "suffering from physical injury especially that suffered in battle",
+        "origin": "OEWN_GLOSS",
+        "text": "suffering from physical injury especially that suffered in battle"
+      },
+      "examples": [
+        {
+          "bn": "আহত কুলিকে ছায়ায় নিয়ে যাওয়া হল।",
+          "en": "The wounded porter was carried to the shade.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01326879-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "wounded"
+}

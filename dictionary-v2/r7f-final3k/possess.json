@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "possess",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/possess.html",
+      "source_page_sha256_lf": "d9d9aed9cfdb0eec44770c7eab165220101dff45bdf4a649d6105c43dcb0b828",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো জিনিসের বৈধ মালিক হওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "মালিক হওয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "have ownership or possession of",
+        "origin": "OEWN_GLOSS",
+        "text": "have ownership or possession of"
+      },
+      "examples": [
+        {
+          "bn": "নদীর ধারের জমির মালিক তারা।",
+          "en": "They possess the land beside the river.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02271338-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কাউকে কোনো দক্ষতা বা জ্ঞান থাকায় বলা হয়।"
+      },
+      "bangla_meaning": {
+        "display": "গুণ থাকা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "have as an attribute, knowledge, or skill",
+        "origin": "OEWN_GLOSS",
+        "text": "have as an attribute, knowledge, or skill"
+      },
+      "examples": [
+        {
+          "bn": "ভালো গাইডের ধৈর্য থাকা দরকার।",
+          "en": "A good guide should possess patience.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02713010-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "possess"
+}

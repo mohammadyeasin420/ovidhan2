@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "pickle",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/pickle.html",
+      "source_page_sha256_lf": "4dfaa722891a8058104cb821e6ca82373d6b28204f7c33480f47f949b35732b1",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "লবণ বা ভিনেগারে রাখা সবজি।"
+      },
+      "bangla_meaning": {
+        "display": "আচার",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "vegetables (especially cucumbers) preserved in brine or vinegar",
+        "origin": "OEWN_GLOSS",
+        "text": "vegetables (especially cucumbers) preserved in brine or vinegar"
+      },
+      "examples": [
+        {
+          "bn": "ভাতের পাশে কাঁচা আমের আচার ছিল।",
+          "en": "A pickle of green mango sat beside the rice.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07215135-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "জটিল অসুবিধায় পড়া।"
+      },
+      "bangla_meaning": {
+        "display": "বিপাকে পড়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "informal terms for a difficult situation",
+        "origin": "OEWN_GLOSS",
+        "text": "informal terms for a difficult situation"
+      },
+      "examples": [
+        {
+          "bn": "দুটো চাবি হারিয়ে সে বিপাকে পড়ল।",
+          "en": "Losing both keys left him in a pickle.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "11710368-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "pickle"
+}

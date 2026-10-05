@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "theory",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/theory.html",
+      "source_page_sha256_lf": "0877d8623863ecb53dd4ae8efc580cf7a64a6c138231500e17c65436f2c4a08b",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "প্রমাণ দিয়ে দাঁড়ানো একটি ব্যাখ্যা।"
+      },
+      "bangla_meaning": {
+        "display": "তত্ত্ব",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a well-substantiated explanation of some aspect of the natural world; an organized system of accepted knowledge that applies in a variety of circumstances to explain a specific set of phenomena",
+        "origin": "OEWN_GLOSS",
+        "text": "a well-substantiated explanation of some aspect of the natural world; an organized system of accepted knowledge that applies in a variety of circumstances to explain a specific set of phenomena"
+      },
+      "examples": [
+        {
+          "bn": "তত্ত্ব বোঝায় এ সপ্তাহে জোয়ার বেশি কেন।",
+          "en": "The theory explains why the tide is higher this week.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05375034-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "এখনো যাচাই হয়নি এমন ব্যাখ্যা।"
+      },
+      "bangla_meaning": {
+        "display": "অনুমান",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena",
+        "origin": "OEWN_GLOSS",
+        "text": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+      },
+      "examples": [
+        {
+          "bn": "লিক নিয়ে তার অনুমান এখনো পরীক্ষা চায়।",
+          "en": "Her theory about the leak still needs a test.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05273881-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "theory"
+}

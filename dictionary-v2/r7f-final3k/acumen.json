@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "acumen",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/acumen.html",
+      "source_page_sha256_lf": "53178a8867b637d955a25a65e7dfd09bcb7e5a1508f97f6eeb7863510006d9ba",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "সূক্ষ্ম বুঝে দ্রুত ঠিক সিদ্ধান্ত নেওয়ার ক্ষমতা।"
+      },
+      "bangla_meaning": {
+        "display": "তীক্ষ্ণ বিচারবুদ্ধি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "shrewdness shown by keen insight",
+        "origin": "OEWN_GLOSS",
+        "text": "shrewdness shown by keen insight"
+      },
+      "examples": [
+        {
+          "bn": "তার তীক্ষ্ণ বিচারবুদ্ধিতে দোকান খারাপ চুক্তি থেকে বাঁচল।",
+          "en": "Her acumen saved the shop from a bad contract.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05002948-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "acumen"
+}

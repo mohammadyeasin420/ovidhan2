@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "referral",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/referral.html",
+      "source_page_sha256_lf": "19b294071e64d002f2eb88817c5c7dda20505a60034845d42efaec81a2904926",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নির্দিষ্ট বিশেষজ্ঞের কাছে যেতে বলা পরামর্শ।"
+      },
+      "bangla_meaning": {
+        "display": "সুপারিশপত্র",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a recommendation to consult the (professional) person or group to whom one has been referred",
+        "origin": "OEWN_GLOSS",
+        "text": "a recommendation to consult the (professional) person or group to whom one has been referred"
+      },
+      "examples": [
+        {
+          "bn": "ক্লিনিক তাকে চক্ষু চিকিৎসকের সুপারিশপত্র দিল।",
+          "en": "The clinic gave her a referral to the eye doctor.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06029735-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "referral"
+}

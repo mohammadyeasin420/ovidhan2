@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "extraction",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/extraction.html",
+      "source_page_sha256_lf": "65e34c52617a9fb3dd8bfb72d27e6dc748d28a8f5033a7c2a0c9c8916360fc06",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "জোর বা চেষ্টায় কিছু বের করা।"
+      },
+      "bangla_meaning": {
+        "display": "নিষ্কাশন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the action of taking out something (especially using effort or force)",
+        "origin": "OEWN_GLOSS",
+        "text": "the action of taking out something (especially using effort or force)"
+      },
+      "examples": [
+        {
+          "bn": "পুরোনো পেরেক নিষ্কাশনে তক্তা ফেটে গেল।",
+          "en": "Extraction of the old nail split the plank.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00391245-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "পূর্বপুরুষ থেকে পাওয়া পরিচয়।"
+      },
+      "bangla_meaning": {
+        "display": "বংশপরিচয়",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "properties attributable to your ancestry",
+        "origin": "OEWN_GLOSS",
+        "text": "properties attributable to your ancestry"
+      },
+      "examples": [
+        {
+          "bn": "মায়ের দিক থেকে তার বংশপরিচয় জেলে পরিবারের।",
+          "en": "Her family extraction, on the mother side, is fishing.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "04296257-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "extraction"
+}

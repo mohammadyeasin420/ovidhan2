@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "improvise",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/improvise.html",
+      "source_page_sha256_lf": "252d5c94c53336eed691f0a484de0901ab9f3e871a0bbd33d3f8caf51a3f2b2c",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আগে থেকে তৈরি না করেই পরিবেশন করা।"
+      },
+      "bangla_meaning": {
+        "display": "তাৎক্ষণিক করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "perform without preparation",
+        "origin": "OEWN_GLOSS",
+        "text": "perform without preparation"
+      },
+      "examples": [
+        {
+          "bn": "স্বরলিপি উড়ে গেলে ড্রামারকে তাৎক্ষণিক বাজাতে হল।",
+          "en": "The drummer had to improvise when the score blew away.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01785707-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা আছে তাই দিয়ে কাজ চালানো।"
+      },
+      "bangla_meaning": {
+        "display": "জোড়াতালি দেওয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "manage in a makeshift way; do with whatever is at hand",
+        "origin": "OEWN_GLOSS",
+        "text": "manage in a makeshift way; do with whatever is at hand"
+      },
+      "examples": [
+        {
+          "bn": "দুই শাড়ি আর একটা খুঁটি দিয়ে তারা আশ্রয় জোড়াতালি দিল।",
+          "en": "They improvise a shelter from two saris and a pole.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02668640-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "improvise"
+}

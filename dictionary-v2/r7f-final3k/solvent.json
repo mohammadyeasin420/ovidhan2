@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "solvent",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/solvent.html",
+      "source_page_sha256_lf": "f76572c54f7ed6d83197f703a6f082b725dd6d044169506640b0bfb072692de7",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অন্য পদার্থ গুলিয়ে নেয় এমন তরল।"
+      },
+      "bangla_meaning": {
+        "display": "দ্রাবক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a liquid substance capable of dissolving other substances",
+        "origin": "OEWN_GLOSS",
+        "text": "a liquid substance capable of dissolving other substances"
+      },
+      "examples": [
+        {
+          "bn": "এই লবণের মিশ্রণে পানিই দ্রাবক।",
+          "en": "Water is the solvent in this salt mixture.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "12356373-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যার দেনা মেটানোর সামর্থ্য আছে।"
+      },
+      "bangla_meaning": {
+        "display": "দেনা শোধে সক্ষম",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "capable of meeting financial obligations",
+        "origin": "OEWN_GLOSS",
+        "text": "capable of meeting financial obligations"
+      },
+      "examples": [
+        {
+          "bn": "ফসল বিক্রির পর দোকান আবার দেনা শোধে সক্ষম।",
+          "en": "The shop is solvent again after the harvest sales.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02041623-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "solvent"
+}

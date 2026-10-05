@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "entertain",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/entertain.html",
+      "source_page_sha256_lf": "139b45fdaa4b244c8383cbb9d0acb6967fa0637119d2568a51cb2c63cea67f40",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "গান, গল্প বা খেলা দিয়ে আনন্দ দেওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "আমোদ দেওয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "provide entertainment for",
+        "origin": "OEWN_GLOSS",
+        "text": "provide entertainment for"
+      },
+      "examples": [
+        {
+          "bn": "শিক্ষার্থীরা একটা ছোট নাটক দিয়ে অতিথিদের আমোদ দেয়।",
+          "en": "The pupils entertain the guests with one short play.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02569434-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "একটি ধারণা বা অনুভূতি মাথায় রেখে ভাবা।"
+      },
+      "bangla_meaning": {
+        "display": "মনে স্থান দেওয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "maintain (a theory, thoughts, or feelings)",
+        "origin": "OEWN_GLOSS",
+        "text": "maintain (a theory, thoughts, or feelings)"
+      },
+      "examples": [
+        {
+          "bn": "নৌকা বিক্রির কথা সে মনে স্থান দিল না।",
+          "en": "She would not entertain the idea of selling the boat.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01830522-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "entertain"
+}

@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "rumour",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/rumour.html",
+      "source_page_sha256_lf": "4a888a007b3d7a6aa14f22ed8bbb9b401e30edb5b1883f5f835fdad12bc65551",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মুখে মুখে ছড়ানো মিশ্র খবর।"
+      },
+      "bangla_meaning": {
+        "display": "গুজব",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "gossip (usually a mixture of truth and untruth) passed around by word of mouth",
+        "origin": "OEWN_GLOSS",
+        "text": "gossip (usually a mixture of truth and untruth) passed around by word of mouth"
+      },
+      "examples": [
+        {
+          "bn": "দুপুরের আগেই ছুটির গুজব ছড়িয়ে গেল।",
+          "en": "The rumour of a holiday spread before noon.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06612418-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "rumour"
+}

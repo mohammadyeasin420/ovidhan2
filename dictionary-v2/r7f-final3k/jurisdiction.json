@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "jurisdiction",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/jurisdiction.html",
+      "source_page_sha256_lf": "56ef31dd277ca2d7cc7b0bdb3873bb5d7df09d47ece10e4b3ef619b9789ea648",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আইন ব্যাখ্যা ও প্রয়োগের অধিকার।"
+      },
+      "bangla_meaning": {
+        "display": "এখতিয়ার",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(law) the right and power to interpret and apply the law",
+        "origin": "OEWN_GLOSS",
+        "text": "(law) the right and power to interpret and apply the law"
+      },
+      "examples": [
+        {
+          "bn": "নদীর বিবাদে এই আদালতের এখতিয়ার নেই।",
+          "en": "This court has no jurisdiction over the river dispute.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04576635-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যে এলাকায় সেই আইনি ক্ষমতা চলে।"
+      },
+      "bangla_meaning": {
+        "display": "এখতিয়ারের এলাকা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "in law; the territory within which power can be exercised",
+        "origin": "OEWN_GLOSS",
+        "text": "in law; the territory within which power can be exercised"
+      },
+      "examples": [
+        {
+          "bn": "শহরটা বন্দর এখতিয়ারের এলাকার বাইরে।",
+          "en": "The town lies outside the port jurisdiction.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "07897402-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "jurisdiction"
+}

@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "scroll",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/scroll.html",
+      "source_page_sha256_lf": "ac07f806f1bb6b5ee697bf0b0842ffbf2706f5699f461ceb3a690c30a2c01b44",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "পর্দায় না-আটা লেখা সরিয়ে দেখা।"
+      },
+      "bangla_meaning": {
+        "display": "স্ক্রল করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "move through text or graphics in order to display parts that do not fit on the screen",
+        "origin": "OEWN_GLOSS",
+        "text": "move through text or graphics in order to display parts that do not fit on the screen"
+      },
+      "examples": [
+        {
+          "bn": "শেষ নাম খুঁজতে নিচে স্ক্রল করো।",
+          "en": "Scroll down to find the last name.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00129160-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "গুটিয়ে রাখা যায় এমন লেখা।"
+      },
+      "bangla_meaning": {
+        "display": "গুলানো পুঁথি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a document that can be rolled up (as for storage)",
+        "origin": "OEWN_GLOSS",
+        "text": "a document that can be rolled up (as for storage)"
+      },
+      "examples": [
+        {
+          "bn": "গুলানো পুঁথি লাল দড়ি দিয়ে বাঁধা ছিল।",
+          "en": "The scroll was tied with a red cord.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05797906-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "scroll"
+}

@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "realistic",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/realistic.html",
+      "source_page_sha256_lf": "e0fe772dd797153d90fb4e2e1748da7a284bbfe80422499492b9b70a6810c5e3",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা আছে তাই মেনে দেখে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "বাস্তববাদী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "aware or expressing awareness of things as they really are",
+        "origin": "OEWN_GLOSS",
+        "text": "aware or expressing awareness of things as they really are"
+      },
+      "examples": [
+        {
+          "bn": "বাস্তববাদী বাজেটে অতিরিক্ত রং রাখা হয়নি।",
+          "en": "A realistic budget left out the extra paint.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01953884-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কল্পনা নয়, আসলের মতো।"
+      },
+      "bangla_meaning": {
+        "display": "বাস্তবসম্মত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "representing what is real; not abstract or ideal",
+        "origin": "OEWN_GLOSS",
+        "text": "representing what is real; not abstract or ideal"
+      },
+      "examples": [
+        {
+          "bn": "বাস্তবসম্মত ছবিতে দেয়ালের প্রতিটি ফাটল ছিল।",
+          "en": "The realistic drawing showed every crack in the wall.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01994653-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "realistic"
+}

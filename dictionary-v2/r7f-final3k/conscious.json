@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "conscious",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/conscious.html",
+      "source_page_sha256_lf": "6111b1318ae12dce14c101893087fc5f7e7b8a341aefc0414a951de7b6baa992",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "জাগ্রত এবং চারপাশ বুঝতে পারে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "সংজ্ঞাযুক্ত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "knowing and perceiving; having awareness of surroundings and sensations and thoughts",
+        "origin": "OEWN_GLOSS",
+        "text": "knowing and perceiving; having awareness of surroundings and sensations and thoughts"
+      },
+      "examples": [
+        {
+          "bn": "ডাক্তার আসার সময় রোগী সংজ্ঞাযুক্ত ছিল।",
+          "en": "The patient was conscious when the doctor arrived.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00575757-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো বিষয় জানে বা বুঝতে পেরেছে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "সচেতন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(followed by ‘of’) showing realization or recognition of something",
+        "origin": "OEWN_GLOSS",
+        "text": "(followed by ‘of’) showing realization or recognition of something"
+      },
+      "examples": [
+        {
+          "bn": "পুরোনো সেতুর ঝুঁকি সম্পর্কে সে সচেতন ছিল।",
+          "en": "She was conscious of the risk in the old bridge.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00192736-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "conscious"
+}

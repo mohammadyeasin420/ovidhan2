@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "oblivious",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/oblivious.html",
+      "source_page_sha256_lf": "2e586f894a4e363ad3df3c57c1345909abf6ce70c1b75df5d3b2c814ac57770e",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো খবর নেই এমন।"
+      },
+      "bangla_meaning": {
+        "display": "অসচেতন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(followed by ‘to’ or ‘of’) lacking conscious awareness of",
+        "origin": "OEWN_GLOSS",
+        "text": "(followed by ‘to’ or ‘of’) lacking conscious awareness of"
+      },
+      "examples": [
+        {
+          "bn": "গেটে বাস দাঁড়িয়ে আছে, তা সে জানত না।",
+          "en": "He was oblivious of the bus waiting at the gate.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00193831-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "oblivious"
+}

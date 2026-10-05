@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "qualification",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/qualification.html",
+      "source_page_sha256_lf": "338fe6979c6d58ba9d58cb5e12ead128c7a821729e57644c00fbb4dc1fa07845",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো কাজের উপযুক্ত হওয়ার গুণ।"
+      },
+      "bangla_meaning": {
+        "display": "যোগ্যতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "an attribute that must be met or complied with and that fits a person for something",
+        "origin": "OEWN_GLOSS",
+        "text": "an attribute that must be met or complied with and that fits a person for something"
+      },
+      "examples": [
+        {
+          "bn": "ক্লার্ক পদের একটি যোগ্যতা টাইপিং।",
+          "en": "Typing is a qualification for the clerk post.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04085448-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো দাবিকে সীমাবদ্ধ করে বলা কথা।"
+      },
+      "bangla_meaning": {
+        "display": "শর্ত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a statement that limits or restricts some claim",
+        "origin": "OEWN_GLOSS",
+        "text": "a statement that limits or restricts some claim"
+      },
+      "examples": [
+        {
+          "bn": "সে রাজি হল, এই শর্তে যে কাজ জুনে শেষ হবে।",
+          "en": "He agreed, with the qualification that the work end by June.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "06129578-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "qualification"
+}

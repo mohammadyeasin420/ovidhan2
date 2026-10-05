@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "criticize",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/criticize.html",
+      "source_page_sha256_lf": "9c0e060aa057a9a2c3fb068fbeae43bc13061d43d1f5937d50b5f5ce8e2abc1e",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দোষ ধরে বলা।"
+      },
+      "bangla_meaning": {
+        "display": "সমালোচনা করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "find fault with; express criticism of; point out real or perceived flaws",
+        "origin": "OEWN_GLOSS",
+        "text": "find fault with; express criticism of; point out real or perceived flaws"
+      },
+      "examples": [
+        {
+          "bn": "অতিথিদের সামনে রাঁধুনির সমালোচনা কোরো না।",
+          "en": "Do not criticize the cook in front of the guests.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00861895-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "criticize"
+}

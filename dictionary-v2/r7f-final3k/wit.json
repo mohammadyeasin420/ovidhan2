@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "wit",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/wit.html",
+      "source_page_sha256_lf": "92c20495faeb41cee39a73d4fed435ba8aa977c11890deacd256da85c013ce74",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বুদ্ধির চাতুর্যে হাসি তোলে এমন কথা।"
+      },
+      "bangla_meaning": {
+        "display": "রসিকতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a message whose ingenuity or verbal skill or incongruity has the power to evoke laughter",
+        "origin": "OEWN_GLOSS",
+        "text": "a message whose ingenuity or verbal skill or incongruity has the power to evoke laughter"
+      },
+      "examples": [
+        {
+          "bn": "তার রসিকতা অস্বস্তিকর চুপ ভাঙল।",
+          "en": "Her wit saved the awkward pause.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06141514-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মনের ক্ষমতা।"
+      },
+      "bangla_meaning": {
+        "display": "বুদ্ধি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "mental ability",
+        "origin": "OEWN_GLOSS",
+        "text": "mental ability"
+      },
+      "examples": [
+        {
+          "bn": "ভয়ে এক মুহূর্ত তার বুদ্ধি লোপ পেল।",
+          "en": "Fear made him lose his wit for a moment.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "04999160-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "wit"
+}

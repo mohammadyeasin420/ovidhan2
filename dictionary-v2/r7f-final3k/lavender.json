@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "lavender",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/lavender.html",
+      "source_page_sha256_lf": "1650c6e39a6c9b173cbe77389e6a7a90162fdba28fee3db0ceca2af181deefbc",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "হালকা বেগুনি ফুল ও সুগন্ধি পাতার গুল্ম।"
+      },
+      "bangla_meaning": {
+        "display": "ল্যাভেন্ডার",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "any of various Old World aromatic shrubs or subshrubs with usually mauve or blue flowers; widely cultivated",
+        "origin": "OEWN_GLOSS",
+        "text": "any of various Old World aromatic shrubs or subshrubs with usually mauve or blue flowers; widely cultivated"
+      },
+      "examples": [
+        {
+          "bn": "শুকনো ল্যাভেন্ডারে তোয়ালের আলমারি সুগন্ধি হল।",
+          "en": "Dried lavender scented the linen cupboard.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "10276341-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ল্যাভেন্ডার ফুলের মতো ফ্যাকাশে বেগুনি।"
+      },
+      "bangla_meaning": {
+        "display": "হালকা বেগুনি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "of a pale purple color",
+        "origin": "OEWN_GLOSS",
+        "text": "of a pale purple color"
+      },
+      "examples": [
+        {
+          "bn": "পার্সেলের জন্য সে হালকা বেগুনি ফিতা নিল।",
+          "en": "She chose a lavender ribbon for the parcel.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00379485-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "lavender"
+}

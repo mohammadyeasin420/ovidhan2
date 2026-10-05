@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "preamble",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/preamble.html",
+      "source_page_sha256_lf": "39f833d9779b3a9d9229ba9a02ff27769ae4270ffdd0db8662267ad4fa90dcd8",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আইন বা সংবিধানের শুরুর ভূমিকা।"
+      },
+      "bangla_meaning": {
+        "display": "প্রস্তাবনা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a preliminary introduction to a statute or constitution (usually explaining its purpose)",
+        "origin": "OEWN_GLOSS",
+        "text": "a preliminary introduction to a statute or constitution (usually explaining its purpose)"
+      },
+      "examples": [
+        {
+          "bn": "প্রস্তাবনায় বলা আছে আইন কেন লেখা হয়েছিল।",
+          "en": "The preamble states why the law was written.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05788286-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "preamble"
+}

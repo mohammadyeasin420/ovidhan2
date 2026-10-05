@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "tend",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/tend.html",
+      "source_page_sha256_lf": "98c98bf99c2480dbbfd0d5f8b32dfebdec53eaebf8e632aeeebef205583452a5",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "প্রায়ই কোনো দিকে যাওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "ঝোঁক থাকা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "have a tendency or disposition to do or be something; be inclined",
+        "origin": "OEWN_GLOSS",
+        "text": "have a tendency or disposition to do or be something; be inclined"
+      },
+      "examples": [
+        {
+          "bn": "আগস্টে নদীর বন্যার ঝোঁক থাকে।",
+          "en": "The river tends to flood in August.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02803676-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যত্ন নিয়ে সামলানো।"
+      },
+      "bangla_meaning": {
+        "display": "দেখাশোনা করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "have care of or look after",
+        "origin": "OEWN_GLOSS",
+        "text": "have care of or look after"
+      },
+      "examples": [
+        {
+          "bn": "সে বাইরে থাকলে প্রতিবেশীরা বাগান দেখাশোনা করে।",
+          "en": "The neighbors tend the garden while she is away.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02628818-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "tend"
+}

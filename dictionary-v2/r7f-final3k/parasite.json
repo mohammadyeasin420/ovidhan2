@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "parasite",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/parasite.html",
+      "source_page_sha256_lf": "c98284e14756206d18428d6242ad418ba1fb6261301685449d69b869b6500408",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অন্য জীবের ওপর থেকেই খাদ্য নেয়, বিনিময়ে উপকার করে না।"
+      },
+      "bangla_meaning": {
+        "display": "পরজীবী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "an animal or plant that lives in or on a host (another animal or plant); it obtains nourishment from the host without benefiting or killing the host",
+        "origin": "OEWN_GLOSS",
+        "text": "an animal or plant that lives in or on a host (another animal or plant); it obtains nourishment from the host without benefiting or killing the host"
+      },
+      "examples": [
+        {
+          "bn": "পরজীবী চারাগাছটিকে দুর্বল করল।",
+          "en": "The parasite weakened the young plant.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01325601-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অন্যের ওপর নির্ভর করে সুবিধা নেয়, নিজে কিছু দেয় না।"
+      },
+      "bangla_meaning": {
+        "display": "পরজীবী মানুষ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a follower who hangs around a host (without benefit to the host) in hope of gain or advantage",
+        "origin": "OEWN_GLOSS",
+        "text": "a follower who hangs around a host (without benefit to the host) in hope of gain or advantage"
+      },
+      "examples": [
+        {
+          "bn": "সে মামার সংসারের পরজীবী হয়ে উঠল।",
+          "en": "He became a parasite in his uncle's household.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "08767535-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "parasite"
+}

@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "illustrate",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/illustrate.html",
+      "source_page_sha256_lf": "488bafdc001287c99f01453645027a24a09ae2fc789d7db33cafd40dbe6af046",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "একটি নমুনা দিয়ে বিষয় পরিষ্কার করা।"
+      },
+      "bangla_meaning": {
+        "display": "উদাহরণ দিয়ে বোঝানো",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "clarify by giving an example of",
+        "origin": "OEWN_GLOSS",
+        "text": "clarify by giving an example of"
+      },
+      "examples": [
+        {
+          "bn": "শিক্ষক ভগ্নাংশ বোঝাতে একটি আম ব্যবহার করলেন।",
+          "en": "The teacher used a mango to illustrate fractions.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01063671-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "লেখায় ছবি জুড়ে দেওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "ছবি বসানো",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "supply with illustrations",
+        "origin": "OEWN_GLOSS",
+        "text": "supply with illustrations"
+      },
+      "examples": [
+        {
+          "bn": "শিশুদের নদীর বইয়ে সে ছবি বসাবে।",
+          "en": "She will illustrate the river book for the children.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01723398-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "illustrate"
+}

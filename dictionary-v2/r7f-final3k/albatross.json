@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "albatross",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/albatross.html",
+      "source_page_sha256_lf": "c6d0dfcdbec1f00febd5df6ca05fcec9a641599b02a012dad1d4e73a744c0427",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "লম্বা সরু ডানার বড় সামুদ্রিক পাখি।"
+      },
+      "bangla_meaning": {
+        "display": "অ্যালবাট্রস",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "large web-footed birds of the Southern Hemisphere having long narrow wings; noted for powerful gliding flight",
+        "origin": "OEWN_GLOSS",
+        "text": "large web-footed birds of the Southern Hemisphere having long narrow wings; noted for powerful gliding flight"
+      },
+      "examples": [
+        {
+          "bn": "এক ঘণ্টা একটা অ্যালবাট্রস জাহাজের পেছন নিল।",
+          "en": "An albatross followed the ship for an hour.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01672443-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা কাউকে আটকে রাখে।"
+      },
+      "bangla_meaning": {
+        "display": "বোঝা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(figurative) something that hinders or handicaps",
+        "origin": "OEWN_GLOSS",
+        "text": "(figurative) something that hinders or handicaps"
+      },
+      "examples": [
+        {
+          "bn": "পুরোনো ঋণ পরিবারের ঘাড়ে বোঝা ছিল।",
+          "en": "The old debt was an albatross on the family.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05070612-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "albatross"
+}

@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "negotiable",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/negotiable.html",
+      "source_page_sha256_lf": "0e9add5b1522af7d556d8f87d6b60f68074eee60dc803f5fce659333f80f2e71",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কথা বলে শর্ত বদলানো যায় এমন।"
+      },
+      "bangla_meaning": {
+        "display": "আলোচনাসাপেক্ষ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "able to be negotiated or arranged by compromise",
+        "origin": "OEWN_GLOSS",
+        "text": "able to be negotiated or arranged by compromise"
+      },
+      "examples": [
+        {
+          "bn": "দক্ষতা থাকলে বেতন আলোচনাসাপেক্ষ।",
+          "en": "The salary is negotiable if you have the right skill.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01032373-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আইনে অন্যের নামে মালিকানা দেওয়া যায় এমন।"
+      },
+      "bangla_meaning": {
+        "display": "হস্তান্তরযোগ্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "legally transferable to the ownership of another",
+        "origin": "OEWN_GLOSS",
+        "text": "legally transferable to the ownership of another"
+      },
+      "examples": [
+        {
+          "bn": "হস্তান্তরযোগ্য চেক অন্যজনের নামে সই করে দেওয়া যায়।",
+          "en": "A negotiable cheque can be signed over to another person.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00094609-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "negotiable"
+}

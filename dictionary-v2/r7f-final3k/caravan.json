@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "caravan",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/caravan.html",
+      "source_page_sha256_lf": "2a73273cec69c2fb001b713b4a0ae65e6fcf37ec22a5d43a2217ff5c0eb85135",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "থাকার ব্যবস্থা করা একটি গাড়ি বা ট্রেলার।"
+      },
+      "bangla_meaning": {
+        "display": "ক্যারাভ্যান",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a camper equipped with living quarters",
+        "origin": "OEWN_GLOSS",
+        "text": "a camper equipped with living quarters"
+      },
+      "examples": [
+        {
+          "bn": "তারা নদীর ধারে ক্যারাভ্যানে ঘুমাল।",
+          "en": "They slept in the caravan beside the river.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "03887944-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "এক সারিতে একসঙ্গে চলা যাত্রী বা পশুর দল।"
+      },
+      "bangla_meaning": {
+        "display": "কাফেলা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a procession (of wagons or mules or camels) traveling together in single file",
+        "origin": "OEWN_GLOSS",
+        "text": "a procession (of wagons or mules or camels) traveling together in single file"
+      },
+      "examples": [
+        {
+          "bn": "উটের এক কাফেলা শুকনো মাঠ পার হল।",
+          "en": "A caravan of camels crossed the dry plain.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "07764156-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "caravan"
+}

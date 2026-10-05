@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "realm",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/realm.html",
+      "source_page_sha256_lf": "a5522961fd38b219807c74f414df0c2dafdb8b3e96ff23da1aec45c8f3a073ee",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "রাজা বা রানির শাসনাধীন দেশ।"
+      },
+      "bangla_meaning": {
+        "display": "রাজ্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the domain ruled by a king or queen",
+        "origin": "OEWN_GLOSS",
+        "text": "the domain ruled by a king or queen"
+      },
+      "examples": [
+        {
+          "bn": "গল্প শুরু সমুদ্রের ধারের ছোট রাজ্যে।",
+          "en": "The story begins in a small realm by the sea.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07872508-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যে বিষয়ে কেউ কাজ করে বা কথা বলে।"
+      },
+      "bangla_meaning": {
+        "display": "ক্ষেত্র",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a knowledge domain that you are interested in or are communicating about",
+        "origin": "OEWN_GLOSS",
+        "text": "a knowledge domain that you are interested in or are communicating about"
+      },
+      "examples": [
+        {
+          "bn": "ছবি আঁকা আমার ক্ষেত্রের বাইরে।",
+          "en": "Painting lies outside my realm.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05383959-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "realm"
+}

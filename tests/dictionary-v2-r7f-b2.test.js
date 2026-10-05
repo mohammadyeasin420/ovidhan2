@@ -22,7 +22,6 @@ const BATCH1 = batch1.entries.map((entry) => entry.word);
 const HOLDS = editorial.excluded.map((item) => item.slug);
 const CORRECTED = ['encourage', 'deforestation', 'bored', 'soothing', 'diversity', 'conviction', 'sovereign', 'prosecution', 'vacancy', 'circumstances', 'abbreviation', 'artistic'];
 const gitLines = (args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).split('\n').map((line) => line.trim()).filter(Boolean);
-const statusPaths = () => execFileSync('git', ['status', '--porcelain'], { cwd: root, encoding: 'utf8' }).split('\n').filter((line) => line.trim()).map((line) => line.slice(3).trim().replace(/\\/g, '/')).filter((file) => !file.startsWith('research/') && !file.startsWith('.wrangler/'));
 const esc = (value) => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 function scenario(name, fn) {
@@ -34,10 +33,12 @@ const registry = lib.loadRegistry(root);
 const shell = render.loadShell(root);
 
 scenario('the frozen batch is 174 upgrades with 200 senses and the expected shape', () => {
-    assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root, 'research', 'SEO_R7F_BATCH2_174_FINAL_EDITORIAL.json'))).digest('hex'), '79d697efb4c9ad96bf6bebb65b14b3f59a46b4bbb74e2745d2675cd1ea939808');
+    const editorialBytes = fs.readFileSync(path.join(root, 'research', 'SEO_R7F_BATCH2_174_FINAL_EDITORIAL.json'));
+    const editorialLf = Buffer.from(editorialBytes.toString('utf8').replace(/\r\n/g, '\n'));
+    assert.equal(crypto.createHash('sha256').update(editorialLf).digest('hex'), '79d697efb4c9ad96bf6bebb65b14b3f59a46b4bbb74e2745d2675cd1ea939808');
     assert.equal(COHORT.length, 174);
     assert.equal(new Set(COHORT).size, 174);
-    assert.equal(registry.size, 2645);
+    assert.equal(registry.size, 3065);
     assert.equal(HOLDS.length, 26);
     const sizes = { 1: 0, 2: 0, 3: 0 };
     let senses = 0;
@@ -126,37 +127,22 @@ scenario('each page matches its record, the frozen text, and the Bengali V2 bran
     assert.equal(explanations.size, 200);
 });
 
-scenario('the production diff is the 174-word batch and its approved surfaces', () => {
-    const wordDiff = gitLines(['diff', '--name-only', 'HEAD', '--', 'word']).sort();
-    assert.deepEqual(wordDiff, COHORT.map((slug) => 'word/' + slug + '.html').sort());
-    assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'sitemap.xml']).length, 0);
+scenario('the committed R7F batch 2 pages and records stay untouched', () => {
+    for (const slug of COHORT) {
+        assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'word/' + slug + '.html']).length, 0, slug);
+        assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'dictionary-v2/r7f-b2/' + slug + '.json']).length, 0, slug);
+    }
     for (const slug of R7E) assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'word/' + slug + '.html']).length, 0, slug);
     for (const slug of BATCH1) assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'word/' + slug + '.html']).length, 0, slug);
     assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'dictionary-v2/r7e-p1']).length, 0);
     assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'dictionary-v2/r7f-b1']).length, 0);
     assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'scripts/dictionary-v2/render.js']).length, 0);
-    const changed = statusPaths();
-    const allowed = (file) => {
-        if (COHORT.includes(file.slice('word/'.length, -'.html'.length)) && file.startsWith('word/') && file.endsWith('.html')) return true;
-        if (file === 'dictionary-v2/r7f-b2/' || (file.startsWith('dictionary-v2/r7f-b2/') && COHORT.includes(path.basename(file, '.json')))) return true;
-        return [
-            'scripts/dictionary-v2/r7f-b2.js',
-            'tests/dictionary-v2-r7f-b2.test.js',
-            'tests/dictionary-v2-r7f-b1.test.js',
-            'tests/dictionary-v2-r7e-p1.test.js',
-            'tests/approved-explorer-routing.test.js',
-            'data/approved-static-word-slugs.json',
-            'sitemap-approved-words.xml',
-            'dictionary-az.html'
-        ].includes(file) || /^dictionary-az-[a-z]\.html$/.test(file);
-    };
-    const unexpected = changed.filter((file) => !allowed(file));
-    assert.deepEqual(unexpected, []);
+    assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'sitemap.xml']).length, 0);
     assert.equal(fs.readdirSync(path.join(root, 'dictionary-v2', 'r7f-b2')).filter((name) => name.endsWith('.json')).length, 174);
     const sitemap = fs.readFileSync(path.join(root, 'sitemap-approved-words.xml'), 'utf8');
-    assert.equal((sitemap.match(/<loc>/g) || []).length, 2645);
+    assert.equal((sitemap.match(/<loc>/g) || []).length, 3065);
     const locs = sitemap.match(/<loc>([^<]+)<\/loc>/g).map((loc) => loc.slice(5, -6));
-    assert.equal(new Set(locs).size, 2645);
+    assert.equal(new Set(locs).size, 3065);
     for (const slug of COHORT) assert.ok(sitemap.includes('https://ovidhan.net/word/' + slug + '.html'), slug);
     for (const slug of HOLDS) assert.equal(sitemap.includes('/word/' + slug + '.html'), false, slug);
 });

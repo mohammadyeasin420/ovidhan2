@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "ethics",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/ethics.html",
+      "source_page_sha256_lf": "8251af87084c1c935a087342a9d82053f239a9cb74612efdce53538992a14ccc",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ঠিক ও বেঠিকের ধারণা থেকে কাজ করার ভাব।"
+      },
+      "bangla_meaning": {
+        "display": "নৈতিকতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "motivation based on ideas of right and wrong",
+        "origin": "OEWN_GLOSS",
+        "text": "motivation based on ideas of right and wrong"
+      },
+      "examples": [
+        {
+          "bn": "দোকানের নৈতিকতায় ভুল দাম চলে না।",
+          "en": "Ethics at that shop would not allow a false price.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07977958-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নৈতিক নিয়ম নিয়ে দর্শনের পাঠ।"
+      },
+      "bangla_meaning": {
+        "display": "নীতিশাস্ত্র",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the philosophical study of moral values and rules",
+        "origin": "OEWN_GLOSS",
+        "text": "the philosophical study of moral values and rules"
+      },
+      "examples": [
+        {
+          "bn": "দ্বিতীয় বর্ষে সে নীতিশাস্ত্র পড়ে।",
+          "en": "She studies ethics in the second year.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05547253-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "ethics"
+}

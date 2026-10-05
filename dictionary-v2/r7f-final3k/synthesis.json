@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "synthesis",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/synthesis.html",
+      "source_page_sha256_lf": "9932dd16962df94cbe57bc83e166319367184a5b4f042e63d734928205b4b7b2",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অনেক ধারণা মিলিয়ে একটি গোটা বানানো।"
+      },
+      "bangla_meaning": {
+        "display": "সংশ্লেষ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the combination of ideas into a complex whole",
+        "origin": "OEWN_GLOSS",
+        "text": "the combination of ideas into a complex whole"
+      },
+      "examples": [
+        {
+          "bn": "প্রবন্ধ দুই প্রতিবেদনের সংশ্লেষ।",
+          "en": "The essay is a synthesis of the two reports.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05167099-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "সরল পদার্থ মিলিয়ে নতুন যৌগ তৈরি।"
+      },
+      "bangla_meaning": {
+        "display": "রাসায়নিক সংশ্লেষ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the process of producing a chemical compound (usually by the union of simpler chemical compounds)",
+        "origin": "OEWN_GLOSS",
+        "text": "the process of producing a chemical compound (usually by the union of simpler chemical compounds)"
+      },
+      "examples": [
+        {
+          "bn": "ল্যাবের রাসায়নিক সংশ্লেষে কয়েক গ্রাম লবণ হল।",
+          "en": "The lab synthesis produced a few grams of the salt.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "10857508-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "synthesis"
+}

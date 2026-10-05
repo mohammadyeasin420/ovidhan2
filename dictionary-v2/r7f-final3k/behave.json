@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "behave",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/behave.html",
+      "source_page_sha256_lf": "d8844e5059d75e597f41b1e5e0aabc9248e23ff2d9cb9133f318cfaa97ca4b5e",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো নির্দিষ্ট ধরনে চলা।"
+      },
+      "bangla_meaning": {
+        "display": "আচরণ করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "behave in a certain manner; show a certain behavior; conduct or comport oneself",
+        "origin": "OEWN_GLOSS",
+        "text": "behave in a certain manner; show a certain behavior; conduct or comport oneself"
+      },
+      "examples": [
+        {
+          "bn": "প্রথম দিন নতুন শিক্ষক কীভাবে আচরণ করেন, দেখো।",
+          "en": "Watch how the new teacher will behave on the first day.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00010630-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নিয়ম মেনে ভালোভাবে চলা।"
+      },
+      "bangla_meaning": {
+        "display": "শালীন আচরণ করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "behave well or properly",
+        "origin": "OEWN_GLOSS",
+        "text": "behave well or properly"
+      },
+      "examples": [
+        {
+          "bn": "ঘরে অতিথি থাকলে শিশুরা শালীন আচরণ করে।",
+          "en": "The children behave when a guest is in the room.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02597368-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "behave"
+}

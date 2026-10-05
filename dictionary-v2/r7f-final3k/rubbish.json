@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "rubbish",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/rubbish.html",
+      "source_page_sha256_lf": "7400fef52ebbc3a5a5223b0eff50f1b87f57de1efe8660230a780a12f537e027",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ফেলে দেওয়ার মতো অকেজো জিনিস।"
+      },
+      "bangla_meaning": {
+        "display": "আবর্জনা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "worthless material that is to be disposed of",
+        "origin": "OEWN_GLOSS",
+        "text": "worthless material that is to be disposed of"
+      },
+      "examples": [
+        {
+          "bn": "বাজারের আবর্জনা নর্দমা বন্ধ করে দিল।",
+          "en": "Rubbish from the market blocked the drain.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "12163808-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যার কোনো মানে নেই এমন কথা।"
+      },
+      "bangla_meaning": {
+        "display": "আজেবাজে কথা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "nonsensical talk or writing",
+        "origin": "OEWN_GLOSS",
+        "text": "nonsensical talk or writing"
+      },
+      "examples": [
+        {
+          "bn": "ব্যাখ্যাটা আজেবাজে, ক্লাস সেটা বুঝেছিল।",
+          "en": "That explanation is rubbish and the class knew it.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05970400-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "rubbish"
+}

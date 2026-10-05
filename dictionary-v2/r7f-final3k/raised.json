@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "raised",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/raised.html",
+      "source_page_sha256_lf": "5c8e355f0a55eca96046608b4cafbe3b7b20e1ba67ace54e179d45268cd155f9",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "চারপাশের চেয়ে ওপরে তোলা।"
+      },
+      "bangla_meaning": {
+        "display": "উঁচু করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "located or moved above the surround or above the normal position",
+        "origin": "OEWN_GLOSS",
+        "text": "located or moved above the surround or above the normal position"
+      },
+      "examples": [
+        {
+          "bn": "তারা মঞ্চের উঁচু টেবিলে খেল।",
+          "en": "They ate at a raised table on the stage.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01215652-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আগের চেয়ে পরিমাণে বেশি।"
+      },
+      "bangla_meaning": {
+        "display": "বাড়ানো",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "increased in amount or degree",
+        "origin": "OEWN_GLOSS",
+        "text": "increased in amount or degree"
+      },
+      "examples": [
+        {
+          "bn": "বাড়ানো ভাড়ায় কিছু যাত্রী বাসে উঠল না।",
+          "en": "A raised fare kept some riders off the bus.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00888700-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "raised"
+}

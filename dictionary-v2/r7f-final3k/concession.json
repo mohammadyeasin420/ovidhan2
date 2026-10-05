@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "concession",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/concession.html",
+      "source_page_sha256_lf": "fc46606aad2ef40b9c5af62c1e6751d7b2698f99cefce99070fe2106a2524dfe",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নিজের দাবি কিছুটা ছেড়ে দেওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "ছাড় দেওয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the act of conceding or yielding",
+        "origin": "OEWN_GLOSS",
+        "text": "the act of conceding or yielding"
+      },
+      "examples": [
+        {
+          "bn": "দামে একটু ছাড় দিয়ে ঝগড়া মিটল।",
+          "en": "One concession on the price ended the argument.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06565494-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অন্যের জায়গায় ব্যবসা চালানোর চুক্তি।"
+      },
+      "bangla_meaning": {
+        "display": "অনুমতিপত্র",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a contract granting the right to operate a subsidiary business",
+        "origin": "OEWN_GLOSS",
+        "text": "a contract granting the right to operate a subsidiary business"
+      },
+      "examples": [
+        {
+          "bn": "চা-স্টল স্টেশনের ভিতরে অনুমতিপত্র নিয়ে বসে।",
+          "en": "The tea stall holds a concession inside the station.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05885948-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "concession"
+}

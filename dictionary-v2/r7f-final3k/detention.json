@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "detention",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/detention.html",
+      "source_page_sha256_lf": "570bd6f6b9a87e750d3393f134fff4540d14c0c0c89f9927b52d26ea7d042283",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অল্প সময়ের জন্য বন্দি রাখা।"
+      },
+      "bangla_meaning": {
+        "display": "আটক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a state of being confined (usually for a short time)",
+        "origin": "OEWN_GLOSS",
+        "text": "a state of being confined (usually for a short time)"
+      },
+      "examples": [
+        {
+          "bn": "চালক রাতটা আটকে কাটাল।",
+          "en": "The driver spent the night in detention.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "11298965-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "শাস্তি হিসেবে অন্যদের যাওয়ার পর স্কুলে থাকতে বাধ্য করা।"
+      },
+      "bangla_meaning": {
+        "display": "ক্লাসের পর আটকে রাখা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a punishment in which a student must stay at school after others have gone home",
+        "origin": "OEWN_GLOSS",
+        "text": "a punishment in which a student must stay at school after others have gone home"
+      },
+      "examples": [
+        {
+          "bn": "ক্লাসের পর আটকে রাখায় সে চারটা পর্যন্ত ঘরে রইল।",
+          "en": "Detention kept him in the classroom until four.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01169523-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "detention"
+}

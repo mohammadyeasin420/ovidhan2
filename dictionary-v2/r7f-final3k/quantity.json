@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "quantity",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/quantity.html",
+      "source_page_sha256_lf": "997142077314f1648e4affeb7eee18e6360d34de2c74f0a2db13de6aff1bc72d",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কতটা বা কতগুলি আছে।"
+      },
+      "bangla_meaning": {
+        "display": "পরিমাণ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "how much there is or how many there are of something that you can quantify",
+        "origin": "OEWN_GLOSS",
+        "text": "how much there is or how many there are of something that you can quantify"
+      },
+      "examples": [
+        {
+          "bn": "দোকান বন্ধের আগে চালের পরিমাণ দেখে নাও।",
+          "en": "Check the quantity of rice before the shop closes.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00028188-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "গণিতে যার মান সংখ্যায় লেখা যায়।"
+      },
+      "bangla_meaning": {
+        "display": "রাশি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the concept that something has a magnitude and can be represented in mathematical expressions by a constant or a variable",
+        "origin": "OEWN_GLOSS",
+        "text": "the concept that something has a magnitude and can be represented in mathematical expressions by a constant or a variable"
+      },
+      "examples": [
+        {
+          "bn": "সমীকরণে রাশি এক্স দামকে বোঝায়।",
+          "en": "In the equation the quantity x stands for the price.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05239957-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "quantity"
+}

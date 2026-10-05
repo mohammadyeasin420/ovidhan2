@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "depressed",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/depressed.html",
+      "source_page_sha256_lf": "e1d692d058555ecd2c84a5b2553e173320a4df20c014d7fe7f4b2138a43157ca",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মন খারাপ ও উৎসাহহীন।"
+      },
+      "bangla_meaning": {
+        "display": "বিষণ্ন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "filled with melancholy and despondency",
+        "origin": "OEWN_GLOSS",
+        "text": "filled with melancholy and despondency"
+      },
+      "examples": [
+        {
+          "bn": "লম্বা বৃষ্টি তাকে বিষণ্ন ও চুপচাপ করে রাখল।",
+          "en": "The long rain left him depressed and quiet.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00710536-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আগের চেয়ে নিচে নেমেছে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "কমে যাওয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "lower than previously",
+        "origin": "OEWN_GLOSS",
+        "text": "lower than previously"
+      },
+      "examples": [
+        {
+          "bn": "কমে যাওয়া দামে মাছ বিক্রি হল না।",
+          "en": "Depressed prices kept the fish unsold.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01220668-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "depressed"
+}

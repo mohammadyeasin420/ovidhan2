@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "mystery",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/mystery.html",
+      "source_page_sha256_lf": "1e3da64f70bf5f804cd2070cf41e29b1107fb6bd34e96e470178a8ee64a52700",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা বোঝা যায় না এমন বিষয়।"
+      },
+      "bangla_meaning": {
+        "display": "রহস্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "something that baffles understanding and cannot be explained",
+        "origin": "OEWN_GLOSS",
+        "text": "something that baffles understanding and cannot be explained"
+      },
+      "examples": [
+        {
+          "bn": "সন্ধ্যা পর্যন্ত হারানো চাবি একটা রহস্যই রইল।",
+          "en": "The missing key remained a mystery until evening.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05066887-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অপরাধ নিয়ে লেখা গল্প, নাটক বা ছবি।"
+      },
+      "bangla_meaning": {
+        "display": "রহস্যকাহিনি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a story about a crime (usually murder) presented as a novel or play or movie",
+        "origin": "OEWN_GLOSS",
+        "text": "a story about a crime (usually murder) presented as a novel or play or movie"
+      },
+      "examples": [
+        {
+          "bn": "রাতের ট্রেনে সে একটা রহস্যকাহিনি পড়ল।",
+          "en": "She read a mystery on the night train.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05763177-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "mystery"
+}

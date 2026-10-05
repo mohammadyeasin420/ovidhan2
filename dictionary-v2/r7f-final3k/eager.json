@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "eager",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/eager.html",
+      "source_page_sha256_lf": "a13e2169169b57d89242489c2a607d6dfaae33dd2d86b98b094baf709031d2b0",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "খুব করে চাইছে বা অপেক্ষা করছে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "আগ্রহী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "having or showing keen interest or intense desire or impatient expectancy",
+        "origin": "OEWN_GLOSS",
+        "text": "having or showing keen interest or intense desire or impatient expectancy"
+      },
+      "examples": [
+        {
+          "bn": "আগ্রহী ক্লাস লাইব্রেরি খোলার আগেই সারি ধরল।",
+          "en": "The eager class lined up before the library opened.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00818378-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "eager"
+}

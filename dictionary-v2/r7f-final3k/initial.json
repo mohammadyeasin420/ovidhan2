@@ -1,0 +1,114 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "initial",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/initial.html",
+      "source_page_sha256_lf": "65fd4c228b6dfbc67002644ae4b97a041664a8efbae0d20febed3fd27af126a2",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "শুরুর দিকের।"
+      },
+      "bangla_meaning": {
+        "display": "প্রাথমিক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "occurring at the beginning",
+        "origin": "OEWN_GLOSS",
+        "text": "occurring at the beginning"
+      },
+      "examples": [
+        {
+          "bn": "প্রাথমিক পরিকল্পনা ছিল ভোরে রওনা হওয়া।",
+          "en": "The initial plan was to leave at dawn.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01019829-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নামের প্রথম অক্ষর।"
+      },
+      "bangla_meaning": {
+        "display": "আদ্যক্ষর",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the first letter of a word (especially a person's name)",
+        "origin": "OEWN_GLOSS",
+        "text": "the first letter of a word (especially a person's name)"
+      },
+      "examples": [
+        {
+          "bn": "মোটের পাশে সে নিজের আদ্যক্ষর লিখল।",
+          "en": "She wrote her initial beside the total.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "06197371-n",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দস্তাবেজে নিজের নামের আদ্যক্ষর সই করা।"
+      },
+      "bangla_meaning": {
+        "display": "আদ্যক্ষর বসানো",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "mark with one's initials",
+        "origin": "OEWN_GLOSS",
+        "text": "mark with one's initials"
+      },
+      "examples": [
+        {
+          "bn": "চুক্তির প্রতিটি পাতায় আদ্যক্ষর বসান।",
+          "en": "Please initial each page of the agreement.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "01039398-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "initial"
+}

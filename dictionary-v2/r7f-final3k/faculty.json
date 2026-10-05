@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "faculty",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/faculty.html",
+      "source_page_sha256_lf": "240fb9e268d8bb53ffb9def76f245f8be4e464501518bb964b51abe6f611c84f",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "একটি শিক্ষাপ্রতিষ্ঠানের শিক্ষক ও প্রশাসকের দল।"
+      },
+      "bangla_meaning": {
+        "display": "শিক্ষকমণ্ডলী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the body of teachers and administrators at a school",
+        "origin": "OEWN_GLOSS",
+        "text": "the body of teachers and administrators at a school"
+      },
+      "examples": [
+        {
+          "bn": "প্রতি বৃহস্পতিবার পুরোনো হলে শিক্ষকমণ্ডলীর বৈঠক হয়।",
+          "en": "The faculty meets every Thursday in the old hall.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07629414-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মনের সহজাত কোনো ক্ষমতা, যেমন দেখা বা মনে রাখা।"
+      },
+      "bangla_meaning": {
+        "display": "মানসিক শক্তি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "one of the inherent cognitive or perceptual powers of the mind",
+        "origin": "OEWN_GLOSS",
+        "text": "one of the inherent cognitive or perceptual powers of the mind"
+      },
+      "examples": [
+        {
+          "bn": "বয়সে স্মৃতির মানসিক শক্তি কমতে পারে।",
+          "en": "Age can weaken the faculty of memory.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05031719-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "faculty"
+}

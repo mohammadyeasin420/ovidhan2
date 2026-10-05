@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "transparency",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/transparency.html",
+      "source_page_sha256_lf": "79a7cc94ef20e7add9f3696ed986f0517a6b9070416e1cfc63e79900ace75d30",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যার ভিতর দিয়ে আলো যায় ও ভিতর দেখা যায়, সেই গুণ।"
+      },
+      "bangla_meaning": {
+        "display": "স্বচ্ছতা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the quality of being clear and transparent",
+        "origin": "OEWN_GLOSS",
+        "text": "the quality of being clear and transparent"
+      },
+      "examples": [
+        {
+          "bn": "প্লাস্টিক ঢাকনার স্বচ্ছতায় বীজ দেখা গেল।",
+          "en": "The transparency of the plastic lid showed the seeds.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04069874-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "transparency"
+}

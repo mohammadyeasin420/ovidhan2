@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "criticism",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/criticism.html",
+      "source_page_sha256_lf": "725fdefaa4e5daf3663309668fea62e61f4b17a5e04dcc4402180bf7eb504439",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দোষ ধরে অসন্তোষ জানানো।"
+      },
+      "bangla_meaning": {
+        "display": "সমালোচনা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "disapproval expressed by pointing out faults or shortcomings",
+        "origin": "OEWN_GLOSS",
+        "text": "disapproval expressed by pointing out faults or shortcomings"
+      },
+      "examples": [
+        {
+          "bn": "দেরি করা বাস নিয়ে সমালোচনা সঙ্গত ছিল।",
+          "en": "The criticism of the late bus was fair.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "06068812-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো কাজ বা লেখা মনোযোগ দিয়ে যাচাই করা।"
+      },
+      "bangla_meaning": {
+        "display": "বিচারবিশ্লেষণ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a serious examination and judgment of something",
+        "origin": "OEWN_GLOSS",
+        "text": "a serious examination and judgment of something"
+      },
+      "examples": [
+        {
+          "bn": "উপন্যাস নিয়ে তার বিচারবিশ্লেষণ দশ পাতা জুড়ে ছিল।",
+          "en": "Her criticism of the novel filled ten pages.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05115846-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "criticism"
+}

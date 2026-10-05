@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "too",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/too.html",
+      "source_page_sha256_lf": "fe00b4a3c9a05de856a5cf5572efdd661fbeab3c293f00e90316761d40189b15",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দরকারের চেয়ে বেশি।"
+      },
+      "bangla_meaning": {
+        "display": "অতিরিক্ত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "to a degree exceeding normal or proper limits",
+        "origin": "OEWN_GLOSS",
+        "text": "to a degree exceeding normal or proper limits"
+      },
+      "examples": [
+        {
+          "bn": "স্যুপটা শিশুর জন্য অতিরিক্ত নোনতা।",
+          "en": "The soup is too salty for the child.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00047977-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আরেকটি জিনিসের সঙ্গে।"
+      },
+      "bangla_meaning": {
+        "display": "আরও",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "in addition",
+        "origin": "OEWN_GLOSS",
+        "text": "in addition"
+      },
+      "examples": [
+        {
+          "bn": "রিনা এল, তার ভাইও এল।",
+          "en": "Rina came, and her brother came too.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00048119-r",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "too"
+}

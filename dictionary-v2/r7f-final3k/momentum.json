@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "momentum",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/momentum.html",
+      "source_page_sha256_lf": "e9c6f8ad21af2d9763ab03df0c66dae962651c06f0cf0b9e2b3160c3358073b5",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ভর ও গতির গুণফল।"
+      },
+      "bangla_meaning": {
+        "display": "ভরবেগ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the product of a body's mass and its velocity",
+        "origin": "OEWN_GLOSS",
+        "text": "the product of a body's mass and its velocity"
+      },
+      "examples": [
+        {
+          "bn": "ট্রাকের ভরবেগে বাঁকটা বিপজ্জনক হল।",
+          "en": "The momentum of the truck made the turn dangerous.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "04404781-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা একটা কাজ এগিয়ে নিয়ে চলে।"
+      },
+      "bangla_meaning": {
+        "display": "গতি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "an impelling force or strength",
+        "origin": "OEWN_GLOSS",
+        "text": "an impelling force or strength"
+      },
+      "examples": [
+        {
+          "bn": "প্রথম সপ্তাহের পর প্রচারের গতি কমে গেল।",
+          "en": "The campaign lost momentum after the first week.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "04411529-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "momentum"
+}

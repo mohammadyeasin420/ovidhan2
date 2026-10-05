@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "enterprise",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/enterprise.html",
+      "source_page_sha256_lf": "737ed555103d96ca85d960d44cebeff6aa1a74644a2a9da4febb971b66eb6d5e",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "সাহস ও পরিশ্রম লাগে এমন কাজ।"
+      },
+      "bangla_meaning": {
+        "display": "উদ্যোগ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a purposeful or industrious undertaking (especially one that requires effort or boldness)",
+        "origin": "OEWN_GLOSS",
+        "text": "a purposeful or industrious undertaking (especially one that requires effort or boldness)"
+      },
+      "examples": [
+        {
+          "bn": "ফেরির উদ্যোগ শুরু হয়েছিল একটা ছোট নৌকা দিয়ে।",
+          "en": "The ferry enterprise began with one small boat.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00797353-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "লাভের জন্য গড়া সংস্থা।"
+      },
+      "bangla_meaning": {
+        "display": "ব্যবসাপ্রতিষ্ঠান",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "an organization created for business ventures",
+        "origin": "OEWN_GLOSS",
+        "text": "an organization created for business ventures"
+      },
+      "examples": [
+        {
+          "bn": "ব্যবসাপ্রতিষ্ঠানটি বন্দরে চল্লিশ জনকে কাজ দেয়।",
+          "en": "The enterprise employs forty people in the port.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "07405710-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "enterprise"
+}

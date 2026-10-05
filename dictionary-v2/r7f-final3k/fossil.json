@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "fossil",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/fossil.html",
+      "source_page_sha256_lf": "33005cf67b598746f817fcaa39f088b5fdee45aa0fd7134d4edea06b5ad82233",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বহু আগের জীবের মাটিতে চাপা দেহাবশেষ।"
+      },
+      "bangla_meaning": {
+        "display": "জীবাশ্ম",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the remains (or an impression) of a plant or animal that existed in a past geological age and that has been excavated from the soil",
+        "origin": "OEWN_GLOSS",
+        "text": "the remains (or an impression) of a plant or animal that existed in a past geological age and that has been excavated from the soil"
+      },
+      "examples": [
+        {
+          "bn": "পাথরে একটি পাতার জীবাশ্ম পরিষ্কার দেখা গেল।",
+          "en": "The fossil of a leaf was clear in the stone.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08024281-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যার চালচলন এখনকার দিনের নয়।"
+      },
+      "bangla_meaning": {
+        "display": "সেকেলে মানুষ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "someone whose style is out of fashion",
+        "origin": "OEWN_GLOSS",
+        "text": "someone whose style is out of fashion"
+      },
+      "examples": [
+        {
+          "bn": "কঠোর বৃদ্ধ শিক্ষককে শিক্ষার্থীরা সেকেলে মানুষ বলল।",
+          "en": "The students called the strict old teacher a fossil.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "08550372-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "fossil"
+}

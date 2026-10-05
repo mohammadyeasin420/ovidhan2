@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "resilient",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/resilient.html",
+      "source_page_sha256_lf": "c24bbbc68ba5959024e7adb64a22c9ba37d9f68ff360377e94211e7d2715a859",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কষ্ট বা পতনের পর আবার সামলে ওঠে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "সহনশীল",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "recovering readily from adversity, depression, or the like",
+        "origin": "OEWN_GLOSS",
+        "text": "recovering readily from adversity, depression, or the like"
+      },
+      "examples": [
+        {
+          "bn": "আগুনের পর সহনশীল দোকানটা আবার খুলল।",
+          "en": "The resilient shop opened again after the fire.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02297483-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "চাপ সরে গেলে আবার আগের আকারে ফেরে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "স্থিতিস্থাপক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "elastic; rebounds readily",
+        "origin": "OEWN_GLOSS",
+        "text": "elastic; rebounds readily"
+      },
+      "examples": [
+        {
+          "bn": "স্থিতিস্থাপক রবারের বল তার হাতে ফিরে এল।",
+          "en": "The resilient rubber ball bounced back to her hand.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00851058-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "resilient"
+}

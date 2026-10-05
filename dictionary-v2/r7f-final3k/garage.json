@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "garage",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/garage.html",
+      "source_page_sha256_lf": "f50d530260b2a0babb1d0b890783ac05b228fd2aa16556a8a70f5e423d13b3c9",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "গাড়ি রাখার ঘর।"
+      },
+      "bangla_meaning": {
+        "display": "গ্যারেজ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "an outbuilding (or part of a building) for housing automobiles",
+        "origin": "OEWN_GLOSS",
+        "text": "an outbuilding (or part of a building) for housing automobiles"
+      },
+      "examples": [
+        {
+          "bn": "সাইকেল ভ্যানের সঙ্গে গ্যারেজে থাকে।",
+          "en": "The bicycle shares the garage with the van.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02794655-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যেখানে গাড়ি সারানো হয়।"
+      },
+      "bangla_meaning": {
+        "display": "গাড়ি মেরামতের দোকান",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a repair shop where cars and trucks are serviced and repaired",
+        "origin": "OEWN_GLOSS",
+        "text": "a repair shop where cars and trucks are serviced and repaired"
+      },
+      "examples": [
+        {
+          "bn": "কোণের গাড়ি মেরামতের দোকান ব্রেক পাল্টে দিল।",
+          "en": "The garage on the corner replaced the brake pads.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02794806-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "garage"
+}

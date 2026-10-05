@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "orally",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/orally.html",
+      "source_page_sha256_lf": "9a8e2a14c0d558559840d4e90f3ab32bc3e1185dccd00b6d93a3ea4a998898a1",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "লিখে নয়, বলে।"
+      },
+      "bangla_meaning": {
+        "display": "মুখে",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "by spoken rather than written means",
+        "origin": "OEWN_GLOSS",
+        "text": "by spoken rather than written means"
+      },
+      "examples": [
+        {
+          "bn": "সকালের সমাবেশে নোটিশ মুখে জানানো হল।",
+          "en": "The notice was given orally in the morning assembly.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00157838-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ইনজেকশনে নয়, গিলে।"
+      },
+      "bangla_meaning": {
+        "display": "মুখ দিয়ে",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(of drugs) through the mouth rather than through injection; by mouth",
+        "origin": "OEWN_GLOSS",
+        "text": "(of drugs) through the mouth rather than through injection; by mouth"
+      },
+      "examples": [
+        {
+          "bn": "ওষুধ খাবার পর মুখ দিয়ে খেতে হয়।",
+          "en": "The medicine is taken orally after food.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00157996-r",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "orally"
+}

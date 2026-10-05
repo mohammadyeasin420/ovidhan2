@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "policy",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/policy.html",
+      "source_page_sha256_lf": "f472e0dd25cbe776a54f9f49af7dab029b177f0f72211bc71e2f421e0e23ffac",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো দল বা প্রতিষ্ঠানের ঠিক করা কর্মপথ।"
+      },
+      "bangla_meaning": {
+        "display": "নীতি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a plan of action adopted by an individual or social group",
+        "origin": "OEWN_GLOSS",
+        "text": "a plan of action adopted by an individual or social group"
+      },
+      "examples": [
+        {
+          "bn": "স্কুলের নীতিতে ক্লাসে ফোন নিষেধ।",
+          "en": "The school policy bans phones in class.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05286188-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বীমার লিখিত চুক্তি।"
+      },
+      "bangla_meaning": {
+        "display": "বীমাপত্র",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "written contract or certificate of insurance",
+        "origin": "OEWN_GLOSS",
+        "text": "written contract or certificate of insurance"
+      },
+      "examples": [
+        {
+          "bn": "স্বাস্থ্যবীমায় সইয়ের আগে বীমাপত্র পড়ো।",
+          "en": "Read the policy before you sign the health cover.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05882970-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "policy"
+}

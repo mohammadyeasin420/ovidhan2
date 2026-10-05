@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "curiosity",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/curiosity.html",
+      "source_page_sha256_lf": "c17f65eb0b428fecf8d89abb1c8756e8673abd5389a370711b910fa8f3f97a9b",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "আরও জানতে চাওয়ার ভাব।"
+      },
+      "bangla_meaning": {
+        "display": "কৌতূহল",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a state in which you want to learn more about something",
+        "origin": "OEWN_GLOSS",
+        "text": "a state in which you want to learn more about something"
+      },
+      "examples": [
+        {
+          "bn": "তারা নিয়ে কৌতূহল শিশুটিকে জাগিয়ে রাখল।",
+          "en": "Curiosity about the stars kept the child awake.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05063955-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যা দেখতে অস্বাভাবিক এবং সংগ্রহের যোগ্য।"
+      },
+      "bangla_meaning": {
+        "display": "অদ্ভুত জিনিস",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "something unusual — perhaps worthy of collecting",
+        "origin": "OEWN_GLOSS",
+        "text": "something unusual — perhaps worthy of collecting"
+      },
+      "examples": [
+        {
+          "bn": "জাদুঘর ছোট জুতোটা অদ্ভুত জিনিস হিসেবে রেখেছে।",
+          "en": "The museum keeps the tiny shoe as a curiosity.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02526609-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "curiosity"
+}

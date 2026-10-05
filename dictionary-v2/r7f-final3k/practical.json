@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "practical",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/practical.html",
+      "source_page_sha256_lf": "4ba5a38cb07e7956852f686cd20a325da8d605560bdb221143ad7bc11e3d630e",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "তত্ত্ব নয়, কাজে যা হয় তাই ধরে চলে।"
+      },
+      "bangla_meaning": {
+        "display": "ব্যবহারিক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "guided by practical experience and observation rather than theory",
+        "origin": "OEWN_GLOSS",
+        "text": "guided by practical experience and observation rather than theory"
+      },
+      "examples": [
+        {
+          "bn": "চুইয়ে পড়া ছাদ নিয়ে সে ব্যবহারিক উত্তর দিল।",
+          "en": "She gave a practical answer about the leaking roof.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01954551-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "practical"
+}

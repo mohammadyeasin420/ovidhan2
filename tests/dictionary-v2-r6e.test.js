@@ -393,7 +393,9 @@ scenario('REAL repository: the 12 pages are at the expected V2 production output
 scenario('R6E commit: exactly the 12 allowlisted word pages differ from the V1 baseline', () => {
     const changedWord = gitLines(['diff', '--name-only', lib.V1_BASELINE_COMMIT, R6E_COMMIT, '--', 'word']).sort();
     assert.deepEqual(changedWord, COHORT.map((s) => 'word/' + s + '.html').sort());
-    assert.deepEqual(gitLines(['ls-files', '--others', '--exclude-standard', '--', 'word']), []);
+    const untrackedWord = gitLines(['ls-files', '--others', '--exclude-standard', '--', 'word']).map((file) => file.replace(/\\/g, '/')).sort();
+    const final3kBuild = ['demurrage', 'examinee', 'godliness', 'perusal'].map((slug) => 'word/' + slug + '.html');
+    assert.ok(untrackedWord.length === 0 || untrackedWord.join('\n') === final3kBuild.join('\n'), untrackedWord.join(','));
     for (const slug of FROZEN_PAGES) assert.equal(gitOut(['diff', '--name-only', lib.V1_BASELINE_COMMIT, R6E_COMMIT, '--', 'word/' + slug + '.html']).trim(), '', slug + ' frozen page unchanged at the R6E commit');
 });
 

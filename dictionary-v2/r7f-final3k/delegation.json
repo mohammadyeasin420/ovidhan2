@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "delegation",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/delegation.html",
+      "source_page_sha256_lf": "dc06c96fb3f3823e77a27e5ea49e0d08e312ebac66e25b819093f10e9657ad3d",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অন্যদের হয়ে পাঠানো মানুষের দল।"
+      },
+      "bangla_meaning": {
+        "display": "প্রতিনিধিদল",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a group of representatives or delegates",
+        "origin": "OEWN_GLOSS",
+        "text": "a group of representatives or delegates"
+      },
+      "examples": [
+        {
+          "bn": "প্রতিনিধিদল লিখিত দাবি নিয়ে এল।",
+          "en": "The delegation arrived with a written demand.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07739235-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নিচের কর্মকর্তাকে কিছু সিদ্ধান্তের অধিকার দেওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "ক্ষমতা অর্পণ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "authorizing subordinates to make certain decisions",
+        "origin": "OEWN_GLOSS",
+        "text": "authorizing subordinates to make certain decisions"
+      },
+      "examples": [
+        {
+          "bn": "ছোট কেনাকাটার ক্ষমতা অর্পণে ম্যানেজারের একদিন বাঁচল।",
+          "en": "Delegation of the small purchases saved the manager a day.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01146961-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "delegation"
+}

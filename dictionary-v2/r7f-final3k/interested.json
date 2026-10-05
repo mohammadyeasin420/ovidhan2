@@ -1,0 +1,86 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "interested",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/interested.html",
+      "source_page_sha256_lf": "e94cce5eaf51e36a0fd191bd4b64fcc2291109e7f5bd73159c171985233613f0",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "জানতে বা যত্ন নিতে চাইছে এমন।"
+      },
+      "bangla_meaning": {
+        "display": "আগ্রহী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "having or showing interest; especially curiosity or fascination or concern",
+        "origin": "OEWN_GLOSS",
+        "text": "having or showing interest; especially curiosity or fascination or concern"
+      },
+      "examples": [
+        {
+          "bn": "আগ্রহী শিক্ষার্থীরা আলোচনার পরও রইল।",
+          "en": "The interested students stayed after the talk.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01350603-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যার নিজের লাভ বা অধিকার জড়িত।"
+      },
+      "bangla_meaning": {
+        "display": "স্বার্থযুক্ত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "involved in or affected by or having a claim to or share in",
+        "origin": "OEWN_GLOSS",
+        "text": "involved in or affected by or having a claim to or share in"
+      },
+      "examples": [
+        {
+          "bn": "স্বার্থযুক্ত পক্ষ বিবাদের বিচারক হতে পারে না।",
+          "en": "An interested party cannot judge the dispute.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01526378-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "interested"
+}

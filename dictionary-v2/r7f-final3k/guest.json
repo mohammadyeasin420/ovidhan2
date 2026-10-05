@@ -1,0 +1,58 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "guest",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "action": "UPGRADE",
+      "batch": "SEO-R7F-FINAL3K-420",
+      "source_page": "word/guest.html",
+      "source_page_sha256_lf": "33ffc0ef5efd454fb39e4b64962a13bdf0e17a9fde6344c243dbcb44eb6b6f65",
+      "tool": "scripts/dictionary-v2/r7f-final3k.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যাকে বাড়িতে বা অনুষ্ঠানে আপ্যায়ন করে আনা হয়।"
+      },
+      "bangla_meaning": {
+        "display": "অতিথি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a visitor to whom hospitality is extended",
+        "origin": "OEWN_GLOSS",
+        "text": "a visitor to whom hospitality is extended"
+      },
+      "examples": [
+        {
+          "bn": "প্রতিটি অতিথি বিয়ের খাতায় এক লাইন লিখে গেল।",
+          "en": "Each guest left a note in the wedding book.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08671975-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "guest"
+}
