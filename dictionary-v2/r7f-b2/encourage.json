@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "encourage",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/encourage.html",
+      "source_page_sha256_lf": "682d7cc9327de853e6dc2af107c7c2138b89c9438cf850d4ab8b998dd1efb277",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কাউকে সাহস বা আশা জোগানো, যাতে সে চেষ্টা চালিয়ে যায়।"
+      },
+      "bangla_meaning": {
+        "display": "উৎসাহ দেওয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "inspire with confidence; give hope or courage to",
+        "origin": "OEWN_GLOSS",
+        "text": "inspire with confidence; give hope or courage to"
+      },
+      "examples": [
+        {
+          "bn": "ফাইনালের আগে কোচ তাকে উৎসাহ দিলেন।",
+          "en": "Her coach encouraged her before the final match.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01876927-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কোনো কাজ, অভ্যাস বা প্রক্রিয়া যাতে বাড়ে, তা সহায়তা করা।"
+      },
+      "bangla_meaning": {
+        "display": "এগিয়ে নিতে সহায়তা করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "contribute to the progress or growth of",
+        "origin": "OEWN_GLOSS",
+        "text": "contribute to the progress or growth of"
+      },
+      "examples": [
+        {
+          "bn": "স্কুল মধ্যাহ্নবিরতিতে পড়াশোনাকে এগিয়ে নিতে চায়।",
+          "en": "The school encourages reading during the lunch break.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02634071-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "encourage"
+}

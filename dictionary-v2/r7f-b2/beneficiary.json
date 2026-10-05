@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "beneficiary",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/beneficiary.html",
+      "source_page_sha256_lf": "1e693d101731d5bddc9053d04bd8ebf9542ac2d08b1e93c92ae5db212c3c340f",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যার নামে টাকা, সম্পত্তি বা সুযোগ আসে।"
+      },
+      "bangla_meaning": {
+        "display": "সুবিধাভোগী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the recipient of funds or other benefits",
+        "origin": "OEWN_GLOSS",
+        "text": "the recipient of funds or other benefits"
+      },
+      "examples": [
+        {
+          "bn": "সঞ্চয়ী হিসাবের সুবিধাভোগী তার মেয়ে।",
+          "en": "Her daughter is the beneficiary of the savings account.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08385144-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "beneficiary"
+}

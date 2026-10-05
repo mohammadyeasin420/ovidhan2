@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "expedite",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/expedite.html",
+      "source_page_sha256_lf": "8a7ebb25ebf85e4bd5cf3e8b0d07a9597dcbf352412aad2edb8555c1cf00728b",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "দেরি না করে কাজ দ্রুত এগিয়ে নেওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "ত্বরান্বিত করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "process fast and efficiently",
+        "origin": "OEWN_GLOSS",
+        "text": "process fast and efficiently"
+      },
+      "examples": [
+        {
+          "bn": "সম্পূর্ণ ফাইল পাসপোর্টের কাজ ত্বরান্বিত করবে।",
+          "en": "A complete file will expedite the passport.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02512541-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "expedite"
+}

@@ -1,0 +1,113 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "vessel",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/vessel.html",
+      "source_page_sha256_lf": "4a2d93554c88574ebdf8a11bdd31a490bcb4d2d5311a4ab2e659fac96271da73",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "পানিতে চলে এমন নৌযান।"
+      },
+      "bangla_meaning": {
+        "display": "জাহাজ",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a craft designed for water transportation",
+        "origin": "OEWN_GLOSS",
+        "text": "a craft designed for water transportation"
+      },
+      "examples": [
+        {
+          "bn": "ভোরের আগে জাহাজ ঘাটে ভিড়ল।",
+          "en": "The vessel docked before sunrise.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "03897594-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "তরল রাখার পাত্র।"
+      },
+      "bangla_meaning": {
+        "display": "পাত্র",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "an object used as a container (especially for liquids)",
+        "origin": "OEWN_GLOSS",
+        "text": "an object used as a container (especially for liquids)"
+      },
+      "examples": [
+        {
+          "bn": "দুধটা একটা পরিষ্কার পাত্রে ঢালো।",
+          "en": "Pour the milk into a clean vessel.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "03898088-n",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "শরীরে রক্ত বা অন্য তরল বয়ে যায় যে নালিতে।"
+      },
+      "bangla_meaning": {
+        "display": "রক্তনালি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a tube in which a body fluid circulates",
+        "origin": "OEWN_GLOSS",
+        "text": "a tube in which a body fluid circulates"
+      },
+      "examples": [
+        {
+          "bn": "চিত্রে হাতের একটি রক্তনালি দেখানো ছিল।",
+          "en": "The diagram showed a blood vessel in the arm.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "04776485-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "vessel"
+}

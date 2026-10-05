@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "cinnamon",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/cinnamon.html",
+      "source_page_sha256_lf": "53984920ebec6418dca475fc4fcfb4d607e7b1106e518f84723f3b9dc5e4a027",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "সুগন্ধি গাছের শুকনো ছাল থেকে পাওয়া মসলা।"
+      },
+      "bangla_meaning": {
+        "display": "দারচিনি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "spice from the dried aromatic bark of the Ceylon cinnamon tree; used as rolled strips or ground",
+        "origin": "OEWN_GLOSS",
+        "text": "spice from the dried aromatic bark of the Ceylon cinnamon tree; used as rolled strips or ground"
+      },
+      "examples": [
+        {
+          "bn": "ফুটন্ত দুধে সে দারচিনি দিল।",
+          "en": "She added cinnamon to the simmering milk.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "07204333-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "cinnamon"
+}

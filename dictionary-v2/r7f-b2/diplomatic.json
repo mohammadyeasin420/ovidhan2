@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "diplomatic",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/diplomatic.html",
+      "source_page_sha256_lf": "5efa8c36144064478326e38b38596f5298db056d9442ac94a9ab5c175c4c270a",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নাজুক বিষয়ে কারো মনে আঘাত না দিয়ে কথা বলা।"
+      },
+      "bangla_meaning": {
+        "display": "কূটনৈতিক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "using or marked by tact in dealing with sensitive matters or people",
+        "origin": "OEWN_GLOSS",
+        "text": "using or marked by tact in dealing with sensitive matters or people"
+      },
+      "examples": [
+        {
+          "bn": "সে কূটনৈতিক জবাব দিয়ে বিষয় বদলে ফেলল।",
+          "en": "She gave a diplomatic answer and changed the subject.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00765517-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "রাষ্ট্রের সরকারি সম্পর্ক ও দূতের কাজ সংক্রান্ত।"
+      },
+      "bangla_meaning": {
+        "display": "কূটনৈতিক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "relating to or characteristic of diplomacy",
+        "origin": "OEWN_GLOSS",
+        "text": "relating to or characteristic of diplomacy"
+      },
+      "examples": [
+        {
+          "bn": "পরীক্ষার পর সে একটা কূটনৈতিক পদে যেতে চায়।",
+          "en": "He wants a diplomatic posting after the exam.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02731338-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "diplomatic"
+}

@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "nightmare",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/nightmare.html",
+      "source_page_sha256_lf": "3ebf0684783817bacedb4fc58de1c7f4f38ef0d2c2e13bf2dbdd6e49d37208df",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ঘুমে দেখা এমন স্বপ্ন যা ভয় ধরায়।"
+      },
+      "bangla_meaning": {
+        "display": "দুঃস্বপ্ন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a terrifying or deeply upsetting dream",
+        "origin": "OEWN_GLOSS",
+        "text": "a terrifying or deeply upsetting dream"
+      },
+      "examples": [
+        {
+          "bn": "এক দুঃস্বপ্নে ভোরের আগে শিশুটি জেগে উঠল।",
+          "en": "A nightmare woke the child before dawn.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05151672-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বাস্তবে এমন বিশৃঙ্খলা বা ভয় যা দুঃস্বপ্নের মতো।"
+      },
+      "bangla_meaning": {
+        "display": "ভয়াবহ অবস্থা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a situation resembling a terrifying dream",
+        "origin": "OEWN_GLOSS",
+        "text": "a situation resembling a terrifying dream"
+      },
+      "examples": [
+        {
+          "bn": "যানজটে যাত্রাটা এক দুঃস্বপ্ন হয়ে গেল।",
+          "en": "The traffic jam turned the trip into a nightmare.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "11235285-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "nightmare"
+}

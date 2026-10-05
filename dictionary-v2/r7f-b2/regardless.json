@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "regardless",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/regardless.html",
+      "source_page_sha256_lf": "ea4844176052fa0686d84d1c291da22f15e71701a7bcc5b3c3e70b0e77779f3c",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বাধা থাকলেও থেমে না গিয়ে।"
+      },
+      "bangla_meaning": {
+        "display": "তবুও",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "in spite of everything; without regard to drawbacks",
+        "origin": "OEWN_GLOSS",
+        "text": "in spite of everything; without regard to drawbacks"
+      },
+      "examples": [
+        {
+          "bn": "বৃষ্টি হচ্ছিল, তবুও তারা খেলল।",
+          "en": "It was raining, but they played regardless.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adverb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00119454-r",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "regardless"
+}

@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "irritate",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/irritate.html",
+      "source_page_sha256_lf": "1877e213bd2ad23b76ecb035c12502910ed04e2cde1552fa4e8c45243cb7f1ae",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ছোটখাটো বিষয়ে কাউকে অস্বস্তি বা রাগ ধরানো।"
+      },
+      "bangla_meaning": {
+        "display": "বিরক্ত করা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "cause annoyance in; disturb, especially by minor irritations",
+        "origin": "OEWN_GLOSS",
+        "text": "cause annoyance in; disturb, especially by minor irritations"
+      },
+      "examples": [
+        {
+          "bn": "একটানা হর্নে যাত্রীরা বিরক্ত হতে লাগল।",
+          "en": "The constant horn began to irritate the passengers.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01845927-v",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "চামড়া বা পেটে অস্বস্তি বা প্রদাহ তোলা।"
+      },
+      "bangla_meaning": {
+        "display": "জ্বালা ধরানো",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "excite to an abnormal condition, or chafe or inflame",
+        "origin": "OEWN_GLOSS",
+        "text": "excite to an abnormal condition, or chafe or inflame"
+      },
+      "examples": [
+        {
+          "bn": "নতুন সাবান তার হাতে জ্বালা ধরাল।",
+          "en": "The new soap irritated her hands.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00065776-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "irritate"
+}

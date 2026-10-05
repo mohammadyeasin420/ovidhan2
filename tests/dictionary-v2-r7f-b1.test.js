@@ -29,7 +29,6 @@ const FROZEN_STRINGS = {
     desired: ['জানালার ধারের কাঙ্ক্ষিত আসনটি আগেই অন্য কেউ নিয়ে নিয়েছিল।']
 };
 const gitLines = (args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).split('\n').map((line) => line.trim()).filter(Boolean);
-const statusPaths = () => execFileSync('git', ['status', '--porcelain'], { cwd: root, encoding: 'utf8' }).split('\n').filter((line) => line.trim()).map((line) => line.slice(3).trim().replace(/\\/g, '/')).filter((file) => !file.startsWith('research/') && !file.startsWith('.wrangler/'));
 const esc = (value) => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 function scenario(name, fn) {
@@ -43,11 +42,13 @@ const corpus = cleanup.corpusRegistry(cleanup.loadManifest());
 const shell = render.loadShell(root);
 
 scenario('the frozen batch is 97 upgrades outside the closed corpus, R7E, frozen set, and holdout', () => {
-    assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root, 'research', 'SEO_R7F_BATCH1_97_FINAL_EDITORIAL.json'))).digest('hex'), '5e8334b738d22421ae37beefaeb81306d87ee44fca6d9bbcbe695797669b4dcd');
+    const editorialBytes = fs.readFileSync(path.join(root, 'research', 'SEO_R7F_BATCH1_97_FINAL_EDITORIAL.json'));
+    const editorialLf = Buffer.from(editorialBytes.toString('utf8').replace(/\r\n/g, '\n'));
+    assert.equal(crypto.createHash('sha256').update(editorialLf).digest('hex'), '5e8334b738d22421ae37beefaeb81306d87ee44fca6d9bbcbe695797669b4dcd');
     assert.equal(COHORT.length, 97);
     assert.equal(new Set(COHORT).size, 97);
     assert.equal(corpus.size, 2326);
-    assert.equal(registry.size, 2471);
+    assert.equal(registry.size, 2645);
     assert.equal(frozen.size, 186);
     assert.equal(R7E.size, 48);
     for (const slug of EXCLUDED) {
@@ -68,7 +69,7 @@ scenario('the frozen batch is 97 upgrades outside the closed corpus, R7E, frozen
         assert.equal(HOLDOUT.has(slug), false, slug);
     }
     const outside = [...registry].filter((slug) => !corpus.has(slug));
-    assert.equal(outside.length, 145);
+    assert.equal(outside.length, 319);
 });
 
 scenario('each R7F page matches its record and the Bengali one-sense contract', () => {
@@ -127,29 +128,17 @@ scenario('each R7F page matches its record and the Bengali one-sense contract', 
     }
 });
 
-scenario('the production diff is only the 97-word batch and its approved surfaces', () => {
-    const wordDiff = gitLines(['diff', '--name-only', 'HEAD', '--', 'word']).sort();
-    assert.deepEqual(wordDiff, COHORT.map((slug) => 'word/' + slug + '.html').sort());
+scenario('the committed R7F batch 1 pages and records stay untouched', () => {
+    for (const slug of COHORT) {
+        assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'word/' + slug + '.html']).length, 0, slug);
+        assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'dictionary-v2/r7f-b1/' + slug + '.json']).length, 0, slug);
+    }
+    assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'scripts/dictionary-v2/r7f-b1.js']).length, 0);
     assert.equal(gitLines(['diff', '--name-only', 'HEAD', '--', 'sitemap.xml']).length, 0);
-    const changed = statusPaths();
-    const allowed = (file) => {
-        if (COHORT.includes(file.slice('word/'.length, -'.html'.length)) && file.startsWith('word/') && file.endsWith('.html')) return true;
-        if (file === 'dictionary-v2/r7f-b1/' || (file.startsWith('dictionary-v2/r7f-b1/') && COHORT.includes(path.basename(file, '.json')))) return true;
-        return [
-            'scripts/dictionary-v2/r7f-b1.js',
-            'tests/dictionary-v2-r7f-b1.test.js',
-            'tests/dictionary-v2-r7e-p1.test.js',
-            'tests/approved-explorer-routing.test.js',
-            'data/approved-static-word-slugs.json',
-            'sitemap-approved-words.xml',
-            'dictionary-az.html'
-        ].includes(file) || /^dictionary-az-[a-z]\.html$/.test(file);
-    };
-    for (const file of changed) assert.equal(allowed(file), true, 'unexpected change: ' + file);
     assert.equal(fs.readdirSync(path.join(root, 'dictionary-v2', 'r7f-b1')).filter((name) => name.endsWith('.json')).length, 97);
     const sitemap = fs.readFileSync(path.join(root, 'sitemap-approved-words.xml'), 'utf8');
     for (const slug of COHORT) assert.ok(sitemap.includes('/word/' + slug + '.html'), slug);
-    assert.equal((sitemap.match(/<loc>/g) || []).length, 2471);
+    assert.equal((sitemap.match(/<loc>/g) || []).length, 2645);
 });
 
 console.log('All dictionary-v2 R7F batch-1 forward checks passed.');

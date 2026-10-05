@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "weekend",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/weekend.html",
+      "source_page_sha256_lf": "25030c93d8bb2dab1cdcd039ebc965519137f5b075393a287db1665f9bf1f255",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "শুক্রবার রাত থেকে রবিবার পর্যন্ত ছুটির সময়।"
+      },
+      "bangla_meaning": {
+        "display": "সপ্তাহান্ত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a time period usually extending from Friday night through Sunday; more loosely defined as any period of successive days including one and only one Sunday",
+        "origin": "OEWN_GLOSS",
+        "text": "a time period usually extending from Friday night through Sunday; more loosely defined as any period of successive days including one and only one Sunday"
+      },
+      "examples": [
+        {
+          "bn": "এই সপ্তাহান্তে আমরা দাদু-দিদার বাড়িতে যাব।",
+          "en": "We are visiting our grandparents this weekend.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "12473902-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "weekend"
+}

@@ -84,8 +84,8 @@ scenario('registry fetch failure preserves explorer rendering', () => {
 });
 
 scenario('all approved slugs route to their static pages and never stay as explorer results', () => {
-    assert.equal(registry.length, 2471);
-    assert.equal(new Set(registry).size, 2471);
+    assert.equal(registry.length, 2645);
+    assert.equal(new Set(registry).size, 2645);
     for (const slug of registry) {
         const page = '/word/' + slug + '.html';
         assert.equal(fs.existsSync(path.join(__dirname, '../word', slug + '.html')), true);

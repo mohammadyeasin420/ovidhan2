@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "discrimination",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/discrimination.html",
+      "source_page_sha256_lf": "e127ee20fd7b3a32d35353d1b413db7fbb7a92a2537856f96beb3098195d0eff",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ধর্ম, লিঙ্গ, জাত বা অন্য পরিচয় দেখে অন্যায় আচরণ।"
+      },
+      "bangla_meaning": {
+        "display": "বৈষম্য",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "unfair treatment of a person or group on the basis of prejudice",
+        "origin": "OEWN_GLOSS",
+        "text": "unfair treatment of a person or group on the basis of prejudice"
+      },
+      "examples": [
+        {
+          "bn": "নিয়োগে বৈষম্য আইননিষিদ্ধ।",
+          "en": "The law forbids discrimination in hiring.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01160737-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "discrimination"
+}

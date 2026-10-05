@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "destruction",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/destruction.html",
+      "source_page_sha256_lf": "0b622a61c7786957b1846896bbde861448b288782a3074263b4dc4cfff83143b",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "একেবারে নষ্ট করে ফেলা, যার আর মেরামত হয় না।"
+      },
+      "bangla_meaning": {
+        "display": "ধ্বংস",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the termination of something by causing so much damage to it that it cannot be repaired or no longer exists",
+        "origin": "OEWN_GLOSS",
+        "text": "the termination of something by causing so much damage to it that it cannot be repaired or no longer exists"
+      },
+      "examples": [
+        {
+          "bn": "আগুনে পুরোনো মিলের ধ্বংস হল।",
+          "en": "The fire caused the destruction of the old mill.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00213286-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "destruction"
+}

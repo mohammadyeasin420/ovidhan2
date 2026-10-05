@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "philosophy",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/philosophy.html",
+      "source_page_sha256_lf": "0aad210444db74b1fae7cfa1b36c6a9313b190c2ba6066d398e7c52d4219dcb6",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "জীবন, জ্ঞান ও ন্যায়-অন্যায় নিয়ে যুক্তি দিয়ে চিন্তার শাস্ত্র।"
+      },
+      "bangla_meaning": {
+        "display": "দর্শন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "the rational investigation of questions about existence and knowledge and ethics",
+        "origin": "OEWN_GLOSS",
+        "text": "the rational investigation of questions about existence and knowledge and ethics"
+      },
+      "examples": [
+        {
+          "bn": "সে বিশ্ববিদ্যালয়ে দর্শন পড়ছে।",
+          "en": "She is studying philosophy at the university.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "05546126-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কেউ নিজের জীবন চালানোর যে বিশ্বাস ধরে রাখে।"
+      },
+      "bangla_meaning": {
+        "display": "জীবনদর্শন",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "any personal belief about how to live or how to deal with a situation",
+        "origin": "OEWN_GLOSS",
+        "text": "any personal belief about how to live or how to deal with a situation"
+      },
+      "examples": [
+        {
+          "bn": "তার জীবনদর্শন হল কঠিন কাজ সকালে শেষ করা।",
+          "en": "His philosophy is to finish hard work in the morning.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "05330046-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "philosophy"
+}

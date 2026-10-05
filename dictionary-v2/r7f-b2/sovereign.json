@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "sovereign",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/sovereign.html",
+      "source_page_sha256_lf": "3e56df6d6e173224ed6a92988c4f5989fe9f0ca1f3baaed9dc5d0e30e3c08ac8",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বাইরের শক্তির অধীনে নয়, নিজে শাসন করে।"
+      },
+      "bangla_meaning": {
+        "display": "সার্বভৌম",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(of political bodies) not controlled by outside forces",
+        "origin": "OEWN_GLOSS",
+        "text": "(of political bodies) not controlled by outside forces"
+      },
+      "examples": [
+        {
+          "bn": "সার্বভৌম রাষ্ট্র নিজের আইন নিজে বানায়।",
+          "en": "A sovereign state writes its own laws.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01070455-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "বংশানুক্রমে দেশের শাসক।"
+      },
+      "bangla_meaning": {
+        "display": "রাজা বা রাণি",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "a nation's ruler or head of state usually by hereditary right",
+        "origin": "OEWN_GLOSS",
+        "text": "a nation's ruler or head of state usually by hereditary right"
+      },
+      "examples": [
+        {
+          "bn": "রাজা বারান্দা থেকে জনতাকে ভাষণ দিলেন।",
+          "en": "The sovereign addressed the crowd from the balcony.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "09125589-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "sovereign"
+}

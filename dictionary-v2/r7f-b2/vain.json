@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "vain",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/vain.html",
+      "source_page_sha256_lf": "22b76c6747a3aee686ce0e08247e4e57aa8d469ea07acceda297e9c420040cb6",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "চেষ্টা করেও কোনো ফল হয় না।"
+      },
+      "bangla_meaning": {
+        "display": "বৃথা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "unproductive of success",
+        "origin": "OEWN_GLOSS",
+        "text": "unproductive of success"
+      },
+      "examples": [
+        {
+          "bn": "প্লাবিত ইঞ্জিন চালানোর চেষ্টা বৃথা গেল।",
+          "en": "They made a vain attempt to start the flooded engine.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01879817-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "নিজের চেহারা বা গুরুত্ব নিয়ে বেশি গর্ব করা।"
+      },
+      "bangla_meaning": {
+        "display": "অহংকারী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "characteristic of false pride; having an exaggerated sense of self-importance",
+        "origin": "OEWN_GLOSS",
+        "text": "characteristic of false pride; having an exaggerated sense of self-importance"
+      },
+      "examples": [
+        {
+          "bn": "নতুন জুতো নিয়ে সে বেশ অহংকারী।",
+          "en": "He is vain about his new shoes.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "01904964-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "vain"
+}

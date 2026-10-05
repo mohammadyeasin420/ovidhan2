@@ -60,10 +60,12 @@ scenario('the closed cleanup corpus stays 2326 and the R7E cohort sits outside i
     assert.equal(corpus.size, 2326);
     assert.equal(manifest.summary.approved_corpus, 2326);
     const r7f = lib.readJson(path.join(root, 'research', 'SEO_R7F_BATCH1_97_FINAL_EDITORIAL.json')).entries.map((entry) => entry.word);
+    const r7b2 = lib.readJson(path.join(root, 'research', 'SEO_R7F_BATCH2_174_FINAL_EDITORIAL.json')).entries.map((entry) => entry.slug);
     assert.equal(r7f.length, 97);
-    assert.equal(registry.size, 2471);
+    assert.equal(r7b2.length, 174);
+    assert.equal(registry.size, 2645);
     const outside = [...registry].filter((slug) => !corpus.has(slug)).sort();
-    assert.deepEqual(outside, [...COHORT, ...r7f].sort());
+    assert.deepEqual(outside, [...COHORT, ...r7f, ...r7b2].sort());
     for (const slug of COHORT) {
         assert.equal(corpus.has(slug), false, slug);
         assert.equal(frozen.has(slug), false, slug);

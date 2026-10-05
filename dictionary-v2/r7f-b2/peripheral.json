@@ -1,0 +1,113 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "peripheral",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/peripheral.html",
+      "source_page_sha256_lf": "467a1ced34280560af5d7edc2b1c030fa2b1bf7c3248435a1b858614f4dd6b98",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মূল বিষয়ের ধারে, কেন্দ্রে নয়।"
+      },
+      "bangla_meaning": {
+        "display": "প্রান্তিক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "related to the key issue but not of central importance",
+        "origin": "OEWN_GLOSS",
+        "text": "related to the key issue but not of central importance"
+      },
+      "examples": [
+        {
+          "bn": "শিক্ষার্থীর নিরাপত্তার পাশে পার্কিং একটা প্রান্তিক বিষয়।",
+          "en": "Parking is a peripheral issue beside student safety.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01870746-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "মাঝখানে নয়, কিনারায়।"
+      },
+      "bangla_meaning": {
+        "display": "প্রান্তের",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "on or near an edge or constituting an outer boundary; the outer area",
+        "origin": "OEWN_GLOSS",
+        "text": "on or near an edge or constituting an outer boundary; the outer area"
+      },
+      "examples": [
+        {
+          "bn": "প্রান্তের জেলাগুলোতে বন্যা সহায়তা কম পৌঁছায়।",
+          "en": "The peripheral districts get less flood aid.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00333589-a",
+        "type": "OEWN_2025"
+      }
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কম্পিউটারের মূল বোর্ডের বাইরে যুক্ত যন্ত্র, যেমন প্রিন্টার।"
+      },
+      "bangla_meaning": {
+        "display": "পেরিফেরাল",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "electronic equipment external to the circuit board that contains the CPU of a computer",
+        "origin": "OEWN_GLOSS",
+        "text": "electronic equipment external to the circuit board that contains the CPU of a computer"
+      },
+      "examples": [
+        {
+          "bn": "প্রিন্টার একটি পেরিফেরাল, প্রসেসরের অংশ নয়।",
+          "en": "The printer is a peripheral, not part of the processor.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s3",
+      "source": {
+        "synset_id": "03290219-n",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "peripheral"
+}

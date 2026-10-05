@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "loyal",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/loyal.html",
+      "source_page_sha256_lf": "acc78db40c01d4046ff30028aa87b57993158a037b5389efbfbf32fca7fb4a93",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কথায় ও বিপদে কারো পাশে থাকা।"
+      },
+      "bangla_meaning": {
+        "display": "বিশ্বস্ত",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "unwavering in devotion to friend or vow or cause",
+        "origin": "OEWN_GLOSS",
+        "text": "unwavering in devotion to friend or vow or cause"
+      },
+      "examples": [
+        {
+          "bn": "বিশ্বস্ত বন্ধু হারানো মানিব্যাগ ফিরিয়ে দিল।",
+          "en": "A loyal friend returned the lost wallet.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00966521-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "loyal"
+}

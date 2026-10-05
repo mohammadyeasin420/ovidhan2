@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "autocratic",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/autocratic.html",
+      "source_page_sha256_lf": "ac886a3eb990c0a40fec54e94270f50b5bf9f7961917abed61b02df39cf9372e",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যে শাসনে শাসকের ক্ষমতা প্রায় অসীম।"
+      },
+      "bangla_meaning": {
+        "display": "স্বৈরতান্ত্রিক",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "characteristic of an absolute ruler or absolute rule; having absolute sovereignty",
+        "origin": "OEWN_GLOSS",
+        "text": "characteristic of an absolute ruler or absolute rule; having absolute sovereignty"
+      },
+      "examples": [
+        {
+          "bn": "উপন্যাসের পটভূমি এক স্বৈরতান্ত্রিক শাসন।",
+          "en": "The novel is set under an autocratic regime.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "00724656-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অন্যের কথা না শুনে নিজের ইচ্ছে চাপিয়ে দেওয়া।"
+      },
+      "bangla_meaning": {
+        "display": "স্বেচ্ছাচারী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "offensively self-assured or given to exercising usually unwarranted power",
+        "origin": "OEWN_GLOSS",
+        "text": "offensively self-assured or given to exercising usually unwarranted power"
+      },
+      "examples": [
+        {
+          "bn": "স্বেচ্ছাচারী অধিনায়ক দলের পরিকল্পনা উপেক্ষা করল।",
+          "en": "An autocratic captain ignored the team's plan.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "00794795-a",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "autocratic"
+}

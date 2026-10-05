@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "swelling",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/swelling.html",
+      "source_page_sha256_lf": "b0a116e0a308354858ecefee0b34d9ea6a1468a9f67dbcd4e9334cb58730ab6f",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "শরীরের কোনো জায়গা ফুলে উঠে বড় দেখানো।"
+      },
+      "bangla_meaning": {
+        "display": "ফোলা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "an abnormal protuberance or localized enlargement",
+        "origin": "OEWN_GLOSS",
+        "text": "an abnormal protuberance or localized enlargement"
+      },
+      "examples": [
+        {
+          "bn": "বরফ দেওয়ার পর গোড়ালির ফোলা কমে গেল।",
+          "en": "The swelling on his ankle went down after ice.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "11616040-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "swelling"
+}

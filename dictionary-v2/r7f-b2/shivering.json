@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "shivering",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/shivering.html",
+      "source_page_sha256_lf": "fa8369a823830e3918a9c963150adcb6ff257f4660fb040f3bf305f3f1dca2bf",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "ঠান্ডা বা ভয়ে শরীর হালকা কেঁপে ওঠা।"
+      },
+      "bangla_meaning": {
+        "display": "কাপুনি ধরা",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "vibrating slightly and irregularly; as e.g. with fear or cold or like the leaves of an aspen in a breeze",
+        "origin": "OEWN_GLOSS",
+        "text": "vibrating slightly and irregularly; as e.g. with fear or cold or like the leaves of an aspen in a breeze"
+      },
+      "examples": [
+        {
+          "bn": "কাপুনি ধরা ছেলেটি টিনের চালার নিচে দাঁড়িয়ে ছিল।",
+          "en": "The shivering boy stood under the tin roof.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "02321358-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "shivering"
+}

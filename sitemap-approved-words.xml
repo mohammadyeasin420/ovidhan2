@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ovidhan.net/word/abandoned.html</loc></url>
+  <url><loc>https://ovidhan.net/word/abbreviation.html</loc></url>
   <url><loc>https://ovidhan.net/word/abnormal.html</loc></url>
   <url><loc>https://ovidhan.net/word/abode.html</loc></url>
   <url><loc>https://ovidhan.net/word/abruptly.html</loc></url>
@@ -54,6 +55,7 @@
   <url><loc>https://ovidhan.net/word/aggressive.html</loc></url>
   <url><loc>https://ovidhan.net/word/agility.html</loc></url>
   <url><loc>https://ovidhan.net/word/aging.html</loc></url>
+  <url><loc>https://ovidhan.net/word/agitated.html</loc></url>
   <url><loc>https://ovidhan.net/word/agony.html</loc></url>
   <url><loc>https://ovidhan.net/word/agoraphobia.html</loc></url>
   <url><loc>https://ovidhan.net/word/ailment.html</loc></url>
@@ -86,6 +88,7 @@
   <url><loc>https://ovidhan.net/word/angry.html</loc></url>
   <url><loc>https://ovidhan.net/word/ankle.html</loc></url>
   <url><loc>https://ovidhan.net/word/anniversary.html</loc></url>
+  <url><loc>https://ovidhan.net/word/annoying.html</loc></url>
   <url><loc>https://ovidhan.net/word/anonymity.html</loc></url>
   <url><loc>https://ovidhan.net/word/anonymous.html</loc></url>
   <url><loc>https://ovidhan.net/word/antonym.html</loc></url>
@@ -121,6 +124,7 @@
   <url><loc>https://ovidhan.net/word/arrow.html</loc></url>
   <url><loc>https://ovidhan.net/word/arson.html</loc></url>
   <url><loc>https://ovidhan.net/word/artisan.html</loc></url>
+  <url><loc>https://ovidhan.net/word/artistic.html</loc></url>
   <url><loc>https://ovidhan.net/word/arts.html</loc></url>
   <url><loc>https://ovidhan.net/word/ascent.html</loc></url>
   <url><loc>https://ovidhan.net/word/ask.html</loc></url>
@@ -128,6 +132,7 @@
   <url><loc>https://ovidhan.net/word/aspect.html</loc></url>
   <url><loc>https://ovidhan.net/word/aspiration.html</loc></url>
   <url><loc>https://ovidhan.net/word/aspirin.html</loc></url>
+  <url><loc>https://ovidhan.net/word/assassination.html</loc></url>
   <url><loc>https://ovidhan.net/word/assert.html</loc></url>
   <url><loc>https://ovidhan.net/word/assertive.html</loc></url>
   <url><loc>https://ovidhan.net/word/assigned.html</loc></url>
@@ -141,11 +146,13 @@
   <url><loc>https://ovidhan.net/word/asymmetrical.html</loc></url>
   <url><loc>https://ovidhan.net/word/attendance.html</loc></url>
   <url><loc>https://ovidhan.net/word/attentively.html</loc></url>
+  <url><loc>https://ovidhan.net/word/attire.html</loc></url>
   <url><loc>https://ovidhan.net/word/attractive.html</loc></url>
   <url><loc>https://ovidhan.net/word/attrition.html</loc></url>
   <url><loc>https://ovidhan.net/word/audacity.html</loc></url>
   <url><loc>https://ovidhan.net/word/auditorium.html</loc></url>
   <url><loc>https://ovidhan.net/word/authentic.html</loc></url>
+  <url><loc>https://ovidhan.net/word/autocratic.html</loc></url>
   <url><loc>https://ovidhan.net/word/autumn.html</loc></url>
   <url><loc>https://ovidhan.net/word/available.html</loc></url>
   <url><loc>https://ovidhan.net/word/avenue.html</loc></url>
@@ -186,6 +193,7 @@
   <url><loc>https://ovidhan.net/word/believe.html</loc></url>
   <url><loc>https://ovidhan.net/word/beneath.html</loc></url>
   <url><loc>https://ovidhan.net/word/beneficial.html</loc></url>
+  <url><loc>https://ovidhan.net/word/beneficiary.html</loc></url>
   <url><loc>https://ovidhan.net/word/benefit.html</loc></url>
   <url><loc>https://ovidhan.net/word/benevolent.html</loc></url>
   <url><loc>https://ovidhan.net/word/beset.html</loc></url>
@@ -222,11 +230,13 @@
   <url><loc>https://ovidhan.net/word/boar.html</loc></url>
   <url><loc>https://ovidhan.net/word/bogus.html</loc></url>
   <url><loc>https://ovidhan.net/word/boisterous.html</loc></url>
+  <url><loc>https://ovidhan.net/word/bonding.html</loc></url>
   <url><loc>https://ovidhan.net/word/boo.html</loc></url>
   <url><loc>https://ovidhan.net/word/book.html</loc></url>
   <url><loc>https://ovidhan.net/word/booked.html</loc></url>
   <url><loc>https://ovidhan.net/word/booking.html</loc></url>
   <url><loc>https://ovidhan.net/word/bookish.html</loc></url>
+  <url><loc>https://ovidhan.net/word/bored.html</loc></url>
   <url><loc>https://ovidhan.net/word/boredom.html</loc></url>
   <url><loc>https://ovidhan.net/word/borrow.html</loc></url>
   <url><loc>https://ovidhan.net/word/bosom.html</loc></url>
@@ -256,8 +266,10 @@
   <url><loc>https://ovidhan.net/word/bulging.html</loc></url>
   <url><loc>https://ovidhan.net/word/bulky.html</loc></url>
   <url><loc>https://ovidhan.net/word/bulletin.html</loc></url>
+  <url><loc>https://ovidhan.net/word/bullying.html</loc></url>
   <url><loc>https://ovidhan.net/word/bun.html</loc></url>
   <url><loc>https://ovidhan.net/word/bureau.html</loc></url>
+  <url><loc>https://ovidhan.net/word/bureaucracy.html</loc></url>
   <url><loc>https://ovidhan.net/word/burgeoning.html</loc></url>
   <url><loc>https://ovidhan.net/word/burp.html</loc></url>
   <url><loc>https://ovidhan.net/word/burping.html</loc></url>
@@ -282,6 +294,7 @@
   <url><loc>https://ovidhan.net/word/camphor.html</loc></url>
   <url><loc>https://ovidhan.net/word/campus.html</loc></url>
   <url><loc>https://ovidhan.net/word/candid.html</loc></url>
+  <url><loc>https://ovidhan.net/word/candidate.html</loc></url>
   <url><loc>https://ovidhan.net/word/cannibalism.html</loc></url>
   <url><loc>https://ovidhan.net/word/canteen.html</loc></url>
   <url><loc>https://ovidhan.net/word/caption.html</loc></url>
@@ -290,6 +303,7 @@
   <url><loc>https://ovidhan.net/word/capture.html</loc></url>
   <url><loc>https://ovidhan.net/word/car.html</loc></url>
   <url><loc>https://ovidhan.net/word/carcass.html</loc></url>
+  <url><loc>https://ovidhan.net/word/caring.html</loc></url>
   <url><loc>https://ovidhan.net/word/carnivorous.html</loc></url>
   <url><loc>https://ovidhan.net/word/carpenter.html</loc></url>
   <url><loc>https://ovidhan.net/word/cart.html</loc></url>
@@ -326,8 +340,11 @@
   <url><loc>https://ovidhan.net/word/cholesterol.html</loc></url>
   <url><loc>https://ovidhan.net/word/choosy.html</loc></url>
   <url><loc>https://ovidhan.net/word/chorus.html</loc></url>
+  <url><loc>https://ovidhan.net/word/chronic.html</loc></url>
   <url><loc>https://ovidhan.net/word/chubby.html</loc></url>
+  <url><loc>https://ovidhan.net/word/cinnamon.html</loc></url>
   <url><loc>https://ovidhan.net/word/circumference.html</loc></url>
+  <url><loc>https://ovidhan.net/word/circumstances.html</loc></url>
   <url><loc>https://ovidhan.net/word/circus.html</loc></url>
   <url><loc>https://ovidhan.net/word/city.html</loc></url>
   <url><loc>https://ovidhan.net/word/civics.html</loc></url>
@@ -378,16 +395,21 @@
   <url><loc>https://ovidhan.net/word/communication.html</loc></url>
   <url><loc>https://ovidhan.net/word/companionship.html</loc></url>
   <url><loc>https://ovidhan.net/word/compassion.html</loc></url>
+  <url><loc>https://ovidhan.net/word/compassionate.html</loc></url>
   <url><loc>https://ovidhan.net/word/compatibility.html</loc></url>
   <url><loc>https://ovidhan.net/word/compatible.html</loc></url>
   <url><loc>https://ovidhan.net/word/competence.html</loc></url>
+  <url><loc>https://ovidhan.net/word/competent.html</loc></url>
+  <url><loc>https://ovidhan.net/word/competitive.html</loc></url>
   <url><loc>https://ovidhan.net/word/competitor.html</loc></url>
+  <url><loc>https://ovidhan.net/word/compile.html</loc></url>
   <url><loc>https://ovidhan.net/word/complement.html</loc></url>
   <url><loc>https://ovidhan.net/word/complete.html</loc></url>
   <url><loc>https://ovidhan.net/word/completion.html</loc></url>
   <url><loc>https://ovidhan.net/word/compliance.html</loc></url>
   <url><loc>https://ovidhan.net/word/complicated.html</loc></url>
   <url><loc>https://ovidhan.net/word/complicit.html</loc></url>
+  <url><loc>https://ovidhan.net/word/compliment.html</loc></url>
   <url><loc>https://ovidhan.net/word/composed.html</loc></url>
   <url><loc>https://ovidhan.net/word/comprehension.html</loc></url>
   <url><loc>https://ovidhan.net/word/comprehensive.html</loc></url>
@@ -415,17 +437,22 @@
   <url><loc>https://ovidhan.net/word/conjugal.html</loc></url>
   <url><loc>https://ovidhan.net/word/conjunction.html</loc></url>
   <url><loc>https://ovidhan.net/word/connoisseur.html</loc></url>
+  <url><loc>https://ovidhan.net/word/conquer.html</loc></url>
   <url><loc>https://ovidhan.net/word/conqueror.html</loc></url>
   <url><loc>https://ovidhan.net/word/conscience.html</loc></url>
   <url><loc>https://ovidhan.net/word/conscientious.html</loc></url>
   <url><loc>https://ovidhan.net/word/consciousness.html</loc></url>
   <url><loc>https://ovidhan.net/word/consecutive.html</loc></url>
+  <url><loc>https://ovidhan.net/word/consent.html</loc></url>
+  <url><loc>https://ovidhan.net/word/consequently.html</loc></url>
   <url><loc>https://ovidhan.net/word/conservative.html</loc></url>
   <url><loc>https://ovidhan.net/word/consignee.html</loc></url>
   <url><loc>https://ovidhan.net/word/consistency.html</loc></url>
   <url><loc>https://ovidhan.net/word/consistently.html</loc></url>
   <url><loc>https://ovidhan.net/word/console.html</loc></url>
   <url><loc>https://ovidhan.net/word/consortium.html</loc></url>
+  <url><loc>https://ovidhan.net/word/conspicuous.html</loc></url>
+  <url><loc>https://ovidhan.net/word/conspiracy.html</loc></url>
   <url><loc>https://ovidhan.net/word/constant.html</loc></url>
   <url><loc>https://ovidhan.net/word/constantly.html</loc></url>
   <url><loc>https://ovidhan.net/word/consulate.html</loc></url>
@@ -447,15 +474,19 @@
   <url><loc>https://ovidhan.net/word/conventional.html</loc></url>
   <url><loc>https://ovidhan.net/word/conversation.html</loc></url>
   <url><loc>https://ovidhan.net/word/convex.html</loc></url>
+  <url><loc>https://ovidhan.net/word/conviction.html</loc></url>
   <url><loc>https://ovidhan.net/word/convince.html</loc></url>
+  <url><loc>https://ovidhan.net/word/convocation.html</loc></url>
   <url><loc>https://ovidhan.net/word/cool.html</loc></url>
   <url><loc>https://ovidhan.net/word/coop.html</loc></url>
   <url><loc>https://ovidhan.net/word/cooperate.html</loc></url>
+  <url><loc>https://ovidhan.net/word/cooperation.html</loc></url>
   <url><loc>https://ovidhan.net/word/coordinate.html</loc></url>
   <url><loc>https://ovidhan.net/word/coordinator.html</loc></url>
   <url><loc>https://ovidhan.net/word/copycat.html</loc></url>
   <url><loc>https://ovidhan.net/word/cordially.html</loc></url>
   <url><loc>https://ovidhan.net/word/core.html</loc></url>
+  <url><loc>https://ovidhan.net/word/coriander.html</loc></url>
   <url><loc>https://ovidhan.net/word/cornerstone.html</loc></url>
   <url><loc>https://ovidhan.net/word/corny.html</loc></url>
   <url><loc>https://ovidhan.net/word/corporate.html</loc></url>
@@ -513,6 +544,7 @@
   <url><loc>https://ovidhan.net/word/cupboard.html</loc></url>
   <url><loc>https://ovidhan.net/word/currently.html</loc></url>
   <url><loc>https://ovidhan.net/word/cursed.html</loc></url>
+  <url><loc>https://ovidhan.net/word/curtain.html</loc></url>
   <url><loc>https://ovidhan.net/word/cute.html</loc></url>
   <url><loc>https://ovidhan.net/word/cutlery.html</loc></url>
   <url><loc>https://ovidhan.net/word/cynical.html</loc></url>
@@ -521,6 +553,7 @@
   <url><loc>https://ovidhan.net/word/dais.html</loc></url>
   <url><loc>https://ovidhan.net/word/damage.html</loc></url>
   <url><loc>https://ovidhan.net/word/dame.html</loc></url>
+  <url><loc>https://ovidhan.net/word/dangerous.html</loc></url>
   <url><loc>https://ovidhan.net/word/dank.html</loc></url>
   <url><loc>https://ovidhan.net/word/daring.html</loc></url>
   <url><loc>https://ovidhan.net/word/darling.html</loc></url>
@@ -531,6 +564,7 @@
   <url><loc>https://ovidhan.net/word/deactivate.html</loc></url>
   <url><loc>https://ovidhan.net/word/deadline.html</loc></url>
   <url><loc>https://ovidhan.net/word/dearest.html</loc></url>
+  <url><loc>https://ovidhan.net/word/debit.html</loc></url>
   <url><loc>https://ovidhan.net/word/debris.html</loc></url>
   <url><loc>https://ovidhan.net/word/debt.html</loc></url>
   <url><loc>https://ovidhan.net/word/decay.html</loc></url>
@@ -540,6 +574,7 @@
   <url><loc>https://ovidhan.net/word/decode.html</loc></url>
   <url><loc>https://ovidhan.net/word/decorum.html</loc></url>
   <url><loc>https://ovidhan.net/word/decrease.html</loc></url>
+  <url><loc>https://ovidhan.net/word/dedicated.html</loc></url>
   <url><loc>https://ovidhan.net/word/deeply.html</loc></url>
   <url><loc>https://ovidhan.net/word/deer.html</loc></url>
   <url><loc>https://ovidhan.net/word/default.html</loc></url>
@@ -551,6 +586,7 @@
   <url><loc>https://ovidhan.net/word/definite.html</loc></url>
   <url><loc>https://ovidhan.net/word/definitely.html</loc></url>
   <url><loc>https://ovidhan.net/word/definition.html</loc></url>
+  <url><loc>https://ovidhan.net/word/deforestation.html</loc></url>
   <url><loc>https://ovidhan.net/word/degrade.html</loc></url>
   <url><loc>https://ovidhan.net/word/delayed.html</loc></url>
   <url><loc>https://ovidhan.net/word/deliberate.html</loc></url>
@@ -558,6 +594,7 @@
   <url><loc>https://ovidhan.net/word/delicious.html</loc></url>
   <url><loc>https://ovidhan.net/word/delighted.html</loc></url>
   <url><loc>https://ovidhan.net/word/demo.html</loc></url>
+  <url><loc>https://ovidhan.net/word/democracy.html</loc></url>
   <url><loc>https://ovidhan.net/word/demolition.html</loc></url>
   <url><loc>https://ovidhan.net/word/demotion.html</loc></url>
   <url><loc>https://ovidhan.net/word/den.html</loc></url>
@@ -586,18 +623,22 @@
   <url><loc>https://ovidhan.net/word/despise.html</loc></url>
   <url><loc>https://ovidhan.net/word/destitute.html</loc></url>
   <url><loc>https://ovidhan.net/word/destroy.html</loc></url>
+  <url><loc>https://ovidhan.net/word/destruction.html</loc></url>
   <url><loc>https://ovidhan.net/word/destructive.html</loc></url>
   <url><loc>https://ovidhan.net/word/detached.html</loc></url>
   <url><loc>https://ovidhan.net/word/deteriorate.html</loc></url>
   <url><loc>https://ovidhan.net/word/detest.html</loc></url>
+  <url><loc>https://ovidhan.net/word/devastating.html</loc></url>
   <url><loc>https://ovidhan.net/word/development.html</loc></url>
   <url><loc>https://ovidhan.net/word/deviation.html</loc></url>
   <url><loc>https://ovidhan.net/word/devoid.html</loc></url>
+  <url><loc>https://ovidhan.net/word/devoted.html</loc></url>
   <url><loc>https://ovidhan.net/word/dew.html</loc></url>
   <url><loc>https://ovidhan.net/word/dewy.html</loc></url>
   <url><loc>https://ovidhan.net/word/diabolical.html</loc></url>
   <url><loc>https://ovidhan.net/word/diagonal.html</loc></url>
   <url><loc>https://ovidhan.net/word/dialect.html</loc></url>
+  <url><loc>https://ovidhan.net/word/diameter.html</loc></url>
   <url><loc>https://ovidhan.net/word/diary.html</loc></url>
   <url><loc>https://ovidhan.net/word/dice.html</loc></url>
   <url><loc>https://ovidhan.net/word/dictation.html</loc></url>
@@ -607,17 +648,21 @@
   <url><loc>https://ovidhan.net/word/difference.html</loc></url>
   <url><loc>https://ovidhan.net/word/difficult.html</loc></url>
   <url><loc>https://ovidhan.net/word/digestion.html</loc></url>
+  <url><loc>https://ovidhan.net/word/dignity.html</loc></url>
   <url><loc>https://ovidhan.net/word/diligent.html</loc></url>
   <url><loc>https://ovidhan.net/word/dimple.html</loc></url>
   <url><loc>https://ovidhan.net/word/dine.html</loc></url>
+  <url><loc>https://ovidhan.net/word/diplomatic.html</loc></url>
   <url><loc>https://ovidhan.net/word/dirty.html</loc></url>
   <url><loc>https://ovidhan.net/word/disability.html</loc></url>
   <url><loc>https://ovidhan.net/word/disable.html</loc></url>
   <url><loc>https://ovidhan.net/word/disappear.html</loc></url>
   <url><loc>https://ovidhan.net/word/disastrous.html</loc></url>
+  <url><loc>https://ovidhan.net/word/disbursement.html</loc></url>
   <url><loc>https://ovidhan.net/word/discern.html</loc></url>
   <url><loc>https://ovidhan.net/word/discrepancy.html</loc></url>
   <url><loc>https://ovidhan.net/word/discrete.html</loc></url>
+  <url><loc>https://ovidhan.net/word/discrimination.html</loc></url>
   <url><loc>https://ovidhan.net/word/disgusting.html</loc></url>
   <url><loc>https://ovidhan.net/word/disheartened.html</loc></url>
   <url><loc>https://ovidhan.net/word/disintegrate.html</loc></url>
@@ -634,6 +679,7 @@
   <url><loc>https://ovidhan.net/word/distribute.html</loc></url>
   <url><loc>https://ovidhan.net/word/ditch.html</loc></url>
   <url><loc>https://ovidhan.net/word/diva.html</loc></url>
+  <url><loc>https://ovidhan.net/word/diversity.html</loc></url>
   <url><loc>https://ovidhan.net/word/divert.html</loc></url>
   <url><loc>https://ovidhan.net/word/divide.html</loc></url>
   <url><loc>https://ovidhan.net/word/divulge.html</loc></url>
@@ -659,8 +705,10 @@
   <url><loc>https://ovidhan.net/word/drawer.html</loc></url>
   <url><loc>https://ovidhan.net/word/drawing.html</loc></url>
   <url><loc>https://ovidhan.net/word/dreamy.html</loc></url>
+  <url><loc>https://ovidhan.net/word/drought.html</loc></url>
   <url><loc>https://ovidhan.net/word/drowsy.html</loc></url>
   <url><loc>https://ovidhan.net/word/duck.html</loc></url>
+  <url><loc>https://ovidhan.net/word/dude.html</loc></url>
   <url><loc>https://ovidhan.net/word/duffer.html</loc></url>
   <url><loc>https://ovidhan.net/word/duke.html</loc></url>
   <url><loc>https://ovidhan.net/word/dull.html</loc></url>
@@ -687,14 +735,18 @@
   <url><loc>https://ovidhan.net/word/elaborate.html</loc></url>
   <url><loc>https://ovidhan.net/word/elated.html</loc></url>
   <url><loc>https://ovidhan.net/word/elegance.html</loc></url>
+  <url><loc>https://ovidhan.net/word/elegant.html</loc></url>
   <url><loc>https://ovidhan.net/word/elegy.html</loc></url>
   <url><loc>https://ovidhan.net/word/elf.html</loc></url>
   <url><loc>https://ovidhan.net/word/eligible.html</loc></url>
   <url><loc>https://ovidhan.net/word/eliminate.html</loc></url>
+  <url><loc>https://ovidhan.net/word/elite.html</loc></url>
   <url><loc>https://ovidhan.net/word/elixir.html</loc></url>
   <url><loc>https://ovidhan.net/word/eloquence.html</loc></url>
   <url><loc>https://ovidhan.net/word/emaciated.html</loc></url>
   <url><loc>https://ovidhan.net/word/embankment.html</loc></url>
+  <url><loc>https://ovidhan.net/word/embarrassed.html</loc></url>
+  <url><loc>https://ovidhan.net/word/embarrassing.html</loc></url>
   <url><loc>https://ovidhan.net/word/embodiment.html</loc></url>
   <url><loc>https://ovidhan.net/word/embrace.html</loc></url>
   <url><loc>https://ovidhan.net/word/eminent.html</loc></url>
@@ -702,11 +754,13 @@
   <url><loc>https://ovidhan.net/word/emotional.html</loc></url>
   <url><loc>https://ovidhan.net/word/empathetic.html</loc></url>
   <url><loc>https://ovidhan.net/word/empathy.html</loc></url>
+  <url><loc>https://ovidhan.net/word/emphasize.html</loc></url>
   <url><loc>https://ovidhan.net/word/employee.html</loc></url>
   <url><loc>https://ovidhan.net/word/employer.html</loc></url>
   <url><loc>https://ovidhan.net/word/employment.html</loc></url>
   <url><loc>https://ovidhan.net/word/empty.html</loc></url>
   <url><loc>https://ovidhan.net/word/enable.html</loc></url>
+  <url><loc>https://ovidhan.net/word/encourage.html</loc></url>
   <url><loc>https://ovidhan.net/word/encouraged.html</loc></url>
   <url><loc>https://ovidhan.net/word/encyclopedia.html</loc></url>
   <url><loc>https://ovidhan.net/word/endangered.html</loc></url>
@@ -719,8 +773,11 @@
   <url><loc>https://ovidhan.net/word/enigma.html</loc></url>
   <url><loc>https://ovidhan.net/word/enigmatic.html</loc></url>
   <url><loc>https://ovidhan.net/word/enormous.html</loc></url>
+  <url><loc>https://ovidhan.net/word/enough.html</loc></url>
   <url><loc>https://ovidhan.net/word/enrich.html</loc></url>
+  <url><loc>https://ovidhan.net/word/ensure.html</loc></url>
   <url><loc>https://ovidhan.net/word/entangled.html</loc></url>
+  <url><loc>https://ovidhan.net/word/enthusiasm.html</loc></url>
   <url><loc>https://ovidhan.net/word/entitled.html</loc></url>
   <url><loc>https://ovidhan.net/word/entitlement.html</loc></url>
   <url><loc>https://ovidhan.net/word/entity.html</loc></url>
@@ -734,8 +791,10 @@
   <url><loc>https://ovidhan.net/word/epic.html</loc></url>
   <url><loc>https://ovidhan.net/word/equilibrium.html</loc></url>
   <url><loc>https://ovidhan.net/word/equipment.html</loc></url>
+  <url><loc>https://ovidhan.net/word/equivalent.html</loc></url>
   <url><loc>https://ovidhan.net/word/equivocal.html</loc></url>
   <url><loc>https://ovidhan.net/word/era.html</loc></url>
+  <url><loc>https://ovidhan.net/word/eradicate.html</loc></url>
   <url><loc>https://ovidhan.net/word/eraser.html</loc></url>
   <url><loc>https://ovidhan.net/word/ergonomic.html</loc></url>
   <url><loc>https://ovidhan.net/word/erode.html</loc></url>
@@ -745,6 +804,7 @@
   <url><loc>https://ovidhan.net/word/escalate.html</loc></url>
   <url><loc>https://ovidhan.net/word/escalation.html</loc></url>
   <url><loc>https://ovidhan.net/word/escalator.html</loc></url>
+  <url><loc>https://ovidhan.net/word/especially.html</loc></url>
   <url><loc>https://ovidhan.net/word/espresso.html</loc></url>
   <url><loc>https://ovidhan.net/word/essay.html</loc></url>
   <url><loc>https://ovidhan.net/word/essence.html</loc></url>
@@ -782,9 +842,13 @@
   <url><loc>https://ovidhan.net/word/exercise.html</loc></url>
   <url><loc>https://ovidhan.net/word/exhausted.html</loc></url>
   <url><loc>https://ovidhan.net/word/exist.html</loc></url>
+  <url><loc>https://ovidhan.net/word/existence.html</loc></url>
+  <url><loc>https://ovidhan.net/word/existing.html</loc></url>
   <url><loc>https://ovidhan.net/word/expand.html</loc></url>
+  <url><loc>https://ovidhan.net/word/expatriate.html</loc></url>
   <url><loc>https://ovidhan.net/word/expectation.html</loc></url>
   <url><loc>https://ovidhan.net/word/expected.html</loc></url>
+  <url><loc>https://ovidhan.net/word/expedite.html</loc></url>
   <url><loc>https://ovidhan.net/word/expedition.html</loc></url>
   <url><loc>https://ovidhan.net/word/expensive.html</loc></url>
   <url><loc>https://ovidhan.net/word/expertise.html</loc></url>
@@ -796,8 +860,10 @@
   <url><loc>https://ovidhan.net/word/expression.html</loc></url>
   <url><loc>https://ovidhan.net/word/extempore.html</loc></url>
   <url><loc>https://ovidhan.net/word/extinguish.html</loc></url>
+  <url><loc>https://ovidhan.net/word/extortion.html</loc></url>
   <url><loc>https://ovidhan.net/word/extraordinary.html</loc></url>
   <url><loc>https://ovidhan.net/word/extremely.html</loc></url>
+  <url><loc>https://ovidhan.net/word/extrovert.html</loc></url>
   <url><loc>https://ovidhan.net/word/exuberant.html</loc></url>
   <url><loc>https://ovidhan.net/word/facilitator.html</loc></url>
   <url><loc>https://ovidhan.net/word/fact.html</loc></url>
@@ -811,11 +877,13 @@
   <url><loc>https://ovidhan.net/word/fandom.html</loc></url>
   <url><loc>https://ovidhan.net/word/farewell.html</loc></url>
   <url><loc>https://ovidhan.net/word/farmer.html</loc></url>
+  <url><loc>https://ovidhan.net/word/fascinating.html</loc></url>
   <url><loc>https://ovidhan.net/word/fat.html</loc></url>
   <url><loc>https://ovidhan.net/word/fauna.html</loc></url>
   <url><loc>https://ovidhan.net/word/fear.html</loc></url>
   <url><loc>https://ovidhan.net/word/feasibility.html</loc></url>
   <url><loc>https://ovidhan.net/word/feasible.html</loc></url>
+  <url><loc>https://ovidhan.net/word/feedback.html</loc></url>
   <url><loc>https://ovidhan.net/word/feisty.html</loc></url>
   <url><loc>https://ovidhan.net/word/felicitation.html</loc></url>
   <url><loc>https://ovidhan.net/word/fellowship.html</loc></url>
@@ -832,6 +900,7 @@
   <url><loc>https://ovidhan.net/word/fictional.html</loc></url>
   <url><loc>https://ovidhan.net/word/fiercely.html</loc></url>
   <url><loc>https://ovidhan.net/word/filthy.html</loc></url>
+  <url><loc>https://ovidhan.net/word/finally.html</loc></url>
   <url><loc>https://ovidhan.net/word/financial.html</loc></url>
   <url><loc>https://ovidhan.net/word/findings.html</loc></url>
   <url><loc>https://ovidhan.net/word/firmly.html</loc></url>
@@ -906,6 +975,7 @@
   <url><loc>https://ovidhan.net/word/gentle.html</loc></url>
   <url><loc>https://ovidhan.net/word/gentleman.html</loc></url>
   <url><loc>https://ovidhan.net/word/gently.html</loc></url>
+  <url><loc>https://ovidhan.net/word/genuine.html</loc></url>
   <url><loc>https://ovidhan.net/word/geography.html</loc></url>
   <url><loc>https://ovidhan.net/word/getup.html</loc></url>
   <url><loc>https://ovidhan.net/word/ghost.html</loc></url>
@@ -935,7 +1005,9 @@
   <url><loc>https://ovidhan.net/word/granted.html</loc></url>
   <url><loc>https://ovidhan.net/word/grateful.html</loc></url>
   <url><loc>https://ovidhan.net/word/gratitude.html</loc></url>
+  <url><loc>https://ovidhan.net/word/gratuity.html</loc></url>
   <url><loc>https://ovidhan.net/word/graveyard.html</loc></url>
+  <url><loc>https://ovidhan.net/word/gravity.html</loc></url>
   <url><loc>https://ovidhan.net/word/gravy.html</loc></url>
   <url><loc>https://ovidhan.net/word/greater.html</loc></url>
   <url><loc>https://ovidhan.net/word/greatest.html</loc></url>
@@ -946,6 +1018,7 @@
   <url><loc>https://ovidhan.net/word/grieve.html</loc></url>
   <url><loc>https://ovidhan.net/word/grocery.html</loc></url>
   <url><loc>https://ovidhan.net/word/grow.html</loc></url>
+  <url><loc>https://ovidhan.net/word/grudge.html</loc></url>
   <url><loc>https://ovidhan.net/word/gruesome.html</loc></url>
   <url><loc>https://ovidhan.net/word/grumpy.html</loc></url>
   <url><loc>https://ovidhan.net/word/guarantee.html</loc></url>
@@ -968,6 +1041,7 @@
   <url><loc>https://ovidhan.net/word/hangout.html</loc></url>
   <url><loc>https://ovidhan.net/word/hanker.html</loc></url>
   <url><loc>https://ovidhan.net/word/happiness.html</loc></url>
+  <url><loc>https://ovidhan.net/word/harassment.html</loc></url>
   <url><loc>https://ovidhan.net/word/harmful.html</loc></url>
   <url><loc>https://ovidhan.net/word/harmonious.html</loc></url>
   <url><loc>https://ovidhan.net/word/harvest.html</loc></url>
@@ -976,6 +1050,8 @@
   <url><loc>https://ovidhan.net/word/hate.html</loc></url>
   <url><loc>https://ovidhan.net/word/haven.html</loc></url>
   <url><loc>https://ovidhan.net/word/hazardous.html</loc></url>
+  <url><loc>https://ovidhan.net/word/headache.html</loc></url>
+  <url><loc>https://ovidhan.net/word/heal.html</loc></url>
   <url><loc>https://ovidhan.net/word/hearing.html</loc></url>
   <url><loc>https://ovidhan.net/word/heartbeat.html</loc></url>
   <url><loc>https://ovidhan.net/word/heartless.html</loc></url>
@@ -988,6 +1064,7 @@
   <url><loc>https://ovidhan.net/word/hello.html</loc></url>
   <url><loc>https://ovidhan.net/word/hemisphere.html</loc></url>
   <url><loc>https://ovidhan.net/word/hen.html</loc></url>
+  <url><loc>https://ovidhan.net/word/hence.html</loc></url>
   <url><loc>https://ovidhan.net/word/heritage.html</loc></url>
   <url><loc>https://ovidhan.net/word/hesitation.html</loc></url>
   <url><loc>https://ovidhan.net/word/hi.html</loc></url>
@@ -1012,6 +1089,7 @@
   <url><loc>https://ovidhan.net/word/hop.html</loc></url>
   <url><loc>https://ovidhan.net/word/hope.html</loc></url>
   <url><loc>https://ovidhan.net/word/hopeless.html</loc></url>
+  <url><loc>https://ovidhan.net/word/horizontal.html</loc></url>
   <url><loc>https://ovidhan.net/word/horrible.html</loc></url>
   <url><loc>https://ovidhan.net/word/horticulture.html</loc></url>
   <url><loc>https://ovidhan.net/word/hospitality.html</loc></url>
@@ -1035,9 +1113,11 @@
   <url><loc>https://ovidhan.net/word/husking.html</loc></url>
   <url><loc>https://ovidhan.net/word/hut.html</loc></url>
   <url><loc>https://ovidhan.net/word/hygiene.html</loc></url>
+  <url><loc>https://ovidhan.net/word/hype.html</loc></url>
   <url><loc>https://ovidhan.net/word/hyperbole.html</loc></url>
   <url><loc>https://ovidhan.net/word/hypnotize.html</loc></url>
   <url><loc>https://ovidhan.net/word/hypocrite.html</loc></url>
+  <url><loc>https://ovidhan.net/word/hypothetical.html</loc></url>
   <url><loc>https://ovidhan.net/word/idiosyncratic.html</loc></url>
   <url><loc>https://ovidhan.net/word/idyllic.html</loc></url>
   <url><loc>https://ovidhan.net/word/ignite.html</loc></url>
@@ -1051,6 +1131,7 @@
   <url><loc>https://ovidhan.net/word/immediately.html</loc></url>
   <url><loc>https://ovidhan.net/word/immense.html</loc></url>
   <url><loc>https://ovidhan.net/word/immigrant.html</loc></url>
+  <url><loc>https://ovidhan.net/word/immigration.html</loc></url>
   <url><loc>https://ovidhan.net/word/imminent.html</loc></url>
   <url><loc>https://ovidhan.net/word/impact.html</loc></url>
   <url><loc>https://ovidhan.net/word/impaired.html</loc></url>
@@ -1111,6 +1192,7 @@
   <url><loc>https://ovidhan.net/word/inhuman.html</loc></url>
   <url><loc>https://ovidhan.net/word/inimical.html</loc></url>
   <url><loc>https://ovidhan.net/word/initially.html</loc></url>
+  <url><loc>https://ovidhan.net/word/initiative.html</loc></url>
   <url><loc>https://ovidhan.net/word/inner.html</loc></url>
   <url><loc>https://ovidhan.net/word/innocent.html</loc></url>
   <url><loc>https://ovidhan.net/word/innocuous.html</loc></url>
@@ -1127,6 +1209,7 @@
   <url><loc>https://ovidhan.net/word/inspired.html</loc></url>
   <url><loc>https://ovidhan.net/word/installment.html</loc></url>
   <url><loc>https://ovidhan.net/word/instant.html</loc></url>
+  <url><loc>https://ovidhan.net/word/instead.html</loc></url>
   <url><loc>https://ovidhan.net/word/institute.html</loc></url>
   <url><loc>https://ovidhan.net/word/instructor.html</loc></url>
   <url><loc>https://ovidhan.net/word/insufficient.html</loc></url>
@@ -1135,12 +1218,14 @@
   <url><loc>https://ovidhan.net/word/intangible.html</loc></url>
   <url><loc>https://ovidhan.net/word/integer.html</loc></url>
   <url><loc>https://ovidhan.net/word/intelligent.html</loc></url>
+  <url><loc>https://ovidhan.net/word/intense.html</loc></url>
   <url><loc>https://ovidhan.net/word/intensifier.html</loc></url>
   <url><loc>https://ovidhan.net/word/intentionally.html</loc></url>
   <url><loc>https://ovidhan.net/word/interact.html</loc></url>
   <url><loc>https://ovidhan.net/word/interaction.html</loc></url>
   <url><loc>https://ovidhan.net/word/interdisciplinary.html</loc></url>
   <url><loc>https://ovidhan.net/word/interesting.html</loc></url>
+  <url><loc>https://ovidhan.net/word/interim.html</loc></url>
   <url><loc>https://ovidhan.net/word/interior.html</loc></url>
   <url><loc>https://ovidhan.net/word/intermittent.html</loc></url>
   <url><loc>https://ovidhan.net/word/internal.html</loc></url>
@@ -1151,6 +1236,7 @@
   <url><loc>https://ovidhan.net/word/intimation.html</loc></url>
   <url><loc>https://ovidhan.net/word/intimidating.html</loc></url>
   <url><loc>https://ovidhan.net/word/intricate.html</loc></url>
+  <url><loc>https://ovidhan.net/word/intriguing.html</loc></url>
   <url><loc>https://ovidhan.net/word/intrinsic.html</loc></url>
   <url><loc>https://ovidhan.net/word/introduce.html</loc></url>
   <url><loc>https://ovidhan.net/word/introduction.html</loc></url>
@@ -1166,16 +1252,19 @@
   <url><loc>https://ovidhan.net/word/invincible.html</loc></url>
   <url><loc>https://ovidhan.net/word/invisible.html</loc></url>
   <url><loc>https://ovidhan.net/word/invitation.html</loc></url>
+  <url><loc>https://ovidhan.net/word/invoice.html</loc></url>
   <url><loc>https://ovidhan.net/word/irony.html</loc></url>
   <url><loc>https://ovidhan.net/word/irrelevant.html</loc></url>
   <url><loc>https://ovidhan.net/word/irreparable.html</loc></url>
   <url><loc>https://ovidhan.net/word/irreplaceable.html</loc></url>
   <url><loc>https://ovidhan.net/word/irresponsible.html</loc></url>
   <url><loc>https://ovidhan.net/word/irrigation.html</loc></url>
+  <url><loc>https://ovidhan.net/word/irritate.html</loc></url>
   <url><loc>https://ovidhan.net/word/irritated.html</loc></url>
   <url><loc>https://ovidhan.net/word/island.html</loc></url>
   <url><loc>https://ovidhan.net/word/issuance.html</loc></url>
   <url><loc>https://ovidhan.net/word/item.html</loc></url>
+  <url><loc>https://ovidhan.net/word/itinerary.html</loc></url>
   <url><loc>https://ovidhan.net/word/jealous.html</loc></url>
   <url><loc>https://ovidhan.net/word/jeep.html</loc></url>
   <url><loc>https://ovidhan.net/word/jeopardize.html</loc></url>
@@ -1221,6 +1310,7 @@
   <url><loc>https://ovidhan.net/word/leaving.html</loc></url>
   <url><loc>https://ovidhan.net/word/lecturer.html</loc></url>
   <url><loc>https://ovidhan.net/word/ledger.html</loc></url>
+  <url><loc>https://ovidhan.net/word/legend.html</loc></url>
   <url><loc>https://ovidhan.net/word/legendary.html</loc></url>
   <url><loc>https://ovidhan.net/word/legislature.html</loc></url>
   <url><loc>https://ovidhan.net/word/legitimacy.html</loc></url>
@@ -1266,12 +1356,15 @@
   <url><loc>https://ovidhan.net/word/longitudinal.html</loc></url>
   <url><loc>https://ovidhan.net/word/lord.html</loc></url>
   <url><loc>https://ovidhan.net/word/lore.html</loc></url>
+  <url><loc>https://ovidhan.net/word/loser.html</loc></url>
   <url><loc>https://ovidhan.net/word/lotus.html</loc></url>
   <url><loc>https://ovidhan.net/word/loud.html</loc></url>
   <url><loc>https://ovidhan.net/word/lounge.html</loc></url>
   <url><loc>https://ovidhan.net/word/love.html</loc></url>
   <url><loc>https://ovidhan.net/word/lovely.html</loc></url>
   <url><loc>https://ovidhan.net/word/loving.html</loc></url>
+  <url><loc>https://ovidhan.net/word/loyal.html</loc></url>
+  <url><loc>https://ovidhan.net/word/loyalty.html</loc></url>
   <url><loc>https://ovidhan.net/word/lubricant.html</loc></url>
   <url><loc>https://ovidhan.net/word/lucid.html</loc></url>
   <url><loc>https://ovidhan.net/word/luck.html</loc></url>
@@ -1293,6 +1386,7 @@
   <url><loc>https://ovidhan.net/word/malaise.html</loc></url>
   <url><loc>https://ovidhan.net/word/malicious.html</loc></url>
   <url><loc>https://ovidhan.net/word/manage.html</loc></url>
+  <url><loc>https://ovidhan.net/word/management.html</loc></url>
   <url><loc>https://ovidhan.net/word/mandatory.html</loc></url>
   <url><loc>https://ovidhan.net/word/mangold.html</loc></url>
   <url><loc>https://ovidhan.net/word/mangrove.html</loc></url>
@@ -1307,6 +1401,7 @@
   <url><loc>https://ovidhan.net/word/marginalization.html</loc></url>
   <url><loc>https://ovidhan.net/word/marinate.html</loc></url>
   <url><loc>https://ovidhan.net/word/mason.html</loc></url>
+  <url><loc>https://ovidhan.net/word/massacre.html</loc></url>
   <url><loc>https://ovidhan.net/word/masterpiece.html</loc></url>
   <url><loc>https://ovidhan.net/word/mat.html</loc></url>
   <url><loc>https://ovidhan.net/word/matching.html</loc></url>
@@ -1317,6 +1412,7 @@
   <url><loc>https://ovidhan.net/word/meal.html</loc></url>
   <url><loc>https://ovidhan.net/word/meaningful.html</loc></url>
   <url><loc>https://ovidhan.net/word/meaningless.html</loc></url>
+  <url><loc>https://ovidhan.net/word/meanwhile.html</loc></url>
   <url><loc>https://ovidhan.net/word/measurement.html</loc></url>
   <url><loc>https://ovidhan.net/word/mediation.html</loc></url>
   <url><loc>https://ovidhan.net/word/meditation.html</loc></url>
@@ -1341,8 +1437,10 @@
   <url><loc>https://ovidhan.net/word/merry.html</loc></url>
   <url><loc>https://ovidhan.net/word/mesmerizing.html</loc></url>
   <url><loc>https://ovidhan.net/word/messy.html</loc></url>
+  <url><loc>https://ovidhan.net/word/metabolism.html</loc></url>
   <url><loc>https://ovidhan.net/word/metamorphosis.html</loc></url>
   <url><loc>https://ovidhan.net/word/method.html</loc></url>
+  <url><loc>https://ovidhan.net/word/meticulous.html</loc></url>
   <url><loc>https://ovidhan.net/word/mid.html</loc></url>
   <url><loc>https://ovidhan.net/word/midst.html</loc></url>
   <url><loc>https://ovidhan.net/word/midwife.html</loc></url>
@@ -1373,6 +1471,7 @@
   <url><loc>https://ovidhan.net/word/moisture.html</loc></url>
   <url><loc>https://ovidhan.net/word/molasses.html</loc></url>
   <url><loc>https://ovidhan.net/word/mommy.html</loc></url>
+  <url><loc>https://ovidhan.net/word/monarch.html</loc></url>
   <url><loc>https://ovidhan.net/word/monday.html</loc></url>
   <url><loc>https://ovidhan.net/word/monitoring.html</loc></url>
   <url><loc>https://ovidhan.net/word/monologue.html</loc></url>
@@ -1381,15 +1480,19 @@
   <url><loc>https://ovidhan.net/word/monsoon.html</loc></url>
   <url><loc>https://ovidhan.net/word/month.html</loc></url>
   <url><loc>https://ovidhan.net/word/monument.html</loc></url>
+  <url><loc>https://ovidhan.net/word/mood.html</loc></url>
   <url><loc>https://ovidhan.net/word/moody.html</loc></url>
   <url><loc>https://ovidhan.net/word/moose.html</loc></url>
   <url><loc>https://ovidhan.net/word/mop.html</loc></url>
+  <url><loc>https://ovidhan.net/word/moral.html</loc></url>
   <url><loc>https://ovidhan.net/word/morality.html</loc></url>
+  <url><loc>https://ovidhan.net/word/mortgage.html</loc></url>
   <url><loc>https://ovidhan.net/word/motif.html</loc></url>
   <url><loc>https://ovidhan.net/word/motivate.html</loc></url>
   <url><loc>https://ovidhan.net/word/motivated.html</loc></url>
   <url><loc>https://ovidhan.net/word/motivation.html</loc></url>
   <url><loc>https://ovidhan.net/word/motto.html</loc></url>
+  <url><loc>https://ovidhan.net/word/mourn.html</loc></url>
   <url><loc>https://ovidhan.net/word/moxie.html</loc></url>
   <url><loc>https://ovidhan.net/word/muddy.html</loc></url>
   <url><loc>https://ovidhan.net/word/multidimensional.html</loc></url>
@@ -1410,6 +1513,7 @@
   <url><loc>https://ovidhan.net/word/nascent.html</loc></url>
   <url><loc>https://ovidhan.net/word/native.html</loc></url>
   <url><loc>https://ovidhan.net/word/nature.html</loc></url>
+  <url><loc>https://ovidhan.net/word/nausea.html</loc></url>
   <url><loc>https://ovidhan.net/word/nauseous.html</loc></url>
   <url><loc>https://ovidhan.net/word/navigate.html</loc></url>
   <url><loc>https://ovidhan.net/word/navigation.html</loc></url>
@@ -1426,10 +1530,12 @@
   <url><loc>https://ovidhan.net/word/nerd.html</loc></url>
   <url><loc>https://ovidhan.net/word/netiquette.html</loc></url>
   <url><loc>https://ovidhan.net/word/neutral.html</loc></url>
+  <url><loc>https://ovidhan.net/word/nexus.html</loc></url>
   <url><loc>https://ovidhan.net/word/nib.html</loc></url>
   <url><loc>https://ovidhan.net/word/niche.html</loc></url>
   <url><loc>https://ovidhan.net/word/niece.html</loc></url>
   <url><loc>https://ovidhan.net/word/nightingale.html</loc></url>
+  <url><loc>https://ovidhan.net/word/nightmare.html</loc></url>
   <url><loc>https://ovidhan.net/word/nil.html</loc></url>
   <url><loc>https://ovidhan.net/word/noble.html</loc></url>
   <url><loc>https://ovidhan.net/word/nocturnal.html</loc></url>
@@ -1446,6 +1552,7 @@
   <url><loc>https://ovidhan.net/word/nourish.html</loc></url>
   <url><loc>https://ovidhan.net/word/nuance.html</loc></url>
   <url><loc>https://ovidhan.net/word/nudge.html</loc></url>
+  <url><loc>https://ovidhan.net/word/nuisance.html</loc></url>
   <url><loc>https://ovidhan.net/word/numb.html</loc></url>
   <url><loc>https://ovidhan.net/word/numerical.html</loc></url>
   <url><loc>https://ovidhan.net/word/numerous.html</loc></url>
@@ -1461,7 +1568,9 @@
   <url><loc>https://ovidhan.net/word/observe.html</loc></url>
   <url><loc>https://ovidhan.net/word/obsessed.html</loc></url>
   <url><loc>https://ovidhan.net/word/obsession.html</loc></url>
+  <url><loc>https://ovidhan.net/word/obsolete.html</loc></url>
   <url><loc>https://ovidhan.net/word/obstruction.html</loc></url>
+  <url><loc>https://ovidhan.net/word/obtain.html</loc></url>
   <url><loc>https://ovidhan.net/word/obviously.html</loc></url>
   <url><loc>https://ovidhan.net/word/occasion.html</loc></url>
   <url><loc>https://ovidhan.net/word/occasionally.html</loc></url>
@@ -1477,8 +1586,10 @@
   <url><loc>https://ovidhan.net/word/omnipotent.html</loc></url>
   <url><loc>https://ovidhan.net/word/once.html</loc></url>
   <url><loc>https://ovidhan.net/word/ongoing.html</loc></url>
+  <url><loc>https://ovidhan.net/word/opaque.html</loc></url>
   <url><loc>https://ovidhan.net/word/operator.html</loc></url>
   <url><loc>https://ovidhan.net/word/opinion.html</loc></url>
+  <url><loc>https://ovidhan.net/word/oppression.html</loc></url>
   <url><loc>https://ovidhan.net/word/optimistic.html</loc></url>
   <url><loc>https://ovidhan.net/word/optimization.html</loc></url>
   <url><loc>https://ovidhan.net/word/optimize.html</loc></url>
@@ -1500,12 +1611,14 @@
   <url><loc>https://ovidhan.net/word/overview.html</loc></url>
   <url><loc>https://ovidhan.net/word/ovulation.html</loc></url>
   <url><loc>https://ovidhan.net/word/owl.html</loc></url>
+  <url><loc>https://ovidhan.net/word/own.html</loc></url>
   <url><loc>https://ovidhan.net/word/oxidation.html</loc></url>
   <url><loc>https://ovidhan.net/word/paid.html</loc></url>
   <url><loc>https://ovidhan.net/word/palatable.html</loc></url>
   <url><loc>https://ovidhan.net/word/pamper.html</loc></url>
   <url><loc>https://ovidhan.net/word/pampering.html</loc></url>
   <url><loc>https://ovidhan.net/word/panacea.html</loc></url>
+  <url><loc>https://ovidhan.net/word/pandemic.html</loc></url>
   <url><loc>https://ovidhan.net/word/panel.html</loc></url>
   <url><loc>https://ovidhan.net/word/panoramic.html</loc></url>
   <url><loc>https://ovidhan.net/word/pantry.html</loc></url>
@@ -1530,9 +1643,13 @@
   <url><loc>https://ovidhan.net/word/pavilion.html</loc></url>
   <url><loc>https://ovidhan.net/word/payroll.html</loc></url>
   <url><loc>https://ovidhan.net/word/peaceful.html</loc></url>
+  <url><loc>https://ovidhan.net/word/peacock.html</loc></url>
   <url><loc>https://ovidhan.net/word/peak.html</loc></url>
+  <url><loc>https://ovidhan.net/word/peasant.html</loc></url>
+  <url><loc>https://ovidhan.net/word/pedagogy.html</loc></url>
   <url><loc>https://ovidhan.net/word/pedantic.html</loc></url>
   <url><loc>https://ovidhan.net/word/pediatrician.html</loc></url>
+  <url><loc>https://ovidhan.net/word/pelvis.html</loc></url>
   <url><loc>https://ovidhan.net/word/pendant.html</loc></url>
   <url><loc>https://ovidhan.net/word/pending.html</loc></url>
   <url><loc>https://ovidhan.net/word/penguin.html</loc></url>
@@ -1541,9 +1658,11 @@
   <url><loc>https://ovidhan.net/word/percussion.html</loc></url>
   <url><loc>https://ovidhan.net/word/perennial.html</loc></url>
   <url><loc>https://ovidhan.net/word/perhaps.html</loc></url>
+  <url><loc>https://ovidhan.net/word/peripheral.html</loc></url>
   <url><loc>https://ovidhan.net/word/periphery.html</loc></url>
   <url><loc>https://ovidhan.net/word/perish.html</loc></url>
   <url><loc>https://ovidhan.net/word/perishable.html</loc></url>
+  <url><loc>https://ovidhan.net/word/permanent.html</loc></url>
   <url><loc>https://ovidhan.net/word/permeability.html</loc></url>
   <url><loc>https://ovidhan.net/word/perpendicular.html</loc></url>
   <url><loc>https://ovidhan.net/word/perpetrator.html</loc></url>
@@ -1558,6 +1677,7 @@
   <url><loc>https://ovidhan.net/word/pharmacist.html</loc></url>
   <url><loc>https://ovidhan.net/word/philanthropist.html</loc></url>
   <url><loc>https://ovidhan.net/word/philology.html</loc></url>
+  <url><loc>https://ovidhan.net/word/philosophy.html</loc></url>
   <url><loc>https://ovidhan.net/word/phoenix.html</loc></url>
   <url><loc>https://ovidhan.net/word/phonetics.html</loc></url>
   <url><loc>https://ovidhan.net/word/photogenic.html</loc></url>
@@ -1568,8 +1688,10 @@
   <url><loc>https://ovidhan.net/word/physiology.html</loc></url>
   <url><loc>https://ovidhan.net/word/picky.html</loc></url>
   <url><loc>https://ovidhan.net/word/pie.html</loc></url>
+  <url><loc>https://ovidhan.net/word/piercing.html</loc></url>
   <url><loc>https://ovidhan.net/word/pig.html</loc></url>
   <url><loc>https://ovidhan.net/word/pigeon.html</loc></url>
+  <url><loc>https://ovidhan.net/word/pigmentation.html</loc></url>
   <url><loc>https://ovidhan.net/word/piling.html</loc></url>
   <url><loc>https://ovidhan.net/word/pillion.html</loc></url>
   <url><loc>https://ovidhan.net/word/pimple.html</loc></url>
@@ -1578,6 +1700,7 @@
   <url><loc>https://ovidhan.net/word/pious.html</loc></url>
   <url><loc>https://ovidhan.net/word/pistachio.html</loc></url>
   <url><loc>https://ovidhan.net/word/pivotal.html</loc></url>
+  <url><loc>https://ovidhan.net/word/plagiarism.html</loc></url>
   <url><loc>https://ovidhan.net/word/plain.html</loc></url>
   <url><loc>https://ovidhan.net/word/planet.html</loc></url>
   <url><loc>https://ovidhan.net/word/plateau.html</loc></url>
@@ -1587,6 +1710,7 @@
   <url><loc>https://ovidhan.net/word/playful.html</loc></url>
   <url><loc>https://ovidhan.net/word/playground.html</loc></url>
   <url><loc>https://ovidhan.net/word/pledge.html</loc></url>
+  <url><loc>https://ovidhan.net/word/plenty.html</loc></url>
   <url><loc>https://ovidhan.net/word/plough.html</loc></url>
   <url><loc>https://ovidhan.net/word/plumber.html</loc></url>
   <url><loc>https://ovidhan.net/word/plumbing.html</loc></url>
@@ -1601,6 +1725,7 @@
   <url><loc>https://ovidhan.net/word/pond.html</loc></url>
   <url><loc>https://ovidhan.net/word/poor.html</loc></url>
   <url><loc>https://ovidhan.net/word/porch.html</loc></url>
+  <url><loc>https://ovidhan.net/word/pork.html</loc></url>
   <url><loc>https://ovidhan.net/word/porosity.html</loc></url>
   <url><loc>https://ovidhan.net/word/porridge.html</loc></url>
   <url><loc>https://ovidhan.net/word/porter.html</loc></url>
@@ -1626,9 +1751,11 @@
   <url><loc>https://ovidhan.net/word/predictable.html</loc></url>
   <url><loc>https://ovidhan.net/word/predominantly.html</loc></url>
   <url><loc>https://ovidhan.net/word/preferable.html</loc></url>
+  <url><loc>https://ovidhan.net/word/prejudice.html</loc></url>
   <url><loc>https://ovidhan.net/word/premature.html</loc></url>
   <url><loc>https://ovidhan.net/word/premises.html</loc></url>
   <url><loc>https://ovidhan.net/word/premium.html</loc></url>
+  <url><loc>https://ovidhan.net/word/prerequisite.html</loc></url>
   <url><loc>https://ovidhan.net/word/presence.html</loc></url>
   <url><loc>https://ovidhan.net/word/prestige.html</loc></url>
   <url><loc>https://ovidhan.net/word/prestigious.html</loc></url>
@@ -1637,6 +1764,7 @@
   <url><loc>https://ovidhan.net/word/pretty.html</loc></url>
   <url><loc>https://ovidhan.net/word/prevailing.html</loc></url>
   <url><loc>https://ovidhan.net/word/prevalent.html</loc></url>
+  <url><loc>https://ovidhan.net/word/prevent.html</loc></url>
   <url><loc>https://ovidhan.net/word/prey.html</loc></url>
   <url><loc>https://ovidhan.net/word/price.html</loc></url>
   <url><loc>https://ovidhan.net/word/priceless.html</loc></url>
@@ -1651,6 +1779,7 @@
   <url><loc>https://ovidhan.net/word/procedure.html</loc></url>
   <url><loc>https://ovidhan.net/word/proceed.html</loc></url>
   <url><loc>https://ovidhan.net/word/proclamation.html</loc></url>
+  <url><loc>https://ovidhan.net/word/procrastination.html</loc></url>
   <url><loc>https://ovidhan.net/word/procurement.html</loc></url>
   <url><loc>https://ovidhan.net/word/prodigious.html</loc></url>
   <url><loc>https://ovidhan.net/word/produce.html</loc></url>
@@ -1660,6 +1789,7 @@
   <url><loc>https://ovidhan.net/word/proletariat.html</loc></url>
   <url><loc>https://ovidhan.net/word/prolific.html</loc></url>
   <url><loc>https://ovidhan.net/word/prom.html</loc></url>
+  <url><loc>https://ovidhan.net/word/prominent.html</loc></url>
   <url><loc>https://ovidhan.net/word/prompt.html</loc></url>
   <url><loc>https://ovidhan.net/word/promptly.html</loc></url>
   <url><loc>https://ovidhan.net/word/pronounce.html</loc></url>
@@ -1669,6 +1799,7 @@
   <url><loc>https://ovidhan.net/word/property.html</loc></url>
   <url><loc>https://ovidhan.net/word/proponent.html</loc></url>
   <url><loc>https://ovidhan.net/word/prose.html</loc></url>
+  <url><loc>https://ovidhan.net/word/prosecution.html</loc></url>
   <url><loc>https://ovidhan.net/word/prosecutor.html</loc></url>
   <url><loc>https://ovidhan.net/word/prospective.html</loc></url>
   <url><loc>https://ovidhan.net/word/prospectus.html</loc></url>
@@ -1705,11 +1836,13 @@
   <url><loc>https://ovidhan.net/word/puzzled.html</loc></url>
   <url><loc>https://ovidhan.net/word/quantitative.html</loc></url>
   <url><loc>https://ovidhan.net/word/quench.html</loc></url>
+  <url><loc>https://ovidhan.net/word/query.html</loc></url>
   <url><loc>https://ovidhan.net/word/quietly.html</loc></url>
   <url><loc>https://ovidhan.net/word/quintessential.html</loc></url>
   <url><loc>https://ovidhan.net/word/quite.html</loc></url>
   <url><loc>https://ovidhan.net/word/quorum.html</loc></url>
   <url><loc>https://ovidhan.net/word/race.html</loc></url>
+  <url><loc>https://ovidhan.net/word/racist.html</loc></url>
   <url><loc>https://ovidhan.net/word/radiant.html</loc></url>
   <url><loc>https://ovidhan.net/word/radius.html</loc></url>
   <url><loc>https://ovidhan.net/word/random.html</loc></url>
@@ -1734,6 +1867,7 @@
   <url><loc>https://ovidhan.net/word/reasonable.html</loc></url>
   <url><loc>https://ovidhan.net/word/rebellion.html</loc></url>
   <url><loc>https://ovidhan.net/word/reboot.html</loc></url>
+  <url><loc>https://ovidhan.net/word/rebuke.html</loc></url>
   <url><loc>https://ovidhan.net/word/recalcitrant.html</loc></url>
   <url><loc>https://ovidhan.net/word/recall.html</loc></url>
   <url><loc>https://ovidhan.net/word/received.html</loc></url>
@@ -1754,12 +1888,14 @@
   <url><loc>https://ovidhan.net/word/reddish.html</loc></url>
   <url><loc>https://ovidhan.net/word/reduce.html</loc></url>
   <url><loc>https://ovidhan.net/word/reduction.html</loc></url>
+  <url><loc>https://ovidhan.net/word/redundant.html</loc></url>
   <url><loc>https://ovidhan.net/word/referendum.html</loc></url>
   <url><loc>https://ovidhan.net/word/refrain.html</loc></url>
   <url><loc>https://ovidhan.net/word/refresh.html</loc></url>
   <url><loc>https://ovidhan.net/word/refreshment.html</loc></url>
   <url><loc>https://ovidhan.net/word/refuse.html</loc></url>
   <url><loc>https://ovidhan.net/word/regain.html</loc></url>
+  <url><loc>https://ovidhan.net/word/regardless.html</loc></url>
   <url><loc>https://ovidhan.net/word/region.html</loc></url>
   <url><loc>https://ovidhan.net/word/regional.html</loc></url>
   <url><loc>https://ovidhan.net/word/regret.html</loc></url>
@@ -1781,6 +1917,7 @@
   <url><loc>https://ovidhan.net/word/reluctant.html</loc></url>
   <url><loc>https://ovidhan.net/word/remain.html</loc></url>
   <url><loc>https://ovidhan.net/word/remaining.html</loc></url>
+  <url><loc>https://ovidhan.net/word/reminder.html</loc></url>
   <url><loc>https://ovidhan.net/word/remnant.html</loc></url>
   <url><loc>https://ovidhan.net/word/remorse.html</loc></url>
   <url><loc>https://ovidhan.net/word/remote.html</loc></url>
@@ -1821,6 +1958,7 @@
   <url><loc>https://ovidhan.net/word/return.html</loc></url>
   <url><loc>https://ovidhan.net/word/reunion.html</loc></url>
   <url><loc>https://ovidhan.net/word/reuse.html</loc></url>
+  <url><loc>https://ovidhan.net/word/revenge.html</loc></url>
   <url><loc>https://ovidhan.net/word/reverie.html</loc></url>
   <url><loc>https://ovidhan.net/word/reversal.html</loc></url>
   <url><loc>https://ovidhan.net/word/revised.html</loc></url>
@@ -1902,6 +2040,7 @@
   <url><loc>https://ovidhan.net/word/secure.html</loc></url>
   <url><loc>https://ovidhan.net/word/sedentary.html</loc></url>
   <url><loc>https://ovidhan.net/word/seductive.html</loc></url>
+  <url><loc>https://ovidhan.net/word/segregation.html</loc></url>
   <url><loc>https://ovidhan.net/word/seldom.html</loc></url>
   <url><loc>https://ovidhan.net/word/select.html</loc></url>
   <url><loc>https://ovidhan.net/word/selected.html</loc></url>
@@ -1937,6 +2076,7 @@
   <url><loc>https://ovidhan.net/word/shepherd.html</loc></url>
   <url><loc>https://ovidhan.net/word/shiny.html</loc></url>
   <url><loc>https://ovidhan.net/word/shipment.html</loc></url>
+  <url><loc>https://ovidhan.net/word/shivering.html</loc></url>
   <url><loc>https://ovidhan.net/word/shocked.html</loc></url>
   <url><loc>https://ovidhan.net/word/shopkeeper.html</loc></url>
   <url><loc>https://ovidhan.net/word/shower.html</loc></url>
@@ -1969,6 +2109,7 @@
   <url><loc>https://ovidhan.net/word/slab.html</loc></url>
   <url><loc>https://ovidhan.net/word/slap.html</loc></url>
   <url><loc>https://ovidhan.net/word/slayer.html</loc></url>
+  <url><loc>https://ovidhan.net/word/sleeve.html</loc></url>
   <url><loc>https://ovidhan.net/word/slide.html</loc></url>
   <url><loc>https://ovidhan.net/word/slightly.html</loc></url>
   <url><loc>https://ovidhan.net/word/slim.html</loc></url>
@@ -1998,11 +2139,14 @@
   <url><loc>https://ovidhan.net/word/somehow.html</loc></url>
   <url><loc>https://ovidhan.net/word/son.html</loc></url>
   <url><loc>https://ovidhan.net/word/soothe.html</loc></url>
+  <url><loc>https://ovidhan.net/word/soothing.html</loc></url>
   <url><loc>https://ovidhan.net/word/sophisticated.html</loc></url>
   <url><loc>https://ovidhan.net/word/sorrow.html</loc></url>
   <url><loc>https://ovidhan.net/word/sorry.html</loc></url>
   <url><loc>https://ovidhan.net/word/source.html</loc></url>
   <url><loc>https://ovidhan.net/word/souvenir.html</loc></url>
+  <url><loc>https://ovidhan.net/word/sovereign.html</loc></url>
+  <url><loc>https://ovidhan.net/word/sovereignty.html</loc></url>
   <url><loc>https://ovidhan.net/word/sow.html</loc></url>
   <url><loc>https://ovidhan.net/word/spa.html</loc></url>
   <url><loc>https://ovidhan.net/word/spacecraft.html</loc></url>
@@ -2023,10 +2167,13 @@
   <url><loc>https://ovidhan.net/word/specious.html</loc></url>
   <url><loc>https://ovidhan.net/word/speechless.html</loc></url>
   <url><loc>https://ovidhan.net/word/spelling.html</loc></url>
+  <url><loc>https://ovidhan.net/word/spend.html</loc></url>
   <url><loc>https://ovidhan.net/word/sphere.html</loc></url>
   <url><loc>https://ovidhan.net/word/spherical.html</loc></url>
   <url><loc>https://ovidhan.net/word/spinach.html</loc></url>
   <url><loc>https://ovidhan.net/word/splash.html</loc></url>
+  <url><loc>https://ovidhan.net/word/spleen.html</loc></url>
+  <url><loc>https://ovidhan.net/word/splendid.html</loc></url>
   <url><loc>https://ovidhan.net/word/sponsor.html</loc></url>
   <url><loc>https://ovidhan.net/word/spontaneity.html</loc></url>
   <url><loc>https://ovidhan.net/word/spontaneous.html</loc></url>
@@ -2082,6 +2229,8 @@
   <url><loc>https://ovidhan.net/word/stretching.html</loc></url>
   <url><loc>https://ovidhan.net/word/strictly.html</loc></url>
   <url><loc>https://ovidhan.net/word/striking.html</loc></url>
+  <url><loc>https://ovidhan.net/word/strive.html</loc></url>
+  <url><loc>https://ovidhan.net/word/stubborn.html</loc></url>
   <url><loc>https://ovidhan.net/word/studying.html</loc></url>
   <url><loc>https://ovidhan.net/word/subconscious.html</loc></url>
   <url><loc>https://ovidhan.net/word/subliminal.html</loc></url>
@@ -2093,9 +2242,11 @@
   <url><loc>https://ovidhan.net/word/subtract.html</loc></url>
   <url><loc>https://ovidhan.net/word/subtraction.html</loc></url>
   <url><loc>https://ovidhan.net/word/succeed.html</loc></url>
+  <url><loc>https://ovidhan.net/word/succumb.html</loc></url>
   <url><loc>https://ovidhan.net/word/suddenly.html</loc></url>
   <url><loc>https://ovidhan.net/word/sue.html</loc></url>
   <url><loc>https://ovidhan.net/word/sufficient.html</loc></url>
+  <url><loc>https://ovidhan.net/word/suffocation.html</loc></url>
   <url><loc>https://ovidhan.net/word/suitable.html</loc></url>
   <url><loc>https://ovidhan.net/word/suitor.html</loc></url>
   <url><loc>https://ovidhan.net/word/sumptuous.html</loc></url>
@@ -2108,6 +2259,7 @@
   <url><loc>https://ovidhan.net/word/superficial.html</loc></url>
   <url><loc>https://ovidhan.net/word/superintendent.html</loc></url>
   <url><loc>https://ovidhan.net/word/supervisor.html</loc></url>
+  <url><loc>https://ovidhan.net/word/supper.html</loc></url>
   <url><loc>https://ovidhan.net/word/supplier.html</loc></url>
   <url><loc>https://ovidhan.net/word/supportive.html</loc></url>
   <url><loc>https://ovidhan.net/word/supremacy.html</loc></url>
@@ -2125,6 +2277,7 @@
   <url><loc>https://ovidhan.net/word/survive.html</loc></url>
   <url><loc>https://ovidhan.net/word/suspense.html</loc></url>
   <url><loc>https://ovidhan.net/word/suspension.html</loc></url>
+  <url><loc>https://ovidhan.net/word/suspicious.html</loc></url>
   <url><loc>https://ovidhan.net/word/sustain.html</loc></url>
   <url><loc>https://ovidhan.net/word/sustainability.html</loc></url>
   <url><loc>https://ovidhan.net/word/sustainable.html</loc></url>
@@ -2132,6 +2285,7 @@
   <url><loc>https://ovidhan.net/word/swarm.html</loc></url>
   <url><loc>https://ovidhan.net/word/swatch.html</loc></url>
   <url><loc>https://ovidhan.net/word/sweating.html</loc></url>
+  <url><loc>https://ovidhan.net/word/swelling.html</loc></url>
   <url><loc>https://ovidhan.net/word/sweltering.html</loc></url>
   <url><loc>https://ovidhan.net/word/sword.html</loc></url>
   <url><loc>https://ovidhan.net/word/sycophant.html</loc></url>
@@ -2186,6 +2340,7 @@
   <url><loc>https://ovidhan.net/word/tensed.html</loc></url>
   <url><loc>https://ovidhan.net/word/tentative.html</loc></url>
   <url><loc>https://ovidhan.net/word/tenuous.html</loc></url>
+  <url><loc>https://ovidhan.net/word/tenure.html</loc></url>
   <url><loc>https://ovidhan.net/word/terminate.html</loc></url>
   <url><loc>https://ovidhan.net/word/terminator.html</loc></url>
   <url><loc>https://ovidhan.net/word/terminology.html</loc></url>
@@ -2201,6 +2356,7 @@
   <url><loc>https://ovidhan.net/word/testy.html</loc></url>
   <url><loc>https://ovidhan.net/word/theft.html</loc></url>
   <url><loc>https://ovidhan.net/word/theme.html</loc></url>
+  <url><loc>https://ovidhan.net/word/therefore.html</loc></url>
   <url><loc>https://ovidhan.net/word/thesis.html</loc></url>
   <url><loc>https://ovidhan.net/word/thick.html</loc></url>
   <url><loc>https://ovidhan.net/word/thickness.html</loc></url>
@@ -2209,6 +2365,7 @@
   <url><loc>https://ovidhan.net/word/things.html</loc></url>
   <url><loc>https://ovidhan.net/word/thirsty.html</loc></url>
   <url><loc>https://ovidhan.net/word/tho.html</loc></url>
+  <url><loc>https://ovidhan.net/word/thoroughly.html</loc></url>
   <url><loc>https://ovidhan.net/word/thou.html</loc></url>
   <url><loc>https://ovidhan.net/word/thousand.html</loc></url>
   <url><loc>https://ovidhan.net/word/thread.html</loc></url>
@@ -2229,6 +2386,7 @@
   <url><loc>https://ovidhan.net/word/tier.html</loc></url>
   <url><loc>https://ovidhan.net/word/timber.html</loc></url>
   <url><loc>https://ovidhan.net/word/timeline.html</loc></url>
+  <url><loc>https://ovidhan.net/word/tingling.html</loc></url>
   <url><loc>https://ovidhan.net/word/tired.html</loc></url>
   <url><loc>https://ovidhan.net/word/tiring.html</loc></url>
   <url><loc>https://ovidhan.net/word/toddler.html</loc></url>
@@ -2255,9 +2413,11 @@
   <url><loc>https://ovidhan.net/word/trance.html</loc></url>
   <url><loc>https://ovidhan.net/word/tranquility.html</loc></url>
   <url><loc>https://ovidhan.net/word/transaction.html</loc></url>
+  <url><loc>https://ovidhan.net/word/transcript.html</loc></url>
   <url><loc>https://ovidhan.net/word/transition.html</loc></url>
   <url><loc>https://ovidhan.net/word/translucent.html</loc></url>
   <url><loc>https://ovidhan.net/word/transverse.html</loc></url>
+  <url><loc>https://ovidhan.net/word/trauma.html</loc></url>
   <url><loc>https://ovidhan.net/word/treasurer.html</loc></url>
   <url><loc>https://ovidhan.net/word/treaty.html</loc></url>
   <url><loc>https://ovidhan.net/word/trembling.html</loc></url>
@@ -2265,6 +2425,7 @@
   <url><loc>https://ovidhan.net/word/triage.html</loc></url>
   <url><loc>https://ovidhan.net/word/tribal.html</loc></url>
   <url><loc>https://ovidhan.net/word/tribunal.html</loc></url>
+  <url><loc>https://ovidhan.net/word/tribute.html</loc></url>
   <url><loc>https://ovidhan.net/word/trio.html</loc></url>
   <url><loc>https://ovidhan.net/word/trip.html</loc></url>
   <url><loc>https://ovidhan.net/word/triple.html</loc></url>
@@ -2282,6 +2443,7 @@
   <url><loc>https://ovidhan.net/word/tumultuous.html</loc></url>
   <url><loc>https://ovidhan.net/word/tune.html</loc></url>
   <url><loc>https://ovidhan.net/word/turbidity.html</loc></url>
+  <url><loc>https://ovidhan.net/word/turmeric.html</loc></url>
   <url><loc>https://ovidhan.net/word/turnip.html</loc></url>
   <url><loc>https://ovidhan.net/word/tutorial.html</loc></url>
   <url><loc>https://ovidhan.net/word/twice.html</loc></url>
@@ -2299,6 +2461,7 @@
   <url><loc>https://ovidhan.net/word/undefined.html</loc></url>
   <url><loc>https://ovidhan.net/word/underestimate.html</loc></url>
   <url><loc>https://ovidhan.net/word/undergo.html</loc></url>
+  <url><loc>https://ovidhan.net/word/underscore.html</loc></url>
   <url><loc>https://ovidhan.net/word/undisputed.html</loc></url>
   <url><loc>https://ovidhan.net/word/undoubtedly.html</loc></url>
   <url><loc>https://ovidhan.net/word/uneasy.html</loc></url>
@@ -2318,6 +2481,7 @@
   <url><loc>https://ovidhan.net/word/unisex.html</loc></url>
   <url><loc>https://ovidhan.net/word/unit.html</loc></url>
   <url><loc>https://ovidhan.net/word/universal.html</loc></url>
+  <url><loc>https://ovidhan.net/word/universe.html</loc></url>
   <url><loc>https://ovidhan.net/word/unknown.html</loc></url>
   <url><loc>https://ovidhan.net/word/unnecessary.html</loc></url>
   <url><loc>https://ovidhan.net/word/unparalleled.html</loc></url>
@@ -2347,8 +2511,10 @@
   <url><loc>https://ovidhan.net/word/utility.html</loc></url>
   <url><loc>https://ovidhan.net/word/utilization.html</loc></url>
   <url><loc>https://ovidhan.net/word/utterly.html</loc></url>
+  <url><loc>https://ovidhan.net/word/vacancy.html</loc></url>
   <url><loc>https://ovidhan.net/word/vacant.html</loc></url>
   <url><loc>https://ovidhan.net/word/vague.html</loc></url>
+  <url><loc>https://ovidhan.net/word/vain.html</loc></url>
   <url><loc>https://ovidhan.net/word/valentine.html</loc></url>
   <url><loc>https://ovidhan.net/word/valid.html</loc></url>
   <url><loc>https://ovidhan.net/word/validation.html</loc></url>
@@ -2372,6 +2538,7 @@
   <url><loc>https://ovidhan.net/word/verse.html</loc></url>
   <url><loc>https://ovidhan.net/word/version.html</loc></url>
   <url><loc>https://ovidhan.net/word/vertex.html</loc></url>
+  <url><loc>https://ovidhan.net/word/vessel.html</loc></url>
   <url><loc>https://ovidhan.net/word/vibe.html</loc></url>
   <url><loc>https://ovidhan.net/word/vibes.html</loc></url>
   <url><loc>https://ovidhan.net/word/vibrant.html</loc></url>
@@ -2384,6 +2551,8 @@
   <url><loc>https://ovidhan.net/word/villain.html</loc></url>
   <url><loc>https://ovidhan.net/word/vindictive.html</loc></url>
   <url><loc>https://ovidhan.net/word/vineyard.html</loc></url>
+  <url><loc>https://ovidhan.net/word/violence.html</loc></url>
+  <url><loc>https://ovidhan.net/word/violet.html</loc></url>
   <url><loc>https://ovidhan.net/word/virgo.html</loc></url>
   <url><loc>https://ovidhan.net/word/virtual.html</loc></url>
   <url><loc>https://ovidhan.net/word/visible.html</loc></url>
@@ -2400,6 +2569,7 @@
   <url><loc>https://ovidhan.net/word/vote.html</loc></url>
   <url><loc>https://ovidhan.net/word/voucher.html</loc></url>
   <url><loc>https://ovidhan.net/word/vowel.html</loc></url>
+  <url><loc>https://ovidhan.net/word/vulnerability.html</loc></url>
   <url><loc>https://ovidhan.net/word/vulnerable.html</loc></url>
   <url><loc>https://ovidhan.net/word/vulture.html</loc></url>
   <url><loc>https://ovidhan.net/word/wade.html</loc></url>
@@ -2410,6 +2580,7 @@
   <url><loc>https://ovidhan.net/word/wanderlust.html</loc></url>
   <url><loc>https://ovidhan.net/word/want.html</loc></url>
   <url><loc>https://ovidhan.net/word/war.html</loc></url>
+  <url><loc>https://ovidhan.net/word/warehouse.html</loc></url>
   <url><loc>https://ovidhan.net/word/warm.html</loc></url>
   <url><loc>https://ovidhan.net/word/warmly.html</loc></url>
   <url><loc>https://ovidhan.net/word/warmth.html</loc></url>
@@ -2422,6 +2593,8 @@
   <url><loc>https://ovidhan.net/word/weary.html</loc></url>
   <url><loc>https://ovidhan.net/word/wednesday.html</loc></url>
   <url><loc>https://ovidhan.net/word/weed.html</loc></url>
+  <url><loc>https://ovidhan.net/word/week.html</loc></url>
+  <url><loc>https://ovidhan.net/word/weekend.html</loc></url>
   <url><loc>https://ovidhan.net/word/weep.html</loc></url>
   <url><loc>https://ovidhan.net/word/weight.html</loc></url>
   <url><loc>https://ovidhan.net/word/weird.html</loc></url>
@@ -2443,6 +2616,7 @@
   <url><loc>https://ovidhan.net/word/wink.html</loc></url>
   <url><loc>https://ovidhan.net/word/wisely.html</loc></url>
   <url><loc>https://ovidhan.net/word/witty.html</loc></url>
+  <url><loc>https://ovidhan.net/word/wizard.html</loc></url>
   <url><loc>https://ovidhan.net/word/wonderful.html</loc></url>
   <url><loc>https://ovidhan.net/word/wont.html</loc></url>
   <url><loc>https://ovidhan.net/word/wood.html</loc></url>

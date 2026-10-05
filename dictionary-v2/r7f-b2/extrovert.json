@@ -1,0 +1,57 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "extrovert",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/extrovert.html",
+      "source_page_sha256_lf": "b485f09f36ccb73f2f99b8679bedbc3fdc374f681593561291be7abcf2056596",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "যে মানুষের মাঝে থাকতে ও কথা বলতে স্বস্তি পায়।"
+      },
+      "bangla_meaning": {
+        "display": "বহির্মুখী",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "(psychology) a person concerned more with practical realities than with inner thoughts and feelings",
+        "origin": "OEWN_GLOSS",
+        "text": "(psychology) a person concerned more with practical realities than with inner thoughts and feelings"
+      },
+      "examples": [
+        {
+          "bn": "বহির্মুখী ছেলেটি সারা ক্লাসের জন্য খেলা সাজাল।",
+          "en": "The extrovert organized games for the whole class.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "noun",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "08598234-n",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    }
+  ],
+  "slug": "extrovert"
+}

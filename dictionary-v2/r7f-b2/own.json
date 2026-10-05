@@ -1,0 +1,85 @@
+{
+  "attribution": {
+    "definition_source": "Open English WordNet 2025",
+    "editorial_statement": "Bangla explanation and examples adapted and written for Ovidhan.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_url": "https://en-word.net/"
+  },
+  "headword": "own",
+  "provenance": {
+    "oewn": {
+      "archive_sha256": "38b16326159f51853626b7d24a44c453fa88ab33f06fce5ec8fc5996d1c2be93",
+      "provenance_file": "dictionary-v2/oewn-2025-provenance.json",
+      "release": "2025"
+    },
+    "v1_migration": {
+      "batch": "SEO-R7F-BATCH2-174",
+      "source_page": "word/own.html",
+      "source_page_sha256_lf": "5440931a3b3a31dce8f50dca381704216bc18152cc1c7eb95530c8c8841e0dde",
+      "tool": "scripts/dictionary-v2/r7f-b2.js"
+    }
+  },
+  "record_status": "V1_MIGRATION",
+  "schema_version": "1.0.0",
+  "senses": [
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "অন্য কারো নয়, ওই ব্যক্তির।"
+      },
+      "bangla_meaning": {
+        "display": "নিজের",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "belonging to or on behalf of a specified person (especially yourself); preceded by a possessive",
+        "origin": "OEWN_GLOSS",
+        "text": "belonging to or on behalf of a specified person (especially yourself); preceded by a possessive"
+      },
+      "examples": [
+        {
+          "bn": "সে নিজের সরঞ্জাম দিয়ে তাক বানাল।",
+          "en": "She built the shelf with her own tools.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "adjective",
+      "sense_id": "s1",
+      "source": {
+        "synset_id": "01779755-a",
+        "type": "OEWN_2025"
+      },
+      "v1_primary": true
+    },
+    {
+      "bangla_explanation": {
+        "origin": "OVIDHAN_EDITORIAL",
+        "text": "কিছুর বৈধ দখল বা মালিকানা থাকা।"
+      },
+      "bangla_meaning": {
+        "display": "মালিক হওয়া",
+        "origin": "OVIDHAN_EDITORIAL"
+      },
+      "definition": {
+        "oewn_definition": "have ownership or possession of",
+        "origin": "OEWN_GLOSS",
+        "text": "have ownership or possession of"
+      },
+      "examples": [
+        {
+          "bn": "কোণের দোকানটির মালিক তারা।",
+          "en": "They own the shop on the corner.",
+          "origin": "OVIDHAN_EDITORIAL"
+        }
+      ],
+      "pos": "verb",
+      "sense_id": "s2",
+      "source": {
+        "synset_id": "02271338-v",
+        "type": "OEWN_2025"
+      }
+    }
+  ],
+  "slug": "own"
+}
