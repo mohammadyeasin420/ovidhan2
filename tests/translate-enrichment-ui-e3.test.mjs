@@ -210,7 +210,7 @@ scenario('word count, dictionary hash, and released phrases unchanged', () => {
     }
 });
 
-scenario('E1 asset still deterministic and E1 tests pass except authorized translate.html dirty check', () => {
+scenario('E1 asset remains deterministic and E1 suite stays green', () => {
     const builder = require('../scripts/translate/build-enrichment-v1.js');
     const first = builder.build({ root, write: false });
     const second = builder.build({ root, write: false });
@@ -218,20 +218,18 @@ scenario('E1 asset still deterministic and E1 tests pass except authorized trans
     assert.equal(first.report.sha256, E1_SHA);
     assert.equal(first.text, fs.readFileSync(e1Path, 'utf8'));
 
-    let e1Output = '';
-    try {
-        e1Output = execFileSync(process.execPath, [path.join(root, 'tests', 'translate-enrichment-e1.test.mjs')], {
+    const e1Output = execFileSync(
+        process.execPath,
+        [path.join(root, 'tests', 'translate-enrichment-e1.test.mjs')],
+        {
             cwd: root,
             encoding: 'utf8'
-        });
-        assert.fail('E1 suite unexpectedly fully green while translate.html is intentionally modified');
-    } catch (error) {
-        const text = String(error.stdout || '') + String(error.stderr || '');
-        assert.match(text, /FAIL E1 does not modify protected product files|translate\.html/);
-        assert.match(text, /PASS generated JSON parses/);
-        assert.match(text, /PASS deterministic generation/);
-    }
-    void e1Output;
+        }
+    );
+
+    assert.match(e1Output, /PASS generated JSON parses/);
+    assert.match(e1Output, /PASS deterministic generation/);
+    assert.match(e1Output, /PASS E1 does not modify protected product files/);
 });
 
 console.log('All Phase-E3 translate enrichment UI checks passed.');
