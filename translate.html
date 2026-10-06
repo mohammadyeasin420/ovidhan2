@@ -129,6 +129,54 @@
         .status-line.is-error { color: #ffb4b4; }
         .status-line.is-loading { color: var(--teal); }
         #errorBox[hidden] { display: none !important; }
+        .learning-panel {
+            margin-top: 0.75rem; padding: 0.65rem 0.75rem 0.7rem;
+            border: 1px solid var(--border); border-radius: 10px;
+            background: rgba(18, 40, 32, 0.55);
+        }
+        .learning-panel[hidden] { display: none !important; }
+        .learning-panel > h3 {
+            font-family: var(--font-en); font-size: 0.82rem; font-weight: 600;
+            letter-spacing: 0.03em; text-transform: uppercase; color: var(--text-mid);
+            margin: 0 0 0.45rem;
+        }
+        .learning-block { margin: 0 0 0.45rem; }
+        .learning-block:last-child { margin-bottom: 0; }
+        .learning-block[hidden] { display: none !important; }
+        .learning-block > h4 {
+            font-family: var(--font-en); font-size: 0.78rem; font-weight: 600;
+            color: var(--teal); margin: 0 0 0.35rem;
+        }
+        .learning-list {
+            list-style: none; margin: 0; padding: 0;
+            display: flex; flex-direction: column; gap: 0.35rem;
+        }
+        .learning-item {
+            display: grid; grid-template-columns: 1fr auto; gap: 0.15rem 0.75rem;
+            align-items: baseline; padding: 0.35rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .learning-item:first-child { border-top: none; padding-top: 0; }
+        .learning-term {
+            font-family: var(--font-en); font-size: 0.95rem; font-weight: 600; color: var(--text);
+        }
+        .learning-bn {
+            font-family: var(--font-bn); font-size: 0.92rem; color: var(--text-mid); line-height: 1.35;
+        }
+        .learning-pos {
+            font-family: var(--font-en); font-size: 0.75rem; color: var(--text-soft);
+            text-transform: lowercase;
+        }
+        .learning-link {
+            grid-column: 2; grid-row: 1 / span 3; align-self: center;
+            font-family: var(--font-en); font-size: 0.82rem; color: var(--gold);
+            text-decoration: none; white-space: nowrap;
+        }
+        .learning-link:hover { color: var(--teal); text-decoration: underline; }
+        @media (max-width: 720px) {
+            .learning-item { grid-template-columns: 1fr; gap: 0.1rem; }
+            .learning-link { grid-column: 1; grid-row: auto; margin-top: 0.15rem; }
+        }
         .learning-note {
             margin-top: 0.7rem; padding: 0.6rem 0.8rem; border-radius: 10px;
             background: var(--gold-dim); color: var(--text-mid); font-size: 0.88rem; line-height: 1.45;
@@ -307,6 +355,19 @@
             <p class="status-line" id="statusLine" role="status"></p>
         </div>
         <div id="errorBox" class="status-line is-error" role="alert" hidden></div>
+
+        <section id="learningPanel" class="learning-panel" hidden aria-labelledby="learningHeading">
+            <h3 id="learningHeading">Learn from this translation</h3>
+            <div id="keyWordsBlock" class="learning-block" hidden>
+                <h4 id="keyWordsHeading">Key words</h4>
+                <ul id="keyWordsList" class="learning-list"></ul>
+            </div>
+            <div id="phrasesBlock" class="learning-block" hidden>
+                <h4 id="phrasesHeading">Related phrases</h4>
+                <ul id="phrasesList" class="learning-list"></ul>
+            </div>
+        </section>
+
         <p class="learning-note">
             Want more than a quick translation? Explore the
             <a href="/dictionary.html">Ovidhan dictionary</a>
@@ -354,6 +415,133 @@
     var MAX_CODE_POINTS = 1000;
     var API_URL = '/api/translate';
 
+    // @ovidhan-e3-helpers-start
+    var ENRICHMENT_URL = '/data/translate-enrichment-v1.json';
+    var MAX_DICTIONARY = 5;
+    var MAX_PHRASES = 2;
+
+    var STOP_WORDS = {
+        a: 1, an: 1, the: 1, and: 1, or: 1, but: 1, if: 1, then: 1, else: 1, when: 1, while: 1,
+        of: 1, at: 1, by: 1, for: 1, with: 1, about: 1, against: 1, between: 1, into: 1, through: 1,
+        during: 1, before: 1, after: 1, above: 1, below: 1, to: 1, from: 1, up: 1, down: 1, in: 1,
+        out: 1, on: 1, off: 1, over: 1, under: 1, again: 1, further: 1, once: 1, here: 1, there: 1,
+        all: 1, any: 1, both: 1, each: 1, few: 1, more: 1, most: 1, other: 1, some: 1, such: 1,
+        no: 1, nor: 1, not: 1, only: 1, own: 1, same: 1, so: 1, than: 1, too: 1, very: 1, can: 1,
+        will: 1, just: 1, should: 1, now: 1, as: 1, until: 1, because: 1, i: 1, me: 1, my: 1,
+        myself: 1, we: 1, our: 1, ours: 1, ourselves: 1, you: 1, your: 1, yours: 1, yourself: 1,
+        yourselves: 1, he: 1, him: 1, his: 1, himself: 1, she: 1, her: 1, hers: 1, herself: 1,
+        it: 1, its: 1, itself: 1, they: 1, them: 1, their: 1, theirs: 1, themselves: 1, what: 1,
+        which: 1, who: 1, whom: 1, this: 1, that: 1, these: 1, those: 1, am: 1, is: 1, are: 1,
+        was: 1, were: 1, be: 1, been: 1, being: 1, have: 1, has: 1, had: 1, having: 1, do: 1,
+        does: 1, did: 1, doing: 1, would: 1, could: 1, ought: 1, cannot: 1, 'don\'t': 1, "don't": 1,
+        "isn't": 1, "aren't": 1, "wasn't": 1, "weren't": 1, "hasn't": 1, "haven't": 1, "hadn't": 1,
+        "doesn't": 1, "didn't": 1, "won't": 1, "wouldn't": 1, "shouldn't": 1, "can't": 1,
+        "couldn't": 1, "mustn't": 1, "i'm": 1, "you're": 1, "he's": 1, "she's": 1, "it's": 1,
+        "we're": 1, "they're": 1, "i've": 1, "you've": 1, "we've": 1, "they've": 1, "i'd": 1,
+        "you'd": 1, "he'd": 1, "she'd": 1, "we'd": 1, "they'd": 1, "i'll": 1, "you'll": 1,
+        "he'll": 1, "she'll": 1, "we'll": 1, "they'll": 1, "that's": 1, "who's": 1, "what's": 1,
+        "here's": 1, "there's": 1, "when's": 1, "where's": 1, "why's": 1, "how's": 1, "let's": 1
+    };
+
+    function normalizeEnglish(text) {
+        return String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
+    }
+
+    function englishTextForEnrichment(sourceLangValue, sourceValue, translationValue) {
+        return sourceLangValue === 'bn'
+            ? String(translationValue || '')
+            : String(sourceValue || '');
+    }
+
+    function tokenizeEnglish(text) {
+        var normalized = normalizeEnglish(text);
+        if (!normalized) return [];
+        var tokens = [];
+        var re;
+        try {
+            re = new RegExp("[\\p{L}\\p{M}]+(?:'[\\p{L}\\p{M}]+)?", 'gu');
+        } catch (_err) {
+            re = /[A-Za-z]+(?:'[A-Za-z]+)?/g;
+        }
+        var match;
+        while ((match = re.exec(normalized)) !== null) {
+            tokens.push(match[0]);
+        }
+        return tokens;
+    }
+
+    function matchDictionary(text, dictionary) {
+        if (!dictionary || typeof dictionary !== 'object') return [];
+        var seen = Object.create(null);
+        var hits = [];
+        var tokens = tokenizeEnglish(text);
+        for (var i = 0; i < tokens.length; i += 1) {
+            var token = tokens[i];
+            if (!token || STOP_WORDS[token]) continue;
+            if (!Object.prototype.hasOwnProperty.call(dictionary, token)) continue;
+            var entry = dictionary[token];
+            if (!entry || typeof entry !== 'object') continue;
+            if (entry.slug !== token) continue;
+            if (typeof entry.bn !== 'string' || !entry.bn.trim()) continue;
+            if (seen[token]) continue;
+            seen[token] = 1;
+            hits.push(entry);
+            if (hits.length >= MAX_DICTIONARY) break;
+        }
+        return hits;
+    }
+
+    function phraseHaystack(text) {
+        var normalized = normalizeEnglish(text);
+        if (!normalized) return ' ';
+        var cleaned;
+        try {
+            cleaned = normalized.replace(/[^\p{L}\p{M}'\s]+/gu, ' ').replace(/\s+/g, ' ').trim();
+        } catch (_err) {
+            cleaned = normalized.replace(/[^a-z'\s]+/g, ' ').replace(/\s+/g, ' ').trim();
+        }
+        return ' ' + cleaned + ' ';
+    }
+
+    function matchPhrases(text, phrases) {
+        if (!Array.isArray(phrases) || !phrases.length) return [];
+        var hay = phraseHaystack(text);
+        var ranked = phrases.slice().sort(function (a, b) {
+            return String(b.phrase || '').length - String(a.phrase || '').length;
+        });
+        var hits = [];
+        var seen = Object.create(null);
+        for (var i = 0; i < ranked.length; i += 1) {
+            var item = ranked[i];
+            if (!item || typeof item.slug !== 'string' || typeof item.phrase !== 'string') continue;
+            if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.slug)) continue;
+            if (seen[item.slug]) continue;
+            var needle = ' ' + normalizeEnglish(item.phrase) + ' ';
+            if (!needle.trim() || hay.indexOf(needle) < 0) continue;
+            seen[item.slug] = 1;
+            hits.push(item);
+            hay = hay.split(needle).join(' ');
+            if (hits.length >= MAX_PHRASES) break;
+        }
+        return hits;
+    }
+
+    var OvidhanTranslateE3 = {
+        ENRICHMENT_URL: ENRICHMENT_URL,
+        MAX_DICTIONARY: MAX_DICTIONARY,
+        MAX_PHRASES: MAX_PHRASES,
+        STOP_WORDS: STOP_WORDS,
+        normalizeEnglish: normalizeEnglish,
+        tokenizeEnglish: tokenizeEnglish,
+        matchDictionary: matchDictionary,
+        matchPhrases: matchPhrases,
+        englishTextForEnrichment: englishTextForEnrichment
+    };
+    if (typeof globalThis !== 'undefined') {
+        globalThis.OvidhanTranslateE3 = OvidhanTranslateE3;
+    }
+    // @ovidhan-e3-helpers-end
+
     var sourceLang = document.getElementById('sourceLang');
     var targetLang = document.getElementById('targetLang');
     var sourceText = document.getElementById('sourceText');
@@ -366,13 +554,134 @@
     var listenBtn = document.getElementById('listenBtn');
     var statusLine = document.getElementById('statusLine');
     var errorBox = document.getElementById('errorBox');
+    var learningPanel = document.getElementById('learningPanel');
+    var keyWordsBlock = document.getElementById('keyWordsBlock');
+    var keyWordsHeading = document.getElementById('keyWordsHeading');
+    var keyWordsList = document.getElementById('keyWordsList');
+    var phrasesBlock = document.getElementById('phrasesBlock');
+    var phrasesList = document.getElementById('phrasesList');
 
     var latestTranslation = '';
     var inFlight = false;
     var syncingPair = false;
+    var enrichmentSeq = 0;
+    var enrichmentPromise = null;
 
     function codePointLength(value) {
         return Array.from(String(value || '')).length;
+    }
+
+    function escHtml(value) {
+        return String(value || '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    function loadEnrichment() {
+        if (enrichmentPromise) return enrichmentPromise;
+        enrichmentPromise = fetch(ENRICHMENT_URL, { credentials: 'same-origin' })
+            .then(function (response) {
+                if (!response.ok) throw new Error('enrichment_http_' + response.status);
+                return response.json();
+            })
+            .then(function (data) {
+                if (!data || data.version !== 1 || !data.dictionary || typeof data.dictionary !== 'object') {
+                    throw new Error('enrichment_malformed');
+                }
+                if (!Array.isArray(data.phrases)) throw new Error('enrichment_malformed_phrases');
+                return data;
+            })
+            .catch(function () {
+                return null;
+            });
+        return enrichmentPromise;
+    }
+
+    function clearLearning() {
+        enrichmentSeq += 1;
+        learningPanel.hidden = true;
+        keyWordsBlock.hidden = true;
+        phrasesBlock.hidden = true;
+        keyWordsList.textContent = '';
+        phrasesList.textContent = '';
+        keyWordsHeading.textContent = 'Key words';
+    }
+
+    function renderLearning(dictHits, phraseHits, sourceLangValue) {
+        var hasDict = Array.isArray(dictHits) && dictHits.length > 0;
+        var hasPhrases = Array.isArray(phraseHits) && phraseHits.length > 0;
+        if (!hasDict && !hasPhrases) {
+            learningPanel.hidden = true;
+            keyWordsBlock.hidden = true;
+            phrasesBlock.hidden = true;
+            keyWordsList.textContent = '';
+            phrasesList.textContent = '';
+            return;
+        }
+
+        keyWordsHeading.textContent = sourceLangValue === 'bn'
+            ? 'Key words in the English translation'
+            : 'Key words';
+
+        if (hasDict) {
+            var dictHtml = '';
+            for (var i = 0; i < dictHits.length; i += 1) {
+                var entry = dictHits[i];
+                var slug = entry.slug;
+                var href = '/word/' + slug + '.html';
+                var posHtml = entry.pos
+                    ? '<div class="learning-pos">' + escHtml(entry.pos) + '</div>'
+                    : '';
+                dictHtml += '<li class="learning-item">' +
+                    '<div class="learning-term">' + escHtml(slug) + '</div>' +
+                    '<div class="learning-bn" lang="bn">' + escHtml(entry.bn) + '</div>' +
+                    posHtml +
+                    '<a class="learning-link" href="' + escHtml(href) + '">Learn &ldquo;' + escHtml(slug) + '&rdquo; →</a>' +
+                    '</li>';
+            }
+            keyWordsList.innerHTML = dictHtml;
+            keyWordsBlock.hidden = false;
+        } else {
+            keyWordsList.textContent = '';
+            keyWordsBlock.hidden = true;
+        }
+
+        if (hasPhrases) {
+            var phraseHtml = '';
+            for (var j = 0; j < phraseHits.length; j += 1) {
+                var phrase = phraseHits[j];
+                var phraseHref = '/phrase/' + phrase.slug + '.html';
+                var display = phrase.display || phrase.phrase;
+                phraseHtml += '<li class="learning-item">' +
+                    '<div class="learning-term">' + escHtml(display) + '</div>' +
+                    '<div class="learning-bn" lang="bn">' + escHtml(phrase.bn) + '</div>' +
+                    '<a class="learning-link" href="' + escHtml(phraseHref) + '">Learn this phrase →</a>' +
+                    '</li>';
+            }
+            phrasesList.innerHTML = phraseHtml;
+            phrasesBlock.hidden = false;
+        } else {
+            phrasesList.textContent = '';
+            phrasesBlock.hidden = true;
+        }
+
+        learningPanel.hidden = false;
+    }
+
+    function scheduleEnrichment(sourceLangValue, sourceValue, translationValue) {
+        var seq = enrichmentSeq;
+        loadEnrichment().then(function (data) {
+            if (seq !== enrichmentSeq) return;
+            if (!data) return;
+            var english = englishTextForEnrichment(sourceLangValue, sourceValue, translationValue);
+            var dictHits = matchDictionary(english, data.dictionary);
+            var phraseHits = matchPhrases(english, data.phrases);
+            if (seq !== enrichmentSeq) return;
+            renderLearning(dictHits, phraseHits, sourceLangValue);
+        });
     }
 
     function setError(message) {
@@ -419,6 +728,7 @@
         }
         syncingPair = false;
         placeholders();
+        clearLearning();
     }
 
     function updateCounterAndButton() {
@@ -474,6 +784,7 @@
     async function translate() {
         if (inFlight) return;
         setError('');
+        clearLearning();
         var text = sourceText.value.trim();
         var count = codePointLength(text);
         if (!text) {
@@ -492,14 +803,17 @@
         setStatus('Translating…', true);
         translateBtn.setAttribute('aria-busy', 'true');
 
+        var requestSourceLang = sourceLang.value;
+        var requestTargetLang = targetLang.value;
+
         try {
             var response = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify({
                     text: text,
-                    source: sourceLang.value,
-                    target: targetLang.value
+                    source: requestSourceLang,
+                    target: requestTargetLang
                 })
             });
 
@@ -512,6 +826,7 @@
 
             if (!response.ok || !payload || payload.ok !== true) {
                 setResult('');
+                clearLearning();
                 setError(humanError(response.status, payload));
                 setStatus('');
                 return;
@@ -520,8 +835,10 @@
             setResult(String(payload.translation || ''));
             setStatus('Done');
             setError('');
+            scheduleEnrichment(requestSourceLang, text, latestTranslation);
         } catch (_networkErr) {
             setResult('');
+            clearLearning();
             setError('Network error. Check your connection and try again.');
             setStatus('');
         } finally {
@@ -537,6 +854,7 @@
         var currentSource = sourceText.value;
         var currentResult = latestTranslation;
 
+        clearLearning();
         sourceLang.value = nextSource;
         targetLang.value = nextTarget;
         enforcePair('source');
@@ -590,6 +908,7 @@
     function clearAll() {
         sourceText.value = '';
         setResult('');
+        clearLearning();
         setError('');
         setStatus('');
         if ('speechSynthesis' in window) {
