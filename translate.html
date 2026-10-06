@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English ↔ Bangla Translator — Free Online Translation | Ovidhan</title>
+    <meta name="description" content="Translate English to Bangla and Bangla to English instantly with Ovidhan. A fast, free translator built for Bangladeshi learners.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://ovidhan.net/translate.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ovidhan">
+    <meta property="og:title" content="English ↔ Bangla Translator — Free Online Translation | Ovidhan">
+    <meta property="og:description" content="Translate English to Bangla and Bangla to English instantly with Ovidhan. A fast, free translator built for Bangladeshi learners.">
+    <meta property="og:url" content="https://ovidhan.net/translate.html">
+    <style id="translate-page-styles">
+        .translate-page { max-width: 980px; margin: 0 auto; padding: 0.85rem 1rem 2rem; }
+        .translate-breadcrumb ol {
+            list-style: none; display: flex; flex-wrap: wrap; gap: 0.15rem 0.5rem;
+            font-family: var(--font-en); font-size: 0.8rem; color: var(--text-mid); margin: 0 0 0.55rem;
+        }
+        .translate-breadcrumb li + li::before { content: "\203A"; margin-right: 0.5rem; color: var(--text-mid); }
+        .translate-breadcrumb a { color: var(--teal); }
+        .translate-breadcrumb a:hover { color: var(--gold); }
+        .translate-hero { margin: 0 0 0.75rem; }
+        .translate-hero h1 {
+            font-family: var(--font-en); font-size: clamp(1.55rem, 4.2vw, 2.15rem);
+            line-height: 1.2; color: var(--gold); margin: 0 0 0.3rem;
+        }
+        .translate-tagline {
+            font-family: var(--font-en); font-size: 1rem; color: var(--text);
+            margin: 0 0 0.25rem; font-weight: 600;
+        }
+        .translate-lead { color: var(--text-mid); margin: 0; max-width: 40rem; font-size: 0.98rem; line-height: 1.5; }
+        .translate-workspace {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 0.9rem; margin: 0 0 1.15rem;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.26);
+        }
+        .translate-controls {
+            display: flex; flex-wrap: wrap; align-items: end; gap: 0.65rem;
+            margin-bottom: 0.75rem;
+        }
+        .lang-field { display: flex; flex-direction: column; gap: 0.25rem; min-width: 132px; flex: 1; }
+        .lang-field label, .field-label {
+            font-family: var(--font-en); font-size: 0.75rem; letter-spacing: 0.04em;
+            text-transform: uppercase; color: var(--text-mid);
+        }
+        .lang-field select, .translate-actions button, .action-btn, .secondary-btn, .translate-primary {
+            font-family: var(--font-en);
+        }
+        .lang-field select {
+            appearance: none; background: var(--surface2); color: var(--text);
+            border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 0.85rem;
+            font-size: 0.95rem; min-height: 44px;
+        }
+        .swap-btn {
+            align-self: end; width: 44px; height: 44px; border-radius: 999px;
+            border: 1px solid var(--border); background: var(--surface2); color: var(--gold);
+            cursor: pointer; font-size: 1.15rem; line-height: 1;
+        }
+        .swap-btn:hover { border-color: var(--gold); }
+        .panel-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+        @media (min-width: 820px) {
+            .panel-grid { grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+        }
+        .panel {
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: 12px; padding: 0.8rem; min-height: 200px;
+            display: flex; flex-direction: column;
+        }
+        .panel textarea {
+            width: 100%; flex: 1; min-height: 150px; resize: vertical;
+            background: transparent; border: none; color: var(--text);
+            font-size: 1.12rem; line-height: 1.6; outline: none;
+            font-family: var(--font-en);
+        }
+        .panel textarea.bn-text, .result-text.bn-text {
+            font-family: var(--font-bn); line-height: 1.7;
+        }
+        .panel-meta {
+            display: flex; justify-content: space-between; align-items: center;
+            gap: 0.65rem; margin-top: 0.5rem; flex-wrap: wrap;
+        }
+        .char-count {
+            font-family: var(--font-en); font-size: 0.85rem; color: var(--text-mid);
+        }
+        .char-count.is-over { color: #ff8f8f; font-weight: 600; }
+        .result-text {
+            flex: 1; min-height: 150px; font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+            line-height: 1.6; color: var(--text); white-space: pre-wrap; word-break: break-word;
+        }
+        .result-text.is-empty { color: var(--text-soft); font-size: 1rem; }
+        .result-actions { display: flex; gap: 0.55rem; flex-wrap: wrap; }
+        .action-btn, .secondary-btn {
+            border: 1px solid var(--border); background: var(--surface2); color: var(--text);
+            border-radius: 999px; min-height: 44px; padding: 0.55rem 1rem; cursor: pointer;
+            font-size: 0.92rem; display: inline-flex; align-items: center; gap: 0.45rem;
+        }
+        .action-btn svg, .translate-primary svg { display: block; flex: 0 0 auto; }
+        .action-btn:hover, .secondary-btn:hover { border-color: var(--gold); color: var(--gold); }
+        .action-btn:disabled, .secondary-btn:disabled, .translate-primary:disabled {
+            opacity: 0.42; cursor: not-allowed; transform: none; box-shadow: none;
+        }
+        .translate-actions {
+            display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.85rem;
+            align-items: center;
+        }
+        .translate-primary {
+            appearance: none; border: none; cursor: pointer;
+            background: linear-gradient(180deg, #f0c85a 0%, var(--gold) 100%);
+            color: #0B1F1A; font-weight: 800; letter-spacing: 0.01em;
+            min-height: 52px; padding: 0.85rem 1.7rem; border-radius: 999px;
+            font-size: 1.05rem; box-shadow: 0 10px 24px rgba(230, 184, 74, 0.28);
+        }
+        .translate-primary:hover:not(:disabled) {
+            background: #f3d06a; transform: translateY(-1px);
+        }
+        .translate-primary.is-loading {
+            background: #c9a33f; box-shadow: none;
+        }
+        .status-line {
+            min-height: 1.25rem; font-family: var(--font-en); font-size: 0.9rem;
+            color: var(--text-mid); margin: 0;
+        }
+        .status-line.is-error { color: #ffb4b4; }
+        .status-line.is-loading { color: var(--teal); }
+        #errorBox[hidden] { display: none !important; }
+        .learning-note {
+            margin-top: 0.7rem; padding: 0.6rem 0.8rem; border-radius: 10px;
+            background: var(--gold-dim); color: var(--text-mid); font-size: 0.88rem; line-height: 1.45;
+        }
+        .info-sections {
+            display: grid; gap: 0.65rem; margin-top: 0.25rem;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 820px) {
+            .info-sections { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        }
+        .info-card {
+            background: rgba(18, 40, 32, 0.72); border: 1px solid var(--border);
+            border-radius: 10px; padding: 0.75rem 0.9rem;
+        }
+        .info-card h2 {
+            font-family: var(--font-en); font-size: 0.98rem; color: var(--text);
+            margin: 0 0 0.3rem;
+        }
+        .info-card p { color: var(--text-mid); margin: 0; font-size: 0.9rem; line-height: 1.45; }
+        .info-card a { color: var(--teal); }
+        .info-card a:hover { color: var(--gold); }
+        .compact-nav { display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; align-items: center; justify-content: flex-end; }
+        .compact-nav a {
+            color: var(--text-mid); font-family: var(--font-en); font-size: 0.9rem;
+            padding: 0.3rem 0.15rem;
+        }
+        .compact-nav a:hover, .compact-nav a[aria-current="page"] { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold); color: #0B1F1A; font-weight: 700; padding: 8px 16px;
+            border-radius: 40px; font-size: 13px; white-space: nowrap; text-decoration: none;
+            display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-en);
+        }
+        a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid var(--gold); outline-offset: 2px;
+        }
+        @media (max-width: 720px) {
+            .nav-inner { flex-wrap: wrap; gap: 0.55rem; }
+            .compact-nav { width: 100%; justify-content: flex-start; }
+            .translate-primary { width: 100%; justify-content: center; min-height: 54px; font-size: 1.08rem; }
+            .action-btn { min-width: 44px; }
+            .panel textarea, .result-text { min-height: 140px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation: none !important; transition: none !important; scroll-behavior: auto !important;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ovidhan Translate",
+  "url": "https://ovidhan.net/translate.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "isAccessibleForFree": true,
+  "inLanguage": ["en", "bn"],
+  "description": "Translate English to Bangla and Bangla to English instantly with Ovidhan.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Ovidhan",
+    "url": "https://ovidhan.net/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ovidhan.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Translate",
+      "item": "https://ovidhan.net/translate.html"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="nav-inner">
+        <a href="/" class="logo">অভিধান <span>| Ovidhan</span></a>
+        <nav class="compact-nav" aria-label="Primary">
+            <a href="/">Home</a>
+            <a href="/dictionary.html">Dictionary</a>
+            <a href="/tools.html">Tools</a>
+            <a href="/grammar.html">Grammar</a>
+            <a href="/translate.html" aria-current="page">Translate</a>
+            <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.ovidhan.dictionary" target="_blank" rel="noopener">Download App</a>
+        </nav>
+    </div>
+</header>
+
+<main class="translate-page">
+    <nav class="translate-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li aria-current="page">Translate</li>
+        </ol>
+    </nav>
+
+    <header class="translate-hero">
+        <h1>English ↔ Bangla Translator</h1>
+        <p class="translate-tagline">Translate it. Understand it. Learn how to use it.</p>
+        <p class="translate-lead">A fast English ↔ Bangla translator for Bangladeshi learners — with Ovidhan’s dictionary nearby when you want to go deeper.</p>
+    </header>
+
+    <section class="translate-workspace" aria-labelledby="translator-heading">
+        <h2 id="translator-heading" class="visually-hidden" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Translator</h2>
+
+        <div class="translate-controls">
+            <div class="lang-field">
+                <label for="sourceLang">From</label>
+                <select id="sourceLang" name="sourceLang">
+                    <option value="en" selected>English</option>
+                    <option value="bn">বাংলা</option>
+                </select>
+            </div>
+            <button type="button" class="swap-btn" id="swapBtn" aria-label="Swap languages">⇄</button>
+            <div class="lang-field">
+                <label for="targetLang">To</label>
+                <select id="targetLang" name="targetLang">
+                    <option value="bn" selected>বাংলা</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="panel-grid">
+            <div class="panel">
+                <label class="field-label" for="sourceText">Source text</label>
+                <textarea id="sourceText" name="sourceText" maxlength="4000" rows="7" spellcheck="true" placeholder="Type English text to translate…"></textarea>
+                <div class="panel-meta">
+                    <span class="char-count" id="charCount" aria-live="polite">0 / 1000</span>
+                    <button type="button" class="secondary-btn" id="clearBtn">Clear</button>
+                </div>
+            </div>
+
+            <div class="panel" aria-label="Translation result">
+                <div class="field-label" id="resultLabel">Translation</div>
+                <div id="resultText" class="result-text is-empty" aria-live="polite" aria-atomic="true">Your translation will appear here.</div>
+                <div class="panel-meta">
+                    <div class="result-actions">
+                        <button type="button" class="action-btn" id="copyBtn" aria-label="Copy translation" disabled>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                                <rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.8"></rect>
+                                <path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                        <button type="button" class="action-btn" id="listenBtn" aria-label="Listen to translation" disabled>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M11 5L6.5 9H3v6h3.5L11 19V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                                <path d="M15.5 8.5a4.5 4.5 0 0 1 0 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                                <path d="M18.2 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                            </svg>
+                            <span>Listen</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="translate-actions">
+            <button type="button" class="translate-primary" id="translateBtn" disabled>Translate</button>
+            <p class="status-line" id="statusLine" role="status"></p>
+        </div>
+        <div id="errorBox" class="status-line is-error" role="alert" hidden></div>
+        <p class="learning-note">
+            Want more than a quick translation? Explore the
+            <a href="/dictionary.html">Ovidhan dictionary</a>
+            and
+            <a href="/bangla-to-english-translation-hub.html">spoken English scenarios</a>.
+        </p>
+    </section>
+
+    <section class="info-sections" aria-label="About Ovidhan Translate">
+        <article class="info-card">
+            <h2>English to Bangla translation</h2>
+            <p>Keep the direction English → বাংলা, type your sentence, and tap Translate for everyday learner English used in Bangladesh.</p>
+        </article>
+        <article class="info-card">
+            <h2>Bangla to English translation</h2>
+            <p>Switch source to বাংলা for natural English. Use Listen to hear the result on your device when speech support is available.</p>
+        </article>
+        <article class="info-card">
+            <h2>How to use Ovidhan Translate</h2>
+            <p>Choose direction, enter up to 1000 characters, press Translate or Ctrl/Cmd+Enter, then Copy or Listen. Translation runs only when you ask.</p>
+        </article>
+        <article class="info-card">
+            <h2>Why Ovidhan is useful for learners</h2>
+            <p>Pair quick translation with the <a href="/dictionary.html">dictionary</a>, <a href="/english-to-bangla-dictionary-online-free.html">English to Bangla guide</a>, <a href="/tools.html">learning tools</a>, and phrases like <a href="/phrase/mind-it.html">Mind it</a>.</p>
+        </article>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p><strong style="color:var(--gold);">অভিধান</strong> — English to Bangla Dictionary, Grammar, Vocabulary &amp; BCS Preparation</p>
+    <p>
+        <a href="/">Home</a> &nbsp;·&nbsp;
+        <a href="/dictionary.html">Dictionary</a> &nbsp;·&nbsp;
+        <a href="/tools.html">Tools</a> &nbsp;·&nbsp;
+        <a href="/grammar.html">Grammar</a> &nbsp;·&nbsp;
+        <a href="/translate.html">Translate</a> &nbsp;·&nbsp;
+        <a href="/privacy.html">Privacy Policy</a>
+    </p>
+</footer>
+
+<script id="translate-app">
+(function () {
+    'use strict';
+
+    var MAX_CODE_POINTS = 1000;
+    var API_URL = '/api/translate';
+
+    var sourceLang = document.getElementById('sourceLang');
+    var targetLang = document.getElementById('targetLang');
+    var sourceText = document.getElementById('sourceText');
+    var resultText = document.getElementById('resultText');
+    var charCount = document.getElementById('charCount');
+    var translateBtn = document.getElementById('translateBtn');
+    var swapBtn = document.getElementById('swapBtn');
+    var clearBtn = document.getElementById('clearBtn');
+    var copyBtn = document.getElementById('copyBtn');
+    var listenBtn = document.getElementById('listenBtn');
+    var statusLine = document.getElementById('statusLine');
+    var errorBox = document.getElementById('errorBox');
+
+    var latestTranslation = '';
+    var inFlight = false;
+    var syncingPair = false;
+
+    function codePointLength(value) {
+        return Array.from(String(value || '')).length;
+    }
+
+    function setError(message) {
+        if (!message) {
+            errorBox.hidden = true;
+            errorBox.textContent = '';
+            return;
+        }
+        errorBox.hidden = false;
+        errorBox.textContent = message;
+        statusLine.textContent = '';
+        statusLine.classList.remove('is-loading');
+    }
+
+    function setStatus(message, isLoading) {
+        statusLine.textContent = message || '';
+        statusLine.classList.toggle('is-loading', !!isLoading);
+    }
+
+    function placeholders() {
+        if (sourceLang.value === 'bn') {
+            sourceText.placeholder = 'বাংলা লিখুন…';
+            sourceText.classList.add('bn-text');
+        } else {
+            sourceText.placeholder = 'Type English text to translate…';
+            sourceText.classList.remove('bn-text');
+        }
+        if (targetLang.value === 'bn') {
+            resultText.classList.add('bn-text');
+        } else {
+            resultText.classList.remove('bn-text');
+        }
+    }
+
+    function enforcePair(changed) {
+        if (syncingPair) return;
+        syncingPair = true;
+        if (changed === 'source') {
+            targetLang.value = sourceLang.value === 'en' ? 'bn' : 'en';
+        } else if (changed === 'target') {
+            sourceLang.value = targetLang.value === 'en' ? 'bn' : 'en';
+        } else if (sourceLang.value === targetLang.value) {
+            targetLang.value = sourceLang.value === 'en' ? 'bn' : 'en';
+        }
+        syncingPair = false;
+        placeholders();
+    }
+
+    function updateCounterAndButton() {
+        var count = codePointLength(sourceText.value);
+        charCount.textContent = count + ' / ' + MAX_CODE_POINTS;
+        charCount.classList.toggle('is-over', count > MAX_CODE_POINTS);
+        var empty = sourceText.value.trim().length === 0;
+        translateBtn.disabled = empty || count > MAX_CODE_POINTS || inFlight;
+        if (!inFlight) {
+            translateBtn.textContent = 'Translate';
+            translateBtn.classList.remove('is-loading');
+        }
+    }
+
+    function setResult(text) {
+        latestTranslation = text || '';
+        if (!latestTranslation) {
+            resultText.textContent = 'Your translation will appear here.';
+            resultText.classList.add('is-empty');
+            copyBtn.disabled = true;
+            listenBtn.disabled = true;
+            return;
+        }
+        resultText.textContent = latestTranslation;
+        resultText.classList.remove('is-empty');
+        copyBtn.disabled = false;
+        listenBtn.disabled = false;
+    }
+
+    function humanError(status, payload) {
+        var code = payload && payload.error && payload.error.code;
+        if (status === 429 || code === 'rate_limited') {
+            return 'Too many requests. Please wait a moment and try again.';
+        }
+        if (status === 504 || code === 'translator_timeout') {
+            return 'Translation took too long. Please try again.';
+        }
+        if (status === 503 || code === 'translator_not_configured' || code === 'translator_unavailable' || code === 'translator_quota_exceeded') {
+            return 'Translation is temporarily unavailable. Please try again shortly.';
+        }
+        if (status === 413 || code === 'text_too_long') {
+            return 'Your text is too long. Please keep it within 1000 characters.';
+        }
+        if (status === 400 || code === 'empty_text' || code === 'invalid_json' || code === 'unsupported_pair' || code === 'unexpected_field' || code === 'invalid_content_type') {
+            return 'Please check your text and language direction, then try again.';
+        }
+        if (status === 405 || code === 'method_not_allowed') {
+            return 'Translation request failed. Please refresh the page and try again.';
+        }
+        return 'Something went wrong. Please try again.';
+    }
+
+    async function translate() {
+        if (inFlight) return;
+        setError('');
+        var text = sourceText.value.trim();
+        var count = codePointLength(text);
+        if (!text) {
+            setError('Enter some text to translate.');
+            return;
+        }
+        if (count > MAX_CODE_POINTS) {
+            setError('Please keep your text within 1000 characters.');
+            return;
+        }
+
+        inFlight = true;
+        translateBtn.textContent = 'Translating…';
+        translateBtn.classList.add('is-loading');
+        updateCounterAndButton();
+        setStatus('Translating…', true);
+        translateBtn.setAttribute('aria-busy', 'true');
+
+        try {
+            var response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify({
+                    text: text,
+                    source: sourceLang.value,
+                    target: targetLang.value
+                })
+            });
+
+            var payload = null;
+            try {
+                payload = await response.json();
+            } catch (_err) {
+                payload = null;
+            }
+
+            if (!response.ok || !payload || payload.ok !== true) {
+                setResult('');
+                setError(humanError(response.status, payload));
+                setStatus('');
+                return;
+            }
+
+            setResult(String(payload.translation || ''));
+            setStatus('Done');
+            setError('');
+        } catch (_networkErr) {
+            setResult('');
+            setError('Network error. Check your connection and try again.');
+            setStatus('');
+        } finally {
+            inFlight = false;
+            translateBtn.removeAttribute('aria-busy');
+            updateCounterAndButton();
+        }
+    }
+
+    function swapLanguages() {
+        var nextSource = targetLang.value;
+        var nextTarget = sourceLang.value;
+        var currentSource = sourceText.value;
+        var currentResult = latestTranslation;
+
+        sourceLang.value = nextSource;
+        targetLang.value = nextTarget;
+        enforcePair('source');
+
+        if (currentResult) {
+            sourceText.value = currentResult;
+            setResult(currentSource.trim() ? currentSource : '');
+        }
+        updateCounterAndButton();
+        placeholders();
+    }
+
+    async function copyResult() {
+        if (!latestTranslation) return;
+        try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(latestTranslation);
+            } else {
+                var area = document.createElement('textarea');
+                area.value = latestTranslation;
+                document.body.appendChild(area);
+                area.select();
+                document.execCommand('copy');
+                document.body.removeChild(area);
+            }
+            setStatus('Copied');
+            setError('');
+        } catch (_err) {
+            setError('Could not copy the translation.');
+        }
+    }
+
+    function listenResult() {
+        if (!latestTranslation) return;
+        if (!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined') {
+            setError('Listening is not supported in this browser.');
+            return;
+        }
+        try {
+            window.speechSynthesis.cancel();
+            var utter = new SpeechSynthesisUtterance(latestTranslation);
+            utter.lang = targetLang.value === 'bn' ? 'bn-BD' : 'en-US';
+            window.speechSynthesis.speak(utter);
+            setStatus('Playing audio…');
+            setError('');
+        } catch (_err) {
+            setError('Listening is not supported in this browser.');
+        }
+    }
+
+    function clearAll() {
+        sourceText.value = '';
+        setResult('');
+        setError('');
+        setStatus('');
+        if ('speechSynthesis' in window) {
+            try { window.speechSynthesis.cancel(); } catch (_err) {}
+        }
+        updateCounterAndButton();
+        sourceText.focus();
+    }
+
+    sourceLang.addEventListener('change', function () { enforcePair('source'); });
+    targetLang.addEventListener('change', function () { enforcePair('target'); });
+    sourceText.addEventListener('input', updateCounterAndButton);
+    translateBtn.addEventListener('click', translate);
+    swapBtn.addEventListener('click', swapLanguages);
+    clearBtn.addEventListener('click', clearAll);
+    copyBtn.addEventListener('click', copyResult);
+    listenBtn.addEventListener('click', listenResult);
+    sourceText.addEventListener('keydown', function (event) {
+        if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
+            event.preventDefault();
+            if (!translateBtn.disabled) translate();
+        }
+    });
+
+    enforcePair('source');
+    updateCounterAndButton();
+    setResult('');
+    setError('');
+})();
+</script>
+</body>
+</html>
