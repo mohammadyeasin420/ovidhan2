@@ -1,0 +1,6898 @@
+{
+  "dictionary": {
+    "abbreviation": {
+      "bn": "সংক্ষিপ্ত রূপ",
+      "pos": "noun",
+      "slug": "abbreviation"
+    },
+    "accelerate": {
+      "bn": "ত্বরান্বিত করা",
+      "slug": "accelerate"
+    },
+    "access": {
+      "bn": "অ্যাক্সেস",
+      "pos": "noun",
+      "slug": "access"
+    },
+    "accommodation": {
+      "bn": "বাসস্থান",
+      "pos": "noun",
+      "slug": "accommodation"
+    },
+    "accountability": {
+      "bn": "জবাবদিহি",
+      "pos": "noun",
+      "slug": "accountability"
+    },
+    "accurate": {
+      "bn": "সঠিক",
+      "pos": "adjective",
+      "slug": "accurate"
+    },
+    "achieve": {
+      "bn": "অর্জন",
+      "pos": "verb",
+      "slug": "achieve"
+    },
+    "acknowledge": {
+      "bn": "স্বীকার",
+      "slug": "acknowledge"
+    },
+    "acquisition": {
+      "bn": "অধিগ্রহণ",
+      "pos": "noun",
+      "slug": "acquisition"
+    },
+    "active": {
+      "bn": "সক্রিয়",
+      "pos": "noun",
+      "slug": "active"
+    },
+    "activist": {
+      "bn": "আন্দোলনমুখী",
+      "pos": "adjective",
+      "slug": "activist"
+    },
+    "activity": {
+      "bn": "কার্যকলাপ",
+      "pos": "noun",
+      "slug": "activity"
+    },
+    "acumen": {
+      "bn": "তীক্ষ্ণ বিচারবুদ্ধি",
+      "pos": "noun",
+      "slug": "acumen"
+    },
+    "adamant": {
+      "bn": "অনড়",
+      "pos": "adjective",
+      "slug": "adamant"
+    },
+    "addicted": {
+      "bn": "আসক্ত",
+      "pos": "adjective",
+      "slug": "addicted"
+    },
+    "addition": {
+      "bn": "সংযোজন",
+      "pos": "noun",
+      "slug": "addition"
+    },
+    "additional": {
+      "bn": "অতিরিক্ত",
+      "pos": "adjective",
+      "slug": "additional"
+    },
+    "adequate": {
+      "bn": "পর্যাপ্ত",
+      "pos": "adjective",
+      "slug": "adequate"
+    },
+    "administration": {
+      "bn": "প্রশাসন",
+      "pos": "noun",
+      "slug": "administration"
+    },
+    "adopt": {
+      "bn": "গ্রহণ",
+      "slug": "adopt"
+    },
+    "adorable": {
+      "bn": "খুব মিষ্টি; আদুরে",
+      "pos": "adjective",
+      "slug": "adorable"
+    },
+    "adult": {
+      "bn": "প্রাপ্তবয়স্ক",
+      "pos": "noun",
+      "slug": "adult"
+    },
+    "affiliated": {
+      "bn": "অধিভুক্ত",
+      "pos": "adjective",
+      "slug": "affiliated"
+    },
+    "affluent": {
+      "bn": "সমৃদ্ধ",
+      "slug": "affluent"
+    },
+    "agenda": {
+      "bn": "এজেন্ডা",
+      "pos": "noun",
+      "slug": "agenda"
+    },
+    "agitated": {
+      "bn": "উত্তেজিত",
+      "pos": "adjective",
+      "slug": "agitated"
+    },
+    "albatross": {
+      "bn": "অ্যালবাট্রস",
+      "pos": "noun",
+      "slug": "albatross"
+    },
+    "alias": {
+      "bn": "ছদ্মনাম",
+      "pos": "noun",
+      "slug": "alias"
+    },
+    "alive": {
+      "bn": "জীবিত",
+      "pos": "adjective",
+      "slug": "alive"
+    },
+    "allegedly": {
+      "bn": "অভিযোগ অনুসারে",
+      "pos": "adverb",
+      "slug": "allegedly"
+    },
+    "almond": {
+      "bn": "বাদাম",
+      "pos": "noun",
+      "slug": "almond"
+    },
+    "already": {
+      "bn": "ইতিমধ্যে",
+      "pos": "adverb",
+      "slug": "already"
+    },
+    "also": {
+      "bn": "এছাড়াও",
+      "pos": "adverb",
+      "slug": "also"
+    },
+    "alternative": {
+      "bn": "বিকল্প",
+      "pos": "noun",
+      "slug": "alternative"
+    },
+    "always": {
+      "bn": "সবসময়",
+      "pos": "adverb",
+      "slug": "always"
+    },
+    "amazing": {
+      "bn": "আশ্চর্যজনক",
+      "pos": "verb",
+      "slug": "amazing"
+    },
+    "ambience": {
+      "bn": "পরিবেশ",
+      "pos": "noun",
+      "slug": "ambience"
+    },
+    "ambush": {
+      "bn": "ওঁত পেতে থাকা",
+      "pos": "verb",
+      "slug": "ambush"
+    },
+    "amenable": {
+      "bn": "নমনীয়",
+      "pos": "adjective",
+      "slug": "amenable"
+    },
+    "amenities": {
+      "bn": "আরামের সুবিধা",
+      "pos": "noun",
+      "slug": "amenities"
+    },
+    "amicable": {
+      "bn": "সদ্ভাবপূর্ণ",
+      "pos": "adjective",
+      "slug": "amicable"
+    },
+    "analytical": {
+      "bn": "বিশ্লেষণী",
+      "pos": "adjective",
+      "slug": "analytical"
+    },
+    "ankle": {
+      "bn": "গোড়ালি",
+      "pos": "noun",
+      "slug": "ankle"
+    },
+    "anniversary": {
+      "bn": "বার্ষিকী",
+      "pos": "noun",
+      "slug": "anniversary"
+    },
+    "annoyed": {
+      "bn": "বিরক্ত",
+      "pos": "adjective",
+      "slug": "annoyed"
+    },
+    "annoying": {
+      "bn": "বিরক্তিকর",
+      "pos": "adjective",
+      "slug": "annoying"
+    },
+    "anonymous": {
+      "bn": "বেনামী",
+      "pos": "adjective",
+      "slug": "anonymous"
+    },
+    "anterior": {
+      "bn": "সামনের",
+      "pos": "adjective",
+      "slug": "anterior"
+    },
+    "apartment": {
+      "bn": "অ্যাপার্টমেন্ট",
+      "pos": "noun",
+      "slug": "apartment"
+    },
+    "appear": {
+      "bn": "প্রদর্শিত",
+      "pos": "verb",
+      "slug": "appear"
+    },
+    "appearance": {
+      "bn": "চেহারা",
+      "pos": "noun",
+      "slug": "appearance"
+    },
+    "apple": {
+      "bn": "আপেল",
+      "pos": "noun",
+      "slug": "apple"
+    },
+    "applicable": {
+      "bn": "প্রযোজ্য",
+      "pos": "adjective",
+      "slug": "applicable"
+    },
+    "apply": {
+      "bn": "আবেদন",
+      "pos": "verb",
+      "slug": "apply"
+    },
+    "appreciate": {
+      "bn": "প্রশংসা",
+      "pos": "verb",
+      "slug": "appreciate"
+    },
+    "approach": {
+      "bn": "পন্থা",
+      "pos": "noun",
+      "slug": "approach"
+    },
+    "appropriate": {
+      "bn": "উপযুক্ত",
+      "pos": "verb",
+      "slug": "appropriate"
+    },
+    "approximately": {
+      "bn": "প্রায়",
+      "pos": "adverb",
+      "slug": "approximately"
+    },
+    "arbitration": {
+      "bn": "সালিশ",
+      "pos": "noun",
+      "slug": "arbitration"
+    },
+    "architecture": {
+      "bn": "স্থাপত্য",
+      "pos": "noun",
+      "slug": "architecture"
+    },
+    "area": {
+      "bn": "এলাকা",
+      "pos": "noun",
+      "slug": "area"
+    },
+    "arrive": {
+      "bn": "পৌঁছানো",
+      "pos": "verb",
+      "slug": "arrive"
+    },
+    "arrogant": {
+      "bn": "অহংকারী",
+      "slug": "arrogant"
+    },
+    "artistic": {
+      "bn": "শৈল্পিক",
+      "pos": "adjective",
+      "slug": "artistic"
+    },
+    "arts": {
+      "bn": "কলা",
+      "pos": "noun",
+      "slug": "arts"
+    },
+    "ask": {
+      "bn": "জিজ্ঞাসা",
+      "pos": "verb",
+      "slug": "ask"
+    },
+    "aspect": {
+      "bn": "দৃষ্টিভঙ্গি",
+      "pos": "noun",
+      "slug": "aspect"
+    },
+    "assassination": {
+      "bn": "গুপ্তহত্যা",
+      "pos": "noun",
+      "slug": "assassination"
+    },
+    "assigned": {
+      "bn": "বরাদ্দ",
+      "pos": "verb",
+      "slug": "assigned"
+    },
+    "assume": {
+      "bn": "অনুমান",
+      "pos": "verb",
+      "slug": "assume"
+    },
+    "attendance": {
+      "bn": "উপস্থিতি",
+      "pos": "noun",
+      "slug": "attendance"
+    },
+    "attentive": {
+      "bn": "মনোযোগী",
+      "pos": "adjective",
+      "slug": "attentive"
+    },
+    "attire": {
+      "bn": "পোশাক",
+      "pos": "noun",
+      "slug": "attire"
+    },
+    "authentic": {
+      "bn": "খাঁটি",
+      "slug": "authentic"
+    },
+    "autocratic": {
+      "bn": "স্বৈরতান্ত্রিক",
+      "pos": "adjective",
+      "slug": "autocratic"
+    },
+    "autumn": {
+      "bn": "পাতাঝরার ঋতু",
+      "pos": "noun",
+      "slug": "autumn"
+    },
+    "available": {
+      "bn": "উপলব্ধ",
+      "pos": "adjective",
+      "slug": "available"
+    },
+    "avenue": {
+      "bn": "পথ",
+      "pos": "noun",
+      "slug": "avenue"
+    },
+    "average": {
+      "bn": "গড়",
+      "pos": "noun",
+      "slug": "average"
+    },
+    "aware": {
+      "bn": "সচেতন",
+      "pos": "adjective",
+      "slug": "aware"
+    },
+    "awesome": {
+      "bn": "দুর্দান্ত",
+      "pos": "adjective",
+      "slug": "awesome"
+    },
+    "axe": {
+      "bn": "কুঠার",
+      "pos": "noun",
+      "slug": "axe"
+    },
+    "babe": {
+      "bn": "খোকা",
+      "pos": "noun",
+      "slug": "babe"
+    },
+    "backup": {
+      "bn": "ব্যাকআপ",
+      "pos": "noun",
+      "slug": "backup"
+    },
+    "baddie": {
+      "bn": "কাহিনির প্রধান খলনায়ক",
+      "pos": "noun",
+      "slug": "baddie"
+    },
+    "barely": {
+      "bn": "মাত্র",
+      "pos": "adverb",
+      "slug": "barely"
+    },
+    "barren": {
+      "bn": "বন্ধ্যা",
+      "slug": "barren"
+    },
+    "basil": {
+      "bn": "তুলসী",
+      "pos": "noun",
+      "slug": "basil"
+    },
+    "beast": {
+      "bn": "জন্তু",
+      "pos": "noun",
+      "slug": "beast"
+    },
+    "beautiful": {
+      "bn": "সুন্দর",
+      "pos": "adjective",
+      "slug": "beautiful"
+    },
+    "become": {
+      "bn": "হয়ে",
+      "pos": "verb",
+      "slug": "become"
+    },
+    "beer": {
+      "bn": "বিয়ার",
+      "pos": "noun",
+      "slug": "beer"
+    },
+    "begin": {
+      "bn": "শুরু",
+      "pos": "noun",
+      "slug": "begin"
+    },
+    "behave": {
+      "bn": "আচরণ করা",
+      "pos": "verb",
+      "slug": "behave"
+    },
+    "believe": {
+      "bn": "বিশ্বাস",
+      "pos": "verb",
+      "slug": "believe"
+    },
+    "bellow": {
+      "bn": "গর্জন করা",
+      "pos": "verb",
+      "slug": "bellow"
+    },
+    "beneficial": {
+      "bn": "উপকারী",
+      "slug": "beneficial"
+    },
+    "beneficiary": {
+      "bn": "সুবিধাভোগী",
+      "pos": "noun",
+      "slug": "beneficiary"
+    },
+    "benefit": {
+      "bn": "সুবিধা",
+      "pos": "noun",
+      "slug": "benefit"
+    },
+    "benevolent": {
+      "bn": "উপকারী",
+      "slug": "benevolent"
+    },
+    "beverage": {
+      "bn": "পানীয়",
+      "pos": "noun",
+      "slug": "beverage"
+    },
+    "bin": {
+      "bn": "বিন",
+      "pos": "noun",
+      "slug": "bin"
+    },
+    "biography": {
+      "bn": "জীবনী",
+      "pos": "noun",
+      "slug": "biography"
+    },
+    "bit": {
+      "bn": "বিট",
+      "pos": "noun",
+      "slug": "bit"
+    },
+    "bizarre": {
+      "bn": "উদ্ভট",
+      "slug": "bizarre"
+    },
+    "bladder": {
+      "bn": "থলি",
+      "pos": "noun",
+      "slug": "bladder"
+    },
+    "blissful": {
+      "bn": "পরম সুখী",
+      "pos": "adjective",
+      "slug": "blissful"
+    },
+    "blogger": {
+      "bn": "ব্লগার",
+      "pos": "noun",
+      "slug": "blogger"
+    },
+    "blossom": {
+      "bn": "পুষ্প",
+      "slug": "blossom"
+    },
+    "bogus": {
+      "bn": "জাল",
+      "slug": "bogus"
+    },
+    "bonding": {
+      "bn": "বন্ধন",
+      "pos": "noun",
+      "slug": "bonding"
+    },
+    "book": {
+      "bn": "বই",
+      "pos": "noun",
+      "slug": "book"
+    },
+    "booking": {
+      "bn": "বুকিং",
+      "pos": "noun",
+      "slug": "booking"
+    },
+    "bored": {
+      "bn": "একঘেয়ে",
+      "pos": "adjective",
+      "slug": "bored"
+    },
+    "branch": {
+      "bn": "শাখা",
+      "pos": "noun",
+      "slug": "branch"
+    },
+    "bread": {
+      "bn": "রুটি",
+      "pos": "noun",
+      "slug": "bread"
+    },
+    "breathing": {
+      "bn": "শ্বাসপ্রশ্বাস",
+      "pos": "noun",
+      "slug": "breathing"
+    },
+    "brevity": {
+      "bn": "সংক্ষিপ্ততা",
+      "slug": "brevity"
+    },
+    "bribe": {
+      "bn": "ঘুষ",
+      "pos": "noun",
+      "slug": "bribe"
+    },
+    "brick": {
+      "bn": "ইট",
+      "pos": "noun",
+      "slug": "brick"
+    },
+    "bridegroom": {
+      "bn": "বর",
+      "pos": "noun",
+      "slug": "bridegroom"
+    },
+    "brilliant": {
+      "bn": "উজ্জ্বল",
+      "slug": "brilliant"
+    },
+    "brittle": {
+      "bn": "ভঙ্গুর",
+      "slug": "brittle"
+    },
+    "broad": {
+      "bn": "বিস্তৃত",
+      "pos": "noun",
+      "slug": "broad"
+    },
+    "broker": {
+      "bn": "দালাল",
+      "pos": "noun",
+      "slug": "broker"
+    },
+    "brutal": {
+      "bn": "নিষ্ঠুর",
+      "pos": "adjective",
+      "slug": "brutal"
+    },
+    "buddy": {
+      "bn": "ঘনিষ্ঠ বন্ধু",
+      "pos": "noun",
+      "slug": "buddy"
+    },
+    "budget": {
+      "bn": "বাজেট",
+      "pos": "noun",
+      "slug": "budget"
+    },
+    "building": {
+      "bn": "ভবন",
+      "pos": "noun",
+      "slug": "building"
+    },
+    "bulletin": {
+      "bn": "বুলেটিন",
+      "pos": "noun",
+      "slug": "bulletin"
+    },
+    "bullying": {
+      "bn": "ভয় দেখিয়ে লাঞ্ছনা",
+      "pos": "noun",
+      "slug": "bullying"
+    },
+    "bunny": {
+      "bn": "খরগোশছানা",
+      "pos": "noun",
+      "slug": "bunny"
+    },
+    "bureau": {
+      "bn": "ব্যুরো",
+      "pos": "noun",
+      "slug": "bureau"
+    },
+    "bureaucracy": {
+      "bn": "আমলাতন্ত্র",
+      "pos": "noun",
+      "slug": "bureaucracy"
+    },
+    "campus": {
+      "bn": "ক্যাম্পাস",
+      "pos": "noun",
+      "slug": "campus"
+    },
+    "candidate": {
+      "bn": "প্রার্থী",
+      "pos": "noun",
+      "slug": "candidate"
+    },
+    "capture": {
+      "bn": "ক্যাপচার",
+      "pos": "noun",
+      "slug": "capture"
+    },
+    "car": {
+      "bn": "গাড়ী",
+      "pos": "noun",
+      "slug": "car"
+    },
+    "caravan": {
+      "bn": "ক্যারাভ্যান",
+      "pos": "noun",
+      "slug": "caravan"
+    },
+    "career": {
+      "bn": "পেশা",
+      "pos": "noun",
+      "slug": "career"
+    },
+    "caring": {
+      "bn": "যত্নশীল",
+      "pos": "adjective",
+      "slug": "caring"
+    },
+    "cart": {
+      "bn": "কার্ট",
+      "pos": "noun",
+      "slug": "cart"
+    },
+    "castle": {
+      "bn": "দুর্গ",
+      "pos": "noun",
+      "slug": "castle"
+    },
+    "cat": {
+      "bn": "বিড়াল",
+      "pos": "noun",
+      "slug": "cat"
+    },
+    "catastrophe": {
+      "bn": "বিপর্যয়",
+      "slug": "catastrophe"
+    },
+    "category": {
+      "bn": "শ্রেণি",
+      "pos": "noun",
+      "slug": "category"
+    },
+    "cautious": {
+      "bn": "সতর্ক",
+      "slug": "cautious"
+    },
+    "cease": {
+      "bn": "থেমে যাওয়া",
+      "pos": "verb",
+      "slug": "cease"
+    },
+    "celebrate": {
+      "bn": "উদ্যাপন করা",
+      "pos": "verb",
+      "slug": "celebrate"
+    },
+    "celebration": {
+      "bn": "উদ্যাপন",
+      "pos": "noun",
+      "slug": "celebration"
+    },
+    "celery": {
+      "bn": "সেলারি",
+      "pos": "noun",
+      "slug": "celery"
+    },
+    "celestial": {
+      "bn": "আকাশের",
+      "pos": "adjective",
+      "slug": "celestial"
+    },
+    "cellular": {
+      "bn": "কোষীয়",
+      "pos": "adjective",
+      "slug": "cellular"
+    },
+    "census": {
+      "bn": "আদমশুমারি",
+      "pos": "noun",
+      "slug": "census"
+    },
+    "century": {
+      "bn": "শতাব্দী",
+      "pos": "noun",
+      "slug": "century"
+    },
+    "certain": {
+      "bn": "নিশ্চিত",
+      "pos": "adjective",
+      "slug": "certain"
+    },
+    "challenge": {
+      "bn": "চ্যালেঞ্জ",
+      "pos": "noun",
+      "slug": "challenge"
+    },
+    "chaos": {
+      "bn": "চরম বিশৃঙ্খলা",
+      "pos": "noun",
+      "slug": "chaos"
+    },
+    "charming": {
+      "bn": "কমনীয়",
+      "slug": "charming"
+    },
+    "cherish": {
+      "bn": "আগলে রাখা",
+      "pos": "verb",
+      "slug": "cherish"
+    },
+    "chin": {
+      "bn": "থুতনি",
+      "pos": "noun",
+      "slug": "chin"
+    },
+    "choose": {
+      "bn": "বেছে নেওয়া",
+      "pos": "verb",
+      "slug": "choose"
+    },
+    "chronic": {
+      "bn": "দীর্ঘস্থায়ী",
+      "pos": "adjective",
+      "slug": "chronic"
+    },
+    "cinnamon": {
+      "bn": "দারচিনি",
+      "pos": "noun",
+      "slug": "cinnamon"
+    },
+    "circumstances": {
+      "bn": "জীবনের অবস্থা",
+      "pos": "noun",
+      "slug": "circumstances"
+    },
+    "city": {
+      "bn": "শহর",
+      "pos": "noun",
+      "slug": "city"
+    },
+    "civics": {
+      "bn": "নাগরিকবিদ্যা",
+      "pos": "noun",
+      "slug": "civics"
+    },
+    "clarification": {
+      "bn": "স্পষ্টীকরণ",
+      "pos": "noun",
+      "slug": "clarification"
+    },
+    "clarity": {
+      "bn": "স্বচ্ছতা",
+      "slug": "clarity"
+    },
+    "clause": {
+      "bn": "ধারা",
+      "pos": "noun",
+      "slug": "clause"
+    },
+    "clearance": {
+      "bn": "ছাড়পত্র",
+      "pos": "noun",
+      "slug": "clearance"
+    },
+    "client": {
+      "bn": "ক্লায়েন্ট",
+      "pos": "noun",
+      "slug": "client"
+    },
+    "cliff": {
+      "bn": "খাড়া পাড়",
+      "pos": "noun",
+      "slug": "cliff"
+    },
+    "climate": {
+      "bn": "জলবায়ু",
+      "pos": "noun",
+      "slug": "climate"
+    },
+    "clown": {
+      "bn": "ভাঁড়",
+      "pos": "noun",
+      "slug": "clown"
+    },
+    "cluster": {
+      "bn": "গুচ্ছ",
+      "pos": "noun",
+      "slug": "cluster"
+    },
+    "coastal": {
+      "bn": "উপকূলীয়",
+      "pos": "adjective",
+      "slug": "coastal"
+    },
+    "coherence": {
+      "bn": "সংগতি",
+      "pos": "noun",
+      "slug": "coherence"
+    },
+    "cohort": {
+      "bn": "সমবয়সী দল",
+      "pos": "noun",
+      "slug": "cohort"
+    },
+    "collaboration": {
+      "bn": "সহযোগিতা",
+      "pos": "noun",
+      "slug": "collaboration"
+    },
+    "collision": {
+      "bn": "সংঘর্ষ",
+      "pos": "noun",
+      "slug": "collision"
+    },
+    "combat": {
+      "bn": "যুদ্ধ",
+      "pos": "noun",
+      "slug": "combat"
+    },
+    "combination": {
+      "bn": "সংমিশ্রণ",
+      "pos": "noun",
+      "slug": "combination"
+    },
+    "combined": {
+      "bn": "সম্মিলিত",
+      "pos": "adjective",
+      "slug": "combined"
+    },
+    "comfort": {
+      "bn": "আরাম",
+      "pos": "noun",
+      "slug": "comfort"
+    },
+    "comfortable": {
+      "bn": "আরামদায়ক",
+      "pos": "adjective",
+      "slug": "comfortable"
+    },
+    "commemorate": {
+      "bn": "স্মরণ করা",
+      "slug": "commemorate"
+    },
+    "commencement": {
+      "bn": "সূচনা",
+      "pos": "noun",
+      "slug": "commencement"
+    },
+    "commerce": {
+      "bn": "বাণিজ্য",
+      "pos": "noun",
+      "slug": "commerce"
+    },
+    "committee": {
+      "bn": "কমিটি",
+      "pos": "noun",
+      "slug": "committee"
+    },
+    "communication": {
+      "bn": "যোগাযোগ",
+      "pos": "noun",
+      "slug": "communication"
+    },
+    "communism": {
+      "bn": "সাম্যবাদ",
+      "pos": "noun",
+      "slug": "communism"
+    },
+    "compassionate": {
+      "bn": "সহানুভূতিশীল",
+      "pos": "adjective",
+      "slug": "compassionate"
+    },
+    "compatible": {
+      "bn": "সামঞ্জস্যপূর্ণ",
+      "pos": "adjective",
+      "slug": "compatible"
+    },
+    "competence": {
+      "bn": "যোগ্যতা",
+      "pos": "noun",
+      "slug": "competence"
+    },
+    "competent": {
+      "bn": "দক্ষ",
+      "pos": "adjective",
+      "slug": "competent"
+    },
+    "competitive": {
+      "bn": "প্রতিযোগিতামূলক",
+      "pos": "adjective",
+      "slug": "competitive"
+    },
+    "compilation": {
+      "bn": "সংকলন",
+      "pos": "noun",
+      "slug": "compilation"
+    },
+    "compile": {
+      "bn": "সংকলন করা",
+      "pos": "verb",
+      "slug": "compile"
+    },
+    "complement": {
+      "bn": "পরিপূরক",
+      "slug": "complement"
+    },
+    "complementary": {
+      "bn": "পরিপূরক",
+      "pos": "adjective",
+      "slug": "complementary"
+    },
+    "complete": {
+      "bn": "সম্পূর্ণ",
+      "pos": "verb",
+      "slug": "complete"
+    },
+    "completion": {
+      "bn": "সমাপ্তি",
+      "pos": "noun",
+      "slug": "completion"
+    },
+    "compliance": {
+      "bn": "সম্মতি",
+      "pos": "noun",
+      "slug": "compliance"
+    },
+    "complicated": {
+      "bn": "জটিল",
+      "pos": "adjective",
+      "slug": "complicated"
+    },
+    "compliment": {
+      "bn": "প্রশংসা",
+      "pos": "noun",
+      "slug": "compliment"
+    },
+    "component": {
+      "bn": "উপাদান",
+      "pos": "noun",
+      "slug": "component"
+    },
+    "comprehend": {
+      "bn": "বুঝতে পারা",
+      "pos": "verb",
+      "slug": "comprehend"
+    },
+    "comprehensive": {
+      "bn": "ব্যাপক",
+      "pos": "noun",
+      "slug": "comprehensive"
+    },
+    "compulsion": {
+      "bn": "জোরজবরদস্তি",
+      "pos": "noun",
+      "slug": "compulsion"
+    },
+    "comrade": {
+      "bn": "সঙ্গী",
+      "pos": "noun",
+      "slug": "comrade"
+    },
+    "conceal": {
+      "bn": "লুকানো",
+      "pos": "verb",
+      "slug": "conceal"
+    },
+    "conceive": {
+      "bn": "গর্ভধারণ করা",
+      "slug": "conceive"
+    },
+    "concentration": {
+      "bn": "একাগ্রতা",
+      "pos": "noun",
+      "slug": "concentration"
+    },
+    "concession": {
+      "bn": "ছাড় দেওয়া",
+      "pos": "noun",
+      "slug": "concession"
+    },
+    "concise": {
+      "bn": "সংক্ষিপ্ত",
+      "pos": "adjective",
+      "slug": "concise"
+    },
+    "concurrent": {
+      "bn": "সমসাময়িক",
+      "pos": "adjective",
+      "slug": "concurrent"
+    },
+    "condemn": {
+      "bn": "নিন্দা",
+      "slug": "condemn"
+    },
+    "configuration": {
+      "bn": "কনফিগারেশন",
+      "pos": "noun",
+      "slug": "configuration"
+    },
+    "confine": {
+      "bn": "আবদ্ধ করা",
+      "slug": "confine"
+    },
+    "confirm": {
+      "bn": "নিশ্চিত করুন",
+      "pos": "verb",
+      "slug": "confirm"
+    },
+    "conform": {
+      "bn": "মানানসই",
+      "slug": "conform"
+    },
+    "confront": {
+      "bn": "মুখোমুখি",
+      "slug": "confront"
+    },
+    "congenial": {
+      "bn": "মানানসই",
+      "pos": "adjective",
+      "slug": "congenial"
+    },
+    "congregation": {
+      "bn": "সমাবেশ",
+      "pos": "noun",
+      "slug": "congregation"
+    },
+    "conjugal": {
+      "bn": "দাম্পত্য",
+      "pos": "adjective",
+      "slug": "conjugal"
+    },
+    "conquer": {
+      "bn": "জয় করা",
+      "pos": "verb",
+      "slug": "conquer"
+    },
+    "conscience": {
+      "bn": "বিবেক",
+      "slug": "conscience"
+    },
+    "conscientious": {
+      "bn": "বিবেকবান",
+      "slug": "conscientious"
+    },
+    "conscious": {
+      "bn": "সংজ্ঞাযুক্ত",
+      "pos": "adjective",
+      "slug": "conscious"
+    },
+    "consecutive": {
+      "bn": "একটানা",
+      "slug": "consecutive"
+    },
+    "consent": {
+      "bn": "সম্মতি",
+      "pos": "noun",
+      "slug": "consent"
+    },
+    "consequently": {
+      "bn": "ফলে",
+      "pos": "adverb",
+      "slug": "consequently"
+    },
+    "conservation": {
+      "bn": "সংরক্ষণ",
+      "pos": "noun",
+      "slug": "conservation"
+    },
+    "conservative": {
+      "bn": "রক্ষণশীল",
+      "pos": "noun",
+      "slug": "conservative"
+    },
+    "consolation": {
+      "bn": "সান্ত্বনা",
+      "pos": "noun",
+      "slug": "consolation"
+    },
+    "console": {
+      "bn": "কনসোল",
+      "pos": "noun",
+      "slug": "console"
+    },
+    "consolidated": {
+      "bn": "একত্রিত",
+      "pos": "adjective",
+      "slug": "consolidated"
+    },
+    "consolidation": {
+      "bn": "একীভূতকরণ",
+      "pos": "noun",
+      "slug": "consolidation"
+    },
+    "consortium": {
+      "bn": "ব্যবসায়িক জোট",
+      "pos": "noun",
+      "slug": "consortium"
+    },
+    "conspicuous": {
+      "bn": "চোখে পড়ার মতো",
+      "pos": "adjective",
+      "slug": "conspicuous"
+    },
+    "conspiracy": {
+      "bn": "ষড়যন্ত্র",
+      "pos": "noun",
+      "slug": "conspiracy"
+    },
+    "constant": {
+      "bn": "ধ্রুবক",
+      "pos": "noun",
+      "slug": "constant"
+    },
+    "consultant": {
+      "bn": "পরামর্শদাতা",
+      "pos": "noun",
+      "slug": "consultant"
+    },
+    "contact": {
+      "bn": "যোগাযোগ",
+      "pos": "noun",
+      "slug": "contact"
+    },
+    "contain": {
+      "bn": "ধারণ",
+      "pos": "verb",
+      "slug": "contain"
+    },
+    "contemporary": {
+      "bn": "সমসাময়িক",
+      "pos": "noun",
+      "slug": "contemporary"
+    },
+    "context": {
+      "bn": "প্রসঙ্গ",
+      "pos": "noun",
+      "slug": "context"
+    },
+    "continued": {
+      "bn": "অব্যাহত",
+      "pos": "verb",
+      "slug": "continued"
+    },
+    "controversy": {
+      "bn": "বিতর্ক",
+      "pos": "noun",
+      "slug": "controversy"
+    },
+    "convener": {
+      "bn": "আহ্বায়ক",
+      "pos": "noun",
+      "slug": "convener"
+    },
+    "conversation": {
+      "bn": "কথোপকথন",
+      "pos": "noun",
+      "slug": "conversation"
+    },
+    "conviction": {
+      "bn": "দৃঢ় বিশ্বাস",
+      "pos": "noun",
+      "slug": "conviction"
+    },
+    "convince": {
+      "bn": "বোঝানো",
+      "slug": "convince"
+    },
+    "convocation": {
+      "bn": "সমাবর্তন",
+      "pos": "noun",
+      "slug": "convocation"
+    },
+    "cool": {
+      "bn": "শীতল",
+      "pos": "noun",
+      "slug": "cool"
+    },
+    "cooperate": {
+      "bn": "একযোগে কাজ করা",
+      "pos": "verb",
+      "slug": "cooperate"
+    },
+    "cooperation": {
+      "bn": "সহযোগিতা",
+      "pos": "noun",
+      "slug": "cooperation"
+    },
+    "coordinator": {
+      "bn": "সমন্বয়কারী",
+      "pos": "noun",
+      "slug": "coordinator"
+    },
+    "cope": {
+      "bn": "সামলে নেওয়া",
+      "pos": "verb",
+      "slug": "cope"
+    },
+    "core": {
+      "bn": "মূল",
+      "pos": "noun",
+      "slug": "core"
+    },
+    "coriander": {
+      "bn": "ধনে",
+      "pos": "noun",
+      "slug": "coriander"
+    },
+    "corporate": {
+      "bn": "কর্পোরেট",
+      "pos": "adjective",
+      "slug": "corporate"
+    },
+    "corresponding": {
+      "bn": "অনুরূপ",
+      "pos": "verb",
+      "slug": "corresponding"
+    },
+    "cosmic": {
+      "bn": "মহাজাগতিক",
+      "pos": "adjective",
+      "slug": "cosmic"
+    },
+    "costly": {
+      "bn": "দামি",
+      "pos": "adjective",
+      "slug": "costly"
+    },
+    "cotton": {
+      "bn": "তুলা",
+      "pos": "noun",
+      "slug": "cotton"
+    },
+    "counseling": {
+      "bn": "কাউন্সেলিং",
+      "pos": "noun",
+      "slug": "counseling"
+    },
+    "count": {
+      "bn": "গণনা",
+      "pos": "noun",
+      "slug": "count"
+    },
+    "counterfeit": {
+      "bn": "নকল",
+      "pos": "adjective",
+      "slug": "counterfeit"
+    },
+    "country": {
+      "bn": "দেশ",
+      "pos": "noun",
+      "slug": "country"
+    },
+    "courteous": {
+      "bn": "বিনয়ী",
+      "slug": "courteous"
+    },
+    "courtesy": {
+      "bn": "ভদ্রতা",
+      "pos": "noun",
+      "slug": "courtesy"
+    },
+    "covered": {
+      "bn": "আচ্ছাদিত",
+      "pos": "verb",
+      "slug": "covered"
+    },
+    "craft": {
+      "bn": "নৈপুণ্য",
+      "pos": "noun",
+      "slug": "craft"
+    },
+    "crane": {
+      "bn": "সারস",
+      "pos": "noun",
+      "slug": "crane"
+    },
+    "crash": {
+      "bn": "ক্র্যাশ",
+      "pos": "noun",
+      "slug": "crash"
+    },
+    "crave": {
+      "bn": "তীব্র ইচ্ছে হওয়া",
+      "pos": "verb",
+      "slug": "crave"
+    },
+    "craving": {
+      "bn": "প্রবল বাসনা",
+      "pos": "noun",
+      "slug": "craving"
+    },
+    "crazy": {
+      "bn": "পাগল",
+      "pos": "noun",
+      "slug": "crazy"
+    },
+    "creative": {
+      "bn": "সৃজনশীল",
+      "pos": "adjective",
+      "slug": "creative"
+    },
+    "credentials": {
+      "bn": "প্রমাণপত্র",
+      "pos": "noun",
+      "slug": "credentials"
+    },
+    "creek": {
+      "bn": "খাঁড়ি",
+      "pos": "noun",
+      "slug": "creek"
+    },
+    "creepy": {
+      "bn": "শিরশিরে ভয়ের",
+      "pos": "adjective",
+      "slug": "creepy"
+    },
+    "criticism": {
+      "bn": "সমালোচনা",
+      "pos": "noun",
+      "slug": "criticism"
+    },
+    "criticize": {
+      "bn": "সমালোচনা করা",
+      "pos": "verb",
+      "slug": "criticize"
+    },
+    "crochet": {
+      "bn": "ক্রোশে বোনা",
+      "pos": "verb",
+      "slug": "crochet"
+    },
+    "crucial": {
+      "bn": "গুরুত্বপূর্ণ",
+      "slug": "crucial"
+    },
+    "crush": {
+      "bn": "সাময়িক মুগ্ধতা",
+      "pos": "noun",
+      "slug": "crush"
+    },
+    "cuckoo": {
+      "bn": "কোকিল",
+      "pos": "noun",
+      "slug": "cuckoo"
+    },
+    "cuddle": {
+      "bn": "আদর করে জড়িয়ে ধরা",
+      "pos": "verb",
+      "slug": "cuddle"
+    },
+    "culinary": {
+      "bn": "রন্ধনবিষয়ক",
+      "pos": "adjective",
+      "slug": "culinary"
+    },
+    "culture": {
+      "bn": "সংস্কৃতি",
+      "pos": "noun",
+      "slug": "culture"
+    },
+    "curd": {
+      "bn": "ছানা",
+      "pos": "noun",
+      "slug": "curd"
+    },
+    "curiosity": {
+      "bn": "কৌতূহল",
+      "pos": "noun",
+      "slug": "curiosity"
+    },
+    "currently": {
+      "bn": "বর্তমানে",
+      "pos": "adverb",
+      "slug": "currently"
+    },
+    "curtain": {
+      "bn": "পর্দা",
+      "pos": "noun",
+      "slug": "curtain"
+    },
+    "cute": {
+      "bn": "সুন্দর",
+      "pos": "adjective",
+      "slug": "cute"
+    },
+    "cynical": {
+      "bn": "নিষ্ঠুর",
+      "slug": "cynical"
+    },
+    "damage": {
+      "bn": "ক্ষতি",
+      "pos": "noun",
+      "slug": "damage"
+    },
+    "dangerous": {
+      "bn": "বিপজ্জনক",
+      "pos": "adjective",
+      "slug": "dangerous"
+    },
+    "dating": {
+      "bn": "ডেটিং",
+      "pos": "noun",
+      "slug": "dating"
+    },
+    "daughter": {
+      "bn": "কন্যা",
+      "pos": "noun",
+      "slug": "daughter"
+    },
+    "deadline": {
+      "bn": "শেষ সময়সীমা",
+      "pos": "noun",
+      "slug": "deadline"
+    },
+    "debit": {
+      "bn": "ডেবিট",
+      "pos": "noun",
+      "slug": "debit"
+    },
+    "debt": {
+      "bn": "ঋণ",
+      "pos": "noun",
+      "slug": "debt"
+    },
+    "deceased": {
+      "bn": "মৃত",
+      "pos": "adjective",
+      "slug": "deceased"
+    },
+    "deceive": {
+      "bn": "প্রতারণা করা",
+      "pos": "verb",
+      "slug": "deceive"
+    },
+    "decision": {
+      "bn": "সিদ্ধান্ত",
+      "pos": "noun",
+      "slug": "decision"
+    },
+    "declaration": {
+      "bn": "ঘোষণা",
+      "slug": "declaration"
+    },
+    "decrease": {
+      "bn": "হ্রাস",
+      "pos": "noun",
+      "slug": "decrease"
+    },
+    "decree": {
+      "bn": "ডিক্রি",
+      "pos": "noun",
+      "slug": "decree"
+    },
+    "dedicated": {
+      "bn": "নিবেদিত",
+      "pos": "adjective",
+      "slug": "dedicated"
+    },
+    "deed": {
+      "bn": "কাজ",
+      "pos": "noun",
+      "slug": "deed"
+    },
+    "default": {
+      "bn": "ডিফল্ট",
+      "pos": "noun",
+      "slug": "default"
+    },
+    "defect": {
+      "bn": "ত্রুটি",
+      "slug": "defect"
+    },
+    "deferral": {
+      "bn": "মুলতবি",
+      "pos": "noun",
+      "slug": "deferral"
+    },
+    "deficiency": {
+      "bn": "ঘাটতি",
+      "pos": "noun",
+      "slug": "deficiency"
+    },
+    "define": {
+      "bn": "সংজ্ঞায়িত করা",
+      "pos": "verb",
+      "slug": "define"
+    },
+    "definitely": {
+      "bn": "নিশ্চিতভাবে",
+      "pos": "adverb",
+      "slug": "definitely"
+    },
+    "definition": {
+      "bn": "সংজ্ঞা",
+      "pos": "noun",
+      "slug": "definition"
+    },
+    "deforestation": {
+      "bn": "বন উজাড়",
+      "pos": "noun",
+      "slug": "deforestation"
+    },
+    "defy": {
+      "bn": "প্রতিরোধ করা",
+      "pos": "verb",
+      "slug": "defy"
+    },
+    "dehydration": {
+      "bn": "পানিশূন্যতা",
+      "pos": "noun",
+      "slug": "dehydration"
+    },
+    "delegate": {
+      "bn": "দায়িত্ব দেওয়া",
+      "pos": "verb",
+      "slug": "delegate"
+    },
+    "delegation": {
+      "bn": "প্রতিনিধিদল",
+      "pos": "noun",
+      "slug": "delegation"
+    },
+    "deliberate": {
+      "bn": "ইচ্ছাকৃত",
+      "slug": "deliberate"
+    },
+    "demo": {
+      "bn": "ডেমো",
+      "pos": "noun",
+      "slug": "demo"
+    },
+    "democracy": {
+      "bn": "গণতন্ত্র",
+      "pos": "noun",
+      "slug": "democracy"
+    },
+    "democratic": {
+      "bn": "গণতান্ত্রিক",
+      "pos": "adjective",
+      "slug": "democratic"
+    },
+    "demon": {
+      "bn": "দানব",
+      "pos": "noun",
+      "slug": "demon"
+    },
+    "demurrage": {
+      "bn": "বিলম্ব মাশুল",
+      "pos": "noun",
+      "slug": "demurrage"
+    },
+    "den": {
+      "bn": "ডেন",
+      "pos": "noun",
+      "slug": "den"
+    },
+    "denominator": {
+      "bn": "হর",
+      "pos": "noun",
+      "slug": "denominator"
+    },
+    "department": {
+      "bn": "বিভাগ",
+      "pos": "noun",
+      "slug": "department"
+    },
+    "depict": {
+      "bn": "চিত্রিত করা",
+      "pos": "verb",
+      "slug": "depict"
+    },
+    "depreciation": {
+      "bn": "অবচয়",
+      "pos": "noun",
+      "slug": "depreciation"
+    },
+    "depressed": {
+      "bn": "বিষণ্ন",
+      "pos": "adjective",
+      "slug": "depressed"
+    },
+    "deprived": {
+      "bn": "বঞ্চিত",
+      "pos": "adjective",
+      "slug": "deprived"
+    },
+    "derived": {
+      "bn": "উদ্ভূত",
+      "pos": "adjective",
+      "slug": "derived"
+    },
+    "design": {
+      "bn": "নকশা",
+      "pos": "noun",
+      "slug": "design"
+    },
+    "designation": {
+      "bn": "পদবি",
+      "pos": "noun",
+      "slug": "designation"
+    },
+    "desire": {
+      "bn": "ইচ্ছা",
+      "pos": "noun",
+      "slug": "desire"
+    },
+    "desired": {
+      "bn": "কাঙ্ক্ষিত",
+      "pos": "adjective",
+      "slug": "desired"
+    },
+    "despair": {
+      "bn": "হতাশা",
+      "pos": "noun",
+      "slug": "despair"
+    },
+    "desperately": {
+      "bn": "মরিয়া হয়ে",
+      "pos": "adverb",
+      "slug": "desperately"
+    },
+    "despicable": {
+      "bn": "ঘৃণ্য",
+      "pos": "adjective",
+      "slug": "despicable"
+    },
+    "despise": {
+      "bn": "তুচ্ছ করা",
+      "slug": "despise"
+    },
+    "destination": {
+      "bn": "গন্তব্য",
+      "pos": "noun",
+      "slug": "destination"
+    },
+    "destiny": {
+      "bn": "নিয়তি",
+      "pos": "noun",
+      "slug": "destiny"
+    },
+    "destitute": {
+      "bn": "নিঃস্ব",
+      "slug": "destitute"
+    },
+    "destruction": {
+      "bn": "ধ্বংস",
+      "pos": "noun",
+      "slug": "destruction"
+    },
+    "detention": {
+      "bn": "আটক",
+      "pos": "noun",
+      "slug": "detention"
+    },
+    "detest": {
+      "bn": "ঘৃণা",
+      "slug": "detest"
+    },
+    "detour": {
+      "bn": "বিকল্প পথ",
+      "pos": "noun",
+      "slug": "detour"
+    },
+    "devastating": {
+      "bn": "বিধ্বংসী",
+      "pos": "adjective",
+      "slug": "devastating"
+    },
+    "development": {
+      "bn": "উন্নয়ন",
+      "pos": "noun",
+      "slug": "development"
+    },
+    "devoted": {
+      "bn": "নিবেদিত",
+      "pos": "adjective",
+      "slug": "devoted"
+    },
+    "dialect": {
+      "bn": "উপভাষা",
+      "slug": "dialect"
+    },
+    "diameter": {
+      "bn": "ব্যাস",
+      "pos": "noun",
+      "slug": "diameter"
+    },
+    "diary": {
+      "bn": "ডায়েরি",
+      "pos": "noun",
+      "slug": "diary"
+    },
+    "diaspora": {
+      "bn": "প্রবাসী বিস্তার",
+      "pos": "noun",
+      "slug": "diaspora"
+    },
+    "difference": {
+      "bn": "পার্থক্য",
+      "pos": "noun",
+      "slug": "difference"
+    },
+    "difficult": {
+      "bn": "কঠিন",
+      "pos": "adjective",
+      "slug": "difficult"
+    },
+    "dignity": {
+      "bn": "মর্যাদা",
+      "pos": "noun",
+      "slug": "dignity"
+    },
+    "diligence": {
+      "bn": "অধ্যবসায়",
+      "pos": "noun",
+      "slug": "diligence"
+    },
+    "diligent": {
+      "bn": "পরিশ্রমী",
+      "slug": "diligent"
+    },
+    "dinner": {
+      "bn": "প্রধান খাবার",
+      "pos": "noun",
+      "slug": "dinner"
+    },
+    "diplomatic": {
+      "bn": "কূটনৈতিক",
+      "pos": "adjective",
+      "slug": "diplomatic"
+    },
+    "dirty": {
+      "bn": "নোংরা",
+      "pos": "verb",
+      "slug": "dirty"
+    },
+    "disability": {
+      "bn": "অক্ষমতা",
+      "pos": "noun",
+      "slug": "disability"
+    },
+    "disaster": {
+      "bn": "বিপর্যয়",
+      "pos": "noun",
+      "slug": "disaster"
+    },
+    "disbursement": {
+      "bn": "অর্থ ছাড়",
+      "pos": "noun",
+      "slug": "disbursement"
+    },
+    "discern": {
+      "bn": "উপলব্ধি করা",
+      "slug": "discern"
+    },
+    "discrimination": {
+      "bn": "বৈষম্য",
+      "pos": "noun",
+      "slug": "discrimination"
+    },
+    "discussion": {
+      "bn": "আলোচনা",
+      "pos": "noun",
+      "slug": "discussion"
+    },
+    "dispatch": {
+      "bn": "প্রেরণ",
+      "slug": "dispatch"
+    },
+    "disperse": {
+      "bn": "ছড়িয়ে দেওয়া",
+      "slug": "disperse"
+    },
+    "disrupt": {
+      "bn": "ব্যাহত করা",
+      "slug": "disrupt"
+    },
+    "dissemination": {
+      "bn": "প্রচার",
+      "pos": "noun",
+      "slug": "dissemination"
+    },
+    "dissertation": {
+      "bn": "গবেষণাপত্র",
+      "pos": "noun",
+      "slug": "dissertation"
+    },
+    "distorted": {
+      "bn": "বিকৃত",
+      "pos": "adjective",
+      "slug": "distorted"
+    },
+    "distribute": {
+      "bn": "বিতরণ",
+      "slug": "distribute"
+    },
+    "diversity": {
+      "bn": "বৈচিত্র্য",
+      "pos": "noun",
+      "slug": "diversity"
+    },
+    "divert": {
+      "bn": "ডাইভার্ট",
+      "slug": "divert"
+    },
+    "divide": {
+      "bn": "ভাগ করা",
+      "slug": "divide"
+    },
+    "dividend": {
+      "bn": "লভ্যাংশ",
+      "pos": "noun",
+      "slug": "dividend"
+    },
+    "dizzy": {
+      "bn": "মাথা ঘোরা",
+      "pos": "adjective",
+      "slug": "dizzy"
+    },
+    "doctrine": {
+      "bn": "মতবাদ",
+      "pos": "noun",
+      "slug": "doctrine"
+    },
+    "documentary": {
+      "bn": "তথ্যচিত্র",
+      "pos": "noun",
+      "slug": "documentary"
+    },
+    "domestic": {
+      "bn": "গার্হস্থ্য",
+      "pos": "noun",
+      "slug": "domestic"
+    },
+    "done": {
+      "bn": "সম্পন্ন",
+      "pos": "verb",
+      "slug": "done"
+    },
+    "dormant": {
+      "bn": "সুপ্ত",
+      "slug": "dormant"
+    },
+    "dowry": {
+      "bn": "যৌতুক",
+      "pos": "noun",
+      "slug": "dowry"
+    },
+    "drawing": {
+      "bn": "অঙ্কন",
+      "pos": "noun",
+      "slug": "drawing"
+    },
+    "drought": {
+      "bn": "খরা",
+      "pos": "noun",
+      "slug": "drought"
+    },
+    "dude": {
+      "bn": "বন্ধু সম্বোধন",
+      "pos": "noun",
+      "slug": "dude"
+    },
+    "duration": {
+      "bn": "সময়কাল",
+      "pos": "noun",
+      "slug": "duration"
+    },
+    "dusk": {
+      "bn": "গোধূলি",
+      "pos": "noun",
+      "slug": "dusk"
+    },
+    "dust": {
+      "bn": "ধুলো",
+      "pos": "noun",
+      "slug": "dust"
+    },
+    "duty": {
+      "bn": "কর্তব্য",
+      "pos": "noun",
+      "slug": "duty"
+    },
+    "eager": {
+      "bn": "আগ্রহী",
+      "pos": "adjective",
+      "slug": "eager"
+    },
+    "eagerly": {
+      "bn": "আগ্রহভরে",
+      "pos": "adverb",
+      "slug": "eagerly"
+    },
+    "easily": {
+      "bn": "সহজে",
+      "pos": "adverb",
+      "slug": "easily"
+    },
+    "ecstatic": {
+      "bn": "উচ্ছ্বসিত",
+      "pos": "adjective",
+      "slug": "ecstatic"
+    },
+    "edge": {
+      "bn": "প্রান্ত",
+      "pos": "noun",
+      "slug": "edge"
+    },
+    "efficient": {
+      "bn": "দক্ষ",
+      "pos": "adjective",
+      "slug": "efficient"
+    },
+    "effort": {
+      "bn": "প্রচেষ্টা",
+      "pos": "noun",
+      "slug": "effort"
+    },
+    "elaborate": {
+      "bn": "বিস্তারিত",
+      "slug": "elaborate"
+    },
+    "elegant": {
+      "bn": "রুচিশীল",
+      "pos": "adjective",
+      "slug": "elegant"
+    },
+    "elf": {
+      "bn": "দুষ্টু পরি",
+      "pos": "noun",
+      "slug": "elf"
+    },
+    "elicit": {
+      "bn": "বের করে আনা",
+      "pos": "verb",
+      "slug": "elicit"
+    },
+    "eligible": {
+      "bn": "যোগ্য",
+      "pos": "adjective",
+      "slug": "eligible"
+    },
+    "elite": {
+      "bn": "অভিজাত শ্রেণি",
+      "pos": "noun",
+      "slug": "elite"
+    },
+    "embargo": {
+      "bn": "বাণিজ্য নিষেধাজ্ঞা",
+      "pos": "noun",
+      "slug": "embargo"
+    },
+    "embarrassed": {
+      "bn": "লজ্জিত",
+      "pos": "adjective",
+      "slug": "embarrassed"
+    },
+    "embarrassing": {
+      "bn": "লজ্জাজনক",
+      "pos": "adjective",
+      "slug": "embarrassing"
+    },
+    "embezzlement": {
+      "bn": "আত্মসাৎ",
+      "pos": "noun",
+      "slug": "embezzlement"
+    },
+    "emerging": {
+      "bn": "উদীয়মান",
+      "pos": "adjective",
+      "slug": "emerging"
+    },
+    "emphasize": {
+      "bn": "জোর দেওয়া",
+      "pos": "verb",
+      "slug": "emphasize"
+    },
+    "employee": {
+      "bn": "কর্মচারী",
+      "pos": "noun",
+      "slug": "employee"
+    },
+    "employer": {
+      "bn": "নিয়োগকর্তা",
+      "pos": "noun",
+      "slug": "employer"
+    },
+    "employment": {
+      "bn": "কর্মসংস্থান",
+      "pos": "noun",
+      "slug": "employment"
+    },
+    "empty": {
+      "bn": "খালি",
+      "pos": "noun",
+      "slug": "empty"
+    },
+    "enable": {
+      "bn": "সক্ষম",
+      "pos": "verb",
+      "slug": "enable"
+    },
+    "encore": {
+      "bn": "অতিরিক্ত পরিবেশনা",
+      "pos": "noun",
+      "slug": "encore"
+    },
+    "encourage": {
+      "bn": "উৎসাহ দেওয়া",
+      "pos": "verb",
+      "slug": "encourage"
+    },
+    "encyclopedia": {
+      "bn": "বিশ্বকোষ",
+      "pos": "noun",
+      "slug": "encyclopedia"
+    },
+    "endurance": {
+      "bn": "সহ্যশক্তি",
+      "pos": "noun",
+      "slug": "endurance"
+    },
+    "enduring": {
+      "bn": "দীর্ঘস্থায়ী",
+      "pos": "adjective",
+      "slug": "enduring"
+    },
+    "enemy": {
+      "bn": "শত্রু",
+      "pos": "noun",
+      "slug": "enemy"
+    },
+    "enforcement": {
+      "bn": "প্রয়োগ",
+      "pos": "noun",
+      "slug": "enforcement"
+    },
+    "enhance": {
+      "bn": "উন্নত করা",
+      "pos": "verb",
+      "slug": "enhance"
+    },
+    "enjoyable": {
+      "bn": "আনন্দদায়ক",
+      "pos": "adjective",
+      "slug": "enjoyable"
+    },
+    "enough": {
+      "bn": "যথেষ্ট",
+      "pos": "adjective",
+      "slug": "enough"
+    },
+    "enrollment": {
+      "bn": "তালিকাভুক্তি",
+      "pos": "noun",
+      "slug": "enrollment"
+    },
+    "ensure": {
+      "bn": "নিশ্চিত করা",
+      "pos": "verb",
+      "slug": "ensure"
+    },
+    "enterprise": {
+      "bn": "উদ্যোগ",
+      "pos": "noun",
+      "slug": "enterprise"
+    },
+    "entertain": {
+      "bn": "আমোদ দেওয়া",
+      "pos": "verb",
+      "slug": "entertain"
+    },
+    "enthusiasm": {
+      "bn": "উৎসাহ",
+      "pos": "noun",
+      "slug": "enthusiasm"
+    },
+    "entitled": {
+      "bn": "অধিকারপ্রাপ্ত",
+      "pos": "adjective",
+      "slug": "entitled"
+    },
+    "entity": {
+      "bn": "স্বতন্ত্র সত্তা",
+      "pos": "noun",
+      "slug": "entity"
+    },
+    "entrepreneur": {
+      "bn": "উদ্যোক্তা",
+      "pos": "noun",
+      "slug": "entrepreneur"
+    },
+    "entry": {
+      "bn": "প্রবেশ",
+      "pos": "noun",
+      "slug": "entry"
+    },
+    "environment": {
+      "bn": "পরিবেশ",
+      "pos": "noun",
+      "slug": "environment"
+    },
+    "epitome": {
+      "bn": "প্রকৃষ্ট উদাহরণ",
+      "pos": "noun",
+      "slug": "epitome"
+    },
+    "equipment": {
+      "bn": "সরঞ্জাম",
+      "pos": "noun",
+      "slug": "equipment"
+    },
+    "equivalent": {
+      "bn": "সমতুল্য",
+      "pos": "adjective",
+      "slug": "equivalent"
+    },
+    "era": {
+      "bn": "যুগ",
+      "pos": "noun",
+      "slug": "era"
+    },
+    "eradicate": {
+      "bn": "নির্মূল করা",
+      "pos": "verb",
+      "slug": "eradicate"
+    },
+    "erasure": {
+      "bn": "মুছে ফেলা",
+      "pos": "noun",
+      "slug": "erasure"
+    },
+    "especially": {
+      "bn": "বিশেষ করে",
+      "pos": "adverb",
+      "slug": "especially"
+    },
+    "essential": {
+      "bn": "অপরিহার্য",
+      "pos": "noun",
+      "slug": "essential"
+    },
+    "establish": {
+      "bn": "প্রতিষ্ঠা",
+      "pos": "verb",
+      "slug": "establish"
+    },
+    "established": {
+      "bn": "প্রতিষ্ঠিত",
+      "pos": "verb",
+      "slug": "established"
+    },
+    "estate": {
+      "bn": "এস্টেট",
+      "pos": "noun",
+      "slug": "estate"
+    },
+    "eternity": {
+      "bn": "অনন্তকাল",
+      "pos": "noun",
+      "slug": "eternity"
+    },
+    "ethical": {
+      "bn": "নৈতিক",
+      "pos": "adjective",
+      "slug": "ethical"
+    },
+    "ethics": {
+      "bn": "নৈতিকতা",
+      "pos": "noun",
+      "slug": "ethics"
+    },
+    "ethnicity": {
+      "bn": "জাতিসত্তা",
+      "pos": "noun",
+      "slug": "ethnicity"
+    },
+    "evaluate": {
+      "bn": "মূল্যায়ন",
+      "pos": "verb",
+      "slug": "evaluate"
+    },
+    "evaluation": {
+      "bn": "মূল্যায়ন",
+      "pos": "noun",
+      "slug": "evaluation"
+    },
+    "evening": {
+      "bn": "সন্ধ্যা",
+      "pos": "noun",
+      "slug": "evening"
+    },
+    "event": {
+      "bn": "ঘটনা",
+      "pos": "noun",
+      "slug": "event"
+    },
+    "eventually": {
+      "bn": "অবশেষে",
+      "pos": "adverb",
+      "slug": "eventually"
+    },
+    "ever": {
+      "bn": "কখনো",
+      "pos": "adverb",
+      "slug": "ever"
+    },
+    "evolution": {
+      "bn": "বিবর্তন",
+      "pos": "noun",
+      "slug": "evolution"
+    },
+    "exactly": {
+      "bn": "ঠিক",
+      "pos": "adverb",
+      "slug": "exactly"
+    },
+    "examinee": {
+      "bn": "পরীক্ষার্থী",
+      "pos": "noun",
+      "slug": "examinee"
+    },
+    "excellence": {
+      "bn": "উৎকর্ষ",
+      "pos": "noun",
+      "slug": "excellence"
+    },
+    "excellent": {
+      "bn": "উৎকৃষ্ট",
+      "pos": "adjective",
+      "slug": "excellent"
+    },
+    "exception": {
+      "bn": "ব্যতিক্রম",
+      "pos": "noun",
+      "slug": "exception"
+    },
+    "excess": {
+      "bn": "অতিরিক্ত",
+      "pos": "noun",
+      "slug": "excess"
+    },
+    "excessive": {
+      "bn": "অতিরিক্ত",
+      "pos": "adjective",
+      "slug": "excessive"
+    },
+    "exciting": {
+      "bn": "উত্তেজনাপূর্ণ",
+      "pos": "verb",
+      "slug": "exciting"
+    },
+    "exclusive": {
+      "bn": "একচেটিয়া",
+      "pos": "noun",
+      "slug": "exclusive"
+    },
+    "exercise": {
+      "bn": "ব্যায়াম",
+      "pos": "noun",
+      "slug": "exercise"
+    },
+    "exhibition": {
+      "bn": "প্রদর্শনী",
+      "pos": "noun",
+      "slug": "exhibition"
+    },
+    "exist": {
+      "bn": "বিদ্যমান",
+      "pos": "verb",
+      "slug": "exist"
+    },
+    "existence": {
+      "bn": "অস্তিত্ব",
+      "pos": "noun",
+      "slug": "existence"
+    },
+    "existing": {
+      "bn": "বিদ্যমান",
+      "pos": "adjective",
+      "slug": "existing"
+    },
+    "expand": {
+      "bn": "প্রসারিত",
+      "pos": "verb",
+      "slug": "expand"
+    },
+    "expatriate": {
+      "bn": "প্রবাসী",
+      "pos": "noun",
+      "slug": "expatriate"
+    },
+    "expected": {
+      "bn": "প্রত্যাশিত",
+      "pos": "verb",
+      "slug": "expected"
+    },
+    "expedite": {
+      "bn": "ত্বরান্বিত করা",
+      "pos": "verb",
+      "slug": "expedite"
+    },
+    "expenditure": {
+      "bn": "ব্যয়",
+      "pos": "noun",
+      "slug": "expenditure"
+    },
+    "expensive": {
+      "bn": "ব্যয়বহুল",
+      "pos": "adjective",
+      "slug": "expensive"
+    },
+    "expertise": {
+      "bn": "দক্ষতা",
+      "pos": "noun",
+      "slug": "expertise"
+    },
+    "explain": {
+      "bn": "বোঝানো",
+      "pos": "verb",
+      "slug": "explain"
+    },
+    "exploitation": {
+      "bn": "শোষণ",
+      "pos": "noun",
+      "slug": "exploitation"
+    },
+    "explore": {
+      "bn": "অন্বেষণ",
+      "pos": "verb",
+      "slug": "explore"
+    },
+    "export": {
+      "bn": "রপ্তানি",
+      "pos": "noun",
+      "slug": "export"
+    },
+    "expression": {
+      "bn": "অভিব্যক্তি",
+      "pos": "noun",
+      "slug": "expression"
+    },
+    "extensive": {
+      "bn": "ব্যাপক",
+      "pos": "adjective",
+      "slug": "extensive"
+    },
+    "extortion": {
+      "bn": "চাঁদাবাজি",
+      "pos": "noun",
+      "slug": "extortion"
+    },
+    "extraction": {
+      "bn": "নিষ্কাশন",
+      "pos": "noun",
+      "slug": "extraction"
+    },
+    "extremely": {
+      "bn": "অত্যন্ত",
+      "pos": "adverb",
+      "slug": "extremely"
+    },
+    "extrovert": {
+      "bn": "বহির্মুখী",
+      "pos": "noun",
+      "slug": "extrovert"
+    },
+    "fabulous": {
+      "bn": "দারুণ",
+      "pos": "adjective",
+      "slug": "fabulous"
+    },
+    "facade": {
+      "bn": "সম্মুখভাগ",
+      "pos": "noun",
+      "slug": "facade"
+    },
+    "facilitate": {
+      "bn": "সহজ করা",
+      "pos": "verb",
+      "slug": "facilitate"
+    },
+    "fact": {
+      "bn": "সত্য",
+      "pos": "noun",
+      "slug": "fact"
+    },
+    "faculty": {
+      "bn": "শিক্ষকমণ্ডলী",
+      "pos": "noun",
+      "slug": "faculty"
+    },
+    "fail": {
+      "bn": "ব্যর্থ",
+      "pos": "verb",
+      "slug": "fail"
+    },
+    "failure": {
+      "bn": "ব্যর্থতা",
+      "pos": "noun",
+      "slug": "failure"
+    },
+    "fame": {
+      "bn": "খ্যাতি",
+      "pos": "noun",
+      "slug": "fame"
+    },
+    "familial": {
+      "bn": "পারিবারিক",
+      "pos": "adjective",
+      "slug": "familial"
+    },
+    "famine": {
+      "bn": "দুর্ভিক্ষ",
+      "pos": "noun",
+      "slug": "famine"
+    },
+    "fascinating": {
+      "bn": "মুগ্ধকর",
+      "pos": "adjective",
+      "slug": "fascinating"
+    },
+    "fascination": {
+      "bn": "মুগ্ধতা",
+      "pos": "noun",
+      "slug": "fascination"
+    },
+    "fat": {
+      "bn": "চর্বি",
+      "pos": "noun",
+      "slug": "fat"
+    },
+    "fear": {
+      "bn": "ভয়",
+      "pos": "noun",
+      "slug": "fear"
+    },
+    "featured": {
+      "bn": "বিশেষভাবে স্থান পাওয়া",
+      "pos": "adjective",
+      "slug": "featured"
+    },
+    "feedback": {
+      "bn": "প্রতিক্রিয়া",
+      "pos": "noun",
+      "slug": "feedback"
+    },
+    "felt": {
+      "bn": "অনুভূত",
+      "pos": "noun",
+      "slug": "felt"
+    },
+    "feminist": {
+      "bn": "নারীবাদী",
+      "pos": "adjective",
+      "slug": "feminist"
+    },
+    "festival": {
+      "bn": "উৎসব",
+      "pos": "noun",
+      "slug": "festival"
+    },
+    "feud": {
+      "bn": "বিরোধ",
+      "pos": "noun",
+      "slug": "feud"
+    },
+    "few": {
+      "bn": "কয়েকটি",
+      "pos": "adjective",
+      "slug": "few"
+    },
+    "filled": {
+      "bn": "ভরা",
+      "pos": "adjective",
+      "slug": "filled"
+    },
+    "finally": {
+      "bn": "অবশেষে",
+      "pos": "adverb",
+      "slug": "finally"
+    },
+    "financial": {
+      "bn": "আর্থিক",
+      "pos": "adjective",
+      "slug": "financial"
+    },
+    "findings": {
+      "bn": "ফলাফল",
+      "pos": "noun",
+      "slug": "findings"
+    },
+    "fishy": {
+      "bn": "সন্দেহজনক",
+      "pos": "adjective",
+      "slug": "fishy"
+    },
+    "fitness": {
+      "bn": "ফিটনেস",
+      "pos": "noun",
+      "slug": "fitness"
+    },
+    "fixed": {
+      "bn": "স্থির",
+      "pos": "verb",
+      "slug": "fixed"
+    },
+    "flagship": {
+      "bn": "দলের প্রধান",
+      "pos": "noun",
+      "slug": "flagship"
+    },
+    "flawless": {
+      "bn": "খুঁতহীন",
+      "pos": "adjective",
+      "slug": "flawless"
+    },
+    "flexible": {
+      "bn": "নমনীয়",
+      "pos": "adjective",
+      "slug": "flexible"
+    },
+    "floor": {
+      "bn": "মেঝে",
+      "pos": "noun",
+      "slug": "floor"
+    },
+    "flour": {
+      "bn": "ময়দা",
+      "pos": "noun",
+      "slug": "flour"
+    },
+    "fluent": {
+      "bn": "সাবলীল",
+      "pos": "adjective",
+      "slug": "fluent"
+    },
+    "focal": {
+      "bn": "কেন্দ্রীয়",
+      "pos": "adjective",
+      "slug": "focal"
+    },
+    "fond": {
+      "bn": "অনুরাগী",
+      "pos": "adjective",
+      "slug": "fond"
+    },
+    "food": {
+      "bn": "খাদ্য",
+      "pos": "noun",
+      "slug": "food"
+    },
+    "forehead": {
+      "bn": "কপাল",
+      "pos": "noun",
+      "slug": "forehead"
+    },
+    "forever": {
+      "bn": "চিরকাল",
+      "pos": "adverb",
+      "slug": "forever"
+    },
+    "form": {
+      "bn": "ফর্ম",
+      "pos": "noun",
+      "slug": "form"
+    },
+    "former": {
+      "bn": "সাবেক",
+      "pos": "adjective",
+      "slug": "former"
+    },
+    "fort": {
+      "bn": "দুর্গ",
+      "pos": "noun",
+      "slug": "fort"
+    },
+    "fossil": {
+      "bn": "জীবাশ্ম",
+      "pos": "noun",
+      "slug": "fossil"
+    },
+    "frankly": {
+      "bn": "অকপটে বলতে গেলে",
+      "pos": "adverb",
+      "slug": "frankly"
+    },
+    "freedom": {
+      "bn": "স্বাধীনতা",
+      "pos": "noun",
+      "slug": "freedom"
+    },
+    "frequently": {
+      "bn": "ঘন ঘন",
+      "pos": "adverb",
+      "slug": "frequently"
+    },
+    "fresh": {
+      "bn": "তাজা",
+      "pos": "adjective",
+      "slug": "fresh"
+    },
+    "frown": {
+      "bn": "ভ্রু কুঁচকানো",
+      "pos": "verb",
+      "slug": "frown"
+    },
+    "frustration": {
+      "bn": "ক্ষোভ",
+      "pos": "noun",
+      "slug": "frustration"
+    },
+    "fun": {
+      "bn": "মজা",
+      "pos": "noun",
+      "slug": "fun"
+    },
+    "funeral": {
+      "bn": "অন্ত্যেষ্টিক্রিয়া",
+      "pos": "noun",
+      "slug": "funeral"
+    },
+    "furthermore": {
+      "bn": "তাছাড়া",
+      "pos": "adverb",
+      "slug": "furthermore"
+    },
+    "garage": {
+      "bn": "গ্যারেজ",
+      "pos": "noun",
+      "slug": "garage"
+    },
+    "generally": {
+      "bn": "সাধারণত",
+      "pos": "adverb",
+      "slug": "generally"
+    },
+    "generation": {
+      "bn": "প্রজন্ম",
+      "pos": "noun",
+      "slug": "generation"
+    },
+    "generic": {
+      "bn": "সাধারণ",
+      "pos": "noun",
+      "slug": "generic"
+    },
+    "generosity": {
+      "bn": "উদারতা",
+      "pos": "noun",
+      "slug": "generosity"
+    },
+    "genetic": {
+      "bn": "জেনেটিক",
+      "pos": "adjective",
+      "slug": "genetic"
+    },
+    "genre": {
+      "bn": "ধারা",
+      "pos": "noun",
+      "slug": "genre"
+    },
+    "genuine": {
+      "bn": "আসল",
+      "pos": "adjective",
+      "slug": "genuine"
+    },
+    "geography": {
+      "bn": "ভূগোল",
+      "pos": "noun",
+      "slug": "geography"
+    },
+    "geriatric": {
+      "bn": "বয়োজ্যেষ্ঠ",
+      "pos": "adjective",
+      "slug": "geriatric"
+    },
+    "ghost": {
+      "bn": "ভূত",
+      "pos": "noun",
+      "slug": "ghost"
+    },
+    "glance": {
+      "bn": "একনজর দেখা",
+      "pos": "verb",
+      "slug": "glance"
+    },
+    "global": {
+      "bn": "বিশ্বব্যাপী",
+      "pos": "adjective",
+      "slug": "global"
+    },
+    "glossary": {
+      "bn": "শব্দকোষ",
+      "pos": "noun",
+      "slug": "glossary"
+    },
+    "goat": {
+      "bn": "ছাগল",
+      "pos": "noun",
+      "slug": "goat"
+    },
+    "godliness": {
+      "bn": "ধার্মিকতা",
+      "pos": "noun",
+      "slug": "godliness"
+    },
+    "good": {
+      "bn": "ভালো",
+      "pos": "adjective",
+      "slug": "good"
+    },
+    "goofy": {
+      "bn": "হাস্যকর",
+      "pos": "adjective",
+      "slug": "goofy"
+    },
+    "gorgeous": {
+      "bn": "চোখধাঁধানো সুন্দর",
+      "pos": "adjective",
+      "slug": "gorgeous"
+    },
+    "gourd": {
+      "bn": "লাউগাছ",
+      "pos": "noun",
+      "slug": "gourd"
+    },
+    "gourmet": {
+      "bn": "খাওয়াদাওয়া",
+      "pos": "noun",
+      "slug": "gourmet"
+    },
+    "grade": {
+      "bn": "গ্রেড",
+      "pos": "noun",
+      "slug": "grade"
+    },
+    "gradually": {
+      "bn": "ধীরে ধীরে",
+      "pos": "adverb",
+      "slug": "gradually"
+    },
+    "granted": {
+      "bn": "মঞ্জুর",
+      "pos": "verb",
+      "slug": "granted"
+    },
+    "grateful": {
+      "bn": "কৃতজ্ঞ",
+      "pos": "adjective",
+      "slug": "grateful"
+    },
+    "gratuity": {
+      "bn": "টিপস",
+      "pos": "noun",
+      "slug": "gratuity"
+    },
+    "gravity": {
+      "bn": "মাধ্যাকর্ষণ",
+      "pos": "noun",
+      "slug": "gravity"
+    },
+    "greater": {
+      "bn": "বৃহত্তর",
+      "pos": "adjective",
+      "slug": "greater"
+    },
+    "greatest": {
+      "bn": "সর্বশ্রেষ্ঠ",
+      "pos": "adjective",
+      "slug": "greatest"
+    },
+    "grievance": {
+      "bn": "অভিযোগ",
+      "pos": "noun",
+      "slug": "grievance"
+    },
+    "grow": {
+      "bn": "হত্তয়া",
+      "pos": "verb",
+      "slug": "grow"
+    },
+    "grudge": {
+      "bn": "ক্ষোভ",
+      "pos": "noun",
+      "slug": "grudge"
+    },
+    "grumpy": {
+      "bn": "খিটখিটে",
+      "pos": "adjective",
+      "slug": "grumpy"
+    },
+    "guarantee": {
+      "bn": "গ্যারান্টি",
+      "pos": "noun",
+      "slug": "guarantee"
+    },
+    "guardian": {
+      "bn": "অভিভাবক",
+      "pos": "noun",
+      "slug": "guardian"
+    },
+    "guess": {
+      "bn": "অনুমান",
+      "pos": "noun",
+      "slug": "guess"
+    },
+    "guest": {
+      "bn": "অতিথি",
+      "pos": "noun",
+      "slug": "guest"
+    },
+    "guidance": {
+      "bn": "নির্দেশিকা",
+      "pos": "noun",
+      "slug": "guidance"
+    },
+    "guide": {
+      "bn": "গাইড",
+      "pos": "noun",
+      "slug": "guide"
+    },
+    "half": {
+      "bn": "অর্ধেক",
+      "pos": "noun",
+      "slug": "half"
+    },
+    "hall": {
+      "bn": "হল",
+      "pos": "noun",
+      "slug": "hall"
+    },
+    "handling": {
+      "bn": "হ্যান্ডলিং",
+      "pos": "noun",
+      "slug": "handling"
+    },
+    "handsome": {
+      "bn": "সুদর্শন",
+      "pos": "adjective",
+      "slug": "handsome"
+    },
+    "harassment": {
+      "bn": "হয়রানি",
+      "pos": "noun",
+      "slug": "harassment"
+    },
+    "hare": {
+      "bn": "খরগোশ",
+      "pos": "noun",
+      "slug": "hare"
+    },
+    "hastily": {
+      "bn": "তাড়াহুড়ো করে",
+      "pos": "adverb",
+      "slug": "hastily"
+    },
+    "hate": {
+      "bn": "ঘৃণা",
+      "pos": "noun",
+      "slug": "hate"
+    },
+    "hazy": {
+      "bn": "কুয়াশাচ্ছন্ন",
+      "pos": "adjective",
+      "slug": "hazy"
+    },
+    "headache": {
+      "bn": "মাথাব্যথা",
+      "pos": "noun",
+      "slug": "headache"
+    },
+    "heal": {
+      "bn": "সেরে তোলা",
+      "pos": "verb",
+      "slug": "heal"
+    },
+    "healing": {
+      "bn": "সেরে ওঠা",
+      "pos": "noun",
+      "slug": "healing"
+    },
+    "hearing": {
+      "bn": "শুনানি",
+      "pos": "noun",
+      "slug": "hearing"
+    },
+    "heat": {
+      "bn": "তাপ",
+      "pos": "noun",
+      "slug": "heat"
+    },
+    "hectic": {
+      "bn": "উত্তেজনায় টগবগে",
+      "pos": "adjective",
+      "slug": "hectic"
+    },
+    "height": {
+      "bn": "উচ্চতা",
+      "pos": "noun",
+      "slug": "height"
+    },
+    "heir": {
+      "bn": "উত্তরাধিকারী",
+      "pos": "noun",
+      "slug": "heir"
+    },
+    "hello": {
+      "bn": "হ্যালো",
+      "pos": "noun",
+      "slug": "hello"
+    },
+    "hence": {
+      "bn": "অতএব",
+      "pos": "adverb",
+      "slug": "hence"
+    },
+    "hereditary": {
+      "bn": "বংশগত",
+      "pos": "adjective",
+      "slug": "hereditary"
+    },
+    "heritage": {
+      "bn": "ঐতিহ্য",
+      "pos": "noun",
+      "slug": "heritage"
+    },
+    "hi": {
+      "bn": "হাই",
+      "pos": "noun",
+      "slug": "hi"
+    },
+    "hierarchical": {
+      "bn": "স্তরভিত্তিক",
+      "pos": "adjective",
+      "slug": "hierarchical"
+    },
+    "hip": {
+      "bn": "নিতম্ব",
+      "pos": "noun",
+      "slug": "hip"
+    },
+    "historical": {
+      "bn": "ঐতিহাসিক",
+      "pos": "adjective",
+      "slug": "historical"
+    },
+    "hobby": {
+      "bn": "শখ",
+      "pos": "noun",
+      "slug": "hobby"
+    },
+    "hop": {
+      "bn": "হপ",
+      "pos": "noun",
+      "slug": "hop"
+    },
+    "hope": {
+      "bn": "আশা",
+      "pos": "noun",
+      "slug": "hope"
+    },
+    "horizontal": {
+      "bn": "অনুভূমিক",
+      "pos": "adjective",
+      "slug": "horizontal"
+    },
+    "household": {
+      "bn": "ঘরের লোকজন",
+      "pos": "noun",
+      "slug": "household"
+    },
+    "hub": {
+      "bn": "কেন্দ্র",
+      "pos": "noun",
+      "slug": "hub"
+    },
+    "hue": {
+      "bn": "রঙের আভা",
+      "pos": "noun",
+      "slug": "hue"
+    },
+    "huge": {
+      "bn": "বিশাল",
+      "pos": "adjective",
+      "slug": "huge"
+    },
+    "human": {
+      "bn": "মানব",
+      "pos": "noun",
+      "slug": "human"
+    },
+    "humidity": {
+      "bn": "আর্দ্রতা",
+      "pos": "noun",
+      "slug": "humidity"
+    },
+    "humorous": {
+      "bn": "রসাত্মক",
+      "pos": "adjective",
+      "slug": "humorous"
+    },
+    "hundred": {
+      "bn": "শত",
+      "pos": "noun",
+      "slug": "hundred"
+    },
+    "hunter": {
+      "bn": "শিকারি",
+      "pos": "noun",
+      "slug": "hunter"
+    },
+    "husband": {
+      "bn": "স্বামী",
+      "pos": "noun",
+      "slug": "husband"
+    },
+    "hype": {
+      "bn": "অতিরঞ্জিত প্রচার করা",
+      "pos": "verb",
+      "slug": "hype"
+    },
+    "hypothesis": {
+      "bn": "অনুকল্প",
+      "pos": "noun",
+      "slug": "hypothesis"
+    },
+    "hypothetical": {
+      "bn": "কল্পিত",
+      "pos": "adjective",
+      "slug": "hypothetical"
+    },
+    "icon": {
+      "bn": "আইকন",
+      "pos": "noun",
+      "slug": "icon"
+    },
+    "ideology": {
+      "bn": "মতাদর্শ",
+      "pos": "noun",
+      "slug": "ideology"
+    },
+    "ignore": {
+      "bn": "উপেক্ষা",
+      "pos": "verb",
+      "slug": "ignore"
+    },
+    "illustrate": {
+      "bn": "উদাহরণ দিয়ে বোঝানো",
+      "pos": "verb",
+      "slug": "illustrate"
+    },
+    "imagine": {
+      "bn": "কল্পনা করা",
+      "pos": "verb",
+      "slug": "imagine"
+    },
+    "imbalance": {
+      "bn": "ভারসাম্যহীনতা",
+      "pos": "noun",
+      "slug": "imbalance"
+    },
+    "immediately": {
+      "bn": "অবিলম্বে",
+      "pos": "adverb",
+      "slug": "immediately"
+    },
+    "immense": {
+      "bn": "বিশাল",
+      "pos": "adjective",
+      "slug": "immense"
+    },
+    "immigration": {
+      "bn": "অভিবাসন",
+      "pos": "noun",
+      "slug": "immigration"
+    },
+    "imminent": {
+      "bn": "আসন্ন",
+      "pos": "adjective",
+      "slug": "imminent"
+    },
+    "impact": {
+      "bn": "প্রভাব",
+      "pos": "noun",
+      "slug": "impact"
+    },
+    "impeccable": {
+      "bn": "নিখুঁত",
+      "pos": "adjective",
+      "slug": "impeccable"
+    },
+    "implement": {
+      "bn": "বাস্তবায়ন",
+      "pos": "noun",
+      "slug": "implement"
+    },
+    "implementation": {
+      "bn": "বাস্তবায়ন",
+      "pos": "noun",
+      "slug": "implementation"
+    },
+    "implicit": {
+      "bn": "উহ্য",
+      "pos": "adjective",
+      "slug": "implicit"
+    },
+    "importance": {
+      "bn": "গুরুত্ব",
+      "pos": "noun",
+      "slug": "importance"
+    },
+    "imposter": {
+      "bn": "ছদ্মবেশী প্রতারক",
+      "pos": "noun",
+      "slug": "imposter"
+    },
+    "impressed": {
+      "bn": "প্রভাবিত",
+      "pos": "adjective",
+      "slug": "impressed"
+    },
+    "improvise": {
+      "bn": "তাৎক্ষণিক করা",
+      "pos": "verb",
+      "slug": "improvise"
+    },
+    "impunity": {
+      "bn": "দায়মুক্তি",
+      "pos": "noun",
+      "slug": "impunity"
+    },
+    "inclined": {
+      "bn": "ঝোঁক থাকা",
+      "pos": "adjective",
+      "slug": "inclined"
+    },
+    "incognito": {
+      "bn": "গোপনে",
+      "pos": "adverb",
+      "slug": "incognito"
+    },
+    "inconsistent": {
+      "bn": "অসামঞ্জস্যপূর্ণ",
+      "pos": "adjective",
+      "slug": "inconsistent"
+    },
+    "increased": {
+      "bn": "বৃদ্ধি",
+      "pos": "verb",
+      "slug": "increased"
+    },
+    "increasing": {
+      "bn": "বৃদ্ধি",
+      "pos": "verb",
+      "slug": "increasing"
+    },
+    "incredible": {
+      "bn": "অবিশ্বাস্য",
+      "pos": "adjective",
+      "slug": "incredible"
+    },
+    "indeed": {
+      "bn": "সত্যিই",
+      "pos": "adverb",
+      "slug": "indeed"
+    },
+    "indemnity": {
+      "bn": "ক্ষতিপূরণ",
+      "pos": "noun",
+      "slug": "indemnity"
+    },
+    "independent": {
+      "bn": "স্বাধীন",
+      "pos": "noun",
+      "slug": "independent"
+    },
+    "industrial": {
+      "bn": "শিল্প",
+      "pos": "adjective",
+      "slug": "industrial"
+    },
+    "infatuation": {
+      "bn": "মোহ",
+      "pos": "noun",
+      "slug": "infatuation"
+    },
+    "infidelity": {
+      "bn": "অবিশ্বস্ততা",
+      "pos": "noun",
+      "slug": "infidelity"
+    },
+    "inform": {
+      "bn": "জানানো",
+      "pos": "verb",
+      "slug": "inform"
+    },
+    "infrastructure": {
+      "bn": "অবকাঠামো",
+      "pos": "noun",
+      "slug": "infrastructure"
+    },
+    "ingestion": {
+      "bn": "খাদ্যগ্রহণ",
+      "pos": "noun",
+      "slug": "ingestion"
+    },
+    "inherit": {
+      "bn": "উত্তরাধিকার সূত্রে পাওয়া",
+      "pos": "verb",
+      "slug": "inherit"
+    },
+    "initial": {
+      "bn": "প্রাথমিক",
+      "pos": "adjective",
+      "slug": "initial"
+    },
+    "initiative": {
+      "bn": "উদ্যোগ",
+      "pos": "noun",
+      "slug": "initiative"
+    },
+    "injured": {
+      "bn": "আহত",
+      "pos": "adjective",
+      "slug": "injured"
+    },
+    "inner": {
+      "bn": "ভিতরের",
+      "pos": "adjective",
+      "slug": "inner"
+    },
+    "innovation": {
+      "bn": "উদ্ভাবন",
+      "pos": "noun",
+      "slug": "innovation"
+    },
+    "inspection": {
+      "bn": "পরিদর্শন",
+      "pos": "noun",
+      "slug": "inspection"
+    },
+    "instance": {
+      "bn": "উদাহরণ",
+      "pos": "noun",
+      "slug": "instance"
+    },
+    "instant": {
+      "bn": "তাত্ক্ষণিক",
+      "pos": "noun",
+      "slug": "instant"
+    },
+    "instead": {
+      "bn": "বরং",
+      "pos": "adverb",
+      "slug": "instead"
+    },
+    "instinct": {
+      "bn": "সহজাত প্রবৃত্তি",
+      "pos": "noun",
+      "slug": "instinct"
+    },
+    "institute": {
+      "bn": "ইনস্টিটিউট",
+      "pos": "noun",
+      "slug": "institute"
+    },
+    "instructor": {
+      "bn": "প্রশিক্ষক",
+      "pos": "noun",
+      "slug": "instructor"
+    },
+    "integer": {
+      "bn": "পূর্ণসংখ্যা",
+      "pos": "noun",
+      "slug": "integer"
+    },
+    "intelligent": {
+      "bn": "বুদ্ধিমান",
+      "pos": "adjective",
+      "slug": "intelligent"
+    },
+    "intense": {
+      "bn": "তীব্র",
+      "pos": "adjective",
+      "slug": "intense"
+    },
+    "intention": {
+      "bn": "অভিপ্রায়",
+      "pos": "noun",
+      "slug": "intention"
+    },
+    "interact": {
+      "bn": "পরস্পরের সঙ্গে কথা বলা ও কাজ করা",
+      "pos": "verb",
+      "slug": "interact"
+    },
+    "interaction": {
+      "bn": "মিথস্ক্রিয়া",
+      "pos": "noun",
+      "slug": "interaction"
+    },
+    "interactive": {
+      "bn": "পারস্পরিক",
+      "pos": "adjective",
+      "slug": "interactive"
+    },
+    "interested": {
+      "bn": "আগ্রহী",
+      "pos": "adjective",
+      "slug": "interested"
+    },
+    "interesting": {
+      "bn": "আকর্ষণীয়",
+      "pos": "adjective",
+      "slug": "interesting"
+    },
+    "interfere": {
+      "bn": "হস্তক্ষেপ করা",
+      "pos": "verb",
+      "slug": "interfere"
+    },
+    "interim": {
+      "bn": "অন্তর্বর্তীকালীন",
+      "pos": "adjective",
+      "slug": "interim"
+    },
+    "interior": {
+      "bn": "অভ্যন্তর",
+      "pos": "noun",
+      "slug": "interior"
+    },
+    "internal": {
+      "bn": "অভ্যন্তরীণ",
+      "pos": "adjective",
+      "slug": "internal"
+    },
+    "interpretation": {
+      "bn": "ব্যাখ্যা",
+      "pos": "noun",
+      "slug": "interpretation"
+    },
+    "intimidate": {
+      "bn": "ভয় দেখানো",
+      "pos": "verb",
+      "slug": "intimidate"
+    },
+    "intricate": {
+      "bn": "সূক্ষ্ম-জটিল",
+      "pos": "adjective",
+      "slug": "intricate"
+    },
+    "intriguing": {
+      "bn": "কৌতূহলোদ্দীপক",
+      "pos": "adjective",
+      "slug": "intriguing"
+    },
+    "introduction": {
+      "bn": "ভূমিকা",
+      "pos": "noun",
+      "slug": "introduction"
+    },
+    "introvert": {
+      "bn": "অন্তর্মুখী ব্যক্তি",
+      "pos": "noun",
+      "slug": "introvert"
+    },
+    "intruder": {
+      "bn": "অনুপ্রবেশকারী",
+      "pos": "noun",
+      "slug": "intruder"
+    },
+    "intuition": {
+      "bn": "সহজাত বোধ",
+      "pos": "noun",
+      "slug": "intuition"
+    },
+    "inventory": {
+      "bn": "জায়",
+      "pos": "noun",
+      "slug": "inventory"
+    },
+    "investigation": {
+      "bn": "তদন্ত",
+      "pos": "noun",
+      "slug": "investigation"
+    },
+    "invoice": {
+      "bn": "ইনভয়েস",
+      "pos": "noun",
+      "slug": "invoice"
+    },
+    "irresistible": {
+      "bn": "অপ্রতিরোধ্য",
+      "pos": "adjective",
+      "slug": "irresistible"
+    },
+    "irritate": {
+      "bn": "বিরক্ত করা",
+      "pos": "verb",
+      "slug": "irritate"
+    },
+    "irritating": {
+      "bn": "বিরক্তিকর",
+      "pos": "adjective",
+      "slug": "irritating"
+    },
+    "island": {
+      "bn": "দ্বীপ",
+      "pos": "noun",
+      "slug": "island"
+    },
+    "item": {
+      "bn": "আইটেম",
+      "pos": "noun",
+      "slug": "item"
+    },
+    "iteration": {
+      "bn": "পুনরাবৃত্তি",
+      "pos": "noun",
+      "slug": "iteration"
+    },
+    "itinerary": {
+      "bn": "ভ্রমণসূচি",
+      "pos": "noun",
+      "slug": "itinerary"
+    },
+    "journal": {
+      "bn": "জার্নাল",
+      "pos": "noun",
+      "slug": "journal"
+    },
+    "journey": {
+      "bn": "যাত্রা",
+      "pos": "noun",
+      "slug": "journey"
+    },
+    "junior": {
+      "bn": "জুনিয়র",
+      "pos": "noun",
+      "slug": "junior"
+    },
+    "jurisdiction": {
+      "bn": "এখতিয়ার",
+      "pos": "noun",
+      "slug": "jurisdiction"
+    },
+    "justice": {
+      "bn": "ন্যায়বিচার",
+      "pos": "noun",
+      "slug": "justice"
+    },
+    "juvenile": {
+      "bn": "কিশোর",
+      "pos": "noun",
+      "slug": "juvenile"
+    },
+    "kid": {
+      "bn": "বাচ্চা",
+      "pos": "noun",
+      "slug": "kid"
+    },
+    "kindly": {
+      "bn": "সদয়ভাবে",
+      "pos": "adverb",
+      "slug": "kindly"
+    },
+    "kindness": {
+      "bn": "দয়া",
+      "pos": "noun",
+      "slug": "kindness"
+    },
+    "knight": {
+      "bn": "নাইট",
+      "pos": "noun",
+      "slug": "knight"
+    },
+    "lack": {
+      "bn": "না থাকা",
+      "pos": "verb",
+      "slug": "lack"
+    },
+    "lake": {
+      "bn": "হ্রদ",
+      "pos": "noun",
+      "slug": "lake"
+    },
+    "landscape": {
+      "bn": "ল্যান্ডস্কেপ",
+      "pos": "noun",
+      "slug": "landscape"
+    },
+    "latency": {
+      "bn": "বিলম্বকাল",
+      "pos": "noun",
+      "slug": "latency"
+    },
+    "lateral": {
+      "bn": "পার্শ্বীয়",
+      "pos": "adjective",
+      "slug": "lateral"
+    },
+    "lavender": {
+      "bn": "ল্যাভেন্ডার",
+      "pos": "noun",
+      "slug": "lavender"
+    },
+    "lawyer": {
+      "bn": "আইনজীবী",
+      "pos": "noun",
+      "slug": "lawyer"
+    },
+    "layout": {
+      "bn": "বিন্যাস",
+      "pos": "noun",
+      "slug": "layout"
+    },
+    "leader": {
+      "bn": "নেতা",
+      "pos": "noun",
+      "slug": "leader"
+    },
+    "least": {
+      "bn": "সবচেয়ে কম",
+      "pos": "adjective",
+      "slug": "least"
+    },
+    "leaving": {
+      "bn": "চলে যাচ্ছে",
+      "pos": "noun",
+      "slug": "leaving"
+    },
+    "legend": {
+      "bn": "কিংবদন্তি",
+      "pos": "noun",
+      "slug": "legend"
+    },
+    "legislation": {
+      "bn": "আইন",
+      "pos": "noun",
+      "slug": "legislation"
+    },
+    "legislature": {
+      "bn": "আইনসভা",
+      "pos": "noun",
+      "slug": "legislature"
+    },
+    "leisure": {
+      "bn": "অবসর",
+      "pos": "noun",
+      "slug": "leisure"
+    },
+    "lend": {
+      "bn": "ধার দেওয়া",
+      "pos": "verb",
+      "slug": "lend"
+    },
+    "length": {
+      "bn": "দৈর্ঘ্য",
+      "pos": "noun",
+      "slug": "length"
+    },
+    "lesson": {
+      "bn": "পাঠ",
+      "pos": "noun",
+      "slug": "lesson"
+    },
+    "library": {
+      "bn": "লাইব্রেরি",
+      "pos": "noun",
+      "slug": "library"
+    },
+    "lifestyle": {
+      "bn": "জীবনধারা",
+      "pos": "noun",
+      "slug": "lifestyle"
+    },
+    "ligament": {
+      "bn": "লিগামেন্ট",
+      "pos": "noun",
+      "slug": "ligament"
+    },
+    "linear": {
+      "bn": "রৈখিক",
+      "pos": "adjective",
+      "slug": "linear"
+    },
+    "linguistic": {
+      "bn": "ভাষাগত",
+      "pos": "adjective",
+      "slug": "linguistic"
+    },
+    "listen": {
+      "bn": "শুনুন",
+      "pos": "verb",
+      "slug": "listen"
+    },
+    "literature": {
+      "bn": "সাহিত্য",
+      "pos": "noun",
+      "slug": "literature"
+    },
+    "little": {
+      "bn": "সামান্য",
+      "pos": "noun",
+      "slug": "little"
+    },
+    "livestock": {
+      "bn": "গবাদি পশু",
+      "pos": "noun",
+      "slug": "livestock"
+    },
+    "lizard": {
+      "bn": "টিকটিকি",
+      "pos": "noun",
+      "slug": "lizard"
+    },
+    "local": {
+      "bn": "স্থানীয়",
+      "pos": "noun",
+      "slug": "local"
+    },
+    "located": {
+      "bn": "অবস্থিত",
+      "pos": "verb",
+      "slug": "located"
+    },
+    "logic": {
+      "bn": "যুক্তি",
+      "pos": "noun",
+      "slug": "logic"
+    },
+    "lord": {
+      "bn": "প্রভু",
+      "pos": "noun",
+      "slug": "lord"
+    },
+    "loser": {
+      "bn": "পরাজিত ব্যক্তি",
+      "pos": "noun",
+      "slug": "loser"
+    },
+    "lounge": {
+      "bn": "লাউঞ্জ",
+      "pos": "noun",
+      "slug": "lounge"
+    },
+    "love": {
+      "bn": "প্রেম",
+      "pos": "noun",
+      "slug": "love"
+    },
+    "lovely": {
+      "bn": "সুন্দর",
+      "pos": "noun",
+      "slug": "lovely"
+    },
+    "loyal": {
+      "bn": "বিশ্বস্ত",
+      "pos": "adjective",
+      "slug": "loyal"
+    },
+    "loyalty": {
+      "bn": "আনুগত্য",
+      "pos": "noun",
+      "slug": "loyalty"
+    },
+    "luck": {
+      "bn": "ভাগ্য",
+      "pos": "noun",
+      "slug": "luck"
+    },
+    "lunch": {
+      "bn": "দুপুরের খাবার",
+      "pos": "noun",
+      "slug": "lunch"
+    },
+    "luxury": {
+      "bn": "বিলাসিতা",
+      "pos": "noun",
+      "slug": "luxury"
+    },
+    "main": {
+      "bn": "প্রধান",
+      "pos": "noun",
+      "slug": "main"
+    },
+    "mainstream": {
+      "bn": "মূলধারা",
+      "pos": "noun",
+      "slug": "mainstream"
+    },
+    "maintenance": {
+      "bn": "রক্ষণাবেক্ষণ",
+      "pos": "noun",
+      "slug": "maintenance"
+    },
+    "majesty": {
+      "bn": "বিশালত্ব",
+      "pos": "noun",
+      "slug": "majesty"
+    },
+    "malicious": {
+      "bn": "বিদ্বেষপূর্ণ",
+      "pos": "adjective",
+      "slug": "malicious"
+    },
+    "manage": {
+      "bn": "পরিচালনা",
+      "pos": "verb",
+      "slug": "manage"
+    },
+    "management": {
+      "bn": "ব্যবস্থাপনা",
+      "pos": "noun",
+      "slug": "management"
+    },
+    "manager": {
+      "bn": "ব্যবস্থাপক",
+      "pos": "noun",
+      "slug": "manager"
+    },
+    "manual": {
+      "bn": "ম্যানুয়াল",
+      "pos": "noun",
+      "slug": "manual"
+    },
+    "marketing": {
+      "bn": "বিপণন",
+      "pos": "noun",
+      "slug": "marketing"
+    },
+    "mason": {
+      "bn": "রাজমিস্ত্রি",
+      "pos": "noun",
+      "slug": "mason"
+    },
+    "massacre": {
+      "bn": "গণহত্যা",
+      "pos": "noun",
+      "slug": "massacre"
+    },
+    "matching": {
+      "bn": "ম্যাচিং",
+      "pos": "verb",
+      "slug": "matching"
+    },
+    "maybe": {
+      "bn": "হয়তো",
+      "pos": "adverb",
+      "slug": "maybe"
+    },
+    "means": {
+      "bn": "উপায়",
+      "pos": "noun",
+      "slug": "means"
+    },
+    "meanwhile": {
+      "bn": "ইতিমধ্যে",
+      "pos": "adverb",
+      "slug": "meanwhile"
+    },
+    "measurement": {
+      "bn": "পরিমাপ",
+      "pos": "noun",
+      "slug": "measurement"
+    },
+    "meat": {
+      "bn": "মাংস",
+      "pos": "noun",
+      "slug": "meat"
+    },
+    "mediocre": {
+      "bn": "মাঝারি",
+      "pos": "adjective",
+      "slug": "mediocre"
+    },
+    "medium": {
+      "bn": "মাঝারি",
+      "pos": "noun",
+      "slug": "medium"
+    },
+    "merchant": {
+      "bn": "খুচরা ব্যবসায়ী",
+      "pos": "noun",
+      "slug": "merchant"
+    },
+    "mercury": {
+      "bn": "পারদ",
+      "pos": "noun",
+      "slug": "mercury"
+    },
+    "merge": {
+      "bn": "এক হয়ে যাওয়া",
+      "pos": "verb",
+      "slug": "merge"
+    },
+    "messy": {
+      "bn": "এলোমেলো ও নোংরা",
+      "pos": "adjective",
+      "slug": "messy"
+    },
+    "metabolism": {
+      "bn": "বিপাক",
+      "pos": "noun",
+      "slug": "metabolism"
+    },
+    "metaphor": {
+      "bn": "রূপক",
+      "pos": "noun",
+      "slug": "metaphor"
+    },
+    "method": {
+      "bn": "পদ্ধতি",
+      "pos": "noun",
+      "slug": "method"
+    },
+    "methodology": {
+      "bn": "পদ্ধতি",
+      "pos": "noun",
+      "slug": "methodology"
+    },
+    "meticulous": {
+      "bn": "খুঁতখুঁতে সতর্ক",
+      "pos": "adjective",
+      "slug": "meticulous"
+    },
+    "mid": {
+      "bn": "মধ্য",
+      "pos": "adjective",
+      "slug": "mid"
+    },
+    "mild": {
+      "bn": "মৃদু",
+      "pos": "adjective",
+      "slug": "mild"
+    },
+    "miscarriage": {
+      "bn": "গর্ভপাত",
+      "pos": "noun",
+      "slug": "miscarriage"
+    },
+    "miscellaneous": {
+      "bn": "বিবিধ",
+      "pos": "adjective",
+      "slug": "miscellaneous"
+    },
+    "missing": {
+      "bn": "অনুপস্থিত",
+      "pos": "verb",
+      "slug": "missing"
+    },
+    "missionary": {
+      "bn": "ধর্মপ্রচারক",
+      "pos": "noun",
+      "slug": "missionary"
+    },
+    "mitigation": {
+      "bn": "প্রশমন",
+      "pos": "noun",
+      "slug": "mitigation"
+    },
+    "mocking": {
+      "bn": "বিদ্রূপাত্মক",
+      "pos": "adjective",
+      "slug": "mocking"
+    },
+    "moderator": {
+      "bn": "মডারেটর",
+      "pos": "noun",
+      "slug": "moderator"
+    },
+    "modern": {
+      "bn": "আধুনিক",
+      "pos": "noun",
+      "slug": "modern"
+    },
+    "modify": {
+      "bn": "বদলানো",
+      "pos": "verb",
+      "slug": "modify"
+    },
+    "module": {
+      "bn": "মডিউল",
+      "pos": "noun",
+      "slug": "module"
+    },
+    "momentum": {
+      "bn": "ভরবেগ",
+      "pos": "noun",
+      "slug": "momentum"
+    },
+    "monarch": {
+      "bn": "রাজা বা রাণি",
+      "pos": "noun",
+      "slug": "monarch"
+    },
+    "monday": {
+      "bn": "সোমবার",
+      "pos": "noun",
+      "slug": "monday"
+    },
+    "monitoring": {
+      "bn": "পর্যবেক্ষণ",
+      "pos": "noun",
+      "slug": "monitoring"
+    },
+    "month": {
+      "bn": "মাস",
+      "pos": "noun",
+      "slug": "month"
+    },
+    "mood": {
+      "bn": "মেজাজ",
+      "pos": "noun",
+      "slug": "mood"
+    },
+    "moral": {
+      "bn": "নৈতিক",
+      "pos": "adjective",
+      "slug": "moral"
+    },
+    "mortgage": {
+      "bn": "বন্ধকি ঋণ",
+      "pos": "noun",
+      "slug": "mortgage"
+    },
+    "motility": {
+      "bn": "চলনক্ষমতা",
+      "pos": "noun",
+      "slug": "motility"
+    },
+    "mountain": {
+      "bn": "পর্বত",
+      "pos": "noun",
+      "slug": "mountain"
+    },
+    "mourn": {
+      "bn": "শোক করা",
+      "pos": "verb",
+      "slug": "mourn"
+    },
+    "multiple": {
+      "bn": "একাধিক",
+      "pos": "adjective",
+      "slug": "multiple"
+    },
+    "mundane": {
+      "bn": "সাধারণ",
+      "pos": "adjective",
+      "slug": "mundane"
+    },
+    "municipality": {
+      "bn": "পৌরসভা",
+      "pos": "noun",
+      "slug": "municipality"
+    },
+    "museum": {
+      "bn": "যাদুঘর",
+      "pos": "noun",
+      "slug": "museum"
+    },
+    "mutual": {
+      "bn": "পারস্পরিক",
+      "pos": "adjective",
+      "slug": "mutual"
+    },
+    "mystery": {
+      "bn": "রহস্য",
+      "pos": "noun",
+      "slug": "mystery"
+    },
+    "myth": {
+      "bn": "পুরাণকথা",
+      "pos": "noun",
+      "slug": "myth"
+    },
+    "mythical": {
+      "bn": "পৌরাণিক",
+      "pos": "adjective",
+      "slug": "mythical"
+    },
+    "narrow": {
+      "bn": "সংকীর্ণ",
+      "pos": "noun",
+      "slug": "narrow"
+    },
+    "native": {
+      "bn": "স্থানীয়",
+      "pos": "noun",
+      "slug": "native"
+    },
+    "nature": {
+      "bn": "প্রকৃতি",
+      "pos": "noun",
+      "slug": "nature"
+    },
+    "nausea": {
+      "bn": "বমি বমি ভাব",
+      "pos": "noun",
+      "slug": "nausea"
+    },
+    "navigate": {
+      "bn": "নেভিগেট",
+      "pos": "verb",
+      "slug": "navigate"
+    },
+    "navigation": {
+      "bn": "নেভিগেশন",
+      "pos": "noun",
+      "slug": "navigation"
+    },
+    "necessary": {
+      "bn": "প্রয়োজনীয়",
+      "pos": "noun",
+      "slug": "necessary"
+    },
+    "neck": {
+      "bn": "ঘাড়",
+      "pos": "noun",
+      "slug": "neck"
+    },
+    "needed": {
+      "bn": "প্রয়োজন",
+      "pos": "verb",
+      "slug": "needed"
+    },
+    "negligence": {
+      "bn": "অবহেলা",
+      "pos": "noun",
+      "slug": "negligence"
+    },
+    "negotiable": {
+      "bn": "আলোচনাসাপেক্ষ",
+      "pos": "adjective",
+      "slug": "negotiable"
+    },
+    "negotiation": {
+      "bn": "আলোচনা",
+      "pos": "noun",
+      "slug": "negotiation"
+    },
+    "nephew": {
+      "bn": "ভাতিজা বা ভাগ্নে",
+      "pos": "noun",
+      "slug": "nephew"
+    },
+    "nexus": {
+      "bn": "সংযোগকেন্দ্র",
+      "pos": "noun",
+      "slug": "nexus"
+    },
+    "nightmare": {
+      "bn": "দুঃস্বপ্ন",
+      "pos": "noun",
+      "slug": "nightmare"
+    },
+    "noise": {
+      "bn": "গোলমাল",
+      "pos": "noun",
+      "slug": "noise"
+    },
+    "nonchalant": {
+      "bn": "নির্বিকার; উদাসীন; ভাবলেশহীন",
+      "pos": "adjective",
+      "slug": "nonchalant"
+    },
+    "noted": {
+      "bn": "উল্লেখ্য",
+      "pos": "verb",
+      "slug": "noted"
+    },
+    "notice": {
+      "bn": "নোটিশ",
+      "pos": "noun",
+      "slug": "notice"
+    },
+    "notification": {
+      "bn": "বিজ্ঞপ্তি",
+      "pos": "noun",
+      "slug": "notification"
+    },
+    "novice": {
+      "bn": "নবীন",
+      "pos": "noun",
+      "slug": "novice"
+    },
+    "nowadays": {
+      "bn": "আজকাল",
+      "pos": "adverb",
+      "slug": "nowadays"
+    },
+    "nuisance": {
+      "bn": "উৎপাত",
+      "pos": "noun",
+      "slug": "nuisance"
+    },
+    "numerous": {
+      "bn": "অসংখ্য",
+      "pos": "adjective",
+      "slug": "numerous"
+    },
+    "nutmeg": {
+      "bn": "জায়ফল",
+      "pos": "noun",
+      "slug": "nutmeg"
+    },
+    "objective": {
+      "bn": "উদ্দেশ্য",
+      "pos": "noun",
+      "slug": "objective"
+    },
+    "obligatory": {
+      "bn": "বাধ্যতামূলক",
+      "pos": "adjective",
+      "slug": "obligatory"
+    },
+    "oblivious": {
+      "bn": "অসচেতন",
+      "pos": "adjective",
+      "slug": "oblivious"
+    },
+    "obsolete": {
+      "bn": "সেকেলে",
+      "pos": "adjective",
+      "slug": "obsolete"
+    },
+    "obtain": {
+      "bn": "লাভ করা",
+      "pos": "verb",
+      "slug": "obtain"
+    },
+    "obviously": {
+      "bn": "স্পষ্টতই",
+      "pos": "adverb",
+      "slug": "obviously"
+    },
+    "occur": {
+      "bn": "ঘটা",
+      "pos": "verb",
+      "slug": "occur"
+    },
+    "occurrence": {
+      "bn": "ঘটনা",
+      "pos": "noun",
+      "slug": "occurrence"
+    },
+    "ocean": {
+      "bn": "মহাসাগর",
+      "pos": "noun",
+      "slug": "ocean"
+    },
+    "odds": {
+      "bn": "মতভেদ",
+      "pos": "noun",
+      "slug": "odds"
+    },
+    "often": {
+      "bn": "প্রায়ই",
+      "pos": "adverb",
+      "slug": "often"
+    },
+    "once": {
+      "bn": "একবার",
+      "pos": "adverb",
+      "slug": "once"
+    },
+    "ongoing": {
+      "bn": "চলমান",
+      "pos": "adjective",
+      "slug": "ongoing"
+    },
+    "opaque": {
+      "bn": "অস্বচ্ছ",
+      "pos": "adjective",
+      "slug": "opaque"
+    },
+    "operator": {
+      "bn": "অপারেটর",
+      "pos": "noun",
+      "slug": "operator"
+    },
+    "opinion": {
+      "bn": "মতামত",
+      "pos": "noun",
+      "slug": "opinion"
+    },
+    "oppression": {
+      "bn": "নিপীড়ন",
+      "pos": "noun",
+      "slug": "oppression"
+    },
+    "optimism": {
+      "bn": "আশাবাদ",
+      "pos": "noun",
+      "slug": "optimism"
+    },
+    "optimization": {
+      "bn": "অপ্টিমাইজেশান",
+      "pos": "noun",
+      "slug": "optimization"
+    },
+    "orally": {
+      "bn": "মুখে",
+      "pos": "adverb",
+      "slug": "orally"
+    },
+    "ordinary": {
+      "bn": "সাধারণ",
+      "pos": "noun",
+      "slug": "ordinary"
+    },
+    "organism": {
+      "bn": "জীব",
+      "pos": "noun",
+      "slug": "organism"
+    },
+    "oriented": {
+      "bn": "ভিত্তিক",
+      "pos": "verb",
+      "slug": "oriented"
+    },
+    "otherwise": {
+      "bn": "অন্যদিকে",
+      "pos": "adverb",
+      "slug": "otherwise"
+    },
+    "outweigh": {
+      "bn": "ছাপিয়ে যাওয়া",
+      "pos": "verb",
+      "slug": "outweigh"
+    },
+    "overall": {
+      "bn": "সামগ্রিক",
+      "pos": "noun",
+      "slug": "overall"
+    },
+    "overseas": {
+      "bn": "বিদেশী",
+      "pos": "adjective",
+      "slug": "overseas"
+    },
+    "overview": {
+      "bn": "ওভারভিউ",
+      "pos": "noun",
+      "slug": "overview"
+    },
+    "owe": {
+      "bn": "ঋণী হওয়া",
+      "pos": "verb",
+      "slug": "owe"
+    },
+    "own": {
+      "bn": "নিজের",
+      "pos": "adjective",
+      "slug": "own"
+    },
+    "owner": {
+      "bn": "মালিক",
+      "pos": "noun",
+      "slug": "owner"
+    },
+    "pacific": {
+      "bn": "শান্তিপ্রিয়",
+      "pos": "adjective",
+      "slug": "pacific"
+    },
+    "paddy": {
+      "bn": "ধান",
+      "pos": "noun",
+      "slug": "paddy"
+    },
+    "paid": {
+      "bn": "পরিশোধ করা",
+      "pos": "verb",
+      "slug": "paid"
+    },
+    "pandemic": {
+      "bn": "মহামারি",
+      "pos": "noun",
+      "slug": "pandemic"
+    },
+    "panel": {
+      "bn": "প্যানেল",
+      "pos": "noun",
+      "slug": "panel"
+    },
+    "paradise": {
+      "bn": "পরম সুখের জায়গা",
+      "pos": "noun",
+      "slug": "paradise"
+    },
+    "paradox": {
+      "bn": "স্ববিরোধী উক্তি",
+      "pos": "noun",
+      "slug": "paradox"
+    },
+    "parallel": {
+      "bn": "সমান্তরাল",
+      "pos": "noun",
+      "slug": "parallel"
+    },
+    "parameter": {
+      "bn": "প্যারামিটার",
+      "pos": "noun",
+      "slug": "parameter"
+    },
+    "parasite": {
+      "bn": "পরজীবী",
+      "pos": "noun",
+      "slug": "parasite"
+    },
+    "parliament": {
+      "bn": "সংসদ",
+      "pos": "noun",
+      "slug": "parliament"
+    },
+    "parsley": {
+      "bn": "পার্সলে",
+      "pos": "noun",
+      "slug": "parsley"
+    },
+    "particularly": {
+      "bn": "বিশেষ করে",
+      "pos": "adverb",
+      "slug": "particularly"
+    },
+    "payable": {
+      "bn": "পরিশোধযোগ্য",
+      "pos": "adjective",
+      "slug": "payable"
+    },
+    "peacock": {
+      "bn": "ময়ূর",
+      "pos": "noun",
+      "slug": "peacock"
+    },
+    "peak": {
+      "bn": "শিখর",
+      "pos": "noun",
+      "slug": "peak"
+    },
+    "peasant": {
+      "bn": "ক্ষুদ্র কৃষক",
+      "pos": "noun",
+      "slug": "peasant"
+    },
+    "pedagogy": {
+      "bn": "শিক্ষণপদ্ধতি",
+      "pos": "noun",
+      "slug": "pedagogy"
+    },
+    "pee": {
+      "bn": "প্রস্রাব করা",
+      "pos": "verb",
+      "slug": "pee"
+    },
+    "pelvis": {
+      "bn": "শ্রোণী",
+      "pos": "noun",
+      "slug": "pelvis"
+    },
+    "perceived": {
+      "bn": "অনুমিত",
+      "pos": "adjective",
+      "slug": "perceived"
+    },
+    "perfection": {
+      "bn": "পূর্ণতা",
+      "pos": "noun",
+      "slug": "perfection"
+    },
+    "perhaps": {
+      "bn": "সম্ভবত",
+      "pos": "adverb",
+      "slug": "perhaps"
+    },
+    "perimeter": {
+      "bn": "পরিসীমা",
+      "pos": "noun",
+      "slug": "perimeter"
+    },
+    "peripheral": {
+      "bn": "প্রান্তিক",
+      "pos": "adjective",
+      "slug": "peripheral"
+    },
+    "perish": {
+      "bn": "প্রাণ হারানো",
+      "pos": "verb",
+      "slug": "perish"
+    },
+    "permanent": {
+      "bn": "স্থায়ী",
+      "pos": "adjective",
+      "slug": "permanent"
+    },
+    "perpetrator": {
+      "bn": "অপরাধকারী",
+      "pos": "noun",
+      "slug": "perpetrator"
+    },
+    "perpetual": {
+      "bn": "চিরস্থায়ী",
+      "pos": "adjective",
+      "slug": "perpetual"
+    },
+    "persist": {
+      "bn": "লেগে থাকা",
+      "pos": "verb",
+      "slug": "persist"
+    },
+    "persistence": {
+      "bn": "অধ্যবসায়",
+      "pos": "noun",
+      "slug": "persistence"
+    },
+    "personal": {
+      "bn": "ব্যক্তিগত",
+      "pos": "noun",
+      "slug": "personal"
+    },
+    "personality": {
+      "bn": "ব্যক্তিত্ব",
+      "pos": "noun",
+      "slug": "personality"
+    },
+    "perspective": {
+      "bn": "দৃষ্টিকোণ",
+      "pos": "noun",
+      "slug": "perspective"
+    },
+    "persuasion": {
+      "bn": "বোঝানো",
+      "pos": "noun",
+      "slug": "persuasion"
+    },
+    "persuasive": {
+      "bn": "বিশ্বাস জাগাতে সক্ষম",
+      "pos": "adjective",
+      "slug": "persuasive"
+    },
+    "pertinent": {
+      "bn": "প্রাসঙ্গিক",
+      "pos": "adjective",
+      "slug": "pertinent"
+    },
+    "perusal": {
+      "bn": "মনোযোগ দিয়ে পড়া",
+      "pos": "noun",
+      "slug": "perusal"
+    },
+    "petite": {
+      "bn": "খুব ছোট",
+      "pos": "adjective",
+      "slug": "petite"
+    },
+    "phantom": {
+      "bn": "ভূত",
+      "pos": "noun",
+      "slug": "phantom"
+    },
+    "phenomenal": {
+      "bn": "অসাধারণ",
+      "pos": "adjective",
+      "slug": "phenomenal"
+    },
+    "philosopher": {
+      "bn": "দার্শনিক",
+      "pos": "noun",
+      "slug": "philosopher"
+    },
+    "philosophy": {
+      "bn": "দর্শন",
+      "pos": "noun",
+      "slug": "philosophy"
+    },
+    "phoenix": {
+      "bn": "ফিনিক্স",
+      "pos": "noun",
+      "slug": "phoenix"
+    },
+    "physical": {
+      "bn": "শারীরিক",
+      "pos": "adjective",
+      "slug": "physical"
+    },
+    "pickle": {
+      "bn": "আচার",
+      "pos": "noun",
+      "slug": "pickle"
+    },
+    "pie": {
+      "bn": "পাই",
+      "pos": "noun",
+      "slug": "pie"
+    },
+    "piercing": {
+      "bn": "তীক্ষ্ণ",
+      "pos": "adjective",
+      "slug": "piercing"
+    },
+    "pigmentation": {
+      "bn": "রঞ্জন",
+      "pos": "noun",
+      "slug": "pigmentation"
+    },
+    "pilgrim": {
+      "bn": "তীর্থযাত্রী",
+      "pos": "noun",
+      "slug": "pilgrim"
+    },
+    "pioneer": {
+      "bn": "অগ্রগামী",
+      "pos": "noun",
+      "slug": "pioneer"
+    },
+    "pious": {
+      "bn": "ধর্মভক্ত",
+      "pos": "adjective",
+      "slug": "pious"
+    },
+    "plagiarism": {
+      "bn": "অন্যের লেখা নিজের বলে চালানো",
+      "pos": "noun",
+      "slug": "plagiarism"
+    },
+    "plain": {
+      "bn": "সমতল",
+      "pos": "noun",
+      "slug": "plain"
+    },
+    "planet": {
+      "bn": "গ্রহ",
+      "pos": "noun",
+      "slug": "planet"
+    },
+    "plausible": {
+      "bn": "বিশ্বাসযোগ্য",
+      "pos": "adjective",
+      "slug": "plausible"
+    },
+    "playboy": {
+      "bn": "ভোগবিলাসী পুরুষ",
+      "pos": "noun",
+      "slug": "playboy"
+    },
+    "plenty": {
+      "bn": "প্রচুর",
+      "pos": "noun",
+      "slug": "plenty"
+    },
+    "policy": {
+      "bn": "নীতি",
+      "pos": "noun",
+      "slug": "policy"
+    },
+    "polluted": {
+      "bn": "দূষিত",
+      "pos": "adjective",
+      "slug": "polluted"
+    },
+    "poor": {
+      "bn": "দরিদ্র",
+      "pos": "noun",
+      "slug": "poor"
+    },
+    "pork": {
+      "bn": "শূকরের মাংস",
+      "pos": "noun",
+      "slug": "pork"
+    },
+    "possess": {
+      "bn": "মালিক হওয়া",
+      "pos": "verb",
+      "slug": "possess"
+    },
+    "potential": {
+      "bn": "সম্ভাব্য",
+      "pos": "adjective",
+      "slug": "potential"
+    },
+    "pottery": {
+      "bn": "মৃৎপাত্র",
+      "pos": "noun",
+      "slug": "pottery"
+    },
+    "pour": {
+      "bn": "ঢালা",
+      "pos": "verb",
+      "slug": "pour"
+    },
+    "poverty": {
+      "bn": "দারিদ্র্য",
+      "pos": "noun",
+      "slug": "poverty"
+    },
+    "practical": {
+      "bn": "ব্যবহারিক",
+      "pos": "adjective",
+      "slug": "practical"
+    },
+    "preamble": {
+      "bn": "প্রস্তাবনা",
+      "pos": "noun",
+      "slug": "preamble"
+    },
+    "precarious": {
+      "bn": "বিপজ্জনক",
+      "pos": "adjective",
+      "slug": "precarious"
+    },
+    "preceding": {
+      "bn": "পূর্ববর্তী",
+      "pos": "adjective",
+      "slug": "preceding"
+    },
+    "precious": {
+      "bn": "মূল্যবান",
+      "pos": "adjective",
+      "slug": "precious"
+    },
+    "precise": {
+      "bn": "নির্ভুল",
+      "pos": "adjective",
+      "slug": "precise"
+    },
+    "precision": {
+      "bn": "নির্ভুলতা",
+      "pos": "noun",
+      "slug": "precision"
+    },
+    "precursor": {
+      "bn": "পূর্বলক্ষণ",
+      "pos": "noun",
+      "slug": "precursor"
+    },
+    "predecessor": {
+      "bn": "পূর্বসূরি",
+      "pos": "noun",
+      "slug": "predecessor"
+    },
+    "prediction": {
+      "bn": "পূর্বাভাস",
+      "pos": "noun",
+      "slug": "prediction"
+    },
+    "pregnant": {
+      "bn": "গর্ভবতী",
+      "pos": "adjective",
+      "slug": "pregnant"
+    },
+    "prejudice": {
+      "bn": "পূর্বসংস্কার",
+      "pos": "noun",
+      "slug": "prejudice"
+    },
+    "premises": {
+      "bn": "প্রাঙ্গণ",
+      "pos": "noun",
+      "slug": "premises"
+    },
+    "premium": {
+      "bn": "প্রিমিয়াম",
+      "pos": "noun",
+      "slug": "premium"
+    },
+    "preposition": {
+      "bn": "পদান্বয়ী অব্যয়",
+      "pos": "noun",
+      "slug": "preposition"
+    },
+    "prerequisite": {
+      "bn": "পূর্বশর্ত",
+      "pos": "noun",
+      "slug": "prerequisite"
+    },
+    "presence": {
+      "bn": "উপস্থিতি",
+      "pos": "noun",
+      "slug": "presence"
+    },
+    "pretending": {
+      "bn": "ভান",
+      "pos": "noun",
+      "slug": "pretending"
+    },
+    "pretty": {
+      "bn": "সুন্দর",
+      "pos": "adjective",
+      "slug": "pretty"
+    },
+    "prevailing": {
+      "bn": "প্রধান প্রচলিত",
+      "pos": "adjective",
+      "slug": "prevailing"
+    },
+    "prevent": {
+      "bn": "আটকানো",
+      "pos": "verb",
+      "slug": "prevent"
+    },
+    "previous": {
+      "bn": "আগের",
+      "pos": "adjective",
+      "slug": "previous"
+    },
+    "price": {
+      "bn": "মূল্য",
+      "pos": "noun",
+      "slug": "price"
+    },
+    "princess": {
+      "bn": "রাজকুমারী",
+      "pos": "noun",
+      "slug": "princess"
+    },
+    "prior": {
+      "bn": "পূর্বের",
+      "pos": "adjective",
+      "slug": "prior"
+    },
+    "priority": {
+      "bn": "অগ্রাধিকার",
+      "pos": "noun",
+      "slug": "priority"
+    },
+    "privacy": {
+      "bn": "গোপনীয়তা",
+      "pos": "noun",
+      "slug": "privacy"
+    },
+    "proactive": {
+      "bn": "আগাম উদ্যোগী",
+      "pos": "adjective",
+      "slug": "proactive"
+    },
+    "probably": {
+      "bn": "সম্ভবত",
+      "pos": "adverb",
+      "slug": "probably"
+    },
+    "procedure": {
+      "bn": "পদ্ধতি",
+      "pos": "noun",
+      "slug": "procedure"
+    },
+    "procession": {
+      "bn": "মিছিল",
+      "pos": "noun",
+      "slug": "procession"
+    },
+    "procrastination": {
+      "bn": "গড়িমসি",
+      "pos": "noun",
+      "slug": "procrastination"
+    },
+    "produce": {
+      "bn": "উত্পাদন",
+      "pos": "noun",
+      "slug": "produce"
+    },
+    "proficiency": {
+      "bn": "দক্ষতা",
+      "pos": "noun",
+      "slug": "proficiency"
+    },
+    "progress": {
+      "bn": "অগ্রগতি",
+      "pos": "noun",
+      "slug": "progress"
+    },
+    "proletariat": {
+      "bn": "শ্রমজীবী শ্রেণি",
+      "pos": "noun",
+      "slug": "proletariat"
+    },
+    "prolonged": {
+      "bn": "দীর্ঘস্থায়ী",
+      "pos": "adjective",
+      "slug": "prolonged"
+    },
+    "prominent": {
+      "bn": "সুস্পষ্ট",
+      "pos": "adjective",
+      "slug": "prominent"
+    },
+    "propagation": {
+      "bn": "প্রসার",
+      "pos": "noun",
+      "slug": "propagation"
+    },
+    "properly": {
+      "bn": "সঠিকভাবে",
+      "pos": "adverb",
+      "slug": "properly"
+    },
+    "property": {
+      "bn": "সম্পত্তি",
+      "pos": "noun",
+      "slug": "property"
+    },
+    "prosecution": {
+      "bn": "মামলা পরিচালনা",
+      "pos": "noun",
+      "slug": "prosecution"
+    },
+    "prospective": {
+      "bn": "সম্ভাব্য",
+      "pos": "adjective",
+      "slug": "prospective"
+    },
+    "prosperity": {
+      "bn": "সমৃদ্ধি",
+      "pos": "noun",
+      "slug": "prosperity"
+    },
+    "protection": {
+      "bn": "সুরক্ষা",
+      "pos": "noun",
+      "slug": "protection"
+    },
+    "protein": {
+      "bn": "প্রোটিন",
+      "pos": "noun",
+      "slug": "protein"
+    },
+    "protocol": {
+      "bn": "রীতি",
+      "pos": "noun",
+      "slug": "protocol"
+    },
+    "proud": {
+      "bn": "গর্বিত",
+      "pos": "adjective",
+      "slug": "proud"
+    },
+    "provider": {
+      "bn": "প্রদানকারী",
+      "pos": "noun",
+      "slug": "provider"
+    },
+    "province": {
+      "bn": "প্রদেশ",
+      "pos": "noun",
+      "slug": "province"
+    },
+    "provision": {
+      "bn": "বিধান",
+      "pos": "noun",
+      "slug": "provision"
+    },
+    "proximity": {
+      "bn": "নৈকট্য",
+      "pos": "noun",
+      "slug": "proximity"
+    },
+    "public": {
+      "bn": "পাবলিক",
+      "pos": "noun",
+      "slug": "public"
+    },
+    "purchase": {
+      "bn": "ক্রয়",
+      "pos": "noun",
+      "slug": "purchase"
+    },
+    "purple": {
+      "bn": "বেগুনি",
+      "pos": "noun",
+      "slug": "purple"
+    },
+    "qualification": {
+      "bn": "যোগ্যতা",
+      "pos": "noun",
+      "slug": "qualification"
+    },
+    "quantity": {
+      "bn": "পরিমাণ",
+      "pos": "noun",
+      "slug": "quantity"
+    },
+    "query": {
+      "bn": "জিজ্ঞাসা",
+      "pos": "noun",
+      "slug": "query"
+    },
+    "quite": {
+      "bn": "বেশ",
+      "pos": "adverb",
+      "slug": "quite"
+    },
+    "quota": {
+      "bn": "কোটা",
+      "pos": "noun",
+      "slug": "quota"
+    },
+    "race": {
+      "bn": "জাতি",
+      "pos": "noun",
+      "slug": "race"
+    },
+    "racial": {
+      "bn": "জাতিগত",
+      "pos": "adjective",
+      "slug": "racial"
+    },
+    "racist": {
+      "bn": "বর্ণবাদী",
+      "pos": "adjective",
+      "slug": "racist"
+    },
+    "raging": {
+      "bn": "প্রচণ্ড",
+      "pos": "adjective",
+      "slug": "raging"
+    },
+    "raised": {
+      "bn": "উঁচু করা",
+      "pos": "adjective",
+      "slug": "raised"
+    },
+    "random": {
+      "bn": "এলোমেলো",
+      "pos": "adjective",
+      "slug": "random"
+    },
+    "rare": {
+      "bn": "বিরল",
+      "pos": "adjective",
+      "slug": "rare"
+    },
+    "rating": {
+      "bn": "রেটিং",
+      "pos": "noun",
+      "slug": "rating"
+    },
+    "rationale": {
+      "bn": "মূল যুক্তি",
+      "pos": "noun",
+      "slug": "rationale"
+    },
+    "raw": {
+      "bn": "কাঁচা",
+      "pos": "noun",
+      "slug": "raw"
+    },
+    "real": {
+      "bn": "আসল / বাস্তব",
+      "pos": "adjective",
+      "slug": "real"
+    },
+    "realistic": {
+      "bn": "বাস্তববাদী",
+      "pos": "adjective",
+      "slug": "realistic"
+    },
+    "realize": {
+      "bn": "উপলব্ধি করা",
+      "pos": "verb",
+      "slug": "realize"
+    },
+    "realm": {
+      "bn": "রাজ্য",
+      "pos": "noun",
+      "slug": "realm"
+    },
+    "reason": {
+      "bn": "কারণ",
+      "pos": "noun",
+      "slug": "reason"
+    },
+    "reasonable": {
+      "bn": "যুক্তিসঙ্গত",
+      "pos": "adjective",
+      "slug": "reasonable"
+    },
+    "rebuke": {
+      "bn": "তিরস্কার করা",
+      "pos": "verb",
+      "slug": "rebuke"
+    },
+    "recap": {
+      "bn": "সংক্ষেপ করা",
+      "pos": "verb",
+      "slug": "recap"
+    },
+    "received": {
+      "bn": "প্রাপ্ত",
+      "pos": "verb",
+      "slug": "received"
+    },
+    "recent": {
+      "bn": "সাম্প্রতিক",
+      "pos": "noun",
+      "slug": "recent"
+    },
+    "recently": {
+      "bn": "সম্প্রতি",
+      "pos": "adverb",
+      "slug": "recently"
+    },
+    "recipe": {
+      "bn": "রেসিপি",
+      "pos": "noun",
+      "slug": "recipe"
+    },
+    "recognition": {
+      "bn": "স্বীকৃতি",
+      "pos": "noun",
+      "slug": "recognition"
+    },
+    "recommend": {
+      "bn": "সুপারিশ করা",
+      "pos": "verb",
+      "slug": "recommend"
+    },
+    "recommendation": {
+      "bn": "সুপারিশ",
+      "pos": "noun",
+      "slug": "recommendation"
+    },
+    "recruitment": {
+      "bn": "নিয়োগ",
+      "pos": "noun",
+      "slug": "recruitment"
+    },
+    "red": {
+      "bn": "লাল",
+      "pos": "noun",
+      "slug": "red"
+    },
+    "reduce": {
+      "bn": "হ্রাস করা",
+      "pos": "verb",
+      "slug": "reduce"
+    },
+    "reduction": {
+      "bn": "হ্রাস",
+      "pos": "noun",
+      "slug": "reduction"
+    },
+    "redundant": {
+      "bn": "অপ্রয়োজনীয়",
+      "pos": "adjective",
+      "slug": "redundant"
+    },
+    "referral": {
+      "bn": "সুপারিশপত্র",
+      "pos": "noun",
+      "slug": "referral"
+    },
+    "refund": {
+      "bn": "ফেরত টাকা",
+      "pos": "noun",
+      "slug": "refund"
+    },
+    "regardless": {
+      "bn": "তবুও",
+      "pos": "adverb",
+      "slug": "regardless"
+    },
+    "region": {
+      "bn": "অঞ্চল",
+      "pos": "noun",
+      "slug": "region"
+    },
+    "regional": {
+      "bn": "আঞ্চলিক",
+      "pos": "adjective",
+      "slug": "regional"
+    },
+    "regularly": {
+      "bn": "নিয়মিত",
+      "pos": "adverb",
+      "slug": "regularly"
+    },
+    "regulatory": {
+      "bn": "নিয়ন্ত্রক",
+      "pos": "adjective",
+      "slug": "regulatory"
+    },
+    "reimbursement": {
+      "bn": "ব্যয়ফেরত",
+      "pos": "noun",
+      "slug": "reimbursement"
+    },
+    "reincarnation": {
+      "bn": "পুনর্জন্ম",
+      "pos": "noun",
+      "slug": "reincarnation"
+    },
+    "related": {
+      "bn": "সম্পর্কিত",
+      "pos": "verb",
+      "slug": "related"
+    },
+    "relevant": {
+      "bn": "প্রাসঙ্গিক",
+      "pos": "adjective",
+      "slug": "relevant"
+    },
+    "reliable": {
+      "bn": "নির্ভরযোগ্য",
+      "pos": "adjective",
+      "slug": "reliable"
+    },
+    "religion": {
+      "bn": "ধর্ম",
+      "pos": "noun",
+      "slug": "religion"
+    },
+    "remain": {
+      "bn": "থাকা",
+      "pos": "verb",
+      "slug": "remain"
+    },
+    "remaining": {
+      "bn": "অবশিষ্ট",
+      "pos": "verb",
+      "slug": "remaining"
+    },
+    "remind": {
+      "bn": "মনে করিয়ে দেওয়া",
+      "pos": "verb",
+      "slug": "remind"
+    },
+    "reminder": {
+      "bn": "মনে করিয়ে দেওয়া বার্তা",
+      "pos": "noun",
+      "slug": "reminder"
+    },
+    "remorse": {
+      "bn": "অনুশোচনা",
+      "pos": "noun",
+      "slug": "remorse"
+    },
+    "remote": {
+      "bn": "দূরবর্তী",
+      "pos": "noun",
+      "slug": "remote"
+    },
+    "renewal": {
+      "bn": "নবায়ন",
+      "pos": "noun",
+      "slug": "renewal"
+    },
+    "renewed": {
+      "bn": "নবায়িত",
+      "pos": "adjective",
+      "slug": "renewed"
+    },
+    "renovation": {
+      "bn": "সংস্কার",
+      "pos": "noun",
+      "slug": "renovation"
+    },
+    "renowned": {
+      "bn": "খ্যাতনামা",
+      "pos": "adjective",
+      "slug": "renowned"
+    },
+    "rep": {
+      "bn": "প্রতিনিধি",
+      "pos": "noun",
+      "slug": "rep"
+    },
+    "repair": {
+      "bn": "মেরামত",
+      "pos": "noun",
+      "slug": "repair"
+    },
+    "repeat": {
+      "bn": "আবার বলা বা করা",
+      "pos": "verb",
+      "slug": "repeat"
+    },
+    "repetition": {
+      "bn": "পুনরাবৃত্তি",
+      "pos": "noun",
+      "slug": "repetition"
+    },
+    "replace": {
+      "bn": "প্রতিস্থাপন",
+      "pos": "verb",
+      "slug": "replace"
+    },
+    "reporter": {
+      "bn": "রিপোর্টার",
+      "pos": "noun",
+      "slug": "reporter"
+    },
+    "republic": {
+      "bn": "প্রজাতন্ত্র",
+      "pos": "noun",
+      "slug": "republic"
+    },
+    "reputation": {
+      "bn": "লোকের ধারণা",
+      "pos": "noun",
+      "slug": "reputation"
+    },
+    "require": {
+      "bn": "প্রয়োজন",
+      "pos": "verb",
+      "slug": "require"
+    },
+    "required": {
+      "bn": "প্রয়োজনীয়",
+      "pos": "verb",
+      "slug": "required"
+    },
+    "requirement": {
+      "bn": "প্রয়োজন",
+      "pos": "noun",
+      "slug": "requirement"
+    },
+    "resentment": {
+      "bn": "ক্ষোভ",
+      "pos": "noun",
+      "slug": "resentment"
+    },
+    "reservation": {
+      "bn": "সংরক্ষণ",
+      "pos": "noun",
+      "slug": "reservation"
+    },
+    "reserved": {
+      "bn": "সংরক্ষিত",
+      "pos": "verb",
+      "slug": "reserved"
+    },
+    "reside": {
+      "bn": "বসবাস করা",
+      "pos": "verb",
+      "slug": "reside"
+    },
+    "resilient": {
+      "bn": "সহনশীল",
+      "pos": "adjective",
+      "slug": "resilient"
+    },
+    "respect": {
+      "bn": "সম্মান",
+      "pos": "noun",
+      "slug": "respect"
+    },
+    "responsible": {
+      "bn": "দায়ী",
+      "pos": "adjective",
+      "slug": "responsible"
+    },
+    "restricted": {
+      "bn": "সীমাবদ্ধ",
+      "pos": "verb",
+      "slug": "restricted"
+    },
+    "retired": {
+      "bn": "অবসরপ্রাপ্ত",
+      "pos": "adjective",
+      "slug": "retired"
+    },
+    "return": {
+      "bn": "ফিরে",
+      "pos": "noun",
+      "slug": "return"
+    },
+    "reveal": {
+      "bn": "প্রকাশ করা",
+      "pos": "verb",
+      "slug": "reveal"
+    },
+    "revenge": {
+      "bn": "প্রতিশোধ",
+      "pos": "noun",
+      "slug": "revenge"
+    },
+    "revise": {
+      "bn": "সংশোধন করা",
+      "pos": "verb",
+      "slug": "revise"
+    },
+    "revised": {
+      "bn": "সংশোধিত",
+      "pos": "verb",
+      "slug": "revised"
+    },
+    "revision": {
+      "bn": "পুনর্বিবেচনা",
+      "pos": "noun",
+      "slug": "revision"
+    },
+    "revolution": {
+      "bn": "বিপ্লব",
+      "pos": "noun",
+      "slug": "revolution"
+    },
+    "rice": {
+      "bn": "চাল",
+      "pos": "noun",
+      "slug": "rice"
+    },
+    "risk": {
+      "bn": "ঝুঁকি",
+      "pos": "noun",
+      "slug": "risk"
+    },
+    "rogue": {
+      "bn": "বদমাশ",
+      "pos": "noun",
+      "slug": "rogue"
+    },
+    "rosemary": {
+      "bn": "রোজমেরি",
+      "pos": "noun",
+      "slug": "rosemary"
+    },
+    "row": {
+      "bn": "সারি",
+      "pos": "noun",
+      "slug": "row"
+    },
+    "rubbish": {
+      "bn": "আবর্জনা",
+      "pos": "noun",
+      "slug": "rubbish"
+    },
+    "ruffled": {
+      "bn": "চিমটি-ভাঁজওয়ালা",
+      "pos": "adjective",
+      "slug": "ruffled"
+    },
+    "rumour": {
+      "bn": "গুজব",
+      "pos": "noun",
+      "slug": "rumour"
+    },
+    "rural": {
+      "bn": "গ্রামীণ",
+      "pos": "adjective",
+      "slug": "rural"
+    },
+    "ruthless": {
+      "bn": "নির্দয়",
+      "pos": "adjective",
+      "slug": "ruthless"
+    },
+    "salary": {
+      "bn": "বেতন",
+      "pos": "noun",
+      "slug": "salary"
+    },
+    "saliva": {
+      "bn": "লালা",
+      "pos": "noun",
+      "slug": "saliva"
+    },
+    "sample": {
+      "bn": "নমুনা",
+      "pos": "noun",
+      "slug": "sample"
+    },
+    "sanctuary": {
+      "bn": "আশ্রয়",
+      "pos": "noun",
+      "slug": "sanctuary"
+    },
+    "sand": {
+      "bn": "বালি",
+      "pos": "noun",
+      "slug": "sand"
+    },
+    "sarcasm": {
+      "bn": "ব্যঙ্গ",
+      "pos": "noun",
+      "slug": "sarcasm"
+    },
+    "sassy": {
+      "bn": "উদ্ধত",
+      "pos": "adjective",
+      "slug": "sassy"
+    },
+    "savage": {
+      "bn": "নিষ্ঠুর",
+      "pos": "adjective",
+      "slug": "savage"
+    },
+    "saw": {
+      "bn": "দেখেছি",
+      "pos": "noun",
+      "slug": "saw"
+    },
+    "scalp": {
+      "bn": "মাথার চামড়া",
+      "pos": "noun",
+      "slug": "scalp"
+    },
+    "scarce": {
+      "bn": "দুর্লভ",
+      "pos": "adjective",
+      "slug": "scarce"
+    },
+    "scared": {
+      "bn": "ভীত",
+      "pos": "adjective",
+      "slug": "scared"
+    },
+    "schedule": {
+      "bn": "সময়সূচী",
+      "pos": "noun",
+      "slug": "schedule"
+    },
+    "screening": {
+      "bn": "স্ক্রীনিং",
+      "pos": "noun",
+      "slug": "screening"
+    },
+    "scroll": {
+      "bn": "স্ক্রল করা",
+      "pos": "verb",
+      "slug": "scroll"
+    },
+    "secure": {
+      "bn": "নিরাপদ",
+      "pos": "verb",
+      "slug": "secure"
+    },
+    "sediment": {
+      "bn": "তলানি",
+      "pos": "noun",
+      "slug": "sediment"
+    },
+    "seeking": {
+      "bn": "খোঁজা",
+      "pos": "noun",
+      "slug": "seeking"
+    },
+    "segregation": {
+      "bn": "বর্ণবিভাজন",
+      "pos": "noun",
+      "slug": "segregation"
+    },
+    "seldom": {
+      "bn": "কদাচিৎ",
+      "pos": "adverb",
+      "slug": "seldom"
+    },
+    "select": {
+      "bn": "নির্বাচন করুন",
+      "pos": "verb",
+      "slug": "select"
+    },
+    "selected": {
+      "bn": "নির্বাচিত",
+      "pos": "verb",
+      "slug": "selected"
+    },
+    "semester": {
+      "bn": "সেমিস্টার",
+      "pos": "noun",
+      "slug": "semester"
+    },
+    "seminar": {
+      "bn": "সেমিনার",
+      "pos": "noun",
+      "slug": "seminar"
+    },
+    "senator": {
+      "bn": "সিনেটর",
+      "pos": "noun",
+      "slug": "senator"
+    },
+    "sensor": {
+      "bn": "সেন্সর",
+      "pos": "noun",
+      "slug": "sensor"
+    },
+    "sentimental": {
+      "bn": "আবেগপ্রবণ",
+      "pos": "adjective",
+      "slug": "sentimental"
+    },
+    "sequence": {
+      "bn": "ক্রম",
+      "pos": "noun",
+      "slug": "sequence"
+    },
+    "series": {
+      "bn": "সিরিজ",
+      "pos": "noun",
+      "slug": "series"
+    },
+    "serious": {
+      "bn": "গুরুতর",
+      "pos": "adjective",
+      "slug": "serious"
+    },
+    "seriously": {
+      "bn": "গুরুত্ব সহকারে",
+      "pos": "adverb",
+      "slug": "seriously"
+    },
+    "sesame": {
+      "bn": "তিলগাছ",
+      "pos": "noun",
+      "slug": "sesame"
+    },
+    "several": {
+      "bn": "বেশ কিছু",
+      "pos": "adjective",
+      "slug": "several"
+    },
+    "shaking": {
+      "bn": "কাঁপুনি",
+      "pos": "noun",
+      "slug": "shaking"
+    },
+    "sharp": {
+      "bn": "তীক্ষ্ণ",
+      "pos": "noun",
+      "slug": "sharp"
+    },
+    "shivering": {
+      "bn": "কাপুনি ধরা",
+      "pos": "adjective",
+      "slug": "shivering"
+    },
+    "shower": {
+      "bn": "ঝরনা",
+      "pos": "noun",
+      "slug": "shower"
+    },
+    "shrug": {
+      "bn": "কাঁধ ঝাঁকানো",
+      "pos": "verb",
+      "slug": "shrug"
+    },
+    "sibling": {
+      "bn": "সহোদর",
+      "pos": "noun",
+      "slug": "sibling"
+    },
+    "sick": {
+      "bn": "অসুস্থ",
+      "pos": "noun",
+      "slug": "sick"
+    },
+    "sickness": {
+      "bn": "অসুখ",
+      "pos": "noun",
+      "slug": "sickness"
+    },
+    "significant": {
+      "bn": "উল্লেখযোগ্য",
+      "pos": "adjective",
+      "slug": "significant"
+    },
+    "similar": {
+      "bn": "অনুরূপ",
+      "pos": "adjective",
+      "slug": "similar"
+    },
+    "simple": {
+      "bn": "সহজ",
+      "pos": "noun",
+      "slug": "simple"
+    },
+    "sir": {
+      "bn": "স্যার",
+      "pos": "noun",
+      "slug": "sir"
+    },
+    "sit": {
+      "bn": "বসা",
+      "pos": "verb",
+      "slug": "sit"
+    },
+    "site": {
+      "bn": "সাইট",
+      "pos": "noun",
+      "slug": "site"
+    },
+    "sitting": {
+      "bn": "বসা",
+      "pos": "noun",
+      "slug": "sitting"
+    },
+    "situation": {
+      "bn": "পরিস্থিতি",
+      "pos": "noun",
+      "slug": "situation"
+    },
+    "skeptical": {
+      "bn": "সন্দিহান",
+      "pos": "adjective",
+      "slug": "skeptical"
+    },
+    "skip": {
+      "bn": "এড়িয়ে যান",
+      "pos": "noun",
+      "slug": "skip"
+    },
+    "slay": {
+      "bn": "দারুণ করা",
+      "pos": "verb",
+      "slug": "slay"
+    },
+    "slaying": {
+      "bn": "হত্যা",
+      "pos": "noun",
+      "slug": "slaying"
+    },
+    "sleeve": {
+      "bn": "হাতা",
+      "pos": "noun",
+      "slug": "sleeve"
+    },
+    "slide": {
+      "bn": "স্লাইড",
+      "pos": "noun",
+      "slug": "slide"
+    },
+    "slightly": {
+      "bn": "সামান্য",
+      "pos": "adverb",
+      "slug": "slightly"
+    },
+    "slime": {
+      "bn": "আঠালো পদার্থ",
+      "pos": "noun",
+      "slug": "slime"
+    },
+    "snail": {
+      "bn": "শামুক",
+      "pos": "noun",
+      "slug": "snail"
+    },
+    "sniff": {
+      "bn": "নাক টানা",
+      "pos": "verb",
+      "slug": "sniff"
+    },
+    "social": {
+      "bn": "সামাজিক",
+      "pos": "noun",
+      "slug": "social"
+    },
+    "sociology": {
+      "bn": "সমাজবিজ্ঞান",
+      "pos": "noun",
+      "slug": "sociology"
+    },
+    "solely": {
+      "bn": "শুধুমাত্র",
+      "pos": "adverb",
+      "slug": "solely"
+    },
+    "solidarity": {
+      "bn": "সংহতি",
+      "pos": "noun",
+      "slug": "solidarity"
+    },
+    "solve": {
+      "bn": "সমাধান",
+      "pos": "verb",
+      "slug": "solve"
+    },
+    "solvent": {
+      "bn": "দ্রাবক",
+      "pos": "noun",
+      "slug": "solvent"
+    },
+    "son": {
+      "bn": "ছেলে",
+      "pos": "noun",
+      "slug": "son"
+    },
+    "soothing": {
+      "bn": "প্রশান্তিদায়ক",
+      "pos": "adjective",
+      "slug": "soothing"
+    },
+    "sorry": {
+      "bn": "দুঃখিত",
+      "pos": "adjective",
+      "slug": "sorry"
+    },
+    "source": {
+      "bn": "উৎস",
+      "pos": "noun",
+      "slug": "source"
+    },
+    "sovereign": {
+      "bn": "সার্বভৌম",
+      "pos": "adjective",
+      "slug": "sovereign"
+    },
+    "sovereignty": {
+      "bn": "সার্বভৌমত্ব",
+      "pos": "noun",
+      "slug": "sovereignty"
+    },
+    "spa": {
+      "bn": "স্পা",
+      "pos": "noun",
+      "slug": "spa"
+    },
+    "spam": {
+      "bn": "স্প্যাম",
+      "pos": "noun",
+      "slug": "spam"
+    },
+    "special": {
+      "bn": "বিশেষ",
+      "pos": "noun",
+      "slug": "special"
+    },
+    "species": {
+      "bn": "প্রজাতি",
+      "pos": "noun",
+      "slug": "species"
+    },
+    "specific": {
+      "bn": "নির্দিষ্ট",
+      "pos": "noun",
+      "slug": "specific"
+    },
+    "specifically": {
+      "bn": "বিশেষভাবে",
+      "pos": "adverb",
+      "slug": "specifically"
+    },
+    "specification": {
+      "bn": "স্পেসিফিকেশন",
+      "pos": "noun",
+      "slug": "specification"
+    },
+    "spectrum": {
+      "bn": "ব্যাপ্তি",
+      "pos": "noun",
+      "slug": "spectrum"
+    },
+    "spend": {
+      "bn": "খরচ করা",
+      "pos": "verb",
+      "slug": "spend"
+    },
+    "spleen": {
+      "bn": "প্লীহা",
+      "pos": "noun",
+      "slug": "spleen"
+    },
+    "splendid": {
+      "bn": "জাঁকালো",
+      "pos": "adjective",
+      "slug": "splendid"
+    },
+    "sponsor": {
+      "bn": "পৃষ্ঠপোষক",
+      "pos": "noun",
+      "slug": "sponsor"
+    },
+    "sport": {
+      "bn": "খেলাধুলা",
+      "pos": "noun",
+      "slug": "sport"
+    },
+    "spy": {
+      "bn": "গুপ্তচর",
+      "pos": "noun",
+      "slug": "spy"
+    },
+    "stable": {
+      "bn": "স্থিতিশীল",
+      "pos": "noun",
+      "slug": "stable"
+    },
+    "stage": {
+      "bn": "মঞ্চ",
+      "pos": "noun",
+      "slug": "stage"
+    },
+    "stairs": {
+      "bn": "সিঁড়ি",
+      "pos": "noun",
+      "slug": "stairs"
+    },
+    "stale": {
+      "bn": "বাসি",
+      "pos": "adjective",
+      "slug": "stale"
+    },
+    "stare": {
+      "bn": "একদৃষ্টে তাকানো",
+      "pos": "verb",
+      "slug": "stare"
+    },
+    "statement": {
+      "bn": "বিবৃতি",
+      "pos": "noun",
+      "slug": "statement"
+    },
+    "statistics": {
+      "bn": "পরিসংখ্যান",
+      "pos": "noun",
+      "slug": "statistics"
+    },
+    "status": {
+      "bn": "অবস্থা",
+      "pos": "noun",
+      "slug": "status"
+    },
+    "statutory": {
+      "bn": "বিধিবদ্ধ",
+      "pos": "adjective",
+      "slug": "statutory"
+    },
+    "stink": {
+      "bn": "দুর্গন্ধ ছড়ানো",
+      "pos": "verb",
+      "slug": "stink"
+    },
+    "stinky": {
+      "bn": "দুর্গন্ধযুক্ত",
+      "pos": "adjective",
+      "slug": "stinky"
+    },
+    "stoic": {
+      "bn": "স্থিরচিত্ত",
+      "pos": "adjective",
+      "slug": "stoic"
+    },
+    "stranded": {
+      "bn": "আটকা পড়া",
+      "pos": "adjective",
+      "slug": "stranded"
+    },
+    "strange": {
+      "bn": "অদ্ভুত",
+      "pos": "adjective",
+      "slug": "strange"
+    },
+    "strategic": {
+      "bn": "কৌশলগত",
+      "pos": "adjective",
+      "slug": "strategic"
+    },
+    "strategy": {
+      "bn": "কৌশল",
+      "pos": "noun",
+      "slug": "strategy"
+    },
+    "stream": {
+      "bn": "প্রবাহ",
+      "pos": "noun",
+      "slug": "stream"
+    },
+    "strength": {
+      "bn": "শক্তি",
+      "pos": "noun",
+      "slug": "strength"
+    },
+    "stretched": {
+      "bn": "টানটান",
+      "pos": "adjective",
+      "slug": "stretched"
+    },
+    "strive": {
+      "bn": "প্রাণপণ চেষ্টা করা",
+      "pos": "verb",
+      "slug": "strive"
+    },
+    "stubborn": {
+      "bn": "জেদি",
+      "pos": "adjective",
+      "slug": "stubborn"
+    },
+    "subsequent": {
+      "bn": "পরবর্তী",
+      "pos": "adjective",
+      "slug": "subsequent"
+    },
+    "subversive": {
+      "bn": "রাষ্ট্রবিরোধী",
+      "pos": "adjective",
+      "slug": "subversive"
+    },
+    "succumb": {
+      "bn": "মেনে নেওয়া",
+      "pos": "verb",
+      "slug": "succumb"
+    },
+    "sue": {
+      "bn": "মামলা করা",
+      "pos": "verb",
+      "slug": "sue"
+    },
+    "sufficient": {
+      "bn": "যথেষ্ট",
+      "pos": "adjective",
+      "slug": "sufficient"
+    },
+    "suffocation": {
+      "bn": "শ্বাসরোধ",
+      "pos": "noun",
+      "slug": "suffocation"
+    },
+    "suitable": {
+      "bn": "উপযুক্ত",
+      "pos": "adjective",
+      "slug": "suitable"
+    },
+    "summary": {
+      "bn": "সারাংশ",
+      "pos": "noun",
+      "slug": "summary"
+    },
+    "sunday": {
+      "bn": "রবিবার",
+      "pos": "noun",
+      "slug": "sunday"
+    },
+    "supervise": {
+      "bn": "তদারক করা",
+      "pos": "verb",
+      "slug": "supervise"
+    },
+    "supper": {
+      "bn": "রাতের হালকা আহার",
+      "pos": "noun",
+      "slug": "supper"
+    },
+    "supplier": {
+      "bn": "সরবরাহকারী",
+      "pos": "noun",
+      "slug": "supplier"
+    },
+    "supreme": {
+      "bn": "সর্বোচ্চ",
+      "pos": "adjective",
+      "slug": "supreme"
+    },
+    "sure": {
+      "bn": "নিশ্চিত",
+      "pos": "adjective",
+      "slug": "sure"
+    },
+    "surprise": {
+      "bn": "আশ্চর্য",
+      "pos": "noun",
+      "slug": "surprise"
+    },
+    "surrounding": {
+      "bn": "পার্শ্ববর্তী",
+      "pos": "verb",
+      "slug": "surrounding"
+    },
+    "suspicious": {
+      "bn": "সন্দেহজনক",
+      "pos": "adjective",
+      "slug": "suspicious"
+    },
+    "sustainability": {
+      "bn": "স্থায়িত্ব",
+      "pos": "noun",
+      "slug": "sustainability"
+    },
+    "sustainable": {
+      "bn": "চালিয়ে যাওয়া যায় এমন",
+      "pos": "adjective",
+      "slug": "sustainable"
+    },
+    "swap": {
+      "bn": "বিনিময়",
+      "pos": "noun",
+      "slug": "swap"
+    },
+    "swarm": {
+      "bn": "ঝাঁক",
+      "pos": "noun",
+      "slug": "swarm"
+    },
+    "sweating": {
+      "bn": "ঘাম নিঃসরণ",
+      "pos": "noun",
+      "slug": "sweating"
+    },
+    "swelling": {
+      "bn": "ফোলা",
+      "pos": "noun",
+      "slug": "swelling"
+    },
+    "symbol": {
+      "bn": "প্রতীক",
+      "pos": "noun",
+      "slug": "symbol"
+    },
+    "syntax": {
+      "bn": "বাক্যগঠন",
+      "pos": "noun",
+      "slug": "syntax"
+    },
+    "synthesis": {
+      "bn": "সংশ্লেষ",
+      "pos": "noun",
+      "slug": "synthesis"
+    },
+    "talking": {
+      "bn": "কথা বলা",
+      "pos": "noun",
+      "slug": "talking"
+    },
+    "tall": {
+      "bn": "লম্বা",
+      "pos": "noun",
+      "slug": "tall"
+    },
+    "target": {
+      "bn": "লক্ষ্য",
+      "pos": "noun",
+      "slug": "target"
+    },
+    "task": {
+      "bn": "টাস্ক",
+      "pos": "noun",
+      "slug": "task"
+    },
+    "tasty": {
+      "bn": "সুস্বাদু",
+      "pos": "adjective",
+      "slug": "tasty"
+    },
+    "taunt": {
+      "bn": "খোঁচা দেওয়া",
+      "pos": "verb",
+      "slug": "taunt"
+    },
+    "teach": {
+      "bn": "শেখান",
+      "pos": "noun",
+      "slug": "teach"
+    },
+    "tell": {
+      "bn": "বল",
+      "pos": "noun",
+      "slug": "tell"
+    },
+    "temperature": {
+      "bn": "তাপমাত্রা",
+      "pos": "noun",
+      "slug": "temperature"
+    },
+    "template": {
+      "bn": "টেমপ্লেট",
+      "pos": "noun",
+      "slug": "template"
+    },
+    "temporary": {
+      "bn": "অস্থায়ী",
+      "pos": "adjective",
+      "slug": "temporary"
+    },
+    "temptation": {
+      "bn": "প্রলোভন",
+      "pos": "noun",
+      "slug": "temptation"
+    },
+    "tenacity": {
+      "bn": "অধ্যবসায়",
+      "pos": "noun",
+      "slug": "tenacity"
+    },
+    "tend": {
+      "bn": "ঝোঁক থাকা",
+      "pos": "verb",
+      "slug": "tend"
+    },
+    "tenure": {
+      "bn": "পদের মেয়াদ",
+      "pos": "noun",
+      "slug": "tenure"
+    },
+    "territory": {
+      "bn": "অঞ্চল",
+      "pos": "noun",
+      "slug": "territory"
+    },
+    "testimonial": {
+      "bn": "প্রশংসাপত্র",
+      "pos": "noun",
+      "slug": "testimonial"
+    },
+    "testimony": {
+      "bn": "সাক্ষ্য",
+      "pos": "noun",
+      "slug": "testimony"
+    },
+    "thanks": {
+      "bn": "ধন্যবাদ",
+      "pos": "noun",
+      "slug": "thanks"
+    },
+    "theft": {
+      "bn": "চুরি",
+      "pos": "noun",
+      "slug": "theft"
+    },
+    "theme": {
+      "bn": "থিম",
+      "pos": "noun",
+      "slug": "theme"
+    },
+    "theory": {
+      "bn": "তত্ত্ব",
+      "pos": "noun",
+      "slug": "theory"
+    },
+    "therefore": {
+      "bn": "সুতরাং",
+      "pos": "adverb",
+      "slug": "therefore"
+    },
+    "thick": {
+      "bn": "পুরু",
+      "pos": "noun",
+      "slug": "thick"
+    },
+    "things": {
+      "bn": "জিনিস",
+      "pos": "noun",
+      "slug": "things"
+    },
+    "thoroughly": {
+      "bn": "পুঙ্খানুপুঙ্খভাবে",
+      "pos": "adverb",
+      "slug": "thoroughly"
+    },
+    "thousand": {
+      "bn": "হাজার",
+      "pos": "noun",
+      "slug": "thousand"
+    },
+    "thread": {
+      "bn": "থ্রেড",
+      "pos": "noun",
+      "slug": "thread"
+    },
+    "threads": {
+      "bn": "থ্রেড",
+      "pos": "noun",
+      "slug": "threads"
+    },
+    "threat": {
+      "bn": "হুমকি",
+      "pos": "noun",
+      "slug": "threat"
+    },
+    "thrive": {
+      "bn": "ভালোভাবে বেড়ে ওঠা",
+      "pos": "verb",
+      "slug": "thrive"
+    },
+    "throughout": {
+      "bn": "সর্বত্র",
+      "pos": "adverb",
+      "slug": "throughout"
+    },
+    "thursday": {
+      "bn": "বৃহস্পতিবার",
+      "pos": "noun",
+      "slug": "thursday"
+    },
+    "tingling": {
+      "bn": "ঝিনঝিন",
+      "pos": "noun",
+      "slug": "tingling"
+    },
+    "toddler": {
+      "bn": "হাঁটতে শেখা শিশু",
+      "pos": "noun",
+      "slug": "toddler"
+    },
+    "tomorrow": {
+      "bn": "আগামীকাল",
+      "pos": "noun",
+      "slug": "tomorrow"
+    },
+    "tonight": {
+      "bn": "আজ রাতে",
+      "pos": "noun",
+      "slug": "tonight"
+    },
+    "too": {
+      "bn": "অতিরিক্ত",
+      "pos": "adverb",
+      "slug": "too"
+    },
+    "topic": {
+      "bn": "বিষয়",
+      "pos": "noun",
+      "slug": "topic"
+    },
+    "torso": {
+      "bn": "ধড়",
+      "pos": "noun",
+      "slug": "torso"
+    },
+    "tough": {
+      "bn": "কঠিন",
+      "pos": "adjective",
+      "slug": "tough"
+    },
+    "town": {
+      "bn": "শহর",
+      "pos": "noun",
+      "slug": "town"
+    },
+    "toxic": {
+      "bn": "বিষাক্ত",
+      "pos": "adjective",
+      "slug": "toxic"
+    },
+    "toxicity": {
+      "bn": "বিষাক্ততা",
+      "pos": "noun",
+      "slug": "toxicity"
+    },
+    "track": {
+      "bn": "ট্র্যাক",
+      "pos": "noun",
+      "slug": "track"
+    },
+    "tracking": {
+      "bn": "ট্র্যাকিং",
+      "pos": "noun",
+      "slug": "tracking"
+    },
+    "traction": {
+      "bn": "ঘর্ষণ",
+      "pos": "noun",
+      "slug": "traction"
+    },
+    "trading": {
+      "bn": "ট্রেডিং",
+      "pos": "noun",
+      "slug": "trading"
+    },
+    "traditional": {
+      "bn": "ঐতিহ্যগত",
+      "pos": "adjective",
+      "slug": "traditional"
+    },
+    "trailer": {
+      "bn": "ট্রেলার",
+      "pos": "noun",
+      "slug": "trailer"
+    },
+    "training": {
+      "bn": "প্রশিক্ষণ",
+      "pos": "noun",
+      "slug": "training"
+    },
+    "tranquil": {
+      "bn": "প্রশান্ত",
+      "pos": "adjective",
+      "slug": "tranquil"
+    },
+    "transaction": {
+      "bn": "লেনদেন",
+      "pos": "noun",
+      "slug": "transaction"
+    },
+    "transcript": {
+      "bn": "নম্বরপত্র",
+      "pos": "noun",
+      "slug": "transcript"
+    },
+    "transition": {
+      "bn": "স্থানান্তর",
+      "pos": "noun",
+      "slug": "transition"
+    },
+    "transparency": {
+      "bn": "স্বচ্ছতা",
+      "pos": "noun",
+      "slug": "transparency"
+    },
+    "trauma": {
+      "bn": "মানসিক আঘাত",
+      "pos": "noun",
+      "slug": "trauma"
+    },
+    "tribute": {
+      "bn": "শ্রদ্ধাঞ্জলি",
+      "pos": "noun",
+      "slug": "tribute"
+    },
+    "trip": {
+      "bn": "ট্রিপ",
+      "pos": "noun",
+      "slug": "trip"
+    },
+    "truly": {
+      "bn": "সত্যিই",
+      "pos": "adverb",
+      "slug": "truly"
+    },
+    "trustworthy": {
+      "bn": "বিশ্বাসযোগ্য",
+      "pos": "adjective",
+      "slug": "trustworthy"
+    },
+    "tuesday": {
+      "bn": "মঙ্গলবার",
+      "pos": "noun",
+      "slug": "tuesday"
+    },
+    "turmeric": {
+      "bn": "হলুদ",
+      "pos": "noun",
+      "slug": "turmeric"
+    },
+    "tutorial": {
+      "bn": "টিউটোরিয়াল",
+      "pos": "noun",
+      "slug": "tutorial"
+    },
+    "twice": {
+      "bn": "দুইবার",
+      "pos": "adverb",
+      "slug": "twice"
+    },
+    "tyrant": {
+      "bn": "অত্যাচারী শাসক",
+      "pos": "noun",
+      "slug": "tyrant"
+    },
+    "ubiquitous": {
+      "bn": "সর্বত্র দেখা যায় এমন",
+      "pos": "adjective",
+      "slug": "ubiquitous"
+    },
+    "ultimate": {
+      "bn": "চরম",
+      "pos": "adjective",
+      "slug": "ultimate"
+    },
+    "uncle": {
+      "bn": "মামা বা চাচা",
+      "pos": "noun",
+      "slug": "uncle"
+    },
+    "underscore": {
+      "bn": "জোর দিয়ে তুলে ধরা",
+      "pos": "verb",
+      "slug": "underscore"
+    },
+    "unemployed": {
+      "bn": "বেকার",
+      "pos": "adjective",
+      "slug": "unemployed"
+    },
+    "unfortunately": {
+      "bn": "দুর্ভাগ্যবশত",
+      "pos": "adverb",
+      "slug": "unfortunately"
+    },
+    "unique": {
+      "bn": "অনন্য",
+      "pos": "adjective",
+      "slug": "unique"
+    },
+    "unit": {
+      "bn": "ইউনিট",
+      "pos": "noun",
+      "slug": "unit"
+    },
+    "united": {
+      "bn": "ঐক্যবদ্ধ",
+      "pos": "adjective",
+      "slug": "united"
+    },
+    "universal": {
+      "bn": "সর্বজনীন",
+      "pos": "noun",
+      "slug": "universal"
+    },
+    "universe": {
+      "bn": "মহাবিশ্ব",
+      "pos": "noun",
+      "slug": "universe"
+    },
+    "unknown": {
+      "bn": "অজানা",
+      "pos": "noun",
+      "slug": "unknown"
+    },
+    "unleash": {
+      "bn": "ছেড়ে দেওয়া",
+      "pos": "verb",
+      "slug": "unleash"
+    },
+    "upcoming": {
+      "bn": "আসন্ন",
+      "pos": "adjective",
+      "slug": "upcoming"
+    },
+    "upgrade": {
+      "bn": "আপগ্রেড",
+      "pos": "noun",
+      "slug": "upgrade"
+    },
+    "upload": {
+      "bn": "আপলোড",
+      "pos": "verb",
+      "slug": "upload"
+    },
+    "urban": {
+      "bn": "শহুরে",
+      "pos": "adjective",
+      "slug": "urban"
+    },
+    "urn": {
+      "bn": "কলস",
+      "pos": "noun",
+      "slug": "urn"
+    },
+    "useful": {
+      "bn": "দরকারী",
+      "pos": "adjective",
+      "slug": "useful"
+    },
+    "usually": {
+      "bn": "সাধারণত",
+      "pos": "adverb",
+      "slug": "usually"
+    },
+    "utility": {
+      "bn": "উপযোগিতা",
+      "pos": "noun",
+      "slug": "utility"
+    },
+    "utilize": {
+      "bn": "কাজে লাগানো",
+      "pos": "verb",
+      "slug": "utilize"
+    },
+    "vacancy": {
+      "bn": "খালি থাকা",
+      "pos": "noun",
+      "slug": "vacancy"
+    },
+    "vacation": {
+      "bn": "ছুটি",
+      "pos": "noun",
+      "slug": "vacation"
+    },
+    "vain": {
+      "bn": "বৃথা",
+      "pos": "adjective",
+      "slug": "vain"
+    },
+    "valentine": {
+      "bn": "ভালোবাসা দিবসের প্রিয়জন",
+      "pos": "noun",
+      "slug": "valentine"
+    },
+    "valid": {
+      "bn": "বৈধ",
+      "pos": "adjective",
+      "slug": "valid"
+    },
+    "valley": {
+      "bn": "উপত্যকা",
+      "pos": "noun",
+      "slug": "valley"
+    },
+    "valuable": {
+      "bn": "মূল্যবান",
+      "pos": "noun",
+      "slug": "valuable"
+    },
+    "van": {
+      "bn": "ভ্যান",
+      "pos": "noun",
+      "slug": "van"
+    },
+    "variety": {
+      "bn": "বৈচিত্র্য",
+      "pos": "noun",
+      "slug": "variety"
+    },
+    "various": {
+      "bn": "বিভিন্ন",
+      "pos": "adjective",
+      "slug": "various"
+    },
+    "vendor": {
+      "bn": "বিক্রেতা",
+      "pos": "noun",
+      "slug": "vendor"
+    },
+    "venue": {
+      "bn": "স্থান",
+      "pos": "noun",
+      "slug": "venue"
+    },
+    "version": {
+      "bn": "সংস্করণ",
+      "pos": "noun",
+      "slug": "version"
+    },
+    "vessel": {
+      "bn": "জাহাজ",
+      "pos": "noun",
+      "slug": "vessel"
+    },
+    "viable": {
+      "bn": "কার্যকর",
+      "pos": "adjective",
+      "slug": "viable"
+    },
+    "vicinity": {
+      "bn": "আশপাশ",
+      "pos": "noun",
+      "slug": "vicinity"
+    },
+    "victim": {
+      "bn": "শিকার",
+      "pos": "noun",
+      "slug": "victim"
+    },
+    "vigilant": {
+      "bn": "সতর্ক",
+      "pos": "adjective",
+      "slug": "vigilant"
+    },
+    "vile": {
+      "bn": "জঘন্য",
+      "pos": "adjective",
+      "slug": "vile"
+    },
+    "village": {
+      "bn": "গ্রাম",
+      "pos": "noun",
+      "slug": "village"
+    },
+    "violence": {
+      "bn": "সহিংসতা",
+      "pos": "noun",
+      "slug": "violence"
+    },
+    "violet": {
+      "bn": "বেগুনি",
+      "pos": "adjective",
+      "slug": "violet"
+    },
+    "virtual": {
+      "bn": "ভার্চুয়াল",
+      "pos": "adjective",
+      "slug": "virtual"
+    },
+    "visible": {
+      "bn": "দৃশ্যমান",
+      "pos": "adjective",
+      "slug": "visible"
+    },
+    "visit": {
+      "bn": "পরিদর্শন",
+      "pos": "noun",
+      "slug": "visit"
+    },
+    "visual": {
+      "bn": "চাক্ষুষ",
+      "pos": "adjective",
+      "slug": "visual"
+    },
+    "vote": {
+      "bn": "ভোট",
+      "pos": "noun",
+      "slug": "vote"
+    },
+    "voyage": {
+      "bn": "নৌযাত্রা",
+      "pos": "noun",
+      "slug": "voyage"
+    },
+    "vulnerability": {
+      "bn": "দুর্বলতা",
+      "pos": "noun",
+      "slug": "vulnerability"
+    },
+    "waist": {
+      "bn": "কোমর",
+      "pos": "noun",
+      "slug": "waist"
+    },
+    "wandering": {
+      "bn": "এলোমেলো",
+      "pos": "adjective",
+      "slug": "wandering"
+    },
+    "want": {
+      "bn": "চাই",
+      "pos": "noun",
+      "slug": "want"
+    },
+    "war": {
+      "bn": "যুদ্ধ",
+      "pos": "noun",
+      "slug": "war"
+    },
+    "warehouse": {
+      "bn": "গুদাম",
+      "pos": "noun",
+      "slug": "warehouse"
+    },
+    "warm": {
+      "bn": "উষ্ণ",
+      "pos": "verb",
+      "slug": "warm"
+    },
+    "warning": {
+      "bn": "সতর্কতা",
+      "pos": "noun",
+      "slug": "warning"
+    },
+    "warranty": {
+      "bn": "ওয়ারেন্টি",
+      "pos": "noun",
+      "slug": "warranty"
+    },
+    "weak": {
+      "bn": "দুর্বল",
+      "pos": "adjective",
+      "slug": "weak"
+    },
+    "wealth": {
+      "bn": "সম্পদ",
+      "pos": "noun",
+      "slug": "wealth"
+    },
+    "wednesday": {
+      "bn": "বুধবার",
+      "pos": "noun",
+      "slug": "wednesday"
+    },
+    "week": {
+      "bn": "সপ্তাহ",
+      "pos": "noun",
+      "slug": "week"
+    },
+    "weekend": {
+      "bn": "সপ্তাহান্ত",
+      "pos": "noun",
+      "slug": "weekend"
+    },
+    "weep": {
+      "bn": "চোখের জল ফেলা",
+      "pos": "verb",
+      "slug": "weep"
+    },
+    "weight": {
+      "bn": "ওজন",
+      "pos": "noun",
+      "slug": "weight"
+    },
+    "welfare": {
+      "bn": "কল্যাণ",
+      "pos": "noun",
+      "slug": "welfare"
+    },
+    "wheezing": {
+      "bn": "শোঁ শোঁ শ্বাস",
+      "pos": "adjective",
+      "slug": "wheezing"
+    },
+    "while": {
+      "bn": "যখন",
+      "pos": "noun",
+      "slug": "while"
+    },
+    "whimsical": {
+      "bn": "খেয়ালখুশিমতো",
+      "pos": "adjective",
+      "slug": "whimsical"
+    },
+    "white": {
+      "bn": "সাদা",
+      "pos": "noun",
+      "slug": "white"
+    },
+    "widow": {
+      "bn": "বিধবা",
+      "pos": "noun",
+      "slug": "widow"
+    },
+    "width": {
+      "bn": "প্রস্থ",
+      "pos": "noun",
+      "slug": "width"
+    },
+    "wild": {
+      "bn": "বন্য",
+      "pos": "noun",
+      "slug": "wild"
+    },
+    "wildlife": {
+      "bn": "বন্যপ্রাণী",
+      "pos": "noun",
+      "slug": "wildlife"
+    },
+    "willing": {
+      "bn": "ইচ্ছুক",
+      "pos": "adjective",
+      "slug": "willing"
+    },
+    "wit": {
+      "bn": "রসিকতা",
+      "pos": "noun",
+      "slug": "wit"
+    },
+    "wizard": {
+      "bn": "জাদুকর",
+      "pos": "noun",
+      "slug": "wizard"
+    },
+    "wonderful": {
+      "bn": "বিস্ময়কর",
+      "pos": "adjective",
+      "slug": "wonderful"
+    },
+    "wood": {
+      "bn": "কাঠ",
+      "pos": "noun",
+      "slug": "wood"
+    },
+    "wooden": {
+      "bn": "কাঠের",
+      "pos": "adjective",
+      "slug": "wooden"
+    },
+    "word": {
+      "bn": "শব্দ",
+      "pos": "noun",
+      "slug": "word"
+    },
+    "workshop": {
+      "bn": "কর্মশালা",
+      "pos": "noun",
+      "slug": "workshop"
+    },
+    "wounded": {
+      "bn": "আহত",
+      "pos": "adjective",
+      "slug": "wounded"
+    },
+    "wrist": {
+      "bn": "কব্জি",
+      "pos": "noun",
+      "slug": "wrist"
+    },
+    "yesterday": {
+      "bn": "গতকাল",
+      "pos": "noun",
+      "slug": "yesterday"
+    },
+    "yield": {
+      "bn": "ফলন",
+      "pos": "noun",
+      "slug": "yield"
+    },
+    "yogurt": {
+      "bn": "দই",
+      "pos": "noun",
+      "slug": "yogurt"
+    },
+    "youth": {
+      "bn": "যুবক",
+      "pos": "noun",
+      "slug": "youth"
+    }
+  },
+  "phrases": [
+    {
+      "bn": "আপনার ইচ্ছা অনুযায়ী / তোমার যেমন খুশি",
+      "display": "As Your Wish",
+      "phrase": "as your wish",
+      "slug": "as-your-wish"
+    },
+    {
+      "bn": "শুভকামনা / তোমার জন্য শুভকামনা",
+      "display": "Best of Luck",
+      "phrase": "best of luck",
+      "slug": "best-of-luck"
+    },
+    {
+      "bn": "মাফ করবেন / একটু শুনবেন / দুঃখিত / কী বললেন?",
+      "display": "Excuse Me",
+      "phrase": "excuse me",
+      "slug": "excuse-me"
+    },
+    {
+      "bn": "মনে রেখো / খেয়াল রেখো / সাবধান",
+      "display": "Mind It",
+      "phrase": "mind it",
+      "slug": "mind-it"
+    },
+    {
+      "bn": "আমার আনন্দ / এটা আমার জন্য আনন্দের / স্বাগতম",
+      "display": "My Pleasure",
+      "phrase": "my pleasure",
+      "slug": "my-pleasure"
+    },
+    {
+      "bn": "আপনি কোথা থেকে এসেছেন? / তুমি কোথা থেকে এসেছ?",
+      "display": "Where Are You From",
+      "phrase": "where are you from",
+      "slug": "where-are-you-from"
+    }
+  ],
+  "version": 1
+}
